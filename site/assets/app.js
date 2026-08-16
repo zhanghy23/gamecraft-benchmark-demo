@@ -71,8 +71,39 @@ function resultCard(result, game, model) {
     </article>`;
 }
 
+function unmetGroup(title, description, items, tone) {
+  const content = items.length
+    ? `<ol class="unmet-list">
+        ${items.map((item) => `
+          <li>
+            <code>${escapeHtml(item.id.replace('target-', '#'))}</code>
+            <span class="unmet-copy">
+              <span>${escapeHtml(item.zh)}</span>
+              ${item.cause ? `<small>${escapeHtml(item.cause)}</small>` : ''}
+            </span>
+          </li>`).join('')}
+      </ol>`
+    : '<p class="unmet-empty">此类没有未满足项</p>';
+
+  return `
+    <section class="unmet-group ${tone}">
+      <div class="unmet-group-heading">
+        <div>
+          <strong>${escapeHtml(title)}</strong>
+          <p>${escapeHtml(description)}</p>
+        </div>
+        <span>${items.length} 条</span>
+      </div>
+      ${content}
+    </section>`;
+}
+
 function unmetCard(result) {
-  if (!result.unmet.length) {
+  const vlmUnmet = result.unmet.vlm;
+  const replayTraceUnmet = result.unmet.replayTrace;
+  const totalUnmet = vlmUnmet.length + replayTraceUnmet.length;
+
+  if (!totalUnmet) {
     return `
       <article class="unmet-card success-card">
         <div class="success-icon" aria-hidden="true">✓</div>
@@ -86,16 +117,23 @@ function unmetCard(result) {
   return `
     <article class="unmet-card">
       <div class="unmet-heading">
-        <strong>未满足 ${result.unmet.length} 条</strong>
+        <strong>未满足 ${totalUnmet} 条</strong>
         <span>共 ${result.score.denominator} 条需求</span>
       </div>
-      <ol class="unmet-list">
-        ${result.unmet.map((item) => `
-          <li>
-            <code>${escapeHtml(item.id.replace('target-', '#'))}</code>
-            <span>${escapeHtml(item.zh)}</span>
-          </li>`).join('')}
-      </ol>
+      <div class="unmet-sections">
+        ${unmetGroup(
+          'VLM 判断未满足',
+          '已进入视频评审，但 VLM 没有观察到要求中的视觉结果。',
+          vlmUnmet,
+          'vlm-group',
+        )}
+        ${unmetGroup(
+          'Replay / Trace 原因未满足',
+          '未进入 VLM；由触发不可达、源码错误或证据链不足导致。',
+          replayTraceUnmet,
+          'trace-group',
+        )}
+      </div>
     </article>`;
 }
 
@@ -116,7 +154,7 @@ function renderMatrix(data) {
   cells.push('<div class="sub-corner subheader-cell">固定模型顺序</div>');
   for (const _game of data.games) {
     cells.push('<div class="subheader-cell">试玩与评分</div>');
-    cells.push('<div class="subheader-cell unmet-subheader">中文未满足需求</div>');
+    cells.push('<div class="subheader-cell unmet-subheader">中文未满足需求（按原因）</div>');
   }
 
   for (const model of data.models) {
@@ -182,4 +220,3 @@ dialog.addEventListener('click', (event) => {
 });
 
 main();
-

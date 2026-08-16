@@ -142,6 +142,13 @@ const issueNotes = {
   'highway-404|minimax-m2.7': '生成源码存在 shoulderWidth 未定义错误，游戏会在运行时中断；0 分来自源码问题而非评审转码。',
 };
 
+const nonVlmCauseLabels = {
+  code_issue: '源码错误导致 Trace 不可达',
+  skip_unmet: '源码分析确认未实现',
+  replay_trace_issue: 'Replay / Trace 证据不足',
+  excluded: '评测条件暂不支持',
+};
+
 function readJson(file) {
   return JSON.parse(fs.readFileSync(file, 'utf8'));
 }
@@ -159,12 +166,36 @@ for (const game of games) {
   for (const model of models) {
     const report = readJson(path.join(importRoot, 'reports', game.id, `${model.id}.json`));
     const failedIds = report.targets.failedTargetIds;
-    const unmet = failedIds.map((id) => {
+    const notVlmById = new Map(
+      (report.targets.notVlmEvaluated ?? []).map((item) => [item.targetId, item]),
+    );
+    const vlmUnmet = [];
+    const replayTraceUnmet = [];
+
+    for (const id of failedIds) {
       if (!knownIds.has(id)) throw new Error(`${game.id}/${model.id}: unknown failed target ${id}`);
       const zh = translations[game.id]?.[id];
       if (!zh) throw new Error(`${game.id}/${model.id}: missing Chinese translation for ${id}`);
-      return { id, zh };
-    });
+      const nonVlm = notVlmById.get(id);
+      if (nonVlm) {
+        replayTraceUnmet.push({
+          id,
+          zh,
+          cause: nonVlmCauseLabels[nonVlm.status] ?? 'Replay / Trace 阶段未进入 VLM',
+        });
+      } else {
+        vlmUnmet.push({ id, zh });
+      }
+    }
+
+    if (vlmUnmet.length !== report.summary.vlmFailedTargets) {
+      throw new Error(
+        `${game.id}/${model.id}: expected ${report.summary.vlmFailedTargets} VLM failures, found ${vlmUnmet.length}`,
+      );
+    }
+    if (vlmUnmet.length + replayTraceUnmet.length !== report.summary.failedTargets) {
+      throw new Error(`${game.id}/${model.id}: unmet failure partition does not match report summary`);
+    }
 
     results[game.id][model.id] = {
       score: {
@@ -179,14 +210,17 @@ for (const game of games) {
       traceCount: report.videos.length,
       playPath: `games/${game.id}/${model.id}/index.html`,
       previewPath: `previews/${game.id}/${model.id}.png`,
-      unmet,
+      unmet: {
+        vlm: vlmUnmet,
+        replayTrace: replayTraceUnmet,
+      },
       issue: issueNotes[`${game.id}|${model.id}`] ?? null,
     };
   }
 }
 
 const publicData = {
-  version: 1,
+  version: 2,
   updatedAt: '2026-08-16',
   models,
   games,
@@ -197,4 +231,3 @@ const output = path.join(repoRoot, 'site', 'data', 'results.json');
 fs.mkdirSync(path.dirname(output), { recursive: true });
 fs.writeFileSync(output, `${JSON.stringify(publicData, null, 2)}\n`);
 console.log(`generated ${path.relative(repoRoot, output)} with ${games.length * models.length} results`);
-
