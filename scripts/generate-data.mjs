@@ -41,6 +41,13 @@ const games = [
     targetCount: 54,
     summaryZh: '生成一款 360×240 像素风猫咪鱼市分拣游戏：从带可编辑关卡卡片和预设成绩的选关页进入游戏，玩家用猫爪选择鱼类、难度和速度，拾取漂流的鱼与纸票、操作数字打印机并将正确票据配给鱼；游戏还需呈现传送带、计时与计分 HUD、正确或错误判定反馈，以及逐条揭示鱼类成绩和最终百分比的结算流程。',
   },
+  {
+    id: '13-steps-to-escape',
+    titleZh: '13 Steps to Escape',
+    typeZh: '步数解谜',
+    targetCount: 76,
+    summaryZh: '生成一款像素风步数限制解谜游戏：包含主菜单、选关、角色外观定制和可测试分享关卡的编辑器；玩家在带方向机关、箱子、滚石、钥匙、锁、陷阱、地洞、尖刺、开关、连锁方块与锣等元素的棋盘中移动，在十三步和最大步数规则下重置出生点、撤销或重开，并通过关卡完成反馈持续推进。',
+  },
 ];
 
 const translations = {
@@ -297,6 +304,84 @@ const translations = {
     'target-053': '满分结果显示最终百分比时，百分比线或进度条应填满全部可用长度。',
     'target-054': '点击结算界面的返回控件后，应开始界面过渡并回到选关界面。',
   },
+  '13-steps-to-escape': {
+    'target-001': '游戏以主菜单模式完成初始化后，应显示“13 STEPS TO ESCAPE”标题，以及“LEVEL SELECTION”和“LEVEL EDITOR”等菜单项。',
+    'target-002': '主菜单中存在下方选项时向下移动选择，菜单高亮应移到下一项。',
+    'target-003': '主菜单中存在上方选项时向上移动选择，菜单高亮应移到上一项。',
+    'target-004': '主菜单高亮“NEW GAME”并确认后，应切换到角色外观定制界面。',
+    'target-005': '主菜单高亮“LEVEL SELECTION”并确认后，应切换到关卡选择网格。',
+    'target-006': '主菜单高亮“LEVEL EDITOR”并确认后，应显示包含地块、方向和“Test/Share”控件的关卡编辑器。',
+    'target-007': '游戏进行中执行返回菜单命令，应离开棋盘并显示带标题和选项的主菜单。',
+    'target-008': '页面带有效共享关卡参数加载时，应直接进入该自定义关卡，而不是显示主菜单。',
+    'target-009': '关卡选择页绘制后，应显示标题、带缩略图的关卡网格、编辑器说明文字及当前高亮关卡。',
+    'target-010': '在关卡选择页确认当前高亮关卡后，应进入该关卡，角色回到起点并面向下方。',
+    'target-011': '关卡选择页右侧还有条目时向右移动，应将高亮移到右侧关卡。',
+    'target-012': '关卡选择页下方还有条目时向下移动，应将高亮移到下方关卡。',
+    'target-013': '关卡选择页绘制已完成关卡的缩略图时，该缩略图上应显示星形图标。',
+    'target-014': '所有可用关卡都已完成后，关卡选择页应显示可见的完成提示。',
+    'target-015': '角色选择页绘制后，应在定制选项上方显示“CHARACTER CUSTOMIZATION”标题。',
+    'target-016': '性别选择阶段切换到下一选项时，高亮和角色预览应同步更新。',
+    'target-017': '肤色选择阶段切换到下一颜色时，颜色高亮和角色预览肤色应同步更新。',
+    'target-018': '发色选择阶段切换到下一颜色时，颜色高亮和角色预览发色应同步更新。',
+    'target-019': '服装颜色选择阶段切换到下一颜色时，颜色高亮和角色预览服装应同步更新。',
+    'target-020': '性别选择阶段确认当前选项后，应进入“SELECT SKIN COLOR”阶段。',
+    'target-021': '肤色选择阶段确认当前选项后，应进入“SELECT HAIR COLOR”阶段。',
+    'target-022': '发色选择阶段确认当前选项后，应进入“SELECT OUTFIT COLOR”阶段。',
+    'target-023': '服装颜色阶段确认后，应进入第一关，并在棋盘上显示定制后的角色。',
+    'target-024': '关卡编辑器绘制后，应显示“TILE:”“ORIENTATION:”等标签及对应控件。',
+    'target-025': '指针移到编辑器可编辑格时，应在该格显示当前地块的悬停预览或标记。',
+    'target-026': '在编辑器中用滚轮改变方向时，控件或放置预览中的地块朝向应明显改变。',
+    'target-027': '在编辑器可编辑格放置地块后，该格应显示当前选中地块及所选方向。',
+    'target-028': '从编辑器格子删除已有地块后，该格应恢复为空白或背景外观。',
+    'target-029': '编辑器中的自定义关卡无效时点击“Test/Share”，应留在编辑器而不能进入测试关卡。',
+    'target-030': '游戏棋盘绘制时，应显示“STEPS”步数计数和“R: RESET”提示。',
+    'target-031': '游玩编号关卡时，界面应显示“LEVEL: <编号>”形式的当前关卡标签。',
+    'target-032': '游戏棋盘绘制时，可玩区域外缘应显示边界地块。',
+    'target-033': '含钥匙的关卡绘制时，钥匙应显示在对应格的钥匙托座上。',
+    'target-034': '朝右的方向色地块应使用右向对应的配色绘制。',
+    'target-035': '棋盘上的朝右元素应明显旋转到右向，而不是保持默认朝上。',
+    'target-036': '游戏中执行重置后，关卡应恢复初始布局，角色回到起点并面向下方。',
+    'target-037': '存在历史状态时执行撤销，棋盘、钥匙或锁、角色位置和步数应恢复到上一步。',
+    'target-038': '角色向上移动动画进行时，应以上行走帧从当前格平滑滑向上方格。',
+    'target-039': '角色向下移动动画进行时，应以下行走帧从当前格平滑滑向下方格。',
+    'target-040': '角色向左移动动画进行时，应以左行走帧从当前格平滑滑向左侧格。',
+    'target-041': '角色向右移动动画进行时，应以右行走帧从当前格平滑滑向右侧格。',
+    'target-042': '普通有效移动完成后，角色应到达相邻格，屏幕步数增加一。',
+    'target-043': '尝试移出关卡边界时，角色应转向目标方向但留在原格，且不开始移动动画。',
+    'target-044': '尝试走入不可交互阻挡地块时，角色应面向阻挡物但留在原位，地块保持不变。',
+    'target-045': '步数达到十步及以上警告区间时，屏幕步数计数应抖动。',
+    'target-046': '恰好完成十三步时，屏幕步数计数应显示为红色。',
+    'target-047': '达到最大允许步数时，角色应开始返回当前出生点，步数不再继续增加。',
+    'target-048': '返回出生点动画中，角色应先在当前位置缩小消失，再在出生点放大出现。',
+    'target-049': '因达到最大步数触发的返回流程到达延迟重置点后，步数应恢复到初始值。',
+    'target-050': '角色走到当前出生点地块时，屏幕步数应恢复到初始值。',
+    'target-051': '角色走到新出生点时，新格应变为当前出生点、旧出生点恢复普通样式，步数重置。',
+    'target-052': '箱子移动动画中，箱子应从起始格明显滑向目标格。',
+    'target-053': '滚石移动动画中，滚石应在棋盘上边旋转边滑动。',
+    'target-054': '尝试推动无空间可移的箱子时，角色应面向箱子但不移动，箱子留在原格。',
+    'target-055': '尝试推动无空间可移的滚石时，角色应面向滚石但不移动，滚石留在原格。',
+    'target-056': '成功推动且方向上有多个空格时，滚石应滚动滑过多个格子直至停止位置。',
+    'target-057': '箱子移动并停在地洞上后，箱子和地洞应被填平地洞地块替换。',
+    'target-058': '箱子移动到开启开关后，应在开关上开始缩小，直至从棋盘消失。',
+    'target-059': '箱子成功离开触发开关时，相同方向的开关应在开与关外观之间翻转。',
+    'target-060': '箱子移动到触发开关时，相同方向的开关应在开与关外观之间翻转。',
+    'target-061': '角色在步数上限前走到触发开关时，相同方向的开关应翻转开关状态。',
+    'target-062': '角色离开触发开关时，相同方向的开关应翻转开关状态。',
+    'target-063': '箱子占据匹配的关闭开关时触发反转，该开关应变为开启，箱子缩小消失。',
+    'target-064': '至少持有一把钥匙时尝试解锁，锁应缩小消失，角色留在相邻格。',
+    'target-065': '没有钥匙时尝试解锁，角色应面向锁但留在原位，锁继续显示。',
+    'target-066': '角色走到钥匙格时，钥匙应从棋盘消失并露出下方托座。',
+    'target-067': '角色离开陷阱格且未触发其他地块行为时，原陷阱格应变成地洞。',
+    'target-068': '角色落在地洞上时，应开始返回出生点，而不能停留在地洞上。',
+    'target-069': '角色落在尖刺上时，应开始返回出生点，而不能停留在尖刺上。',
+    'target-070': '从正确方向触发方块机关时，连接路径上的方块应从棋盘逐个消失。',
+    'target-071': '从错误方向触发方块机关时，角色应留在原位，连接方块继续显示。',
+    'target-072': '连锁方块移除到达延迟续播点后，下一个方块应接着消失，形成沿路径传递的级联效果。',
+    'target-073': '玩家触发尚未使用的锣机关后，匹配的锣地块应缩小并从棋盘消失。',
+    'target-074': '滚石移动到尚未触发的锣机关相邻位置时，匹配的锣地块应缩小消失。',
+    'target-075': '完成非最终关后，应从棋盘切回关卡选择页，并高亮下一关。',
+    'target-076': '完成最终关后，应从棋盘切回关卡选择页，并重新高亮第一关。',
+  },
 };
 
 const issueNotes = {
@@ -332,14 +417,17 @@ for (const game of games) {
   results[game.id] = {};
   for (const model of models) {
     const report = readJson(path.join(importRoot, 'reports', game.id, `${model.id}.json`));
-    const failedIds = report.targets.failedTargetIds;
     const notVlmById = new Map(
       (report.targets.notVlmEvaluated ?? []).map((item) => [item.targetId, item]),
     );
+    const unmetIds = new Set([
+      ...report.targets.failedTargetIds,
+      ...notVlmById.keys(),
+    ]);
     const vlmUnmet = [];
     const replayTraceUnmet = [];
 
-    for (const id of failedIds) {
+    for (const id of unmetIds) {
       if (!knownIds.has(id)) throw new Error(`${game.id}/${model.id}: unknown failed target ${id}`);
       const zh = translations[game.id]?.[id];
       if (!zh) throw new Error(`${game.id}/${model.id}: missing Chinese translation for ${id}`);
@@ -360,8 +448,11 @@ for (const game of games) {
         `${game.id}/${model.id}: expected ${report.summary.vlmFailedTargets} VLM failures, found ${vlmUnmet.length}`,
       );
     }
-    if (vlmUnmet.length + replayTraceUnmet.length !== report.summary.failedTargets) {
-      throw new Error(`${game.id}/${model.id}: unmet failure partition does not match report summary`);
+    const expectedUnmet = report.score.denominator - report.score.passed;
+    if (vlmUnmet.length + replayTraceUnmet.length !== expectedUnmet) {
+      throw new Error(
+        `${game.id}/${model.id}: expected ${expectedUnmet} total unmet targets, found ${vlmUnmet.length + replayTraceUnmet.length}`,
+      );
     }
 
     results[game.id][model.id] = {
@@ -388,7 +479,7 @@ for (const game of games) {
 
 const publicData = {
   version: 3,
-  updatedAt: '2026-08-16',
+  updatedAt: '2026-08-17',
   models,
   games: games.map((game) => ({
     ...game,
