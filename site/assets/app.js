@@ -137,6 +137,28 @@ function unmetCard(result) {
     </article>`;
 }
 
+function requirementsCard(game) {
+  const requirements = game.requirements ?? [];
+  return `
+    <section class="game-requirements requirements-cell" style="grid-column: span 2" aria-label="${escapeHtml(game.titleZh)} 完整中文需求">
+      <div class="requirements-heading">
+        <div>
+          <span>总体需求</span>
+          <strong>${escapeHtml(game.titleZh)}</strong>
+        </div>
+        <b>${requirements.length} 条细项</b>
+      </div>
+      <p class="requirements-summary">${escapeHtml(game.summaryZh)}</p>
+      <ol class="requirements-list" tabindex="0">
+        ${requirements.map((item) => `
+          <li>
+            <code>${escapeHtml(item.id.replace('target-', '#'))}</code>
+            <span>${escapeHtml(item.zh)}</span>
+          </li>`).join('')}
+      </ol>
+    </section>`;
+}
+
 function renderMatrix(data) {
   const columns = `180px repeat(${data.games.length}, minmax(310px, 360px) minmax(310px, 390px))`;
   const cells = [];
@@ -149,6 +171,11 @@ function renderMatrix(data) {
         <strong>${escapeHtml(game.titleZh)}</strong>
         <small>${game.targetCount} 条固定需求</small>
       </div>`);
+  }
+
+  cells.push('<div class="requirements-corner requirements-cell">总体与完整需求</div>');
+  for (const game of data.games) {
+    cells.push(requirementsCard(game));
   }
 
   cells.push('<div class="sub-corner subheader-cell">固定模型顺序</div>');
