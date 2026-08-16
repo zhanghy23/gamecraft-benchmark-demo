@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="可试玩的 HTML 游戏生成 Benchmark 结果与中文需求分析" />
+    <title>GameCraft Benchmark Demo</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav shell" aria-label="主导航">
+        <a class="brand" href="#top" aria-label="GameCraft Benchmark Demo 首页">
+          <span class="brand-mark" aria-hidden="true">G</span>
+          <span>GameCraft Benchmark</span>
+        </a>
+        <a class="nav-link" href="#results">试玩与结果</a>
+      </nav>
+
+      <div class="hero-content shell" id="top">
+        <p class="eyebrow">PLAYABLE · AUDITABLE · EXTENSIBLE</p>
+        <h1>游戏生成模型<br /><span>可试玩评测结果</span></h1>
+        <p class="hero-copy">
+          同一套需求、同一套 Trace 与视觉评审流程，横向比较不同模型生成的浏览器游戏。点击任意结果即可直接试玩，并查看它没有满足的具体需求。
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#results">查看全部结果</a>
+          <span class="updated" id="updatedAt">正在读取评测数据…</span>
+        </div>
+        <dl class="stats" id="stats" aria-label="评测概览"></dl>
+      </div>
+    </header>
+
+    <main>
+      <section class="results-section shell" id="results">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">BENCHMARK MATRIX</p>
+            <h2>模型 × 游戏</h2>
+          </div>
+          <p>每个游戏占两列：左侧是试玩与评分，右侧是该模型未满足的中文需求。横向滚动可查看后续新增游戏。</p>
+        </div>
+
+        <div class="legend" aria-label="分数说明">
+          <span><i class="legend-dot base"></i>基础分：已满足需求占全部需求的比例</span>
+          <span><i class="legend-dot dynamic"></i>动态项：具备潜力但未计入基础通过数</span>
+        </div>
+
+        <div class="matrix-shell" id="matrixShell" aria-live="polite">
+          <div class="loading">正在加载 12 组游戏结果…</div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="shell footer-inner">
+        <span>GameCraft Benchmark Demo</span>
+        <span>结果以最终 VLM Judge 报告为准</span>
+      </div>
+    </footer>
+
+    <dialog class="play-dialog" id="playDialog">
+      <div class="dialog-bar">
+        <div>
+          <strong id="dialogTitle">试玩</strong>
+          <span id="dialogMeta"></span>
+        </div>
+        <div class="dialog-actions">
+          <a id="openStandalone" class="button button-ghost" target="_blank" rel="noopener">新窗口打开</a>
+          <button class="dialog-close" id="closeDialog" type="button" aria-label="关闭试玩">×</button>
+        </div>
+      </div>
+      <iframe id="gameFrame" title="游戏试玩窗口" allow="autoplay; fullscreen" loading="lazy"></iframe>
+    </dialog>
+
+    <script type="module" src="assets/app.js"></script>
+  </body>
+</html>
+
