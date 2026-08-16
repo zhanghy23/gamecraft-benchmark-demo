@@ -2,13 +2,21 @@
 
 一个面向浏览器游戏生成 Benchmark 的公开结果站点。当前展示 4 个游戏生成模型在 3 个游戏上的 12 次完整评测，并提供可直接试玩的静态构建、最终评分和中文未满足需求。
 
-## 本地预览
+## 在线访问
+
+正式公网地址：**[https://zhanghy23.github.io/gamecraft-benchmark-demo/](https://zhanghy23.github.io/gamecraft-benchmark-demo/)**
+
+该地址由 GitHub Pages 自动部署，任何人都可以直接访问并试玩游戏。
+
+## 本地开发预览
+
+以下地址仅用于在开发电脑上检查改动，不是公网网址：
 
 ```bash
 python3 -m http.server 4173 -d site
 ```
 
-打开 <http://127.0.0.1:4173/>。
+然后在本机打开 <http://127.0.0.1:4173/>。
 
 ## 数据与目录
 
