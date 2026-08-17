@@ -118,6 +118,13 @@ h1 span { color: #93c5fd; }
 .score-breakdown span { padding: 10px; border-radius: 10px; background: var(--wash); color: var(--muted); font-size: 10px; }
 .score-breakdown strong { display: block; margin-top: 3px; color: var(--ink); font-size: 14px; }
 .issue-note { margin: 14px 0 0; padding: 10px 12px; border-radius: 10px; color: #991b1b; background: #fef2f2; font-size: 12px; }
+.failed-card { background: #fff7f7; }
+.failure-preview { display: flex; height: 194px; flex-direction: column; align-items: center; justify-content: center; gap: 8px; border: 1px dashed #fca5a5; border-radius: 14px; color: #7f1d1d; background: repeating-linear-gradient(135deg, #fff1f2, #fff1f2 12px, #ffe4e6 12px, #ffe4e6 24px); }
+.failure-preview span { font-size: 12px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+.failure-preview strong { font-size: 28px; }
+.failure-preview small { padding: 4px 8px; border-radius: 999px; color: #991b1b; background: rgba(255,255,255,.8); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.failure-meta { display: flex; flex-direction: column; gap: 5px; margin-top: 18px; }
+.failure-meta span { overflow-wrap: anywhere; color: #64748b; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; }
 
 .unmet-card { background: #fdfbff; }
 .unmet-heading { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; padding: 2px 2px 14px; }
@@ -146,6 +153,8 @@ h1 span { color: #93c5fd; }
 .trace-group .unmet-empty { border-top-color: #ffedd5; }
 .success-card { display: flex; gap: 16px; align-items: center; justify-content: center; color: #065f46; background: #ecfdf5; }
 .success-card p { margin: 3px 0 0; color: #047857; font-size: 12px; }
+.failed-unmet-card { display: flex; align-items: center; justify-content: center; color: #7f1d1d; background: #fff1f2; }
+.failed-unmet-card p { max-width: 330px; margin: 8px 0 0; color: #9f1239; font-size: 13px; line-height: 1.6; }
 .success-icon { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; color: white; background: var(--green); font-size: 24px; }
 .loading, .error-state { padding: 50px; color: var(--muted); text-align: center; }
 

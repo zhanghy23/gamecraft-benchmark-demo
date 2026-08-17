@@ -42,6 +42,21 @@ function closePlayer() {
 }
 
 function resultCard(result, game, model) {
+  if (result.status === 'failed') {
+    return `
+      <article class="result-card failed-card">
+        <div class="failure-preview" role="img" aria-label="${escapeHtml(game.titleZh)} · ${escapeHtml(model.label)} 评测失败，不可试玩">
+          <span>评测失败</span>
+          <strong>不可试玩</strong>
+          <small>${escapeHtml(result.stage)}</small>
+        </div>
+        <div class="failure-meta">
+          <strong>未生成最终评分</strong>
+          <span>${escapeHtml(result.runId)}</span>
+        </div>
+        <p class="issue-note"><strong>失败原因：</strong>${escapeHtml(result.issue)}</p>
+      </article>`;
+  }
   const note = result.issue
     ? `<p class="issue-note"><strong>运行提示：</strong>${escapeHtml(result.issue)}</p>`
     : '';
@@ -99,6 +114,15 @@ function unmetGroup(title, description, items, tone) {
 }
 
 function unmetCard(result) {
+  if (result.status === 'failed') {
+    return `
+      <article class="unmet-card failed-unmet-card">
+        <div>
+          <strong>没有可用的最终评审报告</strong>
+          <p>流水线在 ${escapeHtml(result.stage)} 阶段失败，因此不伪造 VLM 或 Replay / Trace 未满足项。</p>
+        </div>
+      </article>`;
+  }
   const vlmUnmet = result.unmet.vlm;
   const replayTraceUnmet = result.unmet.replayTrace;
   const totalUnmet = vlmUnmet.length + replayTraceUnmet.length;
@@ -213,11 +237,12 @@ function renderStats(data) {
   const testCount = data.games.length * data.models.length;
   const best = Object.values(data.results)
     .flatMap((game) => Object.values(game))
+    .filter((result) => result.status !== 'failed' && result.score)
     .sort((a, b) => b.score.base - a.score.base)[0];
   const values = [
     [data.models.length, '生成模型'],
     [data.games.length, '基准游戏'],
-    [testCount, '完整评测'],
+    [testCount, '评测终态'],
     [number.format(best.score.base), '最高基础分'],
   ];
   stats.innerHTML = values.map(([value, label]) => `<div><dt>${value}</dt><dd>${label}</dd></div>`).join('');
