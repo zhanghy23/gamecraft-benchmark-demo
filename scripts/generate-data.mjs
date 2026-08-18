@@ -686,9 +686,9 @@ const issueNotes = {
 
 const failedRuns = {
   'casual-crusade|minimax-m2.7': {
-    runId: 'minimax-m2.7-js13k7-20260817-224651',
+    runId: 'minimax-m2.7-js13k7-retry-20260818-154932',
     stage: 'generate-game',
-    issue: 'generate-game 连续 18 次收到不完整流式响应，最终未产生有效 JSON 或源码；该模型评测失败且不可试玩。',
+    issue: 'generate-game 连续 31 次收到提前结束且缺少 [DONE] 或 finish_reason 的流式响应，最终未产生有效 JSON 或源码；该模型评测失败且不可试玩。',
   },
 };
 
