@@ -2667,7 +2667,406 @@
       }
     },
     "elematter": {},
-    "highway-404": {},
+    "highway-404": {
+      "gpt-5.5": {
+        "status": "completed",
+        "score": {
+          "display": "98.04 (+0.00)",
+          "base": 98.04,
+          "passed": 50,
+          "denominator": 51,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 98.04
+        },
+        "traceCount": 11,
+        "playPath": "games/highway-404/gpt-5.5/index.html",
+        "previewPath": "previews/highway-404/gpt-5.5.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-036",
+              "zh": "角色与早期帧道路危险重叠时，应呈现掉入道路的缩小效果。"
+            }
+          ],
+          "replayTrace": []
+        },
+        "issue": null
+      },
+      "seed-2.0-pro": {
+        "status": "completed",
+        "score": {
+          "display": "78.43 (+0.00)",
+          "base": 78.43,
+          "passed": 40,
+          "denominator": 51,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 78.43
+        },
+        "traceCount": 12,
+        "playPath": "games/highway-404/seed-2.0-pro/index.html",
+        "previewPath": "previews/highway-404/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-010",
+              "zh": "按向下操控键时，玩家角色应向下移动。"
+            },
+            {
+              "id": "target-031",
+              "zh": "角色碰撞未触发的 301 变道物体时，应自动横向滑入另一车道。"
+            },
+            {
+              "id": "target-033",
+              "zh": "角色碰撞未触发的 404 物体时，应在附近生成坠落道路危险。"
+            },
+            {
+              "id": "target-043",
+              "zh": "限速效果结束时，倒计时应消失，公路滚动应恢复正常速度。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-004",
+              "zh": "标题页收到开始游戏的键盘松开事件后，应进入正式游戏画面。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-034",
+              "zh": "坠落道路生成器达到间隔时，应在公路车道生成新的道路危险。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-035",
+              "zh": "新道路危险与 200 安全道路重叠时，不应在该位置生成危险。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-036",
+              "zh": "角色与早期帧道路危险重叠时，应呈现掉入道路的缩小效果。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-037",
+              "zh": "角色与后期帧道路危险重叠时，应开始旋转并缩小的死亡动画。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-040",
+              "zh": "加载带正缺失道路长度的 501 物体时，应在车道中生成连续道路缺口。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-051",
+              "zh": "最终画面应以模糊全屏背景承托清晰的中央游戏带，并在上层清晰绘制文字。",
+              "cause": "源码分析确认未实现"
+            }
+          ]
+        },
+        "issue": null
+      },
+      "minimax-m2.7": {
+        "status": "completed",
+        "score": {
+          "display": "0.00 (+0.00)",
+          "base": 0,
+          "passed": 0,
+          "denominator": 51,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 0
+        },
+        "traceCount": 3,
+        "playPath": "games/highway-404/minimax-m2.7/index.html",
+        "previewPath": "previews/highway-404/minimax-m2.7.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-004",
+              "zh": "标题页收到开始游戏的键盘松开事件后，应进入正式游戏画面。"
+            },
+            {
+              "id": "target-005",
+              "zh": "标题页收到触摸或指针松开事件后，应进入正式游戏画面。"
+            },
+            {
+              "id": "target-006",
+              "zh": "关卡起点应显示分车道公路物体，并在起始区域放置茶壶收集物。"
+            },
+            {
+              "id": "target-011",
+              "zh": "按向左操控键时，玩家角色应向左移动。"
+            },
+            {
+              "id": "target-012",
+              "zh": "按向右操控键时，玩家角色应向右移动。"
+            },
+            {
+              "id": "target-017",
+              "zh": "游戏暂停时再次按暂停键，应恢复公路滚动、动画和倒计时。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-001",
+              "zh": "游戏启动后应显示高速公路主题标题页、角色、路边元素及指定标题文字。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-002",
+              "zh": "桌面标题页应显示以“to steer”结尾的键盘操控说明。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-003",
+              "zh": "移动端标题页应显示“swipe to steer”操控说明。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-007",
+              "zh": "正常游戏时 HUD 应同时显示分数、倒计时和茶壶数量。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-008",
+              "zh": "游戏循环运行时，公路应持续滚动，HUD 倒计时应持续减少。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-009",
+              "zh": "按向上操控键时，玩家角色应向上移动。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-010",
+              "zh": "按向下操控键时，玩家角色应向下移动。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-013",
+              "zh": "同时处于向上和向左移动状态时，角色应斜向左上方移动。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-014",
+              "zh": "角色向右移动时，精灵应明显向右转方向倾斜。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-015",
+              "zh": "角色向左移动时，精灵应明显向左转方向倾斜。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-016",
+              "zh": "游戏运行时按暂停键，应冻结公路滚动、动画和倒计时。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-018",
+              "zh": "角色试图越过左侧路肩时，应被限制在可驾驶道路内。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-019",
+              "zh": "角色试图越过视口顶部时，应被限制在可见游戏区域内。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-020",
+              "zh": "角色越过横向相机窗口左侧且仍可滚动时，相机应向左移动跟随。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-021",
+              "zh": "103 状态码物体出现在视口中时，应显示可见文字“103”。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-022",
+              "zh": "200 状态码物体出现在视口中时，应显示可见文字“200”。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-023",
+              "zh": "301 状态码物体出现在视口中时，应显示可见文字“301”。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-024",
+              "zh": "302 状态码物体出现在视口中时，应显示可见文字“302”。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-025",
+              "zh": "404 状态码物体出现在视口中时，应显示可见文字“404”。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-026",
+              "zh": "418 茶壶状态码物体出现在视口中时，应显示可见文字“418”。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-027",
+              "zh": "429 状态码物体出现在视口中时，应显示可见文字“429”。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-028",
+              "zh": "501 状态码物体出现在视口中时，应显示可见文字“501”。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-029",
+              "zh": "503 状态码物体出现在视口中时，应显示可见文字“503”。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-030",
+              "zh": "角色碰撞未触发的 103 提示物体时，应在画面中央显示提示信息。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-031",
+              "zh": "角色碰撞未触发的 301 变道物体时，应自动横向滑入另一车道。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-032",
+              "zh": "自动变道结束后，角色应停止横移并在新车道恢复直立。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-033",
+              "zh": "角色碰撞未触发的 404 物体时，应在附近生成坠落道路危险。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-034",
+              "zh": "坠落道路生成器达到间隔时，应在公路车道生成新的道路危险。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-035",
+              "zh": "新道路危险与 200 安全道路重叠时，不应在该位置生成危险。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-036",
+              "zh": "角色与早期帧道路危险重叠时，应呈现掉入道路的缩小效果。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-037",
+              "zh": "角色与后期帧道路危险重叠时，应开始旋转并缩小的死亡动画。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-038",
+              "zh": "角色碰撞缺失道路缝隙时，应旋转缩小并掉入缝隙。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-039",
+              "zh": "死亡角色缩小到零后，应消失并进入失败结算页。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-040",
+              "zh": "加载带正缺失道路长度的 501 物体时，应在车道中生成连续道路缺口。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-041",
+              "zh": "角色碰撞未触发的 418 茶壶物体时，HUD 茶壶计数应增加。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-042",
+              "zh": "角色碰撞未触发的 429 限速物体时，应显示秒数倒计时并降低滚动速度。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-043",
+              "zh": "限速效果结束时，倒计时应消失，公路滚动应恢复正常速度。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-044",
+              "zh": "游戏达到胜利状态时，应切换到带重新开始提示的结算页。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-045",
+              "zh": "胜利结算页应显示“you arrived!”、分数和最高分。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-046",
+              "zh": "失败结算页应显示“you got lost!”、分数和最高分。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-047",
+              "zh": "桌面端结算页应显示“[space] to restart”提示。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-048",
+              "zh": "移动端结算页应显示“tap to restart”提示。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-049",
+              "zh": "结算页收到返回标题页的键盘输入后，应回到标题页而不是直接重开。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-050",
+              "zh": "结算页收到触摸或指针松开事件后，应回到标题页。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-051",
+              "zh": "最终画面应以模糊全屏背景承托清晰的中央游戏带，并在上层清晰绘制文字。",
+              "cause": "源码分析确认未实现"
+            }
+          ]
+        },
+        "issue": "生成源码存在 shoulderWidth 未定义错误，游戏会在运行时中断；0 分来自源码问题而非评审转码。"
+      },
+      "gpt-5.4": {
+        "status": "completed",
+        "score": {
+          "display": "96.08 (+0.00)",
+          "base": 96.08,
+          "passed": 49,
+          "denominator": 51,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 96.08
+        },
+        "traceCount": 14,
+        "playPath": "games/highway-404/gpt-5.4/index.html",
+        "previewPath": "previews/highway-404/gpt-5.4.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-010",
+              "zh": "按向下操控键时，玩家角色应向下移动。"
+            },
+            {
+              "id": "target-020",
+              "zh": "角色越过横向相机窗口左侧且仍可滚动时，相机应向左移动跟随。"
+            }
+          ],
+          "replayTrace": []
+        },
+        "issue": null
+      }
+    },
     "kuro-neko-market": {},
     "13-steps-to-escape": {},
     "tiny-yurts": {},

@@ -25,9 +25,9 @@
       "updatedAt": "2026-08-20",
       "harnessRevision": "v8.1-d07cfed",
       "judgeModel": "Seed-2.0-Pro",
-      "dataRevision": "probe-timing-video-v8.1-20260820-162506-games-1",
-      "resultCount": 4,
-      "completedCount": 4,
+      "dataRevision": "probe-timing-video-v8.1-20260820-162506-games-2",
+      "resultCount": 8,
+      "completedCount": 8,
       "failedCount": 0,
       "dataPath": "data/versions/v8.1-video-transcode.json"
     }
