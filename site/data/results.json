@@ -1,6 +1,6 @@
 {
   "schemaVersion": 4,
-  "updatedAt": "2026-08-18",
+  "updatedAt": "2026-08-20",
   "defaultVersionId": "v8",
   "versions": [
     {
@@ -16,6 +16,20 @@
       "completedCount": 35,
       "failedCount": 1,
       "dataPath": "data/versions/v8.json"
+    },
+    {
+      "id": "v8.1-video-transcode",
+      "label": "v8.1 视频转码优化",
+      "description": "基于 Harness v8.1，复用 v8 Replay，采用优先保持原分辨率与帧率、仅在大小超限时逐级降参的自适应转码，并向 VLM Judge 提供通过 Probe 的近似触发秒数与关注窗口。",
+      "status": "partial",
+      "updatedAt": "2026-08-20",
+      "harnessRevision": "v8.1-d07cfed",
+      "judgeModel": "Seed-2.0-Pro",
+      "dataRevision": "probe-timing-video-v8.1-20260820-162506-games-1",
+      "resultCount": 4,
+      "completedCount": 4,
+      "failedCount": 0,
+      "dataPath": "data/versions/v8.1-video-transcode.json"
     }
   ]
 }
