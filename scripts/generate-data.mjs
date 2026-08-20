@@ -4,6 +4,34 @@ import { fileURLToPath } from 'node:url';
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const importRoot = path.join(repoRoot, '.import');
+const cliArgs = process.argv.slice(2);
+
+function option(name, fallback) {
+  const index = cliArgs.indexOf(name);
+  if (index === -1) return fallback;
+  const value = cliArgs[index + 1];
+  if (!value || value.startsWith('--')) throw new Error(`${name} requires a value`);
+  return value;
+}
+
+const benchmarkVersionId = option('--version-id', 'v8');
+if (!/^[a-z0-9][a-z0-9._-]*$/i.test(benchmarkVersionId)) {
+  throw new Error(`invalid --version-id: ${benchmarkVersionId}`);
+}
+const benchmarkVersionLabel = option('--version-label', 'v8 · 初始完整评测');
+const benchmarkVersionDescription = option(
+  '--version-description',
+  'v8 Harness 的初始完整流水线结果；保留当时的 Replay、VLM Judge 结论与失败终态，作为后续版本对照基线。',
+);
+const benchmarkUpdatedAt = option('--updated-at', '2026-08-18');
+const harnessRevision = option('--harness-revision', 'v8');
+const judgeModel = option('--judge-model', 'Seed-2.0-Pro');
+const versionStatus = option('--status', 'complete');
+const reportsRootOption = option('--reports-root', path.join('.import', 'reports'));
+const reportsRoot = path.isAbsolute(reportsRootOption)
+  ? reportsRootOption
+  : path.join(repoRoot, reportsRootOption);
+const setDefaultVersion = cliArgs.includes('--set-default');
 
 const models = [
   { id: 'gpt-5.5', label: 'GPT-5.5', provider: 'OpenAI', order: 1 },
@@ -735,7 +763,7 @@ for (const game of games) {
       };
       continue;
     }
-    const report = readJson(path.join(importRoot, 'reports', game.id, `${model.id}.json`));
+    const report = readJson(path.join(reportsRoot, game.id, `${model.id}.json`));
     const notVlmById = new Map(
       (report.targets.notVlmEvaluated ?? []).map((item) => [item.targetId, item]),
     );
@@ -797,9 +825,10 @@ for (const game of games) {
   }
 }
 
-const publicData = {
-  version: 3,
-  updatedAt: '2026-08-18',
+const versionData = {
+  schemaVersion: 1,
+  id: benchmarkVersionId,
+  updatedAt: benchmarkUpdatedAt,
   models,
   games: games.map((game) => ({
     ...game,
@@ -808,7 +837,46 @@ const publicData = {
   results,
 };
 
-const output = path.join(repoRoot, 'site', 'data', 'results.json');
-fs.mkdirSync(path.dirname(output), { recursive: true });
-fs.writeFileSync(output, `${JSON.stringify(publicData, null, 2)}\n`);
-console.log(`generated ${path.relative(repoRoot, output)} with ${games.length * models.length} results`);
+const dataRoot = path.join(repoRoot, 'site', 'data');
+const catalogOutput = path.join(dataRoot, 'results.json');
+const versionOutput = path.join(dataRoot, 'versions', `${benchmarkVersionId}.json`);
+let existingCatalog = null;
+if (fs.existsSync(catalogOutput)) {
+  const candidate = readJson(catalogOutput);
+  if (candidate.schemaVersion === 4 && Array.isArray(candidate.versions)) existingCatalog = candidate;
+}
+
+const resultList = Object.values(results).flatMap((gameResults) => Object.values(gameResults));
+const versionEntry = {
+  id: benchmarkVersionId,
+  label: benchmarkVersionLabel,
+  description: benchmarkVersionDescription,
+  status: versionStatus,
+  updatedAt: benchmarkUpdatedAt,
+  harnessRevision,
+  judgeModel,
+  resultCount: resultList.length,
+  completedCount: resultList.filter((result) => result.status === 'completed').length,
+  failedCount: resultList.filter((result) => result.status === 'failed').length,
+  dataPath: `data/versions/${benchmarkVersionId}.json`,
+};
+const versions = [
+  ...(existingCatalog?.versions ?? []).filter((version) => version.id !== benchmarkVersionId),
+  versionEntry,
+];
+const catalog = {
+  schemaVersion: 4,
+  updatedAt: benchmarkUpdatedAt,
+  defaultVersionId: setDefaultVersion
+    ? benchmarkVersionId
+    : (existingCatalog?.defaultVersionId ?? benchmarkVersionId),
+  versions,
+};
+
+fs.mkdirSync(path.dirname(versionOutput), { recursive: true });
+fs.writeFileSync(versionOutput, `${JSON.stringify(versionData, null, 2)}\n`);
+fs.writeFileSync(catalogOutput, `${JSON.stringify(catalog, null, 2)}\n`);
+console.log(
+  `generated ${path.relative(repoRoot, versionOutput)} and ${path.relative(repoRoot, catalogOutput)} `
+  + `with ${resultList.length} results for ${benchmarkVersionId}`,
+);

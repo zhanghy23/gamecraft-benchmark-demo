@@ -7,6 +7,14 @@ const dialogTitle = document.querySelector('#dialogTitle');
 const dialogMeta = document.querySelector('#dialogMeta');
 const standalone = document.querySelector('#openStandalone');
 const closeDialog = document.querySelector('#closeDialog');
+const versionSelect = document.querySelector('#benchmarkVersionSelect');
+const versionTitle = document.querySelector('#versionPanelTitle');
+const versionStatus = document.querySelector('#versionStatus');
+const versionDescription = document.querySelector('#versionDescription');
+const versionMeta = document.querySelector('#versionMeta');
+
+let catalog = null;
+let activeLoad = 0;
 
 const number = new Intl.NumberFormat('zh-CN', { maximumFractionDigits: 2 });
 
@@ -42,6 +50,15 @@ function closePlayer() {
 }
 
 function resultCard(result, game, model) {
+  if (!result) {
+    return `
+      <article class="result-card pending-card">
+        <div>
+          <strong>尚无该版本结果</strong>
+          <p>${escapeHtml(game.titleZh)} · ${escapeHtml(model.label)} 的评测结果尚未发布。</p>
+        </div>
+      </article>`;
+  }
   if (result.status === 'failed') {
     return `
       <article class="result-card failed-card">
@@ -114,6 +131,15 @@ function unmetGroup(title, description, items, tone) {
 }
 
 function unmetCard(result) {
+  if (!result) {
+    return `
+      <article class="unmet-card pending-card">
+        <div>
+          <strong>等待评测结果</strong>
+          <p>版本快照发布该组合后，这里会显示未满足需求及原因分类。</p>
+        </div>
+      </article>`;
+  }
   if (result.status === 'failed') {
     return `
       <article class="unmet-card failed-unmet-card">
@@ -216,7 +242,7 @@ function renderMatrix(data) {
         <small>${escapeHtml(model.provider)}</small>
       </aside>`);
     for (const game of data.games) {
-      const result = data.results[game.id][model.id];
+      const result = data.results[game.id]?.[model.id];
       cells.push(resultCard(result, game, model));
       cells.push(unmetCard(result));
     }
@@ -228,37 +254,128 @@ function renderMatrix(data) {
       const [gameId, modelId] = button.dataset.play.split('|');
       const game = data.games.find((item) => item.id === gameId);
       const model = data.models.find((item) => item.id === modelId);
-      playResult(data.results[gameId][modelId], game, model);
+      playResult(data.results[gameId]?.[modelId], game, model);
     });
   });
 }
 
 function renderStats(data) {
-  const testCount = data.games.length * data.models.length;
-  const best = Object.values(data.results)
+  const totalCount = data.games.length * data.models.length;
+  const resultList = Object.values(data.results)
     .flatMap((game) => Object.values(game))
+    .filter(Boolean);
+  const best = resultList
     .filter((result) => result.status !== 'failed' && result.score)
     .sort((a, b) => b.score.base - a.score.base)[0];
   const values = [
     [data.models.length, '生成模型'],
     [data.games.length, '基准游戏'],
-    [testCount, '评测终态'],
-    [number.format(best.score.base), '最高基础分'],
+    [`${resultList.length}/${totalCount}`, '已发布结果'],
+    [best ? number.format(best.score.base) : '—', '最高基础分'],
   ];
   stats.innerHTML = values.map(([value, label]) => `<div><dt>${value}</dt><dd>${label}</dd></div>`).join('');
+}
+
+function renderVersionInfo(version, data) {
+  const statusLabels = {
+    complete: '已完成',
+    running: '评测中',
+    partial: '部分结果',
+    archived: '历史版本',
+  };
+  versionTitle.textContent = version.label;
+  versionStatus.textContent = statusLabels[version.status] ?? version.status;
+  versionStatus.className = `version-status ${version.status ?? ''}`;
+  versionDescription.textContent = version.description;
+  const resultCount = Object.values(data.results).reduce(
+    (sum, gameResults) => sum + Object.keys(gameResults).length,
+    0,
+  );
+  const metadata = [
+    ['Harness', version.harnessRevision ?? version.id],
+    ['Judge', version.judgeModel ?? '—'],
+    ['结果', `${resultCount}/${data.games.length * data.models.length}`],
+    ['更新', version.updatedAt ?? data.updatedAt],
+  ];
+  versionMeta.innerHTML = metadata.map(([label, value]) => `
+    <div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join('');
+  updatedAt.textContent = `当前版本：${version.label} · 数据更新：${version.updatedAt ?? data.updatedAt}`;
+  document.title = `${version.label} · GameCraft Benchmark Demo`;
+}
+
+function updateVersionUrl(versionId) {
+  const url = new URL(window.location.href);
+  url.searchParams.set('version', versionId);
+  window.history.replaceState({}, '', url);
+  try {
+    window.localStorage.setItem('gamecraft-benchmark-version', versionId);
+  } catch {
+    // Storage can be disabled; the URL still preserves the selected version.
+  }
+}
+
+async function loadVersion(versionId, { updateUrl = true } = {}) {
+  const version = catalog.versions.find((item) => item.id === versionId);
+  if (!version) throw new Error(`未知评测版本：${versionId}`);
+  const loadId = ++activeLoad;
+  versionSelect.disabled = true;
+  versionSelect.value = version.id;
+  matrixShell.setAttribute('aria-busy', 'true');
+  matrixShell.innerHTML = `<div class="loading">正在加载 ${escapeHtml(version.label)} 的评测结果…</div>`;
+
+  try {
+    const response = await fetch(version.dataPath);
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const data = await response.json();
+    if (loadId !== activeLoad) return;
+    if (data.id !== version.id) throw new Error(`版本文件不匹配：期望 ${version.id}，实际 ${data.id}`);
+    renderStats(data);
+    renderMatrix(data);
+    renderVersionInfo(version, data);
+    if (updateUrl) updateVersionUrl(version.id);
+  } catch (error) {
+    if (loadId !== activeLoad) return;
+    matrixShell.innerHTML = `<div class="error-state">版本数据加载失败：${escapeHtml(error.message)}</div>`;
+    updatedAt.textContent = `${version.label} 数据加载失败`;
+  } finally {
+    if (loadId === activeLoad) {
+      versionSelect.disabled = false;
+      matrixShell.removeAttribute('aria-busy');
+    }
+  }
+}
+
+function preferredVersionId() {
+  const fromUrl = new URL(window.location.href).searchParams.get('version');
+  if (catalog.versions.some((version) => version.id === fromUrl)) return fromUrl;
+  try {
+    const stored = window.localStorage.getItem('gamecraft-benchmark-version');
+    if (catalog.versions.some((version) => version.id === stored)) return stored;
+  } catch {
+    // Fall back to the catalog default when storage is unavailable.
+  }
+  return catalog.defaultVersionId;
 }
 
 async function main() {
   try {
     const response = await fetch('data/results.json');
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const data = await response.json();
-    renderStats(data);
-    renderMatrix(data);
-    updatedAt.textContent = `数据更新：${data.updatedAt}`;
+    catalog = await response.json();
+    if (!Array.isArray(catalog.versions) || !catalog.versions.length) {
+      throw new Error('没有可用的评测版本');
+    }
+    versionSelect.innerHTML = catalog.versions.map((version) => `
+      <option value="${escapeHtml(version.id)}">${escapeHtml(version.label)}</option>`).join('');
+    versionSelect.addEventListener('change', () => loadVersion(versionSelect.value));
+    await loadVersion(preferredVersionId(), { updateUrl: true });
   } catch (error) {
-    matrixShell.innerHTML = `<div class="error-state">结果数据加载失败：${escapeHtml(error.message)}</div>`;
+    matrixShell.innerHTML = `<div class="error-state">结果目录加载失败：${escapeHtml(error.message)}</div>`;
     updatedAt.textContent = '数据加载失败';
+    versionTitle.textContent = '评测版本加载失败';
+    versionStatus.textContent = '不可用';
+    versionStatus.className = 'version-status failed';
+    versionDescription.textContent = error.message;
   }
 }
 
