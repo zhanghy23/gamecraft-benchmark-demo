@@ -39,6 +39,10 @@ const outputDataRootOption = option('--output-data-root', path.join('site', 'dat
 const outputDataRoot = path.isAbsolute(outputDataRootOption)
   ? outputDataRootOption
   : path.join(repoRoot, outputDataRootOption);
+const failuresFileOption = option('--failures-file', '');
+const failuresFile = failuresFileOption
+  ? (path.isAbsolute(failuresFileOption) ? failuresFileOption : path.join(repoRoot, failuresFileOption))
+  : null;
 
 const models = [
   { id: 'gpt-5.5', label: 'GPT-5.5', provider: 'OpenAI', order: 1 },
@@ -736,6 +740,10 @@ const failedRuns = {
   },
 };
 
+const configuredFailedRuns = failuresFile
+  ? { ...failedRuns, ...readJson(failuresFile) }
+  : failedRuns;
+
 const nonVlmCauseLabels = {
   code_issue: '源码错误导致 Trace 不可达',
   skip_unmet: '源码分析确认未实现',
@@ -765,7 +773,7 @@ for (const game of games) {
   results[game.id] = {};
   if (!includedGameIds.has(game.id)) continue;
   for (const model of models) {
-    const failedRun = failedRuns[`${game.id}|${model.id}`];
+    const failedRun = configuredFailedRuns[`${game.id}|${model.id}`];
     if (failedRun) {
       results[game.id][model.id] = {
         status: 'failed',

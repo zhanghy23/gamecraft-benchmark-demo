@@ -66,7 +66,10 @@ node scripts/generate-data.mjs \
   --include-games radius-raid,highway-404 \
   --allow-partial \
   --status partial \
+  --failures-file .import/reports-v8.1-video-transcode/failures.json \
   --data-revision adaptive-video-games-2
 ```
 
 页面仍保留全部游戏和模型坐标，尚未完成的组合显示为等待发布。最后一个游戏完成后移除 `--allow-partial` 和 `--include-games`、把状态改为 `complete`，需要时使用 `--set-default`。
+
+可选的失败文件是以 `game|model` 为键的 JSON 对象，每项包含 `runId`、`stage` 和公开失败原因 `issue`。生成脚本会把这些组合显示为失败且不可试玩，不会伪造分数。
