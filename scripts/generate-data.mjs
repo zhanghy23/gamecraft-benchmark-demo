@@ -27,6 +27,7 @@ const benchmarkUpdatedAt = option('--updated-at', '2026-08-18');
 const harnessRevision = option('--harness-revision', 'v8');
 const judgeModel = option('--judge-model', 'Seed-2.0-Pro');
 const versionStatus = option('--status', 'complete');
+const dataRevision = option('--data-revision', `${benchmarkVersionId}-${benchmarkUpdatedAt}`);
 const reportsRootOption = option('--reports-root', path.join('.import', 'reports'));
 const reportsRoot = path.isAbsolute(reportsRootOption)
   ? reportsRootOption
@@ -855,6 +856,7 @@ const versionEntry = {
   updatedAt: benchmarkUpdatedAt,
   harnessRevision,
   judgeModel,
+  dataRevision,
   resultCount: resultList.length,
   completedCount: resultList.filter((result) => result.status === 'completed').length,
   failedCount: resultList.filter((result) => result.status === 'failed').length,

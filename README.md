@@ -49,6 +49,7 @@ node scripts/generate-data.mjs \
   --version-description "复用 v8 Replay，采用自适应原生画质转码重新进行 VLM Judge。" \
   --reports-root .import/reports-v8-adaptive-video \
   --updated-at 2026-08-20 \
+  --data-revision adaptive-video-v8-20260820-143609 \
   --harness-revision v8-adaptive-video \
   --judge-model Seed-2.0-Pro
 ```

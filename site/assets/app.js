@@ -324,7 +324,9 @@ async function loadVersion(versionId, { updateUrl = true } = {}) {
   matrixShell.innerHTML = `<div class="loading">正在加载 ${escapeHtml(version.label)} 的评测结果…</div>`;
 
   try {
-    const response = await fetch(version.dataPath);
+    const versionUrl = new URL(version.dataPath, window.location.href);
+    versionUrl.searchParams.set('revision', version.dataRevision ?? version.updatedAt ?? version.id);
+    const response = await fetch(versionUrl, { cache: 'no-store' });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
     if (loadId !== activeLoad) return;
@@ -359,7 +361,9 @@ function preferredVersionId() {
 
 async function main() {
   try {
-    const response = await fetch('data/results.json');
+    const catalogUrl = new URL('data/results.json', window.location.href);
+    catalogUrl.searchParams.set('request', Date.now());
+    const response = await fetch(catalogUrl, { cache: 'no-store' });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     catalog = await response.json();
     if (!Array.isArray(catalog.versions) || !catalog.versions.length) {

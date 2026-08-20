@@ -11,6 +11,7 @@
       "updatedAt": "2026-08-18",
       "harnessRevision": "v8",
       "judgeModel": "Seed-2.0-Pro",
+      "dataRevision": "v8-2026-08-18",
       "resultCount": 36,
       "completedCount": 35,
       "failedCount": 1,
