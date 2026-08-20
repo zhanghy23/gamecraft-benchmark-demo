@@ -33,6 +33,12 @@ const reportsRoot = path.isAbsolute(reportsRootOption)
   ? reportsRootOption
   : path.join(repoRoot, reportsRootOption);
 const setDefaultVersion = cliArgs.includes('--set-default');
+const allowPartialResults = cliArgs.includes('--allow-partial');
+const includeGamesOption = option('--include-games', '');
+const outputDataRootOption = option('--output-data-root', path.join('site', 'data'));
+const outputDataRoot = path.isAbsolute(outputDataRootOption)
+  ? outputDataRootOption
+  : path.join(repoRoot, outputDataRootOption);
 
 const models = [
   { id: 'gpt-5.5', label: 'GPT-5.5', provider: 'OpenAI', order: 1 },
@@ -106,6 +112,15 @@ const games = [
     summaryZh: '生成一款按周经营街市摊位的像素风模拟游戏：玩家从主菜单进入进货、库存定价、市场售卖和周结算流程，在供应商列表中采购商品、调整各类库存售价，并通过带开合幕帘、行人、摊位和时钟的街景观察销售。游戏还需呈现资金、周数、库存、平均成本、声誉星级、需求和销售明细，支持列表与结算滚动、售罄反馈、资金耗尽结束，以及有余额时推进到下一周。',
   },
 ];
+
+const includedGameIds = includeGamesOption
+  ? new Set(includeGamesOption.split(',').map((id) => id.trim()).filter(Boolean))
+  : new Set(games.map((game) => game.id));
+for (const gameId of includedGameIds) {
+  if (!games.some((game) => game.id === gameId)) {
+    throw new Error(`unknown game in --include-games: ${gameId}`);
+  }
+}
 
 const translations = {
   'radius-raid': {
@@ -748,6 +763,7 @@ for (const game of games) {
   });
 
   results[game.id] = {};
+  if (!includedGameIds.has(game.id)) continue;
   for (const model of models) {
     const failedRun = failedRuns[`${game.id}|${model.id}`];
     if (failedRun) {
@@ -764,7 +780,9 @@ for (const game of games) {
       };
       continue;
     }
-    const report = readJson(path.join(reportsRoot, game.id, `${model.id}.json`));
+    const reportPath = path.join(reportsRoot, game.id, `${model.id}.json`);
+    if (!fs.existsSync(reportPath) && allowPartialResults) continue;
+    const report = readJson(reportPath);
     const notVlmById = new Map(
       (report.targets.notVlmEvaluated ?? []).map((item) => [item.targetId, item]),
     );
@@ -838,7 +856,7 @@ const versionData = {
   results,
 };
 
-const dataRoot = path.join(repoRoot, 'site', 'data');
+const dataRoot = outputDataRoot;
 const catalogOutput = path.join(dataRoot, 'results.json');
 const versionOutput = path.join(dataRoot, 'versions', `${benchmarkVersionId}.json`);
 let existingCatalog = null;

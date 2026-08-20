@@ -55,3 +55,18 @@ node scripts/generate-data.mjs \
 ```
 
 脚本会新增或替换同 ID 的版本快照，并保留其他历史版本。需要让新版本成为页面默认选项时，再加 `--set-default`。页面选择会写入 `?version=<id>`，因此可以直接分享指定版本的网址。
+
+长时间评测可以逐游戏发布。将已经完成的游戏 ID 以逗号连接，并允许尚未导入的组合保持“尚无该版本结果”：
+
+```bash
+node scripts/generate-data.mjs \
+  --version-id v8.1-video-transcode \
+  --version-label "v8.1 视频转码优化" \
+  --reports-root .import/reports-v8.1-video-transcode \
+  --include-games radius-raid,highway-404 \
+  --allow-partial \
+  --status partial \
+  --data-revision adaptive-video-games-2
+```
+
+页面仍保留全部游戏和模型坐标，尚未完成的组合显示为等待发布。最后一个游戏完成后移除 `--allow-partial` 和 `--include-games`、把状态改为 `complete`，需要时使用 `--set-default`。
