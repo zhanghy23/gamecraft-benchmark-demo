@@ -25,9 +25,9 @@
       "updatedAt": "2026-08-21",
       "harnessRevision": "v8.1-a377a3a-exact-timing",
       "judgeModel": "Seed-2.0-Pro",
-      "dataRevision": "exact-timing-v8.1-20260820-212149-games-5",
-      "resultCount": 20,
-      "completedCount": 19,
+      "dataRevision": "exact-timing-v8.1-20260820-212149-games-6",
+      "resultCount": 24,
+      "completedCount": 23,
       "failedCount": 1,
       "dataPath": "data/versions/v8.1-video-transcode.json"
     }
