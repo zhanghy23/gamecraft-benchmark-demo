@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "v8.1-video-transcode",
-  "updatedAt": "2026-08-20",
+  "updatedAt": "2026-08-21",
   "models": [
     {
       "id": "gpt-5.5",
@@ -2436,19 +2436,24 @@
       "gpt-5.5": {
         "status": "completed",
         "score": {
-          "display": "100.00 (+0.00)",
-          "base": 100,
-          "passed": 74,
+          "display": "98.65 (+0.00)",
+          "base": 98.65,
+          "passed": 73,
           "denominator": 74,
           "dynamic": 0,
           "dynamicAddition": 0,
-          "potential": 100
+          "potential": 98.65
         },
         "traceCount": 11,
         "playPath": "games/radius-raid/gpt-5.5/index.html",
         "previewPath": "previews/radius-raid/gpt-5.5.png",
         "unmet": {
-          "vlm": [],
+          "vlm": [
+            {
+              "id": "target-067",
+              "zh": "达到最后一个预设关卡后再次完成击杀要求时，应继续显示更高等级提示。"
+            }
+          ],
           "replayTrace": []
         },
         "issue": null
@@ -2456,13 +2461,13 @@
       "seed-2.0-pro": {
         "status": "completed",
         "score": {
-          "display": "85.14 (+0.00)",
-          "base": 85.14,
-          "passed": 63,
+          "display": "75.68 (+0.00)",
+          "base": 75.68,
+          "passed": 56,
           "denominator": 74,
           "dynamic": 0,
           "dynamicAddition": 0,
-          "potential": 85.14
+          "potential": 75.68
         },
         "traceCount": 12,
         "playPath": "games/radius-raid/seed-2.0-pro/index.html",
@@ -2470,24 +2475,52 @@
         "unmet": {
           "vlm": [
             {
-              "id": "target-033",
-              "zh": "穿透射击增益期间开火时，子弹应使用穿透增益配色。"
+              "id": "target-031",
+              "zh": "三连发增益激活时开火，应同时以扇形发射三枚子弹。"
             },
             {
               "id": "target-037",
               "zh": "穿透子弹未达到命中上限时，击中敌人后应继续飞行并显示命中特效。"
             },
             {
+              "id": "target-042",
+              "zh": "游荡敌人应在场地内改变方向，而不是始终沿固定直线移动。"
+            },
+            {
               "id": "target-043",
               "zh": "隐身敌人移动时应呈半透明、难以辨认的视觉效果。"
+            },
+            {
+              "id": "target-046",
+              "zh": "成长型敌人接近英雄时，体型应持续变大。"
+            },
+            {
+              "id": "target-047",
+              "zh": "环绕型敌人应沿曲线路径绕英雄移动并逐渐接近。"
+            },
+            {
+              "id": "target-049",
+              "zh": "摆动追踪敌人应沿左右摇摆的路径接近英雄。"
+            },
+            {
+              "id": "target-054",
+              "zh": "可分裂敌人被消灭时，应在原位置周围生成四个小敌人。"
+            },
+            {
+              "id": "target-056",
+              "zh": "道具出现在画面中时，应显示为带边框的深色方块，并标注名称或图标。"
+            },
+            {
+              "id": "target-057",
+              "zh": "生命道具被英雄拾取后应消失，并激活 HUD 上的生命指示。"
             },
             {
               "id": "target-058",
               "zh": "减速敌人道具被拾取后应消失、激活 HUD，并显示淡蓝色遮罩。"
             },
             {
-              "id": "target-061",
-              "zh": "穿透射击道具被英雄拾取后应消失，并激活 HUD 上的穿透指示。"
+              "id": "target-060",
+              "zh": "三连发道具被英雄拾取后应消失，并激活 HUD 上的三连发指示。"
             },
             {
               "id": "target-062",
@@ -2526,13 +2559,13 @@
       "minimax-m2.7": {
         "status": "completed",
         "score": {
-          "display": "86.49 (+4.05)",
-          "base": 86.49,
-          "passed": 64,
+          "display": "79.73 (+4.05)",
+          "base": 79.73,
+          "passed": 59,
           "denominator": 74,
           "dynamic": 3,
           "dynamicAddition": 4.05,
-          "potential": 90.54
+          "potential": 83.78
         },
         "traceCount": 16,
         "playPath": "games/radius-raid/minimax-m2.7/index.html",
@@ -2540,12 +2573,32 @@
         "unmet": {
           "vlm": [
             {
-              "id": "target-032",
-              "zh": "快速射击增益期间开火时，子弹应变色且射速明显提升。"
+              "id": "target-031",
+              "zh": "三连发增益激活时开火，应同时以扇形发射三枚子弹。"
             },
             {
-              "id": "target-049",
-              "zh": "摆动追踪敌人应沿左右摇摆的路径接近英雄。"
+              "id": "target-043",
+              "zh": "隐身敌人移动时应呈半透明、难以辨认的视觉效果。"
+            },
+            {
+              "id": "target-057",
+              "zh": "生命道具被英雄拾取后应消失，并激活 HUD 上的生命指示。"
+            },
+            {
+              "id": "target-058",
+              "zh": "减速敌人道具被拾取后应消失、激活 HUD，并显示淡蓝色遮罩。"
+            },
+            {
+              "id": "target-059",
+              "zh": "快速射击道具被英雄拾取后应消失，并激活 HUD 上的快速射击指示。"
+            },
+            {
+              "id": "target-060",
+              "zh": "三连发道具被英雄拾取后应消失，并激活 HUD 上的三连发指示。"
+            },
+            {
+              "id": "target-063",
+              "zh": "减速效果激活时，敌人应覆盖半透明蓝色效果并降低移动速度。"
             }
           ],
           "replayTrace": [
@@ -2596,13 +2649,13 @@
       "gpt-5.4": {
         "status": "completed",
         "score": {
-          "display": "83.78 (+1.35)",
-          "base": 83.78,
-          "passed": 62,
+          "display": "74.32 (+1.35)",
+          "base": 74.32,
+          "passed": 55,
           "denominator": 74,
           "dynamic": 1,
           "dynamicAddition": 1.35,
-          "potential": 85.14
+          "potential": 75.68
         },
         "traceCount": 11,
         "playPath": "games/radius-raid/gpt-5.4/index.html",
@@ -2610,20 +2663,52 @@
         "unmet": {
           "vlm": [
             {
-              "id": "target-015",
-              "zh": "按住向左移动时，英雄应加速并向左移动。"
+              "id": "target-017",
+              "zh": "英雄到达世界右边界时，应被限制在可玩区域内。"
             },
             {
               "id": "target-031",
               "zh": "三连发增益激活时开火，应同时以扇形发射三枚子弹。"
             },
             {
-              "id": "target-051",
-              "zh": "可生成敌人的计时器达到阈值时，应在其附近生成新敌人。"
+              "id": "target-032",
+              "zh": "快速射击增益期间开火时，子弹应变色且射速明显提升。"
+            },
+            {
+              "id": "target-033",
+              "zh": "穿透射击增益期间开火时，子弹应使用穿透增益配色。"
+            },
+            {
+              "id": "target-037",
+              "zh": "穿透子弹未达到命中上限时，击中敌人后应继续飞行并显示命中特效。"
+            },
+            {
+              "id": "target-043",
+              "zh": "隐身敌人移动时应呈半透明、难以辨认的视觉效果。"
+            },
+            {
+              "id": "target-048",
+              "zh": "快速随机方向敌人应沿随机直线高速移动，而不是追踪英雄。"
+            },
+            {
+              "id": "target-054",
+              "zh": "可分裂敌人被消灭时，应在原位置周围生成四个小敌人。"
+            },
+            {
+              "id": "target-055",
+              "zh": "敌人被消灭后生成道具时，应在原位置出现彩色方形可拾取道具。"
+            },
+            {
+              "id": "target-056",
+              "zh": "道具出现在画面中时，应显示为带边框的深色方块，并标注名称或图标。"
             },
             {
               "id": "target-057",
               "zh": "生命道具被英雄拾取后应消失，并激活 HUD 上的生命指示。"
+            },
+            {
+              "id": "target-058",
+              "zh": "减速敌人道具被拾取后应消失、激活 HUD，并显示淡蓝色遮罩。"
             },
             {
               "id": "target-059",
@@ -2644,10 +2729,6 @@
             {
               "id": "target-066",
               "zh": "尚有预设关卡且击杀数达标时，应显示进入下一关的升级提示。"
-            },
-            {
-              "id": "target-067",
-              "zh": "达到最后一个预设关卡后再次完成击杀要求时，应继续显示更高等级提示。"
             }
           ],
           "replayTrace": [
@@ -2666,105 +2747,333 @@
         "issue": null
       }
     },
-    "elematter": {},
-    "highway-404": {
+    "elematter": {
       "gpt-5.5": {
         "status": "completed",
         "score": {
-          "display": "98.04 (+0.00)",
-          "base": 98.04,
-          "passed": 50,
-          "denominator": 51,
-          "dynamic": 0,
-          "dynamicAddition": 0,
-          "potential": 98.04
+          "display": "84.85 (+7.58)",
+          "base": 84.85,
+          "passed": 56,
+          "denominator": 66,
+          "dynamic": 5,
+          "dynamicAddition": 7.58,
+          "potential": 92.42
         },
-        "traceCount": 11,
-        "playPath": "games/highway-404/gpt-5.5/index.html",
-        "previewPath": "previews/highway-404/gpt-5.5.png",
+        "traceCount": 17,
+        "playPath": "games/elematter/gpt-5.5/index.html",
+        "previewPath": "previews/elematter/gpt-5.5.png",
         "unmet": {
           "vlm": [
             {
-              "id": "target-036",
-              "zh": "角色与早期帧道路危险重叠时，应呈现掉入道路的缩小效果。"
+              "id": "target-046",
+              "zh": "火塔射程内有敌人且冷却完成时，应发射红色火系投射物。"
+            },
+            {
+              "id": "target-054",
+              "zh": "部署火系 Boss 时，路径上应出现大型红色火系 Boss 造型。"
+            },
+            {
+              "id": "target-059",
+              "zh": "属性克制的投射物命中时，应显示受击反馈且血条大幅下降。"
+            },
+            {
+              "id": "target-063",
+              "zh": "Boss 生命归零后，应从路径消失并增加元素碎片。"
             }
           ],
-          "replayTrace": []
+          "replayTrace": [
+            {
+              "id": "target-040",
+              "zh": "点击当前不可升级的塔时，不应升级或扣除碎片，菜单应保持不变。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-025",
+              "zh": "悬停土塔建造选项时，信息面板应显示土塔主题、详情与属性。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-057",
+              "zh": "失去最后一点生命时，生命值应显示为零，随后弹出“You lost.”失败提示。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-064",
+              "zh": "所有波次已发送且敌人全部清除时，应弹出以“You won!”开头并包含分数的胜利提示。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-065",
+              "zh": "确认胜利提示后，页面应重新加载并回到初始游戏界面。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-066",
+              "zh": "确认失败提示后，页面应重新加载并回到初始游戏界面。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
         },
         "issue": null
       },
       "seed-2.0-pro": {
         "status": "completed",
         "score": {
-          "display": "78.43 (+0.00)",
-          "base": 78.43,
-          "passed": 40,
-          "denominator": 51,
-          "dynamic": 0,
-          "dynamicAddition": 0,
-          "potential": 78.43
+          "display": "72.73 (+6.06)",
+          "base": 72.73,
+          "passed": 48,
+          "denominator": 66,
+          "dynamic": 4,
+          "dynamicAddition": 6.06,
+          "potential": 78.79
         },
-        "traceCount": 12,
-        "playPath": "games/highway-404/seed-2.0-pro/index.html",
-        "previewPath": "previews/highway-404/seed-2.0-pro.png",
+        "traceCount": 16,
+        "playPath": "games/elematter/seed-2.0-pro/index.html",
+        "previewPath": "previews/elematter/seed-2.0-pro.png",
         "unmet": {
           "vlm": [
             {
-              "id": "target-010",
-              "zh": "按向下操控键时，玩家角色应向下移动。"
+              "id": "target-008",
+              "zh": "选择 x2 速度时，x2 按钮应高亮，其他速度按钮应取消高亮。"
             },
             {
-              "id": "target-031",
-              "zh": "角色碰撞未触发的 301 变道物体时，应自动横向滑入另一车道。"
+              "id": "target-044",
+              "zh": "水塔射程内有敌人且冷却完成时，应发射蓝色水系投射物。"
             },
             {
-              "id": "target-033",
-              "zh": "角色碰撞未触发的 404 物体时，应在附近生成坠落道路危险。"
+              "id": "target-045",
+              "zh": "风塔射程内有敌人且冷却完成时，应发射黄色风系投射物。"
             },
             {
-              "id": "target-043",
-              "zh": "限速效果结束时，倒计时应消失，公路滚动应恢复正常速度。"
+              "id": "target-046",
+              "zh": "火塔射程内有敌人且冷却完成时，应发射红色火系投射物。"
+            },
+            {
+              "id": "target-060",
+              "zh": "水系投射物施加减速后，敌人应显示减速样式并短暂变慢。"
+            },
+            {
+              "id": "target-061",
+              "zh": "减速结束后，应移除蓝色透明样式，并恢复正常移动速度。"
             }
           ],
           "replayTrace": [
             {
-              "id": "target-004",
-              "zh": "标题页收到开始游戏的键盘松开事件后，应进入正式游戏画面。",
+              "id": "target-012",
+              "zh": "暂停状态点击发送波次时，不应开始新波次、推进 HUD 或生成敌人。",
               "cause": "源码分析确认未实现"
             },
             {
-              "id": "target-034",
-              "zh": "坠落道路生成器达到间隔时，应在公路车道生成新的道路危险。",
-              "cause": "源码分析确认未实现"
-            },
-            {
-              "id": "target-035",
-              "zh": "新道路危险与 200 安全道路重叠时，不应在该位置生成危险。",
+              "id": "target-025",
+              "zh": "悬停土塔建造选项时，信息面板应显示土塔主题、详情与属性。",
               "cause": "源码分析确认未实现"
             },
             {
               "id": "target-036",
-              "zh": "角色与早期帧道路危险重叠时，应呈现掉入道路的缩小效果。",
-              "cause": "源码分析确认未实现"
-            },
-            {
-              "id": "target-037",
-              "zh": "角色与后期帧道路危险重叠时，应开始旋转并缩小的死亡动画。",
-              "cause": "源码分析确认未实现"
-            },
-            {
-              "id": "target-040",
-              "zh": "加载带正缺失道路长度的 501 物体时，应在车道中生成连续道路缺口。",
+              "zh": "悬停升级按钮时，应显示下一等级、升级费用与属性预览。",
               "cause": "源码分析确认未实现"
             },
             {
               "id": "target-051",
-              "zh": "最终画面应以模糊全屏背景承托清晰的中央游戏带，并在上层清晰绘制文字。",
+              "zh": "部署土系 Boss 时，路径上应出现大型绿色土系 Boss 造型。",
               "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-052",
+              "zh": "部署水系 Boss 时，路径上应出现大型蓝色水系 Boss 造型。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-053",
+              "zh": "部署风系 Boss 时，路径上应出现大型黄色风系 Boss 造型。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-054",
+              "zh": "部署火系 Boss 时，路径上应出现大型红色火系 Boss 造型。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-063",
+              "zh": "Boss 生命归零后，应从路径消失并增加元素碎片。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-057",
+              "zh": "失去最后一点生命时，生命值应显示为零，随后弹出“You lost.”失败提示。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-064",
+              "zh": "所有波次已发送且敌人全部清除时，应弹出以“You won!”开头并包含分数的胜利提示。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-065",
+              "zh": "确认胜利提示后，页面应重新加载并回到初始游戏界面。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-066",
+              "zh": "确认失败提示后，页面应重新加载并回到初始游戏界面。",
+              "cause": "Replay / Trace 证据不足"
             }
           ]
         },
         "issue": null
+      },
+      "minimax-m2.7": {
+        "status": "completed",
+        "score": {
+          "display": "83.33 (+6.06)",
+          "base": 83.33,
+          "passed": 55,
+          "denominator": 66,
+          "dynamic": 4,
+          "dynamicAddition": 6.06,
+          "potential": 89.39
+        },
+        "traceCount": 16,
+        "playPath": "games/elematter/minimax-m2.7/index.html",
+        "previewPath": "previews/elematter/minimax-m2.7.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-015",
+              "zh": "清空当前波且仍有排队波次时，应自动开始下一波。"
+            },
+            {
+              "id": "target-039",
+              "zh": "升级可支付的土塔后，应扣除碎片并显示提升后的等级与属性。"
+            },
+            {
+              "id": "target-044",
+              "zh": "水塔射程内有敌人且冷却完成时，应发射蓝色水系投射物。"
+            },
+            {
+              "id": "target-046",
+              "zh": "火塔射程内有敌人且冷却完成时，应发射红色火系投射物。"
+            },
+            {
+              "id": "target-060",
+              "zh": "水系投射物施加减速后，敌人应显示减速样式并短暂变慢。"
+            },
+            {
+              "id": "target-061",
+              "zh": "减速结束后，应移除蓝色透明样式，并恢复正常移动速度。"
+            },
+            {
+              "id": "target-063",
+              "zh": "Boss 生命归零后，应从路径消失并增加元素碎片。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-057",
+              "zh": "失去最后一点生命时，生命值应显示为零，随后弹出“You lost.”失败提示。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-064",
+              "zh": "所有波次已发送且敌人全部清除时，应弹出以“You won!”开头并包含分数的胜利提示。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-065",
+              "zh": "确认胜利提示后，页面应重新加载并回到初始游戏界面。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-066",
+              "zh": "确认失败提示后，页面应重新加载并回到初始游戏界面。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null
+      },
+      "gpt-5.4": {
+        "status": "completed",
+        "score": {
+          "display": "90.91 (+6.06)",
+          "base": 90.91,
+          "passed": 60,
+          "denominator": 66,
+          "dynamic": 4,
+          "dynamicAddition": 6.06,
+          "potential": 96.97
+        },
+        "traceCount": 21,
+        "playPath": "games/elematter/gpt-5.4/index.html",
+        "previewPath": "previews/elematter/gpt-5.4.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-046",
+              "zh": "火塔射程内有敌人且冷却完成时，应发射红色火系投射物。"
+            },
+            {
+              "id": "target-062",
+              "zh": "普通敌人生命归零后，应从路径消失并增加元素碎片。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-057",
+              "zh": "失去最后一点生命时，生命值应显示为零，随后弹出“You lost.”失败提示。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-064",
+              "zh": "所有波次已发送且敌人全部清除时，应弹出以“You won!”开头并包含分数的胜利提示。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-065",
+              "zh": "确认胜利提示后，页面应重新加载并回到初始游戏界面。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-066",
+              "zh": "确认失败提示后，页面应重新加载并回到初始游戏界面。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null
+      }
+    },
+    "highway-404": {
+      "gpt-5.5": {
+        "status": "completed",
+        "score": {
+          "display": "100.00 (+0.00)",
+          "base": 100,
+          "passed": 51,
+          "denominator": 51,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 100
+        },
+        "traceCount": 11,
+        "playPath": "games/highway-404/gpt-5.5/index.html",
+        "previewPath": "previews/highway-404/gpt-5.5.png",
+        "unmet": {
+          "vlm": [],
+          "replayTrace": []
+        },
+        "issue": null
+      },
+      "seed-2.0-pro": {
+        "status": "failed",
+        "runId": "seed-2.0-pro-statearch-20260816-021913",
+        "stage": "judge-final-suite",
+        "score": null,
+        "traceCount": 0,
+        "playPath": null,
+        "previewPath": null,
+        "unmet": null,
+        "issue": "精确时间映射生成的 Judge 关注窗口未通过校验：target-048 startMs must be non-negative。"
       },
       "minimax-m2.7": {
         "status": "completed",
@@ -3054,12 +3363,12 @@
         "unmet": {
           "vlm": [
             {
-              "id": "target-010",
-              "zh": "按向下操控键时，玩家角色应向下移动。"
-            },
-            {
               "id": "target-020",
               "zh": "角色越过横向相机窗口左侧且仍可滚动时，相机应向左移动跟随。"
+            },
+            {
+              "id": "target-049",
+              "zh": "结算页收到返回标题页的键盘输入后，应回到标题页而不是直接重开。"
             }
           ],
           "replayTrace": []
@@ -3067,8 +3376,718 @@
         "issue": null
       }
     },
-    "kuro-neko-market": {},
-    "13-steps-to-escape": {},
+    "kuro-neko-market": {
+      "gpt-5.5": {
+        "status": "completed",
+        "score": {
+          "display": "96.30 (+1.85)",
+          "base": 96.3,
+          "passed": 52,
+          "denominator": 54,
+          "dynamic": 1,
+          "dynamicAddition": 1.85,
+          "potential": 98.15
+        },
+        "traceCount": 14,
+        "playPath": "games/kuro-neko-market/gpt-5.5/index.html",
+        "previewPath": "previews/kuro-neko-market/gpt-5.5.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-042",
+              "zh": "带纸票的鱼使用正确票值计分时，应出现成功色粒子，游戏分数增加，鱼在反馈开始后逐渐淡出。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-049",
+              "zh": "结算揭示到错误计分的鱼时，该鱼条目应放大出现，但不显示庆祝粒子，结算总分也不能增加。",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null
+      },
+      "seed-2.0-pro": {
+        "status": "completed",
+        "score": {
+          "display": "77.78 (+0.00)",
+          "base": 77.78,
+          "passed": 42,
+          "denominator": 54,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 77.78
+        },
+        "traceCount": 14,
+        "playPath": "games/kuro-neko-market/seed-2.0-pro/index.html",
+        "previewPath": "previews/kuro-neko-market/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-006",
+              "zh": "点击可编辑关卡卡片中已选中的鱼类选项后，该选项应取消选中，卡片的开始按钮可用状态也应相应更新。"
+            },
+            {
+              "id": "target-037",
+              "zh": "打印机显示非零数值时点击清除按钮，两位数显示应重置为 00。"
+            },
+            {
+              "id": "target-039",
+              "zh": "打印机显示非零数值且当前没有正在打印的票据时点击提交，应输出一张写有所提交数字的纸票。"
+            },
+            {
+              "id": "target-042",
+              "zh": "带纸票的鱼使用正确票值计分时，应出现成功色粒子，游戏分数增加，鱼在反馈开始后逐渐淡出。"
+            },
+            {
+              "id": "target-043",
+              "zh": "带纸票的鱼使用错误票值计分时，应出现错误色粒子，且游戏分数不能增加。"
+            },
+            {
+              "id": "target-047",
+              "zh": "带有已记录鱼类的关卡结束并打开结算页时，应以汇总布局排列显示本关记录的鱼。"
+            },
+            {
+              "id": "target-048",
+              "zh": "结算揭示到正确计分的鱼时，该鱼条目应放大出现并伴随庆祝粒子，结算总分应向上计数并包含这条正确鱼的得分。"
+            },
+            {
+              "id": "target-049",
+              "zh": "结算揭示到错误计分的鱼时，该鱼条目应放大出现，但不显示庆祝粒子，结算总分也不能增加。"
+            },
+            {
+              "id": "target-050",
+              "zh": "所有鱼条目揭示完并开始显示最终得分百分比时，金额得分行应变暗，百分比或进度显示应进入画面并改变线条或进度条长度。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-020",
+              "zh": "指针悬停在可按控件上且猫爪可指向时，猫爪应伸出指甲或手指，变为指向控件的姿势。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-038",
+              "zh": "打印机显示 00 时点击提交按钮，不应打印新票据，显示也应保持 00。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-053",
+              "zh": "满分结果显示最终百分比时，百分比线或进度条应填满全部可用长度。",
+              "cause": "源码分析确认未实现"
+            }
+          ]
+        },
+        "issue": null
+      },
+      "minimax-m2.7": {
+        "status": "completed",
+        "score": {
+          "display": "64.81 (+7.41)",
+          "base": 64.81,
+          "passed": 35,
+          "denominator": 54,
+          "dynamic": 4,
+          "dynamicAddition": 7.41,
+          "potential": 72.22
+        },
+        "traceCount": 13,
+        "playPath": "games/kuro-neko-market/minimax-m2.7/index.html",
+        "previewPath": "previews/kuro-neko-market/minimax-m2.7.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-006",
+              "zh": "点击可编辑关卡卡片中已选中的鱼类选项后，该选项应取消选中，卡片的开始按钮可用状态也应相应更新。"
+            },
+            {
+              "id": "target-016",
+              "zh": "笔记本显示非负计分修正值时，数值前应带加号。"
+            },
+            {
+              "id": "target-039",
+              "zh": "打印机显示非零数值且当前没有正在打印的票据时点击提交，应输出一张写有所提交数字的纸票。"
+            },
+            {
+              "id": "target-047",
+              "zh": "带有已记录鱼类的关卡结束并打开结算页时，应以汇总布局排列显示本关记录的鱼。"
+            },
+            {
+              "id": "target-048",
+              "zh": "结算揭示到正确计分的鱼时，该鱼条目应放大出现并伴随庆祝粒子，结算总分应向上计数并包含这条正确鱼的得分。"
+            },
+            {
+              "id": "target-051",
+              "zh": "零分结果显示最终百分比时，百分比线或进度条应保持为空或零长度。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-017",
+              "zh": "笔记本显示负计分修正值时，数值前应带减号。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-023",
+              "zh": "猫爪可按下时点击可操作控件，猫爪应在控件位置播放短暂的按压或轻拍动画。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-031",
+              "zh": "猫爪手持鱼时点击可容纳该鱼的有效放置目标，鱼应被放到该位置，尺寸与图层匹配目标，并重新显示阴影。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-032",
+              "zh": "猫爪手持纸张时点击可容纳纸张的有效放置目标，纸张应被放到目标位置，不再保持手持。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-033",
+              "zh": "猫爪手持物品时点击可容纳它的移动放置目标，物品应被释放并随目标一起移动，随后稳定落位。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-034",
+              "zh": "猫爪手持物品但当前悬停目标无法容纳它时点击，物品应继续留在猫爪中，不能被放入场景。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-041",
+              "zh": "活动关卡处理新的分数更新时，HUD 的分数数字应同步变化。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-042",
+              "zh": "带纸票的鱼使用正确票值计分时，应出现成功色粒子，游戏分数增加，鱼在反馈开始后逐渐淡出。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-043",
+              "zh": "带纸票的鱼使用错误票值计分时，应出现错误色粒子，且游戏分数不能增加。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-022",
+              "zh": "指针悬停在可拾取物品上且猫爪没有按下时，猫爪应保持张开的待机姿势。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-029",
+              "zh": "猫爪能够拾取时点击可拾取的鱼，鱼应被拿到猫爪中成为手持物，且手持期间鱼的阴影隐藏。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-030",
+              "zh": "猫爪能够拾取时点击可拾取的纸张，纸张应被拿到猫爪中成为手持物。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-054",
+              "zh": "点击结算界面的返回控件后，应开始界面过渡并回到选关界面。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null
+      },
+      "gpt-5.4": {
+        "status": "completed",
+        "score": {
+          "display": "98.15 (+0.00)",
+          "base": 98.15,
+          "passed": 53,
+          "denominator": 54,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 98.15
+        },
+        "traceCount": 9,
+        "playPath": "games/kuro-neko-market/gpt-5.4/index.html",
+        "previewPath": "previews/kuro-neko-market/gpt-5.4.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-006",
+              "zh": "点击可编辑关卡卡片中已选中的鱼类选项后，该选项应取消选中，卡片的开始按钮可用状态也应相应更新。"
+            }
+          ],
+          "replayTrace": []
+        },
+        "issue": null
+      }
+    },
+    "13-steps-to-escape": {
+      "gpt-5.5": {
+        "status": "completed",
+        "score": {
+          "display": "85.53 (+2.63)",
+          "base": 85.53,
+          "passed": 65,
+          "denominator": 76,
+          "dynamic": 2,
+          "dynamicAddition": 2.63,
+          "potential": 88.16
+        },
+        "traceCount": 29,
+        "playPath": "games/13-steps-to-escape/gpt-5.5/index.html",
+        "previewPath": "previews/13-steps-to-escape/gpt-5.5.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-018",
+              "zh": "发色选择阶段切换到下一颜色时，颜色高亮和角色预览发色应同步更新。"
+            },
+            {
+              "id": "target-027",
+              "zh": "在编辑器可编辑格放置地块后，该格应显示当前选中地块及所选方向。"
+            },
+            {
+              "id": "target-028",
+              "zh": "从编辑器格子删除已有地块后，该格应恢复为空白或背景外观。"
+            },
+            {
+              "id": "target-044",
+              "zh": "尝试走入不可交互阻挡地块时，角色应面向阻挡物但留在原位，地块保持不变。"
+            },
+            {
+              "id": "target-053",
+              "zh": "滚石移动动画中，滚石应在棋盘上边旋转边滑动。"
+            },
+            {
+              "id": "target-060",
+              "zh": "箱子移动到触发开关时，相同方向的开关应在开与关外观之间翻转。"
+            },
+            {
+              "id": "target-074",
+              "zh": "滚石移动到尚未触发的锣机关相邻位置时，匹配的锣地块应缩小消失。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-071",
+              "zh": "从错误方向触发方块机关时，角色应留在原位，连接方块继续显示。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-073",
+              "zh": "玩家触发尚未使用的锣机关后，匹配的锣地块应缩小并从棋盘消失。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-008",
+              "zh": "页面带有效共享关卡参数加载时，应直接进入该自定义关卡，而不是显示主菜单。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-043",
+              "zh": "尝试移出关卡边界时，角色应转向目标方向但留在原格，且不开始移动动画。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null
+      },
+      "seed-2.0-pro": {
+        "status": "completed",
+        "score": {
+          "display": "50.00 (+0.00)",
+          "base": 50,
+          "passed": 38,
+          "denominator": 76,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 50
+        },
+        "traceCount": 19,
+        "playPath": "games/13-steps-to-escape/seed-2.0-pro/index.html",
+        "previewPath": "previews/13-steps-to-escape/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-016",
+              "zh": "性别选择阶段切换到下一选项时，高亮和角色预览应同步更新。"
+            },
+            {
+              "id": "target-017",
+              "zh": "肤色选择阶段切换到下一颜色时，颜色高亮和角色预览肤色应同步更新。"
+            },
+            {
+              "id": "target-018",
+              "zh": "发色选择阶段切换到下一颜色时，颜色高亮和角色预览发色应同步更新。"
+            },
+            {
+              "id": "target-019",
+              "zh": "服装颜色选择阶段切换到下一颜色时，颜色高亮和角色预览服装应同步更新。"
+            },
+            {
+              "id": "target-025",
+              "zh": "指针移到编辑器可编辑格时，应在该格显示当前地块的悬停预览或标记。"
+            },
+            {
+              "id": "target-028",
+              "zh": "从编辑器格子删除已有地块后，该格应恢复为空白或背景外观。"
+            },
+            {
+              "id": "target-050",
+              "zh": "角色走到当前出生点地块时，屏幕步数应恢复到初始值。"
+            },
+            {
+              "id": "target-061",
+              "zh": "角色在步数上限前走到触发开关时，相同方向的开关应翻转开关状态。"
+            },
+            {
+              "id": "target-062",
+              "zh": "角色离开触发开关时，相同方向的开关应翻转开关状态。"
+            },
+            {
+              "id": "target-068",
+              "zh": "角色落在地洞上时，应开始返回出生点，而不能停留在地洞上。"
+            },
+            {
+              "id": "target-069",
+              "zh": "角色落在尖刺上时，应开始返回出生点，而不能停留在尖刺上。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-008",
+              "zh": "页面带有效共享关卡参数加载时，应直接进入该自定义关卡，而不是显示主菜单。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-026",
+              "zh": "在编辑器中用滚轮改变方向时，控件或放置预览中的地块朝向应明显改变。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-029",
+              "zh": "编辑器中的自定义关卡无效时点击“Test/Share”，应留在编辑器而不能进入测试关卡。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-033",
+              "zh": "含钥匙的关卡绘制时，钥匙应显示在对应格的钥匙托座上。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-034",
+              "zh": "朝右的方向色地块应使用右向对应的配色绘制。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-035",
+              "zh": "棋盘上的朝右元素应明显旋转到右向，而不是保持默认朝上。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-048",
+              "zh": "返回出生点动画中，角色应先在当前位置缩小消失，再在出生点放大出现。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-049",
+              "zh": "因达到最大步数触发的返回流程到达延迟重置点后，步数应恢复到初始值。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-051",
+              "zh": "角色走到新出生点时，新格应变为当前出生点、旧出生点恢复普通样式，步数重置。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-052",
+              "zh": "箱子移动动画中，箱子应从起始格明显滑向目标格。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-053",
+              "zh": "滚石移动动画中，滚石应在棋盘上边旋转边滑动。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-054",
+              "zh": "尝试推动无空间可移的箱子时，角色应面向箱子但不移动，箱子留在原格。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-055",
+              "zh": "尝试推动无空间可移的滚石时，角色应面向滚石但不移动，滚石留在原格。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-056",
+              "zh": "成功推动且方向上有多个空格时，滚石应滚动滑过多个格子直至停止位置。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-057",
+              "zh": "箱子移动并停在地洞上后，箱子和地洞应被填平地洞地块替换。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-058",
+              "zh": "箱子移动到开启开关后，应在开关上开始缩小，直至从棋盘消失。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-059",
+              "zh": "箱子成功离开触发开关时，相同方向的开关应在开与关外观之间翻转。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-060",
+              "zh": "箱子移动到触发开关时，相同方向的开关应在开与关外观之间翻转。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-063",
+              "zh": "箱子占据匹配的关闭开关时触发反转，该开关应变为开启，箱子缩小消失。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-064",
+              "zh": "至少持有一把钥匙时尝试解锁，锁应缩小消失，角色留在相邻格。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-065",
+              "zh": "没有钥匙时尝试解锁，角色应面向锁但留在原位，锁继续显示。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-067",
+              "zh": "角色离开陷阱格且未触发其他地块行为时，原陷阱格应变成地洞。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-070",
+              "zh": "从正确方向触发方块机关时，连接路径上的方块应从棋盘逐个消失。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-071",
+              "zh": "从错误方向触发方块机关时，角色应留在原位，连接方块继续显示。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-072",
+              "zh": "连锁方块移除到达延迟续播点后，下一个方块应接着消失，形成沿路径传递的级联效果。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-073",
+              "zh": "玩家触发尚未使用的锣机关后，匹配的锣地块应缩小并从棋盘消失。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-074",
+              "zh": "滚石移动到尚未触发的锣机关相邻位置时，匹配的锣地块应缩小消失。",
+              "cause": "源码分析确认未实现"
+            }
+          ]
+        },
+        "issue": null
+      },
+      "minimax-m2.7": {
+        "status": "completed",
+        "score": {
+          "display": "68.42 (+22.37)",
+          "base": 68.42,
+          "passed": 52,
+          "denominator": 76,
+          "dynamic": 17,
+          "dynamicAddition": 22.37,
+          "potential": 90.79
+        },
+        "traceCount": 21,
+        "playPath": "games/13-steps-to-escape/minimax-m2.7/index.html",
+        "previewPath": "previews/13-steps-to-escape/minimax-m2.7.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-026",
+              "zh": "在编辑器中用滚轮改变方向时，控件或放置预览中的地块朝向应明显改变。"
+            },
+            {
+              "id": "target-036",
+              "zh": "游戏中执行重置后，关卡应恢复初始布局，角色回到起点并面向下方。"
+            },
+            {
+              "id": "target-048",
+              "zh": "返回出生点动画中，角色应先在当前位置缩小消失，再在出生点放大出现。"
+            },
+            {
+              "id": "target-052",
+              "zh": "箱子移动动画中，箱子应从起始格明显滑向目标格。"
+            },
+            {
+              "id": "target-057",
+              "zh": "箱子移动并停在地洞上后，箱子和地洞应被填平地洞地块替换。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-070",
+              "zh": "从正确方向触发方块机关时，连接路径上的方块应从棋盘逐个消失。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-074",
+              "zh": "滚石移动到尚未触发的锣机关相邻位置时，匹配的锣地块应缩小消失。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-046",
+              "zh": "恰好完成十三步时，屏幕步数计数应显示为红色。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-047",
+              "zh": "达到最大允许步数时，角色应开始返回当前出生点，步数不再继续增加。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-051",
+              "zh": "角色走到新出生点时，新格应变为当前出生点、旧出生点恢复普通样式，步数重置。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-053",
+              "zh": "滚石移动动画中，滚石应在棋盘上边旋转边滑动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-054",
+              "zh": "尝试推动无空间可移的箱子时，角色应面向箱子但不移动，箱子留在原格。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-056",
+              "zh": "成功推动且方向上有多个空格时，滚石应滚动滑过多个格子直至停止位置。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-058",
+              "zh": "箱子移动到开启开关后，应在开关上开始缩小，直至从棋盘消失。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-059",
+              "zh": "箱子成功离开触发开关时，相同方向的开关应在开与关外观之间翻转。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-060",
+              "zh": "箱子移动到触发开关时，相同方向的开关应在开与关外观之间翻转。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-062",
+              "zh": "角色离开触发开关时，相同方向的开关应翻转开关状态。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-064",
+              "zh": "至少持有一把钥匙时尝试解锁，锁应缩小消失，角色留在相邻格。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-066",
+              "zh": "角色走到钥匙格时，钥匙应从棋盘消失并露出下方托座。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-067",
+              "zh": "角色离开陷阱格且未触发其他地块行为时，原陷阱格应变成地洞。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-069",
+              "zh": "角色落在尖刺上时，应开始返回出生点，而不能停留在尖刺上。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-072",
+              "zh": "连锁方块移除到达延迟续播点后，下一个方块应接着消失，形成沿路径传递的级联效果。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-076",
+              "zh": "完成最终关后，应从棋盘切回关卡选择页，并重新高亮第一关。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-049",
+              "zh": "因达到最大步数触发的返回流程到达延迟重置点后，步数应恢复到初始值。",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null
+      },
+      "gpt-5.4": {
+        "status": "completed",
+        "score": {
+          "display": "88.16 (+1.32)",
+          "base": 88.16,
+          "passed": 67,
+          "denominator": 76,
+          "dynamic": 1,
+          "dynamicAddition": 1.32,
+          "potential": 89.47
+        },
+        "traceCount": 28,
+        "playPath": "games/13-steps-to-escape/gpt-5.4/index.html",
+        "previewPath": "previews/13-steps-to-escape/gpt-5.4.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-016",
+              "zh": "性别选择阶段切换到下一选项时，高亮和角色预览应同步更新。"
+            },
+            {
+              "id": "target-045",
+              "zh": "步数达到十步及以上警告区间时，屏幕步数计数应抖动。"
+            },
+            {
+              "id": "target-053",
+              "zh": "滚石移动动画中，滚石应在棋盘上边旋转边滑动。"
+            },
+            {
+              "id": "target-057",
+              "zh": "箱子移动并停在地洞上后，箱子和地洞应被填平地洞地块替换。"
+            },
+            {
+              "id": "target-058",
+              "zh": "箱子移动到开启开关后，应在开关上开始缩小，直至从棋盘消失。"
+            },
+            {
+              "id": "target-065",
+              "zh": "没有钥匙时尝试解锁，角色应面向锁但留在原位，锁继续显示。"
+            },
+            {
+              "id": "target-073",
+              "zh": "玩家触发尚未使用的锣机关后，匹配的锣地块应缩小并从棋盘消失。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-012",
+              "zh": "关卡选择页下方还有条目时向下移动，应将高亮移到下方关卡。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-008",
+              "zh": "页面带有效共享关卡参数加载时，应直接进入该自定义关卡，而不是显示主菜单。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null
+      }
+    },
     "tiny-yurts": {},
     "casual-crusade": {},
     "cannonbolf": {},

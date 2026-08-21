@@ -1,6 +1,6 @@
 {
   "schemaVersion": 4,
-  "updatedAt": "2026-08-20",
+  "updatedAt": "2026-08-21",
   "defaultVersionId": "v8",
   "versions": [
     {
@@ -20,15 +20,15 @@
     {
       "id": "v8.1-video-transcode",
       "label": "v8.1 视频转码优化",
-      "description": "基于 Harness v8.1，复用 v8 Replay，采用优先保持原分辨率与帧率、仅在大小超限时逐级降参的自适应转码，并向 VLM Judge 提供通过 Probe 的近似触发秒数与关注窗口。",
+      "description": "基于 Harness v8.1，重新录制 Replay 并保存浏览器虚拟时钟到视频墙钟的逐帧/逐动作 timing sidecar；VLM Judge 使用分段插值的精确触发窗口，同时采用自适应视频转码。",
       "status": "partial",
-      "updatedAt": "2026-08-20",
-      "harnessRevision": "v8.1-d07cfed",
+      "updatedAt": "2026-08-21",
+      "harnessRevision": "v8.1-a377a3a-exact-timing",
       "judgeModel": "Seed-2.0-Pro",
-      "dataRevision": "probe-timing-video-v8.1-20260820-162506-games-2",
-      "resultCount": 8,
-      "completedCount": 8,
-      "failedCount": 0,
+      "dataRevision": "exact-timing-v8.1-20260820-212149-games-5",
+      "resultCount": 20,
+      "completedCount": 19,
+      "failedCount": 1,
       "dataPath": "data/versions/v8.1-video-transcode.json"
     }
   ]
