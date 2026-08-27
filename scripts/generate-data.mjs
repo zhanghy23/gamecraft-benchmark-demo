@@ -43,6 +43,20 @@ const failuresFileOption = option('--failures-file', '');
 const failuresFile = failuresFileOption
   ? (path.isAbsolute(failuresFileOption) ? failuresFileOption : path.join(repoRoot, failuresFileOption))
   : null;
+const targetOverridesRootOption = option('--target-overrides-root', '');
+const targetOverridesRoot = targetOverridesRootOption
+  ? (path.isAbsolute(targetOverridesRootOption)
+    ? targetOverridesRootOption
+    : path.join(repoRoot, targetOverridesRootOption))
+  : null;
+const translationsFileOption = option('--translations-file', '');
+const translationsFile = translationsFileOption
+  ? (path.isAbsolute(translationsFileOption)
+    ? translationsFileOption
+    : path.join(repoRoot, translationsFileOption))
+  : null;
+const playRoot = normalizeWebRoot(option('--play-root', 'games'), '--play-root');
+const previewRoot = normalizeWebRoot(option('--preview-root', 'previews'), '--preview-root');
 
 const models = [
   { id: 'gpt-5.5', label: 'GPT-5.5', provider: 'OpenAI', order: 1 },
@@ -755,17 +769,44 @@ function readJson(file) {
   return JSON.parse(fs.readFileSync(file, 'utf8'));
 }
 
+function normalizeWebRoot(value, label) {
+  const normalized = String(value || '').replace(/^\/+|\/+$/g, '');
+  if (!normalized || normalized.split('/').some((part) => part === '..' || part === '.')) {
+    throw new Error(`invalid ${label}: ${value}`);
+  }
+  return normalized;
+}
+
+const translationOverrides = translationsFile ? readJson(translationsFile) : {};
+const targetCountsByGame = {};
+
+function translatedRequirement(gameId, targetId) {
+  return translationOverrides[gameId]?.[targetId] ?? translations[gameId]?.[targetId];
+}
+
 const results = {};
 const requirementsByGame = {};
 for (const game of games) {
-  const sourceTargets = readJson(path.join(importRoot, 'targets', `${game.id}.json`));
+  const defaultTargetsPath = path.join(importRoot, 'targets', `${game.id}.json`);
+  const overrideTargetsPath = targetOverridesRoot
+    ? path.join(targetOverridesRoot, `${game.id}.json`)
+    : null;
+  const usesTargetOverride = Boolean(overrideTargetsPath && fs.existsSync(overrideTargetsPath));
+  const sourceTargets = readJson(usesTargetOverride ? overrideTargetsPath : defaultTargetsPath);
   const targetList = Array.isArray(sourceTargets) ? sourceTargets : sourceTargets.targets;
   const knownIds = new Set(targetList.map((target) => target.targetId));
-  if (targetList.length !== game.targetCount) {
-    throw new Error(`${game.id}: expected ${game.targetCount} targets, found ${targetList.length}`);
+  if (knownIds.size !== targetList.length) {
+    throw new Error(`${game.id}: target IDs must be unique`);
   }
+  const expectedTargetCount = usesTargetOverride
+    ? Object.keys(translationOverrides[game.id] ?? {}).length
+    : game.targetCount;
+  if (targetList.length !== expectedTargetCount) {
+    throw new Error(`${game.id}: expected ${expectedTargetCount} targets, found ${targetList.length}`);
+  }
+  targetCountsByGame[game.id] = targetList.length;
   requirementsByGame[game.id] = targetList.map((target) => {
-    const zh = translations[game.id]?.[target.targetId];
+    const zh = translatedRequirement(game.id, target.targetId);
     if (!zh) throw new Error(`${game.id}: missing Chinese translation for ${target.targetId}`);
     return { id: target.targetId, zh };
   });
@@ -803,7 +844,7 @@ for (const game of games) {
 
     for (const id of unmetIds) {
       if (!knownIds.has(id)) throw new Error(`${game.id}/${model.id}: unknown failed target ${id}`);
-      const zh = translations[game.id]?.[id];
+      const zh = translatedRequirement(game.id, id);
       if (!zh) throw new Error(`${game.id}/${model.id}: missing Chinese translation for ${id}`);
       const nonVlm = notVlmById.get(id);
       if (nonVlm) {
@@ -841,8 +882,8 @@ for (const game of games) {
         potential: report.score.potential,
       },
       traceCount: report.videos.length,
-      playPath: `games/${game.id}/${model.id}/index.html`,
-      previewPath: `previews/${game.id}/${model.id}.png`,
+      playPath: `${playRoot}/${game.id}/${model.id}/index.html`,
+      previewPath: `${previewRoot}/${game.id}/${model.id}.png`,
       unmet: {
         vlm: vlmUnmet,
         replayTrace: replayTraceUnmet,
@@ -859,6 +900,7 @@ const versionData = {
   models,
   games: games.map((game) => ({
     ...game,
+    targetCount: targetCountsByGame[game.id],
     requirements: requirementsByGame[game.id],
   })),
   results,
