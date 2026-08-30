@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "v8.3",
-  "updatedAt": "2026-08-30",
+  "updatedAt": "2026-08-31",
   "models": [
     {
       "id": "gpt-5.5",
@@ -2218,6 +2218,69 @@
           ]
         },
         "issue": null
+      },
+      "seed-2.0-pro": {
+        "status": "completed",
+        "score": {
+          "display": "86.54 (+5.77)",
+          "base": 86.54,
+          "passed": 45,
+          "denominator": 52,
+          "dynamic": 3,
+          "dynamicAddition": 5.77,
+          "potential": 92.31
+        },
+        "visualQuality": {
+          "score": 90,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 50,
+          "renderingStyleAverage": 40,
+          "videosScored": 7
+        },
+        "traceCount": 7,
+        "playPath": "games-v8.3/radius-raid/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.3/radius-raid/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-012",
+              "zh": "The Down movement input is held while the player ship is alive during active gameplay and the Up movement input is not held → The player ship's position shifts downward in the playfield on subsequent frames while the input remains held."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-010",
+              "zh": "The MENU button is activated from the paused screen and the return-to-menu confirmation is accepted → The game returns to the menu screen with the PLAY button visible.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-017",
+              "zh": "The weapon cooldown has completed during active gameplay while autofire is disabled, the mouse button is held, and triple shot is not active → One bullet line segment originates from the player ship and travels away from it.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-023",
+              "zh": "A piercing bullet collides with its fourth distinct enemy during active gameplay → Hit particle effects appear at the enemy and the bullet line disappears after the impact.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-045",
+              "zh": "The PLAY AGAIN button is activated on the game-over screen → The game-over screen is replaced by the active gameplay view for a new run.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-046",
+              "zh": "The MENU button is activated on the game-over screen → The game returns to the menu screen with the PLAY button visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-020",
+              "zh": "The weapon cooldown has completed during active gameplay after the triple-shot powerup timer has expired and firing is accepted → Exactly one bullet line segment originates from the player ship.",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null
       }
     },
     "elematter": {
@@ -2273,6 +2336,85 @@
           ]
         },
         "issue": null
+      },
+      "seed-2.0-pro": {
+        "status": "completed",
+        "score": {
+          "display": "81.03 (+8.62)",
+          "base": 81.03,
+          "passed": 47,
+          "denominator": 58,
+          "dynamic": 5,
+          "dynamicAddition": 8.62,
+          "potential": 89.66
+        },
+        "visualQuality": {
+          "score": 90,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 50,
+          "renderingStyleAverage": 40,
+          "videosScored": 18
+        },
+        "traceCount": 18,
+        "playPath": "games-v8.3/elematter/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.3/elematter/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-022",
+              "zh": "The reclaim control is selected in the open tower upgrade/reclaim menu for an existing tower → The selected tower disappears from its tile, and within 1 second the fragments HUD numeric display shows a value at least 1 above the visible pre-reclaim value, with tolerance 0."
+            },
+            {
+              "id": "target-053",
+              "zh": "The fifth wave is sent while the sixth wave remains queued → The wave display changes to “5 / 20”, and the next-wave preview counters show 0 earth enemies, 13 water enemies, 0 air enemies, and 0 fire enemies."
+            },
+            {
+              "id": "target-054",
+              "zh": "The tenth wave is sent while the eleventh wave remains queued → The wave display changes to “10 / 20”, and the next-wave preview counters show 0 earth enemies, 0 water enemies, 15 air enemies, and 0 fire enemies."
+            },
+            {
+              "id": "target-055",
+              "zh": "The fifteenth wave is sent while the sixteenth wave remains queued → The wave display changes to “15 / 20”, and the next-wave preview counters show 0 earth enemies, 0 water enemies, 0 air enemies, and 17 fire enemies."
+            },
+            {
+              "id": "target-056",
+              "zh": "The twentieth wave is sent as the final queued wave → The wave display changes to “20 / 20”, and the Send Wave control is displayed as disabled."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-040",
+              "zh": "An earth boss enemy is activated at the path entrance → A boss enemy appears at the path entrance with a 20 px square body, 6 px border, green earth-colored accents, and an outer corner frame.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-021",
+              "zh": "The upgrade button is selected for a tower that is not upgradable → The tower upgrade/reclaim menu remains open, and the upgrade button remains shown as unavailable.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-048",
+              "zh": "The player's last remaining life is lost → A browser alert dialog appears with the text “You lost.”.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-049",
+              "zh": "The loss alert dialog is accepted → The game page reloads to the initial playfield view.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-057",
+              "zh": "All waves have been sent and cleared while at least one life remains → A browser alert dialog appears with text beginning “You won! Based on lives and elemental fragments left, your score is:”.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-058",
+              "zh": "The win alert dialog is accepted → The game page reloads to the initial playfield view.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null
       }
     },
     "highway-404": {
@@ -2300,6 +2442,68 @@
         "unmet": {
           "vlm": [],
           "replayTrace": []
+        },
+        "issue": null
+      },
+      "seed-2.0-pro": {
+        "status": "completed",
+        "score": {
+          "display": "85.11 (+2.13)",
+          "base": 85.11,
+          "passed": 40,
+          "denominator": 47,
+          "dynamic": 1,
+          "dynamicAddition": 2.13,
+          "potential": 87.23
+        },
+        "visualQuality": {
+          "score": 90,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 50,
+          "renderingStyleAverage": 40,
+          "videosScored": 9
+        },
+        "traceCount": 9,
+        "playPath": "games-v8.3/highway-404/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.3/highway-404/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-015",
+              "zh": "A leftward swipe steering input is accepted during active gameplay while the hero has an open path to the left → The hero moves leftward from its pre-input position along the playfield."
+            },
+            {
+              "id": "target-038",
+              "zh": "The hero collides with a 404 road-not-found sign during active gameplay while not being lane-redirected → A falling-road segment appears directly after the 404 sign on the road."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-003",
+              "zh": "A keyboard key release that does not match the next Konami-code key is accepted while the title screen is displayed before the Konami-code sequence is complete → The display changes from the title screen to the gameplay screen.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-007",
+              "zh": "The gameplay screen is rendered during active play after the road map cache has been built → The gameplay viewport is filled by tiled highway lanes with shoulder tiles along the left and right edges.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-041",
+              "zh": "A scheduled falling-road spawn becomes due and the new segment does not overlap a 200 road-OK marker → A new falling-road segment appears at the scheduled road position.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-042",
+              "zh": "The hero overlaps a falling-road segment after that segment has passed the fatal animation frame during active gameplay → The hero is drawn rotated away from its upright orientation during a death animation.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-001",
+              "zh": "The game has completed its initial page setup on a mobile device before gameplay is started → The title screen is visible with \"js13kgames 2020\" centered near the top, \"collect teapots\" centered above the middle, \"for extra points\" centered below it, \"swipe to steer\" centered below \"for extra points\", \"jerome lecomte\" centered near the bottom, and a highway scene behind the text with the hero sprite near the lower center.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
         },
         "issue": null
       }
@@ -2342,6 +2546,57 @@
           ]
         },
         "issue": null
+      },
+      "seed-2.0-pro": {
+        "status": "completed",
+        "score": {
+          "display": "86.11 (+5.56)",
+          "base": 86.11,
+          "passed": 31,
+          "denominator": 36,
+          "dynamic": 2,
+          "dynamicAddition": 5.56,
+          "potential": 91.67
+        },
+        "visualQuality": {
+          "score": 89.33,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 49.33,
+          "renderingStyleAverage": 40,
+          "videosScored": 15
+        },
+        "traceCount": 15,
+        "playPath": "games-v8.3/kuro-neko-market/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.3/kuro-neko-market/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-012",
+              "zh": "The results screen is created after a level in which at least one fish spawned. → The results screen displays the spawned fish entries in a grid, with each row containing at most eight fish entries."
+            },
+            {
+              "id": "target-013",
+              "zh": "The results reveal animation reaches a fish entry that is marked correct. → The fish entry becomes visible in its results grid cell, a particle burst appears around that entry, and the results score counter’s displayed digits change during the reveal."
+            },
+            {
+              "id": "target-033",
+              "zh": "The results screen is created after a level with a nonzero maximum score. → The results screen shows a money line containing the current results score counter, a slash glyph, the maximum score counter, and currency signs; it also shows a percentage line containing a percentage counter and a percent sign."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-006",
+              "zh": "A held fish is dropped on a drop target that can host it while the paw is able to drop. → The fish is placed on the drop target, and the fish’s shadow is visible again.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-032",
+              "zh": "The back button is activated on the results screen. → The results screen is replaced by the level-select screen through the tiled screen transition.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null
       }
     },
     "13-steps-to-escape": {
@@ -2355,6 +2610,220 @@
         "previewPath": null,
         "unmet": null,
         "issue": "生成源码无法构建：src/main.ts 的泛型类型缺少右尖括号，构建器报 Expected '>' but found '['。"
+      },
+      "seed-2.0-pro": {
+        "status": "completed",
+        "score": {
+          "display": "46.67 (+10.67)",
+          "base": 46.67,
+          "passed": 35,
+          "denominator": 75,
+          "dynamic": 8,
+          "dynamicAddition": 10.67,
+          "potential": 57.33
+        },
+        "visualQuality": {
+          "score": 90,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 50,
+          "renderingStyleAverage": 40,
+          "videosScored": 24
+        },
+        "traceCount": 24,
+        "playPath": "games-v8.3/13-steps-to-escape/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.3/13-steps-to-escape/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-018",
+              "zh": "A level-ending condition is reached during active gameplay on a built-in level that is not the final built-in level → The display changes from the gameplay board to the level selector screen, and the selection highlight is shown on the numbered level entry immediately after the completed level."
+            },
+            {
+              "id": "target-019",
+              "zh": "A level-ending condition is reached during active gameplay on the final built-in level → The display changes from the gameplay board to the level selector screen, and the selection highlight is shown on the first numbered level entry."
+            },
+            {
+              "id": "target-022",
+              "zh": "The gameplay UI is rendered while the performed-step count is 11 → The visible step counter text is drawn in yellow, and across consecutive gameplay frames the step counter text is drawn at changing horizontal or vertical positions while the level grid remains aligned."
+            },
+            {
+              "id": "target-023",
+              "zh": "The gameplay UI is rendered while the performed-step count is 12 → The visible step counter text is drawn in orange, and across consecutive gameplay frames the step counter text is drawn at changing horizontal or vertical positions while the level grid remains aligned."
+            },
+            {
+              "id": "target-024",
+              "zh": "The gameplay UI is rendered while the performed-step count is at least 13 → The visible step counter text is drawn in red, and across consecutive gameplay frames the step counter text is drawn at changing horizontal or vertical positions while the level grid remains aligned."
+            },
+            {
+              "id": "target-042",
+              "zh": "A movement command is processed during active gameplay when the destination contains a lock and the player has at least one collected key → The player character remains on its current tile facing the lock, and the lock tile shrinks during a removal animation until the lock is no longer visible."
+            },
+            {
+              "id": "target-043",
+              "zh": "A movement command is processed during active gameplay when the destination contains a lock and the player has no collected keys → The player character remains on its current tile facing the lock, and the lock tile remains visible in its grid cell."
+            },
+            {
+              "id": "target-047",
+              "zh": "A completed player movement leaves a trap tile and lands on a tile that is not a hole without performing a tile action → The trap tile the player just left changes into a hole tile."
+            },
+            {
+              "id": "target-048",
+              "zh": "A completed player movement lands on a spawn tile during active gameplay → The previous current-spawn tile changes to a regular spawn tile, the destination spawn tile changes to the current-spawn appearance, and the player character stands on the new current-spawn tile."
+            },
+            {
+              "id": "target-050",
+              "zh": "A completed player movement lands on a switch-trigger tile before the step limit is reached → Switch tiles with the same orientation as the trigger change between their switch-on and switch-off appearances."
+            },
+            {
+              "id": "target-058",
+              "zh": "A mouse-wheel orientation change is accepted on the level editor canvas → The orientation shown by the editor placement preview changes from its previous direction to another direction."
+            },
+            {
+              "id": "target-060",
+              "zh": "A right-button tile removal click is accepted on a filled grid cell in the level editor → The clicked editor grid cell changes to an empty grid cell."
+            },
+            {
+              "id": "target-065",
+              "zh": "A rightward option-change command is accepted on the “SELECT SKIN COLOR” character customization step → The selected skin-color swatch outline moves to a different swatch, and the character preview changes to that skin color."
+            },
+            {
+              "id": "target-067",
+              "zh": "A rightward option-change command is accepted on the “SELECT HAIR COLOR” character customization step → The selected hair-color swatch outline moves to a different swatch, and the character preview changes to that hair color."
+            },
+            {
+              "id": "target-069",
+              "zh": "A rightward option-change command is accepted on the “SELECT OUTFIT COLOR” character customization step → The selected outfit-color swatch outline moves to a different swatch, and the character preview changes to that outfit color."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-005",
+              "zh": "The highlighted Continue menu item is confirmed on the main menu while a saved current level is available → The display changes from the main menu to gameplay showing the saved level as the active board.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-016",
+              "zh": "The level selector screen is rendered with at least one completed level entry → Each completed level entry shows a star tile on its preview.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-017",
+              "zh": "The level selector screen is rendered when the completed-level list includes every numbered level → The level selector screen shows the level grid together with the texts “CONGRATULATIONS!” and “YOU ESCAPED ALL LEVELS WITHIN 13 STEPS!”.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-034",
+              "zh": "A crate finishes moving onto a switch-trigger tile → Switch tiles with the same orientation as the trigger at the crate’s destination change between their switch-on and switch-off appearances.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-035",
+              "zh": "A crate is pushed away from a tile that contains a switch-trigger underneath it → Switch tiles with the same orientation as the trigger under the crate change between their switch-on and switch-off appearances as the crate leaves that tile.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-036",
+              "zh": "A crate is present on a switch tile that changes into the switch-on appearance during a switch inversion → The crate on that switch tile shrinks during a removal animation until the crate is no longer visible.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-037",
+              "zh": "A crate finishes moving onto a switch-on tile → The crate shrinks during a removal animation until the crate is no longer visible on the switch-on tile.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-038",
+              "zh": "A crate finishes moving onto a hole tile → The crate and the hole tile at that grid cell are replaced by a filled-hole tile.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-039",
+              "zh": "A rightward movement command is processed during active gameplay when a pushable boulder is directly to the right of the player and at least one tile to the right of the boulder can receive it → The boulder moves right along its row until it reaches the last receiving tile before the next blocked tile or border, and the player character remains on its current tile facing right.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-040",
+              "zh": "A movement command is processed during active gameplay when the destination contains a pushable boulder and the boulder has no receiving tile in the pushed direction → The player character remains on its current tile, and the boulder remains in its current grid cell.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-041",
+              "zh": "A boulder finishes moving with an untriggered gong-trigger tile directly in front of its stopping direction → The gong tile with the same orientation as that gong-trigger shrinks during a removal animation until the gong is no longer visible.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-051",
+              "zh": "A completed player movement leaves a switch-trigger tile → Switch tiles with the same orientation as the trigger change between their switch-on and switch-off appearances.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-052",
+              "zh": "A rightward movement command is processed into a right-facing block-trigger tile during active gameplay → Block tiles connected from that trigger in the rightward direction shrink during removal animations until those blocks are no longer visible.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-053",
+              "zh": "A movement command is processed into an untriggered gong-trigger tile during active gameplay → The gong tile with the same orientation as the gong-trigger shrinks during a removal animation until the gong is no longer visible.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-061",
+              "zh": "The Test/Share control is accepted in the level editor while the edited level is valid → The display changes from the level editor to gameplay showing the edited level as a playable board.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-062",
+              "zh": "The Test/Share control is activated in the level editor while the edited level is invalid → The display remains on the level editor, with the editable level grid still visible.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-075",
+              "zh": "The menu background is rendered after its background image is available → A pixel-art background image is repeated horizontally across the visible canvas behind the menu screen.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-002",
+              "zh": "The game completes initial setup with a valid encoded level parameter in the URL → The display opens directly to gameplay showing the decoded custom level as the active board.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-030",
+              "zh": "An upward movement command is processed during active gameplay when the destination above the player contains a blocking tile that does not perform an action → The player character remains on its current tile and the character sprite faces upward.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-032",
+              "zh": "A rightward movement command is processed during active gameplay when a pushable crate is directly to the right of the player and the tile one cell to the right of the crate can receive it → The crate moves one grid cell to the right, and the player character remains on its current tile facing right.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-044",
+              "zh": "A completed player movement lands on a key tile during active gameplay → The key tile at the player’s destination disappears from the board while the player character remains on that destination tile.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-020",
+              "zh": "The gameplay UI is rendered during an active built-in level → The UI shows text in the form “LEVEL: ” followed by the current level number, and the reset prompt “R: RESET” is visible.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-059",
+              "zh": "A tile placement click is accepted on an empty grid cell in the level editor → The clicked editor grid cell changes to show the currently selected tile using the currently selected orientation.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-073",
+              "zh": "The sound icon is clicked while the UI layer is rendered with sound enabled → The sound icon changes from the sound-on drawing to the muted sound-off drawing.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-074",
+              "zh": "The sound icon is clicked while the UI layer is rendered with sound muted → The sound icon changes from the muted sound-off drawing to the sound-on drawing.",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null
       }
     },
     "tiny-yurts": {
@@ -2368,6 +2837,269 @@
         "previewPath": null,
         "unmet": null,
         "issue": "生成源码无法构建：src/main.ts 重复声明符号 y，确定性检查在 Trace 前终止。"
+      },
+      "seed-2.0-pro": {
+        "status": "completed",
+        "score": {
+          "display": "50.53 (+6.32)",
+          "base": 50.53,
+          "passed": 48,
+          "denominator": 95,
+          "dynamic": 6,
+          "dynamicAddition": 6.32,
+          "potential": 56.84
+        },
+        "visualQuality": {
+          "score": 88.46,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 49.23,
+          "renderingStyleAverage": 39.23,
+          "videosScored": 13
+        },
+        "traceCount": 13,
+        "playPath": "games-v8.3/tiny-yurts/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.3/tiny-yurts/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [],
+          "replayTrace": [
+            {
+              "id": "target-002",
+              "zh": "The menu overlay reveal sequence has completed → The menu overlay shows the title \"Tiny Yurts\" and two buttons labeled \"Fullscreen\" and \"Start\".",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-003",
+              "zh": "The initial menu screen has completed setup with no stored highscore available → A menu overlay is visible with a button labeled \"Start\", and the menu text shows the tip \"Tip: Left click & drag to connect yurts to\" followed by \"farms, or delete paths with right click.\"",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-004",
+              "zh": "The Start button is accepted while the menu playfield is shown in its angled zoomed-in presentation → The menu overlay is no longer visible, and the main gameplay playfield is visible in an unrotated view.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-006",
+              "zh": "The early active game reaches the score-counter reveal moment → The animal score counters are visible on the HUD.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-020",
+              "zh": "The first active-game pond spawn chooses the large-pond branch and a valid position is available → A pond occupying a 6 by 4 cell area appears on the playfield.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-023",
+              "zh": "A newly spawned farm with a predefined starting path reaches its delayed starting-path creation moment → A short visible path segment appears connected to the farm.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-025",
+              "zh": "The fish-farm spawn opportunity occurs after the fish-farm threshold while no fish farm exists and a large pond is available → A fish farm appears on the pond with a visible stone path segment at the pond edge.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-028",
+              "zh": "A newly spawned yurt reaches its delayed starting-path creation moment → A short visible path segment appears connected to the yurt.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-029",
+              "zh": "A newly spawned yurt reaches its resident-arrival moment → Two person icons appear at the yurt.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-030",
+              "zh": "A yurt rotation to a new facing direction is accepted → The yurt has a short starting path segment on the new facing side, and the previous short starting path segment is absent.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-055",
+              "zh": "A path deletion request targets a fixed yurt starting path during active gameplay → The yurt's short starting path segment remains visible during the next 0.5 seconds.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-056",
+              "zh": "The periodic path inventory reward begins while the path inventory displayed count is below 99 → The path tile counter displays \"+9\" and then returns to a numeric path count during the reward sequence.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-057",
+              "zh": "The periodic path inventory reward opportunity occurs while the path tile counter displays \"99\" → The path tile counter continues to display \"99\" and does not switch to \"+9\" during the next 3 seconds.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-060",
+              "zh": "A newly spawned goat farm reaches its first scheduled animal-arrival moment → One goat appears inside the farm.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-061",
+              "zh": "A newly spawned goat farm reaches its third scheduled animal-arrival moment → A third goat appears inside the farm.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-062",
+              "zh": "A newly spawned fish farm reaches its first scheduled fish-arrival moment → One fish appears in the fish farm.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-063",
+              "zh": "A newly spawned fish farm reaches its fifth scheduled fish-arrival moment → A fifth fish appears in the fish farm.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-065",
+              "zh": "A new goat is added to the playfield → The goat counter area is visible, and the goat counter displays a number one greater than its displayed number before the goat was added.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-066",
+              "zh": "A new fish is added to the playfield → The fish counter area is visible, and the fish counter displays a number one greater than its displayed number before the fish was added.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-067",
+              "zh": "An ox update occurs while the ox has a movement target more than 1 SVG unit away, the ox's current rotation differs from the target angle by more than 0.1 radians, and the proposed movement is not blocked by another ox → The ox's rendered body position and body orientation both change between consecutive animation frames.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-068",
+              "zh": "A goat update occurs while the goat has a movement target more than 1 SVG unit away, the goat's current rotation differs from the target angle by more than 0.1 radians, and the proposed movement is not blocked by another goat → The goat's rendered body position and body orientation both change between consecutive animation frames.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-069",
+              "zh": "A fish update occurs while the fish has a movement target more than 1 SVG unit away, the fish's current rotation differs from the target angle by more than 0.1 radians, and the proposed movement is not blocked by another fish → The fish's rendered body position and body orientation both change between consecutive animation frames.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-070",
+              "zh": "A farm assigns an available same-type person a route to an undersupplied farm over connected paths → A person icon leaves its yurt and travels along the drawn path toward the farm.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-071",
+              "zh": "A person at a farm begins a return-home route over connected paths → The person icon leaves the farm and travels along the drawn path toward its yurt.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-072",
+              "zh": "A person reaches the fish-service tick while at a fish farm → The fish bodies in that fish farm change to the orange fish color one after another.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-073",
+              "zh": "A person begins leaving a fish farm after the service duration → The person icon leaves the fish farm and travels along the drawn path toward its yurt; the fish bodies in that fish farm change to the shaded water color one after another.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-075",
+              "zh": "A farm warning is toggled off → The farm warning marker is no longer visible.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-076",
+              "zh": "An animal warning is toggled on → A warning marker is visible on the animal.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-077",
+              "zh": "An animal warning is toggled off → The animal warning marker is no longer visible.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-078",
+              "zh": "An ox farm upgrade is accepted while the farm has two visible adult oxen → The two adult oxen display love indicators, and one baby ox appears at the farm.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-079",
+              "zh": "A goat farm upgrade is accepted while the farm has two visible adult goats → The two adult goats display love indicators, and one baby goat appears at the farm.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-080",
+              "zh": "An ox farm upgrade is accepted while the farm has three visible adult oxen and fewer than five total visible oxen → The three adult oxen display love indicators, and two baby oxen appear at the farm.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-081",
+              "zh": "A fish farm upgrade is accepted while the farm has fewer than nine visible fish → Four additional fish appear in the fish farm.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-082",
+              "zh": "An ox farm upgrade is rejected because the farm already has at least five visible oxen → The farm's visible ox count remains at its pre-upgrade count and no love indicators appear at that farm during the next 9 seconds.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-083",
+              "zh": "A goat farm upgrade is rejected while the farm has six visible goats → The farm's visible goat count remains six and no love indicators appear at that farm during the next 9 seconds.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-084",
+              "zh": "A fish farm upgrade is rejected because the farm already has at least nine visible fish → The farm's visible fish count remains at its pre-upgrade count during the next 11 seconds.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-085",
+              "zh": "A baby ox becomes an adult during active gameplay → The ox changes from baby rendering to adult rendering, and the ox horns are visible.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-086",
+              "zh": "A baby fish reaches adulthood during active gameplay → The fish changes from baby rendering to adult rendering.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-088",
+              "zh": "The terminal game-over camera transition begins for the lost farm → The playfield is rotated and zoomed toward the lost farm, and the animal counters, clock, path-tile indicator, and pause control are hidden.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-089",
+              "zh": "The game-over overlay content reveal sequence completes → The overlay shows the header text \"Game Over\", the sentence \"Too few people could tend to this farm in time.\", and a button labeled \"Overlay On/Off\".",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-092",
+              "zh": "The game-over screen is shown with yurt, ox, goat, and fish counts available → The game-over overlay includes a numeric text label ending with \"settlers\", and the number after \"Score:\" equals the displayed settlers number plus the displayed ox, goat, and fish counts.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-010",
+              "zh": "The pause control is accepted during active gameplay after pausing is enabled → The pause control changes from a pause-bars symbol to a play symbol while the gameplay playfield remains visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-011",
+              "zh": "The pause control is accepted while gameplay is paused → The pause control changes to a two-vertical-bars pause symbol while the gameplay playfield remains visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-012",
+              "zh": "The grid toggle control is accepted during gameplay when the standard grid lock is off → The standard grid overlay is visible, and the standard grid button shows a grid/hash icon.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-013",
+              "zh": "The grid toggle control is accepted during gameplay when the standard grid lock is on → The standard grid overlay is hidden, and the standard grid button shows an A-shaped automatic-mode icon.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-052",
+              "zh": "A right-click path deletion is accepted on an existing path during active gameplay → The selected visible path is removed from the playfield.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-053",
+              "zh": "A left-click path deletion is accepted on an existing path while the red delete grid lock is on → The selected visible path is removed from the playfield.",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null
       }
     },
     "casual-crusade": {
@@ -2510,6 +3242,157 @@
           ]
         },
         "issue": null
+      },
+      "seed-2.0-pro": {
+        "status": "completed",
+        "score": {
+          "display": "66.22 (+8.11)",
+          "base": 66.22,
+          "passed": 49,
+          "denominator": 74,
+          "dynamic": 6,
+          "dynamicAddition": 8.11,
+          "potential": 74.32
+        },
+        "visualQuality": {
+          "score": 90,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 50,
+          "renderingStyleAverage": 40,
+          "videosScored": 5
+        },
+        "traceCount": 5,
+        "playPath": "games-v8.3/casual-crusade/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.3/casual-crusade/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-039",
+              "zh": "A discard effect is applied to a visible hand card → A hand card moves to the draw-pile area, and a replacement card appears in the visible hand."
+            },
+            {
+              "id": "target-045",
+              "zh": "A level-end check finds unlocked hand cards but none has any legal placement → The current board is replaced by the next level board, with the character placed on a starting tile and cards displayed in the hand."
+            },
+            {
+              "id": "target-052",
+              "zh": "The third level board is visible after advancing from the previous level → The visible board contains nine regular non-reward tile spaces."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-012",
+              "zh": "A blank card with no connectors is rendered → The card face has no black connector line to any edge and no black center connector circle.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-014",
+              "zh": "A card that contains a gem becomes hovered → A tooltip appears near the card showing the gem name and description text with colored highlighted words.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-025",
+              "zh": "A dragged movable card enters within 100 canvas pixels of a legal empty board tile during active play → That board tile displays a placement highlight while the card is still being dragged.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-027",
+              "zh": "A movable card is released during active play while no legal board tile is within 100 canvas pixels of the card → The card returns to the hand area and no new card appears on the board from that release.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-029",
+              "zh": "A placed card creates a path that revisits a card whose gem color is currently freely revisitable → During the single path traversal, the character is visibly drawn on the same card tile at two separated moments before reaching the placed card.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-035",
+              "zh": "A red card step is applied while the healing-on-red relic is active and the player is below maximum life → Green rectangular particles appear around the character, and the HUD life text increases by 1 in the current-life number while the maximum-life number stays the same.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-037",
+              "zh": "A draw-card effect occurs while the draw pile is empty → No new card appears from the draw-pile area and the visible hand does not gain a card.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-040",
+              "zh": "A card with the blank-tile creation effect activates while it has at least one empty non-reward neighboring board tile → An expanding circular pulse appears from the activating card, and at least one previously empty neighboring board tile displays a blank card.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-041",
+              "zh": "A blank-tile creation effect activates while an empty diagonal neighboring board tile is available → The diagonal neighboring tile displays a blank card after the effect.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-042",
+              "zh": "A blank-tile creation effect activates while a reward chest occupies one of the surrounding board spaces → The reward chest remains visible as a chest and is not replaced by a blank card.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-055",
+              "zh": "A blank card is created adjacent to an unlooted reward chest while the relic that lets empty cards open chests is active → The adjacent reward chest changes from closed to open, and a reward selection panel appears.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-056",
+              "zh": "A character path visits a tile orthogonally adjacent to two or more unlooted reward chests → At least two adjacent reward chests are open, and a reward selection panel appears with the title text \"PICK YOUR REWARDS!\".",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-060",
+              "zh": "A reward selection opens with more than one required pick → A reward panel is visible with the title text \"PICK YOUR REWARDS!\" above the reward choices.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-062",
+              "zh": "A reward selection opens on the first level → The reward panel displays card-shaped reward choices rather than relic-icon reward choices.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-065",
+              "zh": "A hand card is clicked while a reward selection is available → The reward panel remains visible and the hand card is not shown as the selected card for placement.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-068",
+              "zh": "A card reward is chosen while a card reward selection is available and the visible hand has an available unlocked slot → The chosen card reward is removed from the reward choices, and that card appears in the player's visible hand area.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-044",
+              "zh": "A level-end check finds that the playable board is full → The current board is replaced by the next level board, with the character placed on a starting tile and cards displayed in the hand.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-057",
+              "zh": "A character path visits a tile diagonally adjacent to an unlooted reward chest → The diagonal reward chest remains closed and no reward selection panel appears from that tile visit.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-064",
+              "zh": "An unhovered reward choice is clicked while a reward selection is available → The reward choice remains in the reward panel and is shown in its hovered highlight state; no reward choice is removed by that click.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-066",
+              "zh": "A reward is chosen while at least one required reward pick remains afterward → The chosen reward is removed from the reward choices, and the reward panel title displays \"PICK N MORE!\" with N as the visible remaining pick count.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-070",
+              "zh": "A SAINTHOOD relic reward is chosen while a relic reward selection is available → The chosen relic is removed from the reward choices, its icon appears in the collected relic display, and the HUD maximum-life number increases by 2.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-074",
+              "zh": "The game-over screen is visible and the restart button is activated → The game returns to an active play layout showing \"LIFE: 5/5\", score \"0\", no collected relic icons, and the first-level board.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null
       }
     },
     "cannonbolf": {
@@ -2537,6 +3420,68 @@
         "unmet": {
           "vlm": [],
           "replayTrace": []
+        },
+        "issue": null
+      },
+      "seed-2.0-pro": {
+        "status": "completed",
+        "score": {
+          "display": "75.00 (+0.00)",
+          "base": 75,
+          "passed": 24,
+          "denominator": 32,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 75
+        },
+        "visualQuality": {
+          "score": 89.17,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 50,
+          "renderingStyleAverage": 39.17,
+          "videosScored": 12
+        },
+        "traceCount": 12,
+        "playPath": "games-v8.3/cannonbolf/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.3/cannonbolf/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-004",
+              "zh": "A valid shot is accepted while the game is in LaterAim mode with ammo remaining → On the first rendered gameplay frame after the shot is accepted, the aiming guide line is gone, a ball is visible in play, and the cannon is visible."
+            },
+            {
+              "id": "target-016",
+              "zh": "The player moves the mouse downward while the game is in FirstAim mode and the vertical aim is not at its lower limit → The cannon barrel and the aiming guide line pivot downward from their immediately preceding orientation."
+            },
+            {
+              "id": "target-019",
+              "zh": "The player moves the mouse upward while the game is in LaterAim mode and the vertical aim is not at its upper limit → The cannon barrel and the aiming guide line pivot upward from their immediately preceding orientation."
+            },
+            {
+              "id": "target-020",
+              "zh": "The player moves the mouse downward while the game is in LaterAim mode and the vertical aim is not at its lower limit → The cannon barrel and the aiming guide line pivot downward from their immediately preceding orientation."
+            },
+            {
+              "id": "target-026",
+              "zh": "An unhit castle is processed as hit while at least one other castle remains unhit → The intact castle at that location is no longer drawn, multiple separate debris pieces appear at the castle's former position, and no centered result message is displayed."
+            },
+            {
+              "id": "target-028",
+              "zh": "The final unhit castle is processed as hit on a non-final level with no ammo remaining → The intact castle at that location is no longer drawn, multiple separate debris pieces appear at the castle's former position, and a centered message reading \"PAR!\" is displayed over the gameplay view."
+            },
+            {
+              "id": "target-029",
+              "zh": "The final unhit castle is processed as hit on the final level → The intact castle at that location is no longer drawn, multiple separate debris pieces appear at the castle's former position, and a centered message reading \"THANKS FOR PLAYING!\" is displayed over the gameplay view."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-006",
+              "zh": "The ball falls below the level-failure boundary while the game is in Ball mode → A centered message reading \"SORRY, TRY AGAIN!\" is displayed over the gameplay view.",
+              "cause": "源码分析确认未实现"
+            }
+          ]
         },
         "issue": null
       }
