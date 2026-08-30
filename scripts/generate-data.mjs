@@ -43,6 +43,7 @@ const failuresFileOption = option('--failures-file', '');
 const failuresFile = failuresFileOption
   ? (path.isAbsolute(failuresFileOption) ? failuresFileOption : path.join(repoRoot, failuresFileOption))
   : null;
+const replaceDefaultFailures = cliArgs.includes('--replace-failures');
 const targetOverridesRootOption = option('--target-overrides-root', '');
 const targetOverridesRoot = targetOverridesRootOption
   ? (path.isAbsolute(targetOverridesRootOption)
@@ -755,7 +756,7 @@ const failedRuns = {
 };
 
 const configuredFailedRuns = failuresFile
-  ? { ...failedRuns, ...readJson(failuresFile) }
+  ? (replaceDefaultFailures ? readJson(failuresFile) : { ...failedRuns, ...readJson(failuresFile) })
   : failedRuns;
 
 const nonVlmCauseLabels = {
@@ -780,8 +781,17 @@ function normalizeWebRoot(value, label) {
 const translationOverrides = translationsFile ? readJson(translationsFile) : {};
 const targetCountsByGame = {};
 
-function translatedRequirement(gameId, targetId) {
-  return translationOverrides[gameId]?.[targetId] ?? translations[gameId]?.[targetId];
+function generatedRequirementText(target) {
+  const condition = String(target?.condition ?? '').trim();
+  const expectedOutcome = String(target?.expectedOutcome ?? '').trim();
+  if (condition && expectedOutcome) return `${condition} → ${expectedOutcome}`;
+  return condition || expectedOutcome || null;
+}
+
+function translatedRequirement(gameId, targetId, target = null) {
+  return translationOverrides[gameId]?.[targetId]
+    ?? (targetOverridesRoot ? generatedRequirementText(target) : null)
+    ?? translations[gameId]?.[targetId];
 }
 
 const results = {};
@@ -795,18 +805,20 @@ for (const game of games) {
   const sourceTargets = readJson(usesTargetOverride ? overrideTargetsPath : defaultTargetsPath);
   const targetList = Array.isArray(sourceTargets) ? sourceTargets : sourceTargets.targets;
   const knownIds = new Set(targetList.map((target) => target.targetId));
+  const targetsById = new Map(targetList.map((target) => [target.targetId, target]));
   if (knownIds.size !== targetList.length) {
     throw new Error(`${game.id}: target IDs must be unique`);
   }
-  const expectedTargetCount = usesTargetOverride
-    ? Object.keys(translationOverrides[game.id] ?? {}).length
-    : game.targetCount;
+  const overrideTranslationCount = Object.keys(translationOverrides[game.id] ?? {}).length;
+  const expectedTargetCount = usesTargetOverride && overrideTranslationCount > 0
+    ? overrideTranslationCount
+    : (usesTargetOverride ? targetList.length : game.targetCount);
   if (targetList.length !== expectedTargetCount) {
     throw new Error(`${game.id}: expected ${expectedTargetCount} targets, found ${targetList.length}`);
   }
   targetCountsByGame[game.id] = targetList.length;
   requirementsByGame[game.id] = targetList.map((target) => {
-    const zh = translatedRequirement(game.id, target.targetId);
+    const zh = translatedRequirement(game.id, target.targetId, target);
     if (!zh) throw new Error(`${game.id}: missing Chinese translation for ${target.targetId}`);
     return { id: target.targetId, zh };
   });
@@ -844,7 +856,7 @@ for (const game of games) {
 
     for (const id of unmetIds) {
       if (!knownIds.has(id)) throw new Error(`${game.id}/${model.id}: unknown failed target ${id}`);
-      const zh = translatedRequirement(game.id, id);
+      const zh = translatedRequirement(game.id, id, targetsById.get(id));
       if (!zh) throw new Error(`${game.id}/${model.id}: missing Chinese translation for ${id}`);
       const nonVlm = notVlmById.get(id);
       if (nonVlm) {
@@ -881,6 +893,13 @@ for (const game of games) {
         dynamicAddition: report.score.dynamicAddition,
         potential: report.score.potential,
       },
+      visualQuality: report.visualQuality ? {
+        score: report.visualQuality.score,
+        maximumScore: report.visualQuality.maximumScore,
+        technicalPresentationAverage: report.visualQuality.technicalPresentationAverage,
+        renderingStyleAverage: report.visualQuality.renderingStyleAverage,
+        videosScored: report.visualQuality.videosScored,
+      } : null,
       traceCount: report.videos.length,
       playPath: `${playRoot}/${game.id}/${model.id}/index.html`,
       previewPath: `${previewRoot}/${game.id}/${model.id}.png`,

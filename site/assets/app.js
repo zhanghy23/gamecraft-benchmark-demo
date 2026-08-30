@@ -77,6 +77,14 @@ function resultCard(result, game, model) {
   const note = result.issue
     ? `<p class="issue-note"><strong>运行提示：</strong>${escapeHtml(result.issue)}</p>`
     : '';
+  const visualQuality = result.visualQuality;
+  const visualSummary = visualQuality
+    ? `<span class="visual-score-chip">画面 <strong>${number.format(visualQuality.score)}</strong>/100</span>`
+    : '';
+  const visualBreakdown = visualQuality
+    ? `<span>技术呈现 <strong>${number.format(visualQuality.technicalPresentationAverage)}/50</strong></span>
+       <span>渲染风格 <strong>${number.format(visualQuality.renderingStyleAverage)}/50</strong></span>`
+    : '';
 
   return `
     <article class="result-card">
@@ -90,6 +98,7 @@ function resultCard(result, game, model) {
           <strong class="score-value ${scoreTone(result.score.base)}">${number.format(result.score.base)}</strong>
         </div>
         <div class="score-side">
+          ${visualSummary}
           <span>${result.score.passed}/${result.score.denominator} 通过</span>
           <span>${result.traceCount} 条最终 Trace</span>
         </div>
@@ -98,6 +107,7 @@ function resultCard(result, game, model) {
         <span>Dynamic <strong>${result.score.dynamic}</strong></span>
         <span>动态加分 <strong>+${number.format(result.score.dynamicAddition)}</strong></span>
         <span>潜在总分 <strong>${number.format(result.score.potential)}</strong></span>
+        ${visualBreakdown}
       </div>
       ${note}
     </article>`;

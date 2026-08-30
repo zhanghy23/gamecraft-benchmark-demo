@@ -132,7 +132,9 @@ h1 span { color: #93c5fd; }
 .score-value.fair { color: #b45309; }
 .score-value.low { color: var(--red); }
 .score-side { display: grid; gap: 4px; color: var(--muted); text-align: right; font-size: 12px; }
-.score-breakdown { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 16px; }
+.visual-score-chip { display: inline-flex; justify-self: end; align-items: baseline; gap: 3px; margin-bottom: 3px; padding: 5px 8px; border-radius: 999px; color: #6d28d9; background: #f3e8ff; font-size: 10px; font-weight: 750; }
+.visual-score-chip strong { color: #5b21b6; font-size: 14px; }
+.score-breakdown { display: grid; grid-template-columns: repeat(auto-fit, minmax(76px, 1fr)); gap: 8px; margin-top: 16px; }
 .score-breakdown span { padding: 10px; border-radius: 10px; background: var(--wash); color: var(--muted); font-size: 10px; }
 .score-breakdown strong { display: block; margin-top: 3px; color: var(--ink); font-size: 14px; }
 .issue-note { margin: 14px 0 0; padding: 10px 12px; border-radius: 10px; color: #991b1b; background: #fef2f2; font-size: 12px; }
