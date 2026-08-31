@@ -3557,6 +3557,91 @@
           ]
         },
         "issue": null
+      },
+      "seed-2.0-pro": {
+        "status": "completed",
+        "score": {
+          "display": "72.09 (+4.65)",
+          "base": 72.09,
+          "passed": 31,
+          "denominator": 43,
+          "dynamic": 2,
+          "dynamicAddition": 4.65,
+          "potential": 76.74
+        },
+        "visualQuality": {
+          "score": 90,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 50,
+          "renderingStyleAverage": 40,
+          "videosScored": 13
+        },
+        "traceCount": 13,
+        "playPath": "games-v8.3/market-street-tycoon/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.3/market-street-tycoon/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-008",
+              "zh": "The recap screen is rendered when the player's money plus recap total is zero → The recap screen shows the messages “You ran out of money.”, “GAME OVER”, and “Press enter” in the summary area."
+            },
+            {
+              "id": "target-020",
+              "zh": "A right price-adjustment input is accepted on a stock screen product row → The selected product row’s displayed selling price increases by exactly 1 dollar."
+            },
+            {
+              "id": "target-026",
+              "zh": "A downward scroll input is accepted on the recap screen while the recap product list is not at its lowest scroll position → The recap product rows shift upward by 20 screen pixels and the scrollbar handle moves downward along the right-side scrollbar."
+            },
+            {
+              "id": "target-027",
+              "zh": "An upward scroll input is accepted on the recap screen while the recap product list is not at its top scroll position → The recap product rows shift downward by 20 screen pixels and the scrollbar handle moves upward along the right-side scrollbar."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-015",
+              "zh": "A purchase confirmation is attempted on a buy screen supplier row whose displayed stock is 0 → The buy screen remains visible with the supplier row’s displayed stock still at 0 and the header money amount unchanged from before the confirmation.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-022",
+              "zh": "A left price-adjustment input is accepted on a stock screen product row whose displayed selling price is 0 dollars → The selected product row’s displayed selling price remains shown as 0 dollars.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-032",
+              "zh": "The market scene renders a product whose accumulated sales are at least its starting stock → No icons for that product remain visible in the market boxes.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-036",
+              "zh": "The stock screen renders a product row whose reputation value is 0 → The row’s “Reputation:” line contains one full reputation symbol followed by four empty reputation symbols.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-037",
+              "zh": "The stock screen renders a product row whose reputation value is at least 100 → The row’s “Reputation:” line contains five full reputation symbols and no empty reputation symbols.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-039",
+              "zh": "The recap screen renders a product row whose normalized demand value is at least 1 → The row’s “Demand:” line contains ten full demand symbols and no empty demand symbols.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-002",
+              "zh": "The recap confirmation is accepted when the player's money plus recap total is zero → The display changes from the recap flow back to the main menu screen with the “𝕄𝕒𝕣𝕜𝕖𝕥 𝕊𝕥𝕣𝕖𝕖𝕥 𝕋𝕪𝕔𝕠𝕠𝕟” title and its vertical menu.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-016",
+              "zh": "A purchase confirmation is attempted on a buy screen supplier row whose displayed unit price is greater than the player's displayed money → The buy screen remains visible with the supplier row’s displayed stock value unchanged and the header money amount unchanged from before the confirmation.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null
       }
     }
   }
