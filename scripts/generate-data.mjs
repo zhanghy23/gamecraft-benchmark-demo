@@ -130,6 +130,83 @@ const games = [
     targetCount: 45,
     summaryZh: '生成一款按周经营街市摊位的像素风模拟游戏：玩家从主菜单进入进货、库存定价、市场售卖和周结算流程，在供应商列表中采购商品、调整各类库存售价，并通过带开合幕帘、行人、摊位和时钟的街景观察销售。游戏还需呈现资金、周数、库存、平均成本、声誉星级、需求和销售明细，支持列表与结算滚动、售罄反馈、资金耗尽结束，以及有余额时推进到下一周。',
   },
+  {
+    id: 'necrotic-commander',
+    titleZh: 'Necrotic Commander',
+    typeZh: '亡灵法术策略',
+    targetCount: 38,
+    summaryZh: '生成一款以亡灵法师为主角的即时法术策略游戏：玩家在墓地战场中选择敌人、切换技能并施放幽冥弹、灵魂汲取、亡者复生与尸体爆破，管理法力、冷却、墓穴和亡灵单位，在连续波次与逐步教学中击退敌军。',
+  },
+  {
+    id: 'space-huggers',
+    titleZh: 'Space Huggers',
+    typeZh: '程序化横版射击',
+    targetCount: 0,
+    summaryZh: '生成一款快节奏横版跑枪游戏：玩家可移动、跳跃、攀爬、射击、翻滚和投掷手雷，在程序化生成且可破坏的关卡中对抗多类敌人，并呈现火焰、爆炸、武器切换、生命与资源等清晰反馈。',
+  },
+  {
+    id: 'catculus',
+    titleZh: 'Catculus',
+    typeZh: '猫咪数理解谜',
+    targetCount: 0,
+    summaryZh: '生成一款以猫咪和数学规则为核心的益智游戏：玩家通过可观察、可验证的交互逐步理解关卡规律，完成计算、位置或状态组合，并获得明确的正确、错误与通关反馈。',
+  },
+  {
+    id: 'non-mewtonian-cat',
+    titleZh: 'Non-Mewtonian Cat',
+    typeZh: '物理解谜冒险',
+    targetCount: 0,
+    summaryZh: '生成一款围绕非牛顿物理和猫咪角色展开的互动游戏：玩家利用移动、碰撞与环境状态变化解决关卡，使关键物理反馈、目标达成与失败状态均可稳定触发和观察。',
+  },
+  {
+    id: 'stolen-sword',
+    titleZh: 'Stolen Sword',
+    typeZh: '横版动作冒险',
+    targetCount: 0,
+    summaryZh: '生成一款围绕失窃宝剑展开的动作冒险游戏：玩家探索场景、移动跳跃、与敌人或机关交互并逐步推进目标，在战斗、受伤、收集、检查点和结算过程中获得明确视觉反馈。',
+  },
+  {
+    id: 'catapoolt',
+    titleZh: 'Catapoolt',
+    typeZh: '弹射生存',
+    targetCount: 0,
+    summaryZh: '生成一款猫咪弹射生存游戏：玩家拖拽并释放弹弓发射黑猫，在空中调整行动、捕食老鼠补充体力并应对逐渐复杂的目标，使蓄力、轨迹、碰撞、体力变化和得分反馈清楚可见。',
+  },
+  {
+    id: 'super-castle-game',
+    titleZh: 'Super Castle Game',
+    typeZh: '城堡建造解谜',
+    targetCount: 0,
+    summaryZh: '生成一款中世纪城堡建造解谜游戏：玩家使用键盘、触控或手柄移动并放置不同结构块，在有限空间和规则约束下完成城堡轮廓，支持重开、选关及清晰的合法性与通关反馈。',
+  },
+  {
+    id: 'witchcat',
+    titleZh: 'Witchcat',
+    typeZh: '季节切换冒险',
+    targetCount: 0,
+    summaryZh: '生成一款猫咪女巫冒险游戏：玩家移动、发射火球并切换季节，利用冬季结冰、夏季藤蔓、秋季蘑菇与落叶、春季花朵等环境变化寻找失踪猫咪，让季节切换与世界状态变化直观可见。',
+  },
+  {
+    id: 'the-neatness',
+    titleZh: 'The Neatness',
+    typeZh: '第一人称线谜',
+    targetCount: 0,
+    summaryZh: '生成一款第一人称环境线谜游戏：玩家探索紧凑场景、观察面板规则并绘制或连接正确路径，在逐步增加难度的谜题中获得重置、错误、解锁和完成反馈。',
+  },
+  {
+    id: 'q1k3',
+    titleZh: 'Q1K3',
+    typeZh: '三维第一人称射击',
+    targetCount: 0,
+    summaryZh: '生成一款紧凑的三维第一人称射击游戏：玩家使用键鼠移动、跳跃、攻击并切换武器，在迷宫式关卡中与敌人交战，呈现弹药、生命、命中、伤害、武器和胜负状态。',
+  },
+  {
+    id: 'island-not-found',
+    titleZh: 'Island Not Found',
+    typeZh: '第一人称岛屿探索',
+    targetCount: 0,
+    summaryZh: '生成一款键鼠操控的第一人称岛屿探索游戏：玩家在三维岛屿中移动和环视，发现资源、地点与环境线索，完成探索或生存目标，并通过 HUD、交互提示与场景变化获得明确反馈。',
+  },
 ];
 
 const includedGameIds = includeGamesOption
@@ -802,7 +879,12 @@ for (const game of games) {
     ? path.join(targetOverridesRoot, `${game.id}.json`)
     : null;
   const usesTargetOverride = Boolean(overrideTargetsPath && fs.existsSync(overrideTargetsPath));
-  const sourceTargets = readJson(usesTargetOverride ? overrideTargetsPath : defaultTargetsPath);
+  const targetSourcePath = usesTargetOverride ? overrideTargetsPath : defaultTargetsPath;
+  const sourceTargets = fs.existsSync(targetSourcePath)
+    ? readJson(targetSourcePath)
+    : (allowPartialResults ? [] : (() => {
+      throw new Error(`${game.id}: missing targets file ${targetSourcePath}`);
+    })());
   const targetList = Array.isArray(sourceTargets) ? sourceTargets : sourceTargets.targets;
   const knownIds = new Set(targetList.map((target) => target.targetId));
   const targetsById = new Map(targetList.map((target) => [target.targetId, target]));

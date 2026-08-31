@@ -2157,6 +2157,247 @@
           "zh": "The market scene renders its state badges → A white rectangular badge near the upper left shows “Week” followed by the week number, and a white rectangular badge near the upper right shows the displayed money amount followed by “$”."
         }
       ]
+    },
+    {
+      "id": "necrotic-commander",
+      "titleZh": "Necrotic Commander",
+      "typeZh": "亡灵法术策略",
+      "targetCount": 38,
+      "summaryZh": "生成一款以亡灵法师为主角的即时法术策略游戏：玩家在墓地战场中选择敌人、切换技能并施放幽冥弹、灵魂汲取、亡者复生与尸体爆破，管理法力、冷却、墓穴和亡灵单位，在连续波次与逐步教学中击退敌军。",
+      "requirements": [
+        {
+          "id": "target-001",
+          "zh": "The game has completed initial startup while the intro screen is active → A black intro screen is shown with the title text \"Necrotic Commander\" and three red menu buttons labeled \"Guided Mode\", \"Endless Mode\", and \"Certain Death Mode\"."
+        },
+        {
+          "id": "target-002",
+          "zh": "The \"Guided Mode\" intro menu button is selected while the intro screen is active → The intro title and three mode buttons disappear, and the game view replaces them with the playable battlefield and in-game controls."
+        },
+        {
+          "id": "target-003",
+          "zh": "The \"Endless Mode\" intro menu button is selected while the intro screen is active → The intro title and three mode buttons disappear, and the game view replaces them with the playable battlefield and in-game controls."
+        },
+        {
+          "id": "target-004",
+          "zh": "The \"Certain Death Mode\" intro menu button is selected while the intro screen is active → The intro title and three mode buttons disappear, and the game view replaces them with the playable battlefield and in-game controls."
+        },
+        {
+          "id": "target-005",
+          "zh": "Active gameplay has initialized with the necromancer present → The in-game HUD shows \"Health (100)\" and \"Mana (100)\" for the necromancer."
+        },
+        {
+          "id": "target-006",
+          "zh": "Active gameplay has initialized with graves placed around the battlefield → Grave stones are arranged in a grid on the left and right sides of the battlefield, with an open vertical gap through the center column near the necromancer."
+        },
+        {
+          "id": "target-007",
+          "zh": "Active gameplay renders while a peasant wave number is available → The HUD shows the text \"Peasant wave\" followed by the current wave number near the upper-left of the gameplay view."
+        },
+        {
+          "id": "target-008",
+          "zh": "The 1 key is held during active gameplay → The in-game spell button marked with the number 1 is rendered with a magenta foreground and purple background, while the other numbered spell buttons remain in their red unselected styling."
+        },
+        {
+          "id": "target-009",
+          "zh": "The 2 key is held during active gameplay → The in-game spell button marked with the number 2 is rendered with a magenta foreground and purple background, while the other numbered spell buttons remain in their red unselected styling."
+        },
+        {
+          "id": "target-010",
+          "zh": "The 3 key is held during active gameplay → The in-game spell button marked with the number 3 is rendered with a magenta foreground and purple background, while the other numbered spell buttons remain in their red unselected styling."
+        },
+        {
+          "id": "target-011",
+          "zh": "The 4 key is held during active gameplay → The in-game spell button marked with the number 4 is rendered with a magenta foreground and purple background, while the other numbered spell buttons remain in their red unselected styling."
+        },
+        {
+          "id": "target-012",
+          "zh": "A pointer or touch press occurs in the battlefield while Nether Bolt is selected, the necromancer has enough mana for Nether Bolt, and the bolt cooldown has elapsed → A projectile appears at the necromancer's position and travels from the necromancer toward the pressed battlefield point, and the Mana number in the HUD decreases."
+        },
+        {
+          "id": "target-013",
+          "zh": "A pointer or touch press occurs in the battlefield while Nether Bolt is selected and the necromancer does not have enough mana for Nether Bolt → No projectile appears from the necromancer on the next rendered frame, and the Mana number in the HUD does not change on the next rendered HUD update."
+        },
+        {
+          "id": "target-014",
+          "zh": "A pointer or touch press occurs in the battlefield while Nether Bolt is selected, the necromancer has enough mana for Nether Bolt, and the bolt cooldown has not elapsed → No projectile appears from the necromancer on the next rendered frame, and the Mana number in the HUD does not change on the next rendered HUD update."
+        },
+        {
+          "id": "target-015",
+          "zh": "A damaging projectile collides with a damageable object during active gameplay → The projectile disappears, a green-and-black particle burst appears at the collision point, and the hit object begins moving in the projectile's direction."
+        },
+        {
+          "id": "target-016",
+          "zh": "A full grave is clicked while Raise Dead is selected and the necromancer has enough mana for the spell → A summon appears at the grave position, the grave changes to an empty-grave tile, and the Mana number in the HUD decreases."
+        },
+        {
+          "id": "target-017",
+          "zh": "An empty grave is clicked while Raise Dead is selected → The grave remains in its empty-grave tile appearance and no new summon appears at that grave position during the next rendered frame."
+        },
+        {
+          "id": "target-018",
+          "zh": "A summon is clicked while Corpse Bomb is selected and the necromancer has enough mana for the spell → The clicked summon disappears from the battlefield and the Mana number in the HUD decreases."
+        },
+        {
+          "id": "target-019",
+          "zh": "A bomb explosion occurs with a non-necromancer unit inside its outer blast area → The affected unit begins moving away from the bomb's position during the following frames."
+        },
+        {
+          "id": "target-020",
+          "zh": "An enemy is clicked while Drain Soul is selected and no different enemy is already being drained → The clicked enemy is shown cyan on following frames and a drain particle effect appears attached to that enemy."
+        },
+        {
+          "id": "target-021",
+          "zh": "An enemy is clicked while Drain Soul is selected and a different enemy is already being drained → The previously drained enemy returns to its normal non-cyan color and loses its attached drain particle effect, while the clicked enemy becomes cyan with a drain particle effect attached."
+        },
+        {
+          "id": "target-022",
+          "zh": "A drained enemy updates while the necromancer's displayed Mana value is below 100 → The drained enemy is drawn cyan, and within 1 second the HUD Mana number changes from its value at the start of the condition to an integer at least 1 higher, while every visible Mana value during that 1-second interval is 100 or below; tolerance is 0 HUD integer units."
+        },
+        {
+          "id": "target-023",
+          "zh": "The necromancer's mana regeneration timer expires while the necromancer has at most 95 mana → On the next rendered HUD update, the Mana number is exactly 5 higher than the value shown immediately before the timer expired, and the blue mana bar endpoint advances by the corresponding 5-mana fraction of the mana track; tolerance is 0 HUD integer units."
+        },
+        {
+          "id": "target-024",
+          "zh": "Non-tutorial active gameplay has no enemies remaining and the spawn timer has elapsed before the first enemy wave → One peasant enemy appears near the top side of the battlefield, and no tutorial panel covers the play area."
+        },
+        {
+          "id": "target-025",
+          "zh": "Non-tutorial active gameplay has no enemies remaining and the spawn timer has elapsed after enemy wave 1 has been cleared → Two peasant enemies appear near the top side of the battlefield."
+        },
+        {
+          "id": "target-026",
+          "zh": "Guided Mode advances to an enemy wave that is a multiple of 10 while at least one grave is empty → Empty grave tiles change back to full grave-stone tiles as the new wave begins."
+        },
+        {
+          "id": "target-027",
+          "zh": "A summon updates while at least one enemy is present → During the following frames, the summon begins moving from its current position toward the nearest visible enemy."
+        },
+        {
+          "id": "target-028",
+          "zh": "An enemy updates while no summons are present and the necromancer is alive → During the following frames, the enemy begins moving from its current position toward the necromancer."
+        },
+        {
+          "id": "target-029",
+          "zh": "An enemy updates while at least one summon is present and the number of summons is not greater than the number of enemies → During the following frames, the enemy begins moving from its current position toward the nearest visible summon."
+        },
+        {
+          "id": "target-030",
+          "zh": "Guided Mode gameplay reaches a tutorial pause at enemy wave 1 → A black tutorial panel is drawn over the gameplay view with the text \"Look at that that fool! I'll destroy him with my Nether Bolt! Click to fire!\" and the text \"Click to Continue\"."
+        },
+        {
+          "id": "target-031",
+          "zh": "Guided Mode gameplay reaches a tutorial pause at enemy wave 3 → A black tutorial panel is drawn over the gameplay view with the text \"I can use Drain Soul to replenish my mana by targeting a peasant. Click to curse one of them.\" and the text \"Click to Continue\"."
+        },
+        {
+          "id": "target-032",
+          "zh": "Guided Mode gameplay reaches a tutorial pause at enemy wave 5 → A black tutorial panel is drawn over the gameplay view with the text \"I can Raise the Dead by clicking on their grave stones. Use Corpse Bomb on them to blow them up!\" and the text \"Click to Continue\"."
+        },
+        {
+          "id": "target-033",
+          "zh": "Guided Mode gameplay reaches a tutorial pause at enemy wave 10 → A black tutorial panel is drawn over the gameplay view with the text \"We have enough bodies to bury, bolstering our numbers. Muhahaha!\"."
+        },
+        {
+          "id": "target-034",
+          "zh": "A pointer or touch press occurs while the Guided Mode enemy wave 1 tutorial pause panel is displayed → The tutorial pause panel and \"Click to Continue\" text are no longer shown, revealing the normal gameplay view."
+        },
+        {
+          "id": "target-035",
+          "zh": "A non-necromancer unit's health is zero or below during its update → A red-and-black particle burst appears at the unit's position and that unit disappears from the battlefield."
+        },
+        {
+          "id": "target-036",
+          "zh": "The necromancer's health reaches zero or below during active gameplay → A red-and-black particle burst appears at the necromancer's position, and the in-game health HUD shows \"Health (0)\"."
+        },
+        {
+          "id": "target-037",
+          "zh": "The necromancer is dead and the game-over delay has elapsed → A black panel appears over the gameplay view with the text \"You survived to wave\" followed by the reached wave number and the text \"Click to play again\"."
+        },
+        {
+          "id": "target-038",
+          "zh": "A pointer or touch press occurs after the necromancer is dead and the game-over delay has elapsed → The game-over panel disappears and a fresh battlefield is shown with the necromancer present and the HUD health restored to \"Health (100)\"."
+        }
+      ]
+    },
+    {
+      "id": "space-huggers",
+      "titleZh": "Space Huggers",
+      "typeZh": "程序化横版射击",
+      "targetCount": 0,
+      "summaryZh": "生成一款快节奏横版跑枪游戏：玩家可移动、跳跃、攀爬、射击、翻滚和投掷手雷，在程序化生成且可破坏的关卡中对抗多类敌人，并呈现火焰、爆炸、武器切换、生命与资源等清晰反馈。",
+      "requirements": []
+    },
+    {
+      "id": "catculus",
+      "titleZh": "Catculus",
+      "typeZh": "猫咪数理解谜",
+      "targetCount": 0,
+      "summaryZh": "生成一款以猫咪和数学规则为核心的益智游戏：玩家通过可观察、可验证的交互逐步理解关卡规律，完成计算、位置或状态组合，并获得明确的正确、错误与通关反馈。",
+      "requirements": []
+    },
+    {
+      "id": "non-mewtonian-cat",
+      "titleZh": "Non-Mewtonian Cat",
+      "typeZh": "物理解谜冒险",
+      "targetCount": 0,
+      "summaryZh": "生成一款围绕非牛顿物理和猫咪角色展开的互动游戏：玩家利用移动、碰撞与环境状态变化解决关卡，使关键物理反馈、目标达成与失败状态均可稳定触发和观察。",
+      "requirements": []
+    },
+    {
+      "id": "stolen-sword",
+      "titleZh": "Stolen Sword",
+      "typeZh": "横版动作冒险",
+      "targetCount": 0,
+      "summaryZh": "生成一款围绕失窃宝剑展开的动作冒险游戏：玩家探索场景、移动跳跃、与敌人或机关交互并逐步推进目标，在战斗、受伤、收集、检查点和结算过程中获得明确视觉反馈。",
+      "requirements": []
+    },
+    {
+      "id": "catapoolt",
+      "titleZh": "Catapoolt",
+      "typeZh": "弹射生存",
+      "targetCount": 0,
+      "summaryZh": "生成一款猫咪弹射生存游戏：玩家拖拽并释放弹弓发射黑猫，在空中调整行动、捕食老鼠补充体力并应对逐渐复杂的目标，使蓄力、轨迹、碰撞、体力变化和得分反馈清楚可见。",
+      "requirements": []
+    },
+    {
+      "id": "super-castle-game",
+      "titleZh": "Super Castle Game",
+      "typeZh": "城堡建造解谜",
+      "targetCount": 0,
+      "summaryZh": "生成一款中世纪城堡建造解谜游戏：玩家使用键盘、触控或手柄移动并放置不同结构块，在有限空间和规则约束下完成城堡轮廓，支持重开、选关及清晰的合法性与通关反馈。",
+      "requirements": []
+    },
+    {
+      "id": "witchcat",
+      "titleZh": "Witchcat",
+      "typeZh": "季节切换冒险",
+      "targetCount": 0,
+      "summaryZh": "生成一款猫咪女巫冒险游戏：玩家移动、发射火球并切换季节，利用冬季结冰、夏季藤蔓、秋季蘑菇与落叶、春季花朵等环境变化寻找失踪猫咪，让季节切换与世界状态变化直观可见。",
+      "requirements": []
+    },
+    {
+      "id": "the-neatness",
+      "titleZh": "The Neatness",
+      "typeZh": "第一人称线谜",
+      "targetCount": 0,
+      "summaryZh": "生成一款第一人称环境线谜游戏：玩家探索紧凑场景、观察面板规则并绘制或连接正确路径，在逐步增加难度的谜题中获得重置、错误、解锁和完成反馈。",
+      "requirements": []
+    },
+    {
+      "id": "q1k3",
+      "titleZh": "Q1K3",
+      "typeZh": "三维第一人称射击",
+      "targetCount": 0,
+      "summaryZh": "生成一款紧凑的三维第一人称射击游戏：玩家使用键鼠移动、跳跃、攻击并切换武器，在迷宫式关卡中与敌人交战，呈现弹药、生命、命中、伤害、武器和胜负状态。",
+      "requirements": []
+    },
+    {
+      "id": "island-not-found",
+      "titleZh": "Island Not Found",
+      "typeZh": "第一人称岛屿探索",
+      "targetCount": 0,
+      "summaryZh": "生成一款键鼠操控的第一人称岛屿探索游戏：玩家在三维岛屿中移动和环视，发现资源、地点与环境线索，完成探索或生存目标，并通过 HUD、交互提示与场景变化获得明确反馈。",
+      "requirements": []
     }
   ],
   "results": {
@@ -3643,6 +3884,82 @@
         },
         "issue": null
       }
-    }
+    },
+    "necrotic-commander": {
+      "gpt-5.5": {
+        "status": "completed",
+        "score": {
+          "display": "97.37 (+0.00)",
+          "base": 97.37,
+          "passed": 37,
+          "denominator": 38,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 97.37
+        },
+        "visualQuality": {
+          "score": 90,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 50,
+          "renderingStyleAverage": 40,
+          "videosScored": 8
+        },
+        "traceCount": 8,
+        "playPath": "games-v8.3/necrotic-commander/gpt-5.5/index.html",
+        "previewPath": "previews-v8.3/necrotic-commander/gpt-5.5.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-026",
+              "zh": "Guided Mode advances to an enemy wave that is a multiple of 10 while at least one grave is empty → Empty grave tiles change back to full grave-stone tiles as the new wave begins."
+            }
+          ],
+          "replayTrace": []
+        },
+        "issue": null
+      },
+      "seed-2.0-pro": {
+        "status": "completed",
+        "score": {
+          "display": "97.37 (+0.00)",
+          "base": 97.37,
+          "passed": 37,
+          "denominator": 38,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 97.37
+        },
+        "visualQuality": {
+          "score": 88.89,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.89,
+          "renderingStyleAverage": 40,
+          "videosScored": 9
+        },
+        "traceCount": 9,
+        "playPath": "games-v8.3/necrotic-commander/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.3/necrotic-commander/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-021",
+              "zh": "An enemy is clicked while Drain Soul is selected and a different enemy is already being drained → The previously drained enemy returns to its normal non-cyan color and loses its attached drain particle effect, while the clicked enemy becomes cyan with a drain particle effect attached."
+            }
+          ],
+          "replayTrace": []
+        },
+        "issue": null
+      }
+    },
+    "space-huggers": {},
+    "catculus": {},
+    "non-mewtonian-cat": {},
+    "stolen-sword": {},
+    "catapoolt": {},
+    "super-castle-game": {},
+    "witchcat": {},
+    "the-neatness": {},
+    "q1k3": {},
+    "island-not-found": {}
   }
 }
