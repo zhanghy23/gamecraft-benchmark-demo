@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "v8.3",
-  "updatedAt": "2026-08-31",
+  "updatedAt": "2026-09-01",
   "models": [
     {
       "id": "gpt-5.5",
@@ -2323,33 +2323,1037 @@
       "id": "space-huggers",
       "titleZh": "Space Huggers",
       "typeZh": "程序化横版射击",
-      "targetCount": 0,
+      "targetCount": 89,
       "summaryZh": "生成一款快节奏横版跑枪游戏：玩家可移动、跳跃、攀爬、射击、翻滚和投掷手雷，在程序化生成且可破坏的关卡中对抗多类敌人，并呈现火焰、爆炸、武器切换、生命与资源等清晰反馈。",
-      "requirements": []
+      "requirements": [
+        {
+          "id": "target-001",
+          "zh": "A weak enemy is created for the level → A humanoid enemy with a green body is visible in the playfield."
+        },
+        {
+          "id": "target-002",
+          "zh": "A normal enemy is created for the level → A humanoid enemy with a blue body and orange-yellow eyes is visible in the playfield."
+        },
+        {
+          "id": "target-003",
+          "zh": "A red enemy type is created for the level → A humanoid enemy with a red body and yellow eyes is visible in the playfield."
+        },
+        {
+          "id": "target-004",
+          "zh": "An elite enemy is created for the level → A humanoid enemy with a white body and red eyes is visible in the playfield."
+        },
+        {
+          "id": "target-005",
+          "zh": "A grenade-carrying enemy is created for the level → A humanoid enemy with a purple body and black eyes is visible in the playfield."
+        },
+        {
+          "id": "target-006",
+          "zh": "A large enemy variant is created for the level → A humanoid enemy is visible with a body height between 1.2 and 1.4 times the height of a standard enemy body of the same type."
+        },
+        {
+          "id": "target-007",
+          "zh": "A wood crate prop is created in the level → A crate-shaped prop with an orange-brown color is visible in the playfield."
+        },
+        {
+          "id": "target-008",
+          "zh": "A metal crate prop is created in the level → A crate-shaped prop with a pale blue-white color is visible in the playfield."
+        },
+        {
+          "id": "target-009",
+          "zh": "An explosive crate prop is created in the level → A crate-shaped prop with a dark gray color is visible in the playfield."
+        },
+        {
+          "id": "target-010",
+          "zh": "A metal barrel prop is created in the level → A barrel-shaped prop with a pale blue-white color is visible in the playfield."
+        },
+        {
+          "id": "target-011",
+          "zh": "An explosive barrel prop is created in the level → A barrel-shaped prop with a dark gray color is visible in the playfield."
+        },
+        {
+          "id": "target-012",
+          "zh": "A high-explosive barrel prop is created in the level → A barrel-shaped prop with a red color is visible in the playfield."
+        },
+        {
+          "id": "target-013",
+          "zh": "A water barrel prop is created in the level → A barrel-shaped prop with a blue color is visible in the playfield."
+        },
+        {
+          "id": "target-014",
+          "zh": "A rock prop is created in the level → A rock-shaped gray prop is visible in the playfield."
+        },
+        {
+          "id": "target-015",
+          "zh": "A lava rock prop is created in the level → A rock-shaped prop with a yellow body and red additive glow is visible in the playfield."
+        },
+        {
+          "id": "target-016",
+          "zh": "A grenade object is created in the playfield → A round grenade object is visible in the playfield."
+        },
+        {
+          "id": "target-017",
+          "zh": "A damageable character receives damage that reduces its health to zero → The character changes from an upright living pose into a falling or collapsed dead-body pose."
+        },
+        {
+          "id": "target-018",
+          "zh": "A living character receives nonlethal damage → The character turns white on at least one rendered frame within 0.25 seconds, then returns to its prior coloration."
+        },
+        {
+          "id": "target-019",
+          "zh": "All active players have been dead for more than 9 seconds → The current level view is replaced by a reset level view with a living player at the checkpoint area."
+        },
+        {
+          "id": "target-020",
+          "zh": "In a one-player game, the only player has been dead for more than 2 seconds while lives remain → A new living player character appears at the checkpoint position."
+        },
+        {
+          "id": "target-021",
+          "zh": "In multiplayer, all players have been dead for more than 2 seconds while lives remain → Living player characters reappear at the checkpoint area."
+        },
+        {
+          "id": "target-022",
+          "zh": "The level-completion delay has elapsed after the enemy count reaches zero → The playfield changes to a newly generated level view with terrain and base layout replacing the previous layout."
+        },
+        {
+          "id": "target-023",
+          "zh": "A player-join input is accepted for an empty player slot → An additional player character appears at the checkpoint area."
+        },
+        {
+          "id": "target-024",
+          "zh": "A second or later player character is created → The new player character is visible with a body color distinct from the first player's default color."
+        },
+        {
+          "id": "target-025",
+          "zh": "A left movement input is active for a living non-rolling player character → The player character faces left, and its horizontal position shifts left across subsequent rendered frames."
+        },
+        {
+          "id": "target-026",
+          "zh": "A right movement input is active for a living non-rolling player character → The player character faces right, and its horizontal position shifts right across subsequent rendered frames."
+        },
+        {
+          "id": "target-027",
+          "zh": "A grounded player jump input is accepted → The player character leaves the ground and moves upward from the takeoff point."
+        },
+        {
+          "id": "target-028",
+          "zh": "A player continues holding jump while already moving upward during the jump-height window → The player character's vertical position continues to rise for at least one rendered frame after the held-jump condition is true."
+        },
+        {
+          "id": "target-029",
+          "zh": "A wall-climbing player jump input is accepted → The player character leaves the wall-climb contact and moves upward away from the wall."
+        },
+        {
+          "id": "target-030",
+          "zh": "A character touches a ladder and vertical movement input is active → The character enters a ladder-climbing pose on the ladder and moves vertically along it."
+        },
+        {
+          "id": "target-031",
+          "zh": "A ladder-climbing character is no longer touching any ladder → The character is no longer drawn in the ladder-climbing pose."
+        },
+        {
+          "id": "target-032",
+          "zh": "A player starts a dodge while standing on the ground → The player character rotates into a rolling animation while moving horizontally along the ground."
+        },
+        {
+          "id": "target-033",
+          "zh": "A player starts a dodge while airborne and past the spawn safety interval → The player character rotates into a rolling animation while airborne and gains upward motion during the roll."
+        },
+        {
+          "id": "target-034",
+          "zh": "A rolling player overlaps a living enemy and the hit is nonlethal → The enemy turns white on at least one rendered frame within 0.25 seconds, then returns to its prior coloration."
+        },
+        {
+          "id": "target-035",
+          "zh": "A rolling player overlaps a living enemy and the hit reduces the enemy's health to zero → The enemy changes into a falling or collapsed dead-body pose."
+        },
+        {
+          "id": "target-036",
+          "zh": "The player throw command is accepted while the character has at least one grenade and is not dodge rolling → A round grenade appears at the character and moves away from the character."
+        },
+        {
+          "id": "target-037",
+          "zh": "The player throw input occurs while the character has zero grenades and is not dodge rolling → No new round grenade object appears from the character during that throw input."
+        },
+        {
+          "id": "target-038",
+          "zh": "A newly spawned player is damaged during the spawn safety interval → The player remains in a living character pose and does not change into a collapsed dead-body pose from that hit."
+        },
+        {
+          "id": "target-039",
+          "zh": "A character moving upward hits a destructible tile above its head → The struck tile disappears from the level, leaving an empty space where the tile had been."
+        },
+        {
+          "id": "target-040",
+          "zh": "A character is crushed by a falling crushing object from above → A burst of blood particles appears at the character's position, and the character disappears or changes into a destroyed dead-body state."
+        },
+        {
+          "id": "target-041",
+          "zh": "A burnable object begins burning instantly → Flame particles appear attached to the object."
+        },
+        {
+          "id": "target-042",
+          "zh": "A burnable object's pending burn delay elapses → Flame particles appear attached to the object."
+        },
+        {
+          "id": "target-043",
+          "zh": "A burning game object is within a water burst radius → The object's flame particles disappear, and the object moves away from the center of the water burst."
+        },
+        {
+          "id": "target-044",
+          "zh": "A burning object's burn timer elapses → Attached flame particles are no longer visible on the object after the timer elapses."
+        },
+        {
+          "id": "target-045",
+          "zh": "A water barrel is destroyed → A water burst appears at the barrel's position, and the barrel disappears."
+        },
+        {
+          "id": "target-046",
+          "zh": "A non-water, non-explosive prop is destroyed → The prop disappears from the playfield and a burst of debris particles matching the prop's color appears at its position."
+        },
+        {
+          "id": "target-047",
+          "zh": "An explosive prop is destroyed → The prop disappears from the playfield, a burst of debris particles appears at its position, and an explosion burst appears at the same position."
+        },
+        {
+          "id": "target-048",
+          "zh": "A grenade has existed for more than 3 seconds → The grenade disappears and an explosion burst appears at its last position."
+        },
+        {
+          "id": "target-049",
+          "zh": "A weapon trigger is held when the weapon is ready to fire → A bullet projectile appears at the weapon muzzle and travels away from the weapon, the weapon visibly recoils from its firing angle, and a tan shell-casing particle appears at the weapon and moves away from it."
+        },
+        {
+          "id": "target-050",
+          "zh": "A living enemy's automatic shoot timer is active while its held weapon is ready to fire → A bullet projectile appears at the enemy weapon muzzle and travels away from the enemy, and the weapon visibly recoils from its firing angle."
+        },
+        {
+          "id": "target-051",
+          "zh": "A bullet exhausts its travel range without hitting an object or tile → The bullet disappears and a particle puff appears at its last position."
+        },
+        {
+          "id": "target-052",
+          "zh": "A bullet overlaps an opposing non-dodging character and the damage is nonlethal → The bullet disappears on contact, and the hit character turns white on at least one rendered frame within 0.25 seconds."
+        },
+        {
+          "id": "target-053",
+          "zh": "A bullet overlaps an opposing non-dodging character and the damage reduces the character's health to zero → The bullet disappears on contact, and the hit character changes into a falling or collapsed dead-body pose."
+        },
+        {
+          "id": "target-054",
+          "zh": "A bullet overlaps a character that is currently dodge rolling → The bullet continues past the rolling character without disappearing at the overlap point."
+        },
+        {
+          "id": "target-055",
+          "zh": "A bullet overlaps a same-team character → The bullet continues past the same-team character, and the character does not turn white or change into a dead-body pose from that overlap."
+        },
+        {
+          "id": "target-056",
+          "zh": "A bullet collides with a glass tile → The glass tile disappears from the level, leaving an empty space where the glass tile had been."
+        },
+        {
+          "id": "target-057",
+          "zh": "A bullet collides with a dirt tile and the dirt-destruction chance succeeds → The dirt tile disappears from the level, leaving an empty space where the tile had been."
+        },
+        {
+          "id": "target-058",
+          "zh": "A bullet collides with a dirt tile and the dirt-destruction chance fails → The dirt tile remains visible in the same position after the bullet impact."
+        },
+        {
+          "id": "target-059",
+          "zh": "A bullet collides with a destructible non-glass, non-dirt tile and the tile-destruction chance succeeds → The struck tile disappears from the level, leaving an empty space where the tile had been."
+        },
+        {
+          "id": "target-060",
+          "zh": "A bullet collides with an indestructible solid tile → The bullet disappears at the tile surface, a yellow-orange impact particle burst appears, and the solid tile remains visible in the same position."
+        },
+        {
+          "id": "target-061",
+          "zh": "A bullet collides with a surviving damageable non-character game object → The bullet disappears at the contact point, and impact particles appear at that contact point."
+        },
+        {
+          "id": "target-062",
+          "zh": "An explosion includes a movable game object within its blast radius → The object moves away from the explosion center after the explosion burst appears."
+        },
+        {
+          "id": "target-063",
+          "zh": "An explosion includes a destructible terrain tile within its tile-destruction radius → The affected terrain tile disappears from the level, leaving an empty space where the tile had been."
+        },
+        {
+          "id": "target-064",
+          "zh": "A dirt collision tile is drawn for the level → A ground tile with the level's dirt coloration is visible in the terrain."
+        },
+        {
+          "id": "target-065",
+          "zh": "A horizontal pipe tile is drawn for a base structure → A horizontal pipe-like tile is visible as part of the base floor or ceiling."
+        },
+        {
+          "id": "target-066",
+          "zh": "A vertical pipe tile is drawn for a base structure → A vertical pipe-like tile is visible as part of the base wall."
+        },
+        {
+          "id": "target-067",
+          "zh": "A glass tile is drawn for a base structure → A cyan translucent glass tile is visible in the base structure."
+        },
+        {
+          "id": "target-068",
+          "zh": "A ladder tile is drawn for the level → A vertical ladder segment is visible in the playfield."
+        },
+        {
+          "id": "target-069",
+          "zh": "A background window tile is drawn for a base structure → A cyan translucent window is visible in the background of the base."
+        },
+        {
+          "id": "target-070",
+          "zh": "Rain precipitation is selected for a level → Slanted rain particles fall across the sky area of the playfield."
+        },
+        {
+          "id": "target-071",
+          "zh": "Snow precipitation is selected for a level → White snow particles fall across the sky area of the playfield."
+        },
+        {
+          "id": "target-072",
+          "zh": "A living enemy first reacts to seeing the player → The enemy faces toward the player and its horizontal position remains unchanged for at least one rendered frame."
+        },
+        {
+          "id": "target-073",
+          "zh": "A grounded living enemy first reacts to seeing the player and its jump branch is selected → The enemy leaves the ground and moves upward while facing toward the player."
+        },
+        {
+          "id": "target-074",
+          "zh": "A grenade-type enemy is facing the remembered player position and its grenade-throw branch is selected → A round grenade appears at the enemy and moves away from the enemy."
+        },
+        {
+          "id": "target-075",
+          "zh": "A multiplayer player moves outside the gameplay window while another living player remains on-screen and ground exists below the offscreen player → The offscreen player is relocated to the other living player's position and becomes visible near that player."
+        },
+        {
+          "id": "target-076",
+          "zh": "A multiplayer player moves outside the gameplay window while another living player remains active and no ground exists below the offscreen player → The offscreen player is not relocated to the other player; the player changes into a dead or falling body state."
+        },
+        {
+          "id": "target-077",
+          "zh": "A player is at the left level boundary while leftward movement would carry it past the boundary → The player remains inside the level at the left edge and does not move beyond the playable terrain boundary."
+        },
+        {
+          "id": "target-078",
+          "zh": "A non-child game object falls below the bottom kill boundary of the level → The object disappears from the playfield after crossing below the level."
+        },
+        {
+          "id": "target-079",
+          "zh": "A player is airborne, descending, pressing horizontally into a wall, and horizontal movement is blocked → The player remains adjacent to the wall across consecutive rendered frames in a wall-contact movement state."
+        },
+        {
+          "id": "target-080",
+          "zh": "Exactly one living player is present during camera update → The visible world scrolls while the player moves, and the player character remains visible in the gameplay view."
+        },
+        {
+          "id": "target-081",
+          "zh": "Multiple living players are present during camera update → The visible world scrolls, and the living player characters are visible in the gameplay view."
+        },
+        {
+          "id": "target-082",
+          "zh": "The main gameplay HUD is rendered → A centered text line is visible near the bottom of the canvas showing the labels \"Level\", \"Lives\", and \"Enemies\" with numeric values after each label."
+        },
+        {
+          "id": "target-083",
+          "zh": "A new game has just been reset and the first level HUD is rendered → The bottom HUD text shows \"Level 1\" and \"Lives 10\"."
+        },
+        {
+          "id": "target-084",
+          "zh": "The sky background is rendered for the gameplay view → The canvas background shows a vertical sky gradient with star points drawn over it."
+        },
+        {
+          "id": "target-085",
+          "zh": "A parallax background layer is rendered for the level → A colored background terrain silhouette is visible behind the main playfield terrain."
+        },
+        {
+          "id": "target-086",
+          "zh": "A checkpoint object is rendered in the playfield → A checkpoint flag with a vertical pole is visible in the playfield."
+        },
+        {
+          "id": "target-087",
+          "zh": "The title and credit overlay opacity is positive during rendering → A centered title reading \"SPACE HUGGERS\" is drawn near the upper part of the canvas over the game view."
+        },
+        {
+          "id": "target-088",
+          "zh": "A living character is grounded and walking during rendering → The character body alternates between two walking animation poses across consecutive rendered frames."
+        },
+        {
+          "id": "target-089",
+          "zh": "A living character is airborne and not climbing during rendering → The character is drawn in an airborne body pose rather than a standing or walking pose."
+        }
+      ]
     },
     {
       "id": "catculus",
       "titleZh": "Catculus",
       "typeZh": "猫咪数理解谜",
-      "targetCount": 0,
+      "targetCount": 44,
       "summaryZh": "生成一款以猫咪和数学规则为核心的益智游戏：玩家通过可观察、可验证的交互逐步理解关卡规律，完成计算、位置或状态组合，并获得明确的正确、错误与通关反馈。",
-      "requirements": []
+      "requirements": [
+        {
+          "id": "target-001",
+          "zh": "The game has completed its initial Intro scene setup → The canvas shows an intro screen with tile letters spelling “CATCULUS” and a centered button labeled “⏵ PLAY”."
+        },
+        {
+          "id": "target-002",
+          "zh": "The Intro scene play button is clicked while it is visible → The intro screen is replaced by the main gameplay scene; the “CATCULUS” title and “⏵ PLAY” button are no longer shown, and a grid of numbered tiles with gameplay HUD elements is shown."
+        },
+        {
+          "id": "target-003",
+          "zh": "The game-over retry button is clicked while it is visible → The game-over retry screen is replaced by a fresh main gameplay scene showing a grid of numbered tiles and gameplay HUD elements, and the “TRY AGAIN?” button is no longer shown."
+        },
+        {
+          "id": "target-004",
+          "zh": "The main gameplay scene has completed setup → A HUD label reading “LIVES:” is visible, and the board starts as a central 3 by 3 cluster of visible numbered tiles with surrounding grid positions left empty."
+        },
+        {
+          "id": "target-005",
+          "zh": "An unselected visible grid tile is selected while the game is not locked and no other tile is currently selected → The tile is drawn with the selected tile colors instead of the normal unselected white tile appearance."
+        },
+        {
+          "id": "target-006",
+          "zh": "A single visible grid tile is selected while its value is below the current target and no other tile is selected → The tile is highlighted as selected, and the selection sum display is blank."
+        },
+        {
+          "id": "target-007",
+          "zh": "An unselected visible grid tile adjacent to the current selection is selected while the game is not locked → The newly selected adjacent tile is drawn with the selected tile colors and the selected tiles form a continuous adjacent path."
+        },
+        {
+          "id": "target-008",
+          "zh": "A selected visible grid tile is selected again by a non-drag click while the game is not locked → The tile is drawn with its normal unselected white tile appearance instead of the selected tile colors."
+        },
+        {
+          "id": "target-009",
+          "zh": "A visible grid tile that is not adjacent to the current selection is selected while the game is not locked → The grid selection display remains unchanged; the non-adjacent tile keeps its normal unselected appearance."
+        },
+        {
+          "id": "target-010",
+          "zh": "A visible grid tile containing an awake cat is selected while the sprayer power is active and the game is not locked → The cat on that tile performs a hop animation from the tile while the tile selection is processed."
+        },
+        {
+          "id": "target-011",
+          "zh": "A visible grid tile containing a sleeping cat is selected while the sprayer power is active and the game is not locked → The tile changes into its selected appearance, and the sleeping cat remains on that tile instead of hopping away."
+        },
+        {
+          "id": "target-012",
+          "zh": "A multi-tile adjacent selection containing no cats has a total below the current target after a tile is selected → The sum display shows the selected tile values joined by plus signs followed by an equals sign and the numeric total, and the selected tiles remain highlighted."
+        },
+        {
+          "id": "target-013",
+          "zh": "A multi-tile adjacent selection containing at least one cat has a total below the current target after a tile is selected → The sum display shows the selected tile values joined by plus signs followed by an equals sign and a total ending with a question mark, and the selected tiles remain highlighted."
+        },
+        {
+          "id": "target-014",
+          "zh": "An accepted scoring selection total exactly equals the current target → A yellow-orange feedback text popup appears near the selected group when the round is scored."
+        },
+        {
+          "id": "target-015",
+          "zh": "An accepted scoring selection total is above the current target while the Reflexes skill does not block the mistake penalty → A red feedback text popup appears near the selected group, and on the first gameplay frame after scoring resolution the lives bar red fill endpoint is at least one ninth of the bar interior width to the left of its endpoint immediately before scoring."
+        },
+        {
+          "id": "target-016",
+          "zh": "An accepted scoring selection total is above the current target while the Reflexes skill blocks the mistake penalty → A red feedback text popup appears near the selected group, and on the first gameplay frame after scoring resolution the lives bar red fill endpoint is aligned within 2 pixels of its endpoint immediately before scoring."
+        },
+        {
+          "id": "target-017",
+          "zh": "The lives display reaches zero during scoring resolution → The gameplay view changes to a game-over state with “GAME OVER!” visible and a “TRY AGAIN?” button shown."
+        },
+        {
+          "id": "target-018",
+          "zh": "The delayed game-over message timer fires after the lives display has reached zero → Text reading “GAME OVER!” and text beginning with “Final score:” are visible on the game-over screen."
+        },
+        {
+          "id": "target-019",
+          "zh": "A selected grid tile begins its scoring animation during an accepted scoring selection → The tile changes to a sunken appearance and is no longer shown as selected."
+        },
+        {
+          "id": "target-020",
+          "zh": "A positive-value non-cat grid tile in an accepted scoring selection is scored → The score label replaces its previous numeric text with a new numeric score string, and a white numeric score popup appears centered on that tile."
+        },
+        {
+          "id": "target-021",
+          "zh": "A positive-value cat grid tile in an accepted scoring selection is scored while cat scoring is not blocked by the active skills → The score label replaces its previous numeric text with a new numeric score string, and a colored numeric score popup appears centered on the cat tile."
+        },
+        {
+          "id": "target-022",
+          "zh": "A cat grid tile in an accepted scoring selection is scored while the Allergies skill is active → A red text popup reading “ALLERGIES” appears centered on the cat tile."
+        },
+        {
+          "id": "target-023",
+          "zh": "A selected tile with displayed value 9 is scored while the Nine skill is active → A green text popup beginning with “+” appears near that tile."
+        },
+        {
+          "id": "target-024",
+          "zh": "A selected tile with displayed value 2 is scored while the Hiss skill is active → A green multiplier text popup beginning with “x” appears near that tile."
+        },
+        {
+          "id": "target-025",
+          "zh": "A cat tile is scored while no hop-target skill is active and at least one visible non-cat target tile is available for the cat to move to → The cat hops away from the scored tile and lands on another visible tile."
+        },
+        {
+          "id": "target-026",
+          "zh": "A cat tile is scored while the Catnip hop-target skill is active and visible empty target tiles have different displayed values → The cat lands on the visible empty tile with the highest displayed number."
+        },
+        {
+          "id": "target-027",
+          "zh": "A cat tile is scored while the Box hop-target skill is active and visible empty target tiles have different displayed values → The cat lands on the visible empty tile with the lowest displayed number."
+        },
+        {
+          "id": "target-028",
+          "zh": "A visible non-cat grid tile is selected while the Mouse skill is active and at least two cats are present at different distances from that tile → The cat nearest to the selected tile hops onto that selected tile; the farther cat remains on its previous tile."
+        },
+        {
+          "id": "target-029",
+          "zh": "An accepted scoring selection finishes resolving while hidden grid positions adjacent to the scored path are available to appear → Previously empty positions adjacent to the scored path fill in with newly visible numbered tiles."
+        },
+        {
+          "id": "target-030",
+          "zh": "An accepted scoring selection finishes resolving → The selected tiles reappear with their displayed numbers increased by 1 from their pre-scoring values, and the selection sum display is cleared."
+        },
+        {
+          "id": "target-031",
+          "zh": "An accepted scoring selection finishes resolving while the Scratch skill is active and a visible unselected tile is adjacent to the scored path → The adjacent unselected tile’s displayed number decreases by 1 from its pre-resolution value."
+        },
+        {
+          "id": "target-032",
+          "zh": "An accepted scoring selection finishes resolving while the Loaf skill is active and a visible unselected tile contains a sleeping cat → A green “LOAF” popup appears centered on the sleeping cat tile, and that tile’s displayed number increases by 1 from its pre-resolution value."
+        },
+        {
+          "id": "target-033",
+          "zh": "The first target round begins during active gameplay → The target display shows a numeric target, and tutorial text reading “Select adjacent tiles” and “that add up to...” is visible in the gameplay view."
+        },
+        {
+          "id": "target-034",
+          "zh": "A later target round begins during active gameplay after the fourth target round → The target display updates to show a numeric target for the new round."
+        },
+        {
+          "id": "target-035",
+          "zh": "A new target round begins while the maximum possible multiplier is above 1 and the current maximum multiplier is above 1 → The multiplier display resets to a visible “x” followed by a whole number above 1."
+        },
+        {
+          "id": "target-036",
+          "zh": "The multiplier countdown completes while the multiplier display value is above 1 → The multiplier display changes from its previous whole-number value to the next lower whole-number value."
+        },
+        {
+          "id": "target-037",
+          "zh": "A scoring round finishes at the level that triggers a skill choice → The gameplay is overlaid with visible skill choice buttons, and tutorial text reading “Pick one of these” and “bonus effects...” is visible above the buttons."
+        },
+        {
+          "id": "target-038",
+          "zh": "A visible non-Copycat skill choice button is selected during the skill-choice state → The skill-choice buttons disappear, and the chosen skill’s icon appears in the skill icon display."
+        },
+        {
+          "id": "target-039",
+          "zh": "The visible Copycat skill choice button is accepted during the skill-choice state → The skill-choice buttons disappear, the Copycat skill icon appears in the skill icon display, and the lives bar’s red fill extends across the full interior width of the lives bar."
+        },
+        {
+          "id": "target-040",
+          "zh": "The active gameplay scene receives a portrait layout change → The gameplay canvas is in a tall layout; the numbered tile grid is positioned in the lower half, the target display is centered above the grid, the lives bar is near the bottom-left edge, and the score display is near the top-right edge."
+        },
+        {
+          "id": "target-041",
+          "zh": "The active gameplay scene receives a landscape layout change → The gameplay canvas is in a wide layout; the numbered tile grid is positioned on the left side, the target and tutorial area are on the right side, the lives bar is near the top-left edge, and the score and multiplier displays are near the top-right edge."
+        },
+        {
+          "id": "target-042",
+          "zh": "A visible cat is in the sleeping state during a gameplay draw frame → The cat is rendered with a sleeping face instead of an awake face."
+        },
+        {
+          "id": "target-043",
+          "zh": "A new cat is spawned during active gameplay → A cat appears near the board and begins a hop along the entry path."
+        },
+        {
+          "id": "target-044",
+          "zh": "A spawned cat's scheduled board-placement hop timer fires while a visible target tile is available → The cat hops from the entry path onto a visible grid tile."
+        }
+      ]
     },
     {
       "id": "non-mewtonian-cat",
       "titleZh": "Non-Mewtonian Cat",
       "typeZh": "物理解谜冒险",
-      "targetCount": 0,
+      "targetCount": 41,
       "summaryZh": "生成一款围绕非牛顿物理和猫咪角色展开的互动游戏：玩家利用移动、碰撞与环境状态变化解决关卡，使关键物理反馈、目标达成与失败状态均可稳定触发和观察。",
-      "requirements": []
+      "requirements": [
+        {
+          "id": "target-001",
+          "zh": "The game has completed initial startup with no player selection made → The title scene is the visible game scene rather than the level-select scene or an active level."
+        },
+        {
+          "id": "target-002",
+          "zh": "The title scene is rendered → The text \"NON-MEWTONIAN CAT\" is displayed on the title screen, with \"made by saud\" and \"js13kgames 2025\" displayed below it."
+        },
+        {
+          "id": "target-003",
+          "zh": "The select/confirm input is newly pressed while the title scene is active → A dark-blue transition animation starts from the center of the game view, then the level-select scene replaces the title scene."
+        },
+        {
+          "id": "target-004",
+          "zh": "A level start is accepted from the level-select scene → A dark-blue transition animation starts from the center of the game view, then an active level gameplay scene replaces the level-select scene."
+        },
+        {
+          "id": "target-005",
+          "zh": "The level-select scene is rendered with no completed levels saved → The first level tile is drawn as an available tile without a lock icon."
+        },
+        {
+          "id": "target-006",
+          "zh": "The level-select scene is rendered with a level tile visible → The level tile displays its level number centered inside the tile."
+        },
+        {
+          "id": "target-007",
+          "zh": "The level-select scene is rendered with a completed level tile visible → That completed level tile displays a white checkmark inside the tile."
+        },
+        {
+          "id": "target-008",
+          "zh": "The level-select scene is rendered with an unavailable level tile visible → That unavailable level tile displays a dark-blue lock icon inside the tile."
+        },
+        {
+          "id": "target-009",
+          "zh": "The level-select scene is rendered when all levels are completed → The text \"THANK YOU FOR PLAYING!\" is displayed centered near the lower part of the game view."
+        },
+        {
+          "id": "target-010",
+          "zh": "A left navigation input is newly pressed on the level-select scene when an available level exists to the left of the currently highlighted level → The highlighted level tile changes to the nearest available level tile to the left, skipping unavailable tiles."
+        },
+        {
+          "id": "target-011",
+          "zh": "A right navigation input is newly pressed on the level-select scene when an available level exists to the right of the currently highlighted level → The highlighted level tile changes to the nearest available level tile to the right, skipping unavailable tiles."
+        },
+        {
+          "id": "target-012",
+          "zh": "An up navigation input is newly pressed on the level-select scene when an available level exists in the same column above the currently highlighted level → The highlighted level tile changes to the nearest available level tile above it in the same column, skipping unavailable tiles."
+        },
+        {
+          "id": "target-013",
+          "zh": "A down navigation input is newly pressed on the level-select scene when an available level exists in the same column below the currently highlighted level → The highlighted level tile changes to the nearest available level tile below it in the same column, skipping unavailable tiles."
+        },
+        {
+          "id": "target-014",
+          "zh": "A left navigation input is newly pressed on the level-select scene when no available level exists to the left of the currently highlighted level → The highlighted level tile remains on the same level tile and the level-select scene stays visible."
+        },
+        {
+          "id": "target-015",
+          "zh": "A pointer click is pressed on an unavailable level tile while the level-select scene is active → The level-select scene remains visible and no transition animation to gameplay begins."
+        },
+        {
+          "id": "target-016",
+          "zh": "An active level is loaded from level data that contains player head or body tiles → The active gameplay scene shows the player as a segmented body on the level grid."
+        },
+        {
+          "id": "target-017",
+          "zh": "The active level is rendered while at least one size-change item remains uncollected → The win block is drawn with a dark-blue outline."
+        },
+        {
+          "id": "target-018",
+          "zh": "The active level is rendered when no size-change items remain uncollected → The win block is drawn with an orange outline."
+        },
+        {
+          "id": "target-019",
+          "zh": "An active level renders a grow item → The grow item is drawn as a collectible that oscillates vertically over time."
+        },
+        {
+          "id": "target-020",
+          "zh": "An active level renders a shrink item → The shrink item is drawn as a collectible that oscillates vertically over time."
+        },
+        {
+          "id": "target-021",
+          "zh": "An up movement input is accepted during active play while the player is idle and the tile above the head is an empty passable tile → The player animates one tile upward into the previously empty tile."
+        },
+        {
+          "id": "target-022",
+          "zh": "A down movement input is accepted during active play while the player is idle and the tile below the head is an empty passable tile → The player animates one tile downward into the previously empty tile."
+        },
+        {
+          "id": "target-023",
+          "zh": "A left movement input is accepted during active play while the player is idle and the tile to the left of the head is an empty passable tile → The player animates one tile left into the previously empty tile."
+        },
+        {
+          "id": "target-024",
+          "zh": "A right movement input is accepted during active play while the player is idle and the tile to the right of the head is an empty passable tile → The player animates one tile right into the previously empty tile."
+        },
+        {
+          "id": "target-025",
+          "zh": "An up movement input is attempted during active play while the player is idle and the tile above the head is a solid collision tile → The player remains in its current tile positions and does not enter the solid tile above the head."
+        },
+        {
+          "id": "target-026",
+          "zh": "An up movement input is attempted during active play while the player is idle and the tile above the head is occupied by the player's body → The player remains in its current tile positions and does not enter the body-occupied tile above the head."
+        },
+        {
+          "id": "target-027",
+          "zh": "An up movement input is accepted during active play while the tile above the head contains a grow item and at least one other size-change item is uncollected → The player moves one tile upward, the grow item above the head disappears, particles appear at that item tile, the player body is drawn with one additional segment after the move completes, and the win block outline remains dark-blue."
+        },
+        {
+          "id": "target-028",
+          "zh": "An up movement input is accepted during active play while the tile above the head contains the only remaining size-change item and that item is a grow item → The player moves one tile upward, the grow item above the head disappears, particles appear at that item tile, the player body is drawn with one additional segment after the move completes, and the win block outline changes to orange."
+        },
+        {
+          "id": "target-029",
+          "zh": "An up movement input is accepted during active play while the player has at least two segments, the tile above the head contains a shrink item, and at least one other size-change item is uncollected → The player moves one tile upward, the shrink item above the head disappears, particles appear at that item tile, the player body is drawn with one fewer segment after the move completes, and the win block outline remains dark-blue."
+        },
+        {
+          "id": "target-030",
+          "zh": "An up movement input is accepted during active play while the player has at least two segments and the tile above the head contains the only remaining size-change item and that item is a shrink item → The player moves one tile upward, the shrink item above the head disappears, particles appear at that item tile, the player body is drawn with one fewer segment after the move completes, and the win block outline changes to orange."
+        },
+        {
+          "id": "target-031",
+          "zh": "An up movement input is accepted during active play while the player has one segment and the tile above the head contains a shrink item → The player sprite stops being drawn during the loss recovery interval."
+        },
+        {
+          "id": "target-032",
+          "zh": "An up movement input is accepted during active play while the tile above the head is the win block and at least one size-change item remains uncollected → The player animates one tile upward onto the win block, and the active level remains visible without a transition to the level-select scene."
+        },
+        {
+          "id": "target-033",
+          "zh": "A movement animation completes during active play with open space directly below every player segment → The player immediately begins animating one tile downward from its completed position."
+        },
+        {
+          "id": "target-034",
+          "zh": "A movement animation completes during active play with at least one player segment on a lose block → The player sprite stops being drawn during the loss recovery interval."
+        },
+        {
+          "id": "target-035",
+          "zh": "A movement animation completes during active play with the player below the bottom loss boundary → The player sprite stops being drawn during the loss recovery interval."
+        },
+        {
+          "id": "target-036",
+          "zh": "A movement animation completes during active play with the player on the win block and no size-change items remain uncollected → A dark-blue transition animation starts from the center of the game view, then the level-select scene replaces the active level gameplay scene."
+        },
+        {
+          "id": "target-037",
+          "zh": "The undo command is accepted during an active level when a previous move state is available → The player body is redrawn at its prior visible position from before the most recent move; any level objects or size-change items that were visible in that prior state are shown in their prior positions again."
+        },
+        {
+          "id": "target-038",
+          "zh": "The undo command is attempted during an active level when no previous move state is available → The player body stays in its current visible position, and the visible level objects stay in their current positions."
+        },
+        {
+          "id": "target-039",
+          "zh": "The reset command is newly pressed during an active level while the player is idle → A dark-blue transition animation starts from the center of the game view, then the same level is redrawn from its starting state with the player visible again."
+        },
+        {
+          "id": "target-040",
+          "zh": "The loss recovery interval completes after the player has disappeared during an active level → The player body is drawn again in the active level after the loss recovery interval."
+        },
+        {
+          "id": "target-041",
+          "zh": "The scrolling sky background is rendered → The full game view is filled with a vertical blue gradient background."
+        }
+      ]
     },
     {
       "id": "stolen-sword",
       "titleZh": "Stolen Sword",
       "typeZh": "横版动作冒险",
-      "targetCount": 0,
+      "targetCount": 76,
       "summaryZh": "生成一款围绕失窃宝剑展开的动作冒险游戏：玩家探索场景、移动跳跃、与敌人或机关交互并逐步推进目标，在战斗、受伤、收集、检查点和结算过程中获得明确视觉反馈。",
-      "requirements": []
+      "requirements": [
+        {
+          "id": "target-001",
+          "zh": "A full-screen wipe transition starts → A solid black vertical rectangle enters from the right edge, covers the gameplay view, then retracts so the gameplay view is visible again over a 2.4 second transition."
+        },
+        {
+          "id": "target-002",
+          "zh": "An enemy hit slash effect is created at an enemy's position during a player dash → A black line centered on the hit enemy expands along the player's dash direction and fades out within 0.3 seconds."
+        },
+        {
+          "id": "target-003",
+          "zh": "The player takes damage while at full health and is not already in the post-damage invincibility state → The player's health-colored body segment changes from gray to red, and the character repeatedly switches between opaque and translucent appearances during the post-hit interval."
+        },
+        {
+          "id": "target-004",
+          "zh": "The initial stage title overlay begins displaying → The stage title overlay changes from transparent to fully visible during the first 2 seconds."
+        },
+        {
+          "id": "target-005",
+          "zh": "The player starts the game after the stage title overlay is fully visible → The stage title overlay changes from fully visible to transparent over 1 second, then disappears from the gameplay view."
+        },
+        {
+          "id": "target-006",
+          "zh": "A stage transition advances into the first stage → The background scrolls during the transition and the player character appears in the first stage's bamboo-and-sky play area."
+        },
+        {
+          "id": "target-007",
+          "zh": "A stage transition advances into the second stage → The player character moves in from the left side of the scene into the second stage's vertical bamboo-platform play area during the transition."
+        },
+        {
+          "id": "target-008",
+          "zh": "A stage transition advances into the third stage → The player character enters from the left side of the scene and settles near the third stage's water-surface play area during the transition."
+        },
+        {
+          "id": "target-009",
+          "zh": "A stage transition advances into the fourth stage → The player character moves from the lower-left side of the scene into the fourth stage's cliff-and-water play area during the transition."
+        },
+        {
+          "id": "target-010",
+          "zh": "A stage transition into a gameplay wave with enemies completes → The transition ends and live enemies for the new wave are visible in the gameplay area."
+        },
+        {
+          "id": "target-011",
+          "zh": "The first stage ending cutscene reaches its dialogue caption → The caption text \"Can't find the theft. I think I lost him.\" is displayed over the gameplay scene."
+        },
+        {
+          "id": "target-012",
+          "zh": "The second stage ending cutscene reaches its dialogue caption → The caption text \"Still not found the theft.\" is displayed over the gameplay scene."
+        },
+        {
+          "id": "target-013",
+          "zh": "The third stage ending cutscene reaches its dialogue caption → The caption text \"Still not found the theft.\" is displayed over the gameplay scene."
+        },
+        {
+          "id": "target-014",
+          "zh": "The fourth stage ending cutscene reaches its dialogue caption → The caption text \"Still can't find him.\" is displayed over the gameplay scene."
+        },
+        {
+          "id": "target-015",
+          "zh": "The first stage ending cutscene summons the theft character after the dialogue caption → The theft character appears on the left side of the scene."
+        },
+        {
+          "id": "target-016",
+          "zh": "The second stage ending cutscene summons the theft character after the dialogue caption → The theft character appears near the player in the vertical stage area."
+        },
+        {
+          "id": "target-017",
+          "zh": "The first stage ending cutscene begins the player's chase movement after the theft has moved across the scene → The player character runs from the left side of the scene toward the right side while the background scrolls during the 1 second chase segment."
+        },
+        {
+          "id": "target-018",
+          "zh": "The fourth stage ending cutscene reaches the desaturation chase segment → The scene colors transition to grayscale while the player moves toward the theft during the 1 second segment."
+        },
+        {
+          "id": "target-019",
+          "zh": "The fourth stage ending cutscene completes its desaturation sequence → The gameplay scene returns from grayscale to its normal colors."
+        },
+        {
+          "id": "target-020",
+          "zh": "The final stage ending completes and advances to the wrapped first stage → The game returns to the first-stage title overlay before active play resumes."
+        },
+        {
+          "id": "target-021",
+          "zh": "A live enemy using a circular movement pattern is active → The enemy follows an elliptical path around its starting position while it remains alive."
+        },
+        {
+          "id": "target-022",
+          "zh": "A live enemy begins a slide-in movement action → The enemy moves from its starting position toward the slide-in destination during the slide-in animation."
+        },
+        {
+          "id": "target-023",
+          "zh": "A follower enemy reaches the start time for following its tracked object while it is alive → The follower enemy moves to the tracked object's offset position and then remains aligned at that offset as the tracked object moves."
+        },
+        {
+          "id": "target-024",
+          "zh": "A chained enemy follower has enough recorded head-path history while it is alive → The follower enemy travels along the same trail previously taken by the head enemy, remaining spaced behind it along that trail."
+        },
+        {
+          "id": "target-025",
+          "zh": "The first tutorial drag hint is active and the player is not pressing → A white rounded drag trail is drawn from the player area toward an upward-left release direction and its endpoint animates along that path."
+        },
+        {
+          "id": "target-026",
+          "zh": "The second tutorial drag hint is active and the player is not pressing → A white rounded drag trail is drawn from the player area toward the remaining enemy, and its endpoint animates along that path."
+        },
+        {
+          "id": "target-027",
+          "zh": "The active tutorial drag-hint graphic is present when all enemies in the tutorial wave have been defeated → The tutorial drag hint disappears from the gameplay view."
+        },
+        {
+          "id": "target-028",
+          "zh": "The player is actively pressing and dragging on the gameplay view → A white rounded drag trail is drawn between the press start point and the current cursor or touch point."
+        },
+        {
+          "id": "target-029",
+          "zh": "The player holds an active drag while a dash is available and the release vector is strong enough for a dash → A black curved trajectory guide is drawn from the player character in the pending dash direction while the drag is held."
+        },
+        {
+          "id": "target-030",
+          "zh": "The player holds an active drag while a dash is available and the release vector is below the dash threshold → No black trajectory guide is drawn from the player character while the drag is held."
+        },
+        {
+          "id": "target-031",
+          "zh": "The player holds an active drag while dashing is unavailable → No black trajectory guide is drawn from the player character while the drag is held."
+        },
+        {
+          "id": "target-032",
+          "zh": "The player releases a drag while a dash is available and the release vector is strong enough for a dash → The player character launches in the release direction immediately after the drag is released."
+        },
+        {
+          "id": "target-033",
+          "zh": "The player releases a drag while a dash is available and the release vector is below the dash threshold → The player character does not launch into a dash when the drag is released."
+        },
+        {
+          "id": "target-034",
+          "zh": "The player releases a drag while dashing is unavailable → The player character does not launch into a dash when the drag is released."
+        },
+        {
+          "id": "target-035",
+          "zh": "A defending enemy is drawn during active play → A dashed circular defensive shell is drawn around the enemy."
+        },
+        {
+          "id": "target-036",
+          "zh": "A live switch-mode enemy's scheduled mode event triggers while the enemy is not currently defending → A dashed circular defensive shell appears around the enemy."
+        },
+        {
+          "id": "target-037",
+          "zh": "A live switch-mode enemy's scheduled mode event triggers while the enemy is currently defending → The dashed circular defensive shell around the enemy disappears."
+        },
+        {
+          "id": "target-038",
+          "zh": "A shell enemy's health is reduced to one while the shell enemy remains alive → The dashed circular defensive shell is no longer drawn around the enemy."
+        },
+        {
+          "id": "target-039",
+          "zh": "The player collides with an untouchable enemy while not in the post-damage invincibility state → The player character is knocked away from the collision and enters the visible damage flashing state."
+        },
+        {
+          "id": "target-040",
+          "zh": "The player collides vertically with a defending enemy → The player character bounces away vertically from the enemy, and the dashed defensive shell remains around the enemy."
+        },
+        {
+          "id": "target-041",
+          "zh": "The player collides horizontally with a defending enemy → The player character bounces away horizontally from the enemy, and the dashed defensive shell remains around the enemy."
+        },
+        {
+          "id": "target-042",
+          "zh": "The player collides with a live non-defending enemy → The player character switches into an attack pose for the post-hit animation interval."
+        },
+        {
+          "id": "target-043",
+          "zh": "A non-defending enemy with more than one health remaining is hit after its damage cooldown has elapsed → The enemy remains visible at its current size and alternates between its normal color and gray flashing frames instead of entering a death motion."
+        },
+        {
+          "id": "target-044",
+          "zh": "A non-defending enemy with one health remaining is hit after its damage cooldown has elapsed → The enemy leaves its normal movement pattern, is knocked away from its position, and begins its death motion."
+        },
+        {
+          "id": "target-045",
+          "zh": "An enemy's death animation reaches its removal state → The enemy disappears from the gameplay view."
+        },
+        {
+          "id": "target-046",
+          "zh": "A compound enemy's parent enemy dies while one of its child enemies is still alive → The child enemy begins its death motion."
+        },
+        {
+          "id": "target-047",
+          "zh": "The stage-three compound core enemy is alive when all of its child enemies have been killed → The core enemy begins its death motion."
+        },
+        {
+          "id": "target-048",
+          "zh": "A live enemy's aimed shooting event triggers → A small red projectile appears at the enemy and travels away from the enemy toward the player's position."
+        },
+        {
+          "id": "target-049",
+          "zh": "A live enemy's radial shooting event triggers → Multiple small red projectiles appear around the enemy at the same moment and travel outward in different directions."
+        },
+        {
+          "id": "target-050",
+          "zh": "A live enemy's single-projectile firework event triggers → One small red projectile appears at the enemy and travels away from the enemy."
+        },
+        {
+          "id": "target-051",
+          "zh": "A projectile collides with the player → The projectile disappears from the gameplay view after the collision."
+        },
+        {
+          "id": "target-052",
+          "zh": "An object with water-ripple checking crosses the water surface while fewer than ten ripple effects are active → A circular ripple appears on the water surface at the object's horizontal position, expands outward, and disappears by 3 seconds after it appears."
+        },
+        {
+          "id": "target-053",
+          "zh": "A projectile is drawn below the water surface in a reflection-enabled scene → The projectile is shown with a water-colored overlay, and a translucent mirrored copy of the projectile is drawn across the water surface."
+        },
+        {
+          "id": "target-054",
+          "zh": "An enemy is drawn below the water surface in a reflection-enabled scene → The enemy is shown with a water-colored overlay, and a translucent mirrored copy of the enemy is drawn across the water surface."
+        },
+        {
+          "id": "target-055",
+          "zh": "The player character is below the water surface → The player character is drawn in a swimming pose with limbs cycling through a swim animation."
+        },
+        {
+          "id": "target-056",
+          "zh": "The player character is below the water surface in a reflection-enabled scene → A translucent mirrored copy of the player character is drawn across the water surface."
+        },
+        {
+          "id": "target-057",
+          "zh": "The player is in contact with a water region → The player character stays within the water area and drifts horizontally with the water/background movement while contact continues."
+        },
+        {
+          "id": "target-058",
+          "zh": "The player is in contact with a flow region → The player character's position shifts in the flow direction while contact with the flow region continues."
+        },
+        {
+          "id": "target-059",
+          "zh": "A horizontal flow region is drawn during active play → A translucent white rectangular current is visible over the horizontal flow area."
+        },
+        {
+          "id": "target-060",
+          "zh": "A vertical flow region is drawn during active play → A vertical current area is filled with alternating translucent white bands."
+        },
+        {
+          "id": "target-061",
+          "zh": "The player collides with the top side of a solid platform → The player character is placed on the platform surface and remains supported by the platform instead of passing through it."
+        },
+        {
+          "id": "target-062",
+          "zh": "The player collides with the bottom side of a solid platform → The player character is placed just below the platform and does not pass upward through it."
+        },
+        {
+          "id": "target-063",
+          "zh": "The player collides with the side of a solid platform → The player character is placed beside the platform edge and does not pass through the platform horizontally."
+        },
+        {
+          "id": "target-064",
+          "zh": "A horizontal bamboo platform is active → A visible horizontal bamboo stalk oscillates vertically around its anchor position."
+        },
+        {
+          "id": "target-065",
+          "zh": "A vertical bamboo platform is active → A visible vertical bamboo stalk oscillates horizontally around its anchor position."
+        },
+        {
+          "id": "target-066",
+          "zh": "A reflection-enabled mountain background is drawn → The mountain scenery includes a reflected version below the water surface."
+        },
+        {
+          "id": "target-067",
+          "zh": "The player is on the ground during active play while the background is scrolling and the player is not pressing → The player character uses a running pose with alternating leg positions."
+        },
+        {
+          "id": "target-068",
+          "zh": "The player is on the ground during active play while the background is not scrolling and the player is not pressing → The player character uses a standing stop pose with legs not alternating."
+        },
+        {
+          "id": "target-069",
+          "zh": "The player is on the ground during active play while pressing to charge → The player character switches to a crouched charge pose while the press is held."
+        },
+        {
+          "id": "target-070",
+          "zh": "The player is airborne during active play while gravity is enabled and no collision support is holding the player → The player character descends between successive frames until landing, dashing, or entering another forced movement."
+        },
+        {
+          "id": "target-071",
+          "zh": "The player's health reaches zero while the player is not already dying → The player character changes into a death pose, and a solid black full-screen wipe begins."
+        },
+        {
+          "id": "target-072",
+          "zh": "The player's death animation completes after a death state → The gameplay scene restarts with the player character no longer in the death pose, and the player's health-colored body segment is gray again."
+        },
+        {
+          "id": "target-073",
+          "zh": "A live standard enemy is drawn during active play → The enemy is rendered as a dark gray character glyph with a white eye and a small red pupil on the glyph."
+        },
+        {
+          "id": "target-074",
+          "zh": "A live untouchable enemy is drawn during active play → The enemy character glyph is rendered in red with a white eye and a small red pupil."
+        },
+        {
+          "id": "target-075",
+          "zh": "A non-untouchable compound child enemy is drawn while its parent enemy is still alive → The child enemy character glyph is drawn at 30% opacity, with background graphics visible through the glyph."
+        },
+        {
+          "id": "target-076",
+          "zh": "A letterbox overlay is fully displayed → Solid black horizontal bars cover the top and bottom portions of the gameplay view, leaving the center gameplay area visible between them."
+        }
+      ]
     },
     {
       "id": "catapoolt",
@@ -3951,10 +4955,933 @@
         "issue": null
       }
     },
-    "space-huggers": {},
-    "catculus": {},
-    "non-mewtonian-cat": {},
-    "stolen-sword": {},
+    "space-huggers": {
+      "gpt-5.5": {
+        "status": "completed",
+        "score": {
+          "display": "92.13 (+2.25)",
+          "base": 92.13,
+          "passed": 82,
+          "denominator": 89,
+          "dynamic": 2,
+          "dynamicAddition": 2.25,
+          "potential": 94.38
+        },
+        "visualQuality": {
+          "score": 89.41,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 49.41,
+          "renderingStyleAverage": 40,
+          "videosScored": 17
+        },
+        "traceCount": 17,
+        "playPath": "games-v8.3/space-huggers/gpt-5.5/index.html",
+        "previewPath": "previews-v8.3/space-huggers/gpt-5.5.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-019",
+              "zh": "All active players have been dead for more than 9 seconds → The current level view is replaced by a reset level view with a living player at the checkpoint area."
+            },
+            {
+              "id": "target-042",
+              "zh": "A burnable object's pending burn delay elapses → Flame particles appear attached to the object."
+            },
+            {
+              "id": "target-076",
+              "zh": "A multiplayer player moves outside the gameplay window while another living player remains active and no ground exists below the offscreen player → The offscreen player is not relocated to the other player; the player changes into a dead or falling body state."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-038",
+              "zh": "A newly spawned player is damaged during the spawn safety interval → The player remains in a living character pose and does not change into a collapsed dead-body pose from that hit.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-078",
+              "zh": "A non-child game object falls below the bottom kill boundary of the level → The object disappears from the playfield after crossing below the level.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-043",
+              "zh": "A burning game object is within a water burst radius → The object's flame particles disappear, and the object moves away from the center of the water burst.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-083",
+              "zh": "A new game has just been reset and the first level HUD is rendered → The bottom HUD text shows \"Level 1\" and \"Lives 10\".",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null
+      },
+      "seed-2.0-pro": {
+        "status": "completed",
+        "score": {
+          "display": "66.29 (+3.37)",
+          "base": 66.29,
+          "passed": 59,
+          "denominator": 89,
+          "dynamic": 3,
+          "dynamicAddition": 3.37,
+          "potential": 69.66
+        },
+        "visualQuality": {
+          "score": 88.33,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.33,
+          "renderingStyleAverage": 40,
+          "videosScored": 6
+        },
+        "traceCount": 6,
+        "playPath": "games-v8.3/space-huggers/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.3/space-huggers/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-071",
+              "zh": "Snow precipitation is selected for a level → White snow particles fall across the sky area of the playfield."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-029",
+              "zh": "A wall-climbing player jump input is accepted → The player character leaves the wall-climb contact and moves upward away from the wall.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-033",
+              "zh": "A player starts a dodge while airborne and past the spawn safety interval → The player character rotates into a rolling animation while airborne and gains upward motion during the roll.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-038",
+              "zh": "A newly spawned player is damaged during the spawn safety interval → The player remains in a living character pose and does not change into a collapsed dead-body pose from that hit.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-039",
+              "zh": "A character moving upward hits a destructible tile above its head → The struck tile disappears from the level, leaving an empty space where the tile had been.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-040",
+              "zh": "A character is crushed by a falling crushing object from above → A burst of blood particles appears at the character's position, and the character disappears or changes into a destroyed dead-body state.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-041",
+              "zh": "A burnable object begins burning instantly → Flame particles appear attached to the object.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-042",
+              "zh": "A burnable object's pending burn delay elapses → Flame particles appear attached to the object.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-043",
+              "zh": "A burning game object is within a water burst radius → The object's flame particles disappear, and the object moves away from the center of the water burst.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-044",
+              "zh": "A burning object's burn timer elapses → Attached flame particles are no longer visible on the object after the timer elapses.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-045",
+              "zh": "A water barrel is destroyed → A water burst appears at the barrel's position, and the barrel disappears.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-046",
+              "zh": "A non-water, non-explosive prop is destroyed → The prop disappears from the playfield and a burst of debris particles matching the prop's color appears at its position.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-047",
+              "zh": "An explosive prop is destroyed → The prop disappears from the playfield, a burst of debris particles appears at its position, and an explosion burst appears at the same position.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-049",
+              "zh": "A weapon trigger is held when the weapon is ready to fire → A bullet projectile appears at the weapon muzzle and travels away from the weapon, the weapon visibly recoils from its firing angle, and a tan shell-casing particle appears at the weapon and moves away from it.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-050",
+              "zh": "A living enemy's automatic shoot timer is active while its held weapon is ready to fire → A bullet projectile appears at the enemy weapon muzzle and travels away from the enemy, and the weapon visibly recoils from its firing angle.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-056",
+              "zh": "A bullet collides with a glass tile → The glass tile disappears from the level, leaving an empty space where the glass tile had been.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-057",
+              "zh": "A bullet collides with a dirt tile and the dirt-destruction chance succeeds → The dirt tile disappears from the level, leaving an empty space where the tile had been.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-058",
+              "zh": "A bullet collides with a dirt tile and the dirt-destruction chance fails → The dirt tile remains visible in the same position after the bullet impact.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-060",
+              "zh": "A bullet collides with an indestructible solid tile → The bullet disappears at the tile surface, a yellow-orange impact particle burst appears, and the solid tile remains visible in the same position.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-062",
+              "zh": "An explosion includes a movable game object within its blast radius → The object moves away from the explosion center after the explosion burst appears.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-065",
+              "zh": "A horizontal pipe tile is drawn for a base structure → A horizontal pipe-like tile is visible as part of the base floor or ceiling.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-066",
+              "zh": "A vertical pipe tile is drawn for a base structure → A vertical pipe-like tile is visible as part of the base wall.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-067",
+              "zh": "A glass tile is drawn for a base structure → A cyan translucent glass tile is visible in the base structure.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-069",
+              "zh": "A background window tile is drawn for a base structure → A cyan translucent window is visible in the background of the base.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-073",
+              "zh": "A grounded living enemy first reacts to seeing the player and its jump branch is selected → The enemy leaves the ground and moves upward while facing toward the player.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-074",
+              "zh": "A grenade-type enemy is facing the remembered player position and its grenade-throw branch is selected → A round grenade appears at the enemy and moves away from the enemy.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-085",
+              "zh": "A parallax background layer is rendered for the level → A colored background terrain silhouette is visible behind the main playfield terrain.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-019",
+              "zh": "All active players have been dead for more than 9 seconds → The current level view is replaced by a reset level view with a living player at the checkpoint area.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-020",
+              "zh": "In a one-player game, the only player has been dead for more than 2 seconds while lives remain → A new living player character appears at the checkpoint position.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-083",
+              "zh": "A new game has just been reset and the first level HUD is rendered → The bottom HUD text shows \"Level 1\" and \"Lives 10\".",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null
+      }
+    },
+    "catculus": {
+      "gpt-5.5": {
+        "status": "completed",
+        "score": {
+          "display": "75.00 (+6.82)",
+          "base": 75,
+          "passed": 33,
+          "denominator": 44,
+          "dynamic": 3,
+          "dynamicAddition": 6.82,
+          "potential": 81.82
+        },
+        "visualQuality": {
+          "score": 90,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 50,
+          "renderingStyleAverage": 40,
+          "videosScored": 7
+        },
+        "traceCount": 7,
+        "playPath": "games-v8.3/catculus/gpt-5.5/index.html",
+        "previewPath": "previews-v8.3/catculus/gpt-5.5.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-036",
+              "zh": "The multiplier countdown completes while the multiplier display value is above 1 → The multiplier display changes from its previous whole-number value to the next lower whole-number value."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-010",
+              "zh": "A visible grid tile containing an awake cat is selected while the sprayer power is active and the game is not locked → The cat on that tile performs a hop animation from the tile while the tile selection is processed.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-011",
+              "zh": "A visible grid tile containing a sleeping cat is selected while the sprayer power is active and the game is not locked → The tile changes into its selected appearance, and the sleeping cat remains on that tile instead of hopping away.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-016",
+              "zh": "An accepted scoring selection total is above the current target while the Reflexes skill blocks the mistake penalty → A red feedback text popup appears near the selected group, and on the first gameplay frame after scoring resolution the lives bar red fill endpoint is aligned within 2 pixels of its endpoint immediately before scoring.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-022",
+              "zh": "A cat grid tile in an accepted scoring selection is scored while the Allergies skill is active → A red text popup reading “ALLERGIES” appears centered on the cat tile.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-026",
+              "zh": "A cat tile is scored while the Catnip hop-target skill is active and visible empty target tiles have different displayed values → The cat lands on the visible empty tile with the highest displayed number.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-027",
+              "zh": "A cat tile is scored while the Box hop-target skill is active and visible empty target tiles have different displayed values → The cat lands on the visible empty tile with the lowest displayed number.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-028",
+              "zh": "A visible non-cat grid tile is selected while the Mouse skill is active and at least two cats are present at different distances from that tile → The cat nearest to the selected tile hops onto that selected tile; the farther cat remains on its previous tile.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-032",
+              "zh": "An accepted scoring selection finishes resolving while the Loaf skill is active and a visible unselected tile contains a sleeping cat → A green “LOAF” popup appears centered on the sleeping cat tile, and that tile’s displayed number increases by 1 from its pre-resolution value.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-040",
+              "zh": "The active gameplay scene receives a portrait layout change → The gameplay canvas is in a tall layout; the numbered tile grid is positioned in the lower half, the target display is centered above the grid, the lives bar is near the bottom-left edge, and the score display is near the top-right edge.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-041",
+              "zh": "The active gameplay scene receives a landscape layout change → The gameplay canvas is in a wide layout; the numbered tile grid is positioned on the left side, the target and tutorial area are on the right side, the lives bar is near the top-left edge, and the score and multiplier displays are near the top-right edge.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null
+      },
+      "seed-2.0-pro": {
+        "status": "completed",
+        "score": {
+          "display": "75.00 (+18.18)",
+          "base": 75,
+          "passed": 33,
+          "denominator": 44,
+          "dynamic": 8,
+          "dynamicAddition": 18.18,
+          "potential": 93.18
+        },
+        "visualQuality": {
+          "score": 88.33,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.33,
+          "renderingStyleAverage": 40,
+          "videosScored": 12
+        },
+        "traceCount": 12,
+        "playPath": "games-v8.3/catculus/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.3/catculus/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-011",
+              "zh": "A visible grid tile containing a sleeping cat is selected while the sprayer power is active and the game is not locked → The tile changes into its selected appearance, and the sleeping cat remains on that tile instead of hopping away."
+            },
+            {
+              "id": "target-026",
+              "zh": "A cat tile is scored while the Catnip hop-target skill is active and visible empty target tiles have different displayed values → The cat lands on the visible empty tile with the highest displayed number."
+            },
+            {
+              "id": "target-031",
+              "zh": "An accepted scoring selection finishes resolving while the Scratch skill is active and a visible unselected tile is adjacent to the scored path → The adjacent unselected tile’s displayed number decreases by 1 from its pre-resolution value."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-010",
+              "zh": "A visible grid tile containing an awake cat is selected while the sprayer power is active and the game is not locked → The cat on that tile performs a hop animation from the tile while the tile selection is processed.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-022",
+              "zh": "A cat grid tile in an accepted scoring selection is scored while the Allergies skill is active → A red text popup reading “ALLERGIES” appears centered on the cat tile.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-024",
+              "zh": "A selected tile with displayed value 2 is scored while the Hiss skill is active → A green multiplier text popup beginning with “x” appears near that tile.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-036",
+              "zh": "The multiplier countdown completes while the multiplier display value is above 1 → The multiplier display changes from its previous whole-number value to the next lower whole-number value.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-040",
+              "zh": "The active gameplay scene receives a portrait layout change → The gameplay canvas is in a tall layout; the numbered tile grid is positioned in the lower half, the target display is centered above the grid, the lives bar is near the bottom-left edge, and the score display is near the top-right edge.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-041",
+              "zh": "The active gameplay scene receives a landscape layout change → The gameplay canvas is in a wide layout; the numbered tile grid is positioned on the left side, the target and tutorial area are on the right side, the lives bar is near the top-left edge, and the score and multiplier displays are near the top-right edge.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-028",
+              "zh": "A visible non-cat grid tile is selected while the Mouse skill is active and at least two cats are present at different distances from that tile → The cat nearest to the selected tile hops onto that selected tile; the farther cat remains on its previous tile.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-029",
+              "zh": "An accepted scoring selection finishes resolving while hidden grid positions adjacent to the scored path are available to appear → Previously empty positions adjacent to the scored path fill in with newly visible numbered tiles.",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null
+      }
+    },
+    "non-mewtonian-cat": {
+      "gpt-5.5": {
+        "status": "completed",
+        "score": {
+          "display": "90.24 (+9.76)",
+          "base": 90.24,
+          "passed": 37,
+          "denominator": 41,
+          "dynamic": 4,
+          "dynamicAddition": 9.76,
+          "potential": 100
+        },
+        "visualQuality": {
+          "score": 90.91,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 50,
+          "renderingStyleAverage": 40.91,
+          "videosScored": 11
+        },
+        "traceCount": 11,
+        "playPath": "games-v8.3/non-mewtonian-cat/gpt-5.5/index.html",
+        "previewPath": "previews-v8.3/non-mewtonian-cat/gpt-5.5.png",
+        "unmet": {
+          "vlm": [],
+          "replayTrace": [
+            {
+              "id": "target-012",
+              "zh": "An up navigation input is newly pressed on the level-select scene when an available level exists in the same column above the currently highlighted level → The highlighted level tile changes to the nearest available level tile above it in the same column, skipping unavailable tiles.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-013",
+              "zh": "A down navigation input is newly pressed on the level-select scene when an available level exists in the same column below the currently highlighted level → The highlighted level tile changes to the nearest available level tile below it in the same column, skipping unavailable tiles.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-016",
+              "zh": "An active level is loaded from level data that contains player head or body tiles → The active gameplay scene shows the player as a segmented body on the level grid.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-028",
+              "zh": "An up movement input is accepted during active play while the tile above the head contains the only remaining size-change item and that item is a grow item → The player moves one tile upward, the grow item above the head disappears, particles appear at that item tile, the player body is drawn with one additional segment after the move completes, and the win block outline changes to orange.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null
+      },
+      "seed-2.0-pro": {
+        "status": "completed",
+        "score": {
+          "display": "80.49 (+4.88)",
+          "base": 80.49,
+          "passed": 33,
+          "denominator": 41,
+          "dynamic": 2,
+          "dynamicAddition": 4.88,
+          "potential": 85.37
+        },
+        "visualQuality": {
+          "score": 89.29,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 50,
+          "renderingStyleAverage": 39.29,
+          "videosScored": 14
+        },
+        "traceCount": 14,
+        "playPath": "games-v8.3/non-mewtonian-cat/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.3/non-mewtonian-cat/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-012",
+              "zh": "An up navigation input is newly pressed on the level-select scene when an available level exists in the same column above the currently highlighted level → The highlighted level tile changes to the nearest available level tile above it in the same column, skipping unavailable tiles."
+            },
+            {
+              "id": "target-013",
+              "zh": "A down navigation input is newly pressed on the level-select scene when an available level exists in the same column below the currently highlighted level → The highlighted level tile changes to the nearest available level tile below it in the same column, skipping unavailable tiles."
+            },
+            {
+              "id": "target-031",
+              "zh": "An up movement input is accepted during active play while the player has one segment and the tile above the head contains a shrink item → The player sprite stops being drawn during the loss recovery interval."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-032",
+              "zh": "An up movement input is accepted during active play while the tile above the head is the win block and at least one size-change item remains uncollected → The player animates one tile upward onto the win block, and the active level remains visible without a transition to the level-select scene.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-035",
+              "zh": "A movement animation completes during active play with the player below the bottom loss boundary → The player sprite stops being drawn during the loss recovery interval.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-041",
+              "zh": "The scrolling sky background is rendered → The full game view is filled with a vertical blue gradient background.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-029",
+              "zh": "An up movement input is accepted during active play while the player has at least two segments, the tile above the head contains a shrink item, and at least one other size-change item is uncollected → The player moves one tile upward, the shrink item above the head disappears, particles appear at that item tile, the player body is drawn with one fewer segment after the move completes, and the win block outline remains dark-blue.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-030",
+              "zh": "An up movement input is accepted during active play while the player has at least two segments and the tile above the head contains the only remaining size-change item and that item is a shrink item → The player moves one tile upward, the shrink item above the head disappears, particles appear at that item tile, the player body is drawn with one fewer segment after the move completes, and the win block outline changes to orange.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null
+      }
+    },
+    "stolen-sword": {
+      "gpt-5.5": {
+        "status": "completed",
+        "score": {
+          "display": "81.58 (+1.32)",
+          "base": 81.58,
+          "passed": 62,
+          "denominator": 76,
+          "dynamic": 1,
+          "dynamicAddition": 1.32,
+          "potential": 82.89
+        },
+        "visualQuality": {
+          "score": 88.75,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 49.38,
+          "renderingStyleAverage": 39.38,
+          "videosScored": 16
+        },
+        "traceCount": 16,
+        "playPath": "games-v8.3/stolen-sword/gpt-5.5/index.html",
+        "previewPath": "previews-v8.3/stolen-sword/gpt-5.5.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-007",
+              "zh": "A stage transition advances into the second stage → The player character moves in from the left side of the scene into the second stage's vertical bamboo-platform play area during the transition."
+            },
+            {
+              "id": "target-008",
+              "zh": "A stage transition advances into the third stage → The player character enters from the left side of the scene and settles near the third stage's water-surface play area during the transition."
+            },
+            {
+              "id": "target-009",
+              "zh": "A stage transition advances into the fourth stage → The player character moves from the lower-left side of the scene into the fourth stage's cliff-and-water play area during the transition."
+            },
+            {
+              "id": "target-017",
+              "zh": "The first stage ending cutscene begins the player's chase movement after the theft has moved across the scene → The player character runs from the left side of the scene toward the right side while the background scrolls during the 1 second chase segment."
+            },
+            {
+              "id": "target-023",
+              "zh": "A follower enemy reaches the start time for following its tracked object while it is alive → The follower enemy moves to the tracked object's offset position and then remains aligned at that offset as the tracked object moves."
+            },
+            {
+              "id": "target-037",
+              "zh": "A live switch-mode enemy's scheduled mode event triggers while the enemy is currently defending → The dashed circular defensive shell around the enemy disappears."
+            },
+            {
+              "id": "target-038",
+              "zh": "A shell enemy's health is reduced to one while the shell enemy remains alive → The dashed circular defensive shell is no longer drawn around the enemy."
+            },
+            {
+              "id": "target-043",
+              "zh": "A non-defending enemy with more than one health remaining is hit after its damage cooldown has elapsed → The enemy remains visible at its current size and alternates between its normal color and gray flashing frames instead of entering a death motion."
+            },
+            {
+              "id": "target-047",
+              "zh": "The stage-three compound core enemy is alive when all of its child enemies have been killed → The core enemy begins its death motion."
+            },
+            {
+              "id": "target-064",
+              "zh": "A horizontal bamboo platform is active → A visible horizontal bamboo stalk oscillates vertically around its anchor position."
+            },
+            {
+              "id": "target-065",
+              "zh": "A vertical bamboo platform is active → A visible vertical bamboo stalk oscillates horizontally around its anchor position."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-027",
+              "zh": "The active tutorial drag-hint graphic is present when all enemies in the tutorial wave have been defeated → The tutorial drag hint disappears from the gameplay view.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-067",
+              "zh": "The player is on the ground during active play while the background is scrolling and the player is not pressing → The player character uses a running pose with alternating leg positions.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-063",
+              "zh": "The player collides with the side of a solid platform → The player character is placed beside the platform edge and does not pass through the platform horizontally.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null
+      },
+      "seed-2.0-pro": {
+        "status": "completed",
+        "score": {
+          "display": "22.37 (+3.95)",
+          "base": 22.37,
+          "passed": 17,
+          "denominator": 76,
+          "dynamic": 3,
+          "dynamicAddition": 3.95,
+          "potential": 26.32
+        },
+        "visualQuality": {
+          "score": 89,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 50,
+          "renderingStyleAverage": 39,
+          "videosScored": 10
+        },
+        "traceCount": 10,
+        "playPath": "games-v8.3/stolen-sword/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.3/stolen-sword/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-002",
+              "zh": "An enemy hit slash effect is created at an enemy's position during a player dash → A black line centered on the hit enemy expands along the player's dash direction and fades out within 0.3 seconds."
+            },
+            {
+              "id": "target-019",
+              "zh": "The fourth stage ending cutscene completes its desaturation sequence → The gameplay scene returns from grayscale to its normal colors."
+            },
+            {
+              "id": "target-021",
+              "zh": "A live enemy using a circular movement pattern is active → The enemy follows an elliptical path around its starting position while it remains alive."
+            },
+            {
+              "id": "target-042",
+              "zh": "The player collides with a live non-defending enemy → The player character switches into an attack pose for the post-hit animation interval."
+            },
+            {
+              "id": "target-044",
+              "zh": "A non-defending enemy with one health remaining is hit after its damage cooldown has elapsed → The enemy leaves its normal movement pattern, is knocked away from its position, and begins its death motion."
+            },
+            {
+              "id": "target-053",
+              "zh": "A projectile is drawn below the water surface in a reflection-enabled scene → The projectile is shown with a water-colored overlay, and a translucent mirrored copy of the projectile is drawn across the water surface."
+            },
+            {
+              "id": "target-054",
+              "zh": "An enemy is drawn below the water surface in a reflection-enabled scene → The enemy is shown with a water-colored overlay, and a translucent mirrored copy of the enemy is drawn across the water surface."
+            },
+            {
+              "id": "target-065",
+              "zh": "A vertical bamboo platform is active → A visible vertical bamboo stalk oscillates horizontally around its anchor position."
+            },
+            {
+              "id": "target-069",
+              "zh": "The player is on the ground during active play while pressing to charge → The player character switches to a crouched charge pose while the press is held."
+            },
+            {
+              "id": "target-070",
+              "zh": "The player is airborne during active play while gravity is enabled and no collision support is holding the player → The player character descends between successive frames until landing, dashing, or entering another forced movement."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-003",
+              "zh": "The player takes damage while at full health and is not already in the post-damage invincibility state → The player's health-colored body segment changes from gray to red, and the character repeatedly switches between opaque and translucent appearances during the post-hit interval.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-005",
+              "zh": "The player starts the game after the stage title overlay is fully visible → The stage title overlay changes from fully visible to transparent over 1 second, then disappears from the gameplay view.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-007",
+              "zh": "A stage transition advances into the second stage → The player character moves in from the left side of the scene into the second stage's vertical bamboo-platform play area during the transition.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-008",
+              "zh": "A stage transition advances into the third stage → The player character enters from the left side of the scene and settles near the third stage's water-surface play area during the transition.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-009",
+              "zh": "A stage transition advances into the fourth stage → The player character moves from the lower-left side of the scene into the fourth stage's cliff-and-water play area during the transition.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-012",
+              "zh": "The second stage ending cutscene reaches its dialogue caption → The caption text \"Still not found the theft.\" is displayed over the gameplay scene.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-013",
+              "zh": "The third stage ending cutscene reaches its dialogue caption → The caption text \"Still not found the theft.\" is displayed over the gameplay scene.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-014",
+              "zh": "The fourth stage ending cutscene reaches its dialogue caption → The caption text \"Still can't find him.\" is displayed over the gameplay scene.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-015",
+              "zh": "The first stage ending cutscene summons the theft character after the dialogue caption → The theft character appears on the left side of the scene.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-016",
+              "zh": "The second stage ending cutscene summons the theft character after the dialogue caption → The theft character appears near the player in the vertical stage area.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-017",
+              "zh": "The first stage ending cutscene begins the player's chase movement after the theft has moved across the scene → The player character runs from the left side of the scene toward the right side while the background scrolls during the 1 second chase segment.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-020",
+              "zh": "The final stage ending completes and advances to the wrapped first stage → The game returns to the first-stage title overlay before active play resumes.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-022",
+              "zh": "A live enemy begins a slide-in movement action → The enemy moves from its starting position toward the slide-in destination during the slide-in animation.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-023",
+              "zh": "A follower enemy reaches the start time for following its tracked object while it is alive → The follower enemy moves to the tracked object's offset position and then remains aligned at that offset as the tracked object moves.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-024",
+              "zh": "A chained enemy follower has enough recorded head-path history while it is alive → The follower enemy travels along the same trail previously taken by the head enemy, remaining spaced behind it along that trail.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-026",
+              "zh": "The second tutorial drag hint is active and the player is not pressing → A white rounded drag trail is drawn from the player area toward the remaining enemy, and its endpoint animates along that path.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-027",
+              "zh": "The active tutorial drag-hint graphic is present when all enemies in the tutorial wave have been defeated → The tutorial drag hint disappears from the gameplay view.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-028",
+              "zh": "The player is actively pressing and dragging on the gameplay view → A white rounded drag trail is drawn between the press start point and the current cursor or touch point.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-029",
+              "zh": "The player holds an active drag while a dash is available and the release vector is strong enough for a dash → A black curved trajectory guide is drawn from the player character in the pending dash direction while the drag is held.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-033",
+              "zh": "The player releases a drag while a dash is available and the release vector is below the dash threshold → The player character does not launch into a dash when the drag is released.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-035",
+              "zh": "A defending enemy is drawn during active play → A dashed circular defensive shell is drawn around the enemy.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-036",
+              "zh": "A live switch-mode enemy's scheduled mode event triggers while the enemy is not currently defending → A dashed circular defensive shell appears around the enemy.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-037",
+              "zh": "A live switch-mode enemy's scheduled mode event triggers while the enemy is currently defending → The dashed circular defensive shell around the enemy disappears.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-038",
+              "zh": "A shell enemy's health is reduced to one while the shell enemy remains alive → The dashed circular defensive shell is no longer drawn around the enemy.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-039",
+              "zh": "The player collides with an untouchable enemy while not in the post-damage invincibility state → The player character is knocked away from the collision and enters the visible damage flashing state.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-040",
+              "zh": "The player collides vertically with a defending enemy → The player character bounces away vertically from the enemy, and the dashed defensive shell remains around the enemy.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-041",
+              "zh": "The player collides horizontally with a defending enemy → The player character bounces away horizontally from the enemy, and the dashed defensive shell remains around the enemy.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-043",
+              "zh": "A non-defending enemy with more than one health remaining is hit after its damage cooldown has elapsed → The enemy remains visible at its current size and alternates between its normal color and gray flashing frames instead of entering a death motion.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-045",
+              "zh": "An enemy's death animation reaches its removal state → The enemy disappears from the gameplay view.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-046",
+              "zh": "A compound enemy's parent enemy dies while one of its child enemies is still alive → The child enemy begins its death motion.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-047",
+              "zh": "The stage-three compound core enemy is alive when all of its child enemies have been killed → The core enemy begins its death motion.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-048",
+              "zh": "A live enemy's aimed shooting event triggers → A small red projectile appears at the enemy and travels away from the enemy toward the player's position.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-049",
+              "zh": "A live enemy's radial shooting event triggers → Multiple small red projectiles appear around the enemy at the same moment and travel outward in different directions.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-050",
+              "zh": "A live enemy's single-projectile firework event triggers → One small red projectile appears at the enemy and travels away from the enemy.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-051",
+              "zh": "A projectile collides with the player → The projectile disappears from the gameplay view after the collision.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-052",
+              "zh": "An object with water-ripple checking crosses the water surface while fewer than ten ripple effects are active → A circular ripple appears on the water surface at the object's horizontal position, expands outward, and disappears by 3 seconds after it appears.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-055",
+              "zh": "The player character is below the water surface → The player character is drawn in a swimming pose with limbs cycling through a swim animation.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-057",
+              "zh": "The player is in contact with a water region → The player character stays within the water area and drifts horizontally with the water/background movement while contact continues.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-058",
+              "zh": "The player is in contact with a flow region → The player character's position shifts in the flow direction while contact with the flow region continues.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-059",
+              "zh": "A horizontal flow region is drawn during active play → A translucent white rectangular current is visible over the horizontal flow area.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-060",
+              "zh": "A vertical flow region is drawn during active play → A vertical current area is filled with alternating translucent white bands.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-062",
+              "zh": "The player collides with the bottom side of a solid platform → The player character is placed just below the platform and does not pass upward through it.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-063",
+              "zh": "The player collides with the side of a solid platform → The player character is placed beside the platform edge and does not pass through the platform horizontally.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-066",
+              "zh": "A reflection-enabled mountain background is drawn → The mountain scenery includes a reflected version below the water surface.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-067",
+              "zh": "The player is on the ground during active play while the background is scrolling and the player is not pressing → The player character uses a running pose with alternating leg positions.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-074",
+              "zh": "A live untouchable enemy is drawn during active play → The enemy character glyph is rendered in red with a white eye and a small red pupil.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-032",
+              "zh": "The player releases a drag while a dash is available and the release vector is strong enough for a dash → The player character launches in the release direction immediately after the drag is released.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-034",
+              "zh": "The player releases a drag while dashing is unavailable → The player character does not launch into a dash when the drag is released.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-071",
+              "zh": "The player's health reaches zero while the player is not already dying → The player character changes into a death pose, and a solid black full-screen wipe begins.",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null
+      }
+    },
     "catapoolt": {},
     "super-castle-game": {},
     "witchcat": {},
