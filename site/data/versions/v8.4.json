@@ -4496,6 +4496,118 @@
             }
           ]
         }
+      },
+      "gpt-5.4": {
+        "status": "completed",
+        "runId": "gpt-5.4-v8.4-full-20260902-173827",
+        "score": {
+          "display": "88.64 (+9.09)",
+          "base": 88.64,
+          "passed": 39,
+          "denominator": 44,
+          "dynamic": 4,
+          "dynamicAddition": 9.09,
+          "potential": 97.73
+        },
+        "visualQuality": {
+          "score": 91.81,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48,
+          "renderingStyleAverage": 43.81,
+          "videosScored": 16
+        },
+        "traceCount": 16,
+        "playPath": "games-v8.4/radius-raid/gpt-5.4/index.html",
+        "previewPath": "previews-v8.4/radius-raid/gpt-5.4.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-020",
+              "zh": "拾取“PIERCE SHOT”后，让一条红色子弹路径穿过同一直线上的两个可见敌人。 → “PIERCE SHOT”右侧出现红色持续条；红色子弹穿过第一个敌人后继续前进，两个敌人先后出现命中闪光或爆炸。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-018",
+              "zh": "拾取“FAST SHOT”后按住开火。 → “FAST SHOT”右侧出现绿色持续条，飞船射出的子弹改为绿色系线段；在0.5秒观察窗内出现至少8次发射出的子弹线段。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-021",
+              "zh": "一个大型蓝色分裂敌人被击毁。 → 大型敌人爆炸消失后，在其原位置上下左右附近出现四个同色小圆敌人。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-043",
+              "zh": "在暂停界面点击“MENU”且确认返回菜单。 → 暂停覆盖界面消失并返回主菜单，中央重新显示“RADIUS RAID”标题以及“PLAY”“STATS”“CREDITS”按钮。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-044",
+              "zh": "在“GAME OVER”界面点击“MENU”。 → “GAME OVER”结算界面消失并返回主菜单，中央重新显示“RADIUS RAID”标题以及“PLAY”“STATS”“CREDITS”按钮。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.4-v8.4-full-20260902-173827",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-02T17:42:27+08:00",
+          "finishedAt": "2026-09-02T22:02:24+08:00",
+          "totalDurationMs": 15597572,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-02T17:42:27+08:00",
+              "finishedAt": "2026-09-02T17:44:58+08:00",
+              "durationMs": 151065,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-02T17:44:58+08:00",
+              "finishedAt": "2026-09-02T18:04:59+08:00",
+              "durationMs": 1201134,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-02T18:04:59+08:00",
+              "finishedAt": "2026-09-02T21:42:53+08:00",
+              "durationMs": 13074539,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-02T21:42:53+08:00",
+              "finishedAt": "2026-09-02T21:42:54+08:00",
+              "durationMs": 308,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-02T21:42:54+08:00",
+              "finishedAt": "2026-09-02T21:51:44+08:00",
+              "durationMs": 530001,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-02T21:51:44+08:00",
+              "finishedAt": "2026-09-02T22:02:24+08:00",
+              "durationMs": 640485,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "elematter": {
