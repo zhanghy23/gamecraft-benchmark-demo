@@ -5427,6 +5427,75 @@
             }
           ]
         }
+      },
+      "minimax-m2.7": {
+        "status": "failed",
+        "runId": "minimax-m2.7-v8.4-full-20260902-173827",
+        "stage": "judge-video-and-image",
+        "score": null,
+        "traceCount": 0,
+        "playPath": null,
+        "previewPath": null,
+        "unmet": null,
+        "issue": "生成、Trace、select-traces、optimize 和 15 条最终 Replay 均成功；Judge 已完成 15 段视频首轮判断并进入失败需求复核，但 countdown-expiry-transition 的目标帧证据最小仍为 2,277,366 bytes，超过 maxTotalBytes=2,250,000，导致 Judge 中止且未生成 final-vlm-report.json，因此该组合为失败终态且不可试玩。",
+        "timing": {
+          "runId": "minimax-m2.7-v8.4-full-20260902-173827",
+          "status": "failed",
+          "failedStage": "judge-video-and-image",
+          "startedAt": "2026-09-02T21:46:58+08:00",
+          "finishedAt": "2026-09-02T22:59:54+08:00",
+          "totalDurationMs": 4376186,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-02T21:46:58+08:00",
+              "finishedAt": "2026-09-02T21:50:43+08:00",
+              "durationMs": 225564,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-02T21:50:43+08:00",
+              "finishedAt": "2026-09-02T22:07:59+08:00",
+              "durationMs": 1035545,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-02T22:07:59+08:00",
+              "finishedAt": "2026-09-02T22:47:26+08:00",
+              "durationMs": 2367367,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-02T22:47:26+08:00",
+              "finishedAt": "2026-09-02T22:47:26+08:00",
+              "durationMs": 205,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-02T22:47:26+08:00",
+              "finishedAt": "2026-09-02T22:49:18+08:00",
+              "durationMs": 111739,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-02T22:49:18+08:00",
+              "finishedAt": "2026-09-02T22:59:54+08:00",
+              "durationMs": 635723,
+              "status": "failed",
+              "exitCode": 1
+            }
+          ]
+        }
       }
     },
     "13-steps-to-escape": {
