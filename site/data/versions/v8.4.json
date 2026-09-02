@@ -5173,6 +5173,132 @@
             }
           ]
         }
+      },
+      "gpt-5.4": {
+        "status": "completed",
+        "runId": "gpt-5.4-v8.4-full-20260902-173827",
+        "score": {
+          "display": "78.95 (+15.79)",
+          "base": 78.95,
+          "passed": 30,
+          "denominator": 38,
+          "dynamic": 6,
+          "dynamicAddition": 15.79,
+          "potential": 94.74
+        },
+        "visualQuality": {
+          "score": 92.6,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.1,
+          "renderingStyleAverage": 44.5,
+          "videosScored": 10
+        },
+        "traceCount": 10,
+        "playPath": "games-v8.4/highway-404/gpt-5.4/index.html",
+        "previewPath": "previews-v8.4/highway-404/gpt-5.4.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-024",
+              "zh": "游戏处于进行画面，车辆驶入“501”标志对应的道路缺口路段。 → 该车道前方显示连续的黑色缺失路面块，标志下方保留“501”文字，缺口占据车辆可行驶的车道宽度。"
+            },
+            {
+              "id": "target-025",
+              "zh": "游戏处于进行画面，车辆驶入“503”标志对应的道路缺口路段。 → 该车道前方显示连续的黑色缺失路面块，标志下方保留“503”文字，缺口占据车辆可行驶的车道宽度。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-007",
+              "zh": "游戏处于进行画面，车辆正在由玩家上方向输入移动，玩家松开当前唯一持续的上方向驾驶输入。 → 车辆在接下来0.5秒内停止向屏幕上方位移。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-009",
+              "zh": "移动端进行画面中，车辆未死亡且未处于自动换道状态，玩家在屏幕上从触点向左拖动。 → 车辆在可见公路范围内向屏幕左侧移动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-010",
+              "zh": "移动端进行画面中，车辆未死亡且未处于自动换道状态，玩家在屏幕上从触点向右拖动。 → 车辆在可见公路范围内向屏幕右侧移动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-011",
+              "zh": "移动端进行画面中，车辆未死亡且未处于自动换道状态，玩家在屏幕上从触点向上拖动。 → 车辆在可见公路范围内向屏幕上方移动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-012",
+              "zh": "移动端进行画面中，车辆未死亡且未处于自动换道状态，玩家在屏幕上从触点向下拖动。 → 车辆在可见公路范围内向屏幕下方移动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-013",
+              "zh": "移动端进行画面中，车辆正在由触控输入移动，玩家结束当前触控。 → 车辆在接下来0.5秒内停止由触控输入产生的移动。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.4-v8.4-full-20260902-173827",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-02T22:02:24+08:00",
+          "finishedAt": "2026-09-02T22:42:57+08:00",
+          "totalDurationMs": 2432647,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-02T22:02:24+08:00",
+              "finishedAt": "2026-09-02T22:04:36+08:00",
+              "durationMs": 131842,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-02T22:04:36+08:00",
+              "finishedAt": "2026-09-02T22:17:41+08:00",
+              "durationMs": 785216,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-02T22:17:41+08:00",
+              "finishedAt": "2026-09-02T22:34:15+08:00",
+              "durationMs": 993645,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-02T22:34:15+08:00",
+              "finishedAt": "2026-09-02T22:34:15+08:00",
+              "durationMs": 191,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-02T22:34:15+08:00",
+              "finishedAt": "2026-09-02T22:36:51+08:00",
+              "durationMs": 155261,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-02T22:36:51+08:00",
+              "finishedAt": "2026-09-02T22:42:57+08:00",
+              "durationMs": 366451,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "kuro-neko-market": {
