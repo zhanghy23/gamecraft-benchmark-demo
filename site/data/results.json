@@ -51,12 +51,12 @@
       "description": "20 个参考游戏均由 GPT-5.5 基于完整源码生成中文整体需求描述，并一次性生成五类可独立重放的“触发条件 → 视觉效果”需求；GPT-5.5、Seed-2.0-Pro、MiniMax-M2.7 与 GPT-5.4 复用同一份固定需求并行评测，逐游戏发布功能分、画面分及从生成开始到评测终态的总耗时与阶段耗时。",
       "status": "partial",
       "updatedAt": "2026-09-02",
-      "harnessRevision": "v8.4-a2218d5",
+      "harnessRevision": "v8.4-598c6e4",
       "judgeModel": "Seed-2.0-Pro（视频主判 + 图片复核）",
-      "dataRevision": "v8.4-four-models-initial",
-      "resultCount": 0,
+      "dataRevision": "v8.4-four-models-20260902-173827",
+      "resultCount": 1,
       "completedCount": 0,
-      "failedCount": 0,
+      "failedCount": 1,
       "dataPath": "data/versions/v8.4.json"
     }
   ]
