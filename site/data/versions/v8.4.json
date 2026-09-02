@@ -5299,7 +5299,140 @@
         }
       }
     },
-    "cannonbolf": {},
+    "cannonbolf": {
+      "seed-2.0-pro": {
+        "status": "completed",
+        "runId": "seed-2.0-pro-v8.4-full-20260902-173827",
+        "score": {
+          "display": "58.33 (+8.33)",
+          "base": 58.33,
+          "passed": 14,
+          "denominator": 24,
+          "dynamic": 2,
+          "dynamicAddition": 8.33,
+          "potential": 66.67
+        },
+        "visualQuality": {
+          "score": 84.29,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 45.29,
+          "renderingStyleAverage": 39,
+          "videosScored": 7
+        },
+        "traceCount": 7,
+        "playPath": "games-v8.4/cannonbolf/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.4/cannonbolf/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-003",
+              "zh": "炮弹正在飞行或滚动且右下角弹药仍大于 0 时点击鼠标左键 → 炮弹当前位置变成新的大炮位置，画面重新出现可瞄准的大炮、绿色预测弹道线和绿色预览球。"
+            },
+            {
+              "id": "target-005",
+              "zh": "炮弹运动过程中与关卡实体地形表面相撞 → 炮弹停留在地形外侧并改变运动方向，之后继续弹跳、滚动或沿表面滑动；炮弹模型在运动中旋转。"
+            },
+            {
+              "id": "target-008",
+              "zh": "进入包含未摧毁城堡的关卡瞄准画面 → 城堡以低多边形城堡模型显示在关卡中，并在原地持续旋转和上下浮动。"
+            },
+            {
+              "id": "target-012",
+              "zh": "进入第八关可瞄准画面 → 场景中显示坡道或倾斜引导地形，底部显示提示“USE THE RAMP”。"
+            },
+            {
+              "id": "target-019",
+              "zh": "连续完成关卡推进到最后一关 → 右下角关卡计数显示“9/9 ⛳”，底部提示显示“RIDE THE CURVE”，场景中出现弯曲通道式地形和四座城堡目标。"
+            },
+            {
+              "id": "target-020",
+              "zh": "游戏载入后尚未点击画布 → 画面显示标题“CANNONBOLF”，底部显示“CLICK TO START”，场景中可见大炮模型。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-014",
+              "zh": "炮弹撞到关卡中的斜面地形 → 碰撞后 1 秒内，炮弹显示在斜面模型外侧并沿碰撞后的路径继续移动，没有穿过斜面模型。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-015",
+              "zh": "炮弹撞到关卡中的弯曲地形 → 碰撞后 1 秒内，炮弹显示在弯曲通道表面外侧并沿通道方向继续移动，没有穿过弯曲通道模型。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-021",
+              "zh": "标题画面显示“CLICK TO START”时点击画布 → 标题文字消失，游戏进入关卡瞄准画面，出现大炮、绿色预测弹道线、右下角 HUD 和底部关卡提示。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-018",
+              "zh": "失败结算画面“SORRY, TRY AGAIN!”显示后不进行输入 → 游戏自动回到同一关的瞄准画面，右下角关卡计数保持为失败前的关卡，弹药恢复为该关初始数量。",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "seed-2.0-pro-v8.4-full-20260902-173827",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-02T20:41:41+08:00",
+          "finishedAt": "2026-09-02T22:12:13+08:00",
+          "totalDurationMs": 5431615,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-02T20:41:41+08:00",
+              "finishedAt": "2026-09-02T20:43:57+08:00",
+              "durationMs": 135318,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-02T20:43:57+08:00",
+              "finishedAt": "2026-09-02T20:53:58+08:00",
+              "durationMs": 600934,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-02T20:53:58+08:00",
+              "finishedAt": "2026-09-02T22:00:18+08:00",
+              "durationMs": 3980023,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-02T22:00:18+08:00",
+              "finishedAt": "2026-09-02T22:00:18+08:00",
+              "durationMs": 586,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-02T22:00:18+08:00",
+              "finishedAt": "2026-09-02T22:01:04+08:00",
+              "durationMs": 45692,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-02T22:01:04+08:00",
+              "finishedAt": "2026-09-02T22:12:13+08:00",
+              "durationMs": 669019,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      }
+    },
     "market-street-tycoon": {},
     "necrotic-commander": {},
     "space-huggers": {},
