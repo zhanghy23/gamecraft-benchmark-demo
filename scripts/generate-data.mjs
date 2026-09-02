@@ -894,6 +894,23 @@ function normalizeWebRoot(value, label) {
   return normalized;
 }
 
+function validatePlayableBuild(gameId, modelId) {
+  const indexPath = path.join(repoRoot, 'site', playRoot, gameId, modelId, 'index.html');
+  if (!fs.existsSync(indexPath)) {
+    throw new Error(`${gameId}/${modelId}: missing playable build ${indexPath}`);
+  }
+  const html = fs.readFileSync(indexPath, 'utf8');
+  const rootRelativeReferences = [
+    ...html.matchAll(/\b(?:src|href)\s*=\s*["']\/(?!\/)[^"']*["']/gi),
+  ].map((match) => match[0]);
+  if (rootRelativeReferences.length > 0) {
+    throw new Error(
+      `${gameId}/${modelId}: playable build uses root-relative resources (${rootRelativeReferences.join(', ')}); `
+      + 'GitHub Pages builds must use relative paths such as ./assets/...',
+    );
+  }
+}
+
 const translationOverrides = translationsFile ? readJson(translationsFile) : {};
 const targetCountsByGame = {};
 const summariesByGame = {};
@@ -1017,6 +1034,8 @@ for (const game of games) {
         `${game.id}/${model.id}: expected ${expectedUnmet} total unmet targets, found ${vlmUnmet.length + replayTraceUnmet.length}`,
       );
     }
+
+    validatePlayableBuild(game.id, model.id);
 
     results[game.id][model.id] = {
       status: 'completed',
