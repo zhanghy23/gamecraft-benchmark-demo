@@ -4390,6 +4390,112 @@
             }
           ]
         }
+      },
+      "minimax-m2.7": {
+        "status": "completed",
+        "runId": "minimax-m2.7-v8.4-full-20260902-173827",
+        "score": {
+          "display": "90.91 (+2.27)",
+          "base": 90.91,
+          "passed": 40,
+          "denominator": 44,
+          "dynamic": 1,
+          "dynamicAddition": 2.27,
+          "potential": 93.18
+        },
+        "visualQuality": {
+          "score": 91.38,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48,
+          "renderingStyleAverage": 43.38,
+          "videosScored": 13
+        },
+        "traceCount": 13,
+        "playPath": "games-v8.4/radius-raid/minimax-m2.7/index.html",
+        "previewPath": "previews-v8.4/radius-raid/minimax-m2.7.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-017",
+              "zh": "拾取“SLOW ENEMIES”后场上存在可见敌人。 → “SLOW ENEMIES”右侧出现白色持续条，画面覆盖淡蓝色滤层，敌人圆形身体外叠加蓝色半透明罩层；在1秒观察窗内，受罩层敌人的位移不超过未拾取前同类敌人1秒位移的三分之一，允许1个敌人半径的误差。"
+            },
+            {
+              "id": "target-033",
+              "zh": "彩虹高速穿场敌人进入场内。 → 在1秒观察窗内，该敌人的圆形身体呈现至少两种不同色相，并沿一个固定方向穿过可玩区域，路径为水平、垂直或对角线之一。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-034",
+              "zh": "等级提升到引入新敌人种类的阶段后继续战斗。 → 场上出现此前等级未出现过的敌人颜色、尺寸或行为类型，迷你地图上同步出现新的敌人色点。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-020",
+              "zh": "拾取“PIERCE SHOT”后，让一条红色子弹路径穿过同一直线上的两个可见敌人。 → “PIERCE SHOT”右侧出现红色持续条；红色子弹穿过第一个敌人后继续前进，两个敌人先后出现命中闪光或爆炸。",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "minimax-m2.7-v8.4-full-20260902-173827",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-02T17:42:27+08:00",
+          "finishedAt": "2026-09-02T19:37:21+08:00",
+          "totalDurationMs": 6893928,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-02T17:42:27+08:00",
+              "finishedAt": "2026-09-02T17:46:29+08:00",
+              "durationMs": 242448,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-02T17:46:29+08:00",
+              "finishedAt": "2026-09-02T18:03:54+08:00",
+              "durationMs": 1044652,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-02T18:03:54+08:00",
+              "finishedAt": "2026-09-02T19:21:05+08:00",
+              "durationMs": 4630834,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-02T19:21:05+08:00",
+              "finishedAt": "2026-09-02T19:21:05+08:00",
+              "durationMs": 301,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-02T19:21:05+08:00",
+              "finishedAt": "2026-09-02T19:26:56+08:00",
+              "durationMs": 351300,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-02T19:26:56+08:00",
+              "finishedAt": "2026-09-02T19:37:21+08:00",
+              "durationMs": 624349,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "elematter": {
