@@ -4392,7 +4392,113 @@
         }
       }
     },
-    "elematter": {},
+    "elematter": {
+      "seed-2.0-pro": {
+        "status": "completed",
+        "runId": "seed-2.0-pro-v8.4-full-20260902-173827",
+        "score": {
+          "display": "90.00 (+2.50)",
+          "base": 90,
+          "passed": 36,
+          "denominator": 40,
+          "dynamic": 1,
+          "dynamicAddition": 2.5,
+          "potential": 92.5
+        },
+        "visualQuality": {
+          "score": 91.23,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48,
+          "renderingStyleAverage": 43.23,
+          "videosScored": 13
+        },
+        "traceCount": 13,
+        "playPath": "games-v8.4/elematter/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.4/elematter/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-014",
+              "zh": "一个敌人沿道路到达出口且玩家仍有生命 → 该敌人从出口处消失，底部生命显示从原数值变为少 1 的“当前生命 / 13”。"
+            },
+            {
+              "id": "target-039",
+              "zh": "玩家生命被敌人到达出口扣至 0 → 底部生命显示为“0 / 13”，随后浏览器弹窗显示“You lost.”。"
+            },
+            {
+              "id": "target-040",
+              "zh": "第 20 波及此前所有敌人都被消灭且玩家生命未归零 → 随后浏览器弹窗显示以“You won! Based on lives and elemental fragments left, your score is:”开头的胜利信息，信息中包含最终分数。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-015",
+              "zh": "游戏正在运行且还有未派出的下一波，玩家不点击“Send Next”并继续等待 → 以等待开始时“Send Next +”后的整数为基线，在继续等待且游戏保持运行期间，该奖励读数显示至少一次低于基线 1 或以上的整数；继续等待到奖励耗尽时，该奖励读数显示为 0。",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "seed-2.0-pro-v8.4-full-20260902-173827",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-02T18:57:10+08:00",
+          "finishedAt": "2026-09-02T20:12:41+08:00",
+          "totalDurationMs": 4531064,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-02T18:57:10+08:00",
+              "finishedAt": "2026-09-02T18:59:52+08:00",
+              "durationMs": 162260,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-02T18:59:52+08:00",
+              "finishedAt": "2026-09-02T19:15:37+08:00",
+              "durationMs": 945370,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-02T19:15:37+08:00",
+              "finishedAt": "2026-09-02T20:02:03+08:00",
+              "durationMs": 2785562,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-02T20:02:03+08:00",
+              "finishedAt": "2026-09-02T20:02:03+08:00",
+              "durationMs": 217,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-02T20:02:03+08:00",
+              "finishedAt": "2026-09-02T20:04:06+08:00",
+              "durationMs": 122405,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-02T20:04:06+08:00",
+              "finishedAt": "2026-09-02T20:12:41+08:00",
+              "durationMs": 515207,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      }
+    },
     "highway-404": {
       "seed-2.0-pro": {
         "status": "completed",
