@@ -4603,6 +4603,43 @@
             }
           ]
         }
+      },
+      "minimax-m2.7": {
+        "status": "failed",
+        "runId": "minimax-m2.7-v8.4-full-20260902-173827",
+        "stage": "trace",
+        "score": null,
+        "traceCount": 0,
+        "playPath": null,
+        "previewPath": null,
+        "unmet": null,
+        "issue": "游戏源码生成和确定性检查均成功；Trace Phase 1 已生成全部 40 条 trace，但 Probe Plan 第 1 批连续 3 次给出在 src/main.ts 中出现多次、无法唯一定位的 anchor.exactSource，严格探针契约校验失败，因此未进入 select-traces、Replay 和 Judge，结果不可试玩。",
+        "timing": {
+          "runId": "minimax-m2.7-v8.4-full-20260902-173827",
+          "status": "failed",
+          "failedStage": "trace",
+          "startedAt": "2026-09-02T21:31:20+08:00",
+          "finishedAt": "2026-09-02T21:46:58+08:00",
+          "totalDurationMs": 937901,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-02T21:31:20+08:00",
+              "finishedAt": "2026-09-02T21:34:54+08:00",
+              "durationMs": 214337,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-02T21:34:54+08:00",
+              "finishedAt": "2026-09-02T21:46:58+08:00",
+              "durationMs": 723540,
+              "status": "failed",
+              "exitCode": 1
+            }
+          ]
+        }
       }
     },
     "highway-404": {
