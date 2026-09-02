@@ -4362,6 +4362,137 @@
   ],
   "results": {
     "radius-raid": {
+      "gpt-5.5": {
+        "status": "completed",
+        "runId": "gpt-5.5-v8.4-full-20260902-173827",
+        "score": {
+          "display": "79.55 (+15.91)",
+          "base": 79.55,
+          "passed": 35,
+          "denominator": 44,
+          "dynamic": 7,
+          "dynamicAddition": 15.91,
+          "potential": 95.45
+        },
+        "visualQuality": {
+          "score": 90.47,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.13,
+          "renderingStyleAverage": 43.33,
+          "videosScored": 15
+        },
+        "traceCount": 15,
+        "playPath": "games-v8.4/radius-raid/gpt-5.5/index.html",
+        "previewPath": "previews-v8.4/radius-raid/gpt-5.5.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-020",
+              "zh": "拾取“PIERCE SHOT”后，让一条红色子弹路径穿过同一直线上的两个可见敌人。 → “PIERCE SHOT”右侧出现红色持续条；红色子弹穿过第一个敌人后继续前进，两个敌人先后出现命中闪光或爆炸。"
+            },
+            {
+              "id": "target-022",
+              "zh": "一个红色生成型敌人在战斗中存活到其生成时刻。 → 该红色大型敌人附近出现一个同色小敌人，小敌人从生成点向场内移动。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-019",
+              "zh": "拾取“TRIPLE SHOT”后按住开火。 → “TRIPLE SHOT”右侧出现蓝色持续条；每次开火从飞船前端同时出现三条分叉弹道，中间一条朝鼠标方向，两侧两条向外张开。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-021",
+              "zh": "一个大型蓝色分裂敌人被击毁。 → 大型敌人爆炸消失后，在其原位置上下左右附近出现四个同色小圆敌人。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-040",
+              "zh": "玩家生命条耗尽。 → 飞船位置出现大型白色爆炸和粒子，画面逐渐覆盖暗色遮罩；随后进入“GAME OVER”界面。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-041",
+              "zh": "进入“GAME OVER”界面。 → 中央显示红色“GAME OVER”，下方列出“SCORE”“LEVEL”“KILLS”“BULLETS”“POWERUPS”“TIME”的本局数值，并显示“PLAY AGAIN”和“MENU”按钮。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-042",
+              "zh": "在“GAME OVER”界面点击“PLAY AGAIN”。 → 结算界面消失并开始新一局，分数回到“000000”，飞船重新出现在星域中央，右下角再次显示等级“01”。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-043",
+              "zh": "在暂停界面点击“MENU”且确认返回菜单。 → 暂停覆盖界面消失并返回主菜单，中央重新显示“RADIUS RAID”标题以及“PLAY”“STATS”“CREDITS”按钮。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-044",
+              "zh": "在“GAME OVER”界面点击“MENU”。 → “GAME OVER”结算界面消失并返回主菜单，中央重新显示“RADIUS RAID”标题以及“PLAY”“STATS”“CREDITS”按钮。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.5-v8.4-full-20260902-173827",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-02T17:42:27+08:00",
+          "finishedAt": "2026-09-02T22:06:40+08:00",
+          "totalDurationMs": 15853222,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-02T17:42:27+08:00",
+              "finishedAt": "2026-09-02T17:45:32+08:00",
+              "durationMs": 185772,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-02T17:45:32+08:00",
+              "finishedAt": "2026-09-02T18:07:47+08:00",
+              "durationMs": 1334275,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-02T18:07:47+08:00",
+              "finishedAt": "2026-09-02T21:47:29+08:00",
+              "durationMs": 13182769,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-02T21:47:29+08:00",
+              "finishedAt": "2026-09-02T21:47:30+08:00",
+              "durationMs": 405,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-02T21:47:30+08:00",
+              "finishedAt": "2026-09-02T21:55:22+08:00",
+              "durationMs": 472233,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-02T21:55:22+08:00",
+              "finishedAt": "2026-09-02T22:06:40+08:00",
+              "durationMs": 677726,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
       "seed-2.0-pro": {
         "status": "failed",
         "runId": "seed-2.0-pro-v8.4-full-20260902-173827",
