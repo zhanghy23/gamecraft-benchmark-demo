@@ -4886,6 +4886,103 @@
       }
     },
     "highway-404": {
+      "gpt-5.5": {
+        "status": "completed",
+        "runId": "gpt-5.5-v8.4-full-20260902-173827",
+        "score": {
+          "display": "94.74 (+2.63)",
+          "base": 94.74,
+          "passed": 36,
+          "denominator": 38,
+          "dynamic": 1,
+          "dynamicAddition": 2.63,
+          "potential": 97.37
+        },
+        "visualQuality": {
+          "score": 93,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.41,
+          "renderingStyleAverage": 44.59,
+          "videosScored": 17
+        },
+        "traceCount": 17,
+        "playPath": "games-v8.4/highway-404/gpt-5.5/index.html",
+        "previewPath": "previews-v8.4/highway-404/gpt-5.5.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-012",
+              "zh": "移动端进行画面中，车辆未死亡且未处于自动换道状态，玩家在屏幕上从触点向下拖动。 → 车辆在可见公路范围内向屏幕下方移动。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-029",
+              "zh": "一局游戏进入进行画面后，玩家不进行驾驶输入且车辆没有死亡。 → 在接下来的1秒内，公路纹理、状态码标志和路边图案相对车辆向屏幕下方移动；HUD“time”显示的秒数减少1。",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.5-v8.4-full-20260902-173827",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-02T22:06:40+08:00",
+          "finishedAt": "2026-09-02T22:44:25+08:00",
+          "totalDurationMs": 2265433,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-02T22:06:40+08:00",
+              "finishedAt": "2026-09-02T22:09:17+08:00",
+              "durationMs": 156825,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-02T22:09:17+08:00",
+              "finishedAt": "2026-09-02T22:21:48+08:00",
+              "durationMs": 751260,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-02T22:21:48+08:00",
+              "finishedAt": "2026-09-02T22:32:34+08:00",
+              "durationMs": 646359,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-02T22:32:34+08:00",
+              "finishedAt": "2026-09-02T22:32:35+08:00",
+              "durationMs": 180,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-02T22:32:35+08:00",
+              "finishedAt": "2026-09-02T22:36:17+08:00",
+              "durationMs": 222595,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-02T22:36:17+08:00",
+              "finishedAt": "2026-09-02T22:44:25+08:00",
+              "durationMs": 488172,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
       "seed-2.0-pro": {
         "status": "completed",
         "runId": "seed-2.0-pro-v8.4-full-20260902-173827",
