@@ -56,6 +56,12 @@ const translationsFile = translationsFileOption
     ? translationsFileOption
     : path.join(repoRoot, translationsFileOption))
   : null;
+const timingsRootOption = option('--timings-root', '');
+const timingsRoot = timingsRootOption
+  ? (path.isAbsolute(timingsRootOption)
+    ? timingsRootOption
+    : path.join(repoRoot, timingsRootOption))
+  : null;
 const playRoot = normalizeWebRoot(option('--play-root', 'games'), '--play-root');
 const previewRoot = normalizeWebRoot(option('--preview-root', 'previews'), '--preview-root');
 
@@ -847,6 +853,39 @@ function readJson(file) {
   return JSON.parse(fs.readFileSync(file, 'utf8'));
 }
 
+function readTiming(gameId, modelId) {
+  if (!timingsRoot) return null;
+  const file = path.join(timingsRoot, gameId, `${modelId}.json`);
+  if (!fs.existsSync(file)) return null;
+  const timing = readJson(file);
+  if (!Number.isFinite(timing.totalDurationMs) || timing.totalDurationMs < 0) {
+    throw new Error(`${gameId}/${modelId}: invalid totalDurationMs in ${file}`);
+  }
+  const stages = Array.isArray(timing.stages) ? timing.stages.map((stage) => {
+    if (!stage || typeof stage.stage !== 'string'
+      || !Number.isFinite(stage.durationMs) || stage.durationMs < 0) {
+      throw new Error(`${gameId}/${modelId}: invalid stage timing in ${file}`);
+    }
+    return {
+      stage: stage.stage,
+      startedAt: stage.startedAt ?? null,
+      finishedAt: stage.finishedAt ?? null,
+      durationMs: stage.durationMs,
+      status: stage.status ?? null,
+      exitCode: Number.isFinite(stage.exitCode) ? stage.exitCode : null,
+    };
+  }) : [];
+  return {
+    runId: timing.runId ?? null,
+    status: timing.status ?? null,
+    failedStage: timing.failedStage ?? null,
+    startedAt: timing.startedAt ?? null,
+    finishedAt: timing.finishedAt ?? null,
+    totalDurationMs: timing.totalDurationMs,
+    stages,
+  };
+}
+
 function normalizeWebRoot(value, label) {
   const normalized = String(value || '').replace(/^\/+|\/+$/g, '');
   if (!normalized || normalized.split('/').some((part) => part === '..' || part === '.')) {
@@ -921,6 +960,7 @@ for (const game of games) {
   results[game.id] = {};
   if (!includedGameIds.has(game.id)) continue;
   for (const model of models) {
+    const timing = readTiming(game.id, model.id);
     const failedRun = configuredFailedRuns[`${game.id}|${model.id}`];
     if (failedRun) {
       results[game.id][model.id] = {
@@ -933,6 +973,7 @@ for (const game of games) {
         previewPath: null,
         unmet: null,
         issue: failedRun.issue,
+        timing,
       };
       continue;
     }
@@ -979,6 +1020,7 @@ for (const game of games) {
 
     results[game.id][model.id] = {
       status: 'completed',
+      runId: timing?.runId ?? null,
       score: {
         display: report.score.display,
         base: report.score.base,
@@ -1003,6 +1045,7 @@ for (const game of games) {
         replayTrace: replayTraceUnmet,
       },
       issue: issueNotes[`${game.id}|${model.id}`] ?? null,
+      timing,
     };
   }
 }

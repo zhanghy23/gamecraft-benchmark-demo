@@ -49,6 +49,40 @@ function closePlayer() {
   dialog.close();
 }
 
+function formatDuration(durationMs) {
+  if (!Number.isFinite(durationMs) || durationMs < 0) return '—';
+  const totalSeconds = Math.round(durationMs / 1000);
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+  if (hours) return `${hours} 小时 ${minutes} 分`;
+  if (minutes) return `${minutes} 分 ${seconds} 秒`;
+  return `${seconds} 秒`;
+}
+
+const timingStageLabels = {
+  'generate-game': '生成游戏',
+  trace: 'Trace / 探针',
+  'select-traces': '筛选与修复',
+  'optimize-traces': 'Trace 优化',
+  replay: 'Replay',
+  'judge-video-and-image': '视频 / 图片评审',
+};
+
+function timingBlock(timing) {
+  if (!timing) return '';
+  const stageRows = (timing.stages ?? []).map((stage) => `
+    <span>
+      <em>${escapeHtml(timingStageLabels[stage.stage] ?? stage.stage)}</em>
+      <strong>${escapeHtml(formatDuration(stage.durationMs))}</strong>
+    </span>`).join('');
+  return `
+    <details class="timing-block">
+      <summary><span>生成至评测结束</span><strong>${escapeHtml(formatDuration(timing.totalDurationMs))}</strong></summary>
+      ${stageRows ? `<div class="timing-stages">${stageRows}</div>` : ''}
+    </details>`;
+}
+
 function resultCard(result, game, model) {
   if (!result) {
     return `
@@ -71,6 +105,7 @@ function resultCard(result, game, model) {
           <strong>未生成最终评分</strong>
           <span>${escapeHtml(result.runId)}</span>
         </div>
+        ${timingBlock(result.timing)}
         <p class="issue-note"><strong>失败原因：</strong>${escapeHtml(result.issue)}</p>
       </article>`;
   }
@@ -109,6 +144,7 @@ function resultCard(result, game, model) {
         <span>潜在总分 <strong>${number.format(result.score.potential)}</strong></span>
         ${visualBreakdown}
       </div>
+      ${timingBlock(result.timing)}
       ${note}
     </article>`;
 }
