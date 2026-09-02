@@ -54,9 +54,9 @@
       "harnessRevision": "v8.4-598c6e4",
       "judgeModel": "Seed-2.0-Pro（视频主判 + 图片复核）",
       "dataRevision": "v8.4-four-models-20260902-173827",
-      "resultCount": 4,
+      "resultCount": 5,
       "completedCount": 2,
-      "failedCount": 2,
+      "failedCount": 3,
       "dataPath": "data/versions/v8.4.json"
     }
   ]
