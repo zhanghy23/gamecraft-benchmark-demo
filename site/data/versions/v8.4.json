@@ -4703,7 +4703,37 @@
         }
       }
     },
-    "tiny-yurts": {},
+    "tiny-yurts": {
+      "seed-2.0-pro": {
+        "status": "failed",
+        "runId": "seed-2.0-pro-v8.4-full-20260902-173827",
+        "stage": "generate-game",
+        "score": null,
+        "traceCount": 0,
+        "playPath": null,
+        "previewPath": null,
+        "unmet": null,
+        "issue": "generate-game 的非流式请求返回 HTTP 504；回退后的 3 次流式响应均缺少 [DONE]/finish_reason。第三次正文按策略进入严格校验后仍未包含有效 JSON 项目，因此未生成可试玩源码。",
+        "timing": {
+          "runId": "seed-2.0-pro-v8.4-full-20260902-173827",
+          "status": "failed",
+          "failedStage": "generate-game",
+          "startedAt": "2026-09-02T20:27:11+08:00",
+          "finishedAt": "2026-09-02T20:34:26+08:00",
+          "totalDurationMs": 434511,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-02T20:27:11+08:00",
+              "finishedAt": "2026-09-02T20:34:26+08:00",
+              "durationMs": 434491,
+              "status": "failed",
+              "exitCode": 1
+            }
+          ]
+        }
+      }
+    },
     "casual-crusade": {},
     "cannonbolf": {},
     "market-street-tycoon": {},
