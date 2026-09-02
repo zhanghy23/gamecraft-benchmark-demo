@@ -4745,6 +4745,154 @@
             }
           ]
         }
+      },
+      "minimax-m2.7": {
+        "status": "completed",
+        "runId": "minimax-m2.7-v8.4-full-20260902-173827",
+        "score": {
+          "display": "65.79 (+18.42)",
+          "base": 65.79,
+          "passed": 25,
+          "denominator": 38,
+          "dynamic": 7,
+          "dynamicAddition": 18.42,
+          "potential": 84.21
+        },
+        "visualQuality": {
+          "score": 89.77,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.38,
+          "renderingStyleAverage": 42.38,
+          "videosScored": 13
+        },
+        "traceCount": 13,
+        "playPath": "games-v8.4/highway-404/minimax-m2.7/index.html",
+        "previewPath": "previews-v8.4/highway-404/minimax-m2.7.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-014",
+              "zh": "一局游戏刚开始后，车辆存活满1秒且期间没有收集茶壶。 → HUD右上角“score”数值从0变为10，左下角“time”倒计时从“time 6:44”进入“time 6:43”。"
+            },
+            {
+              "id": "target-015",
+              "zh": "游戏处于进行画面，车辆与一个“418”茶壶标志重叠。 → 右下角“teapot”后的数字增加1；“score”数值在当前行驶时间分基础上增加418分。"
+            },
+            {
+              "id": "target-023",
+              "zh": "同一车道中已有由“404”触发的坍塌路面正在延伸，车辆与前方“200”状态码标志重叠。 → 坍塌路面没有越过“200”标志；“200”标志前方显示普通道路图案。"
+            },
+            {
+              "id": "target-031",
+              "zh": "游戏推进到茶壶收集路段，前方茶壶标志进入可见区域。 → 可见区域前方至少显示3个“418”茶壶标志，且这些“418”标志位于不同车道；同一茶壶收集路段还显示黑色缺失路面块或“404”危险标志。"
+            },
+            {
+              "id": "target-032",
+              "zh": "游戏加载完成并停留在标题画面。 → 画面显示像素公路和车辆，并显示“js13kgames 2020”、“collect teapots”、“for extra points”、驾驶提示以及“jerome lecomte”。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-028",
+              "zh": "已开启额外内容的一局中，车辆与“429”状态码标志重叠。 → 屏幕中央显示“5 sec”并逐秒倒数到“1 sec”；以触发前最后1秒路面图案向下移动距离为基线，倒数显示期间中间3秒每秒路面位移为该基线的25%，容差为±10%。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-008",
+              "zh": "游戏处于进行画面，车辆正在由玩家下方向输入移动，玩家松开当前唯一持续的下方向驾驶输入。 → 车辆在接下来0.5秒内停止向屏幕下方位移。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-009",
+              "zh": "移动端进行画面中，车辆未死亡且未处于自动换道状态，玩家在屏幕上从触点向左拖动。 → 车辆在可见公路范围内向屏幕左侧移动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-010",
+              "zh": "移动端进行画面中，车辆未死亡且未处于自动换道状态，玩家在屏幕上从触点向右拖动。 → 车辆在可见公路范围内向屏幕右侧移动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-013",
+              "zh": "移动端进行画面中，车辆正在由触控输入移动，玩家结束当前触控。 → 车辆在接下来0.5秒内停止由触控输入产生的移动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-021",
+              "zh": "游戏处于进行画面，车辆与“301”或“302”状态码标志重叠。 → 车辆自动横向滑到目标车道；滑行期间车身向移动方向倾斜，抵达后停在目标车道。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-022",
+              "zh": "游戏处于进行画面，车辆与“404”状态码标志重叠。 → 该车道上从车辆后方开始出现连续的坍塌路面方块，方块逐帧变化为破损状态并沿道路方向延伸。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-038",
+              "zh": "结束界面中玩家执行重开输入。 → 游戏返回标题画面，重新显示“collect teapots”、“for extra points”和驾驶提示。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": "生成源码存在 shoulderWidth 未定义错误，游戏会在运行时中断；0 分来自源码问题而非评审转码。",
+        "timing": {
+          "runId": "minimax-m2.7-v8.4-full-20260902-173827",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-02T19:37:21+08:00",
+          "finishedAt": "2026-09-02T21:31:20+08:00",
+          "totalDurationMs": 6838784,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-02T19:37:21+08:00",
+              "finishedAt": "2026-09-02T19:40:05+08:00",
+              "durationMs": 164382,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-02T19:40:05+08:00",
+              "finishedAt": "2026-09-02T19:53:19+08:00",
+              "durationMs": 794257,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-02T19:53:19+08:00",
+              "finishedAt": "2026-09-02T21:15:17+08:00",
+              "durationMs": 4917359,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-02T21:15:17+08:00",
+              "finishedAt": "2026-09-02T21:15:17+08:00",
+              "durationMs": 236,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-02T21:15:17+08:00",
+              "finishedAt": "2026-09-02T21:18:28+08:00",
+              "durationMs": 190556,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-02T21:18:28+08:00",
+              "finishedAt": "2026-09-02T21:31:19+08:00",
+              "durationMs": 771954,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "kuro-neko-market": {
