@@ -834,7 +834,7 @@ const failedRuns = {
 
 const configuredFailedRuns = failuresFile
   ? (replaceDefaultFailures ? readJson(failuresFile) : { ...failedRuns, ...readJson(failuresFile) })
-  : failedRuns;
+  : (replaceDefaultFailures ? {} : failedRuns);
 
 const nonVlmCauseLabels = {
   code_issue: '源码错误导致 Trace 不可达',
@@ -857,6 +857,8 @@ function normalizeWebRoot(value, label) {
 
 const translationOverrides = translationsFile ? readJson(translationsFile) : {};
 const targetCountsByGame = {};
+const summariesByGame = {};
+const requirementGroupsByGame = {};
 
 function generatedRequirementText(target) {
   const condition = String(target?.condition ?? '').trim();
@@ -903,6 +905,17 @@ for (const game of games) {
     const zh = translatedRequirement(game.id, target.targetId, target);
     if (!zh) throw new Error(`${game.id}: missing Chinese translation for ${target.targetId}`);
     return { id: target.targetId, zh };
+  });
+  summariesByGame[game.id] = usesTargetOverride
+    && !Array.isArray(sourceTargets)
+    && typeof sourceTargets.description === 'string'
+    && sourceTargets.description.trim()
+    ? sourceTargets.description.trim()
+    : game.summaryZh;
+  requirementGroupsByGame[game.id] = normalizeRequirementGroups({
+    gameId: game.id,
+    sourceTargets,
+    targetList,
   });
 
   results[game.id] = {};
@@ -1001,11 +1014,40 @@ const versionData = {
   models,
   games: games.map((game) => ({
     ...game,
+    summaryZh: summariesByGame[game.id],
     targetCount: targetCountsByGame[game.id],
     requirements: requirementsByGame[game.id],
+    requirementGroups: requirementGroupsByGame[game.id],
   })),
   results,
 };
+
+function normalizeRequirementGroups({ gameId, sourceTargets, targetList }) {
+  if (Array.isArray(sourceTargets) || !Array.isArray(sourceTargets?.targetGroups)) return [];
+  const knownIds = new Set(targetList.map((target) => target.targetId));
+  const groupedIds = [];
+  const groups = sourceTargets.targetGroups.map((group, index) => {
+    if (!group || typeof group !== 'object' || Array.isArray(group)) {
+      throw new Error(`${gameId}: targetGroups[${index}] must be an object`);
+    }
+    const id = String(group.categoryId ?? '').trim();
+    const titleZh = String(group.title ?? '').trim();
+    if (!id || !titleZh || !Array.isArray(group.targetIds)) {
+      throw new Error(`${gameId}: targetGroups[${index}] is incomplete`);
+    }
+    for (const targetId of group.targetIds) {
+      if (!knownIds.has(targetId)) {
+        throw new Error(`${gameId}: target group ${id} references unknown target ${targetId}`);
+      }
+      groupedIds.push(targetId);
+    }
+    return { id, titleZh, targetIds: [...group.targetIds] };
+  });
+  if (groupedIds.length !== targetList.length || new Set(groupedIds).size !== targetList.length) {
+    throw new Error(`${gameId}: target groups must partition every target exactly once`);
+  }
+  return groups;
+}
 
 const dataRoot = outputDataRoot;
 const catalogOutput = path.join(dataRoot, 'results.json');

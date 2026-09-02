@@ -199,22 +199,37 @@ function unmetCard(result) {
 
 function requirementsCard(game) {
   const requirements = game.requirements ?? [];
+  const requirementsById = new Map(requirements.map((item) => [item.id, item]));
+  const requirementItem = (item) => `
+    <li class="requirement-item">
+      <code>${escapeHtml(item.id.replace('target-', '#'))}</code>
+      <span>${escapeHtml(item.zh)}</span>
+    </li>`;
+  const groupedRequirements = (game.requirementGroups ?? []).flatMap((group) => {
+    const items = group.targetIds
+      .map((targetId) => requirementsById.get(targetId))
+      .filter(Boolean);
+    return [
+      `<li class="requirements-group-label">
+        <strong>${escapeHtml(group.titleZh)}</strong>
+        <span>${items.length} 条</span>
+      </li>`,
+      ...items.map(requirementItem),
+    ];
+  }).join('');
+  const requirementItems = groupedRequirements || requirements.map(requirementItem).join('');
   return `
     <section class="game-requirements requirements-cell" style="grid-column: span 2" aria-label="${escapeHtml(game.titleZh)} 完整中文需求">
       <div class="requirements-heading">
         <div>
-          <span>总体需求</span>
+          <span>整体游戏需求</span>
           <strong>${escapeHtml(game.titleZh)}</strong>
         </div>
         <b>${requirements.length} 条细项</b>
       </div>
       <p class="requirements-summary">${escapeHtml(game.summaryZh)}</p>
       <ol class="requirements-list" tabindex="0">
-        ${requirements.map((item) => `
-          <li>
-            <code>${escapeHtml(item.id.replace('target-', '#'))}</code>
-            <span>${escapeHtml(item.zh)}</span>
-          </li>`).join('')}
+        ${requirementItems}
       </ol>
     </section>`;
 }
@@ -290,7 +305,7 @@ function renderVersionInfo(version, data) {
   const statusLabels = {
     complete: '已完成',
     running: '评测中',
-    partial: '部分结果',
+    partial: version.resultCount === 0 ? '需求已发布' : '部分结果',
     archived: '历史版本',
   };
   versionTitle.textContent = version.label;

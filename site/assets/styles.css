@@ -71,6 +71,7 @@ h1 span { color: #93c5fd; }
 .version-title-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
 .version-title-row h3 { margin: 0; font-size: 23px; letter-spacing: -.03em; }
 .version-status { padding: 4px 9px; border-radius: 999px; color: #065f46; background: #d1fae5; font-size: 10px; font-weight: 850; letter-spacing: .05em; }
+.version-status.partial { color: #92400e; background: #fef3c7; }
 .version-status.running { color: #92400e; background: #fef3c7; }
 .version-status.failed { color: #991b1b; background: #fee2e2; }
 .version-summary > p:last-of-type { max-width: 780px; margin: 8px 0 0; color: #475467; font-size: 13px; }
@@ -108,8 +109,12 @@ h1 span { color: #93c5fd; }
 .requirements-heading b { flex: 0 0 auto; padding: 5px 9px; border-radius: 999px; color: #1d4ed8; background: #dbeafe; font-size: 10px; }
 .requirements-summary { margin: 12px 0 14px; color: #475467; font-size: 12px; line-height: 1.65; }
 .requirements-list { max-height: 205px; overflow-y: auto; margin: 0; padding: 0 7px 0 0; list-style: none; scrollbar-color: #93c5fd transparent; scrollbar-width: thin; }
-.requirements-list li { display: grid; grid-template-columns: 40px 1fr; gap: 9px; padding: 9px 0; border-top: 1px solid #dbe5f5; color: #344054; font-size: 11px; line-height: 1.55; }
+.requirements-list .requirement-item { display: grid; grid-template-columns: 40px 1fr; gap: 9px; padding: 9px 0; border-top: 1px solid #dbe5f5; color: #344054; font-size: 11px; line-height: 1.55; }
 .requirements-list code { align-self: start; padding: 2px 4px; border-radius: 5px; color: #1d4ed8; background: #dbeafe; font: 700 10px ui-monospace, SFMono-Regular, Menlo, monospace; text-align: center; }
+.requirements-group-label { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 8px; padding: 8px 10px; border-radius: 9px; color: #172b4d; background: #e9efff; font-size: 11px; }
+.requirements-group-label:first-child { margin-top: 0; }
+.requirements-group-label strong { font-size: 11px; }
+.requirements-group-label span { flex: 0 0 auto; color: #475467; font-size: 10px; font-weight: 750; }
 .subheader-cell { min-height: 48px; padding: 13px 18px; background: #eff4ff; color: #344054; font-size: 12px; font-weight: 750; }
 .sub-corner { position: sticky; left: 0; z-index: 4; color: var(--muted); }
 .unmet-subheader { background: #faf5ff; color: #6d28d9; }

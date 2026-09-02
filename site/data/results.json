@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
   "updatedAt": "2026-09-02",
-  "defaultVersionId": "v8.3",
+  "defaultVersionId": "v8.4",
   "versions": [
     {
       "id": "v8.1-video-transcode",
@@ -44,6 +44,20 @@
       "completedCount": 36,
       "failedCount": 2,
       "dataPath": "data/versions/v8.3.json"
+    },
+    {
+      "id": "v8.4",
+      "label": "v8.4 · 中文整体需求 + 五类需求",
+      "description": "20 个参考游戏均由 GPT-5.5 基于完整源码先生成可直接衔接游戏生成阶段的中文整体需求描述，再在同一会话一次性生成五类可独立重放的“触发条件 → 视觉效果”需求；本版本只发布固定需求，模型评测结果待后续产生。",
+      "status": "partial",
+      "updatedAt": "2026-09-02",
+      "harnessRevision": "v8.4-0f206b9",
+      "judgeModel": "尚未评测（仅发布需求）",
+      "dataRevision": "v84-targets-gpt55-20260902-122500",
+      "resultCount": 0,
+      "completedCount": 0,
+      "failedCount": 0,
+      "dataPath": "data/versions/v8.4.json"
     }
   ]
 }
