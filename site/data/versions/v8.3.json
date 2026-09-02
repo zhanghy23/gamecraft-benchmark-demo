@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "v8.3",
-  "updatedAt": "2026-09-01",
+  "updatedAt": "2026-09-02",
   "models": [
     {
       "id": "gpt-5.5",
@@ -3359,41 +3359,938 @@
       "id": "catapoolt",
       "titleZh": "Catapoolt",
       "typeZh": "弹射生存",
-      "targetCount": 0,
+      "targetCount": 47,
       "summaryZh": "生成一款猫咪弹射生存游戏：玩家拖拽并释放弹弓发射黑猫，在空中调整行动、捕食老鼠补充体力并应对逐渐复杂的目标，使蓄力、轨迹、碰撞、体力变化和得分反馈清楚可见。",
-      "requirements": []
+      "requirements": [
+        {
+          "id": "target-001",
+          "zh": "The initial game scene has completed startup in the default production configuration → The canvas displays a splash screen with the centered title text \"A game by Gleb V.\""
+        },
+        {
+          "id": "target-002",
+          "zh": "The start menu scene has been entered → The canvas displays the stylized title text \"🅒🅐🅣🅐🅟🅞🅞🅛🅣\"."
+        },
+        {
+          "id": "target-003",
+          "zh": "The Play button on the start menu is accepted → The start menu is replaced by the gameplay scene, with the gray bordered play field, the Mice and Wave HUD labels, and the stamina bar visible."
+        },
+        {
+          "id": "target-004",
+          "zh": "The main gameplay field is rendered in the current viewport → The play area is drawn as a light gray rectangle with a dark border, surrounded by a dark gray buffer area outside the bordered play field."
+        },
+        {
+          "id": "target-005",
+          "zh": "The game field HUD is rendered during active gameplay → The top area of the gameplay canvas shows a \"Mice \" label followed by a number and a \"Wave \" label followed by a number."
+        },
+        {
+          "id": "target-006",
+          "zh": "The gameplay stamina HUD is rendered → The word \"Stamina\" is drawn immediately above the horizontal stamina bar."
+        },
+        {
+          "id": "target-007",
+          "zh": "The gameplay stamina HUD is rendered while the cat has stamina remaining → A horizontal stamina bar is visible in the gameplay HUD with a colored filled portion inside its outline."
+        },
+        {
+          "id": "target-008",
+          "zh": "The gameplay stamina HUD is rendered while the cat has no stamina remaining → The stamina bar outline and dark background are visible with no colored filled portion inside the bar."
+        },
+        {
+          "id": "target-009",
+          "zh": "The pause popup is shown during the gameplay scene → A popup overlay appears with the title text \"Pause\" and visible buttons labeled \"Continue\" and \"Menu\"."
+        },
+        {
+          "id": "target-010",
+          "zh": "The Continue button in the gameplay pause popup is accepted → The pause popup overlay disappears and the gameplay screen remains visible."
+        },
+        {
+          "id": "target-011",
+          "zh": "The Menu button in the gameplay pause popup is accepted → The start menu scene replaces gameplay and displays the stylized title text \"🅒🅐🅣🅐🅟🅞🅞🅛🅣\"."
+        },
+        {
+          "id": "target-012",
+          "zh": "An active gameplay update occurs while the pause popup is visible and at least one gameplay object is visible behind it → During the next 1 second of rendered video, the visible gameplay objects behind the overlay keep the same screen positions while the Pause popup remains on top."
+        },
+        {
+          "id": "target-013",
+          "zh": "The cat is dragged during active gameplay → During the drag, the cat is pulled away from its pre-drag position and its head is rendered below its pre-drag vertical alignment."
+        },
+        {
+          "id": "target-014",
+          "zh": "The cat is being dragged far enough from its body to show the slingshot preview → A translucent blue slingshot cone is drawn from the cat toward the drag direction, and a blue predicted trajectory arc is drawn in the play area."
+        },
+        {
+          "id": "target-015",
+          "zh": "A drag-start attempt is made on the cat while the cat is flying → No slingshot preview appears, and the cat continues along its airborne path."
+        },
+        {
+          "id": "target-016",
+          "zh": "A dragged cat is released while it has stamina remaining → The cat launches away from the drag position, and the filled portion of the stamina bar begins moving left from its pre-release right edge."
+        },
+        {
+          "id": "target-017",
+          "zh": "A dragged cat is released with a launch stamina cost that consumes all remaining stamina → The cat launches from the drag position, the stamina bar fill becomes empty, and after the cat next lands a popup overlay with the title text \"Game Over\" is visible."
+        },
+        {
+          "id": "target-018",
+          "zh": "The cat is rendered while elevated above the ground during flight → The cat body is drawn above a separate oval shadow on the ground, with a visible vertical gap between the body and the shadow."
+        },
+        {
+          "id": "target-019",
+          "zh": "The flying cat reaches the ground with remaining bounce capacity and vertical impact speed above the bounce threshold → The cat touches the ground and then rises upward again instead of coming to rest."
+        },
+        {
+          "id": "target-020",
+          "zh": "The flying cat reaches the ground without meeting the bounce condition → The cat is drawn resting at ground level and no longer follows an airborne arc."
+        },
+        {
+          "id": "target-021",
+          "zh": "The flying cat reaches the left boundary of the gameplay bounds → The cat is drawn no farther left than one cat radius from the left edge, and subsequent frames show the cat moving rightward or vertically instead of continuing left."
+        },
+        {
+          "id": "target-022",
+          "zh": "A visible mouse is rendered during gameplay → The mouse is drawn as a triangular body with a segmented tail and an oval shadow beneath it."
+        },
+        {
+          "id": "target-023",
+          "zh": "A visible mouse receives a movement update during active gameplay → The mouse's body is drawn at a different screen position on a subsequent rendered frame while its tail remains attached behind the triangular body."
+        },
+        {
+          "id": "target-024",
+          "zh": "A visible mouse reaches the left boundary of the game field during active gameplay → The mouse remains inside the game field at the left boundary and its subsequent movement is directed rightward into the field."
+        },
+        {
+          "id": "target-025",
+          "zh": "Remaining mice are off-screen to the right while no mouse is visible in the current gameplay viewport → An off-screen mouse indicator is drawn on the right edge of the gameplay view."
+        },
+        {
+          "id": "target-026",
+          "zh": "At least one mouse is visible in the current gameplay viewport → No off-screen mouse indicator is drawn along the edges of the gameplay view."
+        },
+        {
+          "id": "target-027",
+          "zh": "An off-screen mouse indicator is rendered for a mouse outside the current gameplay viewport → The indicator is drawn as a red filled triangle on an edge of the gameplay view."
+        },
+        {
+          "id": "target-028",
+          "zh": "The cat at ground level contacts a mouse while its inflation level is below the maximum → The contacted mouse is no longer drawn, the number following the \"Mice \" label in the HUD increases by 1 on the next rendered gameplay view, and within 1 second the cat's soft body outline extends outside its pre-contact body silhouette on at least one side."
+        },
+        {
+          "id": "target-029",
+          "zh": "The cat at ground level contacts a mouse while its inflation level is below the maximum and the stamina bar is not full → The contacted mouse disappears, and within 1 second the filled portion of the stamina bar extends rightward from its pre-contact right edge."
+        },
+        {
+          "id": "target-030",
+          "zh": "The cat at ground level contacts a mouse while its inflation level is at the maximum → The contacted mouse remains drawn in the play field, and the number following the \"Mice \" label in the HUD does not increase on the next rendered gameplay view."
+        },
+        {
+          "id": "target-031",
+          "zh": "The airborne cat passes through a mouse's position while above the ground-collision height → The mouse remains drawn in the play field, and the number following the \"Mice \" label in the HUD does not increase on the next rendered gameplay view."
+        },
+        {
+          "id": "target-032",
+          "zh": "The final remaining mouse of the current wave is eaten → The final mouse disappears and a popup overlay appears with a visible \"Continue\" button for advancing to the next wave."
+        },
+        {
+          "id": "target-033",
+          "zh": "A new wave is initialized after completing the previous wave → On the next rendered gameplay view, the top HUD displays a \"Wave \" label with the new wave number."
+        },
+        {
+          "id": "target-034",
+          "zh": "The next-wave popup is shown after the wave number has been advanced → A popup overlay is visible with the title text matching \"Next Wave \" followed by the advanced wave number."
+        },
+        {
+          "id": "target-035",
+          "zh": "The Continue button in the next-wave popup is accepted → The next-wave popup overlay disappears and the gameplay screen remains visible."
+        },
+        {
+          "id": "target-036",
+          "zh": "The cat has reached the state where it cannot eat more during gameplay → A red message appears near the top of the canvas reading \"Can't eat more. Need to purge: double-tap on the cat.\""
+        },
+        {
+          "id": "target-037",
+          "zh": "A purge is accepted while the cat is inflated during gameplay → The cat's inflated body outline contracts inward from its pre-purge outline until the cat is drawn with normal uninflated body proportions, a poop object appears in the play field at the cat's purge position, and the cat leaves the ground and follows an airborne arc after the purge."
+        },
+        {
+          "id": "target-038",
+          "zh": "An active uncollected clover is within the current gameplay viewport when the field is rendered → A green clover symbol is drawn at the clover's position in the play field."
+        },
+        {
+          "id": "target-039",
+          "zh": "The cat at ground level contacts an active uncollected clover → The clover disappears from the play field, and the stamina bar fills to the full width of its outlined bar."
+        },
+        {
+          "id": "target-040",
+          "zh": "An active uncollected clover reaches its lifetime limit during gameplay → The clover is no longer drawn at its previous position and a clover is drawn at another position in the play field."
+        },
+        {
+          "id": "target-041",
+          "zh": "A poop object is within the current gameplay viewport when the field is rendered → A brown poop pile is drawn at its position with an oval shadow underneath it and small black fly sprites around it."
+        },
+        {
+          "id": "target-042",
+          "zh": "The cat at ground level contacts a poop while not protected from poop damage → The contacted poop disappears from the play field, and the filled portion of the stamina bar begins moving left from its pre-collision right edge."
+        },
+        {
+          "id": "target-043",
+          "zh": "The cat contacts a poop while protected from poop damage → The poop remains drawn in the play field, and the filled portion of the stamina bar keeps the same visible right edge on the next rendered gameplay view."
+        },
+        {
+          "id": "target-044",
+          "zh": "The airborne cat passes through a poop's position while above the ground-collision height → The poop remains drawn in the play field, and the filled portion of the stamina bar keeps the same visible right edge on the next rendered gameplay view."
+        },
+        {
+          "id": "target-045",
+          "zh": "The game-over sequence is triggered after a run ends → A popup overlay is visible with the title text \"Game Over\"."
+        },
+        {
+          "id": "target-046",
+          "zh": "The game-over popup is shown after a run ends with a counted mouse total → The popup overlay displays body text matching \"Your score: \" followed by the run's mouse total and then \" mice eaten\"."
+        },
+        {
+          "id": "target-047",
+          "zh": "The Restart button in the game-over popup is accepted → The gameplay scene is re-entered and the screen displays the heading text \"Game Screen\" above the play area."
+        }
+      ]
     },
     {
       "id": "super-castle-game",
       "titleZh": "Super Castle Game",
       "typeZh": "城堡建造解谜",
-      "targetCount": 0,
+      "targetCount": 38,
       "summaryZh": "生成一款中世纪城堡建造解谜游戏：玩家使用键盘、触控或手柄移动并放置不同结构块，在有限空间和规则约束下完成城堡轮廓，支持重开、选关及清晰的合法性与通关反馈。",
-      "requirements": []
+      "requirements": [
+        {
+          "id": "target-001",
+          "zh": "The title screen is rendered during initial game startup → The screen shows an intro-colored title view with a left-side “START” label and a right-side “START” label with “MUSIC OFF” displayed below it."
+        },
+        {
+          "id": "target-002",
+          "zh": "A first mouse press is received while the initial title screen is still waiting to start the game → The display leaves the title screen and transitions to the first gameplay level with the board visible."
+        },
+        {
+          "id": "target-003",
+          "zh": "The first gameplay level is rendered after leaving the title screen → The playfield is visible and the centered instruction text “ARROWS TO MOVE OR TAP ON SCREEN” appears over the level."
+        },
+        {
+          "id": "target-004",
+          "zh": "A non-title gameplay frame is rendered → The canvas background outside the board is filled with the background color, and the board area is drawn as a solid board-colored rectangle behind pieces and grid markings."
+        },
+        {
+          "id": "target-005",
+          "zh": "A rendered level board has more than one column → At least one internal vertical grid line is drawn between board columns."
+        },
+        {
+          "id": "target-006",
+          "zh": "A rendered level board has more than one row → At least one internal horizontal grid line is drawn between board rows."
+        },
+        {
+          "id": "target-007",
+          "zh": "A rendered level contains a void cell → The void cell is drawn as a background-colored hole inside the board grid."
+        },
+        {
+          "id": "target-008",
+          "zh": "A rendered level contains a goal cell → The goal cell is drawn with a hatched target pattern inside its grid cell."
+        },
+        {
+          "id": "target-009",
+          "zh": "A rendered level contains a box piece → The box appears as a box-colored block with a stroked marking on its face."
+        },
+        {
+          "id": "target-010",
+          "zh": "A rendered level contains a cutter piece → The cutter is visible as a red blade-like block occupying its grid cell."
+        },
+        {
+          "id": "target-011",
+          "zh": "A rendered level contains a duckling piece that is not in the connection animation → The duckling appears as a duckling-colored block on the board."
+        },
+        {
+          "id": "target-012",
+          "zh": "A duck is rendered while it is not on a goal and no duck is on a goal in at least one of the current goal-state checks → The duck block is drawn with its normal duck-colored body and no diagonal X mark on its face."
+        },
+        {
+          "id": "target-013",
+          "zh": "A duck is rendered while it is on a goal in both the previous and current goal checks → The duck block is drawn with goal-state coloring and a V-shaped mark on its face."
+        },
+        {
+          "id": "target-014",
+          "zh": "A duck is rendered while it is not on a goal and at least one other duck is on a goal in both goal checks → The duck block is drawn with its normal duck-colored body and a diagonal X mark on its face."
+        },
+        {
+          "id": "target-015",
+          "zh": "A left movement command is accepted during active gameplay while the controlled duck can move into the adjacent board cell to the left → The controlled duck moves from its current board cell into the adjacent board cell on its left."
+        },
+        {
+          "id": "target-016",
+          "zh": "An up movement command is accepted during active gameplay while the controlled duck can move into the adjacent board cell above it → The controlled duck moves from its current board cell into the adjacent board cell above it."
+        },
+        {
+          "id": "target-017",
+          "zh": "A right movement command is accepted during active gameplay while the controlled duck can move into the adjacent board cell to the right → The controlled duck moves from its current board cell into the adjacent board cell on its right."
+        },
+        {
+          "id": "target-018",
+          "zh": "A down movement command is accepted during active gameplay while the controlled duck can move into the adjacent board cell below it → The controlled duck moves from its current board cell into the adjacent board cell below it."
+        },
+        {
+          "id": "target-019",
+          "zh": "A pointer drag with a leftward board displacement beyond the pointer dead zone is accepted during active gameplay while the controlled duck can move into the adjacent board cell to the left → The controlled duck moves from its current board cell into the adjacent board cell on its left."
+        },
+        {
+          "id": "target-020",
+          "zh": "A simultaneous left-and-up movement command is accepted during active gameplay while both movement steps are valid for the controlled duck → The controlled duck moves from its starting board cell to the board cell one column left and one row above that starting cell."
+        },
+        {
+          "id": "target-021",
+          "zh": "Opposing left and right movement commands are held during active gameplay with no unopposed vertical movement command → The controlled duck remains in its current board cell for the rendered response to the held commands, and no movement animation plays."
+        },
+        {
+          "id": "target-022",
+          "zh": "A primarily horizontal pointer drag remains inside the pointer dead zone during active gameplay → The controlled duck remains in its current board cell for the rendered response to the drag, and no movement animation plays."
+        },
+        {
+          "id": "target-023",
+          "zh": "A left movement command is issued during active gameplay while the controlled duck's target cell to the left is outside the board → The controlled duck remains in its current board cell and no board piece moves."
+        },
+        {
+          "id": "target-024",
+          "zh": "A left movement command is issued during active gameplay while the controlled duck's adjacent cell to the left contains a blocking piece that cannot be pushed → The controlled duck remains in its current board cell and the blocking piece remains in its cell."
+        },
+        {
+          "id": "target-025",
+          "zh": "A left movement command is accepted during active gameplay while the controlled duck's adjacent cell to the left contains a movable piece and that piece can move into the next cell to the left → The controlled duck moves into the adjacent cell on its left, and the movable piece that was in that adjacent cell moves one cell left into the next cell."
+        },
+        {
+          "id": "target-026",
+          "zh": "A left movement command is accepted during active gameplay while the controlled duck is part of a movable cluster containing another duck block and the entire cluster can shift one cell left → The controlled duck and the other duck block in its cluster move one board cell left together."
+        },
+        {
+          "id": "target-027",
+          "zh": "A left movement command is accepted during active gameplay while the controlled duck's adjacent cell to the left contains a movable clustered piece and every piece in that cluster can shift one cell left → The controlled duck moves into the adjacent cell on its left, and every piece in the pushed cluster moves one board cell left together."
+        },
+        {
+          "id": "target-028",
+          "zh": "A left movement command is accepted during active gameplay while the controlled duck pushes a chain of movable pieces that can all shift one cell left → The controlled duck moves into the adjacent cell on its left, and each movable piece in the pushed chain moves one board cell left."
+        },
+        {
+          "id": "target-029",
+          "zh": "A movement command is accepted during active gameplay for a non-final duck whose destination is a cutter cell → After the movement completes, that duck is no longer visible on the board and the cutter remains visible on its cell."
+        },
+        {
+          "id": "target-030",
+          "zh": "A movement command would move the only remaining live duck onto a cutter cell → The move is rejected; the duck remains in its pre-move board cell and does not shrink or disappear."
+        },
+        {
+          "id": "target-031",
+          "zh": "A movement command is accepted during active gameplay for a movable non-duck piece whose destination is a cutter cell → After the movement completes, that non-duck piece is no longer visible on the board and the cutter remains visible on its cell."
+        },
+        {
+          "id": "target-032",
+          "zh": "A duckling cluster becomes connected to a duck cluster during active gameplay → After the connection completes, the connected duckling blocks are rendered as duck-colored duck blocks."
+        },
+        {
+          "id": "target-033",
+          "zh": "A duck cluster is split into multiple disconnected duck groups during active gameplay → The group disconnected from the retained duck group is rendered as duckling-colored blocks, while the retained duck group remains rendered as duck blocks."
+        },
+        {
+          "id": "target-034",
+          "zh": "A level win check succeeds because the number of live ducks matches the number of goals and every duck is on a goal in both goal checks → A level-ending transition begins, with the level view covered by the intro-colored transition overlay."
+        },
+        {
+          "id": "target-035",
+          "zh": "A level-completion transition reaches the moment when the game enters the next level → The previous board is replaced by a new level board layout."
+        },
+        {
+          "id": "target-036",
+          "zh": "The reset command is accepted during active gameplay after the current level layout has been visibly changed from its starting arrangement → The current level returns to its starting board arrangement, with the controlled duck and level pieces back at their initial grid positions."
+        },
+        {
+          "id": "target-037",
+          "zh": "The level-select icon is activated from an active gameplay level → The current puzzle board is replaced by the level-select board."
+        },
+        {
+          "id": "target-038",
+          "zh": "The level-select duck reaches a goal marker on the level-select board → The level-select board is replaced by the selected puzzle level board."
+        }
+      ]
     },
     {
       "id": "witchcat",
       "titleZh": "Witchcat",
       "typeZh": "季节切换冒险",
-      "targetCount": 0,
+      "targetCount": 65,
       "summaryZh": "生成一款猫咪女巫冒险游戏：玩家移动、发射火球并切换季节，利用冬季结冰、夏季藤蔓、秋季蘑菇与落叶、春季花朵等环境变化寻找失踪猫咪，让季节切换与世界状态变化直观可见。",
-      "requirements": []
+      "requirements": [
+        {
+          "id": "target-001",
+          "zh": "The intro cinematic reaches the cat-rescue motivation panel → The on-screen cinematic text displays “MY CATS VANISHED” and “I MUST SAVE THEM!” as two text lines."
+        },
+        {
+          "id": "target-002",
+          "zh": "The intro cinematic reaches the season-chaos panel → The on-screen cinematic text displays “OH NO! THE SEASONS ARE IN CHAOS!”."
+        },
+        {
+          "id": "target-003",
+          "zh": "The intro cinematic reaches the season-orb objective panel → The on-screen cinematic text displays “FIND SEASON ORBS IN TEMPLES” and “SAVE THE CATS” as two text lines."
+        },
+        {
+          "id": "target-004",
+          "zh": "The intro cinematic reaches the control-instruction panel → The on-screen cinematic text displays “MOVE WITH ARROWS” and “ACTION TO INTERACT” as two instruction lines."
+        },
+        {
+          "id": "target-005",
+          "zh": "A non-final cinematic panel reaches its configured duration → The current cinematic text is replaced by the next cinematic text panel without player input."
+        },
+        {
+          "id": "target-006",
+          "zh": "The final step of a cinematic reaches its end → The cinematic text disappears from the screen and the gameplay view is shown without the cinematic dialogue panel."
+        },
+        {
+          "id": "target-007",
+          "zh": "A readable text panel is being rendered over the gameplay view → A black rectangular panel is drawn near the top of the gameplay canvas with an inset from the left and right canvas edges, and the readable text appears inside the panel."
+        },
+        {
+          "id": "target-008",
+          "zh": "The player performs the action input while facing upward toward a sign panel that contains text → A black dialogue panel appears over the gameplay view and displays the sign text in pixel lettering."
+        },
+        {
+          "id": "target-009",
+          "zh": "The player performs the action input while adjacent to a sign panel, with no dialogue panel open, and the character is not facing upward → No black dialogue panel is added to the gameplay view and no sign text appears."
+        },
+        {
+          "id": "target-010",
+          "zh": "The player performs the action input while a dialogue panel is already open → The black dialogue panel and its text disappear from the gameplay view."
+        },
+        {
+          "id": "target-011",
+          "zh": "The player holds an upward movement input during active gameplay while a dialogue panel is open → The character remains at its pre-input screen position and the dialogue panel remains visible."
+        },
+        {
+          "id": "target-012",
+          "zh": "The player holds an accepted upward movement input during active gameplay while the character is not blocked → The character’s on-screen position shifts upward and the character sprite uses an upward-facing frame."
+        },
+        {
+          "id": "target-013",
+          "zh": "The player holds an accepted downward movement input during active gameplay while the character is not blocked → The character’s on-screen position shifts downward and the character sprite uses a downward-facing frame."
+        },
+        {
+          "id": "target-014",
+          "zh": "The player holds an accepted leftward movement input during active gameplay while the character is not blocked → The character’s on-screen position shifts left and the character sprite uses a side-facing frame oriented left."
+        },
+        {
+          "id": "target-015",
+          "zh": "The player holds an accepted rightward movement input during active gameplay while the character is not blocked → The character’s on-screen position shifts right and the character sprite uses a side-facing frame oriented right."
+        },
+        {
+          "id": "target-016",
+          "zh": "The player holds accepted upward and leftward movement inputs together during active gameplay while both movement axes are unblocked → The character’s on-screen position shifts diagonally upward and left."
+        },
+        {
+          "id": "target-017",
+          "zh": "The player attempts to move upward into a blocking tile during active gameplay → The character remains outside the blocking tile and is shown adjacent to it while facing upward."
+        },
+        {
+          "id": "target-018",
+          "zh": "The player attempts to move upward outside the world boundary → The character remains inside the visible top world edge and does not enter any area beyond the map boundary."
+        },
+        {
+          "id": "target-019",
+          "zh": "The character’s movement destination overlaps a hole tile during active gameplay → The character begins a fall animation, moving toward the hole while the character sprite shrinks."
+        },
+        {
+          "id": "target-020",
+          "zh": "The character’s movement destination overlaps a water tile during active gameplay → The character begins a fall animation, moving toward the water while the character sprite shrinks."
+        },
+        {
+          "id": "target-021",
+          "zh": "The character takes non-lethal damage while not invulnerable → The character sprite flashes by alternating between its normal palette and a winter-colored palette in 200 ms visual intervals."
+        },
+        {
+          "id": "target-022",
+          "zh": "A damage event is applied while the player has one life unit remaining → The character enters a death sequence: the sprite repeatedly changes facing direction, then a fade overlay begins covering the gameplay view."
+        },
+        {
+          "id": "target-023",
+          "zh": "The character overlaps an active blade trap while not invulnerable → The character sprite begins the invulnerability flashing effect, alternating between its normal palette and a winter-colored palette."
+        },
+        {
+          "id": "target-024",
+          "zh": "The character overlaps a moving seeker trap while not invulnerable → The character sprite begins the invulnerability flashing effect, alternating between its normal palette and a winter-colored palette."
+        },
+        {
+          "id": "target-025",
+          "zh": "The character overlaps an active spike tile after the spike’s first animation frame while not invulnerable → The character sprite begins the invulnerability flashing effect, alternating between its normal palette and a winter-colored palette."
+        },
+        {
+          "id": "target-026",
+          "zh": "The character overlaps a spike tile on the spike’s first animation frame → The character does not begin the invulnerability flashing effect during that spike frame."
+        },
+        {
+          "id": "target-027",
+          "zh": "The character overlaps a skeleton enemy while not invulnerable → The character sprite begins the invulnerability flashing effect, alternating between its normal palette and a winter-colored palette."
+        },
+        {
+          "id": "target-028",
+          "zh": "The character overlaps a mommy enemy while not invulnerable → The character sprite begins the invulnerability flashing effect, alternating between its normal palette and a winter-colored palette."
+        },
+        {
+          "id": "target-029",
+          "zh": "The player performs the action input during active gameplay when a fireball launch is accepted and the character is facing upward → A fireball sprite appears at the character’s position and travels upward."
+        },
+        {
+          "id": "target-030",
+          "zh": "The player performs the action input during active gameplay when a fireball launch is accepted and the character is facing downward → A fireball sprite appears at the character’s position and travels downward."
+        },
+        {
+          "id": "target-031",
+          "zh": "The player performs the action input during active gameplay when a fireball launch is accepted and the character is facing left → A fireball sprite appears at the character’s position and travels left."
+        },
+        {
+          "id": "target-032",
+          "zh": "The player performs the action input during active gameplay when a fireball launch is accepted and the character is facing right → A fireball sprite appears at the character’s position and travels right."
+        },
+        {
+          "id": "target-033",
+          "zh": "A moving fireball reaches a blocking tile that is not destructible by fireball → The fireball sprite disappears at the blocking tile."
+        },
+        {
+          "id": "target-034",
+          "zh": "A moving fireball reaches a bush tile → The fireball sprite disappears and the bush tile disappears from the scene."
+        },
+        {
+          "id": "target-035",
+          "zh": "A moving fireball reaches a stone flower tile → The fireball sprite disappears and the stone flower tile disappears from the scene."
+        },
+        {
+          "id": "target-036",
+          "zh": "A moving fireball overlaps a skeleton enemy → The skeleton enemy disappears from the scene."
+        },
+        {
+          "id": "target-037",
+          "zh": "A moving fireball overlaps a mommy enemy → The mommy enemy disappears from the scene."
+        },
+        {
+          "id": "target-038",
+          "zh": "The player performs the action input with an inactive seeker trap below the character in the same unobstructed column → The seeker trap starts moving upward toward the character’s row."
+        },
+        {
+          "id": "target-039",
+          "zh": "The player performs the action input with an inactive seeker trap to the right of the character in the same unobstructed row → The seeker trap starts moving left toward the character’s column."
+        },
+        {
+          "id": "target-040",
+          "zh": "The player performs the action input with an inactive seeker trap in the same column and a blocking tile between the trap and the character → The seeker trap remains at its pre-action tile position and does not begin moving."
+        },
+        {
+          "id": "target-041",
+          "zh": "The player performs the action input with an inactive seeker trap in the same row and a blocking tile between the trap and the character → The seeker trap remains at its pre-action tile position and does not begin moving."
+        },
+        {
+          "id": "target-042",
+          "zh": "The player performs the action input with an inactive seeker trap that is not in the character’s row or column → The seeker trap remains at its pre-action tile position and does not begin moving."
+        },
+        {
+          "id": "target-043",
+          "zh": "A moving seeker becomes blocked during its movement animation → The seeker stops moving and is displayed aligned to a whole tile position instead of between tiles."
+        },
+        {
+          "id": "target-044",
+          "zh": "The player performs the action input with an inactive blade trap below the character in the same unobstructed column → The blade trap starts moving upward toward the character’s row."
+        },
+        {
+          "id": "target-045",
+          "zh": "The player performs the action input with an inactive blade trap to the right of the character in the same unobstructed row → The blade trap starts moving left toward the character’s column."
+        },
+        {
+          "id": "target-046",
+          "zh": "The player performs the action input with an inactive blade trap in the same column and a blocking tile between the trap and the character → The blade trap remains at its pre-action tile position and does not begin moving."
+        },
+        {
+          "id": "target-047",
+          "zh": "The player performs the action input with an inactive blade trap in the same row and a blocking tile between the trap and the character → The blade trap remains at its pre-action tile position and does not begin moving."
+        },
+        {
+          "id": "target-048",
+          "zh": "The player performs the action input with an inactive blade trap that is not in the character’s row or column → The blade trap remains at its pre-action tile position and does not begin moving."
+        },
+        {
+          "id": "target-049",
+          "zh": "A moving outbound blade trap reaches a blocking tile → The blade trap reverses direction from the blocking tile and travels back along its path."
+        },
+        {
+          "id": "target-050",
+          "zh": "A returning blade trap reaches a blocking tile during its movement animation → The blade trap stops moving and is displayed aligned to a whole tile position."
+        },
+        {
+          "id": "target-051",
+          "zh": "A skeleton enemy has an active movement direction and its next movement position is unblocked → The skeleton sprite shifts along its current movement direction."
+        },
+        {
+          "id": "target-052",
+          "zh": "A moving skeleton becomes blocked during its movement animation → The skeleton is displayed aligned to a whole tile position and then moves away from the blocking direction."
+        },
+        {
+          "id": "target-053",
+          "zh": "A mommy enemy has an active movement direction and its next movement position is unblocked → The mommy sprite shifts along its current movement direction."
+        },
+        {
+          "id": "target-054",
+          "zh": "A trigger tile advances its animation while at least two seasons are available → The trigger tile’s accent color changes to the color associated with another available season."
+        },
+        {
+          "id": "target-055",
+          "zh": "The player performs the action input while standing on a season trigger and a season change is available → A fade overlay begins covering the gameplay view as the season-change transition starts."
+        },
+        {
+          "id": "target-056",
+          "zh": "A season change completes for a season different from the current one → The gameplay background is redrawn to the newly selected season’s visual style."
+        },
+        {
+          "id": "target-057",
+          "zh": "The player performs the action input while touching the winter season orb → The touched orb sprite disappears from the map, the top-right heart display gains one heart icon compared with immediately before the input, and a black dialogue panel displays “IN WINTER, SNOW COVERS” and “AND WATER TURNS ICE” as two text lines."
+        },
+        {
+          "id": "target-058",
+          "zh": "The player performs the action input while touching the summer season orb → The touched orb sprite disappears from the map, the top-right heart display gains one heart icon compared with immediately before the input, and a black dialogue panel displays “IN SUMMER, ROOTS GROW” and “AND USE THE VINES TO CLIMB” as two text lines."
+        },
+        {
+          "id": "target-059",
+          "zh": "The player performs the action input while touching the fall season orb → The touched orb sprite disappears from the map, the top-right heart display gains one heart icon compared with immediately before the input, and a black dialogue panel displays “IN FALL, MUSHROOM GROW” and “AND LEAVES FILL HOLES” as two text lines."
+        },
+        {
+          "id": "target-060",
+          "zh": "The player performs the action input while touching the spring season orb → The touched orb sprite disappears from the map, the top-right heart display gains one heart icon compared with immediately before the input, and a black dialogue panel displays “IN SPRING, STONE FLOWERS” and “BLOOM” as two text lines."
+        },
+        {
+          "id": "target-061",
+          "zh": "A season orb is drawn in the world → The orb sprite is rendered using the color palette associated with that orb’s season."
+        },
+        {
+          "id": "target-062",
+          "zh": "A level is populated for a cat whose saved collection state is not collected → The cat sprite is displayed at its rescue position, and a sign panel is displayed at that cat’s collected corner position."
+        },
+        {
+          "id": "target-063",
+          "zh": "The player performs the action input while an uncollected cat is inside the interaction area → The cat is moved to its collected corner position and the sign panel at that collected corner disappears."
+        },
+        {
+          "id": "target-064",
+          "zh": "A fade transition is active during a rendered gameplay frame → A fade overlay is drawn over the entire game canvas, tinting or covering the visible scene underneath."
+        },
+        {
+          "id": "target-065",
+          "zh": "The gameplay view is rendered while the character is close enough to the left world edge that the camera offset is clamped → The world’s left edge is visible at the left side of the gameplay view, with no empty area outside the map shown to the left."
+        }
+      ]
     },
     {
       "id": "the-neatness",
       "titleZh": "The Neatness",
       "typeZh": "第一人称线谜",
-      "targetCount": 0,
+      "targetCount": 38,
       "summaryZh": "生成一款第一人称环境线谜游戏：玩家探索紧凑场景、观察面板规则并绘制或连接正确路径，在逐步增加难度的谜题中获得重置、错误、解锁和完成反馈。",
-      "requirements": []
+      "requirements": [
+        {
+          "id": "target-001",
+          "zh": "The game has completed its initial page setup for the first level → The first puzzle level is shown in the gameplay view, with no title screen, menu screen, or curtain transition overlay visible."
+        },
+        {
+          "id": "target-002",
+          "zh": "A newly selected or advanced non-initial level enters its opening phase → A diagonal curtain overlay is drawn over the gameplay view during the level transition before the level is shown for play."
+        },
+        {
+          "id": "target-003",
+          "zh": "The current level is restarted after a failure or restart-triggering state → The level returns to its reset puzzle layout and a restart message overlay is shown over the gameplay view."
+        },
+        {
+          "id": "target-004",
+          "zh": "The reset control is released while it is enabled during a level → The current level returns to its reset puzzle layout, removing the player's drawn connections from the board."
+        },
+        {
+          "id": "target-005",
+          "zh": "The ending level is displayed → The text \"Thank you for playing!\" is shown near the upper part of the screen, and the text \"But our princess is in another castle!\" is shown near the lower part of the screen."
+        },
+        {
+          "id": "target-006",
+          "zh": "A non-final active puzzle reaches its solved state during running play → A diagonal curtain transition closes over the puzzle view."
+        },
+        {
+          "id": "target-007",
+          "zh": "The final regular level reaches its solved state during running play → After the transition, a level-select style screen is shown instead of another numbered regular puzzle level."
+        },
+        {
+          "id": "target-008",
+          "zh": "A connection is completed between two incompatible hotspots in a regular puzzle level → A restart message overlay appears over the gameplay view and the board returns to its reset puzzle layout."
+        },
+        {
+          "id": "target-009",
+          "zh": "A locked Coil level is selected from the level-select screen without Coil access enabled → A restart message overlay appears over the level-select view, and the level-select screen remains visible behind it without a curtain transition."
+        },
+        {
+          "id": "target-010",
+          "zh": "A selectable unlocked level exit is connected on the level-select screen after the level-select entry point is satisfied → A diagonal curtain transition begins, and the level-select view is replaced by the chosen level's puzzle board after the transition."
+        },
+        {
+          "id": "target-011",
+          "zh": "The level-select toolbar button is released while it is enabled during a level → A diagonal curtain transition closes over the current level before the level-select screen is shown."
+        },
+        {
+          "id": "target-012",
+          "zh": "A level with exactly two enabled toolbar buttons is displayed → The right-side toolbar shows two stacked buttons: a music button and a reset button."
+        },
+        {
+          "id": "target-013",
+          "zh": "A level with exactly three enabled toolbar buttons is displayed → The right-side toolbar shows three stacked buttons: a music button, a reset button, and a level-select button."
+        },
+        {
+          "id": "target-014",
+          "zh": "A current-level entry is displayed on the level-select screen → That level number is drawn in the light tile color used by the level-select highlight."
+        },
+        {
+          "id": "target-015",
+          "zh": "A completed non-current level entry is displayed on the level-select screen → That level number is drawn in gray."
+        },
+        {
+          "id": "target-016",
+          "zh": "An incomplete non-current level entry is displayed on the level-select screen → That level number is drawn in red."
+        },
+        {
+          "id": "target-017",
+          "zh": "A Coil entry is displayed on the level-select screen → The entry label begins with the text \"Coil-\" followed by its Coil level number."
+        },
+        {
+          "id": "target-018",
+          "zh": "A single-cell paint action is made on a grid cell that has an adjacent connected neighbor → The targeted cell changes to the neighboring connection's color."
+        },
+        {
+          "id": "target-019",
+          "zh": "During running play, the skull-turn timer selects an entry-point skull to turn → One entry-point skull changes its facing direction in the gameplay view."
+        },
+        {
+          "id": "target-020",
+          "zh": "A drawing stroke is made during running play in a reflected puzzle level → The stroke is drawn on the left side of the board and a mirrored matching stroke is drawn on the right side of the board."
+        },
+        {
+          "id": "target-021",
+          "zh": "A reflected puzzle level is displayed in its reset layout → The right half of the puzzle board is filled with a gray reflection-area background, while the left half shows the normal black board background outside tiles and hotspots."
+        },
+        {
+          "id": "target-022",
+          "zh": "A drawing stroke is requested while the level is not in its running phase → No new drawn connection or paint stroke appears on the puzzle board from that request."
+        },
+        {
+          "id": "target-023",
+          "zh": "A drawing stroke reaches the edge of the paintable puzzle bounds during running play → The visible paint stroke stops at the puzzle board edge and does not continue beyond the board."
+        },
+        {
+          "id": "target-024",
+          "zh": "A drawing stroke passes over an empty paintable cell during running play → The cell under the stroke changes from the background board color to the unconnected paint color."
+        },
+        {
+          "id": "target-025",
+          "zh": "A drawing stroke passes over an already connected paint cell during running play → The already connected cell keeps its connected color and no new unconnected paint mark is drawn over it."
+        },
+        {
+          "id": "target-026",
+          "zh": "A single-cell paint action is made on a grid cell that has no adjacent connected neighbor → The targeted cell changes to the unconnected paint color and no contiguous area fills with a connected color."
+        },
+        {
+          "id": "target-027",
+          "zh": "A new connection is completed between two compatible hotspots in a regular puzzle level → The connected painted path and the two compatible hotspots change to the connected paint color."
+        },
+        {
+          "id": "target-028",
+          "zh": "A drawing action adds new empty-cell paint in a level that contains fungus → At least one fungus-colored cell appears or changes within the fungus area after the paint is added."
+        },
+        {
+          "id": "target-029",
+          "zh": "A drawing stroke passes over a solid board tile during running play → The tile keeps its solid tile color and no paint mark appears on that tile."
+        },
+        {
+          "id": "target-030",
+          "zh": "A drawing stroke passes over a fungus cell during running play → The fungus cell keeps its fungus color and no paint mark appears on that cell."
+        },
+        {
+          "id": "target-031",
+          "zh": "An unsatisfied entry-point hotspot is displayed on a puzzle board → The hotspot's painted area is drawn in the entry-point color and a skull sprite is shown at that hotspot."
+        },
+        {
+          "id": "target-032",
+          "zh": "An unsatisfied exit-point hotspot is displayed on a puzzle board → The hotspot's painted area is drawn in the exit-point color and a grave sprite is shown at that hotspot."
+        },
+        {
+          "id": "target-033",
+          "zh": "The level-select screen is displayed → Selectable level labels are arranged along a curved arc, exactly three Coil labels are placed below the arc, and the title text \"The Neatness\" is shown near the lower part of the level-select view."
+        },
+        {
+          "id": "target-034",
+          "zh": "The first regular puzzle level is displayed → The instruction text \"Connect the dots\" is shown near the lower part of the gameplay view."
+        },
+        {
+          "id": "target-035",
+          "zh": "A level with moving skull guidance text is displayed → The instruction text \"They move when you move\" is shown near the lower part of the gameplay view."
+        },
+        {
+          "id": "target-036",
+          "zh": "A satisfied entry-point hotspot is displayed on a puzzle board → The hotspot remains marked by its skull sprite while its painted area is shown in the connected paint color."
+        },
+        {
+          "id": "target-037",
+          "zh": "A satisfied exit-point hotspot is displayed on a puzzle board → The hotspot remains marked by its grave sprite while its painted area is shown in the connected paint color."
+        },
+        {
+          "id": "target-038",
+          "zh": "The ending artwork is rendered with opacity at full value → A gray rectangular panel is shown near the center of the board with the princess sprite visible inside it."
+        }
+      ]
     },
     {
       "id": "q1k3",
       "titleZh": "Q1K3",
       "typeZh": "三维第一人称射击",
-      "targetCount": 0,
+      "targetCount": 35,
       "summaryZh": "生成一款紧凑的三维第一人称射击游戏：玩家使用键鼠移动、跳跃、攻击并切换武器，在迷宫式关卡中与敌人交战，呈现弹药、生命、命中、伤害、武器和胜负状态。",
-      "requirements": []
+      "requirements": [
+        {
+          "id": "target-001",
+          "zh": "The game page has completed its initial UI setup before gameplay is started → A game canvas is shown with a centered title overlay displaying “Q1K3” and “CLICK TO START”."
+        },
+        {
+          "id": "target-002",
+          "zh": "The game canvas area is clicked while the initial “CLICK TO START” overlay is displayed → The centered start overlay is no longer shown, revealing the gameplay view with HUD areas at the screen edges."
+        },
+        {
+          "id": "target-003",
+          "zh": "Active gameplay is updating while the selected weapon does not require ammunition → The health HUD displays a numeric health value, and the ammo HUD displays “∞”."
+        },
+        {
+          "id": "target-004",
+          "zh": "Active gameplay is updating while the selected weapon requires ammunition → The health HUD displays a numeric health value, and the ammo HUD displays a numeric ammunition value."
+        },
+        {
+          "id": "target-005",
+          "zh": "The player presses jump while standing on the ground with jump re-enabled → The first-person viewpoint rises upward from its standing height."
+        },
+        {
+          "id": "target-006",
+          "zh": "The player looks upward to the vertical look limit → The view remains capped at the maximum upward pitch, and additional upward look input does not rotate the view beyond that capped angle."
+        },
+        {
+          "id": "target-007",
+          "zh": "The player looks downward to the vertical look limit → The view remains capped at the maximum downward pitch, and additional downward look input does not rotate the view beyond that capped angle."
+        },
+        {
+          "id": "target-008",
+          "zh": "The player scrolls to the next weapon after the mouse-wheel delay has elapsed → The visible held weapon model changes to the next available weapon."
+        },
+        {
+          "id": "target-009",
+          "zh": "The player scrolls to the previous weapon after the mouse-wheel delay has elapsed → The visible held weapon model changes to the previous available weapon."
+        },
+        {
+          "id": "target-010",
+          "zh": "The player attempts to fire a selected projectile weapon when the weapon is ready to shoot and has the required ammunition → A projectile is emitted from the player’s weapon during that firing attempt."
+        },
+        {
+          "id": "target-011",
+          "zh": "The player attempts to fire a selected muzzle-flash weapon when the weapon is ready to shoot and has the required ammunition → A muzzle-flash effect appears at the player’s weapon during that firing attempt."
+        },
+        {
+          "id": "target-012",
+          "zh": "The player attempts to fire a selected ammunition-using weapon when that weapon has zero ammunition and its reload wait has elapsed → No projectile or muzzle-flash effect is rendered for that firing attempt."
+        },
+        {
+          "id": "target-013",
+          "zh": "The player attempts to fire again before the selected weapon’s reload wait has elapsed → No new projectile or muzzle-flash effect is rendered for that firing attempt."
+        },
+        {
+          "id": "target-014",
+          "zh": "The player approaches a locked door while within the door activation range → A message reading “YOU NEED THE KEY...” is displayed over the gameplay view, and the door remains in its closed position."
+        },
+        {
+          "id": "target-015",
+          "zh": "The player approaches an unlocked door while within the door activation range → The door panel opens from its closed position, revealing the passage behind it."
+        },
+        {
+          "id": "target-016",
+          "zh": "An open door has had no player within its activation range for its reset delay → The door panel closes back toward its closed position."
+        },
+        {
+          "id": "target-017",
+          "zh": "The player collects the key pickup → The key pickup disappears from the scene and a message reading “YOU GOT THE KEY!” is displayed over the gameplay view."
+        },
+        {
+          "id": "target-018",
+          "zh": "The player collects a nail ammunition pickup while carrying the nailgun → The nail ammunition pickup disappears from the scene."
+        },
+        {
+          "id": "target-019",
+          "zh": "The player collects a grenade ammunition pickup while carrying the grenade launcher → The grenade ammunition pickup disappears from the scene."
+        },
+        {
+          "id": "target-020",
+          "zh": "The player reaches a non-final level exit trigger → The gameplay view switches from the current level layout to the next level’s map layout."
+        },
+        {
+          "id": "target-021",
+          "zh": "The player reaches the level-completion transition after the last available level → An end message is displayed with the heading “THE END” and the text “THANKS FOR PLAYING ❤”, and the visible health and ammo HUD text areas are blank."
+        },
+        {
+          "id": "target-022",
+          "zh": "The player’s health reaches zero from incoming damage → A centered overlay message reading “YOU DIED” is displayed over the gameplay view, and the health HUD shows 0."
+        },
+        {
+          "id": "target-023",
+          "zh": "The player death restart delay elapses → The current level is reloaded to its starting layout after the “YOU DIED” message has been shown."
+        },
+        {
+          "id": "target-024",
+          "zh": "A visible damageable entity’s health reaches zero from incoming damage → The entity’s original visible model is no longer rendered after the damage is applied."
+        },
+        {
+          "id": "target-025",
+          "zh": "An idle enemy has the player within its awareness range with an unobstructed line of sight → The enemy turns to face the player."
+        },
+        {
+          "id": "target-026",
+          "zh": "A patrolling enemy has the player within its awareness range with an unobstructed line of sight → The enemy turns to face the player instead of continuing along its patrol path."
+        },
+        {
+          "id": "target-027",
+          "zh": "An idle enemy receives nonlethal damage → The enemy turns to face the player and begins moving toward the player."
+        },
+        {
+          "id": "target-028",
+          "zh": "A patrolling enemy receives nonlethal damage → The enemy turns to face the player and begins moving toward the player instead of continuing its patrol path."
+        },
+        {
+          "id": "target-029",
+          "zh": "An idle enemy has the player outside its awareness range during its state update → The enemy remains in place and does not turn or move toward the player."
+        },
+        {
+          "id": "target-030",
+          "zh": "A patrolling enemy has the player outside its awareness range during its state update → The enemy continues along its patrol path and does not turn toward or move directly toward the player."
+        },
+        {
+          "id": "target-031",
+          "zh": "An idle enemy has the player within its awareness range but without an unobstructed line of sight during its state update → The enemy remains in place and does not turn or move toward the player."
+        },
+        {
+          "id": "target-032",
+          "zh": "A patrolling enemy collides horizontally with a wall or ledge boundary → The enemy reverses its patrol direction and walks back along its path."
+        },
+        {
+          "id": "target-033",
+          "zh": "A grunt enemy reaches its attack execution state while facing the player → A muzzle-flash light appears at the grunt during the attack."
+        },
+        {
+          "id": "target-034",
+          "zh": "A zombie receives a damage amount that is not above its gibbing threshold → The zombie model remains visible in its standing enemy form after the hit."
+        },
+        {
+          "id": "target-035",
+          "zh": "A visible bouncing entity collides vertically with a surface while its vertical speed is above its bounce threshold → The entity reverses vertical direction and rebounds away from the surface immediately after contact."
+        }
+      ]
     },
     {
       "id": "island-not-found",
@@ -5882,11 +6779,828 @@
         "issue": null
       }
     },
-    "catapoolt": {},
-    "super-castle-game": {},
-    "witchcat": {},
-    "the-neatness": {},
-    "q1k3": {},
+    "catapoolt": {
+      "gpt-5.5": {
+        "status": "completed",
+        "score": {
+          "display": "89.36 (+2.13)",
+          "base": 89.36,
+          "passed": 42,
+          "denominator": 47,
+          "dynamic": 1,
+          "dynamicAddition": 2.13,
+          "potential": 91.49
+        },
+        "visualQuality": {
+          "score": 89,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 50,
+          "renderingStyleAverage": 39,
+          "videosScored": 10
+        },
+        "traceCount": 10,
+        "playPath": "games-v8.3/catapoolt/gpt-5.5/index.html",
+        "previewPath": "previews-v8.3/catapoolt/gpt-5.5.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-002",
+              "zh": "The start menu scene has been entered → The canvas displays the stylized title text \"🅒🅐🅣🅐🅟🅞🅞🅛🅣\"."
+            },
+            {
+              "id": "target-011",
+              "zh": "The Menu button in the gameplay pause popup is accepted → The start menu scene replaces gameplay and displays the stylized title text \"🅒🅐🅣🅐🅟🅞🅞🅛🅣\"."
+            },
+            {
+              "id": "target-017",
+              "zh": "A dragged cat is released with a launch stamina cost that consumes all remaining stamina → The cat launches from the drag position, the stamina bar fill becomes empty, and after the cat next lands a popup overlay with the title text \"Game Over\" is visible."
+            },
+            {
+              "id": "target-042",
+              "zh": "The cat at ground level contacts a poop while not protected from poop damage → The contacted poop disappears from the play field, and the filled portion of the stamina bar begins moving left from its pre-collision right edge."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-035",
+              "zh": "The Continue button in the next-wave popup is accepted → The next-wave popup overlay disappears and the gameplay screen remains visible.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null
+      },
+      "seed-2.0-pro": {
+        "status": "completed",
+        "score": {
+          "display": "57.45 (+17.02)",
+          "base": 57.45,
+          "passed": 27,
+          "denominator": 47,
+          "dynamic": 8,
+          "dynamicAddition": 17.02,
+          "potential": 74.47
+        },
+        "visualQuality": {
+          "score": 89.33,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 50,
+          "renderingStyleAverage": 39.33,
+          "videosScored": 15
+        },
+        "traceCount": 15,
+        "playPath": "games-v8.3/catapoolt/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.3/catapoolt/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-001",
+              "zh": "The initial game scene has completed startup in the default production configuration → The canvas displays a splash screen with the centered title text \"A game by Gleb V.\""
+            },
+            {
+              "id": "target-002",
+              "zh": "The start menu scene has been entered → The canvas displays the stylized title text \"🅒🅐🅣🅐🅟🅞🅞🅛🅣\"."
+            },
+            {
+              "id": "target-013",
+              "zh": "The cat is dragged during active gameplay → During the drag, the cat is pulled away from its pre-drag position and its head is rendered below its pre-drag vertical alignment."
+            },
+            {
+              "id": "target-029",
+              "zh": "The cat at ground level contacts a mouse while its inflation level is below the maximum and the stamina bar is not full → The contacted mouse disappears, and within 1 second the filled portion of the stamina bar extends rightward from its pre-contact right edge."
+            },
+            {
+              "id": "target-039",
+              "zh": "The cat at ground level contacts an active uncollected clover → The clover disappears from the play field, and the stamina bar fills to the full width of its outlined bar."
+            },
+            {
+              "id": "target-040",
+              "zh": "An active uncollected clover reaches its lifetime limit during gameplay → The clover is no longer drawn at its previous position and a clover is drawn at another position in the play field."
+            },
+            {
+              "id": "target-042",
+              "zh": "The cat at ground level contacts a poop while not protected from poop damage → The contacted poop disappears from the play field, and the filled portion of the stamina bar begins moving left from its pre-collision right edge."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-012",
+              "zh": "An active gameplay update occurs while the pause popup is visible and at least one gameplay object is visible behind it → During the next 1 second of rendered video, the visible gameplay objects behind the overlay keep the same screen positions while the Pause popup remains on top.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-025",
+              "zh": "Remaining mice are off-screen to the right while no mouse is visible in the current gameplay viewport → An off-screen mouse indicator is drawn on the right edge of the gameplay view.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-027",
+              "zh": "An off-screen mouse indicator is rendered for a mouse outside the current gameplay viewport → The indicator is drawn as a red filled triangle on an edge of the gameplay view.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-034",
+              "zh": "The next-wave popup is shown after the wave number has been advanced → A popup overlay is visible with the title text matching \"Next Wave \" followed by the advanced wave number.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-043",
+              "zh": "The cat contacts a poop while protected from poop damage → The poop remains drawn in the play field, and the filled portion of the stamina bar keeps the same visible right edge on the next rendered gameplay view.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-003",
+              "zh": "The Play button on the start menu is accepted → The start menu is replaced by the gameplay scene, with the gray bordered play field, the Mice and Wave HUD labels, and the stamina bar visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-010",
+              "zh": "The Continue button in the gameplay pause popup is accepted → The pause popup overlay disappears and the gameplay screen remains visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-011",
+              "zh": "The Menu button in the gameplay pause popup is accepted → The start menu scene replaces gameplay and displays the stylized title text \"🅒🅐🅣🅐🅟🅞🅞🅛🅣\".",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-015",
+              "zh": "A drag-start attempt is made on the cat while the cat is flying → No slingshot preview appears, and the cat continues along its airborne path.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-016",
+              "zh": "A dragged cat is released while it has stamina remaining → The cat launches away from the drag position, and the filled portion of the stamina bar begins moving left from its pre-release right edge.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-017",
+              "zh": "A dragged cat is released with a launch stamina cost that consumes all remaining stamina → The cat launches from the drag position, the stamina bar fill becomes empty, and after the cat next lands a popup overlay with the title text \"Game Over\" is visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-037",
+              "zh": "A purge is accepted while the cat is inflated during gameplay → The cat's inflated body outline contracts inward from its pre-purge outline until the cat is drawn with normal uninflated body proportions, a poop object appears in the play field at the cat's purge position, and the cat leaves the ground and follows an airborne arc after the purge.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-047",
+              "zh": "The Restart button in the game-over popup is accepted → The gameplay scene is re-entered and the screen displays the heading text \"Game Screen\" above the play area.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null
+      }
+    },
+    "super-castle-game": {
+      "gpt-5.5": {
+        "status": "completed",
+        "score": {
+          "display": "94.74 (+0.00)",
+          "base": 94.74,
+          "passed": 36,
+          "denominator": 38,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 94.74
+        },
+        "visualQuality": {
+          "score": 90,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 50,
+          "renderingStyleAverage": 40,
+          "videosScored": 12
+        },
+        "traceCount": 12,
+        "playPath": "games-v8.3/super-castle-game/gpt-5.5/index.html",
+        "previewPath": "previews-v8.3/super-castle-game/gpt-5.5.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-022",
+              "zh": "A primarily horizontal pointer drag remains inside the pointer dead zone during active gameplay → The controlled duck remains in its current board cell for the rendered response to the drag, and no movement animation plays."
+            },
+            {
+              "id": "target-029",
+              "zh": "A movement command is accepted during active gameplay for a non-final duck whose destination is a cutter cell → After the movement completes, that duck is no longer visible on the board and the cutter remains visible on its cell."
+            }
+          ],
+          "replayTrace": []
+        },
+        "issue": null
+      },
+      "seed-2.0-pro": {
+        "status": "completed",
+        "score": {
+          "display": "71.05 (+0.00)",
+          "base": 71.05,
+          "passed": 27,
+          "denominator": 38,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 71.05
+        },
+        "visualQuality": {
+          "score": 89.23,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 50,
+          "renderingStyleAverage": 39.23,
+          "videosScored": 13
+        },
+        "traceCount": 13,
+        "playPath": "games-v8.3/super-castle-game/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.3/super-castle-game/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-028",
+              "zh": "A left movement command is accepted during active gameplay while the controlled duck pushes a chain of movable pieces that can all shift one cell left → The controlled duck moves into the adjacent cell on its left, and each movable piece in the pushed chain moves one board cell left."
+            },
+            {
+              "id": "target-029",
+              "zh": "A movement command is accepted during active gameplay for a non-final duck whose destination is a cutter cell → After the movement completes, that duck is no longer visible on the board and the cutter remains visible on its cell."
+            },
+            {
+              "id": "target-031",
+              "zh": "A movement command is accepted during active gameplay for a movable non-duck piece whose destination is a cutter cell → After the movement completes, that non-duck piece is no longer visible on the board and the cutter remains visible on its cell."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-013",
+              "zh": "A duck is rendered while it is on a goal in both the previous and current goal checks → The duck block is drawn with goal-state coloring and a V-shaped mark on its face.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-014",
+              "zh": "A duck is rendered while it is not on a goal and at least one other duck is on a goal in both goal checks → The duck block is drawn with its normal duck-colored body and a diagonal X mark on its face.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-026",
+              "zh": "A left movement command is accepted during active gameplay while the controlled duck is part of a movable cluster containing another duck block and the entire cluster can shift one cell left → The controlled duck and the other duck block in its cluster move one board cell left together.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-027",
+              "zh": "A left movement command is accepted during active gameplay while the controlled duck's adjacent cell to the left contains a movable clustered piece and every piece in that cluster can shift one cell left → The controlled duck moves into the adjacent cell on its left, and every piece in the pushed cluster moves one board cell left together.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-032",
+              "zh": "A duckling cluster becomes connected to a duck cluster during active gameplay → After the connection completes, the connected duckling blocks are rendered as duck-colored duck blocks.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-033",
+              "zh": "A duck cluster is split into multiple disconnected duck groups during active gameplay → The group disconnected from the retained duck group is rendered as duckling-colored blocks, while the retained duck group remains rendered as duck blocks.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-037",
+              "zh": "The level-select icon is activated from an active gameplay level → The current puzzle board is replaced by the level-select board.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-038",
+              "zh": "The level-select duck reaches a goal marker on the level-select board → The level-select board is replaced by the selected puzzle level board.",
+              "cause": "源码分析确认未实现"
+            }
+          ]
+        },
+        "issue": null
+      }
+    },
+    "witchcat": {
+      "gpt-5.5": {
+        "status": "completed",
+        "score": {
+          "display": "89.23 (+9.23)",
+          "base": 89.23,
+          "passed": 58,
+          "denominator": 65,
+          "dynamic": 6,
+          "dynamicAddition": 9.23,
+          "potential": 98.46
+        },
+        "visualQuality": {
+          "score": 90,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 50,
+          "renderingStyleAverage": 40,
+          "videosScored": 23
+        },
+        "traceCount": 23,
+        "playPath": "games-v8.3/witchcat/gpt-5.5/index.html",
+        "previewPath": "previews-v8.3/witchcat/gpt-5.5.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-029",
+              "zh": "The player performs the action input during active gameplay when a fireball launch is accepted and the character is facing upward → A fireball sprite appears at the character’s position and travels upward."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-036",
+              "zh": "A moving fireball overlaps a skeleton enemy → The skeleton enemy disappears from the scene.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-023",
+              "zh": "The character overlaps an active blade trap while not invulnerable → The character sprite begins the invulnerability flashing effect, alternating between its normal palette and a winter-colored palette.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-024",
+              "zh": "The character overlaps a moving seeker trap while not invulnerable → The character sprite begins the invulnerability flashing effect, alternating between its normal palette and a winter-colored palette.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-025",
+              "zh": "The character overlaps an active spike tile after the spike’s first animation frame while not invulnerable → The character sprite begins the invulnerability flashing effect, alternating between its normal palette and a winter-colored palette.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-027",
+              "zh": "The character overlaps a skeleton enemy while not invulnerable → The character sprite begins the invulnerability flashing effect, alternating between its normal palette and a winter-colored palette.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-028",
+              "zh": "The character overlaps a mommy enemy while not invulnerable → The character sprite begins the invulnerability flashing effect, alternating between its normal palette and a winter-colored palette.",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null
+      },
+      "seed-2.0-pro": {
+        "status": "completed",
+        "score": {
+          "display": "70.77 (+6.15)",
+          "base": 70.77,
+          "passed": 46,
+          "denominator": 65,
+          "dynamic": 4,
+          "dynamicAddition": 6.15,
+          "potential": 76.92
+        },
+        "visualQuality": {
+          "score": 85.5,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.5,
+          "renderingStyleAverage": 38,
+          "videosScored": 20
+        },
+        "traceCount": 20,
+        "playPath": "games-v8.3/witchcat/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.3/witchcat/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-019",
+              "zh": "The character’s movement destination overlaps a hole tile during active gameplay → The character begins a fall animation, moving toward the hole while the character sprite shrinks."
+            },
+            {
+              "id": "target-035",
+              "zh": "A moving fireball reaches a stone flower tile → The fireball sprite disappears and the stone flower tile disappears from the scene."
+            },
+            {
+              "id": "target-036",
+              "zh": "A moving fireball overlaps a skeleton enemy → The skeleton enemy disappears from the scene."
+            },
+            {
+              "id": "target-037",
+              "zh": "A moving fireball overlaps a mommy enemy → The mommy enemy disappears from the scene."
+            },
+            {
+              "id": "target-056",
+              "zh": "A season change completes for a season different from the current one → The gameplay background is redrawn to the newly selected season’s visual style."
+            },
+            {
+              "id": "target-058",
+              "zh": "The player performs the action input while touching the summer season orb → The touched orb sprite disappears from the map, the top-right heart display gains one heart icon compared with immediately before the input, and a black dialogue panel displays “IN SUMMER, ROOTS GROW” and “AND USE THE VINES TO CLIMB” as two text lines."
+            },
+            {
+              "id": "target-060",
+              "zh": "The player performs the action input while touching the spring season orb → The touched orb sprite disappears from the map, the top-right heart display gains one heart icon compared with immediately before the input, and a black dialogue panel displays “IN SPRING, STONE FLOWERS” and “BLOOM” as two text lines."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-025",
+              "zh": "The character overlaps an active spike tile after the spike’s first animation frame while not invulnerable → The character sprite begins the invulnerability flashing effect, alternating between its normal palette and a winter-colored palette.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-026",
+              "zh": "The character overlaps a spike tile on the spike’s first animation frame → The character does not begin the invulnerability flashing effect during that spike frame.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-029",
+              "zh": "The player performs the action input during active gameplay when a fireball launch is accepted and the character is facing upward → A fireball sprite appears at the character’s position and travels upward.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-030",
+              "zh": "The player performs the action input during active gameplay when a fireball launch is accepted and the character is facing downward → A fireball sprite appears at the character’s position and travels downward.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-031",
+              "zh": "The player performs the action input during active gameplay when a fireball launch is accepted and the character is facing left → A fireball sprite appears at the character’s position and travels left.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-032",
+              "zh": "The player performs the action input during active gameplay when a fireball launch is accepted and the character is facing right → A fireball sprite appears at the character’s position and travels right.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-046",
+              "zh": "The player performs the action input with an inactive blade trap in the same column and a blocking tile between the trap and the character → The blade trap remains at its pre-action tile position and does not begin moving.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-062",
+              "zh": "A level is populated for a cat whose saved collection state is not collected → The cat sprite is displayed at its rescue position, and a sign panel is displayed at that cat’s collected corner position.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-034",
+              "zh": "A moving fireball reaches a bush tile → The fireball sprite disappears and the bush tile disappears from the scene.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-041",
+              "zh": "The player performs the action input with an inactive seeker trap in the same row and a blocking tile between the trap and the character → The seeker trap remains at its pre-action tile position and does not begin moving.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-047",
+              "zh": "The player performs the action input with an inactive blade trap in the same row and a blocking tile between the trap and the character → The blade trap remains at its pre-action tile position and does not begin moving.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-055",
+              "zh": "The player performs the action input while standing on a season trigger and a season change is available → A fade overlay begins covering the gameplay view as the season-change transition starts.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null
+      }
+    },
+    "the-neatness": {
+      "gpt-5.5": {
+        "status": "completed",
+        "score": {
+          "display": "94.74 (+2.63)",
+          "base": 94.74,
+          "passed": 36,
+          "denominator": 38,
+          "dynamic": 1,
+          "dynamicAddition": 2.63,
+          "potential": 97.37
+        },
+        "visualQuality": {
+          "score": 90,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 50,
+          "renderingStyleAverage": 40,
+          "videosScored": 7
+        },
+        "traceCount": 7,
+        "playPath": "games-v8.3/the-neatness/gpt-5.5/index.html",
+        "previewPath": "previews-v8.3/the-neatness/gpt-5.5.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-028",
+              "zh": "A drawing action adds new empty-cell paint in a level that contains fungus → At least one fungus-colored cell appears or changes within the fungus area after the paint is added."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-008",
+              "zh": "A connection is completed between two incompatible hotspots in a regular puzzle level → A restart message overlay appears over the gameplay view and the board returns to its reset puzzle layout.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null
+      },
+      "seed-2.0-pro": {
+        "status": "completed",
+        "score": {
+          "display": "44.74 (+0.00)",
+          "base": 44.74,
+          "passed": 17,
+          "denominator": 38,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 44.74
+        },
+        "visualQuality": {
+          "score": 88.75,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.75,
+          "renderingStyleAverage": 40,
+          "videosScored": 8
+        },
+        "traceCount": 8,
+        "playPath": "games-v8.3/the-neatness/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.3/the-neatness/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-002",
+              "zh": "A newly selected or advanced non-initial level enters its opening phase → A diagonal curtain overlay is drawn over the gameplay view during the level transition before the level is shown for play."
+            },
+            {
+              "id": "target-006",
+              "zh": "A non-final active puzzle reaches its solved state during running play → A diagonal curtain transition closes over the puzzle view."
+            },
+            {
+              "id": "target-007",
+              "zh": "The final regular level reaches its solved state during running play → After the transition, a level-select style screen is shown instead of another numbered regular puzzle level."
+            },
+            {
+              "id": "target-020",
+              "zh": "A drawing stroke is made during running play in a reflected puzzle level → The stroke is drawn on the left side of the board and a mirrored matching stroke is drawn on the right side of the board."
+            },
+            {
+              "id": "target-027",
+              "zh": "A new connection is completed between two compatible hotspots in a regular puzzle level → The connected painted path and the two compatible hotspots change to the connected paint color."
+            },
+            {
+              "id": "target-028",
+              "zh": "A drawing action adds new empty-cell paint in a level that contains fungus → At least one fungus-colored cell appears or changes within the fungus area after the paint is added."
+            },
+            {
+              "id": "target-031",
+              "zh": "An unsatisfied entry-point hotspot is displayed on a puzzle board → The hotspot's painted area is drawn in the entry-point color and a skull sprite is shown at that hotspot."
+            },
+            {
+              "id": "target-032",
+              "zh": "An unsatisfied exit-point hotspot is displayed on a puzzle board → The hotspot's painted area is drawn in the exit-point color and a grave sprite is shown at that hotspot."
+            },
+            {
+              "id": "target-035",
+              "zh": "A level with moving skull guidance text is displayed → The instruction text \"They move when you move\" is shown near the lower part of the gameplay view."
+            },
+            {
+              "id": "target-036",
+              "zh": "A satisfied entry-point hotspot is displayed on a puzzle board → The hotspot remains marked by its skull sprite while its painted area is shown in the connected paint color."
+            },
+            {
+              "id": "target-037",
+              "zh": "A satisfied exit-point hotspot is displayed on a puzzle board → The hotspot remains marked by its grave sprite while its painted area is shown in the connected paint color."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-004",
+              "zh": "The reset control is released while it is enabled during a level → The current level returns to its reset puzzle layout, removing the player's drawn connections from the board.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-009",
+              "zh": "A locked Coil level is selected from the level-select screen without Coil access enabled → A restart message overlay appears over the level-select view, and the level-select screen remains visible behind it without a curtain transition.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-010",
+              "zh": "A selectable unlocked level exit is connected on the level-select screen after the level-select entry point is satisfied → A diagonal curtain transition begins, and the level-select view is replaced by the chosen level's puzzle board after the transition.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-011",
+              "zh": "The level-select toolbar button is released while it is enabled during a level → A diagonal curtain transition closes over the current level before the level-select screen is shown.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-012",
+              "zh": "A level with exactly two enabled toolbar buttons is displayed → The right-side toolbar shows two stacked buttons: a music button and a reset button.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-019",
+              "zh": "During running play, the skull-turn timer selects an entry-point skull to turn → One entry-point skull changes its facing direction in the gameplay view.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-029",
+              "zh": "A drawing stroke passes over a solid board tile during running play → The tile keeps its solid tile color and no paint mark appears on that tile.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-030",
+              "zh": "A drawing stroke passes over a fungus cell during running play → The fungus cell keeps its fungus color and no paint mark appears on that cell.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-033",
+              "zh": "The level-select screen is displayed → Selectable level labels are arranged along a curved arc, exactly three Coil labels are placed below the arc, and the title text \"The Neatness\" is shown near the lower part of the level-select view.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-038",
+              "zh": "The ending artwork is rendered with opacity at full value → A gray rectangular panel is shown near the center of the board with the princess sprite visible inside it.",
+              "cause": "源码分析确认未实现"
+            }
+          ]
+        },
+        "issue": null
+      }
+    },
+    "q1k3": {
+      "gpt-5.5": {
+        "status": "completed",
+        "score": {
+          "display": "97.14 (+0.00)",
+          "base": 97.14,
+          "passed": 34,
+          "denominator": 35,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 97.14
+        },
+        "visualQuality": {
+          "score": 90,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 50,
+          "renderingStyleAverage": 40,
+          "videosScored": 10
+        },
+        "traceCount": 10,
+        "playPath": "games-v8.3/q1k3/gpt-5.5/index.html",
+        "previewPath": "previews-v8.3/q1k3/gpt-5.5.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-005",
+              "zh": "The player presses jump while standing on the ground with jump re-enabled → The first-person viewpoint rises upward from its standing height."
+            }
+          ],
+          "replayTrace": []
+        },
+        "issue": null
+      },
+      "seed-2.0-pro": {
+        "status": "completed",
+        "score": {
+          "display": "28.57 (+40.00)",
+          "base": 28.57,
+          "passed": 10,
+          "denominator": 35,
+          "dynamic": 14,
+          "dynamicAddition": 40,
+          "potential": 68.57
+        },
+        "visualQuality": {
+          "score": 90,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 50,
+          "renderingStyleAverage": 40,
+          "videosScored": 7
+        },
+        "traceCount": 7,
+        "playPath": "games-v8.3/q1k3/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.3/q1k3/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-005",
+              "zh": "The player presses jump while standing on the ground with jump re-enabled → The first-person viewpoint rises upward from its standing height."
+            },
+            {
+              "id": "target-018",
+              "zh": "The player collects a nail ammunition pickup while carrying the nailgun → The nail ammunition pickup disappears from the scene."
+            },
+            {
+              "id": "target-023",
+              "zh": "The player death restart delay elapses → The current level is reloaded to its starting layout after the “YOU DIED” message has been shown."
+            },
+            {
+              "id": "target-027",
+              "zh": "An idle enemy receives nonlethal damage → The enemy turns to face the player and begins moving toward the player."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-022",
+              "zh": "The player’s health reaches zero from incoming damage → A centered overlay message reading “YOU DIED” is displayed over the gameplay view, and the health HUD shows 0.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-025",
+              "zh": "An idle enemy has the player within its awareness range with an unobstructed line of sight → The enemy turns to face the player.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-026",
+              "zh": "A patrolling enemy has the player within its awareness range with an unobstructed line of sight → The enemy turns to face the player instead of continuing along its patrol path.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-031",
+              "zh": "An idle enemy has the player within its awareness range but without an unobstructed line of sight during its state update → The enemy remains in place and does not turn or move toward the player.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-033",
+              "zh": "A grunt enemy reaches its attack execution state while facing the player → A muzzle-flash light appears at the grunt during the attack.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-034",
+              "zh": "A zombie receives a damage amount that is not above its gibbing threshold → The zombie model remains visible in its standing enemy form after the hit.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-035",
+              "zh": "A visible bouncing entity collides vertically with a surface while its vertical speed is above its bounce threshold → The entity reverses vertical direction and rebounds away from the surface immediately after contact.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-007",
+              "zh": "The player looks downward to the vertical look limit → The view remains capped at the maximum downward pitch, and additional downward look input does not rotate the view beyond that capped angle.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-010",
+              "zh": "The player attempts to fire a selected projectile weapon when the weapon is ready to shoot and has the required ammunition → A projectile is emitted from the player’s weapon during that firing attempt.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-011",
+              "zh": "The player attempts to fire a selected muzzle-flash weapon when the weapon is ready to shoot and has the required ammunition → A muzzle-flash effect appears at the player’s weapon during that firing attempt.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-012",
+              "zh": "The player attempts to fire a selected ammunition-using weapon when that weapon has zero ammunition and its reload wait has elapsed → No projectile or muzzle-flash effect is rendered for that firing attempt.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-013",
+              "zh": "The player attempts to fire again before the selected weapon’s reload wait has elapsed → No new projectile or muzzle-flash effect is rendered for that firing attempt.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-015",
+              "zh": "The player approaches an unlocked door while within the door activation range → The door panel opens from its closed position, revealing the passage behind it.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-016",
+              "zh": "An open door has had no player within its activation range for its reset delay → The door panel closes back toward its closed position.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-017",
+              "zh": "The player collects the key pickup → The key pickup disappears from the scene and a message reading “YOU GOT THE KEY!” is displayed over the gameplay view.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-019",
+              "zh": "The player collects a grenade ammunition pickup while carrying the grenade launcher → The grenade ammunition pickup disappears from the scene.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-020",
+              "zh": "The player reaches a non-final level exit trigger → The gameplay view switches from the current level layout to the next level’s map layout.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-021",
+              "zh": "The player reaches the level-completion transition after the last available level → An end message is displayed with the heading “THE END” and the text “THANKS FOR PLAYING ❤”, and the visible health and ammo HUD text areas are blank.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-028",
+              "zh": "A patrolling enemy receives nonlethal damage → The enemy turns to face the player and begins moving toward the player instead of continuing its patrol path.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-032",
+              "zh": "A patrolling enemy collides horizontally with a wall or ledge boundary → The enemy reverses its patrol direction and walks back along its path.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-024",
+              "zh": "A visible damageable entity’s health reaches zero from incoming damage → The entity’s original visible model is no longer rendered after the damage is applied.",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null
+      }
+    },
     "island-not-found": {}
   }
 }
