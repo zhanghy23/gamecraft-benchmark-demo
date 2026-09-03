@@ -8455,21 +8455,21 @@
       },
       "seed-2.0-pro": {
         "status": "completed",
-        "runId": null,
+        "runId": "seed-2.0-pro-v8.3-rubric2-20260903-000416",
         "score": {
-          "display": "28.57 (+40.00)",
-          "base": 28.57,
-          "passed": 10,
+          "display": "25.71 (+40.00)",
+          "base": 25.71,
+          "passed": 9,
           "denominator": 35,
           "dynamic": 14,
           "dynamicAddition": 40,
-          "potential": 68.57
+          "potential": 65.71
         },
         "visualQuality": {
-          "score": 90,
+          "score": 89,
           "maximumScore": 100,
-          "technicalPresentationAverage": 50,
-          "renderingStyleAverage": 40,
+          "technicalPresentationAverage": 47.86,
+          "renderingStyleAverage": 41.14,
           "videosScored": 7
         },
         "traceCount": 7,
@@ -8492,6 +8492,10 @@
             {
               "id": "target-027",
               "zh": "一个空闲敌人受到非致命伤害 → 敌人转向面朝玩家，并开始向玩家移动。"
+            },
+            {
+              "id": "target-030",
+              "zh": "一个巡逻敌人在其状态更新期间，玩家位于其警觉范围之外 → 敌人继续沿其巡逻路径前进，并且不会转向玩家或直接向玩家移动。"
             }
           ],
           "replayTrace": [
@@ -8603,7 +8607,24 @@
           ]
         },
         "issue": null,
-        "timing": null
+        "timing": {
+          "runId": "seed-2.0-pro-v8.3-rubric2-20260903-000416",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T03:41:48+08:00",
+          "finishedAt": "2026-09-03T03:51:20+08:00",
+          "totalDurationMs": 571773,
+          "stages": [
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T03:41:48+08:00",
+              "finishedAt": "2026-09-03T03:51:20+08:00",
+              "durationMs": 571756,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "island-not-found": {
