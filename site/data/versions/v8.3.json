@@ -7701,6 +7701,97 @@
             }
           ]
         }
+      },
+      "gpt-5.4": {
+        "status": "completed",
+        "runId": "gpt-5.4-v8.3-rubric2-resume-20260903-195159",
+        "score": {
+          "display": "96.88 (+0.00)",
+          "base": 96.88,
+          "passed": 31,
+          "denominator": 32,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 96.88
+        },
+        "visualQuality": {
+          "score": 92.4,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.4,
+          "renderingStyleAverage": 44,
+          "videosScored": 5
+        },
+        "traceCount": 5,
+        "playPath": "games-v8.3/cannonbolf/gpt-5.4/index.html",
+        "previewPath": "previews-v8.3/cannonbolf/gpt-5.4.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-028",
+              "zh": "非最终关卡中，最后一个未被命中的城堡在没有剩余弹药时被处理为命中 → 该位置的完整城堡不再被绘制，城堡原位置会出现多个彼此分离的碎片，并且游戏画面上会显示居中的消息 \"PAR!\"。"
+            }
+          ],
+          "replayTrace": []
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.4-v8.3-rubric2-resume-20260903-195159",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T19:54:40+08:00",
+          "finishedAt": "2026-09-03T20:26:44+08:00",
+          "totalDurationMs": 1924021,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-03T19:54:40+08:00",
+              "finishedAt": "2026-09-03T19:58:14+08:00",
+              "durationMs": 214082,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-03T19:58:14+08:00",
+              "finishedAt": "2026-09-03T20:09:39+08:00",
+              "durationMs": 685340,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-03T20:09:39+08:00",
+              "finishedAt": "2026-09-03T20:22:05+08:00",
+              "durationMs": 745926,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-03T20:22:05+08:00",
+              "finishedAt": "2026-09-03T20:22:06+08:00",
+              "durationMs": 173,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-03T20:22:06+08:00",
+              "finishedAt": "2026-09-03T20:22:51+08:00",
+              "durationMs": 45453,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T20:22:51+08:00",
+              "finishedAt": "2026-09-03T20:26:44+08:00",
+              "durationMs": 233006,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "market-street-tycoon": {
