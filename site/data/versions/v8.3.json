@@ -7899,33 +7899,28 @@
     "the-neatness": {
       "gpt-5.5": {
         "status": "completed",
-        "runId": null,
+        "runId": "gpt-5.5-v8.3-rubric2-20260903-000416",
         "score": {
-          "display": "94.74 (+2.63)",
-          "base": 94.74,
-          "passed": 36,
+          "display": "97.37 (+2.63)",
+          "base": 97.37,
+          "passed": 37,
           "denominator": 38,
           "dynamic": 1,
           "dynamicAddition": 2.63,
-          "potential": 97.37
+          "potential": 100
         },
         "visualQuality": {
-          "score": 90,
+          "score": 93.29,
           "maximumScore": 100,
-          "technicalPresentationAverage": 50,
-          "renderingStyleAverage": 40,
+          "technicalPresentationAverage": 48.29,
+          "renderingStyleAverage": 45,
           "videosScored": 7
         },
         "traceCount": 7,
         "playPath": "games-v8.3/the-neatness/gpt-5.5/index.html",
         "previewPath": "previews-v8.3/the-neatness/gpt-5.5.png",
         "unmet": {
-          "vlm": [
-            {
-              "id": "target-028",
-              "zh": "在包含真菌的关卡中，绘制动作添加了新的空单元格颜料 → 添加颜料后，真菌区域内至少有一个真菌颜色的单元格出现或发生变化。"
-            }
-          ],
+          "vlm": [],
           "replayTrace": [
             {
               "id": "target-008",
@@ -7935,7 +7930,24 @@
           ]
         },
         "issue": null,
-        "timing": null
+        "timing": {
+          "runId": "gpt-5.5-v8.3-rubric2-20260903-000416",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T04:08:42+08:00",
+          "finishedAt": "2026-09-03T04:14:05+08:00",
+          "totalDurationMs": 322906,
+          "stages": [
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T04:08:42+08:00",
+              "finishedAt": "2026-09-03T04:14:05+08:00",
+              "durationMs": 322889,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       },
       "seed-2.0-pro": {
         "status": "completed",
