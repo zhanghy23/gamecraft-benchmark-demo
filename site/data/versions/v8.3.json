@@ -8054,21 +8054,21 @@
       },
       "seed-2.0-pro": {
         "status": "completed",
-        "runId": null,
+        "runId": "seed-2.0-pro-v8.3-rubric2-20260903-000416",
         "score": {
-          "display": "70.77 (+6.15)",
-          "base": 70.77,
-          "passed": 46,
+          "display": "69.23 (+6.15)",
+          "base": 69.23,
+          "passed": 45,
           "denominator": 65,
           "dynamic": 4,
           "dynamicAddition": 6.15,
-          "potential": 76.92
+          "potential": 75.38
         },
         "visualQuality": {
-          "score": 85.5,
+          "score": 88.55,
           "maximumScore": 100,
-          "technicalPresentationAverage": 47.5,
-          "renderingStyleAverage": 38,
+          "technicalPresentationAverage": 47.35,
+          "renderingStyleAverage": 41.2,
           "videosScored": 20
         },
         "traceCount": 20,
@@ -8079,6 +8079,10 @@
             {
               "id": "target-019",
               "zh": "角色的移动目的地与坑洞图块重叠，且处于游戏进行中 → 角色开始下落动画，角色朝坑洞移动，同时角色精灵缩小。"
+            },
+            {
+              "id": "target-028",
+              "zh": "角色在非无敌状态下与妈咪敌人重叠 → 角色精灵开始无敌闪烁效果，在正常调色板和冬季配色调色板之间交替。"
             },
             {
               "id": "target-035",
@@ -8093,16 +8097,16 @@
               "zh": "一个移动中的火球与一个 mommy 敌人重叠 → 该 mommy 敌人从场景中消失。"
             },
             {
+              "id": "target-038",
+              "zh": "玩家执行动作输入，且一个未激活的 seeker 陷阱位于角色下方、与角色处于同一条无遮挡的列中 → 该 seeker 陷阱开始向上移动，朝向角色所在的行。"
+            },
+            {
               "id": "target-056",
               "zh": "完成一次与当前季节不同的季节变更时 → 游戏背景会以新选择季节的视觉风格重新绘制。"
             },
             {
               "id": "target-058",
               "zh": "玩家在接触夏季季节宝珠时执行操作输入 → 被接触的宝珠精灵从地图上消失，右上角心形显示相比输入前立即增加一个心形图标，并且黑色对话面板以两行文本显示“IN SUMMER, ROOTS GROW”和“AND USE THE VINES TO CLIMB”。"
-            },
-            {
-              "id": "target-060",
-              "zh": "玩家在接触春季季节宝珠时执行操作输入 → 被接触的宝珠精灵从地图上消失，右上角心形显示相比输入前立即增加一个心形图标，并且黑色对话面板以两行文本显示“IN SPRING, STONE FLOWERS”和“BLOOM”。"
             }
           ],
           "replayTrace": [
@@ -8169,7 +8173,24 @@
           ]
         },
         "issue": null,
-        "timing": null
+        "timing": {
+          "runId": "seed-2.0-pro-v8.3-rubric2-20260903-000416",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T03:02:57+08:00",
+          "finishedAt": "2026-09-03T03:30:21+08:00",
+          "totalDurationMs": 1644787,
+          "stages": [
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T03:02:57+08:00",
+              "finishedAt": "2026-09-03T03:30:21+08:00",
+              "durationMs": 1644769,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "the-neatness": {
