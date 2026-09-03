@@ -4893,7 +4893,7 @@
     "kuro-neko-market": {
       "gpt-5.5": {
         "status": "completed",
-        "runId": null,
+        "runId": "gpt-5.5-v8.3-rubric2-20260903-000416",
         "score": {
           "display": "94.44 (+0.00)",
           "base": 94.44,
@@ -4904,10 +4904,10 @@
           "potential": 94.44
         },
         "visualQuality": {
-          "score": 90,
+          "score": 94.08,
           "maximumScore": 100,
-          "technicalPresentationAverage": 50,
-          "renderingStyleAverage": 40,
+          "technicalPresentationAverage": 48.58,
+          "renderingStyleAverage": 45.5,
           "videosScored": 12
         },
         "traceCount": 12,
@@ -4916,8 +4916,8 @@
         "unmet": {
           "vlm": [
             {
-              "id": "target-015",
-              "zh": "条件：传送带上的一条鱼带有已附加的纸质票据，且票据上的打印数值与该鱼所需分数匹配；该鱼尝试计分。→ 预期结果：鱼周围出现对勾标记和橙色射线粒子，并且鱼变为半透明外观。"
+              "id": "target-016",
+              "zh": "条件：传送带上的一条鱼带有已附加的纸质票据，且票据上的打印数值与该鱼所需分数不匹配；该鱼尝试计分。→ 预期结果：鱼周围出现叉形粒子，并且鱼保持完全不透明。"
             }
           ],
           "replayTrace": [
@@ -4929,7 +4929,24 @@
           ]
         },
         "issue": null,
-        "timing": null
+        "timing": {
+          "runId": "gpt-5.5-v8.3-rubric2-20260903-000416",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T00:39:23+08:00",
+          "finishedAt": "2026-09-03T00:47:17+08:00",
+          "totalDurationMs": 474410,
+          "stages": [
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T00:39:23+08:00",
+              "finishedAt": "2026-09-03T00:47:17+08:00",
+              "durationMs": 474393,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       },
       "seed-2.0-pro": {
         "status": "completed",
