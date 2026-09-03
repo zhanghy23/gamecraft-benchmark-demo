@@ -7920,6 +7920,117 @@
             }
           ]
         }
+      },
+      "minimax-m2.7": {
+        "status": "completed",
+        "runId": "minimax-m2.7-v8.3-rubric2-20260903-000416",
+        "score": {
+          "display": "86.84 (+5.26)",
+          "base": 86.84,
+          "passed": 33,
+          "denominator": 38,
+          "dynamic": 2,
+          "dynamicAddition": 5.26,
+          "potential": 92.11
+        },
+        "visualQuality": {
+          "score": 90.78,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48,
+          "renderingStyleAverage": 42.78,
+          "videosScored": 9
+        },
+        "traceCount": 9,
+        "playPath": "games-v8.3/necrotic-commander/minimax-m2.7/index.html",
+        "previewPath": "previews-v8.3/necrotic-commander/minimax-m2.7.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-021",
+              "zh": "选择了 Drain Soul，且当前已有另一个不同敌人正在被吸取时，点击一个敌人 → 先前正在被吸取的敌人恢复为正常的非青色颜色，并失去其附着的吸取粒子效果；同时，被点击的敌人变为青色，并附着一个吸取粒子效果。"
+            },
+            {
+              "id": "target-036",
+              "zh": "活动游戏过程中，死灵法师的生命值达到零或以下 → 一个红黑色粒子爆发出现在死灵法师的位置，并且游戏内生命值 HUD 显示 \"Health (0)\"。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-037",
+              "zh": "条件：死灵法师已死亡，且游戏结束延迟时间已过去 → 预期结果：游戏画面上方出现一个黑色面板，面板上显示文本 \"You survived to wave\"，其后跟随已到达的波次数字，并显示文本 \"Click to play again\"。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-038",
+              "zh": "条件：死灵法师已死亡，且游戏结束延迟时间已过去后发生指针按下或触摸按下 → 预期结果：游戏结束面板消失，并显示一个全新的战场；死灵法师存在，且 HUD 生命值恢复为 \"Health (100)\"。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-020",
+              "zh": "选择了 Drain Soul，且当前没有正在被吸取的其他敌人时，点击一个敌人 → 在后续帧中，被点击的敌人显示为青色，并且一个吸取粒子效果附着在该敌人身上。",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "minimax-m2.7-v8.3-rubric2-20260903-000416",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T12:48:12+08:00",
+          "finishedAt": "2026-09-03T14:27:56+08:00",
+          "totalDurationMs": 5984197,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-03T12:48:12+08:00",
+              "finishedAt": "2026-09-03T13:29:07+08:00",
+              "durationMs": 2454344,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-03T13:29:07+08:00",
+              "finishedAt": "2026-09-03T13:43:15+08:00",
+              "durationMs": 848178,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-03T13:43:15+08:00",
+              "finishedAt": "2026-09-03T14:16:58+08:00",
+              "durationMs": 2023509,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-03T14:16:58+08:00",
+              "finishedAt": "2026-09-03T14:16:58+08:00",
+              "durationMs": 164,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-03T14:16:58+08:00",
+              "finishedAt": "2026-09-03T14:19:43+08:00",
+              "durationMs": 164355,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T14:19:43+08:00",
+              "finishedAt": "2026-09-03T14:27:56+08:00",
+              "durationMs": 493607,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "space-huggers": {
