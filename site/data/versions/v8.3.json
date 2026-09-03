@@ -5004,16 +5004,131 @@
     },
     "13-steps-to-escape": {
       "gpt-5.5": {
-        "status": "failed",
-        "runId": "gpt-5.5-v8.3-full-20260828-163909",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "生成源码无法构建：src/main.ts 的泛型类型缺少右尖括号，构建器报 Expected '>' but found '['。",
-        "timing": null
+        "status": "completed",
+        "runId": "gpt-5.5-v8.3-rubric2-20260903-000416",
+        "score": {
+          "display": "88.00 (+4.00)",
+          "base": 88,
+          "passed": 66,
+          "denominator": 75,
+          "dynamic": 3,
+          "dynamicAddition": 4,
+          "potential": 92
+        },
+        "visualQuality": {
+          "score": 93.24,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.52,
+          "renderingStyleAverage": 44.72,
+          "videosScored": 29
+        },
+        "traceCount": 29,
+        "playPath": "games-v8.3/13-steps-to-escape/gpt-5.5/index.html",
+        "previewPath": "previews-v8.3/13-steps-to-escape/gpt-5.5.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-034",
+              "zh": "当木箱完成移动并到达一个开关触发图块上 → 与木箱目标位置处触发器具有相同朝向的开关图块在开关开启外观与开关关闭外观之间切换。"
+            },
+            {
+              "id": "target-035",
+              "zh": "当木箱被从一个其下方包含开关触发器的图块上推离 → 随着木箱离开该图块，与木箱下方触发器具有相同朝向的开关图块在开关开启外观与开关关闭外观之间切换。"
+            },
+            {
+              "id": "target-037",
+              "zh": "条件：一个箱子完成移动并到达一个开启状态开关地块 → 预期结果：该箱子在移除动画中缩小，直到该箱子在开启状态开关地块上不再可见。"
+            },
+            {
+              "id": "target-042",
+              "zh": "条件：游戏处于活动游玩状态，处理移动指令时，目标位置包含一把锁，并且玩家至少拥有一把已收集的钥匙 → 预期结果：玩家角色保持在当前地块上并面向该锁；锁地块在移除动画中缩小，直到该锁不再可见。"
+            },
+            {
+              "id": "target-051",
+              "zh": "条件：一次已完成的玩家移动离开开关触发地块 → 预期结果：与该触发地块方向相同的开关地块在开启状态开关外观与关闭状态开关外观之间切换。"
+            },
+            {
+              "id": "target-060",
+              "zh": "在关卡编辑器中的已填充网格单元上，右键图块移除点击被接受 → 被点击的编辑器网格单元变为空网格单元。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-055",
+              "zh": "最大步数重生延迟在玩家触发最大步数重生后结束 → 当玩家角色位于当前出生格时，可见步数计数器显示 0。",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-073",
+              "zh": "在启用声音的状态下渲染 UI 层时点击声音图标 → 声音图标从表示声音开启的图案变为表示静音的声音关闭图案。",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-074",
+              "zh": "在静音状态下渲染 UI 层时点击声音图标 → 声音图标从表示静音的声音关闭图案变为表示声音开启的图案。",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.5-v8.3-rubric2-20260903-000416",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T00:47:17+08:00",
+          "finishedAt": "2026-09-03T01:46:40+08:00",
+          "totalDurationMs": 3562835,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-03T00:47:17+08:00",
+              "finishedAt": "2026-09-03T00:50:17+08:00",
+              "durationMs": 179428,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-03T00:50:17+08:00",
+              "finishedAt": "2026-09-03T01:15:27+08:00",
+              "durationMs": 1510121,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-03T01:15:27+08:00",
+              "finishedAt": "2026-09-03T01:24:32+08:00",
+              "durationMs": 545145,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-03T01:24:32+08:00",
+              "finishedAt": "2026-09-03T01:24:32+08:00",
+              "durationMs": 222,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-03T01:24:32+08:00",
+              "finishedAt": "2026-09-03T01:26:32+08:00",
+              "durationMs": 119203,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T01:26:32+08:00",
+              "finishedAt": "2026-09-03T01:46:40+08:00",
+              "durationMs": 1208677,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       },
       "seed-2.0-pro": {
         "status": "completed",
