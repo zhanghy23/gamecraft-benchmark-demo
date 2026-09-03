@@ -5654,21 +5654,21 @@
     "casual-crusade": {
       "gpt-5.5": {
         "status": "completed",
-        "runId": null,
+        "runId": "gpt-5.5-v8.3-rubric2-20260903-000416",
         "score": {
-          "display": "68.92 (+13.51)",
-          "base": 68.92,
-          "passed": 51,
+          "display": "67.57 (+13.51)",
+          "base": 67.57,
+          "passed": 50,
           "denominator": 74,
           "dynamic": 10,
           "dynamicAddition": 13.51,
-          "potential": 82.43
+          "potential": 81.08
         },
         "visualQuality": {
-          "score": 90,
+          "score": 91.86,
           "maximumScore": 100,
-          "technicalPresentationAverage": 50,
-          "renderingStyleAverage": 40,
+          "technicalPresentationAverage": 48.43,
+          "renderingStyleAverage": 43.43,
           "videosScored": 7
         },
         "traceCount": 7,
@@ -5677,8 +5677,12 @@
         "unmet": {
           "vlm": [
             {
-              "id": "target-067",
-              "zh": "当奖励面板打开时，最后一个必需奖励选项开始结算 → 奖励面板消失，奖励选项不再可见。"
+              "id": "target-040",
+              "zh": "具有生成空白地块效果的卡牌在至少有一个相邻的空非奖励棋盘地块时激活 → 从激活的卡牌处出现一个向外扩张的圆形脉冲，并且至少一个此前为空的相邻棋盘地块显示一张空白卡牌。"
+            },
+            {
+              "id": "target-064",
+              "zh": "当奖励选择可用时，点击一个未悬停的奖励选项 → 该奖励选项保留在奖励面板中，并显示为其悬停高亮状态；该次点击不会移除任何奖励选项。"
             },
             {
               "id": "target-068",
@@ -5792,7 +5796,24 @@
           ]
         },
         "issue": null,
-        "timing": null
+        "timing": {
+          "runId": "gpt-5.5-v8.3-rubric2-20260903-000416",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T01:53:00+08:00",
+          "finishedAt": "2026-09-03T02:02:46+08:00",
+          "totalDurationMs": 585958,
+          "stages": [
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T01:53:00+08:00",
+              "finishedAt": "2026-09-03T02:02:46+08:00",
+              "durationMs": 585940,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       },
       "seed-2.0-pro": {
         "status": "completed",
