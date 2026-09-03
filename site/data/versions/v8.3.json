@@ -8248,21 +8248,21 @@
       },
       "seed-2.0-pro": {
         "status": "completed",
-        "runId": null,
+        "runId": "seed-2.0-pro-v8.3-rubric2-20260903-000416",
         "score": {
-          "display": "44.74 (+0.00)",
-          "base": 44.74,
-          "passed": 17,
+          "display": "39.47 (+0.00)",
+          "base": 39.47,
+          "passed": 15,
           "denominator": 38,
           "dynamic": 0,
           "dynamicAddition": 0,
-          "potential": 44.74
+          "potential": 39.47
         },
         "visualQuality": {
-          "score": 88.75,
+          "score": 89.63,
           "maximumScore": 100,
-          "technicalPresentationAverage": 48.75,
-          "renderingStyleAverage": 40,
+          "technicalPresentationAverage": 47.38,
+          "renderingStyleAverage": 42.25,
           "videosScored": 8
         },
         "traceCount": 8,
@@ -8283,8 +8283,16 @@
               "zh": "最终常规关卡在运行游玩期间达到已解开状态 → 转场之后显示关卡选择样式的画面，而不是另一个带编号的常规谜题关卡。"
             },
             {
+              "id": "target-018",
+              "zh": "对一个具有相邻已连接邻格的网格单元执行单格涂色操作 → 目标单元变为相邻连接的颜色。"
+            },
+            {
               "id": "target-020",
               "zh": "在镜像谜题关卡的运行游玩期间绘制一笔线条 → 该笔线条绘制在棋盘左侧，并且棋盘右侧绘制出一笔与其镜像匹配的线条。"
+            },
+            {
+              "id": "target-025",
+              "zh": "在运行游玩期间，一笔绘制线条经过一个已经连接的颜料单元格 → 该已经连接的单元格保持其已连接颜色，并且不会在其上绘制新的未连接颜料标记。"
             },
             {
               "id": "target-027",
@@ -8369,7 +8377,24 @@
           ]
         },
         "issue": null,
-        "timing": null
+        "timing": {
+          "runId": "seed-2.0-pro-v8.3-rubric2-20260903-000416",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T03:30:21+08:00",
+          "finishedAt": "2026-09-03T03:41:48+08:00",
+          "totalDurationMs": 686298,
+          "stages": [
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T03:30:22+08:00",
+              "finishedAt": "2026-09-03T03:41:48+08:00",
+              "durationMs": 686280,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "q1k3": {
