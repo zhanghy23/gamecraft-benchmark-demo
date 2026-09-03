@@ -26,6 +26,12 @@
       "label": "GPT-5.4",
       "provider": "OpenAI",
       "order": 4
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "label": "DeepSeek-V4-Flash",
+      "provider": "DeepSeek",
+      "order": 5
     }
   ],
   "games": [
@@ -4788,6 +4794,194 @@
               "durationMs": 992047,
               "status": "failed",
               "exitCode": 1
+            }
+          ]
+        }
+      },
+      "deepseek-v4-flash": {
+        "status": "completed",
+        "runId": "deepseek-v4-flash-v8.3-rubric2-imported-20260903-165310",
+        "score": {
+          "display": "55.77 (+23.08)",
+          "base": 55.77,
+          "passed": 29,
+          "denominator": 52,
+          "dynamic": 12,
+          "dynamicAddition": 23.08,
+          "potential": 78.85
+        },
+        "visualQuality": {
+          "score": 87.57,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 46.5,
+          "renderingStyleAverage": 41.07,
+          "videosScored": 14
+        },
+        "traceCount": 14,
+        "playPath": "games-v8.3/radius-raid/deepseek-v4-flash/index.html",
+        "previewPath": "previews-v8.3/radius-raid/deepseek-v4-flash.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-001",
+              "zh": "游戏页面已完成初始加载和设置 → 游戏显示菜单屏幕，并且可见“PLAY”按钮。"
+            },
+            {
+              "id": "target-013",
+              "zh": "在活动游戏玩法期间玩家飞船存活时按住 Left（左）移动输入 → 只要该输入保持按住，玩家飞船的位置就在后续帧中向游戏区域左方移动。"
+            },
+            {
+              "id": "target-014",
+              "zh": "在活动游戏玩法期间玩家飞船存活时按住 Right（右）移动输入，并且未按住 Left（左）移动输入 → 只要该输入保持按住，玩家飞船的位置就在后续帧中向游戏区域右方移动。"
+            },
+            {
+              "id": "target-029",
+              "zh": "游戏处于进行状态时，一个可见的环绕型敌人进行更新 → 该敌人的位置在连续游戏帧中围绕玩家飞船变化。"
+            },
+            {
+              "id": "target-039",
+              "zh": "条件：生命强化道具计时器处于激活状态，且玩家生命条未满 → 预期结果：在连续的游戏帧中，玩家生命条的填充部分向右延伸，直到达到生命条的完整宽度或计时器结束。"
+            },
+            {
+              "id": "target-040",
+              "zh": "条件：游戏过程中，减速敌人强化道具计时器处于激活状态 → 预期结果：半透明蓝色叠层覆盖游戏视图，并且可见敌人绘制有蓝色调叠层。"
+            },
+            {
+              "id": "target-044",
+              "zh": "条件：一局结束后显示游戏结束屏幕 → 预期结果：冻结的游戏画面上叠加显示 PLAY AGAIN 和 MENU 按钮，并且结果表在本局数值旁显示 SCORE、LEVEL、KILLS、BULLETS、POWERUPS 和 TIME 标签。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-002",
+              "zh": "在菜单屏幕显示时激活“PLAY”按钮 → 菜单屏幕被活动游戏玩法视图替换。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-008",
+              "zh": "已从活动游戏玩法进入暂停视图 → 暂停视图显示冻结的游戏画面，并显示“PAUSED”文字以及可见的“RESUME”和“MENU”按钮。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-009",
+              "zh": "在暂停视图显示时激活“RESUME”按钮 → 暂停叠加层被移除，并再次显示活动游戏玩法。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-045",
+              "zh": "条件：在游戏结束屏幕上激活 PLAY AGAIN 按钮 → 预期结果：游戏结束屏幕被新一局的活跃游戏视图替换。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-010",
+              "zh": "从暂停屏幕激活“MENU”按钮，并接受返回菜单确认 → 游戏返回菜单屏幕，并且“PLAY”按钮可见。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-022",
+              "zh": "一颗穿透子弹在达到命中上限之前，与一个此前尚未命中过的敌人发生碰撞 → 命中粒子效果出现在该敌人处，并且子弹线继续越过撞击点。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-023",
+              "zh": "游戏处于进行状态时，一颗穿透子弹与其第 4 个不同的敌人发生碰撞 → 命中粒子效果出现在该敌人处，并且子弹线在撞击后消失。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-027",
+              "zh": "游戏处于进行状态时，一个具有生成能力的可见敌人完成其生成间隔 → 一个新敌人出现在该生成敌人的位置。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-031",
+              "zh": "游戏处于进行状态时，一个可见的直接追踪型敌人进行更新 → 该敌人圆形在连续游戏帧中沿朝向玩家飞船的路径移动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-032",
+              "zh": "游戏处于进行状态时，一个可见的随机方向型敌人进行更新 → 该敌人圆形在连续游戏帧中沿直线路径移动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-033",
+              "zh": "游戏处于进行状态时，一个可见的摇摆追踪型敌人进行更新 → 该敌人在连续游戏帧中沿左右弯曲的路径朝玩家飞船前进。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-043",
+              "zh": "条件：玩家死亡序列在活跃游戏过程中开始 → 预期结果：爆炸效果出现在玩家飞船周围，并且在连续的游戏帧中，游戏层以不断变化的水平或垂直偏移绘制。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-046",
+              "zh": "条件：在游戏结束屏幕上激活 MENU 按钮 → 预期结果：游戏返回菜单屏幕，并且 PLAY 按钮可见。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-004",
+              "zh": "新重置的一局首次渲染游戏玩法视图 → HUD 的“SCORE”数值显示为 000000，“PROGRESS”进度条没有从左边缘延伸出的已填充部分，并且游戏玩法视图中可见显示 01 的关卡通知。",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-007",
+              "zh": "在活动游戏玩法期间按下暂停键 → 游戏玩法视图切换为暂停视图，冻结的游戏画面上方显示“PAUSED”文字。",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-020",
+              "zh": "游戏处于进行状态、三发射击强化道具计时器已到期且射击被接受时，武器冷却已完成 → 恰好一条子弹线段从玩家飞船处发出。",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-flash-v8.3-rubric2-imported-20260903-165310",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T17:09:34+08:00",
+          "finishedAt": "2026-09-03T21:45:05+08:00",
+          "totalDurationMs": 16531746,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-03T17:09:34+08:00",
+              "finishedAt": "2026-09-03T17:28:54+08:00",
+              "durationMs": 1160266,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-03T17:28:54+08:00",
+              "finishedAt": "2026-09-03T21:27:11+08:00",
+              "durationMs": 14297333,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-03T21:27:11+08:00",
+              "finishedAt": "2026-09-03T21:27:12+08:00",
+              "durationMs": 293,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-03T21:27:12+08:00",
+              "finishedAt": "2026-09-03T21:28:12+08:00",
+              "durationMs": 60210,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T21:28:12+08:00",
+              "finishedAt": "2026-09-03T21:45:05+08:00",
+              "durationMs": 1013610,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }

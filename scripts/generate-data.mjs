@@ -70,6 +70,7 @@ const models = [
   { id: 'seed-2.0-pro', label: 'Seed-2.0-Pro', provider: 'ByteDance', order: 2 },
   { id: 'minimax-m2.7', label: 'MiniMax-M2.7', provider: 'MiniMax', order: 3 },
   { id: 'gpt-5.4', label: 'GPT-5.4', provider: 'OpenAI', order: 4 },
+  { id: 'deepseek-v4-flash', label: 'DeepSeek-V4-Flash', provider: 'DeepSeek', order: 5 },
 ];
 
 const games = [
