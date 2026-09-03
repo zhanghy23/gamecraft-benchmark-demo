@@ -6940,21 +6940,21 @@
     "stolen-sword": {
       "gpt-5.5": {
         "status": "completed",
-        "runId": null,
+        "runId": "gpt-5.5-v8.3-rubric2-20260903-000416",
         "score": {
-          "display": "81.58 (+1.32)",
-          "base": 81.58,
-          "passed": 62,
+          "display": "80.26 (+1.32)",
+          "base": 80.26,
+          "passed": 61,
           "denominator": 76,
           "dynamic": 1,
           "dynamicAddition": 1.32,
-          "potential": 82.89
+          "potential": 81.58
         },
         "visualQuality": {
-          "score": 88.75,
+          "score": 89.44,
           "maximumScore": 100,
-          "technicalPresentationAverage": 49.38,
-          "renderingStyleAverage": 39.38,
+          "technicalPresentationAverage": 47.38,
+          "renderingStyleAverage": 42.06,
           "videosScored": 16
         },
         "traceCount": 16,
@@ -6975,12 +6975,12 @@
               "zh": "关卡转场推进到第四关 → 转场期间玩家角色从场景左下侧移入第四关的悬崖与水域游玩区域。"
             },
             {
-              "id": "target-017",
-              "zh": "第一关结尾过场中，在 theft 已经穿过场景移动之后，玩家开始追逐移动 → 在 1 秒追逐段落期间，玩家角色从场景左侧跑向右侧，同时背景滚动。"
+              "id": "target-016",
+              "zh": "第二关结尾过场在对话字幕之后召唤 theft 角色 → theft 角色出现在竖向关卡区域中玩家附近。"
             },
             {
-              "id": "target-023",
-              "zh": "一个跟随型敌人在存活期间到达开始跟随其被跟踪对象的时间 → 该跟随型敌人移动到被跟踪对象的偏移位置，随后在被跟踪对象移动时保持对齐在该偏移位置。"
+              "id": "target-017",
+              "zh": "第一关结尾过场中，在 theft 已经穿过场景移动之后，玩家开始追逐移动 → 在 1 秒追逐段落期间，玩家角色从场景左侧跑向右侧，同时背景滚动。"
             },
             {
               "id": "target-037",
@@ -6995,8 +6995,8 @@
               "zh": "剩余生命值大于 1 的未防御敌人在其受伤冷却已结束后被命中 → 敌人保持可见并维持当前尺寸，在正常颜色与灰色闪烁帧之间交替，而不是进入死亡运动。"
             },
             {
-              "id": "target-047",
-              "zh": "第三阶段复合核心敌人在其所有子敌人都已被击杀时仍然存活 → 核心敌人开始死亡运动。"
+              "id": "target-054",
+              "zh": "敌人在启用倒影的场景中被绘制在水面以下 → 敌人显示为带有水色叠加层，并且一个半透明的敌人镜像副本跨水面绘制。"
             },
             {
               "id": "target-064",
@@ -7005,6 +7005,10 @@
             {
               "id": "target-065",
               "zh": "垂直竹子平台处于活动状态 → 可见的垂直竹竿围绕其锚点位置左右振荡。"
+            },
+            {
+              "id": "target-066",
+              "zh": "绘制启用反射的山地背景 → 山地景色包含水面以下的反射版本。"
             }
           ],
           "replayTrace": [
@@ -7026,7 +7030,24 @@
           ]
         },
         "issue": null,
-        "timing": null
+        "timing": {
+          "runId": "gpt-5.5-v8.3-rubric2-20260903-000416",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T03:04:47+08:00",
+          "finishedAt": "2026-09-03T03:28:10+08:00",
+          "totalDurationMs": 1403381,
+          "stages": [
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T03:04:47+08:00",
+              "finishedAt": "2026-09-03T03:28:10+08:00",
+              "durationMs": 1403363,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       },
       "seed-2.0-pro": {
         "status": "completed",
