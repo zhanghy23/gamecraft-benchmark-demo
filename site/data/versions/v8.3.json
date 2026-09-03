@@ -5476,7 +5476,7 @@
       },
       "seed-2.0-pro": {
         "status": "completed",
-        "runId": null,
+        "runId": "seed-2.0-pro-v8.3-rubric2-20260903-000416",
         "score": {
           "display": "50.53 (+6.32)",
           "base": 50.53,
@@ -5487,10 +5487,10 @@
           "potential": 56.84
         },
         "visualQuality": {
-          "score": 88.46,
+          "score": 91,
           "maximumScore": 100,
-          "technicalPresentationAverage": 49.23,
-          "renderingStyleAverage": 39.23,
+          "technicalPresentationAverage": 47.69,
+          "renderingStyleAverage": 43.31,
           "videosScored": 13
         },
         "traceCount": 13,
@@ -5737,7 +5737,24 @@
           ]
         },
         "issue": null,
-        "timing": null
+        "timing": {
+          "runId": "seed-2.0-pro-v8.3-rubric2-20260903-000416",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T01:12:49+08:00",
+          "finishedAt": "2026-09-03T01:25:46+08:00",
+          "totalDurationMs": 776344,
+          "stages": [
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T01:12:49+08:00",
+              "finishedAt": "2026-09-03T01:25:46+08:00",
+              "durationMs": 776325,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "casual-crusade": {
