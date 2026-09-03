@@ -7258,6 +7258,35 @@
             }
           ]
         }
+      },
+      "minimax-m2.7": {
+        "status": "failed",
+        "runId": "minimax-m2.7-v8.3-rubric2-20260903-000416",
+        "stage": "generate-game",
+        "score": null,
+        "traceCount": 0,
+        "playPath": null,
+        "previewPath": null,
+        "unmet": null,
+        "issue": "生成阶段历时约75分42秒，共31次流式请求；其中30次缺少 [DONE]/finish_reason，1次没有 message content，最终未获得有效完整项目，未进入 Trace 与 Judge。",
+        "timing": {
+          "runId": "minimax-m2.7-v8.3-rubric2-20260903-000416",
+          "status": "failed",
+          "failedStage": "generate-game",
+          "startedAt": "2026-09-03T10:19:16+08:00",
+          "finishedAt": "2026-09-03T11:34:58+08:00",
+          "totalDurationMs": 4541669,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-03T10:19:16+08:00",
+              "finishedAt": "2026-09-03T11:34:58+08:00",
+              "durationMs": 4541651,
+              "status": "failed",
+              "exitCode": 1
+            }
+          ]
+        }
       }
     },
     "cannonbolf": {
