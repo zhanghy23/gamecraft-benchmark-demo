@@ -6893,21 +6893,21 @@
       },
       "seed-2.0-pro": {
         "status": "completed",
-        "runId": null,
+        "runId": "seed-2.0-pro-v8.3-rubric2-20260903-000416",
         "score": {
-          "display": "75.00 (+18.18)",
-          "base": 75,
-          "passed": 33,
+          "display": "68.18 (+18.18)",
+          "base": 68.18,
+          "passed": 30,
           "denominator": 44,
           "dynamic": 8,
           "dynamicAddition": 18.18,
-          "potential": 93.18
+          "potential": 86.36
         },
         "visualQuality": {
-          "score": 88.33,
+          "score": 89.67,
           "maximumScore": 100,
-          "technicalPresentationAverage": 48.33,
-          "renderingStyleAverage": 40,
+          "technicalPresentationAverage": 47.08,
+          "renderingStyleAverage": 42.58,
           "videosScored": 12
         },
         "traceCount": 12,
@@ -6915,6 +6915,10 @@
         "previewPath": "previews-v8.3/catculus/seed-2.0-pro.png",
         "unmet": {
           "vlm": [
+            {
+              "id": "target-008",
+              "zh": "当游戏未锁定时，通过非拖拽点击再次选择一个已选中的可见网格方块 → 该方块使用正常未选中的白色方块外观绘制，而不是选中方块颜色。"
+            },
             {
               "id": "target-011",
               "zh": "当喷雾器能力处于激活状态且游戏未锁定时，选择一个包含睡着的猫的可见网格方块 → 该方块变为其选中外观，并且睡着的猫留在该方块上，而不是跳走。"
@@ -6924,8 +6928,16 @@
               "zh": "一个猫方块被计分，且“Catnip”跳跃目标技能处于激活状态，并且可见的空目标方块具有不同的显示值 → 猫落到显示数字最高的可见空方块上。"
             },
             {
+              "id": "target-027",
+              "zh": "一个猫方块被计分，且“Box”跳跃目标技能处于激活状态，并且可见的空目标方块具有不同的显示值 → 猫落到显示数字最低的可见空方块上。"
+            },
+            {
               "id": "target-031",
               "zh": "已接受的计分选择完成结算，且“Scratch”技能处于激活状态，并且一个可见的未选中方块与被计分路径相邻 → 该相邻未选中方块的显示数字相较于结算前的值减少 1。"
+            },
+            {
+              "id": "target-039",
+              "zh": "在技能选择状态期间，接受可见的 Copycat 技能选择按钮 → 技能选择按钮消失，Copycat 技能图标出现在技能图标显示区域中，并且生命条的红色填充延伸至覆盖生命条内部的完整宽度。"
             }
           ],
           "replayTrace": [
@@ -6972,7 +6984,24 @@
           ]
         },
         "issue": null,
-        "timing": null
+        "timing": {
+          "runId": "seed-2.0-pro-v8.3-rubric2-20260903-000416",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T02:09:50+08:00",
+          "finishedAt": "2026-09-03T02:21:59+08:00",
+          "totalDurationMs": 729028,
+          "stages": [
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T02:09:50+08:00",
+              "finishedAt": "2026-09-03T02:21:59+08:00",
+              "durationMs": 729011,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "non-mewtonian-cat": {
