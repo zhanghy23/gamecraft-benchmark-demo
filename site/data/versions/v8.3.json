@@ -6346,21 +6346,21 @@
     "space-huggers": {
       "gpt-5.5": {
         "status": "completed",
-        "runId": null,
+        "runId": "gpt-5.5-v8.3-rubric2-20260903-000416",
         "score": {
-          "display": "92.13 (+2.25)",
-          "base": 92.13,
-          "passed": 82,
+          "display": "89.89 (+2.25)",
+          "base": 89.89,
+          "passed": 80,
           "denominator": 89,
           "dynamic": 2,
           "dynamicAddition": 2.25,
-          "potential": 94.38
+          "potential": 92.13
         },
         "visualQuality": {
-          "score": 89.41,
+          "score": 92.12,
           "maximumScore": 100,
-          "technicalPresentationAverage": 49.41,
-          "renderingStyleAverage": 40,
+          "technicalPresentationAverage": 48,
+          "renderingStyleAverage": 44.12,
           "videosScored": 17
         },
         "traceCount": 17,
@@ -6373,8 +6373,16 @@
               "zh": "所有当前活动玩家死亡时间均超过 9 秒 → 当前关卡视图被替换为重置后的关卡视图，并且检查点区域有一名存活玩家。"
             },
             {
+              "id": "target-041",
+              "zh": "条件：可燃物体立即开始燃烧 → 预期结果：火焰粒子附着在该物体上出现。"
+            },
+            {
               "id": "target-042",
               "zh": "条件：可燃物体的待燃烧延迟结束 → 预期结果：火焰粒子附着在该物体上出现。"
+            },
+            {
+              "id": "target-044",
+              "zh": "条件：正在燃烧的物体的燃烧计时器结束 → 预期结果：计时器结束后，该物体上不再可见附着的火焰粒子。"
             },
             {
               "id": "target-076",
@@ -6405,7 +6413,24 @@
           ]
         },
         "issue": null,
-        "timing": null
+        "timing": {
+          "runId": "gpt-5.5-v8.3-rubric2-20260903-000416",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T02:24:53+08:00",
+          "finishedAt": "2026-09-03T02:53:01+08:00",
+          "totalDurationMs": 1687548,
+          "stages": [
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T02:24:53+08:00",
+              "finishedAt": "2026-09-03T02:53:01+08:00",
+              "durationMs": 1687530,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       },
       "seed-2.0-pro": {
         "status": "completed",
