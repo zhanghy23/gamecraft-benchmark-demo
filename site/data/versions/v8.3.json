@@ -5350,15 +5350,40 @@
     "tiny-yurts": {
       "gpt-5.5": {
         "status": "failed",
-        "runId": "gpt-5.5-v8.3-full-20260828-163909",
+        "runId": "gpt-5.5-v8.3-rubric2-20260903-000416",
         "stage": "trace",
         "score": null,
         "traceCount": 0,
         "playPath": null,
         "previewPath": null,
         "unmet": null,
-        "issue": "生成源码无法构建：src/main.ts 重复声明符号 y，确定性检查在 Trace 前终止。",
-        "timing": null
+        "issue": "全流程重测在 Trace 的生成源码构建校验阶段失败：src/main.ts:40:27 重复声明符号 y；generate-game 已完成，未进入 Trace 生成与 Judge。",
+        "timing": {
+          "runId": "gpt-5.5-v8.3-rubric2-20260903-000416",
+          "status": "failed",
+          "failedStage": "trace",
+          "startedAt": "2026-09-03T01:46:40+08:00",
+          "finishedAt": "2026-09-03T01:53:00+08:00",
+          "totalDurationMs": 379661,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-03T01:46:40+08:00",
+              "finishedAt": "2026-09-03T01:52:38+08:00",
+              "durationMs": 357175,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-03T01:52:38+08:00",
+              "finishedAt": "2026-09-03T01:53:00+08:00",
+              "durationMs": 22462,
+              "status": "failed",
+              "exitCode": 1
+            }
+          ]
+        }
       },
       "seed-2.0-pro": {
         "status": "completed",
