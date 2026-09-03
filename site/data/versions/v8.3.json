@@ -6133,21 +6133,21 @@
       },
       "seed-2.0-pro": {
         "status": "completed",
-        "runId": null,
+        "runId": "seed-2.0-pro-v8.3-rubric2-20260903-000416",
         "score": {
-          "display": "75.00 (+0.00)",
-          "base": 75,
-          "passed": 24,
+          "display": "81.25 (+0.00)",
+          "base": 81.25,
+          "passed": 26,
           "denominator": 32,
           "dynamic": 0,
           "dynamicAddition": 0,
-          "potential": 75
+          "potential": 81.25
         },
         "visualQuality": {
-          "score": 89.17,
+          "score": 90.75,
           "maximumScore": 100,
-          "technicalPresentationAverage": 50,
-          "renderingStyleAverage": 39.17,
+          "technicalPresentationAverage": 48.17,
+          "renderingStyleAverage": 42.58,
           "videosScored": 12
         },
         "traceCount": 12,
@@ -6156,16 +6156,8 @@
         "unmet": {
           "vlm": [
             {
-              "id": "target-004",
-              "zh": "游戏处于 LaterAim 模式且剩余弹药大于 0 时，一次有效射击被接受 → 在该射击被接受后的第一个已渲染玩法帧中，瞄准引导线消失，一个球在游玩中可见，并且大炮可见。"
-            },
-            {
               "id": "target-016",
               "zh": "游戏处于 FirstAim 模式且垂直瞄准未达到下限时，玩家将鼠标向下移动 → 大炮炮管和瞄准引导线相对于其紧接之前的朝向，向下转动。"
-            },
-            {
-              "id": "target-019",
-              "zh": "玩家在游戏处于 LaterAim 模式且垂直瞄准未达到上限时向上移动鼠标 → 炮管和瞄准引导线会从其紧接之前的朝向向上枢转。"
             },
             {
               "id": "target-020",
@@ -6193,7 +6185,24 @@
           ]
         },
         "issue": null,
-        "timing": null
+        "timing": {
+          "runId": "seed-2.0-pro-v8.3-rubric2-20260903-000416",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T01:36:21+08:00",
+          "finishedAt": "2026-09-03T01:44:07+08:00",
+          "totalDurationMs": 466135,
+          "stages": [
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T01:36:21+08:00",
+              "finishedAt": "2026-09-03T01:44:07+08:00",
+              "durationMs": 466117,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "market-street-tycoon": {
