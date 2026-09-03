@@ -5123,6 +5123,128 @@
             }
           ]
         }
+      },
+      "gpt-5.4": {
+        "status": "completed",
+        "runId": "gpt-5.4-v8.3-rubric2-20260903-000416",
+        "score": {
+          "display": "87.93 (+10.34)",
+          "base": 87.93,
+          "passed": 51,
+          "denominator": 58,
+          "dynamic": 6,
+          "dynamicAddition": 10.34,
+          "potential": 98.28
+        },
+        "visualQuality": {
+          "score": 92.25,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.42,
+          "renderingStyleAverage": 43.83,
+          "videosScored": 12
+        },
+        "traceCount": 12,
+        "playPath": "games-v8.3/elematter/gpt-5.4/index.html",
+        "previewPath": "previews-v8.3/elematter/gpt-5.4.png",
+        "unmet": {
+          "vlm": [],
+          "replayTrace": [
+            {
+              "id": "target-021",
+              "zh": "对一个不可升级的防御塔选择升级按钮 → 防御塔升级/回收菜单保持打开，并且升级按钮仍显示为不可用状态。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-042",
+              "zh": "一个气元素 Boss 敌人在路径入口处被激活 → 一个 Boss 敌人出现在路径入口处，具有 20 px 的正方形身体、6 px 边框、黄色气元素颜色点缀和外侧角框。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-043",
+              "zh": "一个火元素 Boss 敌人在路径入口处被激活 → 一个 Boss 敌人出现在路径入口处，具有 20 px 的正方形身体、6 px 边框、红色火元素颜色点缀和外侧角框。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-048",
+              "zh": "玩家失去最后剩余的 1 条生命 → 浏览器警告对话框出现，并显示文本“You lost.”。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-049",
+              "zh": "失败警告对话框被确认 → 游戏页面重新加载到初始游戏场地视图。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-057",
+              "zh": "所有波次都已被派出并清除，且至少剩余 1 条生命 → 浏览器警告对话框出现，文本开头为“You won! Based on lives and elemental fragments left, your score is:”。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-058",
+              "zh": "胜利警告对话框被确认 → 游戏页面重新加载到初始游戏场地视图。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.4-v8.3-rubric2-20260903-000416",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T01:05:12+08:00",
+          "finishedAt": "2026-09-03T02:58:39+08:00",
+          "totalDurationMs": 6806779,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-03T01:05:12+08:00",
+              "finishedAt": "2026-09-03T01:08:27+08:00",
+              "durationMs": 194671,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-03T01:08:27+08:00",
+              "finishedAt": "2026-09-03T01:32:05+08:00",
+              "durationMs": 1418368,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-03T01:32:05+08:00",
+              "finishedAt": "2026-09-03T02:49:08+08:00",
+              "durationMs": 4622405,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-03T02:49:08+08:00",
+              "finishedAt": "2026-09-03T02:49:08+08:00",
+              "durationMs": 269,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-03T02:49:08+08:00",
+              "finishedAt": "2026-09-03T02:51:17+08:00",
+              "durationMs": 129102,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T02:51:17+08:00",
+              "finishedAt": "2026-09-03T02:58:39+08:00",
+              "durationMs": 441925,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "highway-404": {
