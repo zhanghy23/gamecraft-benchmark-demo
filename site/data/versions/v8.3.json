@@ -5404,6 +5404,98 @@
             }
           ]
         }
+      },
+      "gpt-5.4": {
+        "status": "completed",
+        "runId": "gpt-5.4-v8.3-rubric2-20260903-000416",
+        "score": {
+          "display": "97.87 (+2.13)",
+          "base": 97.87,
+          "passed": 46,
+          "denominator": 47,
+          "dynamic": 1,
+          "dynamicAddition": 2.13,
+          "potential": 100
+        },
+        "visualQuality": {
+          "score": 91.4,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.8,
+          "renderingStyleAverage": 43.6,
+          "videosScored": 10
+        },
+        "traceCount": 10,
+        "playPath": "games-v8.3/highway-404/gpt-5.4/index.html",
+        "previewPath": "previews-v8.3/highway-404/gpt-5.4.png",
+        "unmet": {
+          "vlm": [],
+          "replayTrace": [
+            {
+              "id": "target-001",
+              "zh": "在移动设备上，游戏已在玩法开始前完成初始页面设置 → 标题画面可见，其中 \"js13kgames 2020\" 居中显示在靠近顶部的位置，\"collect teapots\" 居中显示在中部上方，\"for extra points\" 居中显示在其下方，\"swipe to steer\" 居中显示在 \"for extra points\" 下方，\"jerome lecomte\" 居中显示在靠近底部的位置，文字后方是高速公路场景，英雄精灵位于靠近下方中央的位置。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.4-v8.3-rubric2-20260903-000416",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T00:31:03+08:00",
+          "finishedAt": "2026-09-03T01:05:12+08:00",
+          "totalDurationMs": 2048931,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-03T00:31:03+08:00",
+              "finishedAt": "2026-09-03T00:33:49+08:00",
+              "durationMs": 165563,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-03T00:33:49+08:00",
+              "finishedAt": "2026-09-03T00:48:50+08:00",
+              "durationMs": 901655,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-03T00:48:50+08:00",
+              "finishedAt": "2026-09-03T00:53:56+08:00",
+              "durationMs": 305727,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-03T00:53:56+08:00",
+              "finishedAt": "2026-09-03T00:53:56+08:00",
+              "durationMs": 163,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-03T00:53:56+08:00",
+              "finishedAt": "2026-09-03T00:55:50+08:00",
+              "durationMs": 114341,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T00:55:50+08:00",
+              "finishedAt": "2026-09-03T01:05:12+08:00",
+              "durationMs": 561445,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "kuro-neko-market": {
