@@ -5929,6 +5929,98 @@
             }
           ]
         }
+      },
+      "gpt-5.4": {
+        "status": "completed",
+        "runId": "gpt-5.4-v8.3-rubric2-20260903-000416",
+        "score": {
+          "display": "97.22 (+0.00)",
+          "base": 97.22,
+          "passed": 35,
+          "denominator": 36,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 97.22
+        },
+        "visualQuality": {
+          "score": 94.42,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.67,
+          "renderingStyleAverage": 45.75,
+          "videosScored": 12
+        },
+        "traceCount": 12,
+        "playPath": "games-v8.3/kuro-neko-market/gpt-5.4/index.html",
+        "previewPath": "previews-v8.3/kuro-neko-market/gpt-5.4.png",
+        "unmet": {
+          "vlm": [],
+          "replayTrace": [
+            {
+              "id": "target-018",
+              "zh": "条件：一条不在传送带上的鱼带有已附加的纸质票据；该鱼尝试计分。→ 预期结果：鱼周围不会出现计分粒子爆发，并且鱼保持当前不透明度。",
+              "cause": "源码错误导致 Trace 不可达"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.4-v8.3-rubric2-20260903-000416",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T02:58:39+08:00",
+          "finishedAt": "2026-09-03T03:34:47+08:00",
+          "totalDurationMs": 2167934,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-03T02:58:39+08:00",
+              "finishedAt": "2026-09-03T03:01:14+08:00",
+              "durationMs": 155199,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-03T03:01:14+08:00",
+              "finishedAt": "2026-09-03T03:14:43+08:00",
+              "durationMs": 808895,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-03T03:14:43+08:00",
+              "finishedAt": "2026-09-03T03:28:13+08:00",
+              "durationMs": 809570,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-03T03:28:13+08:00",
+              "finishedAt": "2026-09-03T03:28:13+08:00",
+              "durationMs": 171,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-03T03:28:13+08:00",
+              "finishedAt": "2026-09-03T03:29:17+08:00",
+              "durationMs": 64169,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T03:29:17+08:00",
+              "finishedAt": "2026-09-03T03:34:47+08:00",
+              "durationMs": 329891,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "13-steps-to-escape": {
