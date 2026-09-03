@@ -6592,7 +6592,7 @@
       },
       "seed-2.0-pro": {
         "status": "completed",
-        "runId": null,
+        "runId": "seed-2.0-pro-v8.3-rubric2-20260903-000416",
         "score": {
           "display": "66.29 (+3.37)",
           "base": 66.29,
@@ -6603,10 +6603,10 @@
           "potential": 69.66
         },
         "visualQuality": {
-          "score": 88.33,
+          "score": 89.67,
           "maximumScore": 100,
-          "technicalPresentationAverage": 48.33,
-          "renderingStyleAverage": 40,
+          "technicalPresentationAverage": 47,
+          "renderingStyleAverage": 42.67,
           "videosScored": 6
         },
         "traceCount": 6,
@@ -6768,7 +6768,24 @@
           ]
         },
         "issue": null,
-        "timing": null
+        "timing": {
+          "runId": "seed-2.0-pro-v8.3-rubric2-20260903-000416",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T02:01:02+08:00",
+          "finishedAt": "2026-09-03T02:09:50+08:00",
+          "totalDurationMs": 528202,
+          "stages": [
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T02:01:02+08:00",
+              "finishedAt": "2026-09-03T02:09:50+08:00",
+              "durationMs": 528184,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "catculus": {
