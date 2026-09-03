@@ -4638,6 +4638,122 @@
             }
           ]
         }
+      },
+      "minimax-m2.7": {
+        "status": "completed",
+        "runId": "minimax-m2.7-v8.3-rubric2-20260903-000416",
+        "score": {
+          "display": "88.46 (+5.77)",
+          "base": 88.46,
+          "passed": 46,
+          "denominator": 52,
+          "dynamic": 3,
+          "dynamicAddition": 5.77,
+          "potential": 94.23
+        },
+        "visualQuality": {
+          "score": 92,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.9,
+          "renderingStyleAverage": 44.1,
+          "videosScored": 10
+        },
+        "traceCount": 10,
+        "playPath": "games-v8.3/radius-raid/minimax-m2.7/index.html",
+        "previewPath": "previews-v8.3/radius-raid/minimax-m2.7.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-038",
+              "zh": "条件：游戏过程中，某个强化道具计时器到达零 → 预期结果：该强化道具标签对应的 HUD 强化道具计时条不再被绘制。"
+            },
+            {
+              "id": "target-040",
+              "zh": "条件：游戏过程中，减速敌人强化道具计时器处于激活状态 → 预期结果：半透明蓝色叠层覆盖游戏视图，并且可见敌人绘制有蓝色调叠层。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-017",
+              "zh": "在活动游戏玩法期间武器冷却已完成，同时自动开火已禁用、鼠标按钮被按住且三连发未处于活动状态 → 一条子弹线段从玩家飞船发出并远离玩家飞船飞行。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-030",
+              "zh": "游戏处于进行状态时，一个可见的增长型敌人进行更新 → 该敌人圆形在连续游戏帧中从其中心向外扩张。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-046",
+              "zh": "条件：在游戏结束屏幕上激活 MENU 按钮 → 预期结果：游戏返回菜单屏幕，并且 PLAY 按钮可见。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-004",
+              "zh": "新重置的一局首次渲染游戏玩法视图 → HUD 的“SCORE”数值显示为 000000，“PROGRESS”进度条没有从左边缘延伸出的已填充部分，并且游戏玩法视图中可见显示 01 的关卡通知。",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "minimax-m2.7-v8.3-rubric2-20260903-000416",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T00:11:34+08:00",
+          "finishedAt": "2026-09-03T02:16:15+08:00",
+          "totalDurationMs": 7480379,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-03T00:11:34+08:00",
+              "finishedAt": "2026-09-03T00:15:38+08:00",
+              "durationMs": 243718,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-03T00:15:38+08:00",
+              "finishedAt": "2026-09-03T00:33:06+08:00",
+              "durationMs": 1048277,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-03T00:33:06+08:00",
+              "finishedAt": "2026-09-03T01:58:45+08:00",
+              "durationMs": 5138664,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-03T01:58:45+08:00",
+              "finishedAt": "2026-09-03T01:58:45+08:00",
+              "durationMs": 303,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-03T01:58:45+08:00",
+              "finishedAt": "2026-09-03T02:04:20+08:00",
+              "durationMs": 334445,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T02:04:20+08:00",
+              "finishedAt": "2026-09-03T02:16:15+08:00",
+              "durationMs": 714931,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "elematter": {
