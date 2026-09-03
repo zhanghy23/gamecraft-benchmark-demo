@@ -5972,7 +5972,7 @@
     "cannonbolf": {
       "gpt-5.5": {
         "status": "completed",
-        "runId": null,
+        "runId": "gpt-5.5-v8.3-rubric2-20260903-000416",
         "score": {
           "display": "100.00 (+0.00)",
           "base": 100,
@@ -5983,10 +5983,10 @@
           "potential": 100
         },
         "visualQuality": {
-          "score": 90,
+          "score": 91,
           "maximumScore": 100,
-          "technicalPresentationAverage": 50,
-          "renderingStyleAverage": 40,
+          "technicalPresentationAverage": 47.82,
+          "renderingStyleAverage": 43.18,
           "videosScored": 11
         },
         "traceCount": 11,
@@ -5997,7 +5997,24 @@
           "replayTrace": []
         },
         "issue": null,
-        "timing": null
+        "timing": {
+          "runId": "gpt-5.5-v8.3-rubric2-20260903-000416",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T02:02:46+08:00",
+          "finishedAt": "2026-09-03T02:08:58+08:00",
+          "totalDurationMs": 371930,
+          "stages": [
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T02:02:46+08:00",
+              "finishedAt": "2026-09-03T02:08:58+08:00",
+              "durationMs": 371912,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       },
       "seed-2.0-pro": {
         "status": "completed",
