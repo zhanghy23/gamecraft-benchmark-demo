@@ -8078,21 +8078,21 @@
     "q1k3": {
       "gpt-5.5": {
         "status": "completed",
-        "runId": null,
+        "runId": "gpt-5.5-v8.3-rubric2-20260903-000416",
         "score": {
-          "display": "97.14 (+0.00)",
-          "base": 97.14,
-          "passed": 34,
+          "display": "94.29 (+0.00)",
+          "base": 94.29,
+          "passed": 33,
           "denominator": 35,
           "dynamic": 0,
           "dynamicAddition": 0,
-          "potential": 97.14
+          "potential": 94.29
         },
         "visualQuality": {
-          "score": 90,
+          "score": 90.3,
           "maximumScore": 100,
-          "technicalPresentationAverage": 50,
-          "renderingStyleAverage": 40,
+          "technicalPresentationAverage": 47.9,
+          "renderingStyleAverage": 42.4,
           "videosScored": 10
         },
         "traceCount": 10,
@@ -8103,12 +8103,33 @@
             {
               "id": "target-005",
               "zh": "玩家在站在地面上且跳跃已重新启用时按下跳跃 → 第一人称视点从站立高度向上升起。"
+            },
+            {
+              "id": "target-035",
+              "zh": "一个可见的弹跳实体在其垂直速度高于其弹跳阈值时与表面发生垂直碰撞 → 接触后，该实体立即反转垂直方向，并从该表面反弹离开。"
             }
           ],
           "replayTrace": []
         },
         "issue": null,
-        "timing": null
+        "timing": {
+          "runId": "gpt-5.5-v8.3-rubric2-20260903-000416",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T04:14:05+08:00",
+          "finishedAt": "2026-09-03T04:20:54+08:00",
+          "totalDurationMs": 409413,
+          "stages": [
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T04:14:05+08:00",
+              "finishedAt": "2026-09-03T04:20:54+08:00",
+              "durationMs": 409393,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       },
       "seed-2.0-pro": {
         "status": "completed",
