@@ -4926,6 +4926,166 @@
             }
           ]
         }
+      },
+      "minimax-m2.7": {
+        "status": "completed",
+        "runId": "minimax-m2.7-v8.3-rubric2-20260903-000416",
+        "score": {
+          "display": "72.41 (+8.62)",
+          "base": 72.41,
+          "passed": 42,
+          "denominator": 58,
+          "dynamic": 5,
+          "dynamicAddition": 8.62,
+          "potential": 81.03
+        },
+        "visualQuality": {
+          "score": 90.96,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.21,
+          "renderingStyleAverage": 42.75,
+          "videosScored": 24
+        },
+        "traceCount": 24,
+        "playPath": "games-v8.3/elematter/minimax-m2.7/index.html",
+        "previewPath": "previews-v8.3/elematter/minimax-m2.7.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-027",
+              "zh": "在主动游戏过程中，当水防御塔的射击冷却已达到其射击阈值，且该防御塔射程内有一个敌方目标时 → 一个蓝色水属性投射物出现在该防御塔处，并开始向被瞄准的敌人移动。"
+            },
+            {
+              "id": "target-028",
+              "zh": "在主动游戏过程中，当风防御塔的射击冷却已达到其射击阈值，且该防御塔射程内有一个敌方目标时 → 一个黄色风属性投射物出现在该防御塔处，并开始向被瞄准的敌人移动。"
+            },
+            {
+              "id": "target-029",
+              "zh": "在主动游戏过程中，当火防御塔的射击冷却已达到其射击阈值，且该防御塔射程内有一个敌方目标时 → 一个红色火属性投射物出现在该防御塔处，并开始向被瞄准的敌人移动。"
+            },
+            {
+              "id": "target-046",
+              "zh": "至少还剩 2 条生命时，一个敌人到达最终航点 → 该敌人从路径终点消失，并且在 1 秒内生命显示的数字比其离开前可见的生命数字正好少 1，误差容忍度为 0。"
+            },
+            {
+              "id": "target-052",
+              "zh": "从初始波次状态发送第 1 波，同时第 2 波仍在队列中 → 波次显示变为“1 / 20”，并且下一波预览计数器显示 9 个土元素敌人、2 个水元素敌人、0 个气元素敌人和 0 个火元素敌人。"
+            },
+            {
+              "id": "target-053",
+              "zh": "发送第 5 波，同时第 6 波仍在队列中 → 波次显示变为“5 / 20”，并且下一波预览计数器显示 0 个土元素敌人、13 个水元素敌人、0 个气元素敌人和 0 个火元素敌人。"
+            },
+            {
+              "id": "target-054",
+              "zh": "发送第 10 波，同时第 11 波仍在队列中 → 波次显示变为“10 / 20”，并且下一波预览计数器显示 0 个土元素敌人、0 个水元素敌人、15 个气元素敌人和 0 个火元素敌人。"
+            },
+            {
+              "id": "target-055",
+              "zh": "第十五波被派出，同时第十六波仍处于排队状态 → 波次显示变为“15 / 20”，且下一波预览计数器显示 0 个土元素敌人、0 个水元素敌人、0 个气元素敌人和 17 个火元素敌人。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-004",
+              "zh": "在游戏未处于游玩状态时选择“Send Wave”（派出波次）控件 → 波次显示保持为选择前的值，路径入口处不出现新的敌人，并且“Send Wave”（派出波次）控件保持其非激活的半透明外观。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-010",
+              "zh": "在建造菜单关闭时选择一个路径地块 → 建造菜单覆盖层保持隐藏，并且游玩区域上方不出现任何防御塔放置菜单。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-021",
+              "zh": "对一个不可升级的防御塔选择升级按钮 → 防御塔升级/回收菜单保持打开，并且升级按钮仍显示为不可用状态。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-048",
+              "zh": "玩家失去最后剩余的 1 条生命 → 浏览器警告对话框出现，并显示文本“You lost.”。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-049",
+              "zh": "失败警告对话框被确认 → 游戏页面重新加载到初始游戏场地视图。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-051",
+              "zh": "一个波次已结束，且游戏场地上没有敌人，同时后续波次仍在队列中 → 波次显示前进到下一个波次数字，并且新激活波次的敌人开始出现在路径入口处。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-057",
+              "zh": "所有波次都已被派出并清除，且至少剩余 1 条生命 → 浏览器警告对话框出现，文本开头为“You won! Based on lives and elemental fragments left, your score is:”。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-058",
+              "zh": "胜利警告对话框被确认 → 游戏页面重新加载到初始游戏场地视图。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "minimax-m2.7-v8.3-rubric2-20260903-000416",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T03:13:36+08:00",
+          "finishedAt": "2026-09-03T06:23:22+08:00",
+          "totalDurationMs": 11385500,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-03T03:13:36+08:00",
+              "finishedAt": "2026-09-03T03:15:02+08:00",
+              "durationMs": 85973,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-03T03:15:02+08:00",
+              "finishedAt": "2026-09-03T03:36:20+08:00",
+              "durationMs": 1277538,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-03T03:36:20+08:00",
+              "finishedAt": "2026-09-03T06:06:52+08:00",
+              "durationMs": 9032180,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-03T06:06:52+08:00",
+              "finishedAt": "2026-09-03T06:06:52+08:00",
+              "durationMs": 254,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-03T06:06:52+08:00",
+              "finishedAt": "2026-09-03T06:08:52+08:00",
+              "durationMs": 119965,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T06:08:52+08:00",
+              "finishedAt": "2026-09-03T06:23:21+08:00",
+              "durationMs": 869553,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "highway-404": {

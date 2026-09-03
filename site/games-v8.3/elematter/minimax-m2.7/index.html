@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elemental Tower Defense</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #1a1a2e;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+    #game-container {
+      position: relative;
+      width: 1280px;
+      height: 720px;
+    }
+    #game-canvas {
+      display: block;
+      background: #2d2d44;
+    }
+    #top-hud {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 40px;
+      background: #16213e;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      color: white;
+      font-size: 16px;
+      z-index: 10;
+    }
+    #top-hud .hud-section {
+      display: flex;
+      gap: 30px;
+    }
+    #top-hud .hud-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    #top-hud .label {
+      color: #aaa;
+    }
+    #top-hud .value {
+      font-weight: bold;
+      min-width: 40px;
+    }
+    #top-hud .lives-value { color: #ff6b6b; }
+    #top-hud .fragments-value { color: #ffd93d; }
+    #top-hud .wave-value { color: #6bcb77; }
+    #bottom-hud {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 40px;
+      background: #16213e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      z-index: 10;
+    }
+    .hud-btn {
+      padding: 6px 16px;
+      border: 2px solid #4a4a6a;
+      background: #2d2d44;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: all 0.2s;
+    }
+    .hud-btn:hover {
+      background: #3d3d54;
+    }
+    .hud-btn.active {
+      background: #222;
+      border-color: #6bcb77;
+      color: white;
+    }
+    .hud-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+    .speed-btn {
+      padding: 6px 12px;
+      border: 2px solid #4a4a6a;
+      background: #2d2d44;
+      color: #aaa;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: all 0.2s;
+    }
+    .speed-btn:hover {
+      background: #3d3d54;
+    }
+    .speed-btn.active {
+      background: #4a4a6a;
+      color: white;
+      border-color: #6bcb77;
+    }
+    #build-menu {
+      position: absolute;
+      background: #16213e;
+      border: 2px solid #4a4a6a;
+      border-radius: 8px;
+      padding: 10px;
+      display: none;
+      z-index: 20;
+      min-width: 200px;
+    }
+    #build-menu h3 {
+      color: white;
+      font-size: 14px;
+      margin-bottom: 10px;
+      text-align: center;
+      border-bottom: 1px solid #4a4a6a;
+      padding-bottom: 8px;
+    }
+    .build-option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px;
+      margin: 4px 0;
+      background: #2d2d44;
+      border: 2px solid transparent;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .build-option:hover:not(.disabled) {
+      border-color: #6bcb77;
+    }
+    .build-option.disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+    .build-option .icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+    }
+    .build-option.earth .icon { background: #4ade80; }
+    .build-option.water .icon { background: #3b82f6; }
+    .build-option.air .icon { background: #facc15; }
+    .build-option.fire .icon { background: #ef4444; }
+    .build-option .info {
+      flex: 1;
+    }
+    .build-option .name {
+      color: white;
+      font-size: 14px;
+    }
+    .build-option .cost {
+      color: #ffd93d;
+      font-size: 12px;
+    }
+    #tower-menu {
+      position: absolute;
+      background: #16213e;
+      border: 2px solid #4a4a6a;
+      border-radius: 8px;
+      padding: 10px;
+      display: none;
+      z-index: 20;
+      min-width: 180px;
+    }
+    #tower-menu h3 {
+      color: white;
+      font-size: 14px;
+      margin-bottom: 10px;
+      text-align: center;
+      border-bottom: 1px solid #4a4a6a;
+      padding-bottom: 8px;
+    }
+    #tower-menu .tower-info {
+      color: #aaa;
+      font-size: 12px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .tower-menu-btn {
+      display: block;
+      width: 100%;
+      padding: 8px;
+      margin: 4px 0;
+      border: 2px solid #4a4a6a;
+      background: #2d2d44;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: all 0.2s;
+    }
+    .tower-menu-btn:hover:not(:disabled) {
+      background: #3d3d54;
+    }
+    .tower-menu-btn:disabled {
+      opacity: 0.2;
+      cursor: not-allowed;
+    }
+    .tower-menu-btn.upgrade {
+      border-color: #6bcb77;
+    }
+    .tower-menu-btn.reclaim {
+      border-color: #ef4444;
+    }
+    .tower-menu-btn.close-btn {
+      border-color: #4a4a6a;
+      background: #3d3d54;
+    }
+    #next-wave-preview {
+      position: absolute;
+      top: 50px;
+      right: 10px;
+      background: rgba(22, 33, 62, 0.9);
+      border: 1px solid #4a4a6a;
+      border-radius: 4px;
+      padding: 8px;
+      color: white;
+      font-size: 12px;
+      z-index: 10;
+    }
+    #next-wave-preview h4 {
+      margin-bottom: 6px;
+      color: #6bcb77;
+    }
+    .preview-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin: 3px 0;
+    }
+    .preview-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 2px;
+    }
+    .preview-dot.earth { background: #4ade80; }
+    .preview-dot.water { background: #3b82f6; }
+    .preview-dot.air { background: #facc15; }
+    .preview-dot.fire { background: #ef4444; }
+  </style>
+  <script type="module" crossorigin src="./assets/index-DYVRLQJT.js"></script>
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="game-canvas" width="1280" height="720"></canvas>
+    <div id="top-hud">
+      <div class="hud-section">
+        <div class="hud-item">
+          <span class="label">Lives:</span>
+          <span class="value lives-value" id="lives-display">20</span>
+        </div>
+        <div class="hud-item">
+          <span class="label">Fragments:</span>
+          <span class="value fragments-value" id="fragments-display">100</span>
+        </div>
+      </div>
+      <div class="hud-section">
+        <div class="hud-item">
+          <span class="label">Wave:</span>
+          <span class="value wave-value" id="wave-display">0 / 20</span>
+        </div>
+      </div>
+    </div>
+    <div id="next-wave-preview">
+      <h4>Next Wave</h4>
+      <div class="preview-item"><span class="preview-dot earth"></span><span id="preview-earth">0</span></div>
+      <div class="preview-item"><span class="preview-dot water"></span><span id="preview-water">0</span></div>
+      <div class="preview-item"><span class="preview-dot air"></span><span id="preview-air">0</span></div>
+      <div class="preview-item"><span class="preview-dot fire"></span><span id="preview-fire">0</span></div>
+    </div>
+    <div id="bottom-hud">
+      <button class="hud-btn" id="play-btn">Play</button>
+      <button class="hud-btn" id="send-wave-btn" disabled>Send Wave</button>
+      <div style="margin-left: 20px; display: flex; gap: 5px;">
+        <button class="speed-btn active" id="speed-1">×1</button>
+        <button class="speed-btn" id="speed-2">×2</button>
+        <button class="speed-btn" id="speed-3">×3</button>
+      </div>
+    </div>
+    <div id="build-menu">
+      <h3>Build Tower</h3>
+      <div class="build-option earth" data-element="earth">
+        <div class="icon"></div>
+        <div class="info">
+          <div class="name">Earth</div>
+          <div class="cost">50 fragments</div>
+        </div>
+      </div>
+      <div class="build-option water" data-element="water">
+        <div class="icon"></div>
+        <div class="info">
+          <div class="name">Water</div>
+          <div class="cost">60 fragments</div>
+        </div>
+      </div>
+      <div class="build-option air" data-element="air">
+        <div class="icon"></div>
+        <div class="info">
+          <div class="name">Air</div>
+          <div class="cost">70 fragments</div>
+        </div>
+      </div>
+      <div class="build-option fire" data-element="fire">
+        <div class="icon"></div>
+        <div class="info">
+          <div class="name">Fire</div>
+          <div class="cost">80 fragments</div>
+        </div>
+      </div>
+    </div>
+    <div id="tower-menu">
+      <h3 id="tower-menu-title">Tower</h3>
+      <div class="tower-info" id="tower-info"></div>
+      <button class="tower-menu-btn upgrade" id="upgrade-btn">Upgrade</button>
+      <button class="tower-menu-btn reclaim" id="reclaim-btn">Reclaim</button>
+      <button class="tower-menu-btn close-btn" id="close-menu-btn">Close</button>
+    </div>
+  </div>
+</body>
+</html>
