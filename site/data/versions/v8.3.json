@@ -5212,21 +5212,21 @@
       },
       "seed-2.0-pro": {
         "status": "completed",
-        "runId": null,
+        "runId": "seed-2.0-pro-v8.3-rubric2-20260903-000416",
         "score": {
-          "display": "46.67 (+10.67)",
-          "base": 46.67,
-          "passed": 35,
+          "display": "49.33 (+10.67)",
+          "base": 49.33,
+          "passed": 37,
           "denominator": 75,
           "dynamic": 8,
           "dynamicAddition": 10.67,
-          "potential": 57.33
+          "potential": 60
         },
         "visualQuality": {
-          "score": 90,
+          "score": 91.42,
           "maximumScore": 100,
-          "technicalPresentationAverage": 50,
-          "renderingStyleAverage": 40,
+          "technicalPresentationAverage": 48.42,
+          "renderingStyleAverage": 43,
           "videosScored": 24
         },
         "traceCount": 24,
@@ -5263,10 +5263,6 @@
               "zh": "条件：游戏处于活动游玩状态，处理移动指令时，目标位置包含一把锁，并且玩家没有已收集的钥匙 → 预期结果：玩家角色保持在当前地块上并面向该锁；锁地块在其网格单元中保持可见。"
             },
             {
-              "id": "target-047",
-              "zh": "条件：一次已完成的玩家移动离开陷阱地块，并落在一个不是洞的地块上，且没有执行地块动作 → 预期结果：玩家刚离开的陷阱地块变为洞地块。"
-            },
-            {
               "id": "target-048",
               "zh": "条件：游戏处于活动游玩状态，一次已完成的玩家移动落在出生点地块上 → 预期结果：先前的当前出生点地块变为普通出生点地块；目标出生点地块变为当前出生点外观；玩家角色站在新的当前出生点地块上。"
             },
@@ -5281,10 +5277,6 @@
             {
               "id": "target-060",
               "zh": "在关卡编辑器中的已填充网格单元上，右键图块移除点击被接受 → 被点击的编辑器网格单元变为空网格单元。"
-            },
-            {
-              "id": "target-065",
-              "zh": "在“SELECT SKIN COLOR”角色自定义步骤中，向右切换选项命令被接受 → 选中的肤色样本外框移动到另一个样本，且角色预览变为该肤色。"
             },
             {
               "id": "target-067",
@@ -5424,7 +5416,24 @@
           ]
         },
         "issue": null,
-        "timing": null
+        "timing": {
+          "runId": "seed-2.0-pro-v8.3-rubric2-20260903-000416",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T00:53:13+08:00",
+          "finishedAt": "2026-09-03T01:12:49+08:00",
+          "totalDurationMs": 1175926,
+          "stages": [
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T00:53:13+08:00",
+              "finishedAt": "2026-09-03T01:12:49+08:00",
+              "durationMs": 1175909,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "tiny-yurts": {
