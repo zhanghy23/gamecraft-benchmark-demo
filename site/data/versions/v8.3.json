@@ -8163,6 +8163,118 @@
             }
           ]
         }
+      },
+      "gpt-5.4": {
+        "status": "completed",
+        "runId": "gpt-5.4-v8.3-rubric2-resume-20260903-195159",
+        "score": {
+          "display": "88.37 (+2.33)",
+          "base": 88.37,
+          "passed": 38,
+          "denominator": 43,
+          "dynamic": 1,
+          "dynamicAddition": 2.33,
+          "potential": 90.7
+        },
+        "visualQuality": {
+          "score": 92.5,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.6,
+          "renderingStyleAverage": 43.9,
+          "videosScored": 10
+        },
+        "traceCount": 10,
+        "playPath": "games-v8.3/market-street-tycoon/gpt-5.4/index.html",
+        "previewPath": "previews-v8.3/market-street-tycoon/gpt-5.4.png",
+        "unmet": {
+          "vlm": [],
+          "replayTrace": [
+            {
+              "id": "target-032",
+              "zh": "市场场景渲染某个累计销量至少达到其起始库存的商品 → 市场框中不再可见该商品的任何图标。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-036",
+              "zh": "库存界面渲染某个声誉值为 0 的商品行 → 该行的“Reputation:”（声誉：）一行包含一个完整声誉符号，后跟四个空声誉符号。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-037",
+              "zh": "条件：库存屏幕渲染某个商品行，且该商品行的声誉值至少为 100 → 预期结果：该行的“Reputation:”一行包含 5 个满格声誉符号，且不包含任何空声誉符号。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-038",
+              "zh": "条件：结算屏幕渲染某个商品行，且该商品行的标准化需求值为 0 → 预期结果：该行的“Demand:”一行包含 10 个空需求符号，且不包含任何满格需求符号。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-002",
+              "zh": "当玩家的金钱加上复盘总计为零时接受复盘确认 → 显示内容从复盘流程切换回主菜单界面，显示“𝕄𝕒𝕣𝕜𝕖𝕥 𝕊𝕥𝕣𝕖𝕖𝕥 𝕋𝕪𝕔𝕠𝕠𝕟”标题及其垂直菜单。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.4-v8.3-rubric2-resume-20260903-195159",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T20:26:44+08:00",
+          "finishedAt": "2026-09-03T21:24:55+08:00",
+          "totalDurationMs": 3490611,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-03T20:26:44+08:00",
+              "finishedAt": "2026-09-03T20:30:16+08:00",
+              "durationMs": 211393,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-03T20:30:16+08:00",
+              "finishedAt": "2026-09-03T20:47:13+08:00",
+              "durationMs": 1017429,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-03T20:47:13+08:00",
+              "finishedAt": "2026-09-03T21:17:58+08:00",
+              "durationMs": 1845433,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-03T21:17:58+08:00",
+              "finishedAt": "2026-09-03T21:17:59+08:00",
+              "durationMs": 206,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-03T21:17:59+08:00",
+              "finishedAt": "2026-09-03T21:19:49+08:00",
+              "durationMs": 109887,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T21:19:49+08:00",
+              "finishedAt": "2026-09-03T21:24:55+08:00",
+              "durationMs": 306219,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "necrotic-commander": {
