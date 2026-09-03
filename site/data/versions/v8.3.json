@@ -6294,7 +6294,7 @@
       },
       "seed-2.0-pro": {
         "status": "completed",
-        "runId": null,
+        "runId": "seed-2.0-pro-v8.3-rubric2-20260903-000416",
         "score": {
           "display": "72.09 (+4.65)",
           "base": 72.09,
@@ -6305,10 +6305,10 @@
           "potential": 76.74
         },
         "visualQuality": {
-          "score": 90,
+          "score": 92.54,
           "maximumScore": 100,
-          "technicalPresentationAverage": 50,
-          "renderingStyleAverage": 40,
+          "technicalPresentationAverage": 48.54,
+          "renderingStyleAverage": 44,
           "videosScored": 13
         },
         "traceCount": 13,
@@ -6377,7 +6377,24 @@
           ]
         },
         "issue": null,
-        "timing": null
+        "timing": {
+          "runId": "seed-2.0-pro-v8.3-rubric2-20260903-000416",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T01:44:08+08:00",
+          "finishedAt": "2026-09-03T01:54:10+08:00",
+          "totalDurationMs": 602740,
+          "stages": [
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T01:44:08+08:00",
+              "finishedAt": "2026-09-03T01:54:10+08:00",
+              "durationMs": 602722,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "necrotic-commander": {
