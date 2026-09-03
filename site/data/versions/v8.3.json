@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "v8.3",
-  "updatedAt": "2026-09-02",
+  "updatedAt": "2026-09-03",
   "models": [
     {
       "id": "gpt-5.5",
@@ -34,7 +34,7 @@
       "titleZh": "Radius Raid",
       "typeZh": "俯视角射击",
       "targetCount": 52,
-      "summaryZh": "生成一款可在 800×600 画框中直接游玩的太空俯视角射击游戏：包含完整菜单、暂停、关卡和结算流程，支持移动、自动或手动射击、多类敌人、道具增益、碰撞反馈、视差背景、小地图及持续更新的 HUD，并保证各类战斗状态和边界行为可被稳定触发与观察。",
+      "summaryZh": "A neon-styled top-down space shooter in which the player pilots a ship through a scrolling starfield, avoids and destroys incoming circular enemies, collects timed powerups, and survives as long as possible. The core loop is movement, automatic or held firing, enemy destruction, score gain, health management, and level progression through kill thresholds, with menu, pause, stats, credits, and game-over screens framing each run.",
       "requirements": [
         {
           "id": "target-001",
@@ -244,14 +244,15 @@
           "id": "target-052",
           "zh": "条件：可见敌人位于小地图所表示的世界区域内 → 预期结果：一个彩色 2×2 方形标记出现在小地图上敌人的缩放后位置。"
         }
-      ]
+      ],
+      "requirementGroups": []
     },
     {
       "id": "elematter",
       "titleZh": "Elematter",
       "typeZh": "元素塔防",
       "targetCount": 58,
-      "summaryZh": "生成一款完整的元素塔防游戏：玩家可在棋盘非路径格建造、选择、升级和出售土、水、风、火四类防御塔，控制暂停、倍速和提前发波；敌人及 Boss 按波次沿路径推进，并具备元素克制、减速、生命、资源、胜负结算和清晰 HUD 等可交互、可验证的状态。",
+      "summaryZh": "A browser-based elemental tower-defense game where the player protects lives by placing and upgrading earth, water, air, and fire towers beside a fixed path. The core loop is to start play, send waves of elemental enemies, earn elemental fragments from defeated enemies, spend fragments on towers or upgrades, reclaim towers when desired, and survive a 20-wave progression that culminates in either a win after all enemies are cleared or a loss when lives reach zero.",
       "requirements": [
         {
           "id": "target-001",
@@ -485,14 +486,15 @@
           "id": "target-058",
           "zh": "胜利警告对话框被确认 → 游戏页面重新加载到初始游戏场地视图。"
         }
-      ]
+      ],
+      "requirementGroups": []
     },
     {
       "id": "highway-404",
       "titleZh": "Highway 404",
       "typeZh": "公路赛车",
       "targetCount": 47,
-      "summaryZh": "生成一款以 HTTP 状态码为主题的公路躲避赛车游戏：包含桌面与移动端的标题、操控、暂停和结算流程，角色可在滚动道路上转向、变道和收集茶壶，并与 103、200、301、404、418、429、501 等状态码事件及道路危险产生对应的视觉和玩法反馈。",
+      "summaryZh": "A browser arcade driving game about steering a hero along a vertically scrolling highway to reach the end while collecting teapots for extra points. The player uses keyboard steering on desktop or swipe steering on mobile to stay within the road, navigate lane changes, react to HTTP-status-themed road signs, avoid missing or falling road sections, and finish with a score and highscore shown on the end screen.",
       "requirements": [
         {
           "id": "target-001",
@@ -682,14 +684,15 @@
           "id": "target-047",
           "zh": "结束画面显示时，除发推动作以外的键盘按键松开输入被接受 → 显示内容从结束画面切换回标题画面，并且标题文本可见。"
         }
-      ]
+      ],
+      "requirementGroups": []
     },
     {
       "id": "kuro-neko-market",
       "titleZh": "Kuro Neko Market",
       "typeZh": "猫咪鱼票分拣",
       "targetCount": 36,
-      "summaryZh": "生成一款 360×240 像素风猫咪鱼市分拣游戏：从带可编辑关卡卡片和预设成绩的选关页进入游戏，玩家用猫爪选择鱼类、难度和速度，拾取漂流的鱼与纸票、操作数字打印机并将正确票据配给鱼；游戏还需呈现传送带、计时与计分 HUD、正确或错误判定反馈，以及逐条揭示鱼类成绩和最终百分比的结算流程。",
+      "summaryZh": "A colorful timed fish-scoring puzzle game where the player uses a cat paw cursor to pick up fish and printed paper tickets, choose fish types for a level, print numeric tickets, attach them to fish, and place fish onto a conveyor belt to score them. The core loop is to inspect each fish’s scoring information, produce the matching ticket value, tag the fish, and send it through the level before time ends. Play progresses through selectable level cards into active gameplay and then to a results screen that reveals fish outcomes, score totals, and percentage completion.",
       "requirements": [
         {
           "id": "target-001",
@@ -835,14 +838,15 @@
           "id": "target-036",
           "zh": "当显示包含桌子的活动关卡场景时 → 玩法场景中可见木纹桌面区域。"
         }
-      ]
+      ],
+      "requirementGroups": []
     },
     {
       "id": "13-steps-to-escape",
       "titleZh": "13 Steps to Escape",
       "typeZh": "步数解谜",
       "targetCount": 75,
-      "summaryZh": "生成一款像素风步数限制解谜游戏：包含主菜单、选关、角色外观定制和可测试分享关卡的编辑器；玩家在带方向机关、箱子、滚石、钥匙、锁、陷阱、地洞、尖刺、开关、连锁方块与锣等元素的棋盘中移动，在十三步和最大步数规则下重置出生点、撤销或重开，并通过关卡完成反馈持续推进。",
+      "summaryZh": "A tile-based puzzle game where the player guides a customizable character through compact grid levels under a strict step limit. The core loop is to choose or continue a level, move one tile at a time, manipulate crates and boulders, collect keys, trigger switches and mechanisms, avoid hazards, and reach level-ending conditions to advance through numbered built-in levels. The game also includes a main menu, level selection, a level editor for building and testing custom boards, character customization, and visual UI feedback for progress, sound state, and step pressure.",
       "requirements": [
         {
           "id": "target-001",
@@ -1144,14 +1148,15 @@
           "id": "target-075",
           "zh": "菜单背景的背景图像可用后渲染菜单背景 → 一张像素风背景图像在菜单屏幕后方沿水平方向重复铺满可见画布。"
         }
-      ]
+      ],
+      "requirementGroups": []
     },
     {
       "id": "tiny-yurts",
       "titleZh": "Tiny Yurts",
       "typeZh": "聚落路径规划",
       "targetCount": 95,
-      "summaryZh": "生成一款在草地棋盘上规划游牧聚落的路径管理游戏：玩家从菜单进入后可暂停、切换普通与删除网格、拖动蒙古包并向八个方向铺设或回收有限道路；世界会生成树木、池塘、蒙古包和牛、山羊、鱼类农场，动物成长游走，居民沿连通道路往返劳动。游戏还需呈现补充道路、农场升级、需求警告、失败结算、重新开始与返回菜单等完整反馈。",
+      "summaryZh": "A pastoral grid-based strategy game where the player connects yurts to animal farms by drawing limited path tiles. The objective is to keep farms tended by routing settlers along paths, manage path placement and deletion, and survive as new farms, yurts, ponds, trees, animals, and seasonal time progression appear. Play is primarily mouse-driven with drag-to-build paths, deletion and grid assistance controls, plus pause, sound, fullscreen, restart, and menu controls. The game progresses through timed reveals, spawns, animal growth and breeding, path rewards, farm warnings, and ends when a farm remains underserved for too long.",
       "requirements": [
         {
           "id": "target-001",
@@ -1533,14 +1538,15 @@
           "id": "target-095",
           "zh": "条件：在游戏结束画面上接受 Menu 按钮 → 预期结果：游戏结束覆盖层被菜单覆盖层替换，且菜单覆盖层中有一个标记为 \"Start\" 的按钮。"
         }
-      ]
+      ],
+      "requirementGroups": []
     },
     {
       "id": "casual-crusade",
       "titleZh": "Casual Crusade",
       "typeZh": "卡牌铺路冒险",
       "targetCount": 74,
-      "summaryZh": "生成一款以卡牌铺设道路的轻量冒险游戏：玩家从标题页进入棋盘，在手牌与牌堆之间选择或拖拽带四向连接、宝石和特殊效果的卡牌，沿合法相邻位置扩建路线，让角色自动穿行、得分、治疗并开启宝箱。游戏还需包含多种遗物、奖励选择、连锁移动、关卡伤害与重抽机制，以及征服庆祝、关卡扩张和失败重开等完整流程。",
+      "summaryZh": "A medieval-themed card-placement puzzle game where the player builds connected paths across a small board to guide a crusader, score from card steps, manage life, and collect rewards. The core loop is selecting and placing hand cards with matching connectors, watching the character traverse the resulting path, resolving card effects and chest rewards, then advancing through increasingly larger levels until life runs out.",
       "requirements": [
         {
           "id": "target-001",
@@ -1838,14 +1844,15 @@
           "id": "target-074",
           "zh": "条件：游戏结束画面可见，并且重新开始按钮被激活 → 预期结果：游戏返回到进行中的游玩布局，显示 \"LIFE: 5/5\"、分数 \"0\"、没有已收集的 relic 图标，并显示第一关版面。"
         }
-      ]
+      ],
+      "requirementGroups": []
     },
     {
       "id": "cannonbolf",
       "titleZh": "Cannonbolf",
       "typeZh": "三维炮弹破堡",
       "targetCount": 32,
-      "summaryZh": "生成一款在三维场景中以大炮击毁城堡的 Cannonbolf 游戏：玩家从标题菜单进入瞄准视角，移动鼠标调整带碰撞预测的弹道指引，发射炮弹并在飞行视角中观察普通或高弹力表面的反弹。游戏还需呈现弹药、城堡和关卡 HUD、重置与越界失败、城堡碎裂残骸，以及 BIRDIE、PAR 和最终通关等完整反馈与关卡流转。",
+      "summaryZh": "Cannonbolf is a minimalist 3D cannon-golf game where the player aims and fires a ball to hit castle targets across a sequence of levels. The core loop is to start from a title screen, rotate the cannon or follow-up aim with mouse movement, click to launch or continue from the ball, and use limited ammo to clear all castles. The theme combines cannon shots, golf-style level progression, castle targets, bouncing ball physics, result messages for success or failure, and automatic advancement or restart after short result displays.",
       "requirements": [
         {
           "id": "target-001",
@@ -1975,14 +1982,15 @@
           "id": "target-032",
           "zh": "游戏处于 FirstAim 模式时渲染一个游戏 UI 帧 → 屏幕右上方附近可见三行右对齐的 HUD：一个弹药数量后跟 \"⚫\"、一个城堡命中分数后跟 \"🏰\"、以及一个关卡进度分数后跟 \"⛳\"。屏幕底部边缘居中显示一行提示文本。"
         }
-      ]
+      ],
+      "requirementGroups": []
     },
     {
       "id": "market-street-tycoon",
       "titleZh": "Market Street Tycoon",
       "typeZh": "街市经营模拟",
       "targetCount": 43,
-      "summaryZh": "生成一款按周经营街市摊位的像素风模拟游戏：玩家从主菜单进入进货、库存定价、市场售卖和周结算流程，在供应商列表中采购商品、调整各类库存售价，并通过带开合幕帘、行人、摊位和时钟的街景观察销售。游戏还需呈现资金、周数、库存、平均成本、声誉星级、需求和销售明细，支持列表与结算滚动、售罄反馈、资金耗尽结束，以及有余额时推进到下一周。",
+      "summaryZh": "A menu-driven market trading tycoon game where the player buys goods from weekly suppliers, sets selling prices for stocked products, watches a market stall sales phase play out, and reviews a weekly recap. The objective is to keep money above zero and progress through weeks by choosing purchases, pricing inventory, and advancing through buy, stock, market, and summary screens using keyboard-style menu navigation.",
       "requirements": [
         {
           "id": "target-001",
@@ -2156,14 +2164,15 @@
           "id": "target-043",
           "zh": "条件：市场场景渲染其状态徽章 → 预期结果：左上方附近的白色矩形徽章显示“Week”后接周数，右上方附近的白色矩形徽章显示已显示的金钱数额后接“$”。"
         }
-      ]
+      ],
+      "requirementGroups": []
     },
     {
       "id": "necrotic-commander",
       "titleZh": "Necrotic Commander",
       "typeZh": "亡灵法术策略",
       "targetCount": 38,
-      "summaryZh": "生成一款以亡灵法师为主角的即时法术策略游戏：玩家在墓地战场中选择敌人、切换技能并施放幽冥弹、灵魂汲取、亡者复生与尸体爆破，管理法力、冷却、墓穴和亡灵单位，在连续波次与逐步教学中击退敌军。",
+      "summaryZh": "A dark fantasy defensive spellcasting game where the player controls a necromancer trying to survive successive peasant waves. The player selects spells through numbered buttons or keys, fires bolts, drains enemies for mana, raises summons from graves, and sacrifices summons as bombs while enemies and summons automatically pursue targets. Guided, Endless, and Certain Death modes start from an intro menu, with Guided Mode pausing at tutorial milestones and later play progressing through escalating waves until the necromancer dies and the game can be restarted.",
       "requirements": [
         {
           "id": "target-001",
@@ -2317,14 +2326,15 @@
           "id": "target-038",
           "zh": "条件：死灵法师已死亡，且游戏结束延迟时间已过去后发生指针按下或触摸按下 → 预期结果：游戏结束面板消失，并显示一个全新的战场；死灵法师存在，且 HUD 生命值恢复为 \"Health (100)\"。"
         }
-      ]
+      ],
+      "requirementGroups": []
     },
     {
       "id": "space-huggers",
       "titleZh": "Space Huggers",
       "typeZh": "程序化横版射击",
       "targetCount": 89,
-      "summaryZh": "生成一款快节奏横版跑枪游戏：玩家可移动、跳跃、攀爬、射击、翻滚和投掷手雷，在程序化生成且可破坏的关卡中对抗多类敌人，并呈现火焰、爆炸、武器切换、生命与资源等清晰反馈。",
+      "summaryZh": "Space Huggers is a side-scrolling sci-fi action platformer about assaulting procedurally generated alien bases. The player controls one or more armed space soldiers, moving, jumping, climbing, dodging, shooting, and throwing grenades through destructible terrain and props while eliminating all enemies. Levels contain varied enemy types, crates, barrels, weather, hazards, particles, and debug/editor overlays; progression advances to a newly generated level after the enemy count reaches zero, while deaths and respawns are managed through remaining lives and checkpoint areas.",
       "requirements": [
         {
           "id": "target-001",
@@ -2682,14 +2692,15 @@
           "id": "target-089",
           "zh": "一个存活角色处于空中且未在攀爬期间被渲染 → 该角色被绘制为空中身体姿势，而不是站立或行走姿势。"
         }
-      ]
+      ],
+      "requirementGroups": []
     },
     {
       "id": "catculus",
       "titleZh": "Catculus",
       "typeZh": "猫咪数理解谜",
       "targetCount": 44,
-      "summaryZh": "生成一款以猫咪和数学规则为核心的益智游戏：玩家通过可观察、可验证的交互逐步理解关卡规律，完成计算、位置或状态组合，并获得明确的正确、错误与通关反馈。",
+      "summaryZh": "Catculus is a cat-themed number-tile puzzle game. The player selects adjacent numbered tiles on a grid to reach or exceed changing target sums, earning score for good selections and losing lives for mistakes. Cats on tiles add special scoring and movement behavior, while periodic skill choices add bonus effects that modify scoring, lives, cat movement, or tile changes. The loop progresses through target rounds, tutorial prompts, expanding board visibility, cat activity, multipliers, skill selection, and eventual game over with retry.",
       "requirements": [
         {
           "id": "target-001",
@@ -2867,14 +2878,15 @@
           "id": "target-044",
           "zh": "已生成的猫的预定棋盘放置跳跃计时器触发，且存在可见的目标方块可用 → 该猫从进入路径跳到一个可见的网格方块上。"
         }
-      ]
+      ],
+      "requirementGroups": []
     },
     {
       "id": "non-mewtonian-cat",
       "titleZh": "Non-Mewtonian Cat",
       "typeZh": "物理解谜冒险",
       "targetCount": 41,
-      "summaryZh": "生成一款围绕非牛顿物理和猫咪角色展开的互动游戏：玩家利用移动、碰撞与环境状态变化解决关卡，使关键物理反馈、目标达成与失败状态均可稳定触发和观察。",
+      "summaryZh": "A cat-themed grid puzzle game where the player guides a segmented cat through discrete tile-based levels. The objective is to collect size-changing items, avoid hazards and blocked spaces, and reach the win block only after the required collectibles are cleared. Play centers on directional movement, gravity-driven falling, undo/reset recovery, and level-by-level progression through a selectable grid of stages.",
       "requirements": [
         {
           "id": "target-001",
@@ -3040,14 +3052,15 @@
           "id": "target-041",
           "zh": "滚动的天空背景被渲染 → 整个游戏视图被垂直蓝色渐变背景填满。"
         }
-      ]
+      ],
+      "requirementGroups": []
     },
     {
       "id": "stolen-sword",
       "titleZh": "Stolen Sword",
       "typeZh": "横版动作冒险",
       "targetCount": 76,
-      "summaryZh": "生成一款围绕失窃宝剑展开的动作冒险游戏：玩家探索场景、移动跳跃、与敌人或机关交互并逐步推进目标，在战斗、受伤、收集、检查点和结算过程中获得明确视觉反馈。",
+      "summaryZh": "A portrait action platformer about chasing a theft character through multiple themed stages. The player presses, drags, and releases to aim dash launches, striking enemies while avoiding damage, projectiles, defenses, water currents, and moving platforms. Clearing waves advances through staged transitions and short chase cutscenes, with tutorial hints, visual feedback, and a looping progression back to the first stage after the final sequence.",
       "requirements": [
         {
           "id": "target-001",
@@ -3353,14 +3366,15 @@
           "id": "target-076",
           "zh": "条件：letterbox（宽银幕遮幅）叠加层完全显示 → 预期结果：纯黑色水平条覆盖游戏画面的顶部和底部区域，中间的游戏区域在两条黑条之间保持可见。"
         }
-      ]
+      ],
+      "requirementGroups": []
     },
     {
       "id": "catapoolt",
       "titleZh": "Catapoolt",
       "typeZh": "弹射生存",
       "targetCount": 47,
-      "summaryZh": "生成一款猫咪弹射生存游戏：玩家拖拽并释放弹弓发射黑猫，在空中调整行动、捕食老鼠补充体力并应对逐渐复杂的目标，使蓄力、轨迹、碰撞、体力变化和得分反馈清楚可见。",
+      "summaryZh": "A cat-launching arcade game where the player pulls and releases a cat like a slingshot to move through a bounded play field, catch mice, collect clovers, avoid or manage poop hazards, and conserve stamina. The loop centers on launching, bouncing, eating mice to clear waves, purging when the cat becomes too inflated, and advancing through successive waves until stamina is exhausted and the run ends with a score.",
       "requirements": [
         {
           "id": "target-001",
@@ -3550,14 +3564,15 @@
           "id": "target-047",
           "zh": "游戏结束弹窗中的 Restart 按钮被接受 → 重新进入游戏场景，并且屏幕在游玩区域上方显示标题文本 \"Game Screen\"。"
         }
-      ]
+      ],
+      "requirementGroups": []
     },
     {
       "id": "super-castle-game",
       "titleZh": "Super Castle Game",
       "typeZh": "城堡建造解谜",
       "targetCount": 38,
-      "summaryZh": "生成一款中世纪城堡建造解谜游戏：玩家使用键盘、触控或手柄移动并放置不同结构块，在有限空间和规则约束下完成城堡轮廓，支持重开、选关及清晰的合法性与通关反馈。",
+      "summaryZh": "A grid-based duck puzzle game about moving a duck through compact board layouts to reunite ducklings and place ducks on goal cells. The player starts from a title screen, then uses directional controls, pointer gestures, or gamepad input to slide the controlled duck, push boxes and connected clusters, avoid invalid moves, use cutters, reset layouts, and progress through a sequence of puzzle boards with an optional level-select board.",
       "requirements": [
         {
           "id": "target-001",
@@ -3711,14 +3726,15 @@
           "id": "target-038",
           "zh": "关卡选择鸭子到达关卡选择棋盘上的目标标记 → 关卡选择棋盘被所选谜题关卡棋盘替换。"
         }
-      ]
+      ],
+      "requirementGroups": []
     },
     {
       "id": "witchcat",
       "titleZh": "Witchcat",
       "typeZh": "季节切换冒险",
       "targetCount": 65,
-      "summaryZh": "生成一款猫咪女巫冒险游戏：玩家移动、发射火球并切换季节，利用冬季结冰、夏季藤蔓、秋季蘑菇与落叶、春季花朵等环境变化寻找失踪猫咪，让季节切换与世界状态变化直观可见。",
+      "summaryZh": "A top-down pixel adventure about rescuing missing cats in a world whose seasons have fallen into chaos. The player explores tile-based areas, moves with directional controls, interacts with signs, cats, orbs, and season triggers, avoids or attacks traps and enemies, and uses collected season orbs to change the environment. Progression centers on visiting temples, gaining seasonal powers, changing the world state, and bringing cats back to safe corner positions while navigating hazards and animated terrain.",
       "requirements": [
         {
           "id": "target-001",
@@ -3980,14 +3996,15 @@
           "id": "target-065",
           "zh": "当角色足够接近世界左边缘，导致摄像机偏移被钳制时渲染游戏视图 → 世界左边缘在游戏视图左侧可见，且地图外左侧不会显示任何空白区域。"
         }
-      ]
+      ],
+      "requirementGroups": []
     },
     {
       "id": "the-neatness",
       "titleZh": "The Neatness",
       "typeZh": "第一人称线谜",
       "targetCount": 38,
-      "summaryZh": "生成一款第一人称环境线谜游戏：玩家探索紧凑场景、观察面板规则并绘制或连接正确路径，在逐步增加难度的谜题中获得重置、错误、解锁和完成反馈。",
+      "summaryZh": "A minimalist grid-drawing puzzle game about connecting marked skull and grave hotspots with painted paths. The player draws directly on puzzle boards to link compatible dots while avoiding invalid connections and blocked cells, using a small toolbar for reset, music, and level selection where available. Levels introduce variations such as mirrored drawing, moving skull directions, fungus-like cell growth, and an ending scene with princess-themed artwork. Progression advances through regular puzzles into a level-select structure with unlockable Coil entries, using diagonal curtain transitions and restart feedback for solved and failed attempts.",
       "requirements": [
         {
           "id": "target-001",
@@ -4141,14 +4158,15 @@
           "id": "target-038",
           "zh": "结局美术以完全不透明度渲染 → 棋盘中心附近显示一个灰色矩形面板，且公主精灵图在其中可见。"
         }
-      ]
+      ],
+      "requirementGroups": []
     },
     {
       "id": "q1k3",
       "titleZh": "Q1K3",
       "typeZh": "三维第一人称射击",
       "targetCount": 35,
-      "summaryZh": "生成一款紧凑的三维第一人称射击游戏：玩家使用键鼠移动、跳跃、攻击并切换武器，在迷宫式关卡中与敌人交战，呈现弹药、生命、命中、伤害、武器和胜负状态。",
+      "summaryZh": "A retro, Quake-inspired first-person shooter in which the player explores compact 3D levels, fights hostile enemies, collects keys and ammunition, opens locked paths, and reaches level exits. The core loop is real-time movement, mouse-look aiming, weapon firing, pickup collection, and door or exit interaction, with HUD feedback for health and ammunition and progression through multiple maps toward a final end screen.",
       "requirements": [
         {
           "id": "target-001",
@@ -4290,35 +4308,191 @@
           "id": "target-035",
           "zh": "一个可见的弹跳实体在其垂直速度高于其弹跳阈值时与表面发生垂直碰撞 → 接触后，该实体立即反转垂直方向，并从该表面反弹离开。"
         }
-      ]
+      ],
+      "requirementGroups": []
     },
     {
       "id": "island-not-found",
       "titleZh": "Island Not Found",
       "typeZh": "第一人称岛屿探索",
-      "targetCount": 0,
-      "summaryZh": "生成一款键鼠操控的第一人称岛屿探索游戏：玩家在三维岛屿中移动和环视，发现资源、地点与环境线索，完成探索或生存目标，并通过 HUD、交互提示与场景变化获得明确反馈。",
-      "requirements": []
+      "targetCount": 38,
+      "summaryZh": "A first-person exploration puzzle game set in an isolated industrial island environment. The player navigates the world, inspects nearby objects, collects tools and keys, operates machinery such as doors, ramps, and an elevator, and restores an antenna system to call for help. Progression is structured around gated interactions and item requirements, leading from exploration and pickups into a console-based frequency alignment minigame and a final escape sequence.",
+      "requirements": [
+        {
+          "id": "target-001",
+          "zh": "A new-game start request is accepted before the game has started → The gameplay view appears with a visible text message reading \"Where am I? How did I get here?\""
+        },
+        {
+          "id": "target-002",
+          "zh": "Pointer lock is released during non-debug gameplay after the game has already been started → The main menu overlay appears on top of the game view, and the main menu's primary start button is labeled \"Resume Game\"."
+        },
+        {
+          "id": "target-003",
+          "zh": "The player holds the forward movement input during active gameplay outside the minigame and before the ending → The first-person view shifts forward through the scene while the viewing direction remains unchanged."
+        },
+        {
+          "id": "target-004",
+          "zh": "The player holds the backward movement input during active gameplay outside the minigame and before the ending → The first-person view shifts backward through the scene while the viewing direction remains unchanged."
+        },
+        {
+          "id": "target-005",
+          "zh": "The player holds the left strafe movement input during active gameplay outside the minigame and before the ending → The first-person view shifts left through the scene while the viewing direction remains unchanged."
+        },
+        {
+          "id": "target-006",
+          "zh": "The player holds the right strafe movement input during active gameplay outside the minigame and before the ending → The first-person view shifts right through the scene while the viewing direction remains unchanged."
+        },
+        {
+          "id": "target-007",
+          "zh": "The player moves the pointer horizontally while the game has pointer lock and the ending has not started → The first-person view yaws horizontally in response to the pointer movement."
+        },
+        {
+          "id": "target-008",
+          "zh": "The player moves the pointer vertically while the game has pointer lock and the ending has not started → The first-person view pitches vertically in response to the pointer movement."
+        },
+        {
+          "id": "target-009",
+          "zh": "The player attempts to move into a collision surface during active gameplay → The first-person view is kept outside the solid surface instead of passing through it."
+        },
+        {
+          "id": "target-010",
+          "zh": "The player reaches the outer movement boundary of the playable area during active gameplay → The first-person view remains inside the circular playable area boundary instead of moving farther outward."
+        },
+        {
+          "id": "target-011",
+          "zh": "No visible interactable object is within focus range and facing direction during active gameplay → The interaction text area is blank."
+        },
+        {
+          "id": "target-012",
+          "zh": "The player activates the interaction control while focused on the available flashlight → The flashlight is no longer visible at its pickup location, and a text message reading \"You picked up the flashlight. [Press F to activate/deactivate]\" is displayed."
+        },
+        {
+          "id": "target-013",
+          "zh": "The player activates the interaction control while focused on the available key → The key is no longer visible at its pickup location, and a text message reading \"You picked up a key\" is displayed."
+        },
+        {
+          "id": "target-014",
+          "zh": "The player activates the interaction control while focused on the available antenna key → The antenna key is no longer visible at its pickup location, and the monument button becomes visible."
+        },
+        {
+          "id": "target-015",
+          "zh": "The player activates the interaction control while focused on the available floppy disk → The floppy disk is no longer visible at its pickup location."
+        },
+        {
+          "id": "target-016",
+          "zh": "The player focuses the interaction view on the initial antenna point of interest → An interaction prompt reading \"That looks like a big antenna, maybe I can call for help if I can make it there…\" is displayed."
+        },
+        {
+          "id": "target-017",
+          "zh": "The player activates the interaction control while focused on the antenna door with the antenna key available → The antenna door is no longer visible at its closed position, and the doorway begins opening."
+        },
+        {
+          "id": "target-018",
+          "zh": "The player activates the interaction control while focused on the available oilrig wheel from its accepted side → The oilrig bridge is no longer visible, and the oilrig ramp begins moving."
+        },
+        {
+          "id": "target-019",
+          "zh": "The player activates the interaction control while focused on the available oilrig wheel from its rejected side → The big wheel remains visible at its location, and the oilrig bridge remains visible."
+        },
+        {
+          "id": "target-020",
+          "zh": "The player activates the interaction control while focused on the prison door with the key available → The prison door is no longer visible at its closed position."
+        },
+        {
+          "id": "target-021",
+          "zh": "The player activates the interaction control while focused on the prison door without the key available → The prison door remains visible at its closed position."
+        },
+        {
+          "id": "target-022",
+          "zh": "The player focuses the interaction view on the bottom lift button while the elevator is out of order → An interaction prompt reading \"Elevator is out of order\" is displayed."
+        },
+        {
+          "id": "target-023",
+          "zh": "The player focuses the interaction view on the bottom lift button while the elevator is at its bottom position and operational → An interaction prompt reading \"Activate\" is displayed."
+        },
+        {
+          "id": "target-024",
+          "zh": "The player activates the interaction control while focused on the bottom lift button while the elevator is at its bottom position and operational → The elevator begins moving upward from the bottom landing."
+        },
+        {
+          "id": "target-025",
+          "zh": "The player activates the interaction control while focused on the top lift button while the elevator is at its top position and operational → The elevator begins moving downward from the top landing."
+        },
+        {
+          "id": "target-026",
+          "zh": "The player activates the interaction control while focused on the bottom lift button while the elevator is out of order → The elevator remains at its current landing with no visible lift movement."
+        },
+        {
+          "id": "target-027",
+          "zh": "An upward elevator movement reaches the top landing → The elevator is visible at the top landing and stops moving upward."
+        },
+        {
+          "id": "target-028",
+          "zh": "A downward elevator movement reaches the bottom landing → The elevator is visible at the bottom landing and stops moving downward."
+        },
+        {
+          "id": "target-029",
+          "zh": "The antenna console screen is visible before the floppy disk has been inserted → The console screen shows \"⬣ JS13K Modular Bios v.13\", \"Memory Core: 132020K\", \"Launching xx142-b2.exe\", \"Antenna self test\", \"Activating radio\", three \"OK\" status labels, a \"FAIL\" status label, \"💾 ERROR 404 - data disk not found\", and \"Insert floppy disk and press E to continue\"."
+        },
+        {
+          "id": "target-030",
+          "zh": "The player activates the interaction control while focused on the antenna console after the antenna is rotating, the floppy disk is held, and the minigame is inactive → The view moves to the antenna console area, and the console screen shows a bordered panel with the text \"Loading data disk...\"."
+        },
+        {
+          "id": "target-031",
+          "zh": "The minigame loading sequence completes while the console is being viewed → The console display shows \"Satellite Frequency Alignment\", \"Frequency\", and \"Phase\", with a rectangular tuning area, a red target trace, a green tuning trace, and a round marker inside the tuning area."
+        },
+        {
+          "id": "target-032",
+          "zh": "An accepted minigame adjustment increases frequency while the minigame is active → The minigame screen marker moves downward on the console display."
+        },
+        {
+          "id": "target-033",
+          "zh": "An accepted minigame adjustment decreases frequency while the minigame is active → The minigame screen marker moves upward on the console display."
+        },
+        {
+          "id": "target-034",
+          "zh": "An accepted minigame adjustment increases phase while the minigame is active → The minigame screen marker moves right on the console display."
+        },
+        {
+          "id": "target-035",
+          "zh": "An accepted minigame adjustment decreases phase while the minigame is active → The minigame screen marker moves left on the console display."
+        },
+        {
+          "id": "target-036",
+          "zh": "An accepted minigame adjustment sets the active minigame to frequency 70 and phase 300 → The console display shows a completion panel with the text \"🛰️ Satellite Frequency Found\" and \"Autonomous Submarine Activated\", and a submarine is visible and moves in the scene."
+        },
+        {
+          "id": "target-037",
+          "zh": "The player completes the final interaction that exits the game world → The view changes to a high viewpoint looking across the island and water, and the submarine begins moving in the scene."
+        },
+        {
+          "id": "target-038",
+          "zh": "The delayed blank gameplay text at the start of the ending reaches its expiration while the ending message is queued → An ending overlay appears with the text \"The End\", \"you found your way out\", \"Game by Salvatore Previti & Ben Clark\", and \"Thank you for playing!\""
+        }
+      ],
+      "requirementGroups": []
     }
   ],
   "results": {
     "radius-raid": {
       "gpt-5.5": {
         "status": "completed",
+        "runId": "gpt-5.5-v8.3-rubric2-20260903-000416",
         "score": {
-          "display": "88.46 (+7.69)",
-          "base": 88.46,
-          "passed": 46,
+          "display": "86.54 (+7.69)",
+          "base": 86.54,
+          "passed": 45,
           "denominator": 52,
           "dynamic": 4,
           "dynamicAddition": 7.69,
-          "potential": 96.15
+          "potential": 94.23
         },
         "visualQuality": {
-          "score": 87.5,
+          "score": 91.38,
           "maximumScore": 100,
           "technicalPresentationAverage": 47.5,
-          "renderingStyleAverage": 40,
+          "renderingStyleAverage": 43.88,
           "videosScored": 8
         },
         "traceCount": 8,
@@ -4326,6 +4500,10 @@
         "previewPath": "previews-v8.3/radius-raid/gpt-5.5.png",
         "unmet": {
           "vlm": [
+            {
+              "id": "target-027",
+              "zh": "游戏处于进行状态时，一个具有生成能力的可见敌人完成其生成间隔 → 一个新敌人出现在该生成敌人的位置。"
+            },
             {
               "id": "target-040",
               "zh": "条件：游戏过程中，减速敌人强化道具计时器处于激活状态 → 预期结果：半透明蓝色叠层覆盖游戏视图，并且可见敌人绘制有蓝色调叠层。"
@@ -4359,10 +4537,29 @@
             }
           ]
         },
-        "issue": null
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.5-v8.3-rubric2-20260903-000416",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T00:11:34+08:00",
+          "finishedAt": "2026-09-03T00:22:42+08:00",
+          "totalDurationMs": 668093,
+          "stages": [
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T00:11:34+08:00",
+              "finishedAt": "2026-09-03T00:22:42+08:00",
+              "durationMs": 668074,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       },
       "seed-2.0-pro": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "86.54 (+5.77)",
           "base": 86.54,
@@ -4422,12 +4619,14 @@
             }
           ]
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       }
     },
     "elematter": {
       "gpt-5.5": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "91.38 (+8.62)",
           "base": 91.38,
@@ -4477,10 +4676,12 @@
             }
           ]
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       },
       "seed-2.0-pro": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "81.03 (+8.62)",
           "base": 81.03,
@@ -4556,12 +4757,14 @@
             }
           ]
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       }
     },
     "highway-404": {
       "gpt-5.5": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "100.00 (+0.00)",
           "base": 100,
@@ -4585,10 +4788,12 @@
           "vlm": [],
           "replayTrace": []
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       },
       "seed-2.0-pro": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "85.11 (+2.13)",
           "base": 85.11,
@@ -4647,12 +4852,14 @@
             }
           ]
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       }
     },
     "kuro-neko-market": {
       "gpt-5.5": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "94.44 (+0.00)",
           "base": 94.44,
@@ -4687,10 +4894,12 @@
             }
           ]
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       },
       "seed-2.0-pro": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "86.11 (+5.56)",
           "base": 86.11,
@@ -4738,7 +4947,8 @@
             }
           ]
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       }
     },
     "13-steps-to-escape": {
@@ -4751,10 +4961,12 @@
         "playPath": null,
         "previewPath": null,
         "unmet": null,
-        "issue": "生成源码无法构建：src/main.ts 的泛型类型缺少右尖括号，构建器报 Expected '>' but found '['。"
+        "issue": "生成源码无法构建：src/main.ts 的泛型类型缺少右尖括号，构建器报 Expected '>' but found '['。",
+        "timing": null
       },
       "seed-2.0-pro": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "46.67 (+10.67)",
           "base": 46.67,
@@ -4965,7 +5177,8 @@
             }
           ]
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       }
     },
     "tiny-yurts": {
@@ -4978,10 +5191,12 @@
         "playPath": null,
         "previewPath": null,
         "unmet": null,
-        "issue": "生成源码无法构建：src/main.ts 重复声明符号 y，确定性检查在 Trace 前终止。"
+        "issue": "生成源码无法构建：src/main.ts 重复声明符号 y，确定性检查在 Trace 前终止。",
+        "timing": null
       },
       "seed-2.0-pro": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "50.53 (+6.32)",
           "base": 50.53,
@@ -5241,12 +5456,14 @@
             }
           ]
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       }
     },
     "casual-crusade": {
       "gpt-5.5": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "68.92 (+13.51)",
           "base": 68.92,
@@ -5383,10 +5600,12 @@
             }
           ]
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       },
       "seed-2.0-pro": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "66.22 (+8.11)",
           "base": 66.22,
@@ -5534,12 +5753,14 @@
             }
           ]
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       }
     },
     "cannonbolf": {
       "gpt-5.5": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "100.00 (+0.00)",
           "base": 100,
@@ -5563,10 +5784,12 @@
           "vlm": [],
           "replayTrace": []
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       },
       "seed-2.0-pro": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "75.00 (+0.00)",
           "base": 75,
@@ -5625,12 +5848,14 @@
             }
           ]
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       }
     },
     "market-street-tycoon": {
       "gpt-5.5": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "76.74 (+2.33)",
           "base": 76.74,
@@ -5698,10 +5923,12 @@
             }
           ]
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       },
       "seed-2.0-pro": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "72.09 (+4.65)",
           "base": 72.09,
@@ -5783,12 +6010,14 @@
             }
           ]
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       }
     },
     "necrotic-commander": {
       "gpt-5.5": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "97.37 (+0.00)",
           "base": 97.37,
@@ -5817,10 +6046,12 @@
           ],
           "replayTrace": []
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       },
       "seed-2.0-pro": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "97.37 (+0.00)",
           "base": 97.37,
@@ -5849,12 +6080,14 @@
           ],
           "replayTrace": []
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       }
     },
     "space-huggers": {
       "gpt-5.5": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "92.13 (+2.25)",
           "base": 92.13,
@@ -5912,10 +6145,12 @@
             }
           ]
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       },
       "seed-2.0-pro": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "66.29 (+3.37)",
           "base": 66.29,
@@ -6090,12 +6325,14 @@
             }
           ]
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       }
     },
     "catculus": {
       "gpt-5.5": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "75.00 (+6.82)",
           "base": 75,
@@ -6175,10 +6412,12 @@
             }
           ]
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       },
       "seed-2.0-pro": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "75.00 (+18.18)",
           "base": 75,
@@ -6256,12 +6495,14 @@
             }
           ]
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       }
     },
     "non-mewtonian-cat": {
       "gpt-5.5": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "90.24 (+9.76)",
           "base": 90.24,
@@ -6306,10 +6547,12 @@
             }
           ]
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       },
       "seed-2.0-pro": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "80.49 (+4.88)",
           "base": 80.49,
@@ -6372,12 +6615,14 @@
             }
           ]
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       }
     },
     "stolen-sword": {
       "gpt-5.5": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "81.58 (+1.32)",
           "base": 81.58,
@@ -6462,10 +6707,12 @@
             }
           ]
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       },
       "seed-2.0-pro": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "22.37 (+3.95)",
           "base": 22.37,
@@ -6776,12 +7023,14 @@
             }
           ]
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       }
     },
     "catapoolt": {
       "gpt-5.5": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "89.36 (+2.13)",
           "base": 89.36,
@@ -6828,10 +7077,12 @@
             }
           ]
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       },
       "seed-2.0-pro": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "57.45 (+17.02)",
           "base": 57.45,
@@ -6950,12 +7201,14 @@
             }
           ]
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       }
     },
     "super-castle-game": {
       "gpt-5.5": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "94.74 (+0.00)",
           "base": 94.74,
@@ -6988,10 +7241,12 @@
           ],
           "replayTrace": []
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       },
       "seed-2.0-pro": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "71.05 (+0.00)",
           "base": 71.05,
@@ -7069,12 +7324,14 @@
             }
           ]
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       }
     },
     "witchcat": {
       "gpt-5.5": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "89.23 (+9.23)",
           "base": 89.23,
@@ -7134,10 +7391,12 @@
             }
           ]
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       },
       "seed-2.0-pro": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "70.77 (+6.15)",
           "base": 70.77,
@@ -7251,12 +7510,14 @@
             }
           ]
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       }
     },
     "the-neatness": {
       "gpt-5.5": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "94.74 (+2.63)",
           "base": 94.74,
@@ -7291,10 +7552,12 @@
             }
           ]
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       },
       "seed-2.0-pro": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "44.74 (+0.00)",
           "base": 44.74,
@@ -7414,12 +7677,14 @@
             }
           ]
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       }
     },
     "q1k3": {
       "gpt-5.5": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "97.14 (+0.00)",
           "base": 97.14,
@@ -7448,10 +7713,12 @@
           ],
           "replayTrace": []
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       },
       "seed-2.0-pro": {
         "status": "completed",
+        "runId": null,
         "score": {
           "display": "28.57 (+40.00)",
           "base": 28.57,
@@ -7598,7 +7865,8 @@
             }
           ]
         },
-        "issue": null
+        "issue": null,
+        "timing": null
       }
     },
     "island-not-found": {}

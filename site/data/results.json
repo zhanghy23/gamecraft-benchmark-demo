@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
-  "updatedAt": "2026-09-02",
-  "defaultVersionId": "v8.4",
+  "updatedAt": "2026-09-03",
+  "defaultVersionId": "v8.3",
   "versions": [
     {
       "id": "v8.1-video-transcode",
@@ -32,20 +32,6 @@
       "dataPath": "data/versions/v8.json"
     },
     {
-      "id": "v8.3",
-      "label": "v8.3 · 视频主判 + 图片复核",
-      "description": "覆盖20个游戏与五类核心机制；GPT-5.5和Seed-2.0-Pro在每个游戏上共用同一批固定需求，并使用Seed-2.0-Pro进行视频主判和失败需求图片复核。全部需求说明均以中文展示。",
-      "status": "partial",
-      "updatedAt": "2026-09-02",
-      "harnessRevision": "v8.3-3d73049",
-      "judgeModel": "Seed-2.0-Pro（视频主判 + 图片复核）",
-      "dataRevision": "v83-zh-translations-20260902",
-      "resultCount": 38,
-      "completedCount": 36,
-      "failedCount": 2,
-      "dataPath": "data/versions/v8.3.json"
-    },
-    {
       "id": "v8.4",
       "label": "v8.4 · 中文整体需求 + 五类需求",
       "description": "20 个参考游戏均由 GPT-5.5 基于完整源码生成中文整体需求描述，并一次性生成五类可独立重放的“触发条件 → 视觉效果”需求；GPT-5.5、Seed-2.0-Pro、MiniMax-M2.7 与 GPT-5.4 复用同一份固定需求并行评测，逐游戏发布功能分、画面分及从生成开始到评测终态的总耗时与阶段耗时。",
@@ -58,6 +44,20 @@
       "completedCount": 9,
       "failedCount": 7,
       "dataPath": "data/versions/v8.4.json"
+    },
+    {
+      "id": "v8.3",
+      "label": "v8.3 · 视频主判 + 图片复核",
+      "description": "覆盖20个游戏与五类核心机制；四个生成模型在每个游戏上使用同一批固定需求，GPT-5.5和Seed-2.0-Pro的既有成功结果复用原Trace/Replay重新执行Rubric v2视频判定，MiniMax-M2.7和GPT-5.4执行完整流水线。全部需求说明均以中文展示。",
+      "status": "partial",
+      "updatedAt": "2026-09-03",
+      "harnessRevision": "v8.3-040aa4a",
+      "judgeModel": "Seed-2.0-Pro（视频主判 + 图片复核，画面评分 Rubric v2）",
+      "dataRevision": "v83-rubric2-four-models-20260903-000416",
+      "resultCount": 38,
+      "completedCount": 36,
+      "failedCount": 2,
+      "dataPath": "data/versions/v8.3.json"
     }
   ]
 }
