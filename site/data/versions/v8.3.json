@@ -7369,21 +7369,21 @@
     "catapoolt": {
       "gpt-5.5": {
         "status": "completed",
-        "runId": null,
+        "runId": "gpt-5.5-v8.3-rubric2-20260903-000416",
         "score": {
-          "display": "89.36 (+2.13)",
-          "base": 89.36,
-          "passed": 42,
+          "display": "93.62 (+2.13)",
+          "base": 93.62,
+          "passed": 44,
           "denominator": 47,
           "dynamic": 1,
           "dynamicAddition": 2.13,
-          "potential": 91.49
+          "potential": 95.74
         },
         "visualQuality": {
-          "score": 89,
+          "score": 89.5,
           "maximumScore": 100,
-          "technicalPresentationAverage": 50,
-          "renderingStyleAverage": 39,
+          "technicalPresentationAverage": 47.4,
+          "renderingStyleAverage": 42.1,
           "videosScored": 10
         },
         "traceCount": 10,
@@ -7391,14 +7391,6 @@
         "previewPath": "previews-v8.3/catapoolt/gpt-5.5.png",
         "unmet": {
           "vlm": [
-            {
-              "id": "target-002",
-              "zh": "已进入开始菜单场景 → 画布显示风格化标题文字 \"🅒🅐🅣🅐🅟🅞🅞🅛🅣\"。"
-            },
-            {
-              "id": "target-011",
-              "zh": "游戏玩法暂停弹窗中的 Menu（菜单）按钮被接受 → 开始菜单场景替换游戏玩法场景，并显示风格化标题文字 \"🅒🅐🅣🅐🅟🅞🅞🅛🅣\"。"
-            },
             {
               "id": "target-017",
               "zh": "被拖拽的猫以会消耗所有剩余耐力的发射耐力成本被释放 → 猫从拖拽位置发射出去，耐力条填充变为空，并且在猫下一次落地后，可见一个带有标题文字 \"Game Over\" 的弹窗叠层。"
@@ -7417,7 +7409,24 @@
           ]
         },
         "issue": null,
-        "timing": null
+        "timing": {
+          "runId": "gpt-5.5-v8.3-rubric2-20260903-000416",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T03:28:10+08:00",
+          "finishedAt": "2026-09-03T03:38:14+08:00",
+          "totalDurationMs": 604007,
+          "stages": [
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T03:28:10+08:00",
+              "finishedAt": "2026-09-03T03:38:14+08:00",
+              "durationMs": 603989,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       },
       "seed-2.0-pro": {
         "status": "completed",
