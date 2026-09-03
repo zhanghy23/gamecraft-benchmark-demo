@@ -6803,7 +6803,7 @@
     "non-mewtonian-cat": {
       "gpt-5.5": {
         "status": "completed",
-        "runId": null,
+        "runId": "gpt-5.5-v8.3-rubric2-20260903-000416",
         "score": {
           "display": "90.24 (+9.76)",
           "base": 90.24,
@@ -6814,10 +6814,10 @@
           "potential": 100
         },
         "visualQuality": {
-          "score": 90.91,
+          "score": 94.18,
           "maximumScore": 100,
-          "technicalPresentationAverage": 50,
-          "renderingStyleAverage": 40.91,
+          "technicalPresentationAverage": 48.64,
+          "renderingStyleAverage": 45.55,
           "videosScored": 11
         },
         "traceCount": 11,
@@ -6849,7 +6849,24 @@
           ]
         },
         "issue": null,
-        "timing": null
+        "timing": {
+          "runId": "gpt-5.5-v8.3-rubric2-20260903-000416",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T02:57:21+08:00",
+          "finishedAt": "2026-09-03T03:04:46+08:00",
+          "totalDurationMs": 445209,
+          "stages": [
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T02:57:21+08:00",
+              "finishedAt": "2026-09-03T03:04:46+08:00",
+              "durationMs": 445191,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       },
       "seed-2.0-pro": {
         "status": "completed",
