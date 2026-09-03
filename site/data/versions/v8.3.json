@@ -32,6 +32,12 @@
       "label": "DeepSeek-V4-Flash",
       "provider": "DeepSeek",
       "order": 5
+    },
+    {
+      "id": "deepseek-v4-pro",
+      "label": "DeepSeek-V4-Pro",
+      "provider": "DeepSeek",
+      "order": 6
     }
   ],
   "games": [
@@ -6109,6 +6115,123 @@
               "startedAt": "2026-09-03T23:57:28+08:00",
               "finishedAt": "2026-09-04T00:07:58+08:00",
               "durationMs": 629445,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
+      "deepseek-v4-pro": {
+        "status": "completed",
+        "runId": "deepseek-v4-pro-v8.3-rubric2-imported-20260903-235436",
+        "score": {
+          "display": "82.98 (+0.00)",
+          "base": 82.98,
+          "passed": 39,
+          "denominator": 47,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 82.98
+        },
+        "visualQuality": {
+          "score": 89.3,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.3,
+          "renderingStyleAverage": 42,
+          "videosScored": 10
+        },
+        "traceCount": 10,
+        "playPath": "games-v8.3/highway-404/deepseek-v4-pro/index.html",
+        "previewPath": "previews-v8.3/highway-404/deepseek-v4-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-006",
+              "zh": "主动玩法从初始关卡数据加载 → 在玩法开始时，道路上可见一个茶壶收集物。"
+            },
+            {
+              "id": "target-033",
+              "zh": "一个 503 道路实体在玩法视口中可见 → 文本 \"503\" 绘制在该道路实体下方。"
+            },
+            {
+              "id": "target-034",
+              "zh": "有效玩法加载后存在一个 503 道路实体，且其缺失道路长度为正数 → 一个 503 标记可见，并且一个或多个缺失道路图块沿道路方向紧接在该标记之后、对齐在同一车道中。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-003",
+              "zh": "在标题画面显示期间且 Konami-code 序列完成之前，接受了一次与下一个 Konami-code 按键不匹配的键盘按键释放 → 显示内容从标题画面切换为玩法画面。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-022",
+              "zh": "在有效玩法运行期间，当视口不在地图左边缘时，主角越过左侧水平相机边界 → 道路背景和道路实体相对于画布向右移动，同时主角仍保持可见。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-026",
+              "zh": "一个 200 道路实体在玩法视口中可见 → 文本 \"200\" 绘制在该道路实体下方。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-028",
+              "zh": "一个 302 道路实体在玩法视口中可见 → 文本 \"302\" 绘制在该道路实体下方。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-047",
+              "zh": "结束画面显示时，除发推动作以外的键盘按键松开输入被接受 → 显示内容从结束画面切换回标题画面，并且标题文本可见。",
+              "cause": "源码分析确认未实现"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-pro-v8.3-rubric2-imported-20260903-235436",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T23:58:33+08:00",
+          "finishedAt": "2026-09-04T00:40:34+08:00",
+          "totalDurationMs": 2520890,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-03T23:58:33+08:00",
+              "finishedAt": "2026-09-04T00:14:30+08:00",
+              "durationMs": 957338,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-04T00:14:30+08:00",
+              "finishedAt": "2026-09-04T00:23:01+08:00",
+              "durationMs": 510142,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-04T00:23:01+08:00",
+              "finishedAt": "2026-09-04T00:23:01+08:00",
+              "durationMs": 167,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-04T00:23:01+08:00",
+              "finishedAt": "2026-09-04T00:25:03+08:00",
+              "durationMs": 122391,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-04T00:25:03+08:00",
+              "finishedAt": "2026-09-04T00:40:34+08:00",
+              "durationMs": 930820,
               "status": "completed",
               "exitCode": 0
             }

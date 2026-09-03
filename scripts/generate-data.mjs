@@ -71,6 +71,7 @@ const models = [
   { id: 'minimax-m2.7', label: 'MiniMax-M2.7', provider: 'MiniMax', order: 3 },
   { id: 'gpt-5.4', label: 'GPT-5.4', provider: 'OpenAI', order: 4 },
   { id: 'deepseek-v4-flash', label: 'DeepSeek-V4-Flash', provider: 'DeepSeek', order: 5 },
+  { id: 'deepseek-v4-pro', label: 'DeepSeek-V4-Pro', provider: 'DeepSeek', order: 6 },
 ];
 
 const games = [
