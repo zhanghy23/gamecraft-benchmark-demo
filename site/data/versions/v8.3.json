@@ -7637,6 +7637,185 @@
             }
           ]
         }
+      },
+      "minimax-m2.7": {
+        "status": "completed",
+        "runId": "minimax-m2.7-v8.3-rubric2-20260903-000416",
+        "score": {
+          "display": "55.81 (+20.93)",
+          "base": 55.81,
+          "passed": 24,
+          "denominator": 43,
+          "dynamic": 9,
+          "dynamicAddition": 20.93,
+          "potential": 76.74
+        },
+        "visualQuality": {
+          "score": 92.15,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.46,
+          "renderingStyleAverage": 43.69,
+          "videosScored": 13
+        },
+        "traceCount": 13,
+        "playPath": "games-v8.3/market-street-tycoon/minimax-m2.7/index.html",
+        "previewPath": "previews-v8.3/market-street-tycoon/minimax-m2.7.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-033",
+              "zh": "在库存界面中，当底部导航项被选中时，向左输入被接受 → 底部“back”（返回）按钮以白色高亮，并且“next”（下一步）按钮未高亮。"
+            },
+            {
+              "id": "target-035",
+              "zh": "当库存界面渲染至少三行商品行且第三个商品行被选中时 → 商品列表向上滚动一个行高，使第一个商品行位于可见库存列表区域上方。"
+            },
+            {
+              "id": "target-039",
+              "zh": "条件：结算屏幕渲染某个商品行，且该商品行的标准化需求值至少为 1 → 预期结果：该行的“Demand:”一行包含 10 个满格需求符号，且不包含任何空需求符号。"
+            },
+            {
+              "id": "target-041",
+              "zh": "条件：在结算屏幕上确认输入被接受，且玩家的金钱加上结算总额不为 0 → 预期结果：显示从结算屏幕切换到下一周的购买屏幕，并且左上角标题显示的周数比确认前结算屏幕显示的周数大 1。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-001",
+              "zh": "没有可用的存档时渲染主菜单 → 屏幕在靠近顶部的居中位置显示三行黄色标题“𝕄𝕒𝕣𝕜𝕖𝕥”、“𝕊𝕥𝕣𝕖𝕖𝕥”、“𝕋𝕪𝕔𝕠𝕠𝕟”，并显示一个包含“New Game”、“FullScreen”、“Help”和“About”的垂直菜单，且没有可见的“Continue”项目。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-009",
+              "zh": "为带有提供的总计值的界面渲染标题栏 → 标题栏在左上角显示周数和界面标题，在右上角显示当前金钱金额，并在右上角第二行显示以“+ ”开头、后跟总计美元金额的内容。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-015",
+              "zh": "在购买界面的某个供应商行上尝试购买确认，且该行显示库存为 0 → 购买界面保持可见，该供应商行显示的库存仍为 0，标题栏金钱金额与确认前相比保持不变。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-031",
+              "zh": "市场场景渲染恰好 3 种仍有剩余库存的商品类型 → 商品图标绘制在左侧框、中央框和右侧框中。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-036",
+              "zh": "库存界面渲染某个声誉值为 0 的商品行 → 该行的“Reputation:”（声誉：）一行包含一个完整声誉符号，后跟四个空声誉符号。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-038",
+              "zh": "条件：结算屏幕渲染某个商品行，且该商品行的标准化需求值为 0 → 预期结果：该行的“Demand:”一行包含 10 个空需求符号，且不包含任何满格需求符号。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-002",
+              "zh": "当玩家的金钱加上复盘总计为零时接受复盘确认 → 显示内容从复盘流程切换回主菜单界面，显示“𝕄𝕒𝕣𝕜𝕖𝕥 𝕊𝕥𝕣𝕖𝕖𝕥 𝕋𝕪𝕔𝕠𝕠𝕟”标题及其垂直菜单。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-024",
+              "zh": "在接受库存界面“next”（下一步）选项后，延迟的前进转场完成 → 显示从库存界面转场切换到市场场景。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-026",
+              "zh": "在回顾界面中，当回顾商品列表未处于最低滚动位置时，向下滚动输入被接受 → 回顾商品行向上移动 20 screen pixels，并且滚动条滑块沿右侧滚动条向下移动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-027",
+              "zh": "在回顾界面中，当回顾商品列表未处于顶部滚动位置时，向上滚动输入被接受 → 回顾商品行向下移动 20 screen pixels，并且滚动条滑块沿右侧滚动条向上移动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-029",
+              "zh": "市场场景渲染恰好 1 种仍有剩余库存的商品类型 → 商品图标绘制在中央框中，而左侧框和右侧框中不包含商品图标。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-030",
+              "zh": "市场场景渲染恰好 2 种仍有剩余库存的商品类型 → 商品图标绘制在左侧框和右侧框中，而中央框中不包含商品图标。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-032",
+              "zh": "市场场景渲染某个累计销量至少达到其起始库存的商品 → 市场框中不再可见该商品的任何图标。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-042",
+              "zh": "条件：市场场景渲染其摊位背景 → 预期结果：场景显示两根垂直木柱、靠近顶部的一根水平支撑梁、一块红白条纹帐篷布、一条砖墙带，以及三个带深色内部的棕色陈列箱。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-043",
+              "zh": "条件：市场场景渲染其状态徽章 → 预期结果：左上方附近的白色矩形徽章显示“Week”后接周数，右上方附近的白色矩形徽章显示已显示的金钱数额后接“$”。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "minimax-m2.7-v8.3-rubric2-20260903-000416",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T11:36:39+08:00",
+          "finishedAt": "2026-09-03T12:48:12+08:00",
+          "totalDurationMs": 4293143,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-03T11:36:39+08:00",
+              "finishedAt": "2026-09-03T11:38:20+08:00",
+              "durationMs": 100946,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-03T11:38:20+08:00",
+              "finishedAt": "2026-09-03T11:58:31+08:00",
+              "durationMs": 1210663,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-03T11:58:31+08:00",
+              "finishedAt": "2026-09-03T12:39:39+08:00",
+              "durationMs": 2468946,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-03T12:39:39+08:00",
+              "finishedAt": "2026-09-03T12:39:40+08:00",
+              "durationMs": 180,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-03T12:39:40+08:00",
+              "finishedAt": "2026-09-03T12:40:34+08:00",
+              "durationMs": 54394,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T12:40:34+08:00",
+              "finishedAt": "2026-09-03T12:48:12+08:00",
+              "durationMs": 457976,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "necrotic-commander": {
