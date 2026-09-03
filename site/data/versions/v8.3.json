@@ -7408,6 +7408,43 @@
             }
           ]
         }
+      },
+      "minimax-m2.7": {
+        "status": "failed",
+        "runId": "minimax-m2.7-v8.3-rubric2-20260903-000416",
+        "stage": "trace",
+        "score": null,
+        "traceCount": 0,
+        "playPath": null,
+        "previewPath": null,
+        "unmet": null,
+        "issue": "generate-game 已在约97.3秒内完成并写出4个文件，但进入 Trace 前的确定性构建校验失败：src/main.ts 重复导出 CannonbolfGame，Vite/esbuild 无法编译，因此未生成 Trace、Replay 或 Judge 结果。",
+        "timing": {
+          "runId": "minimax-m2.7-v8.3-rubric2-20260903-000416",
+          "status": "failed",
+          "failedStage": "trace",
+          "startedAt": "2026-09-03T11:34:58+08:00",
+          "finishedAt": "2026-09-03T11:36:39+08:00",
+          "totalDurationMs": 100674,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-03T11:34:58+08:00",
+              "finishedAt": "2026-09-03T11:36:35+08:00",
+              "durationMs": 97295,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-03T11:36:35+08:00",
+              "finishedAt": "2026-09-03T11:36:39+08:00",
+              "durationMs": 3358,
+              "status": "failed",
+              "exitCode": 1
+            }
+          ]
+        }
       }
     },
     "market-street-tycoon": {
