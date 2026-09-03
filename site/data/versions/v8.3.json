@@ -8684,6 +8684,92 @@
             }
           ]
         }
+      },
+      "gpt-5.4": {
+        "status": "completed",
+        "runId": "gpt-5.4-v8.3-rubric2-resume-20260903-220846",
+        "score": {
+          "display": "100.00 (+0.00)",
+          "base": 100,
+          "passed": 38,
+          "denominator": 38,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 100
+        },
+        "visualQuality": {
+          "score": 90.14,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.71,
+          "renderingStyleAverage": 42.43,
+          "videosScored": 7
+        },
+        "traceCount": 7,
+        "playPath": "games-v8.3/necrotic-commander/gpt-5.4/index.html",
+        "previewPath": "previews-v8.3/necrotic-commander/gpt-5.4.png",
+        "unmet": {
+          "vlm": [],
+          "replayTrace": []
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.4-v8.3-rubric2-resume-20260903-220846",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T22:09:43+08:00",
+          "finishedAt": "2026-09-03T23:21:41+08:00",
+          "totalDurationMs": 4318074,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-03T22:09:43+08:00",
+              "finishedAt": "2026-09-03T22:19:10+08:00",
+              "durationMs": 566940,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-03T22:19:10+08:00",
+              "finishedAt": "2026-09-03T22:35:11+08:00",
+              "durationMs": 961524,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-03T22:35:11+08:00",
+              "finishedAt": "2026-09-03T23:13:19+08:00",
+              "durationMs": 2288287,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-03T23:13:19+08:00",
+              "finishedAt": "2026-09-03T23:13:19+08:00",
+              "durationMs": 159,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-03T23:13:20+08:00",
+              "finishedAt": "2026-09-03T23:15:17+08:00",
+              "durationMs": 117328,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T23:15:17+08:00",
+              "finishedAt": "2026-09-03T23:21:41+08:00",
+              "durationMs": 383797,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "space-huggers": {
