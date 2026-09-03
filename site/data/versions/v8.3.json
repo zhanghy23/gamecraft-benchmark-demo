@@ -5009,21 +5009,21 @@
       },
       "seed-2.0-pro": {
         "status": "completed",
-        "runId": null,
+        "runId": "seed-2.0-pro-v8.3-rubric2-20260903-000416",
         "score": {
-          "display": "86.11 (+5.56)",
-          "base": 86.11,
-          "passed": 31,
+          "display": "83.33 (+5.56)",
+          "base": 83.33,
+          "passed": 30,
           "denominator": 36,
           "dynamic": 2,
           "dynamicAddition": 5.56,
-          "potential": 91.67
+          "potential": 88.89
         },
         "visualQuality": {
-          "score": 89.33,
+          "score": 92.27,
           "maximumScore": 100,
-          "technicalPresentationAverage": 49.33,
-          "renderingStyleAverage": 40,
+          "technicalPresentationAverage": 48.2,
+          "renderingStyleAverage": 44.07,
           "videosScored": 15
         },
         "traceCount": 15,
@@ -5038,6 +5038,10 @@
             {
               "id": "target-013",
               "zh": "条件：结果揭示动画到达一个被标记为正确的鱼条目。→ 预期结果：该鱼条目在其结果网格单元格中变为可见，该条目周围出现粒子爆发，并且结果分数计数器显示的数字在揭示过程中发生变化。"
+            },
+            {
+              "id": "target-015",
+              "zh": "条件：传送带上的一条鱼带有已附加的纸质票据，且票据上的打印数值与该鱼所需分数匹配；该鱼尝试计分。→ 预期结果：鱼周围出现对勾标记和橙色射线粒子，并且鱼变为半透明外观。"
             },
             {
               "id": "target-033",
@@ -5058,7 +5062,24 @@
           ]
         },
         "issue": null,
-        "timing": null
+        "timing": {
+          "runId": "seed-2.0-pro-v8.3-rubric2-20260903-000416",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T00:44:44+08:00",
+          "finishedAt": "2026-09-03T00:53:13+08:00",
+          "totalDurationMs": 509379,
+          "stages": [
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T00:44:44+08:00",
+              "finishedAt": "2026-09-03T00:53:13+08:00",
+              "durationMs": 509361,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "13-steps-to-escape": {
