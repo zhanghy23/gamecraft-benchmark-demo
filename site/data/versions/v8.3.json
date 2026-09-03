@@ -6404,6 +6404,130 @@
             }
           ]
         }
+      },
+      "gpt-5.4": {
+        "status": "completed",
+        "runId": "gpt-5.4-v8.3-rubric2-20260903-000416",
+        "score": {
+          "display": "89.33 (+4.00)",
+          "base": 89.33,
+          "passed": 67,
+          "denominator": 75,
+          "dynamic": 3,
+          "dynamicAddition": 4,
+          "potential": 93.33
+        },
+        "visualQuality": {
+          "score": 94.12,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.82,
+          "renderingStyleAverage": 45.3,
+          "videosScored": 33
+        },
+        "traceCount": 33,
+        "playPath": "games-v8.3/13-steps-to-escape/gpt-5.4/index.html",
+        "previewPath": "previews-v8.3/13-steps-to-escape/gpt-5.4.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-034",
+              "zh": "当木箱完成移动并到达一个开关触发图块上 → 与木箱目标位置处触发器具有相同朝向的开关图块在开关开启外观与开关关闭外观之间切换。"
+            },
+            {
+              "id": "target-035",
+              "zh": "当木箱被从一个其下方包含开关触发器的图块上推离 → 随着木箱离开该图块，与木箱下方触发器具有相同朝向的开关图块在开关开启外观与开关关闭外观之间切换。"
+            },
+            {
+              "id": "target-036",
+              "zh": "在一次开关反转期间，当木箱位于一个变为开关开启外观的开关图块上 → 该开关图块上的木箱在移除动画期间缩小，直到木箱不再可见。"
+            },
+            {
+              "id": "target-059",
+              "zh": "在关卡编辑器中的空网格单元上，图块放置点击被接受 → 被点击的编辑器网格单元变为显示当前选中的图块，并使用当前选中的朝向。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-075",
+              "zh": "菜单背景的背景图像可用后渲染菜单背景 → 一张像素风背景图像在菜单屏幕后方沿水平方向重复铺满可见画布。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-002",
+              "zh": "游戏完成初始设置且 URL 中存在有效的已编码关卡参数 → 显示直接打开到游戏流程，并将解码后的自定义关卡显示为活动棋盘。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-073",
+              "zh": "在启用声音的状态下渲染 UI 层时点击声音图标 → 声音图标从表示声音开启的图案变为表示静音的声音关闭图案。",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-074",
+              "zh": "在静音状态下渲染 UI 层时点击声音图标 → 声音图标从表示静音的声音关闭图案变为表示声音开启的图案。",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.4-v8.3-rubric2-20260903-000416",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T03:34:47+08:00",
+          "finishedAt": "2026-09-03T04:45:19+08:00",
+          "totalDurationMs": 4231718,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-03T03:34:47+08:00",
+              "finishedAt": "2026-09-03T03:37:23+08:00",
+              "durationMs": 156330,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-03T03:37:23+08:00",
+              "finishedAt": "2026-09-03T03:59:06+08:00",
+              "durationMs": 1302876,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-03T03:59:06+08:00",
+              "finishedAt": "2026-09-03T04:25:12+08:00",
+              "durationMs": 1566122,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-03T04:25:12+08:00",
+              "finishedAt": "2026-09-03T04:25:13+08:00",
+              "durationMs": 264,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-03T04:25:13+08:00",
+              "finishedAt": "2026-09-03T04:27:33+08:00",
+              "durationMs": 139819,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T04:27:33+08:00",
+              "finishedAt": "2026-09-03T04:45:19+08:00",
+              "durationMs": 1066270,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "tiny-yurts": {
