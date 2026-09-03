@@ -4844,21 +4844,21 @@
       },
       "seed-2.0-pro": {
         "status": "completed",
-        "runId": null,
+        "runId": "seed-2.0-pro-v8.3-rubric2-20260903-000416",
         "score": {
-          "display": "85.11 (+2.13)",
-          "base": 85.11,
-          "passed": 40,
+          "display": "80.85 (+2.13)",
+          "base": 80.85,
+          "passed": 38,
           "denominator": 47,
           "dynamic": 1,
           "dynamicAddition": 2.13,
-          "potential": 87.23
+          "potential": 82.98
         },
         "visualQuality": {
           "score": 90,
           "maximumScore": 100,
-          "technicalPresentationAverage": 50,
-          "renderingStyleAverage": 40,
+          "technicalPresentationAverage": 47.89,
+          "renderingStyleAverage": 42.11,
           "videosScored": 9
         },
         "traceCount": 9,
@@ -4871,8 +4871,16 @@
               "zh": "在主动游玩期间，且英雄向左有开放路径时，接受了一次向左的滑动转向输入 → 英雄从输入前的位置沿游玩区域向左移动。"
             },
             {
+              "id": "target-032",
+              "zh": "一个 501 道路实体在玩法视口中可见 → 文本 \"501\" 绘制在该道路实体下方。"
+            },
+            {
               "id": "target-038",
               "zh": "英雄在游戏进行中且未处于车道重定向状态时与 404 道路未找到标志发生碰撞 → 在道路上，该 404 标志正后方出现一段塌落道路。"
+            },
+            {
+              "id": "target-040",
+              "zh": "英雄在游戏进行中且未处于车道重定向状态时与 429 限速标志发生碰撞 → 游戏视口中央出现剩余秒数文本。"
             }
           ],
           "replayTrace": [
@@ -4904,7 +4912,24 @@
           ]
         },
         "issue": null,
-        "timing": null
+        "timing": {
+          "runId": "seed-2.0-pro-v8.3-rubric2-20260903-000416",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T00:23:48+08:00",
+          "finishedAt": "2026-09-03T00:32:22+08:00",
+          "totalDurationMs": 513973,
+          "stages": [
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T00:23:48+08:00",
+              "finishedAt": "2026-09-03T00:32:22+08:00",
+              "durationMs": 513955,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "kuro-neko-market": {
