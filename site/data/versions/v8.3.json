@@ -5923,21 +5923,21 @@
       },
       "seed-2.0-pro": {
         "status": "completed",
-        "runId": null,
+        "runId": "seed-2.0-pro-v8.3-rubric2-20260903-000416",
         "score": {
-          "display": "66.22 (+8.11)",
-          "base": 66.22,
-          "passed": 49,
+          "display": "68.92 (+8.11)",
+          "base": 68.92,
+          "passed": 51,
           "denominator": 74,
           "dynamic": 6,
           "dynamicAddition": 8.11,
-          "potential": 74.32
+          "potential": 77.03
         },
         "visualQuality": {
-          "score": 90,
+          "score": 90.6,
           "maximumScore": 100,
-          "technicalPresentationAverage": 50,
-          "renderingStyleAverage": 40,
+          "technicalPresentationAverage": 47.6,
+          "renderingStyleAverage": 43,
           "videosScored": 5
         },
         "traceCount": 5,
@@ -5946,16 +5946,8 @@
         "unmet": {
           "vlm": [
             {
-              "id": "target-039",
-              "zh": "对一张可见手牌应用弃牌效果 → 一张手牌移动到抽牌牌堆区域，并且一张替换卡牌出现在可见手牌中。"
-            },
-            {
               "id": "target-045",
               "zh": "关卡结束检查发现存在已解锁手牌，但没有任何一张具有合法放置位置 → 当前棋盘被下一关棋盘替换，角色被放置在起始地块上，并且手牌中显示卡牌。"
-            },
-            {
-              "id": "target-052",
-              "zh": "从上一关推进后第三关棋盘可见 → 可见棋盘包含九个普通非奖励地块空间。"
             }
           ],
           "replayTrace": [
@@ -6072,7 +6064,24 @@
           ]
         },
         "issue": null,
-        "timing": null
+        "timing": {
+          "runId": "seed-2.0-pro-v8.3-rubric2-20260903-000416",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T01:25:46+08:00",
+          "finishedAt": "2026-09-03T01:36:21+08:00",
+          "totalDurationMs": 635325,
+          "stages": [
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T01:25:46+08:00",
+              "finishedAt": "2026-09-03T01:36:21+08:00",
+              "durationMs": 635307,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "cannonbolf": {
