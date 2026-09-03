@@ -6032,6 +6032,35 @@
             }
           ]
         }
+      },
+      "minimax-m2.7": {
+        "status": "failed",
+        "runId": "minimax-m2.7-v8.3-rubric2-20260903-000416",
+        "stage": "generate-game",
+        "score": null,
+        "traceCount": 0,
+        "playPath": null,
+        "previewPath": null,
+        "unmet": null,
+        "issue": "生成阶段共尝试 31 次流式响应，均缺少 [DONE] 或 finish_reason，最终被判定为无效流式响应；未产生可校验的完整游戏项目。",
+        "timing": {
+          "runId": "minimax-m2.7-v8.3-rubric2-20260903-000416",
+          "status": "failed",
+          "failedStage": "generate-game",
+          "startedAt": "2026-09-03T08:48:20+08:00",
+          "finishedAt": "2026-09-03T10:04:45+08:00",
+          "totalDurationMs": 4584762,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-03T08:48:20+08:00",
+              "finishedAt": "2026-09-03T10:04:45+08:00",
+              "durationMs": 4584744,
+              "status": "failed",
+              "exitCode": 1
+            }
+          ]
+        }
       }
     },
     "tiny-yurts": {
