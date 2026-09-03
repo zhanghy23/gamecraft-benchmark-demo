@@ -6084,21 +6084,21 @@
     "market-street-tycoon": {
       "gpt-5.5": {
         "status": "completed",
-        "runId": null,
+        "runId": "gpt-5.5-v8.3-rubric2-20260903-000416",
         "score": {
-          "display": "76.74 (+2.33)",
-          "base": 76.74,
-          "passed": 33,
+          "display": "79.07 (+2.33)",
+          "base": 79.07,
+          "passed": 34,
           "denominator": 43,
           "dynamic": 1,
           "dynamicAddition": 2.33,
-          "potential": 79.07
+          "potential": 81.4
         },
         "visualQuality": {
-          "score": 90,
+          "score": 91.25,
           "maximumScore": 100,
-          "technicalPresentationAverage": 50,
-          "renderingStyleAverage": 40,
+          "technicalPresentationAverage": 48.08,
+          "renderingStyleAverage": 43.17,
           "videosScored": 12
         },
         "traceCount": 12,
@@ -6113,10 +6113,6 @@
             {
               "id": "target-019",
               "zh": "在库存界面中，当高亮项不是最顶部商品行时，向上选择输入被接受 → 库存界面保持可见，并且视觉选择高亮显示在输入前高亮项的上一行。"
-            },
-            {
-              "id": "target-020",
-              "zh": "在库存界面的商品行上，向右价格调整输入被接受 → 所选商品行显示的售价正好增加 1 dollar。"
             },
             {
               "id": "target-021",
@@ -6153,7 +6149,24 @@
           ]
         },
         "issue": null,
-        "timing": null
+        "timing": {
+          "runId": "gpt-5.5-v8.3-rubric2-20260903-000416",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-03T02:08:58+08:00",
+          "finishedAt": "2026-09-03T02:17:09+08:00",
+          "totalDurationMs": 490771,
+          "stages": [
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-03T02:08:58+08:00",
+              "finishedAt": "2026-09-03T02:17:09+08:00",
+              "durationMs": 490752,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       },
       "seed-2.0-pro": {
         "status": "completed",
