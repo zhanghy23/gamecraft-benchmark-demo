@@ -9388,6 +9388,18 @@
             }
           ]
         }
+      },
+      "gpt-5.4": {
+        "status": "failed",
+        "runId": "gpt-5.4-v8.3-rubric2-resume-20260903-220846",
+        "stage": "trace",
+        "score": null,
+        "traceCount": 0,
+        "playPath": null,
+        "previewPath": null,
+        "unmet": null,
+        "issue": "generate-game 历时约16分20秒并返回项目，但进入 Trace 前的确定性构建校验失败：src/main.ts:42:631 存在未闭合字符串（c.alive'），Vite/esbuild 无法编译；因此未生成 Trace、Replay 或 Judge 结果。队列脚本随后将该失败误归为共享基础设施异常并停止。",
+        "timing": null
       }
     },
     "catculus": {
