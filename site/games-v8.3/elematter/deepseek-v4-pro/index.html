@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1280, initial-scale=1.0" />
+  <title>Elemental Tower Defense</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #1a1a2e;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #eee;
+    }
+    #game-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    #hud-top, #hud-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: #0f0f23;
+      padding: 6px 16px;
+      border-radius: 8px;
+      font-size: 16px;
+      width: 800px;
+      box-sizing: border-box;
+    }
+    #hud-top button, #hud-bottom button {
+      background: #333;
+      color: #ccc;
+      border: 1px solid #555;
+      padding: 4px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    #hud-top button.active-speed {
+      background: #222;
+      color: #fff;
+      border-color: #888;
+      font-weight: bold;
+    }
+    #play-btn {
+      min-width: 60px;
+    }
+    #play-btn.active {
+      background: #222;
+      color: #fff;
+    }
+    #send-wave-btn {
+      opacity: 0.5;
+      cursor: pointer;
+    }
+    #send-wave-btn.enabled {
+      opacity: 1;
+    }
+    #send-wave-btn:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+    #game-canvas {
+      background: #2d2d44;
+      border-radius: 8px;
+      display: block;
+    }
+  </style>
+  <script type="module" crossorigin src="./assets/index-BUdbA377.js"></script>
+</head>
+<body>
+  <div id="game-container">
+    <div id="hud-top">
+      <span id="lives-display">Lives: 20</span>
+      <span id="wave-display">Wave: - / 20</span>
+      <span id="next-wave-preview">Next: -</span>
+      <button id="speed-1x" class="active-speed">×1</button>
+      <button id="speed-2x">×2</button>
+      <button id="speed-3x">×3</button>
+      <button id="play-btn">Play</button>
+      <button id="send-wave-btn">Send Wave</button>
+    </div>
+    <canvas id="game-canvas" width="800" height="600"></canvas>
+    <div id="hud-bottom">
+      <span id="fragments-display">Fragments: 100</span>
+    </div>
+  </div>
+</body>
+</html>

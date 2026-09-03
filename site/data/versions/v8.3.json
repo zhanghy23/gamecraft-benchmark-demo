@@ -5445,6 +5445,125 @@
             }
           ]
         }
+      },
+      "deepseek-v4-pro": {
+        "status": "completed",
+        "runId": "deepseek-v4-pro-v8.3-rubric2-imported-20260903-235436",
+        "score": {
+          "display": "86.21 (+12.07)",
+          "base": 86.21,
+          "passed": 50,
+          "denominator": 58,
+          "dynamic": 7,
+          "dynamicAddition": 12.07,
+          "potential": 98.28
+        },
+        "visualQuality": {
+          "score": 90.45,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.09,
+          "renderingStyleAverage": 42.36,
+          "videosScored": 11
+        },
+        "traceCount": 11,
+        "playPath": "games-v8.3/elematter/deepseek-v4-pro/index.html",
+        "previewPath": "previews-v8.3/elematter/deepseek-v4-pro.png",
+        "unmet": {
+          "vlm": [],
+          "replayTrace": [
+            {
+              "id": "target-004",
+              "zh": "在游戏未处于游玩状态时选择“Send Wave”（派出波次）控件 → 波次显示保持为选择前的值，路径入口处不出现新的敌人，并且“Send Wave”（派出波次）控件保持其非激活的半透明外观。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-040",
+              "zh": "一个土元素 Boss 敌人在路径入口处被激活 → 一个 Boss 敌人出现在路径入口处，具有 20 px 的正方形身体、6 px 边框、绿色土元素颜色点缀和外侧角框。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-042",
+              "zh": "一个气元素 Boss 敌人在路径入口处被激活 → 一个 Boss 敌人出现在路径入口处，具有 20 px 的正方形身体、6 px 边框、黄色气元素颜色点缀和外侧角框。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-043",
+              "zh": "一个火元素 Boss 敌人在路径入口处被激活 → 一个 Boss 敌人出现在路径入口处，具有 20 px 的正方形身体、6 px 边框、红色火元素颜色点缀和外侧角框。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-048",
+              "zh": "玩家失去最后剩余的 1 条生命 → 浏览器警告对话框出现，并显示文本“You lost.”。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-049",
+              "zh": "失败警告对话框被确认 → 游戏页面重新加载到初始游戏场地视图。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-057",
+              "zh": "所有波次都已被派出并清除，且至少剩余 1 条生命 → 浏览器警告对话框出现，文本开头为“You won! Based on lives and elemental fragments left, your score is:”。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-058",
+              "zh": "胜利警告对话框被确认 → 游戏页面重新加载到初始游戏场地视图。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-pro-v8.3-rubric2-imported-20260903-235436",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-04T00:40:34+08:00",
+          "finishedAt": "2026-09-04T02:31:20+08:00",
+          "totalDurationMs": 6645665,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-04T00:40:34+08:00",
+              "finishedAt": "2026-09-04T01:01:35+08:00",
+              "durationMs": 1260785,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-04T01:01:35+08:00",
+              "finishedAt": "2026-09-04T02:20:47+08:00",
+              "durationMs": 4752329,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-04T02:20:47+08:00",
+              "finishedAt": "2026-09-04T02:20:48+08:00",
+              "durationMs": 310,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-04T02:20:48+08:00",
+              "finishedAt": "2026-09-04T02:23:50+08:00",
+              "durationMs": 181922,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-04T02:23:50+08:00",
+              "finishedAt": "2026-09-04T02:31:20+08:00",
+              "durationMs": 450286,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "highway-404": {
