@@ -16385,6 +16385,108 @@
         "unmet": null,
         "issue": "生成阶段历时约76分24秒；31次流式请求均在返回结束时缺少 [DONE] 或 finish_reason，最终被判定为无效流式响应，未产生可校验的完整游戏项目。",
         "timing": null
+      },
+      "gpt-5.4": {
+        "status": "completed",
+        "runId": "gpt-5.4-v8.3-rubric2-resume-20260904-061752",
+        "score": {
+          "display": "91.43 (+5.71)",
+          "base": 91.43,
+          "passed": 32,
+          "denominator": 35,
+          "dynamic": 2,
+          "dynamicAddition": 5.71,
+          "potential": 97.14
+        },
+        "visualQuality": {
+          "score": 90.17,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.67,
+          "renderingStyleAverage": 42.5,
+          "videosScored": 12
+        },
+        "traceCount": 12,
+        "playPath": "games-v8.3/q1k3/gpt-5.4/index.html",
+        "previewPath": "previews-v8.3/q1k3/gpt-5.4.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-005",
+              "zh": "玩家在站在地面上且跳跃已重新启用时按下跳跃 → 第一人称视点从站立高度向上升起。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-006",
+              "zh": "玩家向上看至垂直视角限制 → 视图保持限制在最大向上俯仰角，额外的向上视角输入不会使视图旋转超过该限制角度。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-023",
+              "zh": "玩家死亡后的重启延迟结束 → 在“YOU DIED”消息显示之后，当前关卡重新加载为其起始布局。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.4-v8.3-rubric2-resume-20260904-061752",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-04T21:08:19+08:00",
+          "finishedAt": "2026-09-04T21:58:44+08:00",
+          "totalDurationMs": 3025520,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-04T21:08:19+08:00",
+              "finishedAt": "2026-09-04T21:10:44+08:00",
+              "durationMs": 144991,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-04T21:10:44+08:00",
+              "finishedAt": "2026-09-04T21:24:15+08:00",
+              "durationMs": 811718,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-04T21:24:15+08:00",
+              "finishedAt": "2026-09-04T21:47:52+08:00",
+              "durationMs": 1416654,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-04T21:47:52+08:00",
+              "finishedAt": "2026-09-04T21:47:52+08:00",
+              "durationMs": 188,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-04T21:47:52+08:00",
+              "finishedAt": "2026-09-04T21:51:23+08:00",
+              "durationMs": 210284,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-04T21:51:23+08:00",
+              "finishedAt": "2026-09-04T21:58:44+08:00",
+              "durationMs": 441645,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "island-not-found": {
