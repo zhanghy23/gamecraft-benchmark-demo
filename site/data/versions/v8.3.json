@@ -10928,6 +10928,18 @@
             }
           ]
         }
+      },
+      "gpt-5.4": {
+        "status": "failed",
+        "runId": "gpt-5.4-v8.3-rubric2-resume-20260904-061752",
+        "stage": "trace",
+        "score": null,
+        "traceCount": 0,
+        "playPath": null,
+        "previewPath": null,
+        "unmet": null,
+        "issue": "generate-game 已完成；Trace 的 Probe Plan 第2批在3次尝试后仍不合法：一个 exactSource 带多余分号，另一个 exactSource 在 src/main.ts 中出现2次而无法唯一定位，因此未进入 selection、Replay 与 Judge。",
+        "timing": null
       }
     },
     "stolen-sword": {
