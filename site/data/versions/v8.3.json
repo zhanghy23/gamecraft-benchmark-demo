@@ -4997,6 +4997,143 @@
             }
           ]
         }
+      },
+      "qwen3.8-max": {
+        "status": "completed",
+        "runId": "qwen3.8-max-v8.3-rubric2-imported-20260904-143200",
+        "score": {
+          "display": "76.92 (+9.62)",
+          "base": 76.92,
+          "passed": 40,
+          "denominator": 52,
+          "dynamic": 5,
+          "dynamicAddition": 9.62,
+          "potential": 86.54
+        },
+        "visualQuality": {
+          "score": 90.8,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.7,
+          "renderingStyleAverage": 43.1,
+          "videosScored": 10
+        },
+        "traceCount": 10,
+        "playPath": "games-v8.3/radius-raid/qwen3.8-max/index.html",
+        "previewPath": "previews-v8.3/radius-raid/qwen3.8-max.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-018",
+              "zh": "在活动游戏玩法期间武器冷却已完成，同时三连发处于活动状态 → 三条子弹线段以散射形态从玩家飞船发出。"
+            },
+            {
+              "id": "target-033",
+              "zh": "游戏处于进行状态时，一个可见的摇摆追踪型敌人进行更新 → 该敌人在连续游戏帧中沿左右弯曲的路径朝玩家飞船前进。"
+            },
+            {
+              "id": "target-043",
+              "zh": "条件：玩家死亡序列在活跃游戏过程中开始 → 预期结果：爆炸效果出现在玩家飞船周围，并且在连续的游戏帧中，游戏层以不断变化的水平或垂直偏移绘制。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-010",
+              "zh": "从暂停屏幕激活“MENU”按钮，并接受返回菜单确认 → 游戏返回菜单屏幕，并且“PLAY”按钮可见。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-017",
+              "zh": "在活动游戏玩法期间武器冷却已完成，同时自动开火已禁用、鼠标按钮被按住且三连发未处于活动状态 → 一条子弹线段从玩家飞船发出并远离玩家飞船飞行。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-022",
+              "zh": "一颗穿透子弹在达到命中上限之前，与一个此前尚未命中过的敌人发生碰撞 → 命中粒子效果出现在该敌人处，并且子弹线继续越过撞击点。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-023",
+              "zh": "游戏处于进行状态时，一颗穿透子弹与其第 4 个不同的敌人发生碰撞 → 命中粒子效果出现在该敌人处，并且子弹线在撞击后消失。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-029",
+              "zh": "游戏处于进行状态时，一个可见的环绕型敌人进行更新 → 该敌人的位置在连续游戏帧中围绕玩家飞船变化。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-031",
+              "zh": "游戏处于进行状态时，一个可见的直接追踪型敌人进行更新 → 该敌人圆形在连续游戏帧中沿朝向玩家飞船的路径移动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-045",
+              "zh": "条件：在游戏结束屏幕上激活 PLAY AGAIN 按钮 → 预期结果：游戏结束屏幕被新一局的活跃游戏视图替换。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-046",
+              "zh": "条件：在游戏结束屏幕上激活 MENU 按钮 → 预期结果：游戏返回菜单屏幕，并且 PLAY 按钮可见。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-020",
+              "zh": "游戏处于进行状态、三发射击强化道具计时器已到期且射击被接受时，武器冷却已完成 → 恰好一条子弹线段从玩家飞船处发出。",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "qwen3.8-max-v8.3-rubric2-imported-20260904-143200",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-04T14:36:18+08:00",
+          "finishedAt": "2026-09-04T18:15:28+08:00",
+          "totalDurationMs": 13149304,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-04T14:36:18+08:00",
+              "finishedAt": "2026-09-04T14:56:34+08:00",
+              "durationMs": 1215248,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-04T14:56:34+08:00",
+              "finishedAt": "2026-09-04T18:01:02+08:00",
+              "durationMs": 11068378,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-04T18:01:02+08:00",
+              "finishedAt": "2026-09-04T18:01:02+08:00",
+              "durationMs": 488,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-04T18:01:02+08:00",
+              "finishedAt": "2026-09-04T18:04:56+08:00",
+              "durationMs": 233463,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-04T18:04:56+08:00",
+              "finishedAt": "2026-09-04T18:15:28+08:00",
+              "durationMs": 631694,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "elematter": {
