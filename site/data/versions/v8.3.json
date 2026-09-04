@@ -6923,6 +6923,137 @@
             }
           ]
         }
+      },
+      "deepseek-v4-flash": {
+        "status": "completed",
+        "runId": "deepseek-v4-flash-v8.3-rubric2-imported-20260903-220846",
+        "score": {
+          "display": "69.44 (+5.56)",
+          "base": 69.44,
+          "passed": 25,
+          "denominator": 36,
+          "dynamic": 2,
+          "dynamicAddition": 5.56,
+          "potential": 75
+        },
+        "visualQuality": {
+          "score": 84.89,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 41.89,
+          "renderingStyleAverage": 43,
+          "videosScored": 9
+        },
+        "traceCount": 9,
+        "playPath": "games-v8.3/kuro-neko-market/deepseek-v4-flash/index.html",
+        "previewPath": "previews-v8.3/kuro-neko-market/deepseek-v4-flash.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-005",
+              "zh": "条件：当猫爪能够拾取物品时，可拾取且正在漂移的鱼被拾取。→ 预期结果：鱼变为由猫爪持有，其阴影消失，并且在被持有期间停止在场景中独立漂移。"
+            },
+            {
+              "id": "target-007",
+              "zh": "条件：当指针下方没有兼容的放置目标时，被持有的物品被点击。→ 预期结果：被持有的物品仍由猫爪持有，并且不会被放置到场景中。"
+            },
+            {
+              "id": "target-013",
+              "zh": "条件：结果揭示动画到达一个被标记为正确的鱼条目。→ 预期结果：该鱼条目在其结果网格单元格中变为可见，该条目周围出现粒子爆发，并且结果分数计数器显示的数字在揭示过程中发生变化。"
+            },
+            {
+              "id": "target-016",
+              "zh": "条件：传送带上的一条鱼带有已附加的纸质票据，且票据上的打印数值与该鱼所需分数不匹配；该鱼尝试计分。→ 预期结果：鱼周围出现叉形粒子，并且鱼保持完全不透明。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-003",
+              "zh": "条件：当打印机显示屏未显示 00 时，打印机清除控件被激活。→ 预期结果：打印机的两位数字显示屏变为 00。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-018",
+              "zh": "条件：一条不在传送带上的鱼带有已附加的纸质票据；该鱼尝试计分。→ 预期结果：鱼周围不会出现计分粒子爆发，并且鱼保持当前不透明度。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-020",
+              "zh": "当打印机显示屏显示一位非零数值且当前没有票据正在打印时，激活打印机提交控件 → 打印机显示屏变为 00，并且一张纸质票据从打印机中出来，票据上印有一个数字，该数字与显示屏重置前的右侧数字一致。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-021",
+              "zh": "当打印机显示屏显示两位数值且当前没有票据正在打印时，激活打印机提交控件 → 打印机显示屏变为 00，并且一张纸质票据从打印机中出来，票据上印有两个数字，这两个数字与显示屏重置前的显示内容一致。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-029",
+              "zh": "当爪子能够拾取物品时，点击一张可拾取的纸质票据 → 该纸质票据变为由爪子持有。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-030",
+              "zh": "当爪子能够放下物品时，将一张已持有的纸质票据放到一条可承载该票据的鱼上 → 该纸质票据附着到该鱼上，并且不再由爪子持有。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-032",
+              "zh": "当在结果屏幕上激活返回按钮时 → 结果屏幕通过平铺式屏幕转场被关卡选择屏幕替换。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-flash-v8.3-rubric2-imported-20260903-220846",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-04T01:52:31+08:00",
+          "finishedAt": "2026-09-04T02:45:33+08:00",
+          "totalDurationMs": 3181184,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-04T01:52:31+08:00",
+              "finishedAt": "2026-09-04T02:05:11+08:00",
+              "durationMs": 759627,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-04T02:05:11+08:00",
+              "finishedAt": "2026-09-04T02:36:43+08:00",
+              "durationMs": 1891708,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-04T02:36:43+08:00",
+              "finishedAt": "2026-09-04T02:36:43+08:00",
+              "durationMs": 197,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-04T02:36:43+08:00",
+              "finishedAt": "2026-09-04T02:38:44+08:00",
+              "durationMs": 121001,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-04T02:38:44+08:00",
+              "finishedAt": "2026-09-04T02:45:33+08:00",
+              "durationMs": 408618,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "13-steps-to-escape": {
