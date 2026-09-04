@@ -6663,6 +6663,137 @@
             }
           ]
         }
+      },
+      "qwen3.8-max": {
+        "status": "completed",
+        "runId": "qwen3.8-max-v8.3-rubric2-imported-20260904-143200",
+        "score": {
+          "display": "76.60 (+2.13)",
+          "base": 76.6,
+          "passed": 36,
+          "denominator": 47,
+          "dynamic": 1,
+          "dynamicAddition": 2.13,
+          "potential": 78.72
+        },
+        "visualQuality": {
+          "score": 90,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.5,
+          "renderingStyleAverage": 42.5,
+          "videosScored": 10
+        },
+        "traceCount": 10,
+        "playPath": "games-v8.3/highway-404/qwen3.8-max/index.html",
+        "previewPath": "previews-v8.3/highway-404/qwen3.8-max.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-015",
+              "zh": "在主动游玩期间，且英雄向左有开放路径时，接受了一次向左的滑动转向输入 → 英雄从输入前的位置沿游玩区域向左移动。"
+            },
+            {
+              "id": "target-024",
+              "zh": "在玩法已暂停期间，暂停键被接受 → 玩法恢复，道路、实体、主角和 HUD 再次更新。"
+            },
+            {
+              "id": "target-030",
+              "zh": "一个 418 道路实体在玩法视口中可见 → 文本 \"418\" 绘制在该道路实体下方。"
+            },
+            {
+              "id": "target-040",
+              "zh": "英雄在游戏进行中且未处于车道重定向状态时与 429 限速标志发生碰撞 → 游戏视口中央出现剩余秒数文本。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-003",
+              "zh": "在标题画面显示期间且 Konami-code 序列完成之前，接受了一次与下一个 Konami-code 按键不匹配的键盘按键释放 → 显示内容从标题画面切换为玩法画面。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-007",
+              "zh": "在主动游玩期间且道路地图缓存已构建后，玩法画面被渲染 → 玩法视口由平铺的高速公路车道填满，左侧和右侧边缘沿线有路肩图块。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-022",
+              "zh": "在有效玩法运行期间，当视口不在地图左边缘时，主角越过左侧水平相机边界 → 道路背景和道路实体相对于画布向右移动，同时主角仍保持可见。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-041",
+              "zh": "计划生成塌落道路的时间到期，且新路段不与 200 road-OK 标记重叠 → 在计划的道路位置出现一段新的塌落道路。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-043",
+              "zh": "英雄在游戏进行中与缺失道路空隙发生碰撞 → 英雄在死亡动画中被绘制为偏离直立朝向的旋转状态。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-047",
+              "zh": "结束画面显示时，除发推动作以外的键盘按键松开输入被接受 → 显示内容从结束画面切换回标题画面，并且标题文本可见。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-020",
+              "zh": "在有效玩法运行期间，主角尝试越过可见玩法区域的顶部边缘 → 主角仍保持可见，且其顶部边缘不高于道路顶部边界。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "qwen3.8-max-v8.3-rubric2-imported-20260904-143200",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-04T18:15:28+08:00",
+          "finishedAt": "2026-09-04T19:17:46+08:00",
+          "totalDurationMs": 3738393,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-04T18:15:28+08:00",
+              "finishedAt": "2026-09-04T18:38:49+08:00",
+              "durationMs": 1401348,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-04T18:38:49+08:00",
+              "finishedAt": "2026-09-04T19:01:09+08:00",
+              "durationMs": 1339376,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-04T19:01:09+08:00",
+              "finishedAt": "2026-09-04T19:01:09+08:00",
+              "durationMs": 201,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-04T19:01:09+08:00",
+              "finishedAt": "2026-09-04T19:03:05+08:00",
+              "durationMs": 115940,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-04T19:03:05+08:00",
+              "finishedAt": "2026-09-04T19:17:46+08:00",
+              "durationMs": 881497,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "kuro-neko-market": {
