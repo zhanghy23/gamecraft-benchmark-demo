@@ -15013,6 +15013,126 @@
             }
           ]
         }
+      },
+      "gpt-5.4": {
+        "status": "completed",
+        "runId": "gpt-5.4-v8.3-rubric2-resume-20260904-061752",
+        "score": {
+          "display": "89.23 (+6.15)",
+          "base": 89.23,
+          "passed": 58,
+          "denominator": 65,
+          "dynamic": 4,
+          "dynamicAddition": 6.15,
+          "potential": 95.38
+        },
+        "visualQuality": {
+          "score": 91.33,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.96,
+          "renderingStyleAverage": 43.38,
+          "videosScored": 24
+        },
+        "traceCount": 24,
+        "playPath": "games-v8.3/witchcat/gpt-5.4/index.html",
+        "previewPath": "previews-v8.3/witchcat/gpt-5.4.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-037",
+              "zh": "一个移动中的火球与一个 mommy 敌人重叠 → 该 mommy 敌人从场景中消失。"
+            },
+            {
+              "id": "target-039",
+              "zh": "玩家执行动作输入，且一个未激活的 seeker 陷阱位于角色右侧、与角色处于同一条无遮挡的行中 → 该 seeker 陷阱开始向左移动，朝向角色所在的列。"
+            },
+            {
+              "id": "target-044",
+              "zh": "玩家执行动作输入，且一个未激活的 blade 陷阱位于角色下方、与角色处于同一条无遮挡的列中 → 该 blade 陷阱开始向上移动，朝向角色所在的行。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-041",
+              "zh": "玩家执行动作输入，且一个未激活的 seeker 陷阱与角色处于同一行，并且陷阱与角色之间有阻挡图块 → 该 seeker 陷阱保持在执行动作前的图块位置，不开始移动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-047",
+              "zh": "玩家执行动作输入，且一个未激活的 blade 陷阱与角色处于同一行，并且陷阱与角色之间有阻挡图块 → 该 blade 陷阱保持在执行动作前的图块位置，不开始移动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-023",
+              "zh": "角色在非无敌状态下与激活的刀刃陷阱重叠 → 角色精灵开始无敌闪烁效果，在正常调色板和冬季配色调色板之间交替。",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-024",
+              "zh": "角色在非无敌状态下与移动的追踪陷阱重叠 → 角色精灵开始无敌闪烁效果，在正常调色板和冬季配色调色板之间交替。",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.4-v8.3-rubric2-resume-20260904-061752",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-04T18:27:36+08:00",
+          "finishedAt": "2026-09-04T20:30:45+08:00",
+          "totalDurationMs": 7389033,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-04T18:27:36+08:00",
+              "finishedAt": "2026-09-04T18:29:42+08:00",
+              "durationMs": 125756,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-04T18:29:42+08:00",
+              "finishedAt": "2026-09-04T18:57:08+08:00",
+              "durationMs": 1646852,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-04T18:57:08+08:00",
+              "finishedAt": "2026-09-04T20:01:44+08:00",
+              "durationMs": 3875992,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-04T20:01:44+08:00",
+              "finishedAt": "2026-09-04T20:01:45+08:00",
+              "durationMs": 513,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-04T20:01:45+08:00",
+              "finishedAt": "2026-09-04T20:09:54+08:00",
+              "durationMs": 488786,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-04T20:09:54+08:00",
+              "finishedAt": "2026-09-04T20:30:45+08:00",
+              "durationMs": 1251095,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "the-neatness": {
