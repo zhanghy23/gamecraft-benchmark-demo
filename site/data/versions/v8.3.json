@@ -10960,6 +10960,103 @@
             }
           ]
         }
+      },
+      "minimax-m2.7": {
+        "status": "completed",
+        "runId": "minimax-m2.7-v8.3-rubric2-resume-20260903-220846",
+        "score": {
+          "display": "95.74 (+0.00)",
+          "base": 95.74,
+          "passed": 45,
+          "denominator": 47,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 95.74
+        },
+        "visualQuality": {
+          "score": 89.25,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.25,
+          "renderingStyleAverage": 42,
+          "videosScored": 8
+        },
+        "traceCount": 8,
+        "playPath": "games-v8.3/catapoolt/minimax-m2.7/index.html",
+        "previewPath": "previews-v8.3/catapoolt/minimax-m2.7.png",
+        "unmet": {
+          "vlm": [],
+          "replayTrace": [
+            {
+              "id": "target-012",
+              "zh": "当暂停弹窗可见且其后方至少有一个游戏玩法对象可见时，发生一次活跃游戏更新 → 在接下来 1 秒渲染视频中，叠层后方可见的游戏玩法对象保持相同的屏幕位置，同时 Pause 弹窗保持在最上层。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-031",
+              "zh": "空中的猫在高于地面碰撞高度的位置穿过一只老鼠的位置 → 老鼠仍绘制在游戏场地中，并且下一次渲染的游戏玩法视图中 HUD 里 \"Mice \" 标签后面的数字不增加。",
+              "cause": "源码分析确认未实现"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "minimax-m2.7-v8.3-rubric2-resume-20260903-220846",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-04T03:27:03+08:00",
+          "finishedAt": "2026-09-04T04:09:56+08:00",
+          "totalDurationMs": 2573279,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-04T03:27:03+08:00",
+              "finishedAt": "2026-09-04T03:28:35+08:00",
+              "durationMs": 92056,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-04T03:28:35+08:00",
+              "finishedAt": "2026-09-04T03:45:37+08:00",
+              "durationMs": 1022271,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-04T03:45:37+08:00",
+              "finishedAt": "2026-09-04T04:00:11+08:00",
+              "durationMs": 874480,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-04T04:00:11+08:00",
+              "finishedAt": "2026-09-04T04:00:12+08:00",
+              "durationMs": 191,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-04T04:00:12+08:00",
+              "finishedAt": "2026-09-04T04:01:45+08:00",
+              "durationMs": 93520,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-04T04:01:45+08:00",
+              "finishedAt": "2026-09-04T04:09:56+08:00",
+              "durationMs": 490724,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "super-castle-game": {
