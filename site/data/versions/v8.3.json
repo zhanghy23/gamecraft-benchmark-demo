@@ -13625,6 +13625,134 @@
         "unmet": null,
         "issue": "生成阶段历时约76分19秒；31次流式请求均在结束时缺少 [DONE] 或 finish_reason，最终未获得可校验的完整游戏项目，因此未进入 Trace、Replay 或 Judge。",
         "timing": null
+      },
+      "gpt-5.4": {
+        "status": "completed",
+        "runId": "gpt-5.4-v8.3-rubric2-resume-20260904-061752",
+        "score": {
+          "display": "88.16 (+2.63)",
+          "base": 88.16,
+          "passed": 67,
+          "denominator": 76,
+          "dynamic": 2,
+          "dynamicAddition": 2.63,
+          "potential": 90.79
+        },
+        "visualQuality": {
+          "score": 90.75,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.75,
+          "renderingStyleAverage": 43,
+          "videosScored": 16
+        },
+        "traceCount": 16,
+        "playPath": "games-v8.3/stolen-sword/gpt-5.4/index.html",
+        "previewPath": "previews-v8.3/stolen-sword/gpt-5.4.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-009",
+              "zh": "关卡转场推进到第四关 → 转场期间玩家角色从场景左下侧移入第四关的悬崖与水域游玩区域。"
+            },
+            {
+              "id": "target-020",
+              "zh": "最终关卡结束并前进到循环后的第一关 → 游戏在主动游玩恢复前返回第一关标题叠加层。"
+            },
+            {
+              "id": "target-039",
+              "zh": "玩家在不处于受伤后无敌状态时与不可触碰的敌人发生碰撞 → 玩家角色被从碰撞处击退，并进入可见的受伤闪烁状态。"
+            },
+            {
+              "id": "target-040",
+              "zh": "玩家与正在防御的敌人发生垂直碰撞 → 玩家角色沿垂直方向从敌人处弹开，并且敌人周围仍保留虚线防御壳。"
+            },
+            {
+              "id": "target-047",
+              "zh": "第三阶段复合核心敌人在其所有子敌人都已被击杀时仍然存活 → 核心敌人开始死亡运动。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-027",
+              "zh": "教程波次中的所有敌人都已被击败时，活动的教程拖拽提示图形仍存在 → 教程拖拽提示从游戏玩法视图中消失。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-038",
+              "zh": "壳类敌人的生命值降低到 1 且该壳类敌人仍然存活 → 敌人周围不再绘制虚线圆形防御壳。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-046",
+              "zh": "复合敌人的父敌人死亡时，其一个子敌人仍然存活 → 该子敌人开始死亡运动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-061",
+              "zh": "玩家与实体平台的上侧发生碰撞 → 玩家角色被放置在平台表面，并由平台支撑，而不是穿过平台。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.4-v8.3-rubric2-resume-20260904-061752",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-04T07:47:03+08:00",
+          "finishedAt": "2026-09-04T17:28:06+08:00",
+          "totalDurationMs": 34862958,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-04T07:47:03+08:00",
+              "finishedAt": "2026-09-04T07:49:27+08:00",
+              "durationMs": 144740,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-04T07:49:27+08:00",
+              "finishedAt": "2026-09-04T08:18:22+08:00",
+              "durationMs": 1734614,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-04T08:18:22+08:00",
+              "finishedAt": "2026-09-04T17:11:42+08:00",
+              "durationMs": 31999830,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-04T17:11:42+08:00",
+              "finishedAt": "2026-09-04T17:11:43+08:00",
+              "durationMs": 819,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-04T17:11:43+08:00",
+              "finishedAt": "2026-09-04T17:13:46+08:00",
+              "durationMs": 123490,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-04T17:13:46+08:00",
+              "finishedAt": "2026-09-04T17:28:06+08:00",
+              "durationMs": 859423,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "catapoolt": {
