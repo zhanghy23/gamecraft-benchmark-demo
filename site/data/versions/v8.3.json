@@ -11292,6 +11292,150 @@
             }
           ]
         }
+      },
+      "deepseek-v4-pro": {
+        "status": "completed",
+        "runId": "deepseek-v4-pro-v8.3-rubric2-imported-20260903-235436",
+        "score": {
+          "display": "67.44 (+6.98)",
+          "base": 67.44,
+          "passed": 29,
+          "denominator": 43,
+          "dynamic": 3,
+          "dynamicAddition": 6.98,
+          "potential": 74.42
+        },
+        "visualQuality": {
+          "score": 88,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 46.71,
+          "renderingStyleAverage": 41.29,
+          "videosScored": 7
+        },
+        "traceCount": 7,
+        "playPath": "games-v8.3/market-street-tycoon/deepseek-v4-pro/index.html",
+        "previewPath": "previews-v8.3/market-street-tycoon/deepseek-v4-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-006",
+              "zh": "复盘界面渲染带有需求信息的商品行 → 该行显示商品图标和商品名称，随后显示一行“Demand:”，其中正好包含十个需求符号。"
+            },
+            {
+              "id": "target-007",
+              "zh": "当复盘商品列表包含超过两行时渲染复盘界面 → 复盘商品列表右侧可见一条白色垂直滚动条。"
+            },
+            {
+              "id": "target-025",
+              "zh": "当市场计时器已结束且幕帘面板完全关闭时，市场界面更新发生 → 显示从市场场景切换到带有“Summary”（总结）标题的回顾界面。"
+            },
+            {
+              "id": "target-028",
+              "zh": "当生成供应商时，如果当前所有供应商价格都无法用玩家当前金钱支付 → 下一个购买界面包含一个“wood”（木材）供应商行。"
+            },
+            {
+              "id": "target-033",
+              "zh": "在库存界面中，当底部导航项被选中时，向左输入被接受 → 底部“back”（返回）按钮以白色高亮，并且“next”（下一步）按钮未高亮。"
+            },
+            {
+              "id": "target-040",
+              "zh": "条件：结算屏幕渲染某个商品行，且该商品行的销售表达式长度为 16 个字符或更少 → 预期结果：该行的销售行以“Sales: ”开头，后接该销售表达式。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-032",
+              "zh": "市场场景渲染某个累计销量至少达到其起始库存的商品 → 市场框中不再可见该商品的任何图标。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-036",
+              "zh": "库存界面渲染某个声誉值为 0 的商品行 → 该行的“Reputation:”（声誉：）一行包含一个完整声誉符号，后跟四个空声誉符号。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-037",
+              "zh": "条件：库存屏幕渲染某个商品行，且该商品行的声誉值至少为 100 → 预期结果：该行的“Reputation:”一行包含 5 个满格声誉符号，且不包含任何空声誉符号。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-038",
+              "zh": "条件：结算屏幕渲染某个商品行，且该商品行的标准化需求值为 0 → 预期结果：该行的“Demand:”一行包含 10 个空需求符号，且不包含任何满格需求符号。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-039",
+              "zh": "条件：结算屏幕渲染某个商品行，且该商品行的标准化需求值至少为 1 → 预期结果：该行的“Demand:”一行包含 10 个满格需求符号，且不包含任何空需求符号。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-002",
+              "zh": "当玩家的金钱加上复盘总计为零时接受复盘确认 → 显示内容从复盘流程切换回主菜单界面，显示“𝕄𝕒𝕣𝕜𝕖𝕥 𝕊𝕥𝕣𝕖𝕖𝕥 𝕋𝕪𝕔𝕠𝕠𝕟”标题及其垂直菜单。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-026",
+              "zh": "在回顾界面中，当回顾商品列表未处于最低滚动位置时，向下滚动输入被接受 → 回顾商品行向上移动 20 screen pixels，并且滚动条滑块沿右侧滚动条向下移动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-027",
+              "zh": "在回顾界面中，当回顾商品列表未处于顶部滚动位置时，向上滚动输入被接受 → 回顾商品行向下移动 20 screen pixels，并且滚动条滑块沿右侧滚动条向上移动。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-pro-v8.3-rubric2-imported-20260903-235436",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-04T12:43:33+08:00",
+          "finishedAt": "2026-09-04T13:51:15+08:00",
+          "totalDurationMs": 4062229,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-04T12:43:33+08:00",
+              "finishedAt": "2026-09-04T13:04:21+08:00",
+              "durationMs": 1247762,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-04T13:04:21+08:00",
+              "finishedAt": "2026-09-04T13:40:18+08:00",
+              "durationMs": 2157010,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-04T13:40:18+08:00",
+              "finishedAt": "2026-09-04T13:40:18+08:00",
+              "durationMs": 196,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-04T13:40:18+08:00",
+              "finishedAt": "2026-09-04T13:42:04+08:00",
+              "durationMs": 105742,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-04T13:42:04+08:00",
+              "finishedAt": "2026-09-04T13:51:15+08:00",
+              "durationMs": 551486,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "necrotic-commander": {
