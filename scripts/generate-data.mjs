@@ -72,6 +72,7 @@ const models = [
   { id: 'gpt-5.4', label: 'GPT-5.4', provider: 'OpenAI', order: 4 },
   { id: 'deepseek-v4-flash', label: 'DeepSeek-V4-Flash', provider: 'DeepSeek', order: 5 },
   { id: 'deepseek-v4-pro', label: 'DeepSeek-V4-Pro', provider: 'DeepSeek', order: 6 },
+  { id: 'qwen3.8-max', label: 'Qwen3.8-Max', provider: 'Alibaba Cloud', order: 7 },
 ];
 
 const games = [
