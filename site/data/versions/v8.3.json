@@ -10506,6 +10506,158 @@
             }
           ]
         }
+      },
+      "gpt-5.4": {
+        "status": "completed",
+        "runId": "gpt-5.4-v8.3-rubric2-resume-20260904-061752",
+        "score": {
+          "display": "70.45 (+11.36)",
+          "base": 70.45,
+          "passed": 31,
+          "denominator": 44,
+          "dynamic": 5,
+          "dynamicAddition": 11.36,
+          "potential": 81.82
+        },
+        "visualQuality": {
+          "score": 93.25,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.63,
+          "renderingStyleAverage": 44.63,
+          "videosScored": 8
+        },
+        "traceCount": 8,
+        "playPath": "games-v8.3/catculus/gpt-5.4/index.html",
+        "previewPath": "previews-v8.3/catculus/gpt-5.4.png",
+        "unmet": {
+          "vlm": [],
+          "replayTrace": [
+            {
+              "id": "target-011",
+              "zh": "当喷雾器能力处于激活状态且游戏未锁定时，选择一个包含睡着的猫的可见网格方块 → 该方块变为其选中外观，并且睡着的猫留在该方块上，而不是跳走。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-016",
+              "zh": "当 Reflexes 技能阻止错误惩罚时，一个被接受的得分选择的总和高于当前目标 → 已选组附近出现红色反馈文字弹窗，并且在计分结算后的第一个游戏帧中，生命条红色填充的端点与计分前一刻的端点对齐，误差在 2 像素以内。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-022",
+              "zh": "在已接受的计分选择中，一个猫网格方块被计分，且“Allergies”技能处于激活状态 → 一个显示“ALLERGIES”的红色文本弹窗出现在该猫方块中央。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-026",
+              "zh": "一个猫方块被计分，且“Catnip”跳跃目标技能处于激活状态，并且可见的空目标方块具有不同的显示值 → 猫落到显示数字最高的可见空方块上。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-027",
+              "zh": "一个猫方块被计分，且“Box”跳跃目标技能处于激活状态，并且可见的空目标方块具有不同的显示值 → 猫落到显示数字最低的可见空方块上。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-032",
+              "zh": "已接受的计分选择完成结算，且“Loaf”技能处于激活状态，并且一个可见的未选中方块包含一只睡觉的猫 → 一个绿色“LOAF”弹窗出现在该睡觉猫方块中央，并且该方块的显示数字相较于结算前的值增加 1。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-035",
+              "zh": "新目标轮开始，且最大可能倍数高于 1，并且当前最大倍数高于 1 → 倍数显示重置为可见的“x”后跟一个大于 1 的整数。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-036",
+              "zh": "倍数倒计时完成，且倍数显示值高于 1 → 倍数显示从其先前的整数值变为下一个更低的整数值。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-023",
+              "zh": "一个显示值为 9 的已选中方块被计分，且“Nine”技能处于激活状态 → 一个以“+”开头的绿色文本弹窗出现在该方块附近。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-024",
+              "zh": "一个显示值为 2 的已选中方块被计分，且“Hiss”技能处于激活状态 → 一个以“x”开头的绿色倍数文本弹窗出现在该方块附近。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-031",
+              "zh": "已接受的计分选择完成结算，且“Scratch”技能处于激活状态，并且一个可见的未选中方块与被计分路径相邻 → 该相邻未选中方块的显示数字相较于结算前的值减少 1。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-040",
+              "zh": "活跃的游戏场景收到竖屏布局变更 → 游戏画布处于高而窄的布局；带数字的方块网格位于下半部分，目标显示居中位于网格上方，生命条靠近左下边缘，分数显示靠近右上边缘。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-041",
+              "zh": "活跃的游戏场景收到横屏布局变更 → 游戏画布处于宽布局；带数字的方块网格位于左侧，目标和教程区域位于右侧，生命条靠近左上边缘，分数和倍率显示靠近右上边缘。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.4-v8.3-rubric2-resume-20260904-061752",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-04T06:18:08+08:00",
+          "finishedAt": "2026-09-04T07:33:56+08:00",
+          "totalDurationMs": 4547625,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-04T06:18:08+08:00",
+              "finishedAt": "2026-09-04T06:20:37+08:00",
+              "durationMs": 148282,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-04T06:20:37+08:00",
+              "finishedAt": "2026-09-04T06:41:11+08:00",
+              "durationMs": 1234800,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-04T06:41:11+08:00",
+              "finishedAt": "2026-09-04T07:27:55+08:00",
+              "durationMs": 2803134,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-04T07:27:55+08:00",
+              "finishedAt": "2026-09-04T07:27:55+08:00",
+              "durationMs": 176,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-04T07:27:55+08:00",
+              "finishedAt": "2026-09-04T07:28:43+08:00",
+              "durationMs": 47907,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-04T07:28:43+08:00",
+              "finishedAt": "2026-09-04T07:33:56+08:00",
+              "durationMs": 313289,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "non-mewtonian-cat": {
