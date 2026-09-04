@@ -11218,6 +11218,156 @@
             }
           ]
         }
+      },
+      "minimax-m2.7": {
+        "status": "completed",
+        "runId": "minimax-m2.7-v8.3-rubric2-resume-20260903-220846",
+        "score": {
+          "display": "65.79 (+2.63)",
+          "base": 65.79,
+          "passed": 25,
+          "denominator": 38,
+          "dynamic": 1,
+          "dynamicAddition": 2.63,
+          "potential": 68.42
+        },
+        "visualQuality": {
+          "score": 94,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.33,
+          "renderingStyleAverage": 45.67,
+          "videosScored": 9
+        },
+        "traceCount": 9,
+        "playPath": "games-v8.3/super-castle-game/minimax-m2.7/index.html",
+        "previewPath": "previews-v8.3/super-castle-game/minimax-m2.7.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-019",
+              "zh": "在游戏进行中，当受控鸭子可以移动到其左侧相邻的棋盘格时，执行一次指针拖拽，且棋盘向左位移超过指针死区 → 预期结果：受控鸭子从其当前棋盘格移动到其左侧相邻的棋盘格。"
+            },
+            {
+              "id": "target-020",
+              "zh": "在游戏进行中，当受控鸭子的两个移动步骤都有效时，同时接受向左和向上的移动指令 → 预期结果：受控鸭子从其起始棋盘格移动到相对于该起始格向左一列且向上一行的棋盘格。"
+            },
+            {
+              "id": "target-033",
+              "zh": "在游戏进行中，当一个鸭子集群被拆分成多个互不连接的鸭子组时 → 预期结果：与保留的鸭子组断开连接的组被渲染为小鸭颜色的方块，而保留的鸭子组仍被渲染为鸭子方块。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-014",
+              "zh": "渲染一只鸭子时，该鸭子不在目标格上，并且至少另一只鸭子在两次目标检查中都位于目标格上 → 该鸭子方块绘制为正常鸭子颜色的身体，且其正面有对角线 X 标记。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-025",
+              "zh": "在游戏进行中，当受控鸭子左侧相邻格包含一个可移动部件，且该部件可以移动到其左侧下一个格子时，接受向左移动指令 → 预期结果：受控鸭子移动到其左侧相邻格，并且原本位于该相邻格内的可移动部件向左移动一格，进入下一个格子。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-026",
+              "zh": "在游戏进行中，当受控鸭子属于一个包含另一个鸭子方块的可移动集群，且整个集群可以向左移动一格时，接受向左移动指令 → 预期结果：受控鸭子及其集群中的另一个鸭子方块一起向左移动一个棋盘格。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-027",
+              "zh": "在游戏进行中，当受控鸭子左侧相邻格包含一个可移动的集群部件，且该集群中的每个部件都可以向左移动一格时，接受向左移动指令 → 预期结果：受控鸭子移动到其左侧相邻格，并且被推动集群中的每个部件一起向左移动一个棋盘格。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-028",
+              "zh": "在游戏进行中，当受控鸭子推动一串可移动部件，且这些部件全部可以向左移动一格时，接受向左移动指令 → 预期结果：受控鸭子移动到其左侧相邻格，并且被推动链条中的每个可移动部件都向左移动一个棋盘格。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-029",
+              "zh": "在游戏进行中，对于一只非最后剩余的鸭子，当其目的地是切割器格子时，接受移动指令 → 预期结果：移动完成后，该鸭子不再在棋盘上可见，并且切割器仍在其所在格上可见。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-030",
+              "zh": "当一个移动指令会使唯一剩余的存活鸭子移动到切割器格子上时 → 预期结果：该移动被拒绝；鸭子保持在移动前的棋盘格内，并且不会缩小或消失。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-031",
+              "zh": "在游戏进行中，对于一个可移动的非鸭子部件，当其目的地是切割器格子时，接受移动指令 → 预期结果：移动完成后，该非鸭子部件不再在棋盘上可见，并且切割器仍在其所在格上可见。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-038",
+              "zh": "关卡选择鸭子到达关卡选择棋盘上的目标标记 → 关卡选择棋盘被所选谜题关卡棋盘替换。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-022",
+              "zh": "在游戏进行中，一次主要为水平方向的指针拖拽仍保持在指针死区内 → 预期结果：对于该拖拽的渲染响应，受控鸭子保持在其当前棋盘格内，并且不播放移动动画。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "minimax-m2.7-v8.3-rubric2-resume-20260903-220846",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-04T04:09:56+08:00",
+          "finishedAt": "2026-09-04T05:01:42+08:00",
+          "totalDurationMs": 3105715,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-04T04:09:56+08:00",
+              "finishedAt": "2026-09-04T04:13:39+08:00",
+              "durationMs": 223327,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-04T04:13:39+08:00",
+              "finishedAt": "2026-09-04T04:28:14+08:00",
+              "durationMs": 874318,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-04T04:28:14+08:00",
+              "finishedAt": "2026-09-04T04:55:04+08:00",
+              "durationMs": 1609999,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-04T04:55:04+08:00",
+              "finishedAt": "2026-09-04T04:55:04+08:00",
+              "durationMs": 196,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-04T04:55:04+08:00",
+              "finishedAt": "2026-09-04T04:55:35+08:00",
+              "durationMs": 30708,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-04T04:55:35+08:00",
+              "finishedAt": "2026-09-04T05:01:42+08:00",
+              "durationMs": 367128,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "witchcat": {
