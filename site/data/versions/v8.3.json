@@ -5446,6 +5446,170 @@
           ]
         }
       },
+      "deepseek-v4-flash": {
+        "status": "completed",
+        "runId": "deepseek-v4-flash-v8.3-rubric2-imported-20260903-220846",
+        "score": {
+          "display": "70.69 (+20.69)",
+          "base": 70.69,
+          "passed": 41,
+          "denominator": 58,
+          "dynamic": 12,
+          "dynamicAddition": 20.69,
+          "potential": 91.38
+        },
+        "visualQuality": {
+          "score": 89.83,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.92,
+          "renderingStyleAverage": 41.92,
+          "videosScored": 12
+        },
+        "traceCount": 12,
+        "playPath": "games-v8.3/elematter/deepseek-v4-flash/index.html",
+        "previewPath": "previews-v8.3/elematter/deepseek-v4-flash.png",
+        "unmet": {
+          "vlm": [],
+          "replayTrace": [
+            {
+              "id": "target-004",
+              "zh": "在游戏未处于游玩状态时选择“Send Wave”（派出波次）控件 → 波次显示保持为选择前的值，路径入口处不出现新的敌人，并且“Send Wave”（派出波次）控件保持其非激活的半透明外观。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-021",
+              "zh": "对一个不可升级的防御塔选择升级按钮 → 防御塔升级/回收菜单保持打开，并且升级按钮仍显示为不可用状态。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-040",
+              "zh": "一个土元素 Boss 敌人在路径入口处被激活 → 一个 Boss 敌人出现在路径入口处，具有 20 px 的正方形身体、6 px 边框、绿色土元素颜色点缀和外侧角框。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-041",
+              "zh": "一个水元素 Boss 敌人在路径入口处被激活 → 一个 Boss 敌人出现在路径入口处，具有 20 px 的正方形身体、6 px 边框、蓝色水元素颜色点缀和外侧角框。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-042",
+              "zh": "一个气元素 Boss 敌人在路径入口处被激活 → 一个 Boss 敌人出现在路径入口处，具有 20 px 的正方形身体、6 px 边框、黄色气元素颜色点缀和外侧角框。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-011",
+              "zh": "当所选空地块可建造且玩家的 fragments（碎片）数量大于 earth tower（土）费用时，从打开的建造菜单中选择 earth（土）建造选项 → 建造菜单覆盖层关闭，并且所选地块上出现一座绿色 earth（土）塔。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-012",
+              "zh": "当所选空地块可建造且玩家的 fragments（碎片）数量大于 water tower（水）费用时，从打开的建造菜单中选择 water（水）建造选项 → 建造菜单覆盖层关闭，并且所选地块上出现一座蓝色 water（水）塔。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-013",
+              "zh": "当所选空地块可建造且玩家的 fragments（碎片）数量大于 air tower（气）费用时，从打开的建造菜单中选择 air（气）建造选项 → 建造菜单覆盖层关闭，并且所选地块上出现一座黄色 air（气）塔。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-014",
+              "zh": "当所选空地块可建造且玩家的 fragments（碎片）数量大于 fire tower（火）费用时，从打开的建造菜单中选择 fire（火）建造选项 → 建造菜单覆盖层关闭，并且所选地块上出现一座红色 fire（火）塔。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-015",
+              "zh": "当玩家没有足够的 fragments（碎片）建造 earth tower（土塔）时，从打开的建造菜单中选择 earth（土）建造选项 → 建造菜单保持打开，并且所选地块保持为空，其上没有绿色 earth（土）塔。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-017",
+              "zh": "在防御塔升级/回收菜单打开时将其关闭 → 防御塔升级/回收菜单不再显示在游玩区域上方。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-035",
+              "zh": "在主动游戏过程中，当敌人的减速效果已过期时 → 该敌人在仍留在战场上的同时不再显示减速视觉状态。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-048",
+              "zh": "玩家失去最后剩余的 1 条生命 → 浏览器警告对话框出现，并显示文本“You lost.”。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-049",
+              "zh": "失败警告对话框被确认 → 游戏页面重新加载到初始游戏场地视图。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-055",
+              "zh": "第十五波被派出，同时第十六波仍处于排队状态 → 波次显示变为“15 / 20”，且下一波预览计数器显示 0 个土元素敌人、0 个水元素敌人、0 个气元素敌人和 17 个火元素敌人。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-057",
+              "zh": "所有波次都已被派出并清除，且至少剩余 1 条生命 → 浏览器警告对话框出现，文本开头为“You won! Based on lives and elemental fragments left, your score is:”。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-058",
+              "zh": "胜利警告对话框被确认 → 游戏页面重新加载到初始游戏场地视图。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-flash-v8.3-rubric2-imported-20260903-220846",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-04T00:07:58+08:00",
+          "finishedAt": "2026-09-04T01:52:31+08:00",
+          "totalDurationMs": 6273386,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-04T00:07:58+08:00",
+              "finishedAt": "2026-09-04T00:30:20+08:00",
+              "durationMs": 1342525,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-04T00:30:20+08:00",
+              "finishedAt": "2026-09-04T01:43:20+08:00",
+              "durationMs": 4379212,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-04T01:43:20+08:00",
+              "finishedAt": "2026-09-04T01:43:20+08:00",
+              "durationMs": 249,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-04T01:43:20+08:00",
+              "finishedAt": "2026-09-04T01:45:46+08:00",
+              "durationMs": 146395,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-04T01:45:46+08:00",
+              "finishedAt": "2026-09-04T01:52:31+08:00",
+              "durationMs": 404974,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
       "deepseek-v4-pro": {
         "status": "completed",
         "runId": "deepseek-v4-pro-v8.3-rubric2-imported-20260903-235436",
