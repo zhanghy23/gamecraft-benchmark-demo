@@ -10264,6 +10264,18 @@
             }
           ]
         }
+      },
+      "deepseek-v4-flash": {
+        "status": "failed",
+        "runId": "deepseek-v4-flash-v8.3-rubric2-imported-20260903-220846",
+        "stage": "trace",
+        "score": null,
+        "traceCount": 0,
+        "playPath": null,
+        "previewPath": null,
+        "unmet": null,
+        "issue": "导入源码后进入 Trace，但在生成 targets 前的确定性检查中，游戏运行时报错 Cannot read properties of undefined (reading 'position')；因此未生成 Trace、Replay 或 Judge 结果。",
+        "timing": null
       }
     },
     "market-street-tycoon": {
