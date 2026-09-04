@@ -11222,6 +11222,18 @@
             }
           ]
         }
+      },
+      "minimax-m2.7": {
+        "status": "failed",
+        "runId": "minimax-m2.7-v8.3-rubric2-resume-20260903-220846",
+        "stage": "generate-game",
+        "score": null,
+        "traceCount": 0,
+        "playPath": null,
+        "previewPath": null,
+        "unmet": null,
+        "issue": "生成阶段历时约76分19秒；31次流式请求均在结束时缺少 [DONE] 或 finish_reason，最终未获得可校验的完整游戏项目，因此未进入 Trace、Replay 或 Judge。",
+        "timing": null
       }
     },
     "catapoolt": {
