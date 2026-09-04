@@ -14402,6 +14402,92 @@
             }
           ]
         }
+      },
+      "gpt-5.4": {
+        "status": "completed",
+        "runId": "gpt-5.4-v8.3-rubric2-resume-20260904-061752",
+        "score": {
+          "display": "100.00 (+0.00)",
+          "base": 100,
+          "passed": 38,
+          "denominator": 38,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 100
+        },
+        "visualQuality": {
+          "score": 93.5,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.57,
+          "renderingStyleAverage": 44.93,
+          "videosScored": 14
+        },
+        "traceCount": 14,
+        "playPath": "games-v8.3/super-castle-game/gpt-5.4/index.html",
+        "previewPath": "previews-v8.3/super-castle-game/gpt-5.4.png",
+        "unmet": {
+          "vlm": [],
+          "replayTrace": []
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.4-v8.3-rubric2-resume-20260904-061752",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-04T17:52:49+08:00",
+          "finishedAt": "2026-09-04T18:27:36+08:00",
+          "totalDurationMs": 2086656,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-04T17:52:49+08:00",
+              "finishedAt": "2026-09-04T17:55:11+08:00",
+              "durationMs": 141618,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-04T17:55:11+08:00",
+              "finishedAt": "2026-09-04T18:15:25+08:00",
+              "durationMs": 1214685,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-04T18:15:25+08:00",
+              "finishedAt": "2026-09-04T18:15:37+08:00",
+              "durationMs": 11881,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-04T18:15:37+08:00",
+              "finishedAt": "2026-09-04T18:15:37+08:00",
+              "durationMs": 159,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-04T18:15:37+08:00",
+              "finishedAt": "2026-09-04T18:16:45+08:00",
+              "durationMs": 68100,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-04T18:16:45+08:00",
+              "finishedAt": "2026-09-04T18:27:36+08:00",
+              "durationMs": 650174,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "witchcat": {
