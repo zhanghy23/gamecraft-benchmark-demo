@@ -11737,6 +11737,109 @@
             }
           ]
         }
+      },
+      "deepseek-v4-flash": {
+        "status": "completed",
+        "runId": "deepseek-v4-flash-v8.3-rubric2-imported-20260903-220846",
+        "score": {
+          "display": "86.84 (+0.00)",
+          "base": 86.84,
+          "passed": 33,
+          "denominator": 38,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 86.84
+        },
+        "visualQuality": {
+          "score": 86.13,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 45.5,
+          "renderingStyleAverage": 40.63,
+          "videosScored": 8
+        },
+        "traceCount": 8,
+        "playPath": "games-v8.3/necrotic-commander/deepseek-v4-flash/index.html",
+        "previewPath": "previews-v8.3/necrotic-commander/deepseek-v4-flash.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-019",
+              "zh": "炸弹爆炸发生时，一个非死灵法师单位位于其外层爆炸范围内 → 在后续帧中，受影响的单位开始从当前位置朝远离炸弹位置的方向移动。"
+            },
+            {
+              "id": "target-026",
+              "zh": "Guided Mode 推进到敌人波次为 10 的倍数，且至少有一个坟墓为空 → 新波次开始时，空坟墓地块变回完整的墓碑地块。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-036",
+              "zh": "活动游戏过程中，死灵法师的生命值达到零或以下 → 一个红黑色粒子爆发出现在死灵法师的位置，并且游戏内生命值 HUD 显示 \"Health (0)\"。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-037",
+              "zh": "条件：死灵法师已死亡，且游戏结束延迟时间已过去 → 预期结果：游戏画面上方出现一个黑色面板，面板上显示文本 \"You survived to wave\"，其后跟随已到达的波次数字，并显示文本 \"Click to play again\"。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-038",
+              "zh": "条件：死灵法师已死亡，且游戏结束延迟时间已过去后发生指针按下或触摸按下 → 预期结果：游戏结束面板消失，并显示一个全新的战场；死灵法师存在，且 HUD 生命值恢复为 \"Health (100)\"。",
+              "cause": "源码分析确认未实现"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-flash-v8.3-rubric2-imported-20260903-220846",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-04T13:43:09+08:00",
+          "finishedAt": "2026-09-04T14:49:03+08:00",
+          "totalDurationMs": 3954053,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-04T13:43:09+08:00",
+              "finishedAt": "2026-09-04T13:59:13+08:00",
+              "durationMs": 964446,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-04T13:59:13+08:00",
+              "finishedAt": "2026-09-04T14:40:04+08:00",
+              "durationMs": 2451219,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-04T14:40:04+08:00",
+              "finishedAt": "2026-09-04T14:40:05+08:00",
+              "durationMs": 168,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-04T14:40:05+08:00",
+              "finishedAt": "2026-09-04T14:43:03+08:00",
+              "durationMs": 178621,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-04T14:43:03+08:00",
+              "finishedAt": "2026-09-04T14:49:03+08:00",
+              "durationMs": 359565,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "space-huggers": {
