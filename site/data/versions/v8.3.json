@@ -10015,6 +10015,170 @@
             }
           ]
         }
+      },
+      "deepseek-v4-pro": {
+        "status": "completed",
+        "runId": "deepseek-v4-pro-v8.3-rubric2-imported-20260903-235436",
+        "score": {
+          "display": "75.68 (+13.51)",
+          "base": 75.68,
+          "passed": 56,
+          "denominator": 74,
+          "dynamic": 10,
+          "dynamicAddition": 13.51,
+          "potential": 89.19
+        },
+        "visualQuality": {
+          "score": 92.67,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.44,
+          "renderingStyleAverage": 44.22,
+          "videosScored": 9
+        },
+        "traceCount": 9,
+        "playPath": "games-v8.3/casual-crusade/deepseek-v4-pro/index.html",
+        "previewPath": "previews-v8.3/casual-crusade/deepseek-v4-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-033",
+              "zh": "在一次路径遍历期间应用橙色倍率卡牌步 → 被踏上的卡牌上方出现一个以 \"x\" 开头的浮动文本标签，用于显示新的倍率。"
+            },
+            {
+              "id": "target-038",
+              "zh": "在活跃游戏过程中从牌组抽取一张卡牌到手牌中 → 一张新卡牌从抽牌牌堆区域出现，并且手牌布局更新为包含新增的卡牌。"
+            },
+            {
+              "id": "target-040",
+              "zh": "具有生成空白地块效果的卡牌在至少有一个相邻的空非奖励棋盘地块时激活 → 从激活的卡牌处出现一个向外扩张的圆形脉冲，并且至少一个此前为空的相邻棋盘地块显示一张空白卡牌。"
+            },
+            {
+              "id": "target-046",
+              "zh": "卡关的关卡结束检查满足每关一次的重抽效果条件 → 短暂延迟后，手牌中显示的卡牌被一手新发的手牌替换，同时同一棋盘仍然可见。"
+            },
+            {
+              "id": "target-050",
+              "zh": "在关卡结束伤害结算后，存活状态下的关卡结束征服序列开始 → 一个居中的闪屏横幅带着征服或远征消息出现在游玩区域上方，并且角色原地跳跃。"
+            },
+            {
+              "id": "target-052",
+              "zh": "从上一关推进后第三关棋盘可见 → 可见棋盘包含九个普通非奖励地块空间。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-029",
+              "zh": "放置一张卡牌后形成的路径会再次访问一张宝石颜色当前可自由重复访问的卡牌 → 在单次路径遍历期间，角色在到达已放置卡牌之前，会在两个相隔的时刻被明显绘制在同一张卡牌格上。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-068",
+              "zh": "当卡牌奖励选择可用且可见手牌中有一个可用的未锁定槽位时，选择一个卡牌奖励 → 已选择的卡牌奖励从奖励选项中移除，并且该卡牌出现在玩家的可见手牌区域中。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-031",
+              "zh": "在进行中的游戏过程中应用一次计分事件 → 在下一次渲染帧内，分数读数显示的数字至少比事件前显示的数字大 1。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-032",
+              "zh": "在第 1 关且分数倍率为 1 时，黄色宝石卡牌上的第一个路径步触发计分事件 → 被踏上的卡牌处出现浮动数字标签 \"10\"，并且分数读数比该步之前显示的数字增加 10。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-034",
+              "zh": "玩家低于最大生命值时放置一张红色卡牌 → 角色周围出现绿色矩形粒子，并且 HUD 生命文本中的当前生命数增加 1，同时最大生命数保持不变。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-035",
+              "zh": "红色卡牌步被应用时，红色治疗遗物处于激活状态且玩家低于最大生命值 → 角色周围出现绿色矩形粒子，并且 HUD 生命文本中的当前生命数增加 1，同时最大生命数保持不变。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-036",
+              "zh": "抽牌堆中至少有一张卡牌时放置一张蓝色卡牌 → 该蓝色卡牌出现在棋盘上，并且一张新卡牌从抽牌堆区域进入可见的手牌布局。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-043",
+              "zh": "关卡结束检查发现没有剩余的已解锁手牌 → 当前棋盘被下一关棋盘替换，角色被放置在起始地块上，并且手牌中显示卡牌。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-044",
+              "zh": "关卡结束检查发现可游玩的棋盘已满 → 当前棋盘被下一关棋盘替换，角色被放置在起始地块上，并且手牌中显示卡牌。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-055",
+              "zh": "在可让空白卡牌打开宝箱的遗物处于生效状态时，在一个未被拾取的奖励宝箱相邻位置创建一张空白卡牌 → 相邻的奖励宝箱从关闭变为打开，并出现奖励选择面板。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-074",
+              "zh": "条件：游戏结束画面可见，并且重新开始按钮被激活 → 预期结果：游戏返回到进行中的游玩布局，显示 \"LIFE: 5/5\"、分数 \"0\"、没有已收集的 relic 图标，并显示第一关版面。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-037",
+              "zh": "当抽牌牌堆为空时发生抽牌效果 → 抽牌牌堆区域不会出现新卡牌，并且可见手牌不会增加卡牌。",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-pro-v8.3-rubric2-imported-20260903-235436",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-04T08:44:31+08:00",
+          "finishedAt": "2026-09-04T11:37:24+08:00",
+          "totalDurationMs": 10373054,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-04T08:44:31+08:00",
+              "finishedAt": "2026-09-04T09:10:28+08:00",
+              "durationMs": 1557483,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-04T09:10:28+08:00",
+              "finishedAt": "2026-09-04T11:21:58+08:00",
+              "durationMs": 7889427,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-04T11:21:58+08:00",
+              "finishedAt": "2026-09-04T11:21:58+08:00",
+              "durationMs": 349,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-04T11:21:58+08:00",
+              "finishedAt": "2026-09-04T11:24:34+08:00",
+              "durationMs": 156309,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-04T11:24:34+08:00",
+              "finishedAt": "2026-09-04T11:37:24+08:00",
+              "durationMs": 769451,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "cannonbolf": {
