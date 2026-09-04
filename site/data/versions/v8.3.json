@@ -10194,6 +10194,122 @@
             }
           ]
         }
+      },
+      "minimax-m2.7": {
+        "status": "completed",
+        "runId": "minimax-m2.7-v8.3-rubric2-resume-20260903-220846",
+        "score": {
+          "display": "85.37 (+4.88)",
+          "base": 85.37,
+          "passed": 35,
+          "denominator": 41,
+          "dynamic": 2,
+          "dynamicAddition": 4.88,
+          "potential": 90.24
+        },
+        "visualQuality": {
+          "score": 92.09,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.27,
+          "renderingStyleAverage": 43.82,
+          "videosScored": 11
+        },
+        "traceCount": 11,
+        "playPath": "games-v8.3/non-mewtonian-cat/minimax-m2.7/index.html",
+        "previewPath": "previews-v8.3/non-mewtonian-cat/minimax-m2.7.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-031",
+              "zh": "在活动游玩期间，玩家有一个节段，且头部上方的图块包含缩小道具时，向上移动输入被接受 → 在失败恢复间隔期间，玩家精灵停止被绘制。"
+            },
+            {
+              "id": "target-032",
+              "zh": "在活动游玩期间，头部上方的图块是胜利方块，且至少还有一个尺寸变化道具未被收集时，向上移动输入被接受 → 玩家向上动画移动一个图块到胜利方块上，并且活动关卡保持可见，不会转场到关卡选择场景。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-035",
+              "zh": "在活动游玩期间，移动动画完成，且玩家位于底部失败边界以下 → 在失败恢复间隔期间，玩家精灵停止被绘制。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-041",
+              "zh": "滚动的天空背景被渲染 → 整个游戏视图被垂直蓝色渐变背景填满。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-012",
+              "zh": "在关卡选择场景中，当当前高亮关卡上方同一列存在可用关卡时，新按下向上导航输入 → 高亮关卡图块切换到其上方同一列最近的可用关卡图块，并跳过不可用图块。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-013",
+              "zh": "在关卡选择场景中，当当前高亮关卡下方同一列存在可用关卡时，新按下向下导航输入 → 高亮关卡图块切换到其下方同一列最近的可用关卡图块，并跳过不可用图块。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "minimax-m2.7-v8.3-rubric2-resume-20260903-220846",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-04T01:03:36+08:00",
+          "finishedAt": "2026-09-04T02:10:43+08:00",
+          "totalDurationMs": 4027956,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-04T01:03:36+08:00",
+              "finishedAt": "2026-09-04T01:05:19+08:00",
+              "durationMs": 103635,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-04T01:05:19+08:00",
+              "finishedAt": "2026-09-04T01:20:28+08:00",
+              "durationMs": 908366,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-04T01:20:28+08:00",
+              "finishedAt": "2026-09-04T02:01:23+08:00",
+              "durationMs": 2455619,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-04T02:01:23+08:00",
+              "finishedAt": "2026-09-04T02:01:23+08:00",
+              "durationMs": 211,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-04T02:01:23+08:00",
+              "finishedAt": "2026-09-04T02:03:40+08:00",
+              "durationMs": 136999,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-04T02:03:40+08:00",
+              "finishedAt": "2026-09-04T02:10:43+08:00",
+              "durationMs": 423086,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "stolen-sword": {
