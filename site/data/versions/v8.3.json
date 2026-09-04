@@ -10440,6 +10440,240 @@
         "unmet": null,
         "issue": "导入源码后进入 Trace，但在生成 targets 前的确定性检查中，游戏运行时报错 Cannot read properties of undefined (reading 'position')；因此未生成 Trace、Replay 或 Judge 结果。",
         "timing": null
+      },
+      "deepseek-v4-pro": {
+        "status": "completed",
+        "runId": "deepseek-v4-pro-v8.3-rubric2-imported-20260903-235436",
+        "score": {
+          "display": "3.13 (+90.63)",
+          "base": 3.13,
+          "passed": 1,
+          "denominator": 32,
+          "dynamic": 29,
+          "dynamicAddition": 90.63,
+          "potential": 93.75
+        },
+        "visualQuality": {
+          "score": 92,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 50,
+          "renderingStyleAverage": 42,
+          "videosScored": 1
+        },
+        "traceCount": 1,
+        "playPath": "games-v8.3/cannonbolf/deepseek-v4-pro/index.html",
+        "previewPath": "previews-v8.3/cannonbolf/deepseek-v4-pro.png",
+        "unmet": {
+          "vlm": [],
+          "replayTrace": [
+            {
+              "id": "target-030",
+              "zh": "正在绘制瞄准引导线时，瞄准预测到达未被命中的城堡且位于城堡命中半径内 → 瞄准引导线会在该城堡处终止，并且不会在视觉上继续越过该城堡。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-031",
+              "zh": "正在绘制瞄准引导线时，瞄准预测到达世界表面 → 瞄准引导线会在表面接触点处终止，并且不会在视觉上继续穿过该表面。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-002",
+              "zh": "玩家在游戏处于 Menu 模式时点击 → 标题画面文字消失，视图切换为瞄准场景，其中大炮可见，并且从大炮绘制出一条瞄准引导线。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-003",
+              "zh": "游戏处于 FirstAim 模式且剩余弹药大于 0 时，一次有效射击被接受 → 在该射击被接受后的第一个已渲染玩法帧中，瞄准引导线消失，一个球在游玩中可见，并且大炮可见。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-004",
+              "zh": "游戏处于 LaterAim 模式且剩余弹药大于 0 时，一次有效射击被接受 → 在该射击被接受后的第一个已渲染玩法帧中，瞄准引导线消失，一个球在游玩中可见，并且大炮可见。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-005",
+              "zh": "玩家在游戏处于 Ball 模式时按下重置键 → 玩法视图上方显示居中的消息 \"SORRY, TRY AGAIN!\"。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-006",
+              "zh": "游戏处于 Ball 模式时，球落到关卡失败边界以下 → 玩法视图上方显示居中的消息 \"SORRY, TRY AGAIN!\"。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-007",
+              "zh": "游戏处于 Ball 模式且剩余弹药为 0 时，玩家点击 → 玩法视图上方显示居中的消息 \"SORRY, TRY AGAIN!\"。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-008",
+              "zh": "非最终关卡上的胜利结果显示已完成其延迟 → 胜利消息不再显示。可见带有大炮和瞄准引导线的瞄准视图，并且新瞄准视图中的关卡进度 HUD 行显示的分子比胜利消息出现前显示的关卡进度 HUD 行的分子大 1。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-009",
+              "zh": "失败结果显示已完成其延迟 → \"SORRY, TRY AGAIN!\" 消息不再显示。可见带有大炮和瞄准引导线的瞄准视图，并且关卡进度 HUD 行显示的分数与失败消息出现前显示的关卡进度 HUD 行的分数相同。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-010",
+              "zh": "游戏处于 Ball 模式且剩余弹药大于 0 时，玩家点击 → 移动中的球被替换为瞄准视图，并且从球最后的游玩位置可见一条瞄准引导线。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-011",
+              "zh": "Ball 模式的物理帧推进时，球在空中且未与世界表面碰撞 → 在前一个已渲染帧与下一个已渲染帧之间，球沿其飞行路径在新位置可见。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-012",
+              "zh": "游戏处于 Ball 模式时，球在朝某个世界表面内部移动的过程中接触该世界表面 → 在接触点处，球保持在该表面外部，并且其随后可见的运动从朝该表面内部移动变为远离该表面移动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-013",
+              "zh": "玩家在游戏处于 FirstAim 模式时将鼠标向右移动 → 大炮炮管和瞄准引导线相对于其紧接之前的朝向，水平向右转动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-014",
+              "zh": "玩家在游戏处于 FirstAim 模式时将鼠标向左移动 → 大炮炮管和瞄准引导线相对于其紧接之前的朝向，水平向左转动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-015",
+              "zh": "游戏处于 FirstAim 模式且垂直瞄准未达到上限时，玩家将鼠标向上移动 → 大炮炮管和瞄准引导线相对于其紧接之前的朝向，向上转动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-016",
+              "zh": "游戏处于 FirstAim 模式且垂直瞄准未达到下限时，玩家将鼠标向下移动 → 大炮炮管和瞄准引导线相对于其紧接之前的朝向，向下转动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-017",
+              "zh": "玩家在游戏处于 LaterAim 模式时将鼠标向右移动 → 大炮炮管和瞄准引导线相对于其紧接之前的朝向，水平向右转动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-018",
+              "zh": "玩家在游戏处于 LaterAim 模式时将鼠标向左移动 → 大炮炮管和瞄准引导线相对于其紧接之前的朝向，水平向左转动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-019",
+              "zh": "玩家在游戏处于 LaterAim 模式且垂直瞄准未达到上限时向上移动鼠标 → 炮管和瞄准引导线会从其紧接之前的朝向向上枢转。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-020",
+              "zh": "玩家在游戏处于 LaterAim 模式且垂直瞄准未达到下限时向下移动鼠标 → 炮管和瞄准引导线会从其紧接之前的朝向向下枢转。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-021",
+              "zh": "玩家在游戏处于 Ball 模式时向右移动鼠标 → 摄像机视角会围绕可见的球水平向右枢转。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-022",
+              "zh": "玩家在游戏处于 Ball 模式时向左移动鼠标 → 摄像机视角会围绕可见的球水平向左枢转。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-023",
+              "zh": "玩家在游戏处于 Ball 模式且摄像机俯仰未达到上限时向上移动鼠标 → 摄像机视角会围绕可见的球向上倾斜。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-024",
+              "zh": "玩家在游戏处于 Ball 模式且摄像机俯仰未达到下限时向下移动鼠标 → 摄像机视角会围绕可见的球向下倾斜。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-025",
+              "zh": "最终关卡胜利结果显示的延迟已完成 → 游戏画面上会持续显示居中的消息 \"THANKS FOR PLAYING!\"。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-026",
+              "zh": "一个未被命中的城堡在至少还有另一个城堡未被命中时被处理为命中 → 该位置的完整城堡不再被绘制，城堡原位置会出现多个彼此分离的碎片，并且不会显示居中的结果消息。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-027",
+              "zh": "非最终关卡中，最后一个未被命中的城堡在至少剩余 1 发弹药时被处理为命中 → 该位置的完整城堡不再被绘制，城堡原位置会出现多个彼此分离的碎片，并且游戏画面上会显示居中的消息 \"BIRDIE!\"。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-028",
+              "zh": "非最终关卡中，最后一个未被命中的城堡在没有剩余弹药时被处理为命中 → 该位置的完整城堡不再被绘制，城堡原位置会出现多个彼此分离的碎片，并且游戏画面上会显示居中的消息 \"PAR!\"。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-029",
+              "zh": "最终关卡中，最后一个未被命中的城堡被处理为命中 → 该位置的完整城堡不再被绘制，城堡原位置会出现多个彼此分离的碎片，并且游戏画面上会显示居中的消息 \"THANKS FOR PLAYING!\"。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-032",
+              "zh": "游戏处于 FirstAim 模式时渲染一个游戏 UI 帧 → 屏幕右上方附近可见三行右对齐的 HUD：一个弹药数量后跟 \"⚫\"、一个城堡命中分数后跟 \"🏰\"、以及一个关卡进度分数后跟 \"⛳\"。屏幕底部边缘居中显示一行提示文本。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-pro-v8.3-rubric2-imported-20260903-235436",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-04T11:37:24+08:00",
+          "finishedAt": "2026-09-04T12:43:33+08:00",
+          "totalDurationMs": 3969000,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-04T11:37:24+08:00",
+              "finishedAt": "2026-09-04T11:51:06+08:00",
+              "durationMs": 822422,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-04T11:51:06+08:00",
+              "finishedAt": "2026-09-04T12:43:19+08:00",
+              "durationMs": 3132419,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-04T12:43:19+08:00",
+              "finishedAt": "2026-09-04T12:43:19+08:00",
+              "durationMs": 177,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-04T12:43:19+08:00",
+              "finishedAt": "2026-09-04T12:43:22+08:00",
+              "durationMs": 3209,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-04T12:43:22+08:00",
+              "finishedAt": "2026-09-04T12:43:33+08:00",
+              "durationMs": 10739,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "market-street-tycoon": {
