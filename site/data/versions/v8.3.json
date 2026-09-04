@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "v8.3",
-  "updatedAt": "2026-09-04",
+  "updatedAt": "2026-09-03",
   "models": [
     {
       "id": "gpt-5.5",
@@ -11152,6 +11152,141 @@
               "startedAt": "2026-09-03T21:19:49+08:00",
               "finishedAt": "2026-09-03T21:24:55+08:00",
               "durationMs": 306219,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
+      "deepseek-v4-flash": {
+        "status": "completed",
+        "runId": "deepseek-v4-flash-v8.3-rubric2-imported-20260903-220846",
+        "score": {
+          "display": "72.09 (+4.65)",
+          "base": 72.09,
+          "passed": 31,
+          "denominator": 43,
+          "dynamic": 2,
+          "dynamicAddition": 4.65,
+          "potential": 76.74
+        },
+        "visualQuality": {
+          "score": 88.73,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.09,
+          "renderingStyleAverage": 41.64,
+          "videosScored": 11
+        },
+        "traceCount": 11,
+        "playPath": "games-v8.3/market-street-tycoon/deepseek-v4-flash/index.html",
+        "previewPath": "previews-v8.3/market-street-tycoon/deepseek-v4-flash.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-027",
+              "zh": "在回顾界面中，当回顾商品列表未处于顶部滚动位置时，向上滚动输入被接受 → 回顾商品行向下移动 20 screen pixels，并且滚动条滑块沿右侧滚动条向上移动。"
+            },
+            {
+              "id": "target-029",
+              "zh": "市场场景渲染恰好 1 种仍有剩余库存的商品类型 → 商品图标绘制在中央框中，而左侧框和右侧框中不包含商品图标。"
+            },
+            {
+              "id": "target-030",
+              "zh": "市场场景渲染恰好 2 种仍有剩余库存的商品类型 → 商品图标绘制在左侧框和右侧框中，而中央框中不包含商品图标。"
+            },
+            {
+              "id": "target-031",
+              "zh": "市场场景渲染恰好 3 种仍有剩余库存的商品类型 → 商品图标绘制在左侧框、中央框和右侧框中。"
+            },
+            {
+              "id": "target-035",
+              "zh": "当库存界面渲染至少三行商品行且第三个商品行被选中时 → 商品列表向上滚动一个行高，使第一个商品行位于可见库存列表区域上方。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-015",
+              "zh": "在购买界面的某个供应商行上尝试购买确认，且该行显示库存为 0 → 购买界面保持可见，该供应商行显示的库存仍为 0，标题栏金钱金额与确认前相比保持不变。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-022",
+              "zh": "在库存界面的商品行上，当该行显示的售价为 0 dollars 时，向左价格调整输入被接受 → 所选商品行显示的售价仍显示为 0 dollars。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-026",
+              "zh": "在回顾界面中，当回顾商品列表未处于最低滚动位置时，向下滚动输入被接受 → 回顾商品行向上移动 20 screen pixels，并且滚动条滑块沿右侧滚动条向下移动。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-032",
+              "zh": "市场场景渲染某个累计销量至少达到其起始库存的商品 → 市场框中不再可见该商品的任何图标。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-037",
+              "zh": "条件：库存屏幕渲染某个商品行，且该商品行的声誉值至少为 100 → 预期结果：该行的“Reputation:”一行包含 5 个满格声誉符号，且不包含任何空声誉符号。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-002",
+              "zh": "当玩家的金钱加上复盘总计为零时接受复盘确认 → 显示内容从复盘流程切换回主菜单界面，显示“𝕄𝕒𝕣𝕜𝕖𝕥 𝕊𝕥𝕣𝕖𝕖𝕥 𝕋𝕪𝕔𝕠𝕠𝕟”标题及其垂直菜单。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-008",
+              "zh": "当玩家的金钱加上复盘总计为零时渲染复盘界面 → 复盘界面的摘要区域显示“You ran out of money.”、“GAME OVER”和“Press enter”消息。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-flash-v8.3-rubric2-imported-20260903-220846",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-04T12:27:32+08:00",
+          "finishedAt": "2026-09-04T13:43:09+08:00",
+          "totalDurationMs": 4536703,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-04T12:27:32+08:00",
+              "finishedAt": "2026-09-04T12:42:50+08:00",
+              "durationMs": 917693,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-04T12:42:50+08:00",
+              "finishedAt": "2026-09-04T13:29:40+08:00",
+              "durationMs": 2810445,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-04T13:29:40+08:00",
+              "finishedAt": "2026-09-04T13:29:40+08:00",
+              "durationMs": 234,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-04T13:29:40+08:00",
+              "finishedAt": "2026-09-04T13:30:46+08:00",
+              "durationMs": 65542,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-04T13:30:46+08:00",
+              "finishedAt": "2026-09-04T13:43:09+08:00",
+              "durationMs": 742754,
               "status": "completed",
               "exitCode": 0
             }

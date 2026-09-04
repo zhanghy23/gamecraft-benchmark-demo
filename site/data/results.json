@@ -1,6 +1,6 @@
 {
   "schemaVersion": 4,
-  "updatedAt": "2026-09-04",
+  "updatedAt": "2026-09-03",
   "defaultVersionId": "v8.3",
   "versions": [
     {
@@ -48,14 +48,14 @@
     {
       "id": "v8.3",
       "label": "v8.3 · 视频主判 + 图片复核",
-      "description": "覆盖20个游戏与五类核心机制；GPT-5.5、Seed-2.0-Pro、MiniMax-M2.7、GPT-5.4、DeepSeek-V4-Flash与DeepSeek-V4-Pro使用同一批固定需求。既有成功结果按规则复用Trace/Replay重判，其余执行完整或导入源码后的Trace、Replay与Rubric v2 Judge；全部需求说明均以中文展示。",
+      "description": "覆盖20个游戏与五类核心机制；各生成模型在每个游戏上使用同一批固定需求，GPT-5.5和Seed-2.0-Pro的既有成功结果复用原Trace/Replay重新执行Rubric v2视频判定，其余模型执行完整流水线。全部需求说明均以中文展示。",
       "status": "partial",
-      "updatedAt": "2026-09-04",
-      "harnessRevision": "v8.3-6a8c9d0",
+      "updatedAt": "2026-09-03",
+      "harnessRevision": "v8.3-040aa4a",
       "judgeModel": "Seed-2.0-Pro（视频主判 + 图片复核，画面评分 Rubric v2）",
-      "dataRevision": "v83-rubric2-six-models-20260904",
-      "resultCount": 87,
-      "completedCount": 72,
+      "dataRevision": "v83-rubric2-four-models-20260903-000416",
+      "resultCount": 88,
+      "completedCount": 73,
       "failedCount": 15,
       "dataPath": "data/versions/v8.3.json"
     }
