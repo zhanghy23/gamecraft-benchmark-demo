@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "v8.3",
-  "updatedAt": "2026-09-03",
+  "updatedAt": "2026-09-04",
   "models": [
     {
       "id": "gpt-5.5",
@@ -38,6 +38,12 @@
       "label": "DeepSeek-V4-Pro",
       "provider": "DeepSeek",
       "order": 6
+    },
+    {
+      "id": "qwen3.8-max",
+      "label": "Qwen3.8-Max",
+      "provider": "Alibaba Cloud",
+      "order": 7
     }
   ],
   "games": [
@@ -13872,6 +13878,43 @@
               "durationMs": 490724,
               "status": "completed",
               "exitCode": 0
+            }
+          ]
+        }
+      },
+      "gpt-5.4": {
+        "status": "failed",
+        "runId": "gpt-5.4-v8.3-rubric2-resume-20260904-061752",
+        "stage": "trace",
+        "score": null,
+        "traceCount": 0,
+        "playPath": null,
+        "previewPath": null,
+        "unmet": null,
+        "issue": "generate-game 已完成；Trace Phase 2 的 Probe Plan 第3批连续3次仍无法给出唯一合法锚点（最终 exactSource 在 src/main.ts 中出现17次），因此未进入 selection、Replay 与 Judge。",
+        "timing": {
+          "runId": "gpt-5.4-v8.3-rubric2-resume-20260904-061752",
+          "status": "failed",
+          "failedStage": "trace",
+          "startedAt": "2026-09-04T17:28:06+08:00",
+          "finishedAt": "2026-09-04T17:52:49+08:00",
+          "totalDurationMs": 1482991,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-04T17:28:06+08:00",
+              "finishedAt": "2026-09-04T17:30:38+08:00",
+              "durationMs": 152231,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-04T17:30:38+08:00",
+              "finishedAt": "2026-09-04T17:52:49+08:00",
+              "durationMs": 1330737,
+              "status": "failed",
+              "exitCode": 1
             }
           ]
         }
