@@ -16190,6 +16190,118 @@
             }
           ]
         }
+      },
+      "deepseek-v4-pro": {
+        "status": "completed",
+        "runId": "deepseek-v4-pro-v8.3-rubric2-imported-20260903-235436",
+        "score": {
+          "display": "81.58 (+7.89)",
+          "base": 81.58,
+          "passed": 31,
+          "denominator": 38,
+          "dynamic": 3,
+          "dynamicAddition": 7.89,
+          "potential": 89.47
+        },
+        "visualQuality": {
+          "score": 92.9,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.5,
+          "renderingStyleAverage": 44.4,
+          "videosScored": 10
+        },
+        "traceCount": 10,
+        "playPath": "games-v8.3/super-castle-game/deepseek-v4-pro/index.html",
+        "previewPath": "previews-v8.3/super-castle-game/deepseek-v4-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-027",
+              "zh": "在游戏进行中，当受控鸭子左侧相邻格包含一个可移动的集群部件，且该集群中的每个部件都可以向左移动一格时，接受向左移动指令 → 预期结果：受控鸭子移动到其左侧相邻格，并且被推动集群中的每个部件一起向左移动一个棋盘格。"
+            },
+            {
+              "id": "target-031",
+              "zh": "在游戏进行中，对于一个可移动的非鸭子部件，当其目的地是切割器格子时，接受移动指令 → 预期结果：移动完成后，该非鸭子部件不再在棋盘上可见，并且切割器仍在其所在格上可见。"
+            },
+            {
+              "id": "target-035",
+              "zh": "当关卡完成过渡到达游戏进入下一关的时刻时 → 预期结果：上一棋盘被新的关卡棋盘布局替换。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-034",
+              "zh": "当关卡胜利检查成功，原因是存活鸭子的数量与目标数量一致，并且在两次目标检查中每只鸭子都位于一个目标上时 → 预期结果：关卡结束过渡开始，关卡视图被开场颜色的过渡遮罩覆盖。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-028",
+              "zh": "在游戏进行中，当受控鸭子推动一串可移动部件，且这些部件全部可以向左移动一格时，接受向左移动指令 → 预期结果：受控鸭子移动到其左侧相邻格，并且被推动链条中的每个可移动部件都向左移动一个棋盘格。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-033",
+              "zh": "在游戏进行中，当一个鸭子集群被拆分成多个互不连接的鸭子组时 → 预期结果：与保留的鸭子组断开连接的组被渲染为小鸭颜色的方块，而保留的鸭子组仍被渲染为鸭子方块。",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-036",
+              "zh": "在游戏进行中，当当前关卡布局已经相对于其起始排列发生可见变化后，接受重置指令 → 预期结果：当前关卡恢复到其起始棋盘排列，受控鸭子和关卡部件回到其初始网格位置。",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-pro-v8.3-rubric2-imported-20260903-235436",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-05T05:50:25+08:00",
+          "finishedAt": "2026-09-05T06:43:32+08:00",
+          "totalDurationMs": 3187417,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-05T05:50:25+08:00",
+              "finishedAt": "2026-09-05T06:03:50+08:00",
+              "durationMs": 804804,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-05T06:03:50+08:00",
+              "finishedAt": "2026-09-05T06:36:25+08:00",
+              "durationMs": 1955511,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-05T06:36:25+08:00",
+              "finishedAt": "2026-09-05T06:36:26+08:00",
+              "durationMs": 210,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-05T06:36:26+08:00",
+              "finishedAt": "2026-09-05T06:37:03+08:00",
+              "durationMs": 37113,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-05T06:37:03+08:00",
+              "finishedAt": "2026-09-05T06:43:32+08:00",
+              "durationMs": 389748,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "witchcat": {
