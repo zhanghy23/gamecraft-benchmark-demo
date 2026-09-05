@@ -15670,6 +15670,129 @@
             }
           ]
         }
+      },
+      "deepseek-v4-pro": {
+        "status": "completed",
+        "runId": "deepseek-v4-pro-v8.3-rubric2-imported-20260903-235436",
+        "score": {
+          "display": "78.72 (+4.26)",
+          "base": 78.72,
+          "passed": 37,
+          "denominator": 47,
+          "dynamic": 2,
+          "dynamicAddition": 4.26,
+          "potential": 82.98
+        },
+        "visualQuality": {
+          "score": 85.92,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 46.38,
+          "renderingStyleAverage": 39.54,
+          "videosScored": 13
+        },
+        "traceCount": 13,
+        "playPath": "games-v8.3/catapoolt/deepseek-v4-pro/index.html",
+        "previewPath": "previews-v8.3/catapoolt/deepseek-v4-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-002",
+              "zh": "已进入开始菜单场景 → 画布显示风格化标题文字 \"🅒🅐🅣🅐🅟🅞🅞🅛🅣\"。"
+            },
+            {
+              "id": "target-011",
+              "zh": "游戏玩法暂停弹窗中的 Menu（菜单）按钮被接受 → 开始菜单场景替换游戏玩法场景，并显示风格化标题文字 \"🅒🅐🅣🅐🅟🅞🅞🅛🅣\"。"
+            },
+            {
+              "id": "target-029",
+              "zh": "位于地面高度的猫接触一只老鼠，且其膨胀等级低于最大值，并且耐力条未满 → 被接触的老鼠消失，并且在 1 秒内，耐力条的填充部分从接触前的右边缘向右延伸。"
+            },
+            {
+              "id": "target-037",
+              "zh": "游戏过程中，当猫处于充气状态时，排放指令被接受 → 猫的充气身体轮廓从排放前的轮廓开始向内收缩，直到猫以正常未充气的身体比例被绘制；一个粪便对象出现在游玩场地中猫的排放位置；并且猫在排放后离开地面并沿空中弧线运动。"
+            },
+            {
+              "id": "target-039",
+              "zh": "处于地面高度的猫接触一个处于活动状态且未被收集的三叶草 → 该三叶草从游玩场地中消失，并且耐力条填充到其轮廓条的完整宽度。"
+            },
+            {
+              "id": "target-042",
+              "zh": "处于地面高度的猫在未受到粪便伤害保护时接触一个粪便 → 被接触的粪便从游玩场地中消失，并且耐力条的已填充部分开始从碰撞前的右边缘向左移动。"
+            },
+            {
+              "id": "target-043",
+              "zh": "猫在受到粪便伤害保护时接触一个粪便 → 该粪便仍绘制在游玩场地中，并且在下一次渲染的游戏视图中，耐力条的已填充部分保持相同的可见右边缘。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-012",
+              "zh": "当暂停弹窗可见且其后方至少有一个游戏玩法对象可见时，发生一次活跃游戏更新 → 在接下来 1 秒渲染视频中，叠层后方可见的游戏玩法对象保持相同的屏幕位置，同时 Pause 弹窗保持在最上层。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-033",
+              "zh": "完成上一波后初始化新波次 → 在下一次渲染的游戏玩法视图中，顶部 HUD 显示带有新波次数字的 \"Wave \" 标签。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-035",
+              "zh": "下一波弹窗中的 Continue 按钮被接受 → 下一波弹窗叠加层消失，并且游戏玩法屏幕仍然可见。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-pro-v8.3-rubric2-imported-20260903-235436",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-05T03:43:40+08:00",
+          "finishedAt": "2026-09-05T05:50:25+08:00",
+          "totalDurationMs": 7604508,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-05T03:43:40+08:00",
+              "finishedAt": "2026-09-05T03:59:00+08:00",
+              "durationMs": 919987,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-05T03:59:00+08:00",
+              "finishedAt": "2026-09-05T05:34:08+08:00",
+              "durationMs": 5707575,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-05T05:34:08+08:00",
+              "finishedAt": "2026-09-05T05:34:08+08:00",
+              "durationMs": 303,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-05T05:34:08+08:00",
+              "finishedAt": "2026-09-05T05:35:56+08:00",
+              "durationMs": 108186,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-05T05:35:56+08:00",
+              "finishedAt": "2026-09-05T05:50:25+08:00",
+              "durationMs": 868426,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "super-castle-game": {
