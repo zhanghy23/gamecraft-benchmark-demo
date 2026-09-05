@@ -12469,6 +12469,128 @@
             }
           ]
         }
+      },
+      "qwen3.8-max": {
+        "status": "completed",
+        "runId": "qwen3.8-max-v8.3-rubric2-imported-20260904-143200",
+        "score": {
+          "display": "79.07 (+4.65)",
+          "base": 79.07,
+          "passed": 34,
+          "denominator": 43,
+          "dynamic": 2,
+          "dynamicAddition": 4.65,
+          "potential": 83.72
+        },
+        "visualQuality": {
+          "score": 91.2,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.2,
+          "renderingStyleAverage": 43,
+          "videosScored": 10
+        },
+        "traceCount": 10,
+        "playPath": "games-v8.3/market-street-tycoon/qwen3.8-max/index.html",
+        "previewPath": "previews-v8.3/market-street-tycoon/qwen3.8-max.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-026",
+              "zh": "在回顾界面中，当回顾商品列表未处于最低滚动位置时，向下滚动输入被接受 → 回顾商品行向上移动 20 screen pixels，并且滚动条滑块沿右侧滚动条向下移动。"
+            },
+            {
+              "id": "target-035",
+              "zh": "当库存界面渲染至少三行商品行且第三个商品行被选中时 → 商品列表向上滚动一个行高，使第一个商品行位于可见库存列表区域上方。"
+            },
+            {
+              "id": "target-043",
+              "zh": "条件：市场场景渲染其状态徽章 → 预期结果：左上方附近的白色矩形徽章显示“Week”后接周数，右上方附近的白色矩形徽章显示已显示的金钱数额后接“$”。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-015",
+              "zh": "在购买界面的某个供应商行上尝试购买确认，且该行显示库存为 0 → 购买界面保持可见，该供应商行显示的库存仍为 0，标题栏金钱金额与确认前相比保持不变。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-024",
+              "zh": "在接受库存界面“next”（下一步）选项后，延迟的前进转场完成 → 显示从库存界面转场切换到市场场景。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-032",
+              "zh": "市场场景渲染某个累计销量至少达到其起始库存的商品 → 市场框中不再可见该商品的任何图标。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-036",
+              "zh": "库存界面渲染某个声誉值为 0 的商品行 → 该行的“Reputation:”（声誉：）一行包含一个完整声誉符号，后跟四个空声誉符号。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-008",
+              "zh": "当玩家的金钱加上复盘总计为零时渲染复盘界面 → 复盘界面的摘要区域显示“You ran out of money.”、“GAME OVER”和“Press enter”消息。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-027",
+              "zh": "在回顾界面中，当回顾商品列表未处于顶部滚动位置时，向上滚动输入被接受 → 回顾商品行向下移动 20 screen pixels，并且滚动条滑块沿右侧滚动条向上移动。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "qwen3.8-max-v8.3-rubric2-imported-20260904-143200",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-05T07:46:22+08:00",
+          "finishedAt": "2026-09-05T08:40:05+08:00",
+          "totalDurationMs": 3223205,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-05T07:46:22+08:00",
+              "finishedAt": "2026-09-05T07:59:46+08:00",
+              "durationMs": 803799,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-05T07:59:46+08:00",
+              "finishedAt": "2026-09-05T08:31:03+08:00",
+              "durationMs": 1877930,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-05T08:31:04+08:00",
+              "finishedAt": "2026-09-05T08:31:04+08:00",
+              "durationMs": 228,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-05T08:31:04+08:00",
+              "finishedAt": "2026-09-05T08:32:07+08:00",
+              "durationMs": 63416,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-05T08:32:07+08:00",
+              "finishedAt": "2026-09-05T08:40:05+08:00",
+              "durationMs": 477799,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "necrotic-commander": {
