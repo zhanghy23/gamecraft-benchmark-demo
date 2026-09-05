@@ -14032,6 +14032,35 @@
             }
           ]
         }
+      },
+      "qwen3.8-max": {
+        "status": "failed",
+        "runId": "qwen3.8-max-v8.3-rubric2-imported-20260904-143200",
+        "stage": "trace",
+        "score": null,
+        "traceCount": 0,
+        "playPath": null,
+        "previewPath": null,
+        "unmet": null,
+        "issue": "导入源码可完成 Vite 构建，但进入 Trace 前的确定性运行检查失败：地图渲染调用 getTile 时读取了未定义值的索引 0（Cannot read properties of undefined），因此未生成 Trace、Replay 或 Judge 结果。",
+        "timing": {
+          "runId": "qwen3.8-max-v8.3-rubric2-imported-20260904-143200",
+          "status": "failed",
+          "failedStage": "trace",
+          "startedAt": "2026-09-05T09:30:55+08:00",
+          "finishedAt": "2026-09-05T09:30:57+08:00",
+          "totalDurationMs": 1891,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-05T09:30:55+08:00",
+              "finishedAt": "2026-09-05T09:30:57+08:00",
+              "durationMs": 1873,
+              "status": "failed",
+              "exitCode": 1
+            }
+          ]
+        }
       }
     },
     "catculus": {
