@@ -15356,6 +15356,114 @@
             }
           ]
         }
+      },
+      "qwen3.8-max": {
+        "status": "completed",
+        "runId": "qwen3.8-max-v8.3-rubric2-imported-20260904-143200",
+        "score": {
+          "display": "85.37 (+0.00)",
+          "base": 85.37,
+          "passed": 35,
+          "denominator": 41,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 85.37
+        },
+        "visualQuality": {
+          "score": 92.2,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.4,
+          "renderingStyleAverage": 43.8,
+          "videosScored": 15
+        },
+        "traceCount": 15,
+        "playPath": "games-v8.3/non-mewtonian-cat/qwen3.8-max/index.html",
+        "previewPath": "previews-v8.3/non-mewtonian-cat/qwen3.8-max.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-031",
+              "zh": "在活动游玩期间，玩家有一个节段，且头部上方的图块包含缩小道具时，向上移动输入被接受 → 在失败恢复间隔期间，玩家精灵停止被绘制。"
+            },
+            {
+              "id": "target-035",
+              "zh": "在活动游玩期间，移动动画完成，且玩家位于底部失败边界以下 → 在失败恢复间隔期间，玩家精灵停止被绘制。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-012",
+              "zh": "在关卡选择场景中，当当前高亮关卡上方同一列存在可用关卡时，新按下向上导航输入 → 高亮关卡图块切换到其上方同一列最近的可用关卡图块，并跳过不可用图块。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-013",
+              "zh": "在关卡选择场景中，当当前高亮关卡下方同一列存在可用关卡时，新按下向下导航输入 → 高亮关卡图块切换到其下方同一列最近的可用关卡图块，并跳过不可用图块。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-016",
+              "zh": "从包含玩家头部或身体图块的关卡数据加载正在进行的关卡 → 正在进行的游玩场景在关卡网格上将玩家显示为分段身体。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-041",
+              "zh": "滚动的天空背景被渲染 → 整个游戏视图被垂直蓝色渐变背景填满。",
+              "cause": "源码分析确认未实现"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "qwen3.8-max-v8.3-rubric2-imported-20260904-143200",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-05T10:48:16+08:00",
+          "finishedAt": "2026-09-05T11:51:39+08:00",
+          "totalDurationMs": 3802699,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-05T10:48:16+08:00",
+              "finishedAt": "2026-09-05T11:00:59+08:00",
+              "durationMs": 762974,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-05T11:00:59+08:00",
+              "finishedAt": "2026-09-05T11:38:35+08:00",
+              "durationMs": 2256294,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-05T11:38:35+08:00",
+              "finishedAt": "2026-09-05T11:38:35+08:00",
+              "durationMs": 216,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-05T11:38:35+08:00",
+              "finishedAt": "2026-09-05T11:41:01+08:00",
+              "durationMs": 145850,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-05T11:41:01+08:00",
+              "finishedAt": "2026-09-05T11:51:39+08:00",
+              "durationMs": 637332,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "stolen-sword": {
