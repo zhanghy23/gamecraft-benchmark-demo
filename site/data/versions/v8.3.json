@@ -13111,6 +13111,110 @@
             }
           ]
         }
+      },
+      "qwen3.8-max": {
+        "status": "completed",
+        "runId": "qwen3.8-max-v8.3-rubric2-imported-20260904-143200",
+        "score": {
+          "display": "86.84 (+10.53)",
+          "base": 86.84,
+          "passed": 33,
+          "denominator": 38,
+          "dynamic": 4,
+          "dynamicAddition": 10.53,
+          "potential": 97.37
+        },
+        "visualQuality": {
+          "score": 90.5,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48,
+          "renderingStyleAverage": 42.5,
+          "videosScored": 6
+        },
+        "traceCount": 6,
+        "playPath": "games-v8.3/necrotic-commander/qwen3.8-max/index.html",
+        "previewPath": "previews-v8.3/necrotic-commander/qwen3.8-max.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-036",
+              "zh": "活动游戏过程中，死灵法师的生命值达到零或以下 → 一个红黑色粒子爆发出现在死灵法师的位置，并且游戏内生命值 HUD 显示 \"Health (0)\"。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-026",
+              "zh": "Guided Mode 推进到敌人波次为 10 的倍数，且至少有一个坟墓为空 → 新波次开始时，空坟墓地块变回完整的墓碑地块。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-038",
+              "zh": "条件：死灵法师已死亡，且游戏结束延迟时间已过去后发生指针按下或触摸按下 → 预期结果：游戏结束面板消失，并显示一个全新的战场；死灵法师存在，且 HUD 生命值恢复为 \"Health (100)\"。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-017",
+              "zh": "在选中 Raise Dead 时点击一个空坟墓 → 该坟墓保持空坟墓图块外观，并且下一次渲染帧期间该坟墓位置不会出现新的召唤物。",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-020",
+              "zh": "选择了 Drain Soul，且当前没有正在被吸取的其他敌人时，点击一个敌人 → 在后续帧中，被点击的敌人显示为青色，并且一个吸取粒子效果附着在该敌人身上。",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "qwen3.8-max-v8.3-rubric2-imported-20260904-143200",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-05T08:40:05+08:00",
+          "finishedAt": "2026-09-05T09:30:55+08:00",
+          "totalDurationMs": 3049919,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-05T08:40:05+08:00",
+              "finishedAt": "2026-09-05T08:51:12+08:00",
+              "durationMs": 666854,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-05T08:51:12+08:00",
+              "finishedAt": "2026-09-05T09:22:05+08:00",
+              "durationMs": 1852990,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-05T09:22:05+08:00",
+              "finishedAt": "2026-09-05T09:22:05+08:00",
+              "durationMs": 175,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-05T09:22:05+08:00",
+              "finishedAt": "2026-09-05T09:24:44+08:00",
+              "durationMs": 159276,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-05T09:24:44+08:00",
+              "finishedAt": "2026-09-05T09:30:55+08:00",
+              "durationMs": 370593,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "space-huggers": {
