@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "v8.3",
-  "updatedAt": "2026-09-05",
+  "updatedAt": "2026-09-06",
   "models": [
     {
       "id": "gpt-5.5",
@@ -8815,35 +8815,35 @@
     "tiny-yurts": {
       "gpt-5.5": {
         "status": "failed",
-        "runId": "gpt-5.5-v8.3-rubric2-tiny-yurts-regenerate-20260905-225327",
+        "runId": "gpt-5.5-v8.3-rubric2-tiny-yurts-regenerate-20260905-231847",
         "stage": "trace",
         "score": null,
         "traceCount": 0,
         "playPath": null,
         "previewPath": null,
         "unmet": null,
-        "issue": "第二次重新生成在约478.3秒内写出4个项目文件，但进入 Trace 前的确定性构建校验仍失败：src/main.ts:36:49 的 spawnYurt 参数 y 与局部 const y 重复声明，Vite/esbuild 无法编译；因此未生成 Trace、Replay 或 Judge 结果。",
+        "issue": "第三次重新生成在约148.5秒内写出4个项目文件，且确定性Vite构建通过；Trace Phase 1 已完成前8/10批，但第9批请求收到Compliance Gateway HTTP 403，后端解析bigc.byteintl.net时I/O超时，队列按共享基础设施异常终止，因此未进入Probe、selection、Replay或Judge。",
         "timing": {
-          "runId": "gpt-5.5-v8.3-rubric2-tiny-yurts-regenerate-20260905-225327",
+          "runId": "gpt-5.5-v8.3-rubric2-tiny-yurts-regenerate-20260905-231847",
           "status": "failed",
           "failedStage": "trace",
-          "startedAt": "2026-09-05T22:54:13+08:00",
-          "finishedAt": "2026-09-05T23:02:14+08:00",
-          "totalDurationMs": 481133,
+          "startedAt": "2026-09-05T23:19:12+08:00",
+          "finishedAt": "2026-09-05T23:33:27+08:00",
+          "totalDurationMs": 855639,
           "stages": [
             {
               "stage": "generate-game",
-              "startedAt": "2026-09-05T22:54:13+08:00",
-              "finishedAt": "2026-09-05T23:02:12+08:00",
-              "durationMs": 478347,
+              "startedAt": "2026-09-05T23:19:12+08:00",
+              "finishedAt": "2026-09-05T23:21:40+08:00",
+              "durationMs": 148541,
               "status": "completed",
               "exitCode": 0
             },
             {
               "stage": "trace",
-              "startedAt": "2026-09-05T23:02:12+08:00",
-              "finishedAt": "2026-09-05T23:02:14+08:00",
-              "durationMs": 2763,
+              "startedAt": "2026-09-05T23:21:40+08:00",
+              "finishedAt": "2026-09-05T23:33:27+08:00",
+              "durationMs": 707076,
               "status": "failed",
               "exitCode": 1
             }
