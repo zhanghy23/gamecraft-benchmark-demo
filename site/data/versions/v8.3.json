@@ -8815,35 +8815,35 @@
     "tiny-yurts": {
       "gpt-5.5": {
         "status": "failed",
-        "runId": "gpt-5.5-v8.3-rubric2-20260903-000416",
+        "runId": "gpt-5.5-v8.3-rubric2-tiny-yurts-regenerate-20260905-222444",
         "stage": "trace",
         "score": null,
         "traceCount": 0,
         "playPath": null,
         "previewPath": null,
         "unmet": null,
-        "issue": "全流程重测在 Trace 的生成源码构建校验阶段失败：src/main.ts:40:27 重复声明符号 y；generate-game 已完成，未进入 Trace 生成与 Judge。",
+        "issue": "重新生成在约137.4秒内写出4个项目文件，但进入 Trace 前的确定性构建校验失败：src/main.ts:29:47 的 spawnYurt 参数 y 与局部 const y 重复声明，Vite/esbuild 无法编译；因此未生成 Trace、Replay 或 Judge 结果。",
         "timing": {
-          "runId": "gpt-5.5-v8.3-rubric2-20260903-000416",
+          "runId": "gpt-5.5-v8.3-rubric2-tiny-yurts-regenerate-20260905-222444",
           "status": "failed",
           "failedStage": "trace",
-          "startedAt": "2026-09-03T01:46:40+08:00",
-          "finishedAt": "2026-09-03T01:53:00+08:00",
-          "totalDurationMs": 379661,
+          "startedAt": "2026-09-05T22:24:52+08:00",
+          "finishedAt": "2026-09-05T22:27:12+08:00",
+          "totalDurationMs": 140291,
           "stages": [
             {
               "stage": "generate-game",
-              "startedAt": "2026-09-03T01:46:40+08:00",
-              "finishedAt": "2026-09-03T01:52:38+08:00",
-              "durationMs": 357175,
+              "startedAt": "2026-09-05T22:24:52+08:00",
+              "finishedAt": "2026-09-05T22:27:09+08:00",
+              "durationMs": 137412,
               "status": "completed",
               "exitCode": 0
             },
             {
               "stage": "trace",
-              "startedAt": "2026-09-03T01:52:38+08:00",
-              "finishedAt": "2026-09-03T01:53:00+08:00",
-              "durationMs": 22462,
+              "startedAt": "2026-09-05T22:27:09+08:00",
+              "finishedAt": "2026-09-05T22:27:12+08:00",
+              "durationMs": 2857,
               "status": "failed",
               "exitCode": 1
             }
