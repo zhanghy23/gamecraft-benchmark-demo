@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "v8.3",
-  "updatedAt": "2026-09-04",
+  "updatedAt": "2026-09-05",
   "models": [
     {
       "id": "gpt-5.5",
@@ -5866,6 +5866,140 @@
               "startedAt": "2026-09-04T02:23:50+08:00",
               "finishedAt": "2026-09-04T02:31:20+08:00",
               "durationMs": 450286,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
+      "qwen3.8-max": {
+        "status": "completed",
+        "runId": "qwen3.8-max-v8.3-rubric2-imported-20260904-143200",
+        "score": {
+          "display": "81.03 (+13.79)",
+          "base": 81.03,
+          "passed": 47,
+          "denominator": 58,
+          "dynamic": 8,
+          "dynamicAddition": 13.79,
+          "potential": 94.83
+        },
+        "visualQuality": {
+          "score": 89.4,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.3,
+          "renderingStyleAverage": 42.1,
+          "videosScored": 10
+        },
+        "traceCount": 10,
+        "playPath": "games-v8.3/elematter/qwen3.8-max/index.html",
+        "previewPath": "previews-v8.3/elematter/qwen3.8-max.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-055",
+              "zh": "第十五波被派出，同时第十六波仍处于排队状态 → 波次显示变为“15 / 20”，且下一波预览计数器显示 0 个土元素敌人、0 个水元素敌人、0 个气元素敌人和 17 个火元素敌人。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-004",
+              "zh": "在游戏未处于游玩状态时选择“Send Wave”（派出波次）控件 → 波次显示保持为选择前的值，路径入口处不出现新的敌人，并且“Send Wave”（派出波次）控件保持其非激活的半透明外观。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-021",
+              "zh": "对一个不可升级的防御塔选择升级按钮 → 防御塔升级/回收菜单保持打开，并且升级按钮仍显示为不可用状态。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-040",
+              "zh": "一个土元素 Boss 敌人在路径入口处被激活 → 一个 Boss 敌人出现在路径入口处，具有 20 px 的正方形身体、6 px 边框、绿色土元素颜色点缀和外侧角框。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-041",
+              "zh": "一个水元素 Boss 敌人在路径入口处被激活 → 一个 Boss 敌人出现在路径入口处，具有 20 px 的正方形身体、6 px 边框、蓝色水元素颜色点缀和外侧角框。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-048",
+              "zh": "玩家失去最后剩余的 1 条生命 → 浏览器警告对话框出现，并显示文本“You lost.”。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-049",
+              "zh": "失败警告对话框被确认 → 游戏页面重新加载到初始游戏场地视图。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-054",
+              "zh": "发送第 10 波，同时第 11 波仍在队列中 → 波次显示变为“10 / 20”，并且下一波预览计数器显示 0 个土元素敌人、0 个水元素敌人、15 个气元素敌人和 0 个火元素敌人。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-056",
+              "zh": "第二十波作为最后一个排队波次被派出 → 波次显示变为“20 / 20”，且“Send Wave”控件显示为已禁用。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-057",
+              "zh": "所有波次都已被派出并清除，且至少剩余 1 条生命 → 浏览器警告对话框出现，文本开头为“You won! Based on lives and elemental fragments left, your score is:”。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-058",
+              "zh": "胜利警告对话框被确认 → 游戏页面重新加载到初始游戏场地视图。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "qwen3.8-max-v8.3-rubric2-imported-20260904-143200",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-04T19:17:46+08:00",
+          "finishedAt": "2026-09-04T23:04:36+08:00",
+          "totalDurationMs": 13610072,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-04T19:17:46+08:00",
+              "finishedAt": "2026-09-04T19:46:31+08:00",
+              "durationMs": 1724197,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-04T19:46:31+08:00",
+              "finishedAt": "2026-09-04T22:53:11+08:00",
+              "durationMs": 11200284,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-04T22:53:11+08:00",
+              "finishedAt": "2026-09-04T22:53:11+08:00",
+              "durationMs": 323,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-04T22:53:11+08:00",
+              "finishedAt": "2026-09-04T22:56:20+08:00",
+              "durationMs": 189149,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-04T22:56:20+08:00",
+              "finishedAt": "2026-09-04T23:04:36+08:00",
+              "durationMs": 496084,
               "status": "completed",
               "exitCode": 0
             }

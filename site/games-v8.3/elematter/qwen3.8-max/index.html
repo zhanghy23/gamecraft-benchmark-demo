@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elemental Tower Defense</title>
+  <style>
+    body { margin: 0; overflow: hidden; background: #111; font-family: sans-serif; color: white; user-select: none; }
+    #game-container { position: relative; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center; }
+    canvas { box-shadow: 0 0 20px rgba(0,0,0,0.5); cursor: crosshair; }
+    /* HUD */
+    .hud-row { position: absolute; left: 0; right: 0; height: 40px; display: flex; align-items: center; padding: 0 20px; box-sizing: border-box; pointer-events: none; z-index: 10; }
+    .top-hud { top: 0; background: rgba(0,0,0,0.6); justify-content: space-between; }
+    .bot-hud { bottom: 0; background: rgba(0,0,0,0.6); justify-content: center; gap: 20px; pointer-events: auto; }
+    .stat { font-weight: bold; font-size: 16px; display: flex; align-items: center; gap: 8px; }
+    .wave-preview { display: flex; gap: 10px; font-size: 12px; opacity: 0.8; }
+    .wp-item { display: flex; align-items: center; gap: 4px; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+    /* Controls */
+    button { background: #444; border: 1px solid #666; color: white; padding: 6px 12px; cursor: pointer; font-size: 14px; border-radius: 4px; transition: all 0.2s; }
+    button:hover { background: #555; }
+    button.active { background: #222; color: white; border-color: #fff; }
+    button:disabled { opacity: 0.5; cursor: not-allowed; }
+    .speed-controls { display: flex; gap: 5px; }
+    /* Overlays */
+    .overlay { position: absolute; background: rgba(20, 20, 20, 0.95); border: 1px solid #555; padding: 10px; border-radius: 6px; display: none; flex-direction: column; gap: 8px; z-index: 20; min-width: 140px; box-shadow: 0 4px 12px rgba(0,0,0,0.5); pointer-events: auto; }
+    .overlay.visible { display: flex; }
+    .overlay h3 { margin: 0 0 5px 0; font-size: 14px; text-align: center; border-bottom: 1px solid #444; padding-bottom: 4px; }
+    .build-opt { display: flex; justify-content: space-between; align-items: center; padding: 6px; cursor: pointer; border: 1px solid transparent; border-radius: 4px; }
+    .build-opt:hover { background: rgba(255,255,255,0.1); }
+    .build-opt.disabled { opacity: 0.4; cursor: not-allowed; }
+    .cost { font-size: 12px; opacity: 0.8; }
+    .marker { width: 10px; height: 10px; border: 2px solid white; transform: rotate(45deg); margin-right: 8px; }
+    /* Tower Menu Specifics */
+    .tower-info { font-size: 12px; text-align: center; margin-bottom: 5px; }
+    .upgrade-btn { width: 100%; }
+    .reclaim-btn { width: 100%; background: #522; border-color: #844; }
+    .reclaim-btn:hover { background: #633; }
+  </style>
+  <script type="module" crossorigin src="./assets/index-wt651nmV.js"></script>
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="gameCanvas"></canvas>
+    
+    <!-- Top HUD -->
+    <div class="hud-row top-hud">
+      <div class="stat">Lives: <span id="livesDisplay">20</span></div>
+      <div class="stat">Wave: <span id="waveDisplay">0 / 20</span></div>
+      <div class="stat">Fragments: <span id="fragmentsDisplay">100</span></div>
+    </div>
+
+    <!-- Bottom HUD -->
+    <div class="hud-row bot-hud">
+      <button id="playBtn">Play</button>
+      <button id="sendWaveBtn" style="opacity: 0.5;">Send Wave</button>
+      <div class="speed-controls">
+        <button class="speed-btn active" data-speed="1">×1</button>
+        <button class="speed-btn" data-speed="2">×2</button>
+        <button class="speed-btn" data-speed="3">×3</button>
+      </div>
+      <div class="wave-preview" id="wavePreview">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+
+    <!-- Build Menu Overlay -->
+    <div id="buildMenu" class="overlay">
+      <h3><span class="marker"></span>Build Tower</h3>
+      <div class="build-opt" data-type="earth"><span>Earth</span><span class="cost">50</span></div>
+      <div class="build-opt" data-type="water"><span>Water</span><span class="cost">70</span></div>
+      <div class="build-opt" data-type="air"><span>Air</span><span class="cost">90</span></div>
+      <div class="build-opt" data-type="fire"><span>Fire</span><span class="cost">120</span></div>
+    </div>
+
+    <!-- Tower Upgrade/Reclaim Menu Overlay -->
+    <div id="towerMenu" class="overlay">
+      <h3 id="towerMenuTitle">Tower</h3>
+      <div class="tower-info" id="towerMenuInfo">Lvl 1</div>
+      <button id="upgradeBtn" class="upgrade-btn">Upgrade (100)</button>
+      <button id="reclaimBtn" class="reclaim-btn">Reclaim (+25)</button>
+    </div>
+  </div>
+</body>
+</html>
