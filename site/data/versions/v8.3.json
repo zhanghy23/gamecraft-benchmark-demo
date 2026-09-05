@@ -14789,6 +14789,149 @@
             }
           ]
         }
+      },
+      "qwen3.8-max": {
+        "status": "completed",
+        "runId": "qwen3.8-max-v8.3-rubric2-imported-20260904-143200",
+        "score": {
+          "display": "70.45 (+18.18)",
+          "base": 70.45,
+          "passed": 31,
+          "denominator": 44,
+          "dynamic": 8,
+          "dynamicAddition": 18.18,
+          "potential": 88.64
+        },
+        "visualQuality": {
+          "score": 92.33,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48,
+          "renderingStyleAverage": 44.33,
+          "videosScored": 9
+        },
+        "traceCount": 9,
+        "playPath": "games-v8.3/catculus/qwen3.8-max/index.html",
+        "previewPath": "previews-v8.3/catculus/qwen3.8-max.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-008",
+              "zh": "当游戏未锁定时，通过非拖拽点击再次选择一个已选中的可见网格方块 → 该方块使用正常未选中的白色方块外观绘制，而不是选中方块颜色。"
+            },
+            {
+              "id": "target-028",
+              "zh": "一个可见的非猫网格方块被选中，且“Mouse”技能处于激活状态，并且至少两只猫与该方块的距离不同 → 距离所选方块最近的猫跳到该所选方块上；较远的猫保留在其原来的方块上。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-035",
+              "zh": "新目标轮开始，且最大可能倍数高于 1，并且当前最大倍数高于 1 → 倍数显示重置为可见的“x”后跟一个大于 1 的整数。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-036",
+              "zh": "倍数倒计时完成，且倍数显示值高于 1 → 倍数显示从其先前的整数值变为下一个更低的整数值。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-044",
+              "zh": "已生成的猫的预定棋盘放置跳跃计时器触发，且存在可见的目标方块可用 → 该猫从进入路径跳到一个可见的网格方块上。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-011",
+              "zh": "当喷雾器能力处于激活状态且游戏未锁定时，选择一个包含睡着的猫的可见网格方块 → 该方块变为其选中外观，并且睡着的猫留在该方块上，而不是跳走。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-024",
+              "zh": "一个显示值为 2 的已选中方块被计分，且“Hiss”技能处于激活状态 → 一个以“x”开头的绿色倍数文本弹窗出现在该方块附近。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-026",
+              "zh": "一个猫方块被计分，且“Catnip”跳跃目标技能处于激活状态，并且可见的空目标方块具有不同的显示值 → 猫落到显示数字最高的可见空方块上。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-040",
+              "zh": "活跃的游戏场景收到竖屏布局变更 → 游戏画布处于高而窄的布局；带数字的方块网格位于下半部分，目标显示居中位于网格上方，生命条靠近左下边缘，分数显示靠近右上边缘。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-041",
+              "zh": "活跃的游戏场景收到横屏布局变更 → 游戏画布处于宽布局；带数字的方块网格位于左侧，目标和教程区域位于右侧，生命条靠近左上边缘，分数和倍率显示靠近右上边缘。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-029",
+              "zh": "已接受的计分选择完成结算，且被计分路径相邻的隐藏网格位置可出现 → 先前为空的、与被计分路径相邻的位置填入新出现的可见数字方块。",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-038",
+              "zh": "在技能选择状态期间，选择一个可见的非 Copycat 技能选择按钮 → 技能选择按钮消失，并且所选技能的图标出现在技能图标显示区域中。",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-039",
+              "zh": "在技能选择状态期间，接受可见的 Copycat 技能选择按钮 → 技能选择按钮消失，Copycat 技能图标出现在技能图标显示区域中，并且生命条的红色填充延伸至覆盖生命条内部的完整宽度。",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "qwen3.8-max-v8.3-rubric2-imported-20260904-143200",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-05T09:30:57+08:00",
+          "finishedAt": "2026-09-05T10:48:16+08:00",
+          "totalDurationMs": 4638276,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-05T09:30:57+08:00",
+              "finishedAt": "2026-09-05T09:49:43+08:00",
+              "durationMs": 1126041,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-05T09:49:43+08:00",
+              "finishedAt": "2026-09-05T10:39:28+08:00",
+              "durationMs": 2984580,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-05T10:39:28+08:00",
+              "finishedAt": "2026-09-05T10:39:28+08:00",
+              "durationMs": 186,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-05T10:39:28+08:00",
+              "finishedAt": "2026-09-05T10:40:52+08:00",
+              "durationMs": 83526,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-05T10:40:52+08:00",
+              "finishedAt": "2026-09-05T10:48:16+08:00",
+              "durationMs": 443910,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "non-mewtonian-cat": {
