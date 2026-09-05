@@ -17127,6 +17127,35 @@
             }
           ]
         }
+      },
+      "qwen3.8-max": {
+        "status": "failed",
+        "runId": "qwen3.8-max-v8.3-rubric2-imported-20260904-143200",
+        "stage": "trace",
+        "score": null,
+        "traceCount": 0,
+        "playPath": null,
+        "previewPath": null,
+        "unmet": null,
+        "issue": "确定性检查通过，Trace Phase 1 已生成47条 Trace；Phase 2 完成第一批 Probe Plan 修复与 instrumentation 后，在开始第二批 Probe Plan 时 Harness 被 terminated，未进入 selection、Replay 与 Judge。",
+        "timing": {
+          "runId": "qwen3.8-max-v8.3-rubric2-imported-20260904-143200",
+          "status": "failed",
+          "failedStage": "trace",
+          "startedAt": "2026-09-05T16:18:17+08:00",
+          "finishedAt": "2026-09-05T16:34:32+08:00",
+          "totalDurationMs": 974624,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-05T16:18:17+08:00",
+              "finishedAt": "2026-09-05T16:34:32+08:00",
+              "durationMs": 974607,
+              "status": "failed",
+              "exitCode": 1
+            }
+          ]
+        }
       }
     },
     "super-castle-game": {
