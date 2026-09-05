@@ -7463,6 +7463,130 @@
           ]
         }
       },
+      "deepseek-v4-pro": {
+        "status": "completed",
+        "runId": "deepseek-v4-pro-v8.3-rubric2-imported-20260903-235436",
+        "score": {
+          "display": "72.22 (+8.33)",
+          "base": 72.22,
+          "passed": 26,
+          "denominator": 36,
+          "dynamic": 3,
+          "dynamicAddition": 8.33,
+          "potential": 80.56
+        },
+        "visualQuality": {
+          "score": 89.7,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 46.3,
+          "renderingStyleAverage": 43.4,
+          "videosScored": 10
+        },
+        "traceCount": 10,
+        "playPath": "games-v8.3/kuro-neko-market/deepseek-v4-pro/index.html",
+        "previewPath": "previews-v8.3/kuro-neko-market/deepseek-v4-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-004",
+              "zh": "条件：当猫爪能够拾取物品时，可拾取且不会漂移的鱼被点击。→ 预期结果：鱼变为由猫爪持有，并且鱼的阴影不再可见。"
+            },
+            {
+              "id": "target-006",
+              "zh": "条件：当猫爪能够放下时，被持有的鱼被放到一个可容纳它的放置目标上。→ 预期结果：鱼被放置在该放置目标上，并且鱼的阴影再次可见。"
+            },
+            {
+              "id": "target-012",
+              "zh": "条件：在至少生成过一条鱼的关卡结束后创建结果屏幕。→ 预期结果：结果屏幕以网格显示已生成的鱼条目，并且每一行最多包含八个鱼条目。"
+            },
+            {
+              "id": "target-021",
+              "zh": "当打印机显示屏显示两位数值且当前没有票据正在打印时，激活打印机提交控件 → 打印机显示屏变为 00，并且一张纸质票据从打印机中出来，票据上印有两个数字，这两个数字与显示屏重置前的显示内容一致。"
+            },
+            {
+              "id": "target-029",
+              "zh": "当爪子能够拾取物品时，点击一张可拾取的纸质票据 → 该纸质票据变为由爪子持有。"
+            },
+            {
+              "id": "target-033",
+              "zh": "当在一个最高分非零的关卡结束后创建结果屏幕时 → 结果屏幕显示金额行，其中包含当前结果分数计数器、斜杠字形、最高分计数器和货币符号；同时还显示百分比行，其中包含百分比计数器和百分号。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-020",
+              "zh": "当打印机显示屏显示一位非零数值且当前没有票据正在打印时，激活打印机提交控件 → 打印机显示屏变为 00，并且一张纸质票据从打印机中出来，票据上印有一个数字，该数字与显示屏重置前的右侧数字一致。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-007",
+              "zh": "条件：当指针下方没有兼容的放置目标时，被持有的物品被点击。→ 预期结果：被持有的物品仍由猫爪持有，并且不会被放置到场景中。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-013",
+              "zh": "条件：结果揭示动画到达一个被标记为正确的鱼条目。→ 预期结果：该鱼条目在其结果网格单元格中变为可见，该条目周围出现粒子爆发，并且结果分数计数器显示的数字在揭示过程中发生变化。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-017",
+              "zh": "条件：传送带上的一条鱼没有附加纸质票据；该鱼尝试计分。→ 预期结果：鱼周围不会出现对勾标记或叉形粒子爆发，并且鱼保持完全不透明。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-pro-v8.3-rubric2-imported-20260903-235436",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-04T02:31:20+08:00",
+          "finishedAt": "2026-09-04T03:40:31+08:00",
+          "totalDurationMs": 4150932,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-04T02:31:20+08:00",
+              "finishedAt": "2026-09-04T02:45:08+08:00",
+              "durationMs": 828388,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-04T02:45:08+08:00",
+              "finishedAt": "2026-09-04T03:29:30+08:00",
+              "durationMs": 2661639,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-04T03:29:30+08:00",
+              "finishedAt": "2026-09-04T03:29:30+08:00",
+              "durationMs": 216,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-04T03:29:30+08:00",
+              "finishedAt": "2026-09-04T03:31:20+08:00",
+              "durationMs": 109252,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-04T03:31:20+08:00",
+              "finishedAt": "2026-09-04T03:40:31+08:00",
+              "durationMs": 551403,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
       "qwen3.8-max": {
         "status": "completed",
         "runId": "qwen3.8-max-v8.3-rubric2-imported-20260904-143200",
