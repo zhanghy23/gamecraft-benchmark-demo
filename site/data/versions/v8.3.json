@@ -7462,6 +7462,124 @@
             }
           ]
         }
+      },
+      "qwen3.8-max": {
+        "status": "completed",
+        "runId": "qwen3.8-max-v8.3-rubric2-imported-20260904-143200",
+        "score": {
+          "display": "77.78 (+13.89)",
+          "base": 77.78,
+          "passed": 28,
+          "denominator": 36,
+          "dynamic": 5,
+          "dynamicAddition": 13.89,
+          "potential": 91.67
+        },
+        "visualQuality": {
+          "score": 92,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48,
+          "renderingStyleAverage": 44,
+          "videosScored": 11
+        },
+        "traceCount": 11,
+        "playPath": "games-v8.3/kuro-neko-market/qwen3.8-max/index.html",
+        "previewPath": "previews-v8.3/kuro-neko-market/qwen3.8-max.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-012",
+              "zh": "条件：在至少生成过一条鱼的关卡结束后创建结果屏幕。→ 预期结果：结果屏幕以网格显示已生成的鱼条目，并且每一行最多包含八个鱼条目。"
+            },
+            {
+              "id": "target-013",
+              "zh": "条件：结果揭示动画到达一个被标记为正确的鱼条目。→ 预期结果：该鱼条目在其结果网格单元格中变为可见，该条目周围出现粒子爆发，并且结果分数计数器显示的数字在揭示过程中发生变化。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-018",
+              "zh": "条件：一条不在传送带上的鱼带有已附加的纸质票据；该鱼尝试计分。→ 预期结果：鱼周围不会出现计分粒子爆发，并且鱼保持当前不透明度。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-004",
+              "zh": "条件：当猫爪能够拾取物品时，可拾取且不会漂移的鱼被点击。→ 预期结果：鱼变为由猫爪持有，并且鱼的阴影不再可见。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-010",
+              "zh": "条件：在关卡进行期间，关卡分数更新报出一个分数值。→ 预期结果：可见的分数计数器显示该分数值。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-015",
+              "zh": "条件：传送带上的一条鱼带有已附加的纸质票据，且票据上的打印数值与该鱼所需分数匹配；该鱼尝试计分。→ 预期结果：鱼周围出现对勾标记和橙色射线粒子，并且鱼变为半透明外观。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-016",
+              "zh": "条件：传送带上的一条鱼带有已附加的纸质票据，且票据上的打印数值与该鱼所需分数不匹配；该鱼尝试计分。→ 预期结果：鱼周围出现叉形粒子，并且鱼保持完全不透明。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-017",
+              "zh": "条件：传送带上的一条鱼没有附加纸质票据；该鱼尝试计分。→ 预期结果：鱼周围不会出现对勾标记或叉形粒子爆发，并且鱼保持完全不透明。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "qwen3.8-max-v8.3-rubric2-imported-20260904-143200",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-04T23:04:37+08:00",
+          "finishedAt": "2026-09-05T00:23:03+08:00",
+          "totalDurationMs": 4706168,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-04T23:04:37+08:00",
+              "finishedAt": "2026-09-04T23:19:05+08:00",
+              "durationMs": 868535,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-04T23:19:05+08:00",
+              "finishedAt": "2026-09-05T00:15:27+08:00",
+              "durationMs": 3381611,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-05T00:15:27+08:00",
+              "finishedAt": "2026-09-05T00:15:27+08:00",
+              "durationMs": 206,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-05T00:15:27+08:00",
+              "finishedAt": "2026-09-05T00:16:22+08:00",
+              "durationMs": 54984,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-05T00:16:22+08:00",
+              "finishedAt": "2026-09-05T00:23:03+08:00",
+              "durationMs": 400799,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "13-steps-to-escape": {
