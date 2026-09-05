@@ -14338,6 +14338,148 @@
         "unmet": null,
         "issue": "generate-game 已完成；Trace 的 Probe Plan 第2批在3次尝试后仍不合法：一个 exactSource 带多余分号，另一个 exactSource 在 src/main.ts 中出现2次而无法唯一定位，因此未进入 selection、Replay 与 Judge。",
         "timing": null
+      },
+      "deepseek-v4-pro": {
+        "status": "completed",
+        "runId": "deepseek-v4-pro-v8.3-rubric2-imported-20260903-235436",
+        "score": {
+          "display": "68.29 (+19.51)",
+          "base": 68.29,
+          "passed": 28,
+          "denominator": 41,
+          "dynamic": 8,
+          "dynamicAddition": 19.51,
+          "potential": 87.8
+        },
+        "visualQuality": {
+          "score": 91,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.89,
+          "renderingStyleAverage": 43.11,
+          "videosScored": 9
+        },
+        "traceCount": 9,
+        "playPath": "games-v8.3/non-mewtonian-cat/deepseek-v4-pro/index.html",
+        "previewPath": "previews-v8.3/non-mewtonian-cat/deepseek-v4-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-027",
+              "zh": "在活动游玩期间，头部上方的图块包含变大道具，且至少还有一个其他尺寸变化道具未被收集时，向上移动输入被接受 → 玩家向上移动一个图块，头部上方的变大道具消失，该道具所在图块出现粒子，移动完成后玩家身体以额外增加一个节段的状态被绘制，并且胜利方块轮廓保持深蓝色。"
+            },
+            {
+              "id": "target-028",
+              "zh": "在活动游玩期间，头部上方的图块包含唯一剩余的尺寸变化道具，且该道具是变大道具时，向上移动输入被接受 → 玩家向上移动一个图块，头部上方的变大道具消失，该道具所在图块出现粒子，移动完成后玩家身体以额外增加一个节段的状态被绘制，并且胜利方块轮廓变为橙色。"
+            },
+            {
+              "id": "target-031",
+              "zh": "在活动游玩期间，玩家有一个节段，且头部上方的图块包含缩小道具时，向上移动输入被接受 → 在失败恢复间隔期间，玩家精灵停止被绘制。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-029",
+              "zh": "在活动游玩期间，玩家至少有两个节段，头部上方的图块包含缩小道具，且至少还有一个其他尺寸变化道具未被收集时，向上移动输入被接受 → 玩家向上移动一个图块，头部上方的缩小道具消失，该道具所在图块出现粒子，移动完成后玩家身体以减少一个节段的状态被绘制，并且胜利方块轮廓保持深蓝色。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-035",
+              "zh": "在活动游玩期间，移动动画完成，且玩家位于底部失败边界以下 → 在失败恢复间隔期间，玩家精灵停止被绘制。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-009",
+              "zh": "当所有关卡都已完成时渲染关卡选择场景 → 文本 \"THANK YOU FOR PLAYING!\" 显示在游戏视图靠下部分的居中位置。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-010",
+              "zh": "在关卡选择场景中，当当前高亮关卡的左侧存在可用关卡时，新按下向左导航输入 → 高亮关卡图块切换到左侧最近的可用关卡图块，并跳过不可用图块。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-012",
+              "zh": "在关卡选择场景中，当当前高亮关卡上方同一列存在可用关卡时，新按下向上导航输入 → 高亮关卡图块切换到其上方同一列最近的可用关卡图块，并跳过不可用图块。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-013",
+              "zh": "在关卡选择场景中，当当前高亮关卡下方同一列存在可用关卡时，新按下向下导航输入 → 高亮关卡图块切换到其下方同一列最近的可用关卡图块，并跳过不可用图块。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-030",
+              "zh": "在活动游玩期间，玩家至少有两个节段，头部上方的图块包含唯一剩余的尺寸变化道具，且该道具是缩小道具时，向上移动输入被接受 → 玩家向上移动一个图块，头部上方的缩小道具消失，该道具所在图块出现粒子，移动完成后玩家身体以减少一个节段的状态被绘制，并且胜利方块轮廓变为橙色。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-034",
+              "zh": "在活动游玩期间，移动动画完成，且至少一个玩家节段位于失败方块上 → 在失败恢复间隔期间，玩家精灵停止被绘制。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-040",
+              "zh": "在进行中的关卡内，玩家已经消失后，失败恢复间隔结束 → 失败恢复间隔结束后，玩家身体会在当前关卡中再次绘制。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-038",
+              "zh": "在进行中的关卡内，且不存在上一个移动状态时，尝试执行撤销命令 → 玩家身体保持在当前可见位置，且可见的关卡物体保持在当前各自位置。",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-pro-v8.3-rubric2-imported-20260903-235436",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-04T21:57:43+08:00",
+          "finishedAt": "2026-09-04T23:40:47+08:00",
+          "totalDurationMs": 6184207,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-04T21:57:43+08:00",
+              "finishedAt": "2026-09-04T22:15:01+08:00",
+              "durationMs": 1037543,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-04T22:15:01+08:00",
+              "finishedAt": "2026-09-04T23:33:17+08:00",
+              "durationMs": 4696494,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-04T23:33:17+08:00",
+              "finishedAt": "2026-09-04T23:33:18+08:00",
+              "durationMs": 227,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-04T23:33:18+08:00",
+              "finishedAt": "2026-09-04T23:34:28+08:00",
+              "durationMs": 70433,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-04T23:34:28+08:00",
+              "finishedAt": "2026-09-04T23:40:47+08:00",
+              "durationMs": 379476,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "stolen-sword": {
