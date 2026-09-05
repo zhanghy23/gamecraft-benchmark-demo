@@ -18498,6 +18498,143 @@
             }
           ]
         }
+      },
+      "qwen3.8-max": {
+        "status": "completed",
+        "runId": "qwen3.8-max-v8.3-rubric2-imported-20260904-143200",
+        "score": {
+          "display": "80.00 (+0.00)",
+          "base": 80,
+          "passed": 52,
+          "denominator": 65,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 80
+        },
+        "visualQuality": {
+          "score": 89.12,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.44,
+          "renderingStyleAverage": 41.68,
+          "videosScored": 25
+        },
+        "traceCount": 25,
+        "playPath": "games-v8.3/witchcat/qwen3.8-max/index.html",
+        "previewPath": "previews-v8.3/witchcat/qwen3.8-max.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-010",
+              "zh": "玩家在对话面板已打开时执行动作输入 → 黑色对话面板及其文本从游戏玩法视图中消失。"
+            },
+            {
+              "id": "target-027",
+              "zh": "角色在非无敌状态下与骷髅敌人重叠 → 角色精灵开始无敌闪烁效果，在正常调色板和冬季配色调色板之间交替。"
+            },
+            {
+              "id": "target-031",
+              "zh": "玩家在游戏进行中执行动作输入，且火球发射被接受，并且角色朝左 → 一个火球精灵出现在角色位置并向左移动。"
+            },
+            {
+              "id": "target-036",
+              "zh": "移动中的火球与骷髅敌人重叠 → 骷髅敌人从场景中消失。"
+            },
+            {
+              "id": "target-057",
+              "zh": "玩家在接触冬季季节宝珠时执行操作输入 → 被接触的宝珠精灵从地图上消失，右上角心形显示相比输入前立即增加一个心形图标，并且黑色对话面板以两行文本显示“IN WINTER, SNOW COVERS”和“AND WATER TURNS ICE”。"
+            },
+            {
+              "id": "target-058",
+              "zh": "玩家在接触夏季季节宝珠时执行操作输入 → 被接触的宝珠精灵从地图上消失，右上角心形显示相比输入前立即增加一个心形图标，并且黑色对话面板以两行文本显示“IN SUMMER, ROOTS GROW”和“AND USE THE VINES TO CLIMB”。"
+            },
+            {
+              "id": "target-059",
+              "zh": "玩家在接触秋季季节宝珠时执行操作输入 → 被接触的宝珠精灵从地图上消失，右上角心形显示相比输入前立即增加一个心形图标，并且黑色对话面板以两行文本显示“IN FALL, MUSHROOM GROW”和“AND LEAVES FILL HOLES”。"
+            },
+            {
+              "id": "target-060",
+              "zh": "玩家在接触春季季节宝珠时执行操作输入 → 被接触的宝珠精灵从地图上消失，右上角心形显示相比输入前立即增加一个心形图标，并且黑色对话面板以两行文本显示“IN SPRING, STONE FLOWERS”和“BLOOM”。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-022",
+              "zh": "玩家仅剩 1 个生命单位时受到一次伤害事件 → 角色进入死亡序列：精灵反复改变朝向，然后淡出遮罩开始覆盖游戏画面。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-046",
+              "zh": "玩家执行动作输入，且一个未激活的 blade 陷阱与角色处于同一列，并且陷阱与角色之间有阻挡图块 → 该 blade 陷阱保持在执行动作前的图块位置，不开始移动。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-052",
+              "zh": "一个移动中的 skeleton 在移动动画期间被阻挡 → 该 skeleton 显示为对齐到一个完整图块位置，然后朝远离阻挡方向的方向移动。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-054",
+              "zh": "一个触发图块在至少有两个可用季节的情况下推进其动画 → 该触发图块的强调色变为与另一个可用季节关联的颜色。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-062",
+              "zh": "为一只已保存收集状态为未收集的猫填充关卡时 → 猫精灵显示在其救援位置，并且标牌面板显示在该猫的已收集角落位置。",
+              "cause": "源码分析确认未实现"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "qwen3.8-max-v8.3-rubric2-imported-20260904-143200",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-05T17:52:02+08:00",
+          "finishedAt": "2026-09-05T20:28:18+08:00",
+          "totalDurationMs": 9375375,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-05T17:52:02+08:00",
+              "finishedAt": "2026-09-05T18:16:20+08:00",
+              "durationMs": 1457812,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-05T18:16:20+08:00",
+              "finishedAt": "2026-09-05T19:55:37+08:00",
+              "durationMs": 5957146,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-05T19:55:37+08:00",
+              "finishedAt": "2026-09-05T19:55:38+08:00",
+              "durationMs": 507,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-05T19:55:38+08:00",
+              "finishedAt": "2026-09-05T20:02:39+08:00",
+              "durationMs": 421090,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-05T20:02:39+08:00",
+              "finishedAt": "2026-09-05T20:28:18+08:00",
+              "durationMs": 1538787,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "the-neatness": {
