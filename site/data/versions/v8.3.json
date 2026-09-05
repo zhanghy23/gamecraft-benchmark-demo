@@ -8815,35 +8815,35 @@
     "tiny-yurts": {
       "gpt-5.5": {
         "status": "failed",
-        "runId": "gpt-5.5-v8.3-rubric2-tiny-yurts-regenerate-20260905-222444",
+        "runId": "gpt-5.5-v8.3-rubric2-tiny-yurts-regenerate-20260905-225327",
         "stage": "trace",
         "score": null,
         "traceCount": 0,
         "playPath": null,
         "previewPath": null,
         "unmet": null,
-        "issue": "重新生成在约137.4秒内写出4个项目文件，但进入 Trace 前的确定性构建校验失败：src/main.ts:29:47 的 spawnYurt 参数 y 与局部 const y 重复声明，Vite/esbuild 无法编译；因此未生成 Trace、Replay 或 Judge 结果。",
+        "issue": "第二次重新生成在约478.3秒内写出4个项目文件，但进入 Trace 前的确定性构建校验仍失败：src/main.ts:36:49 的 spawnYurt 参数 y 与局部 const y 重复声明，Vite/esbuild 无法编译；因此未生成 Trace、Replay 或 Judge 结果。",
         "timing": {
-          "runId": "gpt-5.5-v8.3-rubric2-tiny-yurts-regenerate-20260905-222444",
+          "runId": "gpt-5.5-v8.3-rubric2-tiny-yurts-regenerate-20260905-225327",
           "status": "failed",
           "failedStage": "trace",
-          "startedAt": "2026-09-05T22:24:52+08:00",
-          "finishedAt": "2026-09-05T22:27:12+08:00",
-          "totalDurationMs": 140291,
+          "startedAt": "2026-09-05T22:54:13+08:00",
+          "finishedAt": "2026-09-05T23:02:14+08:00",
+          "totalDurationMs": 481133,
           "stages": [
             {
               "stage": "generate-game",
-              "startedAt": "2026-09-05T22:24:52+08:00",
-              "finishedAt": "2026-09-05T22:27:09+08:00",
-              "durationMs": 137412,
+              "startedAt": "2026-09-05T22:54:13+08:00",
+              "finishedAt": "2026-09-05T23:02:12+08:00",
+              "durationMs": 478347,
               "status": "completed",
               "exitCode": 0
             },
             {
               "stage": "trace",
-              "startedAt": "2026-09-05T22:27:09+08:00",
-              "finishedAt": "2026-09-05T22:27:12+08:00",
-              "durationMs": 2857,
+              "startedAt": "2026-09-05T23:02:12+08:00",
+              "finishedAt": "2026-09-05T23:02:14+08:00",
+              "durationMs": 2763,
               "status": "failed",
               "exitCode": 1
             }
