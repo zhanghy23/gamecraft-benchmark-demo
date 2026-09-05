@@ -19362,6 +19362,159 @@
             }
           ]
         }
+      },
+      "qwen3.8-max": {
+        "status": "completed",
+        "runId": "qwen3.8-max-v8.3-rubric2-imported-20260904-143200",
+        "score": {
+          "display": "57.89 (+7.89)",
+          "base": 57.89,
+          "passed": 22,
+          "denominator": 38,
+          "dynamic": 3,
+          "dynamicAddition": 7.89,
+          "potential": 65.79
+        },
+        "visualQuality": {
+          "score": 91,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48,
+          "renderingStyleAverage": 43,
+          "videosScored": 14
+        },
+        "traceCount": 14,
+        "playPath": "games-v8.3/the-neatness/qwen3.8-max/index.html",
+        "previewPath": "previews-v8.3/the-neatness/qwen3.8-max.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-018",
+              "zh": "对一个具有相邻已连接邻格的网格单元执行单格涂色操作 → 目标单元变为相邻连接的颜色。"
+            },
+            {
+              "id": "target-020",
+              "zh": "在镜像谜题关卡的运行游玩期间绘制一笔线条 → 该笔线条绘制在棋盘左侧，并且棋盘右侧绘制出一笔与其镜像匹配的线条。"
+            },
+            {
+              "id": "target-021",
+              "zh": "镜像谜题关卡以其重置布局显示 → 谜题棋盘的右半部分填充为灰色反射区域背景，而左半部分在格块和热点之外显示正常的黑色棋盘背景。"
+            },
+            {
+              "id": "target-025",
+              "zh": "在运行游玩期间，一笔绘制线条经过一个已经连接的颜料单元格 → 该已经连接的单元格保持其已连接颜色，并且不会在其上绘制新的未连接颜料标记。"
+            },
+            {
+              "id": "target-027",
+              "zh": "在普通谜题关卡中，两个兼容热点之间完成一条新连接 → 已连接的涂画路径以及这两个兼容热点变为已连接颜料颜色。"
+            },
+            {
+              "id": "target-037",
+              "zh": "谜题棋盘上显示一个已满足的出口点热点 → 该热点保持由其坟墓精灵图标记，同时其涂色区域显示为已连接的涂料颜色。"
+            },
+            {
+              "id": "target-038",
+              "zh": "结局美术以完全不透明度渲染 → 棋盘中心附近显示一个灰色矩形面板，且公主精灵图在其中可见。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-003",
+              "zh": "当前关卡在失败或触发重开的状态之后被重新开始 → 关卡恢复到其重置后的谜题布局，并且游戏玩法视图上显示重新开始消息遮罩。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-004",
+              "zh": "在关卡中重置控制处于启用状态时释放该控制 → 当前关卡恢复到其重置后的谜题布局，并从棋盘上移除玩家绘制的连接。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-005",
+              "zh": "结尾关卡被显示 → 屏幕上部附近显示文本 \"Thank you for playing!\"，并且屏幕下部附近显示文本 \"But our princess is in another castle!\"。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-008",
+              "zh": "在常规谜题关卡中完成两个不兼容热点之间的连接 → 游戏玩法视图上出现重新开始消息遮罩，并且棋盘恢复到其重置后的谜题布局。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-011",
+              "zh": "在关卡中关卡选择工具栏按钮处于启用状态时释放该按钮 → 对角线幕布转场在当前关卡上闭合，然后显示关卡选择画面。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-019",
+              "zh": "在运行游玩期间，骷髅转向计时器选择一个入口点骷髅进行转向 → 游戏视图中有一个入口点骷髅改变其朝向。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-007",
+              "zh": "最终常规关卡在运行游玩期间达到已解开状态 → 转场之后显示关卡选择样式的画面，而不是另一个带编号的常规谜题关卡。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-015",
+              "zh": "关卡选择画面上显示已完成的非当前关卡条目 → 该关卡编号以灰色绘制。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-026",
+              "zh": "在一个没有相邻已连接邻格的网格单元格上执行单格涂画动作 → 目标单元格变为未连接颜料颜色，并且不会有连续区域填充为已连接颜色。",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "qwen3.8-max-v8.3-rubric2-imported-20260904-143200",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-05T20:28:18+08:00",
+          "finishedAt": "2026-09-05T22:10:02+08:00",
+          "totalDurationMs": 6104237,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-05T20:28:18+08:00",
+              "finishedAt": "2026-09-05T20:44:02+08:00",
+              "durationMs": 944250,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-05T20:44:02+08:00",
+              "finishedAt": "2026-09-05T22:00:40+08:00",
+              "durationMs": 4597377,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-05T22:00:40+08:00",
+              "finishedAt": "2026-09-05T22:00:40+08:00",
+              "durationMs": 274,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-05T22:00:40+08:00",
+              "finishedAt": "2026-09-05T22:01:32+08:00",
+              "durationMs": 51946,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-05T22:01:32+08:00",
+              "finishedAt": "2026-09-05T22:10:02+08:00",
+              "durationMs": 510357,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "q1k3": {
