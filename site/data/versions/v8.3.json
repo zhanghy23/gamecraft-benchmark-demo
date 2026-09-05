@@ -19859,6 +19859,253 @@
             }
           ]
         }
+      },
+      "qwen3.8-max": {
+        "status": "completed",
+        "runId": "qwen3.8-max-v8.3-rubric2-imported-20260904-143200",
+        "score": {
+          "display": "2.86 (+74.29)",
+          "base": 2.86,
+          "passed": 1,
+          "denominator": 35,
+          "dynamic": 26,
+          "dynamicAddition": 74.29,
+          "potential": 77.14
+        },
+        "visualQuality": {
+          "score": 60.5,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 30.5,
+          "renderingStyleAverage": 30,
+          "videosScored": 2
+        },
+        "traceCount": 2,
+        "playPath": "games-v8.3/q1k3/qwen3.8-max/index.html",
+        "previewPath": "previews-v8.3/q1k3/qwen3.8-max.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-011",
+              "zh": "当所选枪口闪光武器已准备好射击且拥有所需弹药时，玩家尝试开火 → 在该次开火尝试期间，玩家的武器处出现枪口闪光效果。"
+            },
+            {
+              "id": "target-029",
+              "zh": "一个空闲敌人在其状态更新期间，玩家位于其警觉范围之外 → 敌人停留在原地，并且不会转向或向玩家移动。"
+            },
+            {
+              "id": "target-032",
+              "zh": "一个巡逻敌人与墙壁或平台边缘边界发生水平碰撞 → 敌人反转其巡逻方向，并沿其路径往回行走。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-010",
+              "zh": "当所选投射物武器已准备好射击且拥有所需弹药时，玩家尝试开火 → 在该次开火尝试期间，一个投射物从玩家的武器发出。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-013",
+              "zh": "玩家在所选武器的装填等待时间结束前再次尝试开火 → 该次开火尝试不会渲染新的投射物或枪口闪光效果。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-026",
+              "zh": "一个巡逻敌人在其警觉范围内有玩家，且到玩家之间存在无遮挡的视线 → 敌人转向面朝玩家，而不是继续沿其巡逻路径前进。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-028",
+              "zh": "一个巡逻敌人受到非致命伤害 → 敌人转向面朝玩家，并开始向玩家移动，而不是继续其巡逻路径。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-030",
+              "zh": "一个巡逻敌人在其状态更新期间，玩家位于其警觉范围之外 → 敌人继续沿其巡逻路径前进，并且不会转向玩家或直接向玩家移动。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-002",
+              "zh": "在初始“CLICK TO START”覆盖层显示时点击游戏画布区域 → 中央开始覆盖层不再显示，露出带有屏幕边缘 HUD 区域的玩法视图。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-003",
+              "zh": "主动玩法正在更新，且所选武器不需要弹药 → 生命值 HUD 显示一个数字生命值，弹药 HUD 显示“∞”。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-004",
+              "zh": "主动玩法正在更新，且所选武器需要弹药 → 生命值 HUD 显示一个数字生命值，弹药 HUD 显示一个数字弹药值。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-005",
+              "zh": "玩家在站在地面上且跳跃已重新启用时按下跳跃 → 第一人称视点从站立高度向上升起。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-006",
+              "zh": "玩家向上看至垂直视角限制 → 视图保持限制在最大向上俯仰角，额外的向上视角输入不会使视图旋转超过该限制角度。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-007",
+              "zh": "玩家向下看至垂直视角限制 → 视图保持限制在最大向下俯仰角，额外的向下视角输入不会使视图旋转超过该限制角度。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-008",
+              "zh": "鼠标滚轮延迟已结束后，玩家滚动到下一把武器 → 可见的手持武器模型切换为下一把可用武器。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-009",
+              "zh": "鼠标滚轮延迟已结束后，玩家滚动到上一把武器 → 可见的手持武器模型切换为上一把可用武器。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-012",
+              "zh": "当所选使用弹药的武器弹药为零且其装填等待时间已结束时，玩家尝试开火 → 该次开火尝试不会渲染任何投射物或枪口闪光效果。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-014",
+              "zh": "玩家在门的激活范围内接近一扇上锁的门 → 玩法视图上显示消息“YOU NEED THE KEY...”，且门保持在关闭位置。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-015",
+              "zh": "玩家在门的激活范围内接近一扇未上锁的门 → 门板从关闭位置打开，露出其后的通道。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-016",
+              "zh": "一扇打开的门在其重置延迟期间没有玩家处于其激活范围内 → 门板向其关闭位置关回。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-017",
+              "zh": "玩家收集钥匙拾取物 → 钥匙拾取物从场景中消失，并且玩法视图上显示消息“YOU GOT THE KEY!”。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-018",
+              "zh": "玩家携带 nailgun 时收集 nail 弹药拾取物 → nail 弹药拾取物从场景中消失。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-019",
+              "zh": "玩家在携带 grenade launcher（榴弹发射器）时收集 grenade ammunition pickup（榴弹弹药拾取物） → grenade ammunition pickup（榴弹弹药拾取物）从场景中消失。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-020",
+              "zh": "玩家到达非最终关卡的出口触发器 → 游戏画面从当前关卡布局切换到下一关卡的地图布局。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-021",
+              "zh": "玩家在最后一个可用关卡之后到达关卡完成过渡 → 显示结束消息，标题为“THE END”，文本为“THANKS FOR PLAYING ❤”，并且可见的生命值和弹药 HUD 文本区域为空白。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-022",
+              "zh": "玩家的生命值因受到伤害而降至零 → 游戏画面上方显示居中的叠加消息“YOU DIED”，并且生命值 HUD 显示 0。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-023",
+              "zh": "玩家死亡后的重启延迟结束 → 在“YOU DIED”消息显示之后，当前关卡重新加载为其起始布局。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-024",
+              "zh": "一个可见的可受伤实体的生命值因受到伤害而降至零 → 伤害应用后，该实体原本可见的模型不再被渲染。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-025",
+              "zh": "一个空闲敌人在其警觉范围内有玩家，且到玩家之间存在无遮挡的视线 → 敌人转向面朝玩家。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-027",
+              "zh": "一个空闲敌人受到非致命伤害 → 敌人转向面朝玩家，并开始向玩家移动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-031",
+              "zh": "一个空闲敌人在其状态更新期间，玩家位于其警觉范围内，但到玩家之间不存在无遮挡的视线 → 敌人停留在原地，并且不会转向或向玩家移动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-033",
+              "zh": "一个 grunt 敌人在面朝玩家时到达其攻击执行状态 → 攻击期间，grunt 处出现枪口闪光灯光。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-034",
+              "zh": "一个 zombie 受到的伤害量未高于其碎尸阈值 → 命中后，zombie 模型仍以其站立敌人形态保持可见。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-035",
+              "zh": "一个可见的弹跳实体在其垂直速度高于其弹跳阈值时与表面发生垂直碰撞 → 接触后，该实体立即反转垂直方向，并从该表面反弹离开。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "qwen3.8-max-v8.3-rubric2-imported-20260904-143200",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-05T22:10:02+08:00",
+          "finishedAt": "2026-09-05T23:16:42+08:00",
+          "totalDurationMs": 3999474,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-05T22:10:02+08:00",
+              "finishedAt": "2026-09-05T22:22:01+08:00",
+              "durationMs": 718485,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-05T22:22:01+08:00",
+              "finishedAt": "2026-09-05T23:15:12+08:00",
+              "durationMs": 3191366,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-05T23:15:12+08:00",
+              "finishedAt": "2026-09-05T23:15:12+08:00",
+              "durationMs": 161,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-05T23:15:12+08:00",
+              "finishedAt": "2026-09-05T23:15:19+08:00",
+              "durationMs": 6683,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-05T23:15:19+08:00",
+              "finishedAt": "2026-09-05T23:16:42+08:00",
+              "durationMs": 82745,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "island-not-found": {
