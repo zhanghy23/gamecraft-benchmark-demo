@@ -17326,6 +17326,140 @@
         "unmet": null,
         "issue": "生成阶段历时约76分31秒；31次流式请求均在返回结束时缺少 [DONE] 或 finish_reason，最终被判定为无效流式响应，未产生可校验的完整游戏项目。",
         "timing": null
+      },
+      "gpt-5.4": {
+        "status": "completed",
+        "runId": "gpt-5.4-v8.3-rubric2-resume-20260904-061752",
+        "score": {
+          "display": "73.68 (+15.79)",
+          "base": 73.68,
+          "passed": 28,
+          "denominator": 38,
+          "dynamic": 6,
+          "dynamicAddition": 15.79,
+          "potential": 89.47
+        },
+        "visualQuality": {
+          "score": 90.6,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.2,
+          "renderingStyleAverage": 42.4,
+          "videosScored": 10
+        },
+        "traceCount": 10,
+        "playPath": "games-v8.3/island-not-found/gpt-5.4/index.html",
+        "previewPath": "previews-v8.3/island-not-found/gpt-5.4.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-027",
+              "zh": "An upward elevator movement reaches the top landing → The elevator is visible at the top landing and stops moving upward."
+            },
+            {
+              "id": "target-028",
+              "zh": "A downward elevator movement reaches the bottom landing → The elevator is visible at the bottom landing and stops moving downward."
+            },
+            {
+              "id": "target-033",
+              "zh": "An accepted minigame adjustment decreases frequency while the minigame is active → The minigame screen marker moves upward on the console display."
+            },
+            {
+              "id": "target-035",
+              "zh": "An accepted minigame adjustment decreases phase while the minigame is active → The minigame screen marker moves left on the console display."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-002",
+              "zh": "Pointer lock is released during non-debug gameplay after the game has already been started → The main menu overlay appears on top of the game view, and the main menu's primary start button is labeled \"Resume Game\".",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-017",
+              "zh": "The player activates the interaction control while focused on the antenna door with the antenna key available → The antenna door is no longer visible at its closed position, and the doorway begins opening.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-018",
+              "zh": "The player activates the interaction control while focused on the available oilrig wheel from its accepted side → The oilrig bridge is no longer visible, and the oilrig ramp begins moving.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-021",
+              "zh": "The player activates the interaction control while focused on the prison door without the key available → The prison door remains visible at its closed position.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-024",
+              "zh": "The player activates the interaction control while focused on the bottom lift button while the elevator is at its bottom position and operational → The elevator begins moving upward from the bottom landing.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-025",
+              "zh": "The player activates the interaction control while focused on the top lift button while the elevator is at its top position and operational → The elevator begins moving downward from the top landing.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.4-v8.3-rubric2-resume-20260904-061752",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-04T21:58:44+08:00",
+          "finishedAt": "2026-09-04T23:42:57+08:00",
+          "totalDurationMs": 6252434,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-04T21:58:44+08:00",
+              "finishedAt": "2026-09-04T22:01:23+08:00",
+              "durationMs": 158993,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-04T22:01:23+08:00",
+              "finishedAt": "2026-09-04T22:13:55+08:00",
+              "durationMs": 752062,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-04T22:13:55+08:00",
+              "finishedAt": "2026-09-04T23:33:40+08:00",
+              "durationMs": 4784869,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-04T23:33:40+08:00",
+              "finishedAt": "2026-09-04T23:33:41+08:00",
+              "durationMs": 230,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-04T23:33:41+08:00",
+              "finishedAt": "2026-09-04T23:36:33+08:00",
+              "durationMs": 172804,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-04T23:36:33+08:00",
+              "finishedAt": "2026-09-04T23:42:57+08:00",
+              "durationMs": 383437,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     }
   }
