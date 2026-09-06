@@ -5080,6 +5080,135 @@
           ]
         }
       },
+      "deepseek-v4-pro": {
+        "status": "completed",
+        "runId": "deepseek-v4-pro-v8.3-rubric2-remaining-20260906-102745",
+        "score": {
+          "display": "80.77 (+9.62)",
+          "base": 80.77,
+          "passed": 42,
+          "denominator": 52,
+          "dynamic": 5,
+          "dynamicAddition": 9.62,
+          "potential": 90.38
+        },
+        "visualQuality": {
+          "score": 88.83,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 46.83,
+          "renderingStyleAverage": 42,
+          "videosScored": 6
+        },
+        "traceCount": 6,
+        "playPath": "games-v8.3/radius-raid/deepseek-v4-pro/index.html",
+        "previewPath": "previews-v8.3/radius-raid/deepseek-v4-pro.png",
+        "unmet": {
+          "vlm": [],
+          "replayTrace": [
+            {
+              "id": "target-007",
+              "zh": "在活动游戏玩法期间按下暂停键 → 游戏玩法视图切换为暂停视图，冻结的游戏画面上方显示“PAUSED”文字。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-022",
+              "zh": "一颗穿透子弹在达到命中上限之前，与一个此前尚未命中过的敌人发生碰撞 → 命中粒子效果出现在该敌人处，并且子弹线继续越过撞击点。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-023",
+              "zh": "游戏处于进行状态时，一颗穿透子弹与其第 4 个不同的敌人发生碰撞 → 命中粒子效果出现在该敌人处，并且子弹线在撞击后消失。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-026",
+              "zh": "游戏处于进行状态时，一个具备生成能力的敌人被摧毁 → 被摧毁的敌人从游戏场地中消失，爆炸效果出现在其位置，在下一个被渲染的游戏画面帧内，\"SCORE\" 显示从摧毁前的六位数值变为数值更大的六位数值，并且 4 个更小的圆形敌人出现在该位置周围。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-027",
+              "zh": "游戏处于进行状态时，一个具有生成能力的可见敌人完成其生成间隔 → 一个新敌人出现在该生成敌人的位置。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-009",
+              "zh": "在暂停视图显示时激活“RESUME”按钮 → 暂停叠加层被移除，并再次显示活动游戏玩法。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-010",
+              "zh": "从暂停屏幕激活“MENU”按钮，并接受返回菜单确认 → 游戏返回菜单屏幕，并且“PLAY”按钮可见。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-024",
+              "zh": "一颗子弹与一个可见敌人发生碰撞，并且该敌人在命中后仍然存活 → 命中粒子效果出现在该敌人处，该敌人闪烁，并且敌人上方显示生命值条，其中填充段未跨越整个背景条宽度。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-004",
+              "zh": "新重置的一局首次渲染游戏玩法视图 → HUD 的“SCORE”数值显示为 000000，“PROGRESS”进度条没有从左边缘延伸出的已填充部分，并且游戏玩法视图中可见显示 01 的关卡通知。",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-020",
+              "zh": "游戏处于进行状态、三发射击强化道具计时器已到期且射击被接受时，武器冷却已完成 → 恰好一条子弹线段从玩家飞船处发出。",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-pro-v8.3-rubric2-remaining-20260906-102745",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-06T10:29:36+08:00",
+          "finishedAt": "2026-09-06T11:25:54+08:00",
+          "totalDurationMs": 3377546,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-06T10:29:36+08:00",
+              "finishedAt": "2026-09-06T10:46:24+08:00",
+              "durationMs": 1007702,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-06T10:46:24+08:00",
+              "finishedAt": "2026-09-06T11:17:28+08:00",
+              "durationMs": 1864064,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-06T11:17:28+08:00",
+              "finishedAt": "2026-09-06T11:17:28+08:00",
+              "durationMs": 236,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-06T11:17:28+08:00",
+              "finishedAt": "2026-09-06T11:19:39+08:00",
+              "durationMs": 130971,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-06T11:19:39+08:00",
+              "finishedAt": "2026-09-06T11:25:54+08:00",
+              "durationMs": 374540,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
       "qwen3.8-max": {
         "status": "completed",
         "runId": "qwen3.8-max-v8.3-rubric2-imported-20260904-143200",
