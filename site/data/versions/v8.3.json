@@ -9245,51 +9245,51 @@
       },
       "gpt-5.4": {
         "status": "failed",
-        "runId": "gpt-5.4-v8.3-rubric2-20260903-000416",
-        "stage": "optimize-traces",
+        "runId": "gpt-5.4-v8.3-rubric2-failed-rerun-20260905-235219",
+        "stage": "replay",
         "score": null,
         "traceCount": 0,
         "playPath": null,
         "previewPath": null,
         "unmet": null,
-        "issue": "Trace 已生成，但 selection 的3个 wave 对86个可用探针执行172次 repair/replay 后仍为0覆盖；大量重放因页面不存在 svg.field/DOM 初始化失败而超时，optimize 随后以“没有任何重放通过探针”终止。",
+        "issue": "复用原始生成源码并使用最新Harness复测。Trace完成；selection的3个wave对86个可用探针执行172次Replay后仍为0覆盖，零覆盖兜底成功生成1条诊断Trace并进入最终Replay，但页面在15秒内始终未出现svg.field，replayer以exit 1终止，因此未进入Judge。",
         "timing": {
-          "runId": "gpt-5.4-v8.3-rubric2-20260903-000416",
+          "runId": "gpt-5.4-v8.3-rubric2-failed-rerun-20260905-235219",
           "status": "failed",
-          "failedStage": "optimize-traces",
-          "startedAt": "2026-09-03T04:45:19+08:00",
-          "finishedAt": "2026-09-03T08:50:25+08:00",
-          "totalDurationMs": 14705719,
+          "failedStage": "replay",
+          "startedAt": "2026-09-06T01:09:19+08:00",
+          "finishedAt": "2026-09-06T05:08:54+08:00",
+          "totalDurationMs": 14374752,
           "stages": [
             {
-              "stage": "generate-game",
-              "startedAt": "2026-09-03T04:45:19+08:00",
-              "finishedAt": "2026-09-03T05:00:58+08:00",
-              "durationMs": 939339,
-              "status": "completed",
-              "exitCode": 0
-            },
-            {
               "stage": "trace",
-              "startedAt": "2026-09-03T05:00:58+08:00",
-              "finishedAt": "2026-09-03T05:32:24+08:00",
-              "durationMs": 1885823,
+              "startedAt": "2026-09-06T01:09:19+08:00",
+              "finishedAt": "2026-09-06T01:37:38+08:00",
+              "durationMs": 1698036,
               "status": "completed",
               "exitCode": 0
             },
             {
               "stage": "select-traces",
-              "startedAt": "2026-09-03T05:32:24+08:00",
-              "finishedAt": "2026-09-03T08:50:25+08:00",
-              "durationMs": 11880365,
+              "startedAt": "2026-09-06T01:37:38+08:00",
+              "finishedAt": "2026-09-06T05:08:34+08:00",
+              "durationMs": 12656168,
               "status": "completed",
               "exitCode": 0
             },
             {
               "stage": "optimize-traces",
-              "startedAt": "2026-09-03T08:50:25+08:00",
-              "finishedAt": "2026-09-03T08:50:25+08:00",
-              "durationMs": 164,
+              "startedAt": "2026-09-06T05:08:34+08:00",
+              "finishedAt": "2026-09-06T05:08:34+08:00",
+              "durationMs": 202,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-06T05:08:34+08:00",
+              "finishedAt": "2026-09-06T05:08:54+08:00",
+              "durationMs": 20316,
               "status": "failed",
               "exitCode": 1
             }
