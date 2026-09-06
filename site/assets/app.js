@@ -109,6 +109,34 @@ function resultCard(result, game, model) {
         <p class="issue-note"><strong>失败原因：</strong>${escapeHtml(result.issue)}</p>
       </article>`;
   }
+  if (result.status === 'scored-failure') {
+    return `
+      <article class="result-card failed-card scored-failure-card">
+        <div class="failure-preview" role="img" aria-label="${escapeHtml(game.titleZh)} · ${escapeHtml(model.label)} 已计分但不可试玩">
+          <span>已计分终态</span>
+          <strong>不可试玩</strong>
+          <small>${escapeHtml(result.stage)}</small>
+        </div>
+        <div class="score-row">
+          <div>
+            <span class="score-label">基础分</span>
+            <strong class="score-value ${scoreTone(result.score.base)}">${number.format(result.score.base)}</strong>
+          </div>
+          <div class="score-side">
+            <span>${result.score.passed}/${result.score.denominator} 通过</span>
+            <span>${result.traceCount} 条最终 Trace</span>
+          </div>
+        </div>
+        <div class="score-breakdown">
+          <span>Dynamic <strong>${result.score.dynamic}</strong></span>
+          <span>动态加分 <strong>+${number.format(result.score.dynamicAddition)}</strong></span>
+          <span>潜在总分 <strong>${number.format(result.score.potential)}</strong></span>
+          <span>画面 <strong>未评分</strong></span>
+        </div>
+        ${timingBlock(result.timing)}
+        <p class="issue-note"><strong>计分说明：</strong>${escapeHtml(result.issue)}</p>
+      </article>`;
+  }
   const note = result.issue
     ? `<p class="issue-note"><strong>运行提示：</strong>${escapeHtml(result.issue)}</p>`
     : '';
@@ -326,7 +354,7 @@ function renderStats(data) {
     .flatMap((game) => Object.values(game))
     .filter(Boolean);
   const best = resultList
-    .filter((result) => result.status !== 'failed' && result.score)
+    .filter((result) => result.status === 'completed' && result.score)
     .sort((a, b) => b.score.base - a.score.base)[0];
   const values = [
     [data.models.length, '生成模型'],

@@ -982,7 +982,8 @@ for (const game of games) {
   for (const model of models) {
     const timing = readTiming(game.id, model.id);
     const failedRun = configuredFailedRuns[`${game.id}|${model.id}`];
-    if (failedRun) {
+    const scoredFailure = failedRun?.scoreFromReport === true;
+    if (failedRun && !scoredFailure) {
       results[game.id][model.id] = {
         status: 'failed',
         runId: failedRun.runId,
@@ -1038,11 +1039,12 @@ for (const game of games) {
       );
     }
 
-    validatePlayableBuild(game.id, model.id);
+    if (!scoredFailure) validatePlayableBuild(game.id, model.id);
 
     results[game.id][model.id] = {
-      status: 'completed',
+      status: scoredFailure ? 'scored-failure' : 'completed',
       runId: timing?.runId ?? null,
+      ...(scoredFailure ? { stage: failedRun.stage } : {}),
       score: {
         display: report.score.display,
         base: report.score.base,
@@ -1060,13 +1062,15 @@ for (const game of games) {
         videosScored: report.visualQuality.videosScored,
       } : null,
       traceCount: report.videos.length,
-      playPath: `${playRoot}/${game.id}/${model.id}/index.html`,
-      previewPath: `${previewRoot}/${game.id}/${model.id}.png`,
+      playPath: scoredFailure ? null : `${playRoot}/${game.id}/${model.id}/index.html`,
+      previewPath: scoredFailure ? null : `${previewRoot}/${game.id}/${model.id}.png`,
       unmet: {
         vlm: vlmUnmet,
         replayTrace: replayTraceUnmet,
       },
-      issue: issueNotes[`${game.id}|${model.id}`] ?? null,
+      issue: scoredFailure
+        ? failedRun.issue
+        : issueNotes[`${game.id}|${model.id}`] ?? null,
       timing,
     };
   }
@@ -1135,7 +1139,9 @@ const versionEntry = {
   dataRevision,
   resultCount: resultList.length,
   completedCount: resultList.filter((result) => result.status === 'completed').length,
-  failedCount: resultList.filter((result) => result.status === 'failed').length,
+  failedCount: resultList.filter(
+    (result) => result.status === 'failed' || result.status === 'scored-failure',
+  ).length,
   dataPath: `data/versions/${benchmarkVersionId}.json`,
 };
 const versions = [
