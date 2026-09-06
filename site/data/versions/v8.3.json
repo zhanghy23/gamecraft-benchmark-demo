@@ -20935,6 +20935,18 @@
             }
           ]
         }
+      },
+      "deepseek-v4-flash": {
+        "status": "failed",
+        "runId": "deepseek-v4-flash-v8.3-rubric2-remaining-20260906-102745",
+        "stage": "trace",
+        "score": null,
+        "traceCount": 0,
+        "playPath": null,
+        "previewPath": null,
+        "unmet": null,
+        "issue": "导入源码的确定性构建通过，Trace Phase 1 已生成47条Trace；Phase 2完成第一批Probe Plan后，第二批Probe Instrumentation请求因Compliance Gateway解析bigc.byteintl.net发生DNS I/O timeout并返回HTTP 403，评测在Trace阶段终止，未进入selection、Replay或Judge。",
+        "timing": null
       }
     },
     "super-castle-game": {
