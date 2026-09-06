@@ -17555,38 +17555,94 @@
         }
       },
       "gpt-5.4": {
-        "status": "failed",
-        "runId": "gpt-5.4-v8.3-rubric2-resume-20260904-061752",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "generate-game 已完成；Trace Phase 2 的 Probe Plan 第3批连续3次仍无法给出唯一合法锚点（最终 exactSource 在 src/main.ts 中出现17次），因此未进入 selection、Replay 与 Judge。",
+        "status": "completed",
+        "runId": "gpt-5.4-v8.3-rubric2-failed-rerun-20260905-235219",
+        "score": {
+          "display": "93.62 (+0.00)",
+          "base": 93.62,
+          "passed": 44,
+          "denominator": 47,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 93.62
+        },
+        "visualQuality": {
+          "score": 89.75,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.75,
+          "renderingStyleAverage": 42,
+          "videosScored": 12
+        },
+        "traceCount": 12,
+        "playPath": "games-v8.3/catapoolt/gpt-5.4/index.html",
+        "previewPath": "previews-v8.3/catapoolt/gpt-5.4.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-002",
+              "zh": "已进入开始菜单场景 → 画布显示风格化标题文字 \"🅒🅐🅣🅐🅟🅞🅞🅛🅣\"。"
+            },
+            {
+              "id": "target-042",
+              "zh": "处于地面高度的猫在未受到粪便伤害保护时接触一个粪便 → 被接触的粪便从游玩场地中消失，并且耐力条的已填充部分开始从碰撞前的右边缘向左移动。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-012",
+              "zh": "当暂停弹窗可见且其后方至少有一个游戏玩法对象可见时，发生一次活跃游戏更新 → 在接下来 1 秒渲染视频中，叠层后方可见的游戏玩法对象保持相同的屏幕位置，同时 Pause 弹窗保持在最上层。",
+              "cause": "源码分析确认未实现"
+            }
+          ]
+        },
+        "issue": null,
         "timing": {
-          "runId": "gpt-5.4-v8.3-rubric2-resume-20260904-061752",
-          "status": "failed",
-          "failedStage": "trace",
-          "startedAt": "2026-09-04T17:28:06+08:00",
-          "finishedAt": "2026-09-04T17:52:49+08:00",
-          "totalDurationMs": 1482991,
+          "runId": "gpt-5.4-v8.3-rubric2-failed-rerun-20260905-235219",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-06T06:28:46+08:00",
+          "finishedAt": "2026-09-06T08:40:26+08:00",
+          "totalDurationMs": 7900331,
           "stages": [
             {
-              "stage": "generate-game",
-              "startedAt": "2026-09-04T17:28:06+08:00",
-              "finishedAt": "2026-09-04T17:30:38+08:00",
-              "durationMs": 152231,
+              "stage": "trace",
+              "startedAt": "2026-09-06T06:28:46+08:00",
+              "finishedAt": "2026-09-06T06:48:06+08:00",
+              "durationMs": 1160118,
               "status": "completed",
               "exitCode": 0
             },
             {
-              "stage": "trace",
-              "startedAt": "2026-09-04T17:30:38+08:00",
-              "finishedAt": "2026-09-04T17:52:49+08:00",
-              "durationMs": 1330737,
-              "status": "failed",
-              "exitCode": 1
+              "stage": "select-traces",
+              "startedAt": "2026-09-06T06:48:06+08:00",
+              "finishedAt": "2026-09-06T08:24:11+08:00",
+              "durationMs": 5765093,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-06T08:24:11+08:00",
+              "finishedAt": "2026-09-06T08:24:12+08:00",
+              "durationMs": 328,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-06T08:24:12+08:00",
+              "finishedAt": "2026-09-06T08:27:03+08:00",
+              "durationMs": 171790,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-06T08:27:03+08:00",
+              "finishedAt": "2026-09-06T08:40:26+08:00",
+              "durationMs": 802969,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }
