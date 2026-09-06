@@ -4774,38 +4774,120 @@
         }
       },
       "gpt-5.4": {
-        "status": "failed",
-        "runId": "gpt-5.4-v8.3-rubric2-20260903-000416",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "Trace Phase 2 的 Probe Instrumentation 第4批失败：三个探针的 currentExactSource 连续3次修复仍未在源码中找到（direct-homing-update、random-direction-update、wavering-homing-update），因此未进入 selection、Replay 与 Judge。",
+        "status": "completed",
+        "runId": "gpt-5.4-v8.3-rubric2-failed-rerun-20260905-235219",
+        "score": {
+          "display": "82.69 (+5.77)",
+          "base": 82.69,
+          "passed": 43,
+          "denominator": 52,
+          "dynamic": 3,
+          "dynamicAddition": 5.77,
+          "potential": 88.46
+        },
+        "visualQuality": {
+          "score": 81.2,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 42.2,
+          "renderingStyleAverage": 39,
+          "videosScored": 10
+        },
+        "traceCount": 10,
+        "playPath": "games-v8.3/radius-raid/gpt-5.4/index.html",
+        "previewPath": "previews-v8.3/radius-raid/gpt-5.4.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-017",
+              "zh": "在活动游戏玩法期间武器冷却已完成，同时自动开火已禁用、鼠标按钮被按住且三连发未处于活动状态 → 一条子弹线段从玩家飞船发出并远离玩家飞船飞行。"
+            },
+            {
+              "id": "target-019",
+              "zh": "游戏处于进行状态、快速射击强化道具处于激活状态且射击被接受时，武器冷却已完成 → 一条非白色的子弹线段从玩家飞船处发出。"
+            },
+            {
+              "id": "target-023",
+              "zh": "游戏处于进行状态时，一颗穿透子弹与其第 4 个不同的敌人发生碰撞 → 命中粒子效果出现在该敌人处，并且子弹线在撞击后消失。"
+            },
+            {
+              "id": "target-039",
+              "zh": "条件：生命强化道具计时器处于激活状态，且玩家生命条未满 → 预期结果：在连续的游戏帧中，玩家生命条的填充部分向右延伸，直到达到生命条的完整宽度或计时器结束。"
+            },
+            {
+              "id": "target-040",
+              "zh": "条件：游戏过程中，减速敌人强化道具计时器处于激活状态 → 预期结果：半透明蓝色叠层覆盖游戏视图，并且可见敌人绘制有蓝色调叠层。"
+            },
+            {
+              "id": "target-043",
+              "zh": "条件：玩家死亡序列在活跃游戏过程中开始 → 预期结果：爆炸效果出现在玩家飞船周围，并且在连续的游戏帧中，游戏层以不断变化的水平或垂直偏移绘制。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-010",
+              "zh": "从暂停屏幕激活“MENU”按钮，并接受返回菜单确认 → 游戏返回菜单屏幕，并且“PLAY”按钮可见。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-004",
+              "zh": "新重置的一局首次渲染游戏玩法视图 → HUD 的“SCORE”数值显示为 000000，“PROGRESS”进度条没有从左边缘延伸出的已填充部分，并且游戏玩法视图中可见显示 01 的关卡通知。",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-020",
+              "zh": "游戏处于进行状态、三发射击强化道具计时器已到期且射击被接受时，武器冷却已完成 → 恰好一条子弹线段从玩家飞船处发出。",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
         "timing": {
-          "runId": "gpt-5.4-v8.3-rubric2-20260903-000416",
-          "status": "failed",
-          "failedStage": "trace",
-          "startedAt": "2026-09-03T00:11:34+08:00",
-          "finishedAt": "2026-09-03T00:31:03+08:00",
-          "totalDurationMs": 1168564,
+          "runId": "gpt-5.4-v8.3-rubric2-failed-rerun-20260905-235219",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-05T23:52:39+08:00",
+          "finishedAt": "2026-09-06T01:09:19+08:00",
+          "totalDurationMs": 4600578,
           "stages": [
             {
-              "stage": "generate-game",
-              "startedAt": "2026-09-03T00:11:34+08:00",
-              "finishedAt": "2026-09-03T00:14:31+08:00",
-              "durationMs": 176493,
+              "stage": "trace",
+              "startedAt": "2026-09-05T23:52:39+08:00",
+              "finishedAt": "2026-09-06T00:08:24+08:00",
+              "durationMs": 945123,
               "status": "completed",
               "exitCode": 0
             },
             {
-              "stage": "trace",
-              "startedAt": "2026-09-03T00:14:31+08:00",
-              "finishedAt": "2026-09-03T00:31:03+08:00",
-              "durationMs": 992047,
-              "status": "failed",
-              "exitCode": 1
+              "stage": "select-traces",
+              "startedAt": "2026-09-06T00:08:24+08:00",
+              "finishedAt": "2026-09-06T00:51:19+08:00",
+              "durationMs": 2575180,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-06T00:51:19+08:00",
+              "finishedAt": "2026-09-06T00:51:19+08:00",
+              "durationMs": 231,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-06T00:51:19+08:00",
+              "finishedAt": "2026-09-06T00:55:37+08:00",
+              "durationMs": 257771,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-06T00:55:37+08:00",
+              "finishedAt": "2026-09-06T01:09:19+08:00",
+              "durationMs": 822239,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }
