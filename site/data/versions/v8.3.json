@@ -20189,6 +20189,206 @@
             }
           ]
         }
+      },
+      "deepseek-v4-flash": {
+        "status": "completed",
+        "runId": "deepseek-v4-flash-v8.3-rubric2-remaining-20260906-102745",
+        "score": {
+          "display": "65.79 (+11.84)",
+          "base": 65.79,
+          "passed": 50,
+          "denominator": 76,
+          "dynamic": 9,
+          "dynamicAddition": 11.84,
+          "potential": 77.63
+        },
+        "visualQuality": {
+          "score": 90.47,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.05,
+          "renderingStyleAverage": 42.42,
+          "videosScored": 19
+        },
+        "traceCount": 19,
+        "playPath": "games-v8.3/stolen-sword/deepseek-v4-flash/index.html",
+        "previewPath": "previews-v8.3/stolen-sword/deepseek-v4-flash.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-002",
+              "zh": "玩家冲刺期间在敌人位置创建敌人受击斩击效果 → 一条以被击中敌人为中心的黑色线条沿玩家冲刺方向扩展，并在 0.3 秒内淡出。"
+            },
+            {
+              "id": "target-007",
+              "zh": "关卡转场推进到第二关 → 转场期间玩家角色从场景左侧移入第二关的竖向竹制平台游玩区域。"
+            },
+            {
+              "id": "target-008",
+              "zh": "关卡转场推进到第三关 → 转场期间玩家角色从场景左侧进入，并停在第三关的水面游玩区域附近。"
+            },
+            {
+              "id": "target-011",
+              "zh": "第一关结尾过场到达其对话字幕 → 字幕文本 \"Can't find the theft. I think I lost him.\" 显示在游戏场景上。"
+            },
+            {
+              "id": "target-037",
+              "zh": "活着的切换模式敌人的预定模式事件在该敌人当前正在防御时触发 → 敌人周围的虚线圆形防御壳消失。"
+            },
+            {
+              "id": "target-040",
+              "zh": "玩家与正在防御的敌人发生垂直碰撞 → 玩家角色沿垂直方向从敌人处弹开，并且敌人周围仍保留虚线防御壳。"
+            },
+            {
+              "id": "target-060",
+              "zh": "活跃游玩期间绘制垂直水流区域 → 垂直水流区域由交替排列的半透明白色条带填充。"
+            },
+            {
+              "id": "target-069",
+              "zh": "活跃游玩期间，玩家在地面上并按住以蓄力 → 按住期间，玩家角色切换为蹲伏蓄力姿势。"
+            },
+            {
+              "id": "target-071",
+              "zh": "玩家的生命值降至零，且玩家尚未处于死亡中 → 玩家角色变为死亡姿势，并且一个纯黑色全屏擦除效果开始。"
+            },
+            {
+              "id": "target-072",
+              "zh": "死亡状态之后，玩家的死亡动画完成 → 游玩场景重新开始，玩家角色不再处于死亡姿势，并且玩家用于显示生命值颜色的身体部位再次变为灰色。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-005",
+              "zh": "关卡标题叠层完全可见后，玩家开始游戏 → 关卡标题叠层在 1 秒内从完全可见变为透明，然后从游戏画面中消失。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-017",
+              "zh": "第一关结尾过场中，在 theft 已经穿过场景移动之后，玩家开始追逐移动 → 在 1 秒追逐段落期间，玩家角色从场景左侧跑向右侧，同时背景滚动。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-024",
+              "zh": "一个链式敌人跟随者在存活期间拥有足够的已记录头部路径历史 → 该跟随型敌人沿头部敌人先前经过的同一轨迹移动，并沿该轨迹保持在其后方的间距。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-038",
+              "zh": "壳类敌人的生命值降低到 1 且该壳类敌人仍然存活 → 敌人周围不再绘制虚线圆形防御壳。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-052",
+              "zh": "带有水波纹检测的物体穿过水面，且当前激活的波纹效果少于 10 个 → 一个圆形波纹出现在该物体水平位置的水面上，向外扩展，并在出现后 3 秒内消失。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-066",
+              "zh": "绘制启用反射的山地背景 → 山地景色包含水面以下的反射版本。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-076",
+              "zh": "条件：letterbox（宽银幕遮幅）叠加层完全显示 → 预期结果：纯黑色水平条覆盖游戏画面的顶部和底部区域，中间的游戏区域在两条黑条之间保持可见。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-012",
+              "zh": "第二关结尾过场到达其对话字幕 → 字幕文本 \"Still not found the theft.\" 显示在游戏场景上。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-015",
+              "zh": "第一关结尾过场在对话字幕之后召唤 theft 角色 → theft 角色出现在场景左侧。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-016",
+              "zh": "第二关结尾过场在对话字幕之后召唤 theft 角色 → theft 角色出现在竖向关卡区域中玩家附近。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-018",
+              "zh": "第四关结尾过场到达去饱和追逐段落 → 在 1 秒段落期间，场景颜色过渡为灰度，同时玩家向 theft 移动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-022",
+              "zh": "一个存活敌人开始滑入移动动作 → 该敌人在滑入动画期间从其起始位置朝滑入目标位置移动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-036",
+              "zh": "一个存活的切换模式敌人的预定模式事件触发，且该敌人当前未处于防御状态 → 该敌人周围出现一个虚线圆形防御外壳。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-046",
+              "zh": "复合敌人的父敌人死亡时，其一个子敌人仍然存活 → 该子敌人开始死亡运动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-047",
+              "zh": "第三阶段复合核心敌人在其所有子敌人都已被击杀时仍然存活 → 核心敌人开始死亡运动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-067",
+              "zh": "活跃游玩期间，玩家在地面上，背景正在滚动，且玩家未按住 → 玩家角色使用奔跑姿势，双腿位置交替变化。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-flash-v8.3-rubric2-remaining-20260906-102745",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-06T13:54:08+08:00",
+          "finishedAt": "2026-09-06T20:31:48+08:00",
+          "totalDurationMs": 23859928,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-06T13:54:08+08:00",
+              "finishedAt": "2026-09-06T14:21:24+08:00",
+              "durationMs": 1635431,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-06T14:21:24+08:00",
+              "finishedAt": "2026-09-06T20:11:51+08:00",
+              "durationMs": 21027662,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-06T20:11:51+08:00",
+              "finishedAt": "2026-09-06T20:11:52+08:00",
+              "durationMs": 629,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-06T20:11:52+08:00",
+              "finishedAt": "2026-09-06T20:13:21+08:00",
+              "durationMs": 88782,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-06T20:13:21+08:00",
+              "finishedAt": "2026-09-06T20:31:48+08:00",
+              "durationMs": 1107391,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "catapoolt": {
