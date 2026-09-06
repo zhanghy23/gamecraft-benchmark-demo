@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lost Antenna Adventure</title>
+    <style>
+      body { margin: 0; overflow: hidden; background: #000; font-family: 'Courier New', Courier, monospace; user-select: none; }
+      #game-container { position: relative; width: 100vw; height: 100vh; }
+      canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; }
+      .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-shadow: 2px 2px 0 #000; }
+      .interactive { pointer-events: auto; background: rgba(0,0,0,0.8); }
+      #hud { justify-content: space-between; padding: 20px; box-sizing: border-box; align-items: flex-start; }
+      #interaction-text { font-size: 24px; color: #fff; text-align: center; margin-top: 20%; }
+      #message-log { font-size: 18px; color: #ffd700; text-align: left; max-width: 600px; }
+      #crosshair { position: absolute; top: 50%; left: 50%; width: 4px; height: 4px; background: white; transform: translate(-50%, -50%); border-radius: 50%; }
+      button { background: #444; color: white; border: 2px solid #fff; padding: 10px 20px; font-size: 20px; cursor: pointer; font-family: inherit; margin-top: 20px; }
+      button:hover { background: #666; }
+      .hidden { display: none !important; }
+    </style>
+    <script type="module" crossorigin src="./assets/index-DSAcHK8o.js"></script>
+  </head>
+  <body>
+    <div id="game-container">
+      <canvas id="game-canvas"></canvas>
+      <div id="crosshair"></div>
+      
+      <!-- HUD -->
+      <div id="hud" class="overlay">
+        <div id="message-log"></div>
+        <div id="interaction-text"></div>
+      </div>
+
+      <!-- Main Menu -->
+      <div id="main-menu" class="overlay interactive">
+        <h1>LOST ANTENNA ADVENTURE</h1>
+        <button id="start-btn">Start Game</button>
+      </div>
+
+      <!-- Ending Overlay -->
+      <div id="ending-overlay" class="overlay interactive hidden">
+        <h1>The End</h1>
+        <p>you found your way out</p>
+        <p>Game by Salvatore Previti & Ben Clark</p>
+        <p>Thank you for playing!</p>
+      </div>
+    </div>
+  </body>
+</html>
