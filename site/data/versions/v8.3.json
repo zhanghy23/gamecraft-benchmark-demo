@@ -23637,6 +23637,164 @@
             }
           ]
         }
+      },
+      "deepseek-v4-pro": {
+        "status": "completed",
+        "runId": "deepseek-v4-pro-v8.3-rubric2-remaining-20260906-102745",
+        "score": {
+          "display": "54.29 (+40.00)",
+          "base": 54.29,
+          "passed": 19,
+          "denominator": 35,
+          "dynamic": 14,
+          "dynamicAddition": 40,
+          "potential": 94.29
+        },
+        "visualQuality": {
+          "score": 86.86,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 46.29,
+          "renderingStyleAverage": 40.57,
+          "videosScored": 7
+        },
+        "traceCount": 7,
+        "playPath": "games-v8.3/q1k3/deepseek-v4-pro/index.html",
+        "previewPath": "previews-v8.3/q1k3/deepseek-v4-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-010",
+              "zh": "当所选投射物武器已准备好射击且拥有所需弹药时，玩家尝试开火 → 在该次开火尝试期间，一个投射物从玩家的武器发出。"
+            },
+            {
+              "id": "target-033",
+              "zh": "一个 grunt 敌人在面朝玩家时到达其攻击执行状态 → 攻击期间，grunt 处出现枪口闪光灯光。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-006",
+              "zh": "玩家向上看至垂直视角限制 → 视图保持限制在最大向上俯仰角，额外的向上视角输入不会使视图旋转超过该限制角度。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-007",
+              "zh": "玩家向下看至垂直视角限制 → 视图保持限制在最大向下俯仰角，额外的向下视角输入不会使视图旋转超过该限制角度。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-012",
+              "zh": "当所选使用弹药的武器弹药为零且其装填等待时间已结束时，玩家尝试开火 → 该次开火尝试不会渲染任何投射物或枪口闪光效果。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-015",
+              "zh": "玩家在门的激活范围内接近一扇未上锁的门 → 门板从关闭位置打开，露出其后的通道。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-016",
+              "zh": "一扇打开的门在其重置延迟期间没有玩家处于其激活范围内 → 门板向其关闭位置关回。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-022",
+              "zh": "玩家的生命值因受到伤害而降至零 → 游戏画面上方显示居中的叠加消息“YOU DIED”，并且生命值 HUD 显示 0。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-023",
+              "zh": "玩家死亡后的重启延迟结束 → 在“YOU DIED”消息显示之后，当前关卡重新加载为其起始布局。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-024",
+              "zh": "一个可见的可受伤实体的生命值因受到伤害而降至零 → 伤害应用后，该实体原本可见的模型不再被渲染。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-027",
+              "zh": "一个空闲敌人受到非致命伤害 → 敌人转向面朝玩家，并开始向玩家移动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-028",
+              "zh": "一个巡逻敌人受到非致命伤害 → 敌人转向面朝玩家，并开始向玩家移动，而不是继续其巡逻路径。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-030",
+              "zh": "一个巡逻敌人在其状态更新期间，玩家位于其警觉范围之外 → 敌人继续沿其巡逻路径前进，并且不会转向玩家或直接向玩家移动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-032",
+              "zh": "一个巡逻敌人与墙壁或平台边缘边界发生水平碰撞 → 敌人反转其巡逻方向，并沿其路径往回行走。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-034",
+              "zh": "一个 zombie 受到的伤害量未高于其碎尸阈值 → 命中后，zombie 模型仍以其站立敌人形态保持可见。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-035",
+              "zh": "一个可见的弹跳实体在其垂直速度高于其弹跳阈值时与表面发生垂直碰撞 → 接触后，该实体立即反转垂直方向，并从该表面反弹离开。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-pro-v8.3-rubric2-remaining-20260906-102745",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-06T11:25:56+08:00",
+          "finishedAt": "2026-09-06T13:06:30+08:00",
+          "totalDurationMs": 6033905,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-06T11:25:56+08:00",
+              "finishedAt": "2026-09-06T11:37:22+08:00",
+              "durationMs": 685978,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-06T11:37:22+08:00",
+              "finishedAt": "2026-09-06T12:58:31+08:00",
+              "durationMs": 4868432,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-06T12:58:31+08:00",
+              "finishedAt": "2026-09-06T12:58:31+08:00",
+              "durationMs": 213,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-06T12:58:31+08:00",
+              "finishedAt": "2026-09-06T13:01:02+08:00",
+              "durationMs": 151399,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-06T13:01:02+08:00",
+              "finishedAt": "2026-09-06T13:06:30+08:00",
+              "durationMs": 327852,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "island-not-found": {

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Q1K3</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { overflow:hidden; background:#000; }
+    canvas { display:block; }
+    #start-overlay {
+      position:absolute; top:0; left:0; width:100%; height:100%;
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      background: rgba(0,0,0,0.8);
+      color:white; font-family: monospace;
+      cursor: pointer;
+      pointer-events: auto;
+      z-index:10;
+    }
+    #start-overlay h1 { font-size: 48px; margin-bottom: 20px; }
+    #start-overlay p { font-size: 24px; }
+    #death-overlay {
+      position:absolute; top:0; left:0; width:100%; height:100%;
+      display:none; align-items:center; justify-content:center;
+      background: rgba(0,0,0,0.7);
+      color: red; font-family: monospace; font-size: 48px;
+      pointer-events: none;
+      z-index:9;
+    }
+    #end-overlay {
+      position:absolute; top:0; left:0; width:100%; height:100%;
+      display:none; flex-direction:column; align-items:center; justify-content:center;
+      background: rgba(0,0,0,0.9);
+      color: white; font-family: monospace;
+      pointer-events: none;
+      z-index:9;
+    }
+    #end-overlay h1 { font-size: 48px; margin-bottom: 20px; }
+    #end-overlay p { font-size: 24px; }
+    #hud {
+      position:absolute; bottom:20px; left:20px; color:white; font-family:monospace; font-size:24px;
+      display:none;
+      z-index:8;
+    }
+    #hud-health { }
+    #hud-ammo { margin-left:20px; }
+    #message {
+      position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+      color:yellow; font-family:monospace; font-size:32px; text-align:center;
+      display:none; pointer-events:none;
+      z-index:11;
+    }
+  </style>
+  <script type="module" crossorigin src="/assets/index-DgY-nx03.js"></script>
+</head>
+<body>
+  <canvas id="game-canvas"></canvas>
+  <div id="start-overlay">
+    <h1>Q1K3</h1>
+    <p>CLICK TO START</p>
+  </div>
+  <div id="death-overlay">YOU DIED</div>
+  <div id="end-overlay">
+    <h1>THE END</h1>
+    <p>THANKS FOR PLAYING ❤</p>
+  </div>
+  <div id="hud">
+    <span id="hud-health"></span>
+    <span id="hud-ammo"></span>
+  </div>
+  <div id="message"></div>
+</body>
+</html>
