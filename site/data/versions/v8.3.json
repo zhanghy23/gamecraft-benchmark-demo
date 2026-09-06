@@ -22391,6 +22391,35 @@
           ]
         }
       },
+      "deepseek-v4-flash": {
+        "status": "failed",
+        "runId": "deepseek-v4-flash-v8.3-rubric2-remaining-r2-20260906-220600",
+        "stage": "trace",
+        "score": null,
+        "traceCount": 0,
+        "playPath": null,
+        "previewPath": null,
+        "unmet": null,
+        "issue": "导入源码的依赖安装、Vite构建和确定性运行检查均通过，Trace Phase 1 已生成65条Trace；进入Phase 2第一批Probe Plan时Harness被terminated，日志中没有HTTP、认证或源码运行错误，未进入selection、Replay或Judge。",
+        "timing": {
+          "runId": "deepseek-v4-flash-v8.3-rubric2-remaining-r2-20260906-220600",
+          "status": "failed",
+          "failedStage": "trace",
+          "startedAt": "2026-09-06T23:55:32+08:00",
+          "finishedAt": "2026-09-07T00:11:54+08:00",
+          "totalDurationMs": 981920,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-06T23:55:32+08:00",
+              "finishedAt": "2026-09-07T00:11:54+08:00",
+              "durationMs": 981904,
+              "status": "failed",
+              "exitCode": 1
+            }
+          ]
+        }
+      },
       "deepseek-v4-pro": {
         "status": "failed",
         "runId": "deepseek-v4-pro-v8.3-rubric2-imported-20260903-235436",
