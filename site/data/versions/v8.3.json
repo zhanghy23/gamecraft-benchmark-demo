@@ -22302,16 +22302,127 @@
         }
       },
       "minimax-m2.7": {
-        "status": "failed",
-        "runId": "minimax-m2.7-v8.3-rubric2-resume-20260903-220846",
-        "stage": "generate-game",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "生成阶段历时约76分27秒；31次流式请求均在返回结束时缺少 [DONE] 或 finish_reason，最终被判定为无效流式响应，未产生可校验的完整游戏项目。",
-        "timing": null
+        "status": "completed",
+        "runId": "minimax-m2.7-v8.3-rubric2-imported-retry-20260905-231213",
+        "score": {
+          "display": "73.68 (+0.00)",
+          "base": 73.68,
+          "passed": 28,
+          "denominator": 38,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 73.68
+        },
+        "visualQuality": {
+          "score": 92.77,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.08,
+          "renderingStyleAverage": 44.69,
+          "videosScored": 13
+        },
+        "traceCount": 13,
+        "playPath": "games-v8.3/the-neatness/minimax-m2.7/index.html",
+        "previewPath": "previews-v8.3/the-neatness/minimax-m2.7.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-003",
+              "zh": "当前关卡在失败或触发重开的状态之后被重新开始 → 关卡恢复到其重置后的谜题布局，并且游戏玩法视图上显示重新开始消息遮罩。"
+            },
+            {
+              "id": "target-008",
+              "zh": "在常规谜题关卡中完成两个不兼容热点之间的连接 → 游戏玩法视图上出现重新开始消息遮罩，并且棋盘恢复到其重置后的谜题布局。"
+            },
+            {
+              "id": "target-011",
+              "zh": "在关卡中关卡选择工具栏按钮处于启用状态时释放该按钮 → 对角线幕布转场在当前关卡上闭合，然后显示关卡选择画面。"
+            },
+            {
+              "id": "target-018",
+              "zh": "对一个具有相邻已连接邻格的网格单元执行单格涂色操作 → 目标单元变为相邻连接的颜色。"
+            },
+            {
+              "id": "target-028",
+              "zh": "在包含真菌的关卡中，绘制动作添加了新的空单元格颜料 → 添加颜料后，真菌区域内至少有一个真菌颜色的单元格出现或发生变化。"
+            },
+            {
+              "id": "target-036",
+              "zh": "谜题棋盘上显示一个已满足的入口点热点 → 该热点仍由其骷髅精灵标记，同时其涂画区域显示为已连接颜料颜色。"
+            },
+            {
+              "id": "target-037",
+              "zh": "谜题棋盘上显示一个已满足的出口点热点 → 该热点保持由其坟墓精灵图标记，同时其涂色区域显示为已连接的涂料颜色。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-005",
+              "zh": "结尾关卡被显示 → 屏幕上部附近显示文本 \"Thank you for playing!\"，并且屏幕下部附近显示文本 \"But our princess is in another castle!\"。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-010",
+              "zh": "在关卡选择画面上满足关卡选择入口点之后，连接一个可选择的已解锁关卡出口 → 对角线幕布转场开始，并且转场之后关卡选择视图被所选关卡的谜题棋盘替换。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-012",
+              "zh": "显示一个恰好启用两个工具栏按钮的关卡 → 右侧工具栏显示两个纵向堆叠的按钮：一个音乐按钮和一个重置按钮。",
+              "cause": "源码分析确认未实现"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "minimax-m2.7-v8.3-rubric2-imported-retry-20260905-231213",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-06T19:19:21+08:00",
+          "finishedAt": "2026-09-06T20:02:13+08:00",
+          "totalDurationMs": 2571849,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-06T19:19:21+08:00",
+              "finishedAt": "2026-09-06T19:35:20+08:00",
+              "durationMs": 958560,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-06T19:35:20+08:00",
+              "finishedAt": "2026-09-06T19:52:16+08:00",
+              "durationMs": 1016245,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-06T19:52:16+08:00",
+              "finishedAt": "2026-09-06T19:52:16+08:00",
+              "durationMs": 181,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-06T19:52:16+08:00",
+              "finishedAt": "2026-09-06T19:53:12+08:00",
+              "durationMs": 56054,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-06T19:53:12+08:00",
+              "finishedAt": "2026-09-06T20:02:13+08:00",
+              "durationMs": 540776,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       },
       "gpt-5.4": {
         "status": "completed",
