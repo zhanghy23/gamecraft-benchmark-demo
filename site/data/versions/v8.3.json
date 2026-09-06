@@ -18449,6 +18449,124 @@
           ]
         }
       },
+      "deepseek-v4-flash": {
+        "status": "completed",
+        "runId": "deepseek-v4-flash-v8.3-rubric2-remaining-20260906-102745",
+        "score": {
+          "display": "78.05 (+2.44)",
+          "base": 78.05,
+          "passed": 32,
+          "denominator": 41,
+          "dynamic": 1,
+          "dynamicAddition": 2.44,
+          "potential": 80.49
+        },
+        "visualQuality": {
+          "score": 91.75,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.38,
+          "renderingStyleAverage": 43.38,
+          "videosScored": 16
+        },
+        "traceCount": 16,
+        "playPath": "games-v8.3/non-mewtonian-cat/deepseek-v4-flash/index.html",
+        "previewPath": "previews-v8.3/non-mewtonian-cat/deepseek-v4-flash.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-007",
+              "zh": "在有一个已完成的关卡图块可见时渲染关卡选择场景 → 该已完成的关卡图块在图块内部显示白色对勾。"
+            },
+            {
+              "id": "target-010",
+              "zh": "在关卡选择场景中，当当前高亮关卡的左侧存在可用关卡时，新按下向左导航输入 → 高亮关卡图块切换到左侧最近的可用关卡图块，并跳过不可用图块。"
+            },
+            {
+              "id": "target-011",
+              "zh": "在关卡选择场景中，当当前高亮关卡的右侧存在可用关卡时，新按下向右导航输入 → 高亮关卡图块切换到右侧最近的可用关卡图块，并跳过不可用图块。"
+            },
+            {
+              "id": "target-029",
+              "zh": "在活动游玩期间，玩家至少有两个节段，头部上方的图块包含缩小道具，且至少还有一个其他尺寸变化道具未被收集时，向上移动输入被接受 → 玩家向上移动一个图块，头部上方的缩小道具消失，该道具所在图块出现粒子，移动完成后玩家身体以减少一个节段的状态被绘制，并且胜利方块轮廓保持深蓝色。"
+            },
+            {
+              "id": "target-030",
+              "zh": "在活动游玩期间，玩家至少有两个节段，头部上方的图块包含唯一剩余的尺寸变化道具，且该道具是缩小道具时，向上移动输入被接受 → 玩家向上移动一个图块，头部上方的缩小道具消失，该道具所在图块出现粒子，移动完成后玩家身体以减少一个节段的状态被绘制，并且胜利方块轮廓变为橙色。"
+            },
+            {
+              "id": "target-032",
+              "zh": "在活动游玩期间，头部上方的图块是胜利方块，且至少还有一个尺寸变化道具未被收集时，向上移动输入被接受 → 玩家向上动画移动一个图块到胜利方块上，并且活动关卡保持可见，不会转场到关卡选择场景。"
+            },
+            {
+              "id": "target-034",
+              "zh": "在活动游玩期间，移动动画完成，且至少一个玩家节段位于失败方块上 → 在失败恢复间隔期间，玩家精灵停止被绘制。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-013",
+              "zh": "在关卡选择场景中，当当前高亮关卡下方同一列存在可用关卡时，新按下向下导航输入 → 高亮关卡图块切换到其下方同一列最近的可用关卡图块，并跳过不可用图块。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-012",
+              "zh": "在关卡选择场景中，当当前高亮关卡上方同一列存在可用关卡时，新按下向上导航输入 → 高亮关卡图块切换到其上方同一列最近的可用关卡图块，并跳过不可用图块。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-flash-v8.3-rubric2-remaining-20260906-102745",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-06T11:53:47+08:00",
+          "finishedAt": "2026-09-06T13:54:08+08:00",
+          "totalDurationMs": 7220827,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-06T11:53:47+08:00",
+              "finishedAt": "2026-09-06T12:08:50+08:00",
+              "durationMs": 902446,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-06T12:08:50+08:00",
+              "finishedAt": "2026-09-06T13:40:35+08:00",
+              "durationMs": 5505699,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-06T13:40:35+08:00",
+              "finishedAt": "2026-09-06T13:40:36+08:00",
+              "durationMs": 242,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-06T13:40:36+08:00",
+              "finishedAt": "2026-09-06T13:41:51+08:00",
+              "durationMs": 75013,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-06T13:41:51+08:00",
+              "finishedAt": "2026-09-06T13:54:08+08:00",
+              "durationMs": 737395,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
       "deepseek-v4-pro": {
         "status": "completed",
         "runId": "deepseek-v4-pro-v8.3-rubric2-imported-20260903-235436",
@@ -18693,124 +18811,6 @@
               "startedAt": "2026-09-05T11:41:01+08:00",
               "finishedAt": "2026-09-05T11:51:39+08:00",
               "durationMs": 637332,
-              "status": "completed",
-              "exitCode": 0
-            }
-          ]
-        }
-      },
-      "deepseek-v4-flash": {
-        "status": "completed",
-        "runId": "deepseek-v4-flash-v8.3-rubric2-remaining-20260906-102745",
-        "score": {
-          "display": "78.05 (+2.44)",
-          "base": 78.05,
-          "passed": 32,
-          "denominator": 41,
-          "dynamic": 1,
-          "dynamicAddition": 2.44,
-          "potential": 80.49
-        },
-        "visualQuality": {
-          "score": 91.75,
-          "maximumScore": 100,
-          "technicalPresentationAverage": 48.38,
-          "renderingStyleAverage": 43.38,
-          "videosScored": 16
-        },
-        "traceCount": 16,
-        "playPath": "games-v8.3/non-mewtonian-cat/deepseek-v4-flash/index.html",
-        "previewPath": "previews-v8.3/non-mewtonian-cat/deepseek-v4-flash.png",
-        "unmet": {
-          "vlm": [
-            {
-              "id": "target-007",
-              "zh": "在有一个已完成的关卡图块可见时渲染关卡选择场景 → 该已完成的关卡图块在图块内部显示白色对勾。"
-            },
-            {
-              "id": "target-010",
-              "zh": "在关卡选择场景中，当当前高亮关卡的左侧存在可用关卡时，新按下向左导航输入 → 高亮关卡图块切换到左侧最近的可用关卡图块，并跳过不可用图块。"
-            },
-            {
-              "id": "target-011",
-              "zh": "在关卡选择场景中，当当前高亮关卡的右侧存在可用关卡时，新按下向右导航输入 → 高亮关卡图块切换到右侧最近的可用关卡图块，并跳过不可用图块。"
-            },
-            {
-              "id": "target-029",
-              "zh": "在活动游玩期间，玩家至少有两个节段，头部上方的图块包含缩小道具，且至少还有一个其他尺寸变化道具未被收集时，向上移动输入被接受 → 玩家向上移动一个图块，头部上方的缩小道具消失，该道具所在图块出现粒子，移动完成后玩家身体以减少一个节段的状态被绘制，并且胜利方块轮廓保持深蓝色。"
-            },
-            {
-              "id": "target-030",
-              "zh": "在活动游玩期间，玩家至少有两个节段，头部上方的图块包含唯一剩余的尺寸变化道具，且该道具是缩小道具时，向上移动输入被接受 → 玩家向上移动一个图块，头部上方的缩小道具消失，该道具所在图块出现粒子，移动完成后玩家身体以减少一个节段的状态被绘制，并且胜利方块轮廓变为橙色。"
-            },
-            {
-              "id": "target-032",
-              "zh": "在活动游玩期间，头部上方的图块是胜利方块，且至少还有一个尺寸变化道具未被收集时，向上移动输入被接受 → 玩家向上动画移动一个图块到胜利方块上，并且活动关卡保持可见，不会转场到关卡选择场景。"
-            },
-            {
-              "id": "target-034",
-              "zh": "在活动游玩期间，移动动画完成，且至少一个玩家节段位于失败方块上 → 在失败恢复间隔期间，玩家精灵停止被绘制。"
-            }
-          ],
-          "replayTrace": [
-            {
-              "id": "target-013",
-              "zh": "在关卡选择场景中，当当前高亮关卡下方同一列存在可用关卡时，新按下向下导航输入 → 高亮关卡图块切换到其下方同一列最近的可用关卡图块，并跳过不可用图块。",
-              "cause": "源码错误导致 Trace 不可达"
-            },
-            {
-              "id": "target-012",
-              "zh": "在关卡选择场景中，当当前高亮关卡上方同一列存在可用关卡时，新按下向上导航输入 → 高亮关卡图块切换到其上方同一列最近的可用关卡图块，并跳过不可用图块。",
-              "cause": "Replay / Trace 证据不足"
-            }
-          ]
-        },
-        "issue": null,
-        "timing": {
-          "runId": "deepseek-v4-flash-v8.3-rubric2-remaining-20260906-102745",
-          "status": "completed",
-          "failedStage": null,
-          "startedAt": "2026-09-06T11:53:47+08:00",
-          "finishedAt": "2026-09-06T13:54:08+08:00",
-          "totalDurationMs": 7220827,
-          "stages": [
-            {
-              "stage": "trace",
-              "startedAt": "2026-09-06T11:53:47+08:00",
-              "finishedAt": "2026-09-06T12:08:50+08:00",
-              "durationMs": 902446,
-              "status": "completed",
-              "exitCode": 0
-            },
-            {
-              "stage": "select-traces",
-              "startedAt": "2026-09-06T12:08:50+08:00",
-              "finishedAt": "2026-09-06T13:40:35+08:00",
-              "durationMs": 5505699,
-              "status": "completed",
-              "exitCode": 0
-            },
-            {
-              "stage": "optimize-traces",
-              "startedAt": "2026-09-06T13:40:35+08:00",
-              "finishedAt": "2026-09-06T13:40:36+08:00",
-              "durationMs": 242,
-              "status": "completed",
-              "exitCode": 0
-            },
-            {
-              "stage": "replay",
-              "startedAt": "2026-09-06T13:40:36+08:00",
-              "finishedAt": "2026-09-06T13:41:51+08:00",
-              "durationMs": 75013,
-              "status": "completed",
-              "exitCode": 0
-            },
-            {
-              "stage": "judge-video-and-image",
-              "startedAt": "2026-09-06T13:41:51+08:00",
-              "finishedAt": "2026-09-06T13:54:08+08:00",
-              "durationMs": 737395,
               "status": "completed",
               "exitCode": 0
             }
@@ -19632,6 +19632,206 @@
           ]
         }
       },
+      "deepseek-v4-flash": {
+        "status": "completed",
+        "runId": "deepseek-v4-flash-v8.3-rubric2-remaining-20260906-102745",
+        "score": {
+          "display": "65.79 (+11.84)",
+          "base": 65.79,
+          "passed": 50,
+          "denominator": 76,
+          "dynamic": 9,
+          "dynamicAddition": 11.84,
+          "potential": 77.63
+        },
+        "visualQuality": {
+          "score": 90.47,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.05,
+          "renderingStyleAverage": 42.42,
+          "videosScored": 19
+        },
+        "traceCount": 19,
+        "playPath": "games-v8.3/stolen-sword/deepseek-v4-flash/index.html",
+        "previewPath": "previews-v8.3/stolen-sword/deepseek-v4-flash.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-002",
+              "zh": "玩家冲刺期间在敌人位置创建敌人受击斩击效果 → 一条以被击中敌人为中心的黑色线条沿玩家冲刺方向扩展，并在 0.3 秒内淡出。"
+            },
+            {
+              "id": "target-007",
+              "zh": "关卡转场推进到第二关 → 转场期间玩家角色从场景左侧移入第二关的竖向竹制平台游玩区域。"
+            },
+            {
+              "id": "target-008",
+              "zh": "关卡转场推进到第三关 → 转场期间玩家角色从场景左侧进入，并停在第三关的水面游玩区域附近。"
+            },
+            {
+              "id": "target-011",
+              "zh": "第一关结尾过场到达其对话字幕 → 字幕文本 \"Can't find the theft. I think I lost him.\" 显示在游戏场景上。"
+            },
+            {
+              "id": "target-037",
+              "zh": "活着的切换模式敌人的预定模式事件在该敌人当前正在防御时触发 → 敌人周围的虚线圆形防御壳消失。"
+            },
+            {
+              "id": "target-040",
+              "zh": "玩家与正在防御的敌人发生垂直碰撞 → 玩家角色沿垂直方向从敌人处弹开，并且敌人周围仍保留虚线防御壳。"
+            },
+            {
+              "id": "target-060",
+              "zh": "活跃游玩期间绘制垂直水流区域 → 垂直水流区域由交替排列的半透明白色条带填充。"
+            },
+            {
+              "id": "target-069",
+              "zh": "活跃游玩期间，玩家在地面上并按住以蓄力 → 按住期间，玩家角色切换为蹲伏蓄力姿势。"
+            },
+            {
+              "id": "target-071",
+              "zh": "玩家的生命值降至零，且玩家尚未处于死亡中 → 玩家角色变为死亡姿势，并且一个纯黑色全屏擦除效果开始。"
+            },
+            {
+              "id": "target-072",
+              "zh": "死亡状态之后，玩家的死亡动画完成 → 游玩场景重新开始，玩家角色不再处于死亡姿势，并且玩家用于显示生命值颜色的身体部位再次变为灰色。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-005",
+              "zh": "关卡标题叠层完全可见后，玩家开始游戏 → 关卡标题叠层在 1 秒内从完全可见变为透明，然后从游戏画面中消失。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-017",
+              "zh": "第一关结尾过场中，在 theft 已经穿过场景移动之后，玩家开始追逐移动 → 在 1 秒追逐段落期间，玩家角色从场景左侧跑向右侧，同时背景滚动。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-024",
+              "zh": "一个链式敌人跟随者在存活期间拥有足够的已记录头部路径历史 → 该跟随型敌人沿头部敌人先前经过的同一轨迹移动，并沿该轨迹保持在其后方的间距。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-038",
+              "zh": "壳类敌人的生命值降低到 1 且该壳类敌人仍然存活 → 敌人周围不再绘制虚线圆形防御壳。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-052",
+              "zh": "带有水波纹检测的物体穿过水面，且当前激活的波纹效果少于 10 个 → 一个圆形波纹出现在该物体水平位置的水面上，向外扩展，并在出现后 3 秒内消失。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-066",
+              "zh": "绘制启用反射的山地背景 → 山地景色包含水面以下的反射版本。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-076",
+              "zh": "条件：letterbox（宽银幕遮幅）叠加层完全显示 → 预期结果：纯黑色水平条覆盖游戏画面的顶部和底部区域，中间的游戏区域在两条黑条之间保持可见。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-012",
+              "zh": "第二关结尾过场到达其对话字幕 → 字幕文本 \"Still not found the theft.\" 显示在游戏场景上。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-015",
+              "zh": "第一关结尾过场在对话字幕之后召唤 theft 角色 → theft 角色出现在场景左侧。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-016",
+              "zh": "第二关结尾过场在对话字幕之后召唤 theft 角色 → theft 角色出现在竖向关卡区域中玩家附近。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-018",
+              "zh": "第四关结尾过场到达去饱和追逐段落 → 在 1 秒段落期间，场景颜色过渡为灰度，同时玩家向 theft 移动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-022",
+              "zh": "一个存活敌人开始滑入移动动作 → 该敌人在滑入动画期间从其起始位置朝滑入目标位置移动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-036",
+              "zh": "一个存活的切换模式敌人的预定模式事件触发，且该敌人当前未处于防御状态 → 该敌人周围出现一个虚线圆形防御外壳。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-046",
+              "zh": "复合敌人的父敌人死亡时，其一个子敌人仍然存活 → 该子敌人开始死亡运动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-047",
+              "zh": "第三阶段复合核心敌人在其所有子敌人都已被击杀时仍然存活 → 核心敌人开始死亡运动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-067",
+              "zh": "活跃游玩期间，玩家在地面上，背景正在滚动，且玩家未按住 → 玩家角色使用奔跑姿势，双腿位置交替变化。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-flash-v8.3-rubric2-remaining-20260906-102745",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-06T13:54:08+08:00",
+          "finishedAt": "2026-09-06T20:31:48+08:00",
+          "totalDurationMs": 23859928,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-06T13:54:08+08:00",
+              "finishedAt": "2026-09-06T14:21:24+08:00",
+              "durationMs": 1635431,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-06T14:21:24+08:00",
+              "finishedAt": "2026-09-06T20:11:51+08:00",
+              "durationMs": 21027662,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-06T20:11:51+08:00",
+              "finishedAt": "2026-09-06T20:11:52+08:00",
+              "durationMs": 629,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-06T20:11:52+08:00",
+              "finishedAt": "2026-09-06T20:13:21+08:00",
+              "durationMs": 88782,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-06T20:13:21+08:00",
+              "finishedAt": "2026-09-06T20:31:48+08:00",
+              "durationMs": 1107391,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
       "deepseek-v4-pro": {
         "status": "completed",
         "runId": "deepseek-v4-pro-v8.3-rubric2-imported-20260903-235436",
@@ -20189,206 +20389,6 @@
             }
           ]
         }
-      },
-      "deepseek-v4-flash": {
-        "status": "completed",
-        "runId": "deepseek-v4-flash-v8.3-rubric2-remaining-20260906-102745",
-        "score": {
-          "display": "65.79 (+11.84)",
-          "base": 65.79,
-          "passed": 50,
-          "denominator": 76,
-          "dynamic": 9,
-          "dynamicAddition": 11.84,
-          "potential": 77.63
-        },
-        "visualQuality": {
-          "score": 90.47,
-          "maximumScore": 100,
-          "technicalPresentationAverage": 48.05,
-          "renderingStyleAverage": 42.42,
-          "videosScored": 19
-        },
-        "traceCount": 19,
-        "playPath": "games-v8.3/stolen-sword/deepseek-v4-flash/index.html",
-        "previewPath": "previews-v8.3/stolen-sword/deepseek-v4-flash.png",
-        "unmet": {
-          "vlm": [
-            {
-              "id": "target-002",
-              "zh": "玩家冲刺期间在敌人位置创建敌人受击斩击效果 → 一条以被击中敌人为中心的黑色线条沿玩家冲刺方向扩展，并在 0.3 秒内淡出。"
-            },
-            {
-              "id": "target-007",
-              "zh": "关卡转场推进到第二关 → 转场期间玩家角色从场景左侧移入第二关的竖向竹制平台游玩区域。"
-            },
-            {
-              "id": "target-008",
-              "zh": "关卡转场推进到第三关 → 转场期间玩家角色从场景左侧进入，并停在第三关的水面游玩区域附近。"
-            },
-            {
-              "id": "target-011",
-              "zh": "第一关结尾过场到达其对话字幕 → 字幕文本 \"Can't find the theft. I think I lost him.\" 显示在游戏场景上。"
-            },
-            {
-              "id": "target-037",
-              "zh": "活着的切换模式敌人的预定模式事件在该敌人当前正在防御时触发 → 敌人周围的虚线圆形防御壳消失。"
-            },
-            {
-              "id": "target-040",
-              "zh": "玩家与正在防御的敌人发生垂直碰撞 → 玩家角色沿垂直方向从敌人处弹开，并且敌人周围仍保留虚线防御壳。"
-            },
-            {
-              "id": "target-060",
-              "zh": "活跃游玩期间绘制垂直水流区域 → 垂直水流区域由交替排列的半透明白色条带填充。"
-            },
-            {
-              "id": "target-069",
-              "zh": "活跃游玩期间，玩家在地面上并按住以蓄力 → 按住期间，玩家角色切换为蹲伏蓄力姿势。"
-            },
-            {
-              "id": "target-071",
-              "zh": "玩家的生命值降至零，且玩家尚未处于死亡中 → 玩家角色变为死亡姿势，并且一个纯黑色全屏擦除效果开始。"
-            },
-            {
-              "id": "target-072",
-              "zh": "死亡状态之后，玩家的死亡动画完成 → 游玩场景重新开始，玩家角色不再处于死亡姿势，并且玩家用于显示生命值颜色的身体部位再次变为灰色。"
-            }
-          ],
-          "replayTrace": [
-            {
-              "id": "target-005",
-              "zh": "关卡标题叠层完全可见后，玩家开始游戏 → 关卡标题叠层在 1 秒内从完全可见变为透明，然后从游戏画面中消失。",
-              "cause": "源码分析确认未实现"
-            },
-            {
-              "id": "target-017",
-              "zh": "第一关结尾过场中，在 theft 已经穿过场景移动之后，玩家开始追逐移动 → 在 1 秒追逐段落期间，玩家角色从场景左侧跑向右侧，同时背景滚动。",
-              "cause": "源码分析确认未实现"
-            },
-            {
-              "id": "target-024",
-              "zh": "一个链式敌人跟随者在存活期间拥有足够的已记录头部路径历史 → 该跟随型敌人沿头部敌人先前经过的同一轨迹移动，并沿该轨迹保持在其后方的间距。",
-              "cause": "源码分析确认未实现"
-            },
-            {
-              "id": "target-038",
-              "zh": "壳类敌人的生命值降低到 1 且该壳类敌人仍然存活 → 敌人周围不再绘制虚线圆形防御壳。",
-              "cause": "源码错误导致 Trace 不可达"
-            },
-            {
-              "id": "target-052",
-              "zh": "带有水波纹检测的物体穿过水面，且当前激活的波纹效果少于 10 个 → 一个圆形波纹出现在该物体水平位置的水面上，向外扩展，并在出现后 3 秒内消失。",
-              "cause": "源码分析确认未实现"
-            },
-            {
-              "id": "target-066",
-              "zh": "绘制启用反射的山地背景 → 山地景色包含水面以下的反射版本。",
-              "cause": "源码分析确认未实现"
-            },
-            {
-              "id": "target-076",
-              "zh": "条件：letterbox（宽银幕遮幅）叠加层完全显示 → 预期结果：纯黑色水平条覆盖游戏画面的顶部和底部区域，中间的游戏区域在两条黑条之间保持可见。",
-              "cause": "源码分析确认未实现"
-            },
-            {
-              "id": "target-012",
-              "zh": "第二关结尾过场到达其对话字幕 → 字幕文本 \"Still not found the theft.\" 显示在游戏场景上。",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-015",
-              "zh": "第一关结尾过场在对话字幕之后召唤 theft 角色 → theft 角色出现在场景左侧。",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-016",
-              "zh": "第二关结尾过场在对话字幕之后召唤 theft 角色 → theft 角色出现在竖向关卡区域中玩家附近。",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-018",
-              "zh": "第四关结尾过场到达去饱和追逐段落 → 在 1 秒段落期间，场景颜色过渡为灰度，同时玩家向 theft 移动。",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-022",
-              "zh": "一个存活敌人开始滑入移动动作 → 该敌人在滑入动画期间从其起始位置朝滑入目标位置移动。",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-036",
-              "zh": "一个存活的切换模式敌人的预定模式事件触发，且该敌人当前未处于防御状态 → 该敌人周围出现一个虚线圆形防御外壳。",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-046",
-              "zh": "复合敌人的父敌人死亡时，其一个子敌人仍然存活 → 该子敌人开始死亡运动。",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-047",
-              "zh": "第三阶段复合核心敌人在其所有子敌人都已被击杀时仍然存活 → 核心敌人开始死亡运动。",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-067",
-              "zh": "活跃游玩期间，玩家在地面上，背景正在滚动，且玩家未按住 → 玩家角色使用奔跑姿势，双腿位置交替变化。",
-              "cause": "Replay / Trace 证据不足"
-            }
-          ]
-        },
-        "issue": null,
-        "timing": {
-          "runId": "deepseek-v4-flash-v8.3-rubric2-remaining-20260906-102745",
-          "status": "completed",
-          "failedStage": null,
-          "startedAt": "2026-09-06T13:54:08+08:00",
-          "finishedAt": "2026-09-06T20:31:48+08:00",
-          "totalDurationMs": 23859928,
-          "stages": [
-            {
-              "stage": "trace",
-              "startedAt": "2026-09-06T13:54:08+08:00",
-              "finishedAt": "2026-09-06T14:21:24+08:00",
-              "durationMs": 1635431,
-              "status": "completed",
-              "exitCode": 0
-            },
-            {
-              "stage": "select-traces",
-              "startedAt": "2026-09-06T14:21:24+08:00",
-              "finishedAt": "2026-09-06T20:11:51+08:00",
-              "durationMs": 21027662,
-              "status": "completed",
-              "exitCode": 0
-            },
-            {
-              "stage": "optimize-traces",
-              "startedAt": "2026-09-06T20:11:51+08:00",
-              "finishedAt": "2026-09-06T20:11:52+08:00",
-              "durationMs": 629,
-              "status": "completed",
-              "exitCode": 0
-            },
-            {
-              "stage": "replay",
-              "startedAt": "2026-09-06T20:11:52+08:00",
-              "finishedAt": "2026-09-06T20:13:21+08:00",
-              "durationMs": 88782,
-              "status": "completed",
-              "exitCode": 0
-            },
-            {
-              "stage": "judge-video-and-image",
-              "startedAt": "2026-09-06T20:13:21+08:00",
-              "finishedAt": "2026-09-06T20:31:48+08:00",
-              "durationMs": 1107391,
-              "status": "completed",
-              "exitCode": 0
-            }
-          ]
-        }
       }
     },
     "catapoolt": {
@@ -20784,6 +20784,18 @@
           ]
         }
       },
+      "deepseek-v4-flash": {
+        "status": "failed",
+        "runId": "deepseek-v4-flash-v8.3-rubric2-remaining-20260906-102745",
+        "stage": "trace",
+        "score": null,
+        "traceCount": 0,
+        "playPath": null,
+        "previewPath": null,
+        "unmet": null,
+        "issue": "导入源码的确定性构建通过，Trace Phase 1 已生成47条Trace；Phase 2完成第一批Probe Plan后，第二批Probe Instrumentation请求因Compliance Gateway解析bigc.byteintl.net发生DNS I/O timeout并返回HTTP 403，评测在Trace阶段终止，未进入selection、Replay或Judge。",
+        "timing": null
+      },
       "deepseek-v4-pro": {
         "status": "completed",
         "runId": "deepseek-v4-pro-v8.3-rubric2-imported-20260903-235436",
@@ -20935,18 +20947,6 @@
             }
           ]
         }
-      },
-      "deepseek-v4-flash": {
-        "status": "failed",
-        "runId": "deepseek-v4-flash-v8.3-rubric2-remaining-20260906-102745",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "导入源码的确定性构建通过，Trace Phase 1 已生成47条Trace；Phase 2完成第一批Probe Plan后，第二批Probe Instrumentation请求因Compliance Gateway解析bigc.byteintl.net发生DNS I/O timeout并返回HTTP 403，评测在Trace阶段终止，未进入selection、Replay或Judge。",
-        "timing": null
       }
     },
     "super-castle-game": {
@@ -23278,16 +23278,181 @@
         }
       },
       "minimax-m2.7": {
-        "status": "failed",
-        "runId": "minimax-m2.7-v8.3-rubric2-resume-20260903-220846",
-        "stage": "generate-game",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "生成阶段历时约76分24秒；31次流式请求均在返回结束时缺少 [DONE] 或 finish_reason，最终被判定为无效流式响应，未产生可校验的完整游戏项目。",
-        "timing": null
+        "status": "completed",
+        "runId": "minimax-m2.7-v8.3-rubric2-imported-retry-20260905-231213",
+        "score": {
+          "display": "40.00 (+22.86)",
+          "base": 40,
+          "passed": 14,
+          "denominator": 35,
+          "dynamic": 8,
+          "dynamicAddition": 22.86,
+          "potential": 62.86
+        },
+        "visualQuality": {
+          "score": 87.44,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 46.67,
+          "renderingStyleAverage": 40.78,
+          "videosScored": 9
+        },
+        "traceCount": 9,
+        "playPath": "games-v8.3/q1k3/minimax-m2.7/index.html",
+        "previewPath": "previews-v8.3/q1k3/minimax-m2.7.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-005",
+              "zh": "玩家在站在地面上且跳跃已重新启用时按下跳跃 → 第一人称视点从站立高度向上升起。"
+            },
+            {
+              "id": "target-015",
+              "zh": "玩家在门的激活范围内接近一扇未上锁的门 → 门板从关闭位置打开，露出其后的通道。"
+            },
+            {
+              "id": "target-017",
+              "zh": "玩家收集钥匙拾取物 → 钥匙拾取物从场景中消失，并且玩法视图上显示消息“YOU GOT THE KEY!”。"
+            },
+            {
+              "id": "target-024",
+              "zh": "一个可见的可受伤实体的生命值因受到伤害而降至零 → 伤害应用后，该实体原本可见的模型不再被渲染。"
+            },
+            {
+              "id": "target-025",
+              "zh": "一个空闲敌人在其警觉范围内有玩家，且到玩家之间存在无遮挡的视线 → 敌人转向面朝玩家。"
+            },
+            {
+              "id": "target-026",
+              "zh": "一个巡逻敌人在其警觉范围内有玩家，且到玩家之间存在无遮挡的视线 → 敌人转向面朝玩家，而不是继续沿其巡逻路径前进。"
+            },
+            {
+              "id": "target-032",
+              "zh": "一个巡逻敌人与墙壁或平台边缘边界发生水平碰撞 → 敌人反转其巡逻方向，并沿其路径往回行走。"
+            },
+            {
+              "id": "target-033",
+              "zh": "一个 grunt 敌人在面朝玩家时到达其攻击执行状态 → 攻击期间，grunt 处出现枪口闪光灯光。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-010",
+              "zh": "当所选投射物武器已准备好射击且拥有所需弹药时，玩家尝试开火 → 在该次开火尝试期间，一个投射物从玩家的武器发出。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-018",
+              "zh": "玩家携带 nailgun 时收集 nail 弹药拾取物 → nail 弹药拾取物从场景中消失。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-019",
+              "zh": "玩家在携带 grenade launcher（榴弹发射器）时收集 grenade ammunition pickup（榴弹弹药拾取物） → grenade ammunition pickup（榴弹弹药拾取物）从场景中消失。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-023",
+              "zh": "玩家死亡后的重启延迟结束 → 在“YOU DIED”消息显示之后，当前关卡重新加载为其起始布局。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-035",
+              "zh": "一个可见的弹跳实体在其垂直速度高于其弹跳阈值时与表面发生垂直碰撞 → 接触后，该实体立即反转垂直方向，并从该表面反弹离开。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-016",
+              "zh": "一扇打开的门在其重置延迟期间没有玩家处于其激活范围内 → 门板向其关闭位置关回。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-020",
+              "zh": "玩家到达非最终关卡的出口触发器 → 游戏画面从当前关卡布局切换到下一关卡的地图布局。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-021",
+              "zh": "玩家在最后一个可用关卡之后到达关卡完成过渡 → 显示结束消息，标题为“THE END”，文本为“THANKS FOR PLAYING ❤”，并且可见的生命值和弹药 HUD 文本区域为空白。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-022",
+              "zh": "玩家的生命值因受到伤害而降至零 → 游戏画面上方显示居中的叠加消息“YOU DIED”，并且生命值 HUD 显示 0。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-027",
+              "zh": "一个空闲敌人受到非致命伤害 → 敌人转向面朝玩家，并开始向玩家移动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-028",
+              "zh": "一个巡逻敌人受到非致命伤害 → 敌人转向面朝玩家，并开始向玩家移动，而不是继续其巡逻路径。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-034",
+              "zh": "一个 zombie 受到的伤害量未高于其碎尸阈值 → 命中后，zombie 模型仍以其站立敌人形态保持可见。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-002",
+              "zh": "在初始“CLICK TO START”覆盖层显示时点击游戏画布区域 → 中央开始覆盖层不再显示，露出带有屏幕边缘 HUD 区域的玩法视图。",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "minimax-m2.7-v8.3-rubric2-imported-retry-20260905-231213",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-06T20:02:13+08:00",
+          "finishedAt": "2026-09-06T21:48:50+08:00",
+          "totalDurationMs": 6397176,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-06T20:02:13+08:00",
+              "finishedAt": "2026-09-06T20:16:20+08:00",
+              "durationMs": 846491,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-06T20:16:20+08:00",
+              "finishedAt": "2026-09-06T21:39:25+08:00",
+              "durationMs": 4985687,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-06T21:39:25+08:00",
+              "finishedAt": "2026-09-06T21:39:26+08:00",
+              "durationMs": 234,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-06T21:39:26+08:00",
+              "finishedAt": "2026-09-06T21:40:21+08:00",
+              "durationMs": 55467,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-06T21:40:21+08:00",
+              "finishedAt": "2026-09-06T21:48:50+08:00",
+              "durationMs": 509265,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       },
       "gpt-5.4": {
         "status": "completed",
@@ -23385,6 +23550,164 @@
               "startedAt": "2026-09-04T21:51:23+08:00",
               "finishedAt": "2026-09-04T21:58:44+08:00",
               "durationMs": 441645,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
+      "deepseek-v4-pro": {
+        "status": "completed",
+        "runId": "deepseek-v4-pro-v8.3-rubric2-remaining-20260906-102745",
+        "score": {
+          "display": "54.29 (+40.00)",
+          "base": 54.29,
+          "passed": 19,
+          "denominator": 35,
+          "dynamic": 14,
+          "dynamicAddition": 40,
+          "potential": 94.29
+        },
+        "visualQuality": {
+          "score": 86.86,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 46.29,
+          "renderingStyleAverage": 40.57,
+          "videosScored": 7
+        },
+        "traceCount": 7,
+        "playPath": "games-v8.3/q1k3/deepseek-v4-pro/index.html",
+        "previewPath": "previews-v8.3/q1k3/deepseek-v4-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-010",
+              "zh": "当所选投射物武器已准备好射击且拥有所需弹药时，玩家尝试开火 → 在该次开火尝试期间，一个投射物从玩家的武器发出。"
+            },
+            {
+              "id": "target-033",
+              "zh": "一个 grunt 敌人在面朝玩家时到达其攻击执行状态 → 攻击期间，grunt 处出现枪口闪光灯光。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-006",
+              "zh": "玩家向上看至垂直视角限制 → 视图保持限制在最大向上俯仰角，额外的向上视角输入不会使视图旋转超过该限制角度。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-007",
+              "zh": "玩家向下看至垂直视角限制 → 视图保持限制在最大向下俯仰角，额外的向下视角输入不会使视图旋转超过该限制角度。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-012",
+              "zh": "当所选使用弹药的武器弹药为零且其装填等待时间已结束时，玩家尝试开火 → 该次开火尝试不会渲染任何投射物或枪口闪光效果。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-015",
+              "zh": "玩家在门的激活范围内接近一扇未上锁的门 → 门板从关闭位置打开，露出其后的通道。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-016",
+              "zh": "一扇打开的门在其重置延迟期间没有玩家处于其激活范围内 → 门板向其关闭位置关回。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-022",
+              "zh": "玩家的生命值因受到伤害而降至零 → 游戏画面上方显示居中的叠加消息“YOU DIED”，并且生命值 HUD 显示 0。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-023",
+              "zh": "玩家死亡后的重启延迟结束 → 在“YOU DIED”消息显示之后，当前关卡重新加载为其起始布局。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-024",
+              "zh": "一个可见的可受伤实体的生命值因受到伤害而降至零 → 伤害应用后，该实体原本可见的模型不再被渲染。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-027",
+              "zh": "一个空闲敌人受到非致命伤害 → 敌人转向面朝玩家，并开始向玩家移动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-028",
+              "zh": "一个巡逻敌人受到非致命伤害 → 敌人转向面朝玩家，并开始向玩家移动，而不是继续其巡逻路径。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-030",
+              "zh": "一个巡逻敌人在其状态更新期间，玩家位于其警觉范围之外 → 敌人继续沿其巡逻路径前进，并且不会转向玩家或直接向玩家移动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-032",
+              "zh": "一个巡逻敌人与墙壁或平台边缘边界发生水平碰撞 → 敌人反转其巡逻方向，并沿其路径往回行走。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-034",
+              "zh": "一个 zombie 受到的伤害量未高于其碎尸阈值 → 命中后，zombie 模型仍以其站立敌人形态保持可见。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-035",
+              "zh": "一个可见的弹跳实体在其垂直速度高于其弹跳阈值时与表面发生垂直碰撞 → 接触后，该实体立即反转垂直方向，并从该表面反弹离开。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-pro-v8.3-rubric2-remaining-20260906-102745",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-06T11:25:56+08:00",
+          "finishedAt": "2026-09-06T13:06:30+08:00",
+          "totalDurationMs": 6033905,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-06T11:25:56+08:00",
+              "finishedAt": "2026-09-06T11:37:22+08:00",
+              "durationMs": 685978,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-06T11:37:22+08:00",
+              "finishedAt": "2026-09-06T12:58:31+08:00",
+              "durationMs": 4868432,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-06T12:58:31+08:00",
+              "finishedAt": "2026-09-06T12:58:31+08:00",
+              "durationMs": 213,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-06T12:58:31+08:00",
+              "finishedAt": "2026-09-06T13:01:02+08:00",
+              "durationMs": 151399,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-06T13:01:02+08:00",
+              "finishedAt": "2026-09-06T13:06:30+08:00",
+              "durationMs": 327852,
               "status": "completed",
               "exitCode": 0
             }
@@ -23632,164 +23955,6 @@
               "startedAt": "2026-09-05T23:15:19+08:00",
               "finishedAt": "2026-09-05T23:16:42+08:00",
               "durationMs": 82745,
-              "status": "completed",
-              "exitCode": 0
-            }
-          ]
-        }
-      },
-      "deepseek-v4-pro": {
-        "status": "completed",
-        "runId": "deepseek-v4-pro-v8.3-rubric2-remaining-20260906-102745",
-        "score": {
-          "display": "54.29 (+40.00)",
-          "base": 54.29,
-          "passed": 19,
-          "denominator": 35,
-          "dynamic": 14,
-          "dynamicAddition": 40,
-          "potential": 94.29
-        },
-        "visualQuality": {
-          "score": 86.86,
-          "maximumScore": 100,
-          "technicalPresentationAverage": 46.29,
-          "renderingStyleAverage": 40.57,
-          "videosScored": 7
-        },
-        "traceCount": 7,
-        "playPath": "games-v8.3/q1k3/deepseek-v4-pro/index.html",
-        "previewPath": "previews-v8.3/q1k3/deepseek-v4-pro.png",
-        "unmet": {
-          "vlm": [
-            {
-              "id": "target-010",
-              "zh": "当所选投射物武器已准备好射击且拥有所需弹药时，玩家尝试开火 → 在该次开火尝试期间，一个投射物从玩家的武器发出。"
-            },
-            {
-              "id": "target-033",
-              "zh": "一个 grunt 敌人在面朝玩家时到达其攻击执行状态 → 攻击期间，grunt 处出现枪口闪光灯光。"
-            }
-          ],
-          "replayTrace": [
-            {
-              "id": "target-006",
-              "zh": "玩家向上看至垂直视角限制 → 视图保持限制在最大向上俯仰角，额外的向上视角输入不会使视图旋转超过该限制角度。",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-007",
-              "zh": "玩家向下看至垂直视角限制 → 视图保持限制在最大向下俯仰角，额外的向下视角输入不会使视图旋转超过该限制角度。",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-012",
-              "zh": "当所选使用弹药的武器弹药为零且其装填等待时间已结束时，玩家尝试开火 → 该次开火尝试不会渲染任何投射物或枪口闪光效果。",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-015",
-              "zh": "玩家在门的激活范围内接近一扇未上锁的门 → 门板从关闭位置打开，露出其后的通道。",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-016",
-              "zh": "一扇打开的门在其重置延迟期间没有玩家处于其激活范围内 → 门板向其关闭位置关回。",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-022",
-              "zh": "玩家的生命值因受到伤害而降至零 → 游戏画面上方显示居中的叠加消息“YOU DIED”，并且生命值 HUD 显示 0。",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-023",
-              "zh": "玩家死亡后的重启延迟结束 → 在“YOU DIED”消息显示之后，当前关卡重新加载为其起始布局。",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-024",
-              "zh": "一个可见的可受伤实体的生命值因受到伤害而降至零 → 伤害应用后，该实体原本可见的模型不再被渲染。",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-027",
-              "zh": "一个空闲敌人受到非致命伤害 → 敌人转向面朝玩家，并开始向玩家移动。",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-028",
-              "zh": "一个巡逻敌人受到非致命伤害 → 敌人转向面朝玩家，并开始向玩家移动，而不是继续其巡逻路径。",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-030",
-              "zh": "一个巡逻敌人在其状态更新期间，玩家位于其警觉范围之外 → 敌人继续沿其巡逻路径前进，并且不会转向玩家或直接向玩家移动。",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-032",
-              "zh": "一个巡逻敌人与墙壁或平台边缘边界发生水平碰撞 → 敌人反转其巡逻方向，并沿其路径往回行走。",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-034",
-              "zh": "一个 zombie 受到的伤害量未高于其碎尸阈值 → 命中后，zombie 模型仍以其站立敌人形态保持可见。",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-035",
-              "zh": "一个可见的弹跳实体在其垂直速度高于其弹跳阈值时与表面发生垂直碰撞 → 接触后，该实体立即反转垂直方向，并从该表面反弹离开。",
-              "cause": "Replay / Trace 证据不足"
-            }
-          ]
-        },
-        "issue": null,
-        "timing": {
-          "runId": "deepseek-v4-pro-v8.3-rubric2-remaining-20260906-102745",
-          "status": "completed",
-          "failedStage": null,
-          "startedAt": "2026-09-06T11:25:56+08:00",
-          "finishedAt": "2026-09-06T13:06:30+08:00",
-          "totalDurationMs": 6033905,
-          "stages": [
-            {
-              "stage": "trace",
-              "startedAt": "2026-09-06T11:25:56+08:00",
-              "finishedAt": "2026-09-06T11:37:22+08:00",
-              "durationMs": 685978,
-              "status": "completed",
-              "exitCode": 0
-            },
-            {
-              "stage": "select-traces",
-              "startedAt": "2026-09-06T11:37:22+08:00",
-              "finishedAt": "2026-09-06T12:58:31+08:00",
-              "durationMs": 4868432,
-              "status": "completed",
-              "exitCode": 0
-            },
-            {
-              "stage": "optimize-traces",
-              "startedAt": "2026-09-06T12:58:31+08:00",
-              "finishedAt": "2026-09-06T12:58:31+08:00",
-              "durationMs": 213,
-              "status": "completed",
-              "exitCode": 0
-            },
-            {
-              "stage": "replay",
-              "startedAt": "2026-09-06T12:58:31+08:00",
-              "finishedAt": "2026-09-06T13:01:02+08:00",
-              "durationMs": 151399,
-              "status": "completed",
-              "exitCode": 0
-            },
-            {
-              "stage": "judge-video-and-image",
-              "startedAt": "2026-09-06T13:01:02+08:00",
-              "finishedAt": "2026-09-06T13:06:30+08:00",
-              "durationMs": 327852,
               "status": "completed",
               "exitCode": 0
             }
@@ -24281,195 +24446,6 @@
           ]
         }
       },
-      "qwen3.8-max": {
-        "status": "completed",
-        "runId": "qwen3.8-max-v8.3-rubric2-imported-20260904-143200",
-        "score": {
-          "display": "42.11 (+44.74)",
-          "base": 42.11,
-          "passed": 16,
-          "denominator": 38,
-          "dynamic": 17,
-          "dynamicAddition": 44.74,
-          "potential": 86.84
-        },
-        "visualQuality": {
-          "score": 75.17,
-          "maximumScore": 100,
-          "technicalPresentationAverage": 41.5,
-          "renderingStyleAverage": 33.67,
-          "videosScored": 6
-        },
-        "traceCount": 6,
-        "playPath": "games-v8.3/island-not-found/qwen3.8-max/index.html",
-        "previewPath": "previews-v8.3/island-not-found/qwen3.8-max.png",
-        "unmet": {
-          "vlm": [],
-          "replayTrace": [
-            {
-              "id": "target-019",
-              "zh": "The player activates the interaction control while focused on the available oilrig wheel from its rejected side → The big wheel remains visible at its location, and the oilrig bridge remains visible.",
-              "cause": "源码分析确认未实现"
-            },
-            {
-              "id": "target-024",
-              "zh": "The player activates the interaction control while focused on the bottom lift button while the elevator is at its bottom position and operational → The elevator begins moving upward from the bottom landing.",
-              "cause": "源码错误导致 Trace 不可达"
-            },
-            {
-              "id": "target-029",
-              "zh": "The antenna console screen is visible before the floppy disk has been inserted → The console screen shows \"⬣ JS13K Modular Bios v.13\", \"Memory Core: 132020K\", \"Launching xx142-b2.exe\", \"Antenna self test\", \"Activating radio\", three \"OK\" status labels, a \"FAIL\" status label, \"💾 ERROR 404 - data disk not found\", and \"Insert floppy disk and press E to continue\".",
-              "cause": "源码错误导致 Trace 不可达"
-            },
-            {
-              "id": "target-030",
-              "zh": "The player activates the interaction control while focused on the antenna console after the antenna is rotating, the floppy disk is held, and the minigame is inactive → The view moves to the antenna console area, and the console screen shows a bordered panel with the text \"Loading data disk...\".",
-              "cause": "源码分析确认未实现"
-            },
-            {
-              "id": "target-038",
-              "zh": "The delayed blank gameplay text at the start of the ending reaches its expiration while the ending message is queued → An ending overlay appears with the text \"The End\", \"you found your way out\", \"Game by Salvatore Previti & Ben Clark\", and \"Thank you for playing!\"",
-              "cause": "源码分析确认未实现"
-            },
-            {
-              "id": "target-002",
-              "zh": "Pointer lock is released during non-debug gameplay after the game has already been started → The main menu overlay appears on top of the game view, and the main menu's primary start button is labeled \"Resume Game\".",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-015",
-              "zh": "The player activates the interaction control while focused on the available floppy disk → The floppy disk is no longer visible at its pickup location.",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-017",
-              "zh": "The player activates the interaction control while focused on the antenna door with the antenna key available → The antenna door is no longer visible at its closed position, and the doorway begins opening.",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-020",
-              "zh": "The player activates the interaction control while focused on the prison door with the key available → The prison door is no longer visible at its closed position.",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-021",
-              "zh": "The player activates the interaction control while focused on the prison door without the key available → The prison door remains visible at its closed position.",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-023",
-              "zh": "The player focuses the interaction view on the bottom lift button while the elevator is at its bottom position and operational → An interaction prompt reading \"Activate\" is displayed.",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-025",
-              "zh": "The player activates the interaction control while focused on the top lift button while the elevator is at its top position and operational → The elevator begins moving downward from the top landing.",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-026",
-              "zh": "The player activates the interaction control while focused on the bottom lift button while the elevator is out of order → The elevator remains at its current landing with no visible lift movement.",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-027",
-              "zh": "An upward elevator movement reaches the top landing → The elevator is visible at the top landing and stops moving upward.",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-028",
-              "zh": "A downward elevator movement reaches the bottom landing → The elevator is visible at the bottom landing and stops moving downward.",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-031",
-              "zh": "The minigame loading sequence completes while the console is being viewed → The console display shows \"Satellite Frequency Alignment\", \"Frequency\", and \"Phase\", with a rectangular tuning area, a red target trace, a green tuning trace, and a round marker inside the tuning area.",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-032",
-              "zh": "An accepted minigame adjustment increases frequency while the minigame is active → The minigame screen marker moves downward on the console display.",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-033",
-              "zh": "An accepted minigame adjustment decreases frequency while the minigame is active → The minigame screen marker moves upward on the console display.",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-034",
-              "zh": "An accepted minigame adjustment increases phase while the minigame is active → The minigame screen marker moves right on the console display.",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-035",
-              "zh": "An accepted minigame adjustment decreases phase while the minigame is active → The minigame screen marker moves left on the console display.",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-036",
-              "zh": "An accepted minigame adjustment sets the active minigame to frequency 70 and phase 300 → The console display shows a completion panel with the text \"🛰️ Satellite Frequency Found\" and \"Autonomous Submarine Activated\", and a submarine is visible and moves in the scene.",
-              "cause": "Replay / Trace 证据不足"
-            },
-            {
-              "id": "target-037",
-              "zh": "The player completes the final interaction that exits the game world → The view changes to a high viewpoint looking across the island and water, and the submarine begins moving in the scene.",
-              "cause": "Replay / Trace 证据不足"
-            }
-          ]
-        },
-        "issue": null,
-        "timing": {
-          "runId": "qwen3.8-max-v8.3-rubric2-imported-20260904-143200",
-          "status": "completed",
-          "failedStage": null,
-          "startedAt": "2026-09-05T23:16:42+08:00",
-          "finishedAt": "2026-09-06T01:49:07+08:00",
-          "totalDurationMs": 9145067,
-          "stages": [
-            {
-              "stage": "trace",
-              "startedAt": "2026-09-05T23:16:42+08:00",
-              "finishedAt": "2026-09-05T23:29:21+08:00",
-              "durationMs": 759324,
-              "status": "completed",
-              "exitCode": 0
-            },
-            {
-              "stage": "select-traces",
-              "startedAt": "2026-09-05T23:29:21+08:00",
-              "finishedAt": "2026-09-06T01:43:46+08:00",
-              "durationMs": 8064722,
-              "status": "completed",
-              "exitCode": 0
-            },
-            {
-              "stage": "optimize-traces",
-              "startedAt": "2026-09-06T01:43:46+08:00",
-              "finishedAt": "2026-09-06T01:43:46+08:00",
-              "durationMs": 269,
-              "status": "completed",
-              "exitCode": 0
-            },
-            {
-              "stage": "replay",
-              "startedAt": "2026-09-06T01:43:46+08:00",
-              "finishedAt": "2026-09-06T01:45:57+08:00",
-              "durationMs": 130880,
-              "status": "completed",
-              "exitCode": 0
-            },
-            {
-              "stage": "judge-video-and-image",
-              "startedAt": "2026-09-06T01:45:57+08:00",
-              "finishedAt": "2026-09-06T01:49:07+08:00",
-              "durationMs": 189839,
-              "status": "completed",
-              "exitCode": 0
-            }
-          ]
-        }
-      },
       "deepseek-v4-pro": {
         "status": "completed",
         "runId": "deepseek-v4-pro-v8.3-rubric2-remaining-20260906-102745",
@@ -24723,6 +24699,195 @@
               "startedAt": "2026-09-06T14:57:40+08:00",
               "finishedAt": "2026-09-06T14:58:55+08:00",
               "durationMs": 74581,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
+      "qwen3.8-max": {
+        "status": "completed",
+        "runId": "qwen3.8-max-v8.3-rubric2-imported-20260904-143200",
+        "score": {
+          "display": "42.11 (+44.74)",
+          "base": 42.11,
+          "passed": 16,
+          "denominator": 38,
+          "dynamic": 17,
+          "dynamicAddition": 44.74,
+          "potential": 86.84
+        },
+        "visualQuality": {
+          "score": 75.17,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 41.5,
+          "renderingStyleAverage": 33.67,
+          "videosScored": 6
+        },
+        "traceCount": 6,
+        "playPath": "games-v8.3/island-not-found/qwen3.8-max/index.html",
+        "previewPath": "previews-v8.3/island-not-found/qwen3.8-max.png",
+        "unmet": {
+          "vlm": [],
+          "replayTrace": [
+            {
+              "id": "target-019",
+              "zh": "The player activates the interaction control while focused on the available oilrig wheel from its rejected side → The big wheel remains visible at its location, and the oilrig bridge remains visible.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-024",
+              "zh": "The player activates the interaction control while focused on the bottom lift button while the elevator is at its bottom position and operational → The elevator begins moving upward from the bottom landing.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-029",
+              "zh": "The antenna console screen is visible before the floppy disk has been inserted → The console screen shows \"⬣ JS13K Modular Bios v.13\", \"Memory Core: 132020K\", \"Launching xx142-b2.exe\", \"Antenna self test\", \"Activating radio\", three \"OK\" status labels, a \"FAIL\" status label, \"💾 ERROR 404 - data disk not found\", and \"Insert floppy disk and press E to continue\".",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-030",
+              "zh": "The player activates the interaction control while focused on the antenna console after the antenna is rotating, the floppy disk is held, and the minigame is inactive → The view moves to the antenna console area, and the console screen shows a bordered panel with the text \"Loading data disk...\".",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-038",
+              "zh": "The delayed blank gameplay text at the start of the ending reaches its expiration while the ending message is queued → An ending overlay appears with the text \"The End\", \"you found your way out\", \"Game by Salvatore Previti & Ben Clark\", and \"Thank you for playing!\"",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-002",
+              "zh": "Pointer lock is released during non-debug gameplay after the game has already been started → The main menu overlay appears on top of the game view, and the main menu's primary start button is labeled \"Resume Game\".",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-015",
+              "zh": "The player activates the interaction control while focused on the available floppy disk → The floppy disk is no longer visible at its pickup location.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-017",
+              "zh": "The player activates the interaction control while focused on the antenna door with the antenna key available → The antenna door is no longer visible at its closed position, and the doorway begins opening.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-020",
+              "zh": "The player activates the interaction control while focused on the prison door with the key available → The prison door is no longer visible at its closed position.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-021",
+              "zh": "The player activates the interaction control while focused on the prison door without the key available → The prison door remains visible at its closed position.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-023",
+              "zh": "The player focuses the interaction view on the bottom lift button while the elevator is at its bottom position and operational → An interaction prompt reading \"Activate\" is displayed.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-025",
+              "zh": "The player activates the interaction control while focused on the top lift button while the elevator is at its top position and operational → The elevator begins moving downward from the top landing.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-026",
+              "zh": "The player activates the interaction control while focused on the bottom lift button while the elevator is out of order → The elevator remains at its current landing with no visible lift movement.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-027",
+              "zh": "An upward elevator movement reaches the top landing → The elevator is visible at the top landing and stops moving upward.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-028",
+              "zh": "A downward elevator movement reaches the bottom landing → The elevator is visible at the bottom landing and stops moving downward.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-031",
+              "zh": "The minigame loading sequence completes while the console is being viewed → The console display shows \"Satellite Frequency Alignment\", \"Frequency\", and \"Phase\", with a rectangular tuning area, a red target trace, a green tuning trace, and a round marker inside the tuning area.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-032",
+              "zh": "An accepted minigame adjustment increases frequency while the minigame is active → The minigame screen marker moves downward on the console display.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-033",
+              "zh": "An accepted minigame adjustment decreases frequency while the minigame is active → The minigame screen marker moves upward on the console display.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-034",
+              "zh": "An accepted minigame adjustment increases phase while the minigame is active → The minigame screen marker moves right on the console display.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-035",
+              "zh": "An accepted minigame adjustment decreases phase while the minigame is active → The minigame screen marker moves left on the console display.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-036",
+              "zh": "An accepted minigame adjustment sets the active minigame to frequency 70 and phase 300 → The console display shows a completion panel with the text \"🛰️ Satellite Frequency Found\" and \"Autonomous Submarine Activated\", and a submarine is visible and moves in the scene.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-037",
+              "zh": "The player completes the final interaction that exits the game world → The view changes to a high viewpoint looking across the island and water, and the submarine begins moving in the scene.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "qwen3.8-max-v8.3-rubric2-imported-20260904-143200",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-05T23:16:42+08:00",
+          "finishedAt": "2026-09-06T01:49:07+08:00",
+          "totalDurationMs": 9145067,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-05T23:16:42+08:00",
+              "finishedAt": "2026-09-05T23:29:21+08:00",
+              "durationMs": 759324,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-05T23:29:21+08:00",
+              "finishedAt": "2026-09-06T01:43:46+08:00",
+              "durationMs": 8064722,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-06T01:43:46+08:00",
+              "finishedAt": "2026-09-06T01:43:46+08:00",
+              "durationMs": 269,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-06T01:43:46+08:00",
+              "finishedAt": "2026-09-06T01:45:57+08:00",
+              "durationMs": 130880,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-06T01:45:57+08:00",
+              "finishedAt": "2026-09-06T01:49:07+08:00",
+              "durationMs": 189839,
               "status": "completed",
               "exitCode": 0
             }
