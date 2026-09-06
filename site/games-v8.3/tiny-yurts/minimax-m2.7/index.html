@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiny Yurts</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      background: #4a7c4e;
+    }
+    #game-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    #menu-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      color: white;
+      text-align: center;
+    }
+    #menu-overlay h1 {
+      font-size: 48px;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    #menu-overlay .tip {
+      font-size: 16px;
+      margin-bottom: 5px;
+      opacity: 0.9;
+    }
+    #menu-overlay button {
+      padding: 15px 30px;
+      font-size: 18px;
+      margin: 10px;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      background: #6b8e6b;
+      color: white;
+      transition: background 0.3s;
+    }
+    #menu-overlay button:hover {
+      background: #7ca07c;
+    }
+    #game-over-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+      color: white;
+      text-align: center;
+    }
+    #game-over-overlay h2 {
+      font-size: 42px;
+      margin-bottom: 20px;
+      color: #ff6b6b;
+    }
+    #game-over-overlay .message {
+      font-size: 18px;
+      margin-bottom: 30px;
+      max-width: 400px;
+    }
+    #game-over-overlay .stats {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 30px;
+      font-size: 20px;
+    }
+    #game-over-overlay .score {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    #game-over-overlay button {
+      padding: 12px 25px;
+      font-size: 16px;
+      margin: 8px;
+      cursor: pointer;
+      border: none;
+      border-radius: 6px;
+      background: #6b8e6b;
+      color: white;
+      transition: background 0.3s;
+    }
+    #game-over-overlay button:hover {
+      background: #7ca07c;
+    }
+    #hud {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      pointer-events: none;
+      z-index: 50;
+    }
+    #hud-left, #hud-right, #hud-center {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      pointer-events: auto;
+    }
+    .hud-item {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .hud-icon {
+      width: 20px;
+      height: 20px;
+    }
+    #clock {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #clock-month {
+      font-size: 12px;
+      font-weight: bold;
+    }
+    #pause-btn {
+      width: 40px;
+      height: 40px;
+      border: none;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.9);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+    #grid-btn, #red-grid-btn {
+      width: 36px;
+      height: 36px;
+      border: none;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.9);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+    .hidden { display: none !important; }
+  </style>
+  <script type="module" crossorigin src="./assets/index-DVlJpLoW.js"></script>
+</head>
+<body>
+  <div id="game-container">
+    <svg id="playfield" width="1280" height="720"></svg>
+    
+    <div id="menu-overlay">
+      <h1>Tiny Yurts</h1>
+      <p class="tip">Tip: Left click & drag to connect yurts to</p>
+      <p class="tip">farms, or delete paths with right click.</p>
+      <div style="margin-top: 20px;">
+        <button id="fullscreen-btn">Fullscreen</button>
+        <button id="start-btn">Start</button>
+      </div>
+    </div>
+    
+    <div id="game-over-overlay">
+      <h2>Game Over</h2>
+      <p class="message">Too few people could tend to this farm in time.</p>
+      <div class="score"></div>
+      <div class="stats"></div>
+      <button id="overlay-toggle-btn">Overlay On/Off</button>
+      <div>
+        <button id="restart-btn">Restart</button>
+        <button id="menu-btn">Menu</button>
+      </div>
+    </div>
+    
+    <div id="hud" class="hidden">
+      <div id="hud-left">
+        <div class="hud-item" id="ox-counter">
+          <span>🐂</span>
+          <span id="ox-count">0</span>
+        </div>
+        <div class="hud-item" id="goat-counter">
+          <span>🐐</span>
+          <span id="goat-count">0</span>
+        </div>
+        <div class="hud-item" id="fish-counter">
+          <span>🐟</span>
+          <span id="fish-count">0</span>
+        </div>
+      </div>
+      <div id="hud-center">
+        <div class="hud-item" id="clock">
+          <svg class="hud-icon" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" fill="none" stroke="#333" stroke-width="2"/>
+            <line id="clock-hand" x1="12" y1="12" x2="12" y2="5" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span id="clock-month">Jan</span>
+        </div>
+        <div class="hud-item" id="path-tile-counter">
+          <span>🛤️</span>
+          <span id="path-count">18</span>
+        </div>
+      </div>
+      <div id="hud-right">
+        <button id="red-grid-btn" title="Toggle delete mode">⊠</button>
+        <button id="grid-btn" title="Toggle grid">▦</button>
+        <button id="pause-btn" title="Pause">⏸</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
