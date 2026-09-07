@@ -23884,30 +23884,111 @@
         }
       },
       "deepseek-v4-flash": {
-        "status": "failed",
-        "runId": "deepseek-v4-flash-v8.3-rubric2-remaining-r2-20260906-220600",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "导入源码的依赖安装、Vite构建和确定性运行检查均通过，Trace Phase 1 已生成65条Trace；进入Phase 2第一批Probe Plan时Harness被terminated，日志中没有HTTP、认证或源码运行错误，未进入selection、Replay或Judge。",
+        "status": "completed",
+        "runId": "deepseek-v4-flash-v8.3-rubric2-infra-failure-rerun-20260907-105553",
+        "score": {
+          "display": "89.23 (+3.08)",
+          "base": 89.23,
+          "passed": 58,
+          "denominator": 65,
+          "dynamic": 2,
+          "dynamicAddition": 3.08,
+          "potential": 92.31
+        },
+        "visualQuality": {
+          "score": 87.6,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48,
+          "renderingStyleAverage": 39.6,
+          "videosScored": 20
+        },
+        "traceCount": 20,
+        "playPath": "games-v8.3/witchcat/deepseek-v4-flash/index.html",
+        "previewPath": "previews-v8.3/witchcat/deepseek-v4-flash.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-020",
+              "zh": "角色的移动目的地与水面图块重叠，且处于游戏进行中 → 角色开始下落动画，角色朝水面移动，同时角色精灵缩小。"
+            },
+            {
+              "id": "target-024",
+              "zh": "角色在非无敌状态下与移动的追踪陷阱重叠 → 角色精灵开始无敌闪烁效果，在正常调色板和冬季配色调色板之间交替。"
+            },
+            {
+              "id": "target-029",
+              "zh": "玩家在游戏进行中执行动作输入，且火球发射被接受，并且角色朝上 → 一个火球精灵出现在角色位置并向上移动。"
+            },
+            {
+              "id": "target-038",
+              "zh": "玩家执行动作输入，且一个未激活的 seeker 陷阱位于角色下方、与角色处于同一条无遮挡的列中 → 该 seeker 陷阱开始向上移动，朝向角色所在的行。"
+            },
+            {
+              "id": "target-060",
+              "zh": "玩家在接触春季季节宝珠时执行操作输入 → 被接触的宝珠精灵从地图上消失，右上角心形显示相比输入前立即增加一个心形图标，并且黑色对话面板以两行文本显示“IN SPRING, STONE FLOWERS”和“BLOOM”。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-062",
+              "zh": "为一只已保存收集状态为未收集的猫填充关卡时 → 猫精灵显示在其救援位置，并且标牌面板显示在该猫的已收集角落位置。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-018",
+              "zh": "玩家尝试向上移动到世界边界之外 → 角色保持在可见世界顶部边缘以内，并且不会进入地图边界以外的任何区域。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
         "timing": {
-          "runId": "deepseek-v4-flash-v8.3-rubric2-remaining-r2-20260906-220600",
-          "status": "failed",
-          "failedStage": "trace",
-          "startedAt": "2026-09-06T23:55:32+08:00",
-          "finishedAt": "2026-09-07T00:11:54+08:00",
-          "totalDurationMs": 981920,
+          "runId": "deepseek-v4-flash-v8.3-rubric2-infra-failure-rerun-20260907-105553",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-07T13:57:11+08:00",
+          "finishedAt": "2026-09-07T15:59:28+08:00",
+          "totalDurationMs": 7337321,
           "stages": [
             {
               "stage": "trace",
-              "startedAt": "2026-09-06T23:55:32+08:00",
-              "finishedAt": "2026-09-07T00:11:54+08:00",
-              "durationMs": 981904,
-              "status": "failed",
-              "exitCode": 1
+              "startedAt": "2026-09-07T13:57:11+08:00",
+              "finishedAt": "2026-09-07T14:20:55+08:00",
+              "durationMs": 1423444,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-07T14:20:55+08:00",
+              "finishedAt": "2026-09-07T15:34:22+08:00",
+              "durationMs": 4407323,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-07T15:34:22+08:00",
+              "finishedAt": "2026-09-07T15:34:22+08:00",
+              "durationMs": 529,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-07T15:34:22+08:00",
+              "finishedAt": "2026-09-07T15:41:08+08:00",
+              "durationMs": 405688,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-07T15:41:08+08:00",
+              "finishedAt": "2026-09-07T15:59:28+08:00",
+              "durationMs": 1100303,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }
