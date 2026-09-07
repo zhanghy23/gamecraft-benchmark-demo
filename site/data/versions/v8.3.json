@@ -23040,6 +23040,184 @@
           ]
         }
       },
+      "deepseek-v4-flash": {
+        "status": "completed",
+        "runId": "deepseek-v4-flash-v8.3-rubric2-remaining-r2-20260906-220600",
+        "score": {
+          "display": "44.74 (+5.26)",
+          "base": 44.74,
+          "passed": 17,
+          "denominator": 38,
+          "dynamic": 2,
+          "dynamicAddition": 5.26,
+          "potential": 50
+        },
+        "visualQuality": {
+          "score": 92,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.44,
+          "renderingStyleAverage": 43.56,
+          "videosScored": 9
+        },
+        "traceCount": 9,
+        "playPath": "games-v8.3/the-neatness/deepseek-v4-flash/index.html",
+        "previewPath": "previews-v8.3/the-neatness/deepseek-v4-flash.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-002",
+              "zh": "新选择的或推进到的非初始关卡进入开场阶段 → 在关卡显示为可游玩状态之前的关卡转场期间，游戏玩法视图上绘制有对角线幕布遮罩。"
+            },
+            {
+              "id": "target-003",
+              "zh": "当前关卡在失败或触发重开的状态之后被重新开始 → 关卡恢复到其重置后的谜题布局，并且游戏玩法视图上显示重新开始消息遮罩。"
+            },
+            {
+              "id": "target-020",
+              "zh": "在镜像谜题关卡的运行游玩期间绘制一笔线条 → 该笔线条绘制在棋盘左侧，并且棋盘右侧绘制出一笔与其镜像匹配的线条。"
+            },
+            {
+              "id": "target-021",
+              "zh": "镜像谜题关卡以其重置布局显示 → 谜题棋盘的右半部分填充为灰色反射区域背景，而左半部分在格块和热点之外显示正常的黑色棋盘背景。"
+            },
+            {
+              "id": "target-028",
+              "zh": "在包含真菌的关卡中，绘制动作添加了新的空单元格颜料 → 添加颜料后，真菌区域内至少有一个真菌颜色的单元格出现或发生变化。"
+            },
+            {
+              "id": "target-036",
+              "zh": "谜题棋盘上显示一个已满足的入口点热点 → 该热点仍由其骷髅精灵标记，同时其涂画区域显示为已连接颜料颜色。"
+            },
+            {
+              "id": "target-037",
+              "zh": "谜题棋盘上显示一个已满足的出口点热点 → 该热点保持由其坟墓精灵图标记，同时其涂色区域显示为已连接的涂料颜色。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-004",
+              "zh": "在关卡中重置控制处于启用状态时释放该控制 → 当前关卡恢复到其重置后的谜题布局，并从棋盘上移除玩家绘制的连接。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-005",
+              "zh": "结尾关卡被显示 → 屏幕上部附近显示文本 \"Thank you for playing!\"，并且屏幕下部附近显示文本 \"But our princess is in another castle!\"。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-006",
+              "zh": "一个非最终的活动谜题在运行游玩期间达到已解开状态 → 对角线幕布转场在谜题视图上闭合。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-007",
+              "zh": "最终常规关卡在运行游玩期间达到已解开状态 → 转场之后显示关卡选择样式的画面，而不是另一个带编号的常规谜题关卡。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-009",
+              "zh": "在未启用 Coil 访问权限的情况下，从关卡选择画面选择一个锁定的 Coil 关卡 → 关卡选择视图上出现重新开始消息遮罩，并且关卡选择画面仍在其后可见，且没有幕布转场。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-010",
+              "zh": "在关卡选择画面上满足关卡选择入口点之后，连接一个可选择的已解锁关卡出口 → 对角线幕布转场开始，并且转场之后关卡选择视图被所选关卡的谜题棋盘替换。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-011",
+              "zh": "在关卡中关卡选择工具栏按钮处于启用状态时释放该按钮 → 对角线幕布转场在当前关卡上闭合，然后显示关卡选择画面。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-022",
+              "zh": "当关卡不处于运行阶段时请求绘制一笔线条 → 谜题棋盘上不会因该请求出现新的已绘制连接或颜料笔迹。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-025",
+              "zh": "在运行游玩期间，一笔绘制线条经过一个已经连接的颜料单元格 → 该已经连接的单元格保持其已连接颜色，并且不会在其上绘制新的未连接颜料标记。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-027",
+              "zh": "在普通谜题关卡中，两个兼容热点之间完成一条新连接 → 已连接的涂画路径以及这两个兼容热点变为已连接颜料颜色。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-030",
+              "zh": "在运行游玩期间，一笔绘制线条经过一个真菌单元格 → 该真菌单元格保持其真菌颜色，并且该单元格上不会出现颜料标记。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-038",
+              "zh": "结局美术以完全不透明度渲染 → 棋盘中心附近显示一个灰色矩形面板，且公主精灵图在其中可见。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-008",
+              "zh": "在常规谜题关卡中完成两个不兼容热点之间的连接 → 游戏玩法视图上出现重新开始消息遮罩，并且棋盘恢复到其重置后的谜题布局。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-029",
+              "zh": "在运行游玩期间，一笔绘制线条经过一个实心棋盘格块 → 该格块保持其实心格块颜色，并且该格块上不会出现颜料标记。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-flash-v8.3-rubric2-remaining-r2-20260906-220600",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-07T00:11:54+08:00",
+          "finishedAt": "2026-09-07T01:30:30+08:00",
+          "totalDurationMs": 4715602,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-07T00:11:54+08:00",
+              "finishedAt": "2026-09-07T00:26:28+08:00",
+              "durationMs": 874372,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-07T00:26:28+08:00",
+              "finishedAt": "2026-09-07T01:23:40+08:00",
+              "durationMs": 3432019,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-07T01:23:40+08:00",
+              "finishedAt": "2026-09-07T01:23:41+08:00",
+              "durationMs": 249,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-07T01:23:41+08:00",
+              "finishedAt": "2026-09-07T01:24:11+08:00",
+              "durationMs": 30417,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-07T01:24:11+08:00",
+              "finishedAt": "2026-09-07T01:30:30+08:00",
+              "durationMs": 378515,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
       "deepseek-v4-pro": {
         "status": "failed",
         "runId": "deepseek-v4-pro-v8.3-rubric2-remaining-20260906-102745",
