@@ -22064,16 +22064,229 @@
         }
       },
       "deepseek-v4-flash": {
-        "status": "failed",
-        "runId": "deepseek-v4-flash-v8.3-rubric2-remaining-20260906-102745",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "导入源码的确定性构建通过，Trace Phase 1 已生成47条Trace；Phase 2完成第一批Probe Plan后，第二批Probe Instrumentation请求因Compliance Gateway解析bigc.byteintl.net发生DNS I/O timeout并返回HTTP 403，评测在Trace阶段终止，未进入selection、Replay或Judge。",
-        "timing": null
+        "status": "completed",
+        "runId": "deepseek-v4-flash-v8.3-rubric2-infra-failure-rerun-20260907-105553",
+        "score": {
+          "display": "34.04 (+19.15)",
+          "base": 34.04,
+          "passed": 16,
+          "denominator": 47,
+          "dynamic": 9,
+          "dynamicAddition": 19.15,
+          "potential": 53.19
+        },
+        "visualQuality": {
+          "score": 90.09,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.55,
+          "renderingStyleAverage": 41.55,
+          "videosScored": 11
+        },
+        "traceCount": 11,
+        "playPath": "games-v8.3/catapoolt/deepseek-v4-flash/index.html",
+        "previewPath": "previews-v8.3/catapoolt/deepseek-v4-flash.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-002",
+              "zh": "已进入开始菜单场景 → 画布显示风格化标题文字 \"🅒🅐🅣🅐🅟🅞🅞🅛🅣\"。"
+            },
+            {
+              "id": "target-013",
+              "zh": "活跃游戏过程中猫被拖拽 → 拖拽期间，猫被从拖拽前的位置拉开，并且其头部被渲染在拖拽前垂直对齐位置的下方。"
+            },
+            {
+              "id": "target-014",
+              "zh": "猫被从其身体位置拖拽得足够远以显示弹弓预览 → 从猫朝拖拽方向绘制一个半透明蓝色弹弓锥形区域，并在游戏区域中绘制一条蓝色预测轨迹弧线。"
+            },
+            {
+              "id": "target-018",
+              "zh": "猫在飞行过程中高于地面时被渲染 → 猫身体被绘制在地面上的独立椭圆阴影上方，并且身体与阴影之间有可见的垂直间隙。"
+            },
+            {
+              "id": "target-019",
+              "zh": "飞行中的猫到达地面时仍有剩余弹跳能力，并且垂直撞击速度高于弹跳阈值 → 猫接触地面后再次向上升起，而不是停下来。"
+            },
+            {
+              "id": "target-028",
+              "zh": "位于地面高度的猫接触一只老鼠，且其膨胀等级低于最大值 → 被接触的老鼠不再被绘制，下一次渲染的游戏玩法视图中 HUD 里 \"Mice \" 标签后面的数字增加 1，并且在 1 秒内，猫的柔体轮廓至少有一侧延伸到接触前身体轮廓之外。"
+            },
+            {
+              "id": "target-029",
+              "zh": "位于地面高度的猫接触一只老鼠，且其膨胀等级低于最大值，并且耐力条未满 → 被接触的老鼠消失，并且在 1 秒内，耐力条的填充部分从接触前的右边缘向右延伸。"
+            },
+            {
+              "id": "target-032",
+              "zh": "当前波次最后剩余的老鼠被吃掉 → 最后一只老鼠消失，并且出现一个弹窗叠加层，其中有可见的 \"Continue\" 按钮用于进入下一波。"
+            },
+            {
+              "id": "target-039",
+              "zh": "处于地面高度的猫接触一个处于活动状态且未被收集的三叶草 → 该三叶草从游玩场地中消失，并且耐力条填充到其轮廓条的完整宽度。"
+            },
+            {
+              "id": "target-040",
+              "zh": "游戏过程中，一个处于活动状态且未被收集的三叶草达到其生命周期上限 → 该三叶草不再绘制在其先前位置，并且一个三叶草绘制在游玩场地中的另一个位置。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-009",
+              "zh": "游戏玩法场景中显示暂停弹窗 → 出现一个弹窗叠层，带有标题文字 \"Pause\"，并且可见标记为 \"Continue\" 和 \"Menu\" 的按钮。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-012",
+              "zh": "当暂停弹窗可见且其后方至少有一个游戏玩法对象可见时，发生一次活跃游戏更新 → 在接下来 1 秒渲染视频中，叠层后方可见的游戏玩法对象保持相同的屏幕位置，同时 Pause 弹窗保持在最上层。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-015",
+              "zh": "当猫正在飞行时，尝试在猫身上开始拖拽 → 不出现弹弓预览，并且猫继续沿其空中路径移动。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-017",
+              "zh": "被拖拽的猫以会消耗所有剩余耐力的发射耐力成本被释放 → 猫从拖拽位置发射出去，耐力条填充变为空，并且在猫下一次落地后，可见一个带有标题文字 \"Game Over\" 的弹窗叠层。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-025",
+              "zh": "仍剩余的老鼠位于屏幕外右侧，并且当前游戏玩法视口中没有可见老鼠 → 在游戏玩法视图的右边缘绘制屏幕外老鼠指示器。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-027",
+              "zh": "为当前游戏玩法视口外的一只老鼠渲染屏幕外老鼠指示器 → 该指示器被绘制为游戏玩法视图边缘上的红色实心三角形。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-031",
+              "zh": "空中的猫在高于地面碰撞高度的位置穿过一只老鼠的位置 → 老鼠仍绘制在游戏场地中，并且下一次渲染的游戏玩法视图中 HUD 里 \"Mice \" 标签后面的数字不增加。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-033",
+              "zh": "完成上一波后初始化新波次 → 在下一次渲染的游戏玩法视图中，顶部 HUD 显示带有新波次数字的 \"Wave \" 标签。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-034",
+              "zh": "波次数字已推进后显示下一波弹窗 → 可见一个弹窗叠加层，其标题文本与 \"Next Wave \" 后接已推进的波次数字相匹配。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-035",
+              "zh": "下一波弹窗中的 Continue 按钮被接受 → 下一波弹窗叠加层消失，并且游戏玩法屏幕仍然可见。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-043",
+              "zh": "猫在受到粪便伤害保护时接触一个粪便 → 该粪便仍绘制在游玩场地中，并且在下一次渲染的游戏视图中，耐力条的已填充部分保持相同的可见右边缘。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-044",
+              "zh": "空中的猫在高于地面碰撞高度时穿过一个粪便的位置 → 该粪便仍绘制在游玩场地中，并且在下一次渲染的游戏视图中，耐力条的已填充部分保持相同的可见右边缘。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-003",
+              "zh": "开始菜单上的 Play（开始游戏）按钮被接受 → 开始菜单被游戏玩法场景替换，并且可见灰色描边的游戏区域、Mice 和 Wave HUD 标签以及耐力条。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-010",
+              "zh": "游戏玩法暂停弹窗中的 Continue（继续）按钮被接受 → 暂停弹窗叠层消失，游戏玩法画面保持可见。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-011",
+              "zh": "游戏玩法暂停弹窗中的 Menu（菜单）按钮被接受 → 开始菜单场景替换游戏玩法场景，并显示风格化标题文字 \"🅒🅐🅣🅐🅟🅞🅞🅛🅣\"。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-016",
+              "zh": "被拖拽的猫在仍有剩余耐力时被释放 → 猫从拖拽位置发射出去，并且耐力条的填充部分开始从释放前的右边缘向左移动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-030",
+              "zh": "位于地面高度的猫接触一只老鼠，且其膨胀等级处于最大值 → 被接触的老鼠仍绘制在游戏场地中，并且下一次渲染的游戏玩法视图中 HUD 里 \"Mice \" 标签后面的数字不增加。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-037",
+              "zh": "游戏过程中，当猫处于充气状态时，排放指令被接受 → 猫的充气身体轮廓从排放前的轮廓开始向内收缩，直到猫以正常未充气的身体比例被绘制；一个粪便对象出现在游玩场地中猫的排放位置；并且猫在排放后离开地面并沿空中弧线运动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-041",
+              "zh": "渲染场地时，一个粪便对象位于当前游戏视口内 → 一个棕色粪堆绘制在其位置，其下方有一个椭圆形阴影，周围有小型黑色苍蝇精灵。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-042",
+              "zh": "处于地面高度的猫在未受到粪便伤害保护时接触一个粪便 → 被接触的粪便从游玩场地中消失，并且耐力条的已填充部分开始从碰撞前的右边缘向左移动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-047",
+              "zh": "游戏结束弹窗中的 Restart 按钮被接受 → 重新进入游戏场景，并且屏幕在游玩区域上方显示标题文本 \"Game Screen\"。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-flash-v8.3-rubric2-infra-failure-rerun-20260907-105553",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-07T10:56:33+08:00",
+          "finishedAt": "2026-09-07T13:57:11+08:00",
+          "totalDurationMs": 10838160,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-07T10:56:33+08:00",
+              "finishedAt": "2026-09-07T11:16:02+08:00",
+              "durationMs": 1168858,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-07T11:16:02+08:00",
+              "finishedAt": "2026-09-07T13:46:53+08:00",
+              "durationMs": 9050996,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-07T13:46:53+08:00",
+              "finishedAt": "2026-09-07T13:46:53+08:00",
+              "durationMs": 250,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-07T13:46:53+08:00",
+              "finishedAt": "2026-09-07T13:47:34+08:00",
+              "durationMs": 41531,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-07T13:47:34+08:00",
+              "finishedAt": "2026-09-07T13:57:11+08:00",
+              "durationMs": 576492,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       },
       "deepseek-v4-pro": {
         "status": "completed",
