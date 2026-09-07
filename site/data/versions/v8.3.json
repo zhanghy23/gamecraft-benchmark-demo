@@ -22412,30 +22412,112 @@
         }
       },
       "qwen3.8-max": {
-        "status": "failed",
-        "runId": "qwen3.8-max-v8.3-rubric2-imported-20260904-143200",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "确定性检查通过，Trace Phase 1 已生成47条 Trace；Phase 2 完成第一批 Probe Plan 修复与 instrumentation 后，在开始第二批 Probe Plan 时 Harness 被 terminated，未进入 selection、Replay 与 Judge。",
+        "status": "completed",
+        "runId": "qwen3.8-max-v8.3-rubric2-infra-failure-rerun-20260907-105553",
+        "score": {
+          "display": "85.11 (+0.00)",
+          "base": 85.11,
+          "passed": 40,
+          "denominator": 47,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 85.11
+        },
+        "visualQuality": {
+          "score": 84.71,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 46.43,
+          "renderingStyleAverage": 38.29,
+          "videosScored": 7
+        },
+        "traceCount": 7,
+        "playPath": "games-v8.3/catapoolt/qwen3.8-max/index.html",
+        "previewPath": "previews-v8.3/catapoolt/qwen3.8-max.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-002",
+              "zh": "已进入开始菜单场景 → 画布显示风格化标题文字 \"🅒🅐🅣🅐🅟🅞🅞🅛🅣\"。"
+            },
+            {
+              "id": "target-011",
+              "zh": "游戏玩法暂停弹窗中的 Menu（菜单）按钮被接受 → 开始菜单场景替换游戏玩法场景，并显示风格化标题文字 \"🅒🅐🅣🅐🅟🅞🅞🅛🅣\"。"
+            },
+            {
+              "id": "target-031",
+              "zh": "空中的猫在高于地面碰撞高度的位置穿过一只老鼠的位置 → 老鼠仍绘制在游戏场地中，并且下一次渲染的游戏玩法视图中 HUD 里 \"Mice \" 标签后面的数字不增加。"
+            },
+            {
+              "id": "target-047",
+              "zh": "游戏结束弹窗中的 Restart 按钮被接受 → 重新进入游戏场景，并且屏幕在游玩区域上方显示标题文本 \"Game Screen\"。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-009",
+              "zh": "游戏玩法场景中显示暂停弹窗 → 出现一个弹窗叠层，带有标题文字 \"Pause\"，并且可见标记为 \"Continue\" 和 \"Menu\" 的按钮。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-010",
+              "zh": "游戏玩法暂停弹窗中的 Continue（继续）按钮被接受 → 暂停弹窗叠层消失，游戏玩法画面保持可见。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-012",
+              "zh": "当暂停弹窗可见且其后方至少有一个游戏玩法对象可见时，发生一次活跃游戏更新 → 在接下来 1 秒渲染视频中，叠层后方可见的游戏玩法对象保持相同的屏幕位置，同时 Pause 弹窗保持在最上层。",
+              "cause": "源码分析确认未实现"
+            }
+          ]
+        },
+        "issue": null,
         "timing": {
-          "runId": "qwen3.8-max-v8.3-rubric2-imported-20260904-143200",
-          "status": "failed",
-          "failedStage": "trace",
-          "startedAt": "2026-09-05T16:18:17+08:00",
-          "finishedAt": "2026-09-05T16:34:32+08:00",
-          "totalDurationMs": 974624,
+          "runId": "qwen3.8-max-v8.3-rubric2-infra-failure-rerun-20260907-105553",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-07T15:59:29+08:00",
+          "finishedAt": "2026-09-07T17:02:37+08:00",
+          "totalDurationMs": 3788247,
           "stages": [
             {
               "stage": "trace",
-              "startedAt": "2026-09-05T16:18:17+08:00",
-              "finishedAt": "2026-09-05T16:34:32+08:00",
-              "durationMs": 974607,
-              "status": "failed",
-              "exitCode": 1
+              "startedAt": "2026-09-07T15:59:29+08:00",
+              "finishedAt": "2026-09-07T16:19:08+08:00",
+              "durationMs": 1178900,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-07T16:19:08+08:00",
+              "finishedAt": "2026-09-07T16:51:45+08:00",
+              "durationMs": 1957070,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-07T16:51:45+08:00",
+              "finishedAt": "2026-09-07T16:51:45+08:00",
+              "durationMs": 217,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-07T16:51:45+08:00",
+              "finishedAt": "2026-09-07T16:53:31+08:00",
+              "durationMs": 106191,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-07T16:53:31+08:00",
+              "finishedAt": "2026-09-07T17:02:37+08:00",
+              "durationMs": 545837,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }
