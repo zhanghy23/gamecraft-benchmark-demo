@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lost Antenna Adventure</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: #000;
+      font-family: 'Courier New', monospace;
+      color: #fff;
+    }
+    #game-container {
+      width: 100vw;
+      height: 100vh;
+      display: block;
+    }
+    #ui-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    #ui-overlay > * {
+      pointer-events: auto;
+    }
+    #crosshair {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 20px;
+      height: 20px;
+      border: 2px solid rgba(255,255,255,0.8);
+      border-radius: 50%;
+    }
+    #interaction-text {
+      position: absolute;
+      bottom: 15%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.7);
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-size: 16px;
+      text-align: center;
+      max-width: 60%;
+    }
+    #start-message {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 24px;
+      background: rgba(0,0,0,0.8);
+      padding: 16px 32px;
+      border-radius: 8px;
+      display: none;
+    }
+    #menu-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.85);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+    }
+    #menu-overlay.hidden {
+      display: none;
+    }
+    #menu-overlay h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    #menu-overlay button {
+      font-size: 24px;
+      padding: 12px 24px;
+      margin: 8px;
+      background: #333;
+      border: 2px solid #fff;
+      color: #fff;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    #menu-overlay button:hover {
+      background: #555;
+    }
+    #console-overlay {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      max-width: 800px;
+      background: rgba(0,0,0,0.9);
+      border: 2px solid #0f0;
+      padding: 16px;
+      display: none;
+      z-index: 50;
+    }
+    #console-overlay pre {
+      white-space: pre-wrap;
+      font-size: 14px;
+      color: #0f0;
+    }
+    #minigame-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 400px;
+      background: rgba(0,0,0,0.95);
+      border: 2px solid #0f0;
+      display: none;
+      z-index: 60;
+    }
+    #minigame-canvas {
+      width: 100%;
+      height: 100%;
+    }
+    #ending-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+    }
+    #ending-overlay h1 {
+      font-size: 64px;
+      margin-bottom: 10px;
+    }
+    #ending-overlay p {
+      font-size: 24px;
+      margin: 4px;
+    }
+    #ending-overlay .credits {
+      font-size: 16px;
+      margin-top: 20px;
+    }
+    #blank-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 20px;
+      display: none;
+      z-index: 150;
+    }
+  </style>
+  <script type="module" crossorigin src="./assets/index-VMlrLmkb.js"></script>
+</head>
+<body>
+  <div id="game-container"></div>
+  <div id="ui-overlay">
+    <div id="crosshair"></div>
+    <div id="interaction-text"></div>
+    <div id="start-message"></div>
+    <div id="blank-text"></div>
+    <div id="menu-overlay">
+      <h1>Lost Antenna Adventure</h1>
+      <button id="start-btn">Start Game</button>
+      <button id="resume-btn" style="display:none;">Resume Game</button>
+    </div>
+    <div id="console-overlay">
+      <pre id="console-text"></pre>
+    </div>
+    <div id="minigame-overlay">
+      <canvas id="minigame-canvas" width="600" height="400"></canvas>
+    </div>
+    <div id="ending-overlay">
+      <h1>The End</h1>
+      <p>you found your way out</p>
+      <p class="credits">Game by Salvatore Previti &amp; Ben Clark</p>
+      <p class="credits">Thank you for playing!</p>
+    </div>
+  </div>
+</body>
+</html>
