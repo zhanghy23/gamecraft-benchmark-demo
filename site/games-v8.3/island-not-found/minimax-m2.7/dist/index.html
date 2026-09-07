@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lost Antenna Adventure</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      background: #000; 
+      overflow: hidden; 
+      font-family: 'Courier New', monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    #game-container {
+      position: relative;
+      width: 1280px;
+      height: 720px;
+    }
+    #game-canvas {
+      display: block;
+      background: #1a1a2e;
+    }
+    #ui-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    #interaction-text {
+      position: absolute;
+      bottom: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      font-size: 18px;
+      text-align: center;
+      text-shadow: 2px 2px 4px #000;
+      background: rgba(0,0,0,0.5);
+      padding: 10px 20px;
+      border-radius: 5px;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #crosshair {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 4px;
+      height: 4px;
+      background: rgba(255,255,255,0.7);
+      border-radius: 50%;
+    }
+    #main-menu {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.85);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      pointer-events: auto;
+      z-index: 100;
+    }
+    #main-menu h1 {
+      color: #4a9eff;
+      font-size: 48px;
+      margin-bottom: 20px;
+      text-shadow: 0 0 20px #4a9eff;
+    }
+    #main-menu h2 {
+      color: #888;
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+    .menu-btn {
+      background: linear-gradient(180deg, #4a9eff 0%, #2d7dd2 100%);
+      border: none;
+      color: white;
+      padding: 15px 50px;
+      font-size: 20px;
+      font-family: inherit;
+      cursor: pointer;
+      margin: 10px;
+      border-radius: 5px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+      transition: transform 0.1s, box-shadow 0.1s;
+    }
+    .menu-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(74, 158, 255, 0.5);
+    }
+    #ending-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 200;
+    }
+    #ending-overlay h1 {
+      color: #4a9eff;
+      font-size: 64px;
+      margin-bottom: 30px;
+      text-shadow: 0 0 30px #4a9eff;
+    }
+    #ending-overlay p {
+      color: #ccc;
+      font-size: 24px;
+      margin: 10px 0;
+    }
+    #controls-hint {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      color: #666;
+      font-size: 12px;
+    }
+  </style>
+  <script type="module" crossorigin src="./assets/index-MyIpc3Ty.js"></script>
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="game-canvas" width="1280" height="720"></canvas>
+    <div id="ui-overlay">
+      <div id="crosshair"></div>
+      <div id="interaction-text"></div>
+      <div id="controls-hint">WASD: Move | Mouse: Look | E: Interact | F: Flashlight</div>
+      <div id="main-menu">
+        <h1>Lost Antenna Adventure</h1>
+        <h2>An Industrial Island Mystery</h2>
+        <button class="menu-btn" id="start-btn">Start Game</button>
+      </div>
+      <div id="ending-overlay">
+        <h1>The End</h1>
+        <p>you found your way out</p>
+        <p>Game by Salvatore Previti & Ben Clark</p>
+        <p>Thank you for playing!</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
