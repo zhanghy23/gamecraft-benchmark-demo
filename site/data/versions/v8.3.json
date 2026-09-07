@@ -23909,6 +23909,178 @@
           ]
         }
       },
+      "deepseek-v4-flash": {
+        "status": "completed",
+        "runId": "deepseek-v4-flash-v8.3-rubric2-remaining-r2-20260906-220600",
+        "score": {
+          "display": "40.00 (+2.86)",
+          "base": 40,
+          "passed": 14,
+          "denominator": 35,
+          "dynamic": 1,
+          "dynamicAddition": 2.86,
+          "potential": 42.86
+        },
+        "visualQuality": {
+          "score": 75.72,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 40.78,
+          "renderingStyleAverage": 34.94,
+          "videosScored": 18
+        },
+        "traceCount": 18,
+        "playPath": "games-v8.3/q1k3/deepseek-v4-flash/index.html",
+        "previewPath": "previews-v8.3/q1k3/deepseek-v4-flash.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-002",
+              "zh": "在初始“CLICK TO START”覆盖层显示时点击游戏画布区域 → 中央开始覆盖层不再显示，露出带有屏幕边缘 HUD 区域的玩法视图。"
+            },
+            {
+              "id": "target-008",
+              "zh": "鼠标滚轮延迟已结束后，玩家滚动到下一把武器 → 可见的手持武器模型切换为下一把可用武器。"
+            },
+            {
+              "id": "target-009",
+              "zh": "鼠标滚轮延迟已结束后，玩家滚动到上一把武器 → 可见的手持武器模型切换为上一把可用武器。"
+            },
+            {
+              "id": "target-011",
+              "zh": "当所选枪口闪光武器已准备好射击且拥有所需弹药时，玩家尝试开火 → 在该次开火尝试期间，玩家的武器处出现枪口闪光效果。"
+            },
+            {
+              "id": "target-015",
+              "zh": "玩家在门的激活范围内接近一扇未上锁的门 → 门板从关闭位置打开，露出其后的通道。"
+            },
+            {
+              "id": "target-019",
+              "zh": "玩家在携带 grenade launcher（榴弹发射器）时收集 grenade ammunition pickup（榴弹弹药拾取物） → grenade ammunition pickup（榴弹弹药拾取物）从场景中消失。"
+            },
+            {
+              "id": "target-020",
+              "zh": "玩家到达非最终关卡的出口触发器 → 游戏画面从当前关卡布局切换到下一关卡的地图布局。"
+            },
+            {
+              "id": "target-021",
+              "zh": "玩家在最后一个可用关卡之后到达关卡完成过渡 → 显示结束消息，标题为“THE END”，文本为“THANKS FOR PLAYING ❤”，并且可见的生命值和弹药 HUD 文本区域为空白。"
+            },
+            {
+              "id": "target-025",
+              "zh": "一个空闲敌人在其警觉范围内有玩家，且到玩家之间存在无遮挡的视线 → 敌人转向面朝玩家。"
+            },
+            {
+              "id": "target-026",
+              "zh": "一个巡逻敌人在其警觉范围内有玩家，且到玩家之间存在无遮挡的视线 → 敌人转向面朝玩家，而不是继续沿其巡逻路径前进。"
+            },
+            {
+              "id": "target-027",
+              "zh": "一个空闲敌人受到非致命伤害 → 敌人转向面朝玩家，并开始向玩家移动。"
+            },
+            {
+              "id": "target-032",
+              "zh": "一个巡逻敌人与墙壁或平台边缘边界发生水平碰撞 → 敌人反转其巡逻方向，并沿其路径往回行走。"
+            },
+            {
+              "id": "target-034",
+              "zh": "一个 zombie 受到的伤害量未高于其碎尸阈值 → 命中后，zombie 模型仍以其站立敌人形态保持可见。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-003",
+              "zh": "主动玩法正在更新，且所选武器不需要弹药 → 生命值 HUD 显示一个数字生命值，弹药 HUD 显示“∞”。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-004",
+              "zh": "主动玩法正在更新，且所选武器需要弹药 → 生命值 HUD 显示一个数字生命值，弹药 HUD 显示一个数字弹药值。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-005",
+              "zh": "玩家在站在地面上且跳跃已重新启用时按下跳跃 → 第一人称视点从站立高度向上升起。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-006",
+              "zh": "玩家向上看至垂直视角限制 → 视图保持限制在最大向上俯仰角，额外的向上视角输入不会使视图旋转超过该限制角度。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-007",
+              "zh": "玩家向下看至垂直视角限制 → 视图保持限制在最大向下俯仰角，额外的向下视角输入不会使视图旋转超过该限制角度。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-010",
+              "zh": "当所选投射物武器已准备好射击且拥有所需弹药时，玩家尝试开火 → 在该次开火尝试期间，一个投射物从玩家的武器发出。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-018",
+              "zh": "玩家携带 nailgun 时收集 nail 弹药拾取物 → nail 弹药拾取物从场景中消失。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-028",
+              "zh": "一个巡逻敌人受到非致命伤害 → 敌人转向面朝玩家，并开始向玩家移动，而不是继续其巡逻路径。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-flash-v8.3-rubric2-remaining-r2-20260906-220600",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-07T01:30:30+08:00",
+          "finishedAt": "2026-09-07T03:45:19+08:00",
+          "totalDurationMs": 8089281,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-07T01:30:30+08:00",
+              "finishedAt": "2026-09-07T01:44:29+08:00",
+              "durationMs": 839286,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-07T01:44:29+08:00",
+              "finishedAt": "2026-09-07T03:29:54+08:00",
+              "durationMs": 6325026,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-07T03:29:54+08:00",
+              "finishedAt": "2026-09-07T03:29:54+08:00",
+              "durationMs": 215,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-07T03:29:54+08:00",
+              "finishedAt": "2026-09-07T03:31:42+08:00",
+              "durationMs": 107545,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-07T03:31:42+08:00",
+              "finishedAt": "2026-09-07T03:45:19+08:00",
+              "durationMs": 817178,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
       "deepseek-v4-pro": {
         "status": "completed",
         "runId": "deepseek-v4-pro-v8.3-rubric2-remaining-20260906-102745",
