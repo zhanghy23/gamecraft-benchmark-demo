@@ -31796,6 +31796,97 @@
             }
           ]
         }
+      },
+      "seed-2.0-pro": {
+        "status": "completed",
+        "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
+        "score": {
+          "display": "96.88 (+0.00)",
+          "base": 96.88,
+          "passed": 31,
+          "denominator": 32,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 96.88
+        },
+        "visualQuality": {
+          "score": 87.5,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 46.25,
+          "renderingStyleAverage": 41.25,
+          "videosScored": 4
+        },
+        "traceCount": 4,
+        "playPath": "games-v8.3/lepricons-rush/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.3/lepricons-rush/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-004",
+              "zh": "A score increment is accepted while the six-position binary score display reads 111111 → The six-position binary score display changes to 000000, and at least one wide light-red horizontal line stroke is drawn across the playfield."
+            }
+          ],
+          "replayTrace": []
+        },
+        "issue": null,
+        "timing": {
+          "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-09T01:28:17+08:00",
+          "finishedAt": "2026-09-09T01:52:11+08:00",
+          "totalDurationMs": 1433736,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-09T01:28:17+08:00",
+              "finishedAt": "2026-09-09T01:29:29+08:00",
+              "durationMs": 72071,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-09T01:29:29+08:00",
+              "finishedAt": "2026-09-09T01:40:13+08:00",
+              "durationMs": 644209,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-09T01:40:13+08:00",
+              "finishedAt": "2026-09-09T01:45:58+08:00",
+              "durationMs": 344650,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-09T01:45:58+08:00",
+              "finishedAt": "2026-09-09T01:45:58+08:00",
+              "durationMs": 149,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-09T01:45:58+08:00",
+              "finishedAt": "2026-09-09T01:48:17+08:00",
+              "durationMs": 139220,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-09T01:48:17+08:00",
+              "finishedAt": "2026-09-09T01:52:11+08:00",
+              "durationMs": 233354,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "shooooooot": {
