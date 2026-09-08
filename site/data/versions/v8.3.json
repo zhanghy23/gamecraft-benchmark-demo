@@ -31683,7 +31683,109 @@
         }
       }
     },
-    "shooooooot": {},
+    "shooooooot": {
+      "gpt-5.5": {
+        "status": "completed",
+        "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
+        "score": {
+          "display": "92.50 (+2.50)",
+          "base": 92.5,
+          "passed": 37,
+          "denominator": 40,
+          "dynamic": 1,
+          "dynamicAddition": 2.5,
+          "potential": 95
+        },
+        "visualQuality": {
+          "score": 91.88,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.5,
+          "renderingStyleAverage": 43.38,
+          "videosScored": 8
+        },
+        "traceCount": 8,
+        "playPath": "games-v8.3/shooooooot/gpt-5.5/index.html",
+        "previewPath": "previews-v8.3/shooooooot/gpt-5.5.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-032",
+              "zh": "An unexploded ammo drop is absorbed by the player while the player is not exploded → The ammo drop sprite disappears, the score text increases by 50, and the ammo text increases by 50."
+            },
+            {
+              "id": "target-033",
+              "zh": "An unexploded ammo drop is absorbed by the player while the player is not exploded and the ammo gain would exceed the ammo maximum → The ammo drop sprite disappears, the score text increases by 50, and the ammo text reads \"ammo: 404\"."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-009",
+              "zh": "The right gamepad thumbstick leaves the aim dead zone during active gameplay while the player can fire → One or more bullet sprites appear at the player and move in the right thumbstick aim direction.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-09T00:48:45+08:00",
+          "finishedAt": "2026-09-09T01:28:47+08:00",
+          "totalDurationMs": 2402277,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-09T00:48:45+08:00",
+              "finishedAt": "2026-09-09T00:51:20+08:00",
+              "durationMs": 155108,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-09T00:51:20+08:00",
+              "finishedAt": "2026-09-09T01:04:53+08:00",
+              "durationMs": 812548,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-09T01:04:53+08:00",
+              "finishedAt": "2026-09-09T01:22:24+08:00",
+              "durationMs": 1050949,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-09T01:22:24+08:00",
+              "finishedAt": "2026-09-09T01:22:24+08:00",
+              "durationMs": 161,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-09T01:22:24+08:00",
+              "finishedAt": "2026-09-09T01:23:36+08:00",
+              "durationMs": 71854,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-09T01:23:36+08:00",
+              "finishedAt": "2026-09-09T01:28:47+08:00",
+              "durationMs": 311575,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      }
+    },
     "solar-defence": {},
     "prism-paddock": {},
     "dewdrop-farm": {},
