@@ -31786,7 +31786,94 @@
         }
       }
     },
-    "solar-defence": {},
+    "solar-defence": {
+      "gpt-5.5": {
+        "status": "completed",
+        "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
+        "score": {
+          "display": "100.00 (+0.00)",
+          "base": 100,
+          "passed": 1,
+          "denominator": 1,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 100
+        },
+        "visualQuality": {
+          "score": 91,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48,
+          "renderingStyleAverage": 43,
+          "videosScored": 1
+        },
+        "traceCount": 1,
+        "playPath": "games-v8.3/solar-defence/gpt-5.5/index.html",
+        "previewPath": "previews-v8.3/solar-defence/gpt-5.5.png",
+        "unmet": {
+          "vlm": [],
+          "replayTrace": []
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-09T01:28:47+08:00",
+          "finishedAt": "2026-09-09T01:30:17+08:00",
+          "totalDurationMs": 89973,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-09T01:28:47+08:00",
+              "finishedAt": "2026-09-09T01:29:34+08:00",
+              "durationMs": 46202,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-09T01:29:34+08:00",
+              "finishedAt": "2026-09-09T01:29:57+08:00",
+              "durationMs": 23681,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-09T01:29:57+08:00",
+              "finishedAt": "2026-09-09T01:29:59+08:00",
+              "durationMs": 1598,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-09T01:29:59+08:00",
+              "finishedAt": "2026-09-09T01:29:59+08:00",
+              "durationMs": 121,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-09T01:29:59+08:00",
+              "finishedAt": "2026-09-09T01:30:03+08:00",
+              "durationMs": 3575,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-09T01:30:03+08:00",
+              "finishedAt": "2026-09-09T01:30:17+08:00",
+              "durationMs": 14716,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      }
+    },
     "prism-paddock": {},
     "dewdrop-farm": {},
     "idle-necromancer": {},
