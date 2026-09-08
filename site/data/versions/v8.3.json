@@ -31573,6 +31573,121 @@
             }
           ]
         }
+      },
+      "seed-2.0-pro": {
+        "status": "completed",
+        "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
+        "score": {
+          "display": "85.37 (+7.32)",
+          "base": 85.37,
+          "passed": 35,
+          "denominator": 41,
+          "dynamic": 3,
+          "dynamicAddition": 7.32,
+          "potential": 92.68
+        },
+        "visualQuality": {
+          "score": 86.4,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 46.8,
+          "renderingStyleAverage": 39.6,
+          "videosScored": 10
+        },
+        "traceCount": 10,
+        "playPath": "games-v8.3/rainbow-assault/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.3/rainbow-assault/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-023",
+              "zh": "A boss enemy is farther than its stopping distance to the right of the player character during active gameplay → The boss moves left toward the player character while both remain visible."
+            },
+            {
+              "id": "target-028",
+              "zh": "A player-fired projectile defeats a boss enemy → The boss is no longer visible at its collision position, explosion particles are visible at that position, and within 1 second the score readout changes to a value 500 points higher than the score readout visible immediately before the projectile hit."
+            },
+            {
+              "id": "target-036",
+              "zh": "The player character with above 70% health contacts a healing power-up during active gameplay → The healing power-up icon disappears, and the health bar fill reaches the full width of the health-bar frame within 1 second."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-022",
+              "zh": "A boss enemy spawn is selected while the score is above 1200 and no other boss is present → A boss enemy appears on the right side of the gameplay area with a visible health bar above it.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-039",
+              "zh": "The player character remains in contact with an enemy during active gameplay while the player has more than 30% health → During 1 second of uninterrupted contact, the health bar fill endpoint shifts left by 30% of the full health-bar frame width, with a tolerance of ±10% of the full frame width.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-040",
+              "zh": "The player character remains in contact with an enemy when the contact damage reduces player health to zero → A menu overlay is shown with the title text \"MISSION FAILED!\", a subtitle beginning with \"Final Score:\", and a button labeled \"RETRY\".",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-08T23:23:09+08:00",
+          "finishedAt": "2026-09-09T01:28:17+08:00",
+          "totalDurationMs": 7507789,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-08T23:23:09+08:00",
+              "finishedAt": "2026-09-08T23:25:09+08:00",
+              "durationMs": 120341,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-08T23:25:09+08:00",
+              "finishedAt": "2026-09-08T23:39:40+08:00",
+              "durationMs": 870452,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-08T23:39:40+08:00",
+              "finishedAt": "2026-09-09T01:14:52+08:00",
+              "durationMs": 5711658,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-09T01:14:52+08:00",
+              "finishedAt": "2026-09-09T01:14:52+08:00",
+              "durationMs": 224,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-09T01:14:52+08:00",
+              "finishedAt": "2026-09-09T01:18:58+08:00",
+              "durationMs": 246461,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-09T01:18:58+08:00",
+              "finishedAt": "2026-09-09T01:28:17+08:00",
+              "durationMs": 558567,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "lepricons-rush": {
