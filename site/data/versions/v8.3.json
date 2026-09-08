@@ -21297,6 +21297,136 @@
             }
           ]
         }
+      },
+      "glm-5.2": {
+        "status": "completed",
+        "runId": "glm-5.2-v8.3-rubric2-imported-r5-corrected-20260908-133759",
+        "score": {
+          "display": "73.17 (+4.88)",
+          "base": 73.17,
+          "passed": 30,
+          "denominator": 41,
+          "dynamic": 2,
+          "dynamicAddition": 4.88,
+          "potential": 78.05
+        },
+        "visualQuality": {
+          "score": 93.19,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.38,
+          "renderingStyleAverage": 44.81,
+          "videosScored": 16
+        },
+        "traceCount": 16,
+        "playPath": "games-v8.3/non-mewtonian-cat/glm-5.2/index.html",
+        "previewPath": "previews-v8.3/non-mewtonian-cat/glm-5.2.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-012",
+              "zh": "在关卡选择场景中，当当前高亮关卡上方同一列存在可用关卡时，新按下向上导航输入 → 高亮关卡图块切换到其上方同一列最近的可用关卡图块，并跳过不可用图块。"
+            },
+            {
+              "id": "target-013",
+              "zh": "在关卡选择场景中，当当前高亮关卡下方同一列存在可用关卡时，新按下向下导航输入 → 高亮关卡图块切换到其下方同一列最近的可用关卡图块，并跳过不可用图块。"
+            },
+            {
+              "id": "target-028",
+              "zh": "在活动游玩期间，头部上方的图块包含唯一剩余的尺寸变化道具，且该道具是变大道具时，向上移动输入被接受 → 玩家向上移动一个图块，头部上方的变大道具消失，该道具所在图块出现粒子，移动完成后玩家身体以额外增加一个节段的状态被绘制，并且胜利方块轮廓变为橙色。"
+            },
+            {
+              "id": "target-029",
+              "zh": "在活动游玩期间，玩家至少有两个节段，头部上方的图块包含缩小道具，且至少还有一个其他尺寸变化道具未被收集时，向上移动输入被接受 → 玩家向上移动一个图块，头部上方的缩小道具消失，该道具所在图块出现粒子，移动完成后玩家身体以减少一个节段的状态被绘制，并且胜利方块轮廓保持深蓝色。"
+            },
+            {
+              "id": "target-030",
+              "zh": "在活动游玩期间，玩家至少有两个节段，头部上方的图块包含唯一剩余的尺寸变化道具，且该道具是缩小道具时，向上移动输入被接受 → 玩家向上移动一个图块，头部上方的缩小道具消失，该道具所在图块出现粒子，移动完成后玩家身体以减少一个节段的状态被绘制，并且胜利方块轮廓变为橙色。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-009",
+              "zh": "当所有关卡都已完成时渲染关卡选择场景 → 文本 \"THANK YOU FOR PLAYING!\" 显示在游戏视图靠下部分的居中位置。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-010",
+              "zh": "在关卡选择场景中，当当前高亮关卡的左侧存在可用关卡时，新按下向左导航输入 → 高亮关卡图块切换到左侧最近的可用关卡图块，并跳过不可用图块。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-011",
+              "zh": "在关卡选择场景中，当当前高亮关卡的右侧存在可用关卡时，新按下向右导航输入 → 高亮关卡图块切换到右侧最近的可用关卡图块，并跳过不可用图块。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-016",
+              "zh": "从包含玩家头部或身体图块的关卡数据加载正在进行的关卡 → 正在进行的游玩场景在关卡网格上将玩家显示为分段身体。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-034",
+              "zh": "在活动游玩期间，移动动画完成，且至少一个玩家节段位于失败方块上 → 在失败恢复间隔期间，玩家精灵停止被绘制。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-036",
+              "zh": "在活动游玩期间，移动动画完成，且玩家位于胜利方块上，并且没有尺寸变化道具仍未被收集 → 深蓝色转场动画从游戏视图中心开始，随后关卡选择场景替换活动关卡游玩场景。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "glm-5.2-v8.3-rubric2-imported-r5-corrected-20260908-133759",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-08T22:04:54+08:00",
+          "finishedAt": "2026-09-08T23:24:33+08:00",
+          "totalDurationMs": 4779127,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-08T22:04:54+08:00",
+              "finishedAt": "2026-09-08T22:17:51+08:00",
+              "durationMs": 777399,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-08T22:17:51+08:00",
+              "finishedAt": "2026-09-08T23:14:24+08:00",
+              "durationMs": 3393179,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-08T23:14:24+08:00",
+              "finishedAt": "2026-09-08T23:14:25+08:00",
+              "durationMs": 239,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-08T23:14:25+08:00",
+              "finishedAt": "2026-09-08T23:15:33+08:00",
+              "durationMs": 68133,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-08T23:15:33+08:00",
+              "finishedAt": "2026-09-08T23:24:33+08:00",
+              "durationMs": 540145,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "stolen-sword": {
