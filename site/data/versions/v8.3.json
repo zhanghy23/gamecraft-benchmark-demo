@@ -31462,7 +31462,119 @@
         }
       }
     },
-    "rainbow-assault": {},
+    "rainbow-assault": {
+      "gpt-5.5": {
+        "status": "completed",
+        "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
+        "score": {
+          "display": "87.80 (+7.32)",
+          "base": 87.8,
+          "passed": 36,
+          "denominator": 41,
+          "dynamic": 3,
+          "dynamicAddition": 7.32,
+          "potential": 95.12
+        },
+        "visualQuality": {
+          "score": 91,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.75,
+          "renderingStyleAverage": 43.25,
+          "videosScored": 8
+        },
+        "traceCount": 8,
+        "playPath": "games-v8.3/rainbow-assault/gpt-5.5/index.html",
+        "previewPath": "previews-v8.3/rainbow-assault/gpt-5.5.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-015",
+              "zh": "The fire control is pressed while the player has the normal weapon ready, is facing left, and is not aiming upward → One projectile appears at the player character and travels to the left across the gameplay area."
+            },
+            {
+              "id": "target-035",
+              "zh": "The player character with 70% health or less contacts a healing power-up during active gameplay → The healing power-up icon disappears, and the health bar fill endpoint shifts right by 30% of the full health-bar frame width within 1 second, with a tolerance of ±10% of the full frame width."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-002",
+              "zh": "The start menu button is activated while the initial menu overlay is visible → The menu overlay disappears and the gameplay view is shown with the player character and HUD visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-013",
+              "zh": "The on-screen joystick is released after being dragged away from its neutral position → The joystick knob returns to the center of the joystick base.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-041",
+              "zh": "The retry button is activated while the mission-failed menu overlay is visible → The mission-failed menu overlay disappears and a new gameplay run is shown with the HUD visible.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-08T23:23:09+08:00",
+          "finishedAt": "2026-09-09T00:22:30+08:00",
+          "totalDurationMs": 3560693,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-08T23:23:09+08:00",
+              "finishedAt": "2026-09-08T23:26:21+08:00",
+              "durationMs": 192342,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-08T23:26:21+08:00",
+              "finishedAt": "2026-09-08T23:41:08+08:00",
+              "durationMs": 887082,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-08T23:41:08+08:00",
+              "finishedAt": "2026-09-09T00:09:37+08:00",
+              "durationMs": 1708493,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-09T00:09:37+08:00",
+              "finishedAt": "2026-09-09T00:09:37+08:00",
+              "durationMs": 187,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-09T00:09:37+08:00",
+              "finishedAt": "2026-09-09T00:14:35+08:00",
+              "durationMs": 298302,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-09T00:14:35+08:00",
+              "finishedAt": "2026-09-09T00:22:30+08:00",
+              "durationMs": 474202,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      }
+    },
     "lepricons-rush": {},
     "shooooooot": {},
     "solar-defence": {},
