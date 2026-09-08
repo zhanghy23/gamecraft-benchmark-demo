@@ -48,15 +48,15 @@
     {
       "id": "v8.3",
       "label": "v8.3 · 视频主判 + 图片复核",
-      "description": "覆盖20个游戏与五类核心机制；各生成模型在每个游戏上使用同一批固定需求，GPT-5.5和Seed-2.0-Pro复用既有Trace/Replay重新执行Rubric v2视频判定，其余模型执行完整流水线或复用已生成源码执行Trace、Replay和Judge。全部需求说明均以中文展示。",
+      "description": "覆盖40款具备明确复用许可证的游戏，并在五类核心机制中各包含8款；各生成模型在每个游戏上使用同一批固定需求，以Rubric v2执行Trace、Replay、功能判定与画面评分。",
       "status": "partial",
       "updatedAt": "2026-09-08",
       "harnessRevision": "v8.3-040aa4a",
       "judgeModel": "Seed-2.0-Pro（视频主判 + 图片复核，画面评分 Rubric v2）",
       "dataRevision": "v83-rubric2-nine-models-20260908",
-      "resultCount": 149,
-      "completedCount": 139,
-      "failedCount": 10,
+      "resultCount": 134,
+      "completedCount": 127,
+      "failedCount": 7,
       "dataPath": "data/versions/v8.3.json"
     }
   ]
