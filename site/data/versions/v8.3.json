@@ -6228,6 +6228,131 @@
             }
           ]
         }
+      },
+      "kimi-k2.6": {
+        "status": "completed",
+        "runId": "kimi-k2.6-v8.3-rubric2-imported18-20260908-163121",
+        "score": {
+          "display": "82.76 (+6.90)",
+          "base": 82.76,
+          "passed": 48,
+          "denominator": 58,
+          "dynamic": 4,
+          "dynamicAddition": 6.9,
+          "potential": 89.66
+        },
+        "visualQuality": {
+          "score": 90.76,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.18,
+          "renderingStyleAverage": 42.59,
+          "videosScored": 17
+        },
+        "traceCount": 17,
+        "playPath": "games-v8.3/elematter/kimi-k2.6/index.html",
+        "previewPath": "previews-v8.3/elematter/kimi-k2.6.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-029",
+              "zh": "在主动游戏过程中，当火防御塔的射击冷却已达到其射击阈值，且该防御塔射程内有一个敌方目标时 → 一个红色火属性投射物出现在该防御塔处，并开始向被瞄准的敌人移动。"
+            },
+            {
+              "id": "target-052",
+              "zh": "从初始波次状态发送第 1 波，同时第 2 波仍在队列中 → 波次显示变为“1 / 20”，并且下一波预览计数器显示 9 个土元素敌人、2 个水元素敌人、0 个气元素敌人和 0 个火元素敌人。"
+            },
+            {
+              "id": "target-053",
+              "zh": "发送第 5 波，同时第 6 波仍在队列中 → 波次显示变为“5 / 20”，并且下一波预览计数器显示 0 个土元素敌人、13 个水元素敌人、0 个气元素敌人和 0 个火元素敌人。"
+            },
+            {
+              "id": "target-054",
+              "zh": "发送第 10 波，同时第 11 波仍在队列中 → 波次显示变为“10 / 20”，并且下一波预览计数器显示 0 个土元素敌人、0 个水元素敌人、15 个气元素敌人和 0 个火元素敌人。"
+            },
+            {
+              "id": "target-055",
+              "zh": "第十五波被派出，同时第十六波仍处于排队状态 → 波次显示变为“15 / 20”，且下一波预览计数器显示 0 个土元素敌人、0 个水元素敌人、0 个气元素敌人和 17 个火元素敌人。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-015",
+              "zh": "当玩家没有足够的 fragments（碎片）建造 earth tower（土塔）时，从打开的建造菜单中选择 earth（土）建造选项 → 建造菜单保持打开，并且所选地块保持为空，其上没有绿色 earth（土）塔。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-048",
+              "zh": "玩家失去最后剩余的 1 条生命 → 浏览器警告对话框出现，并显示文本“You lost.”。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-049",
+              "zh": "失败警告对话框被确认 → 游戏页面重新加载到初始游戏场地视图。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-057",
+              "zh": "所有波次都已被派出并清除，且至少剩余 1 条生命 → 浏览器警告对话框出现，文本开头为“You won! Based on lives and elemental fragments left, your score is:”。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-058",
+              "zh": "胜利警告对话框被确认 → 游戏页面重新加载到初始游戏场地视图。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "kimi-k2.6-v8.3-rubric2-imported18-20260908-163121",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-08T17:13:32+08:00",
+          "finishedAt": "2026-09-08T20:06:47+08:00",
+          "totalDurationMs": 10395344,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-08T17:13:32+08:00",
+              "finishedAt": "2026-09-08T17:36:13+08:00",
+              "durationMs": 1361509,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-08T17:36:13+08:00",
+              "finishedAt": "2026-09-08T19:51:01+08:00",
+              "durationMs": 8087911,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-08T19:51:01+08:00",
+              "finishedAt": "2026-09-08T19:51:02+08:00",
+              "durationMs": 540,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-08T19:51:02+08:00",
+              "finishedAt": "2026-09-08T19:53:54+08:00",
+              "durationMs": 172714,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-08T19:53:54+08:00",
+              "finishedAt": "2026-09-08T20:06:47+08:00",
+              "durationMs": 772638,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "highway-404": {
