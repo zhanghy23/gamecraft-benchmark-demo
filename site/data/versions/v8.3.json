@@ -9583,6 +9583,125 @@
             }
           ]
         }
+      },
+      "kimi-k2.6": {
+        "status": "completed",
+        "runId": "kimi-k2.6-v8.3-rubric2-imported18-20260908-163121",
+        "score": {
+          "display": "88.00 (+1.33)",
+          "base": 88,
+          "passed": 66,
+          "denominator": 75,
+          "dynamic": 1,
+          "dynamicAddition": 1.33,
+          "potential": 89.33
+        },
+        "visualQuality": {
+          "score": 91.9,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.37,
+          "renderingStyleAverage": 43.53,
+          "videosScored": 30
+        },
+        "traceCount": 30,
+        "playPath": "games-v8.3/13-steps-to-escape/kimi-k2.6/index.html",
+        "previewPath": "previews-v8.3/13-steps-to-escape/kimi-k2.6.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-022",
+              "zh": "在已执行步数为 11 时渲染游戏 UI → 可见的步数计数器文本以黄色绘制，并且在连续的游戏帧中，步数计数器文本在不断变化的水平或垂直位置绘制，同时关卡网格保持对齐。"
+            },
+            {
+              "id": "target-023",
+              "zh": "在已执行步数为 12 时渲染游戏 UI → 可见的步数计数器文本以橙色绘制，并且在连续的游戏帧中，步数计数器文本在不断变化的水平或垂直位置绘制，同时关卡网格保持对齐。"
+            },
+            {
+              "id": "target-038",
+              "zh": "条件：一个箱子完成移动并到达一个洞地块 → 预期结果：该网格单元中的箱子和洞地块被一个已填洞地块替换。"
+            },
+            {
+              "id": "target-041",
+              "zh": "条件：一个巨石完成移动，并且在其停止方向的正前方有一个未触发的锣触发地块 → 预期结果：与该锣触发地块方向相同的锣地块在移除动画中缩小，直到该锣不再可见。"
+            },
+            {
+              "id": "target-052",
+              "zh": "条件：游戏处于活动游玩状态，向右移动指令被处理为进入一个朝右的方块触发地块 → 预期结果：从该触发地块向右方向连接的方块地块在移除动画中缩小，直到这些方块不再可见。"
+            },
+            {
+              "id": "target-065",
+              "zh": "在“SELECT SKIN COLOR”角色自定义步骤中，向右切换选项命令被接受 → 选中的肤色样本外框移动到另一个样本，且角色预览变为该肤色。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-035",
+              "zh": "当木箱被从一个其下方包含开关触发器的图块上推离 → 随着木箱离开该图块，与木箱下方触发器具有相同朝向的开关图块在开关开启外观与开关关闭外观之间切换。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-036",
+              "zh": "在一次开关反转期间，当木箱位于一个变为开关开启外观的开关图块上 → 该开关图块上的木箱在移除动画期间缩小，直到木箱不再可见。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-055",
+              "zh": "最大步数重生延迟在玩家触发最大步数重生后结束 → 当玩家角色位于当前出生格时，可见步数计数器显示 0。",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "kimi-k2.6-v8.3-rubric2-imported18-20260908-163121",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-08T21:06:19+08:00",
+          "finishedAt": "2026-09-08T22:23:17+08:00",
+          "totalDurationMs": 4618471,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-08T21:06:19+08:00",
+              "finishedAt": "2026-09-08T21:28:01+08:00",
+              "durationMs": 1302266,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-08T21:28:01+08:00",
+              "finishedAt": "2026-09-08T21:57:20+08:00",
+              "durationMs": 1759232,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-08T21:57:20+08:00",
+              "finishedAt": "2026-09-08T21:57:21+08:00",
+              "durationMs": 401,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-08T21:57:21+08:00",
+              "finishedAt": "2026-09-08T21:59:48+08:00",
+              "durationMs": 147120,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-08T21:59:48+08:00",
+              "finishedAt": "2026-09-08T22:23:17+08:00",
+              "durationMs": 1409420,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "tiny-yurts": {
