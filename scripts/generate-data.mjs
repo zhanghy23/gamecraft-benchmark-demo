@@ -73,6 +73,8 @@ const models = [
   { id: 'deepseek-v4-flash', label: 'DeepSeek-V4-Flash', provider: 'DeepSeek', order: 5 },
   { id: 'deepseek-v4-pro', label: 'DeepSeek-V4-Pro', provider: 'DeepSeek', order: 6 },
   { id: 'qwen3.8-max', label: 'Qwen3.8-Max', provider: 'Alibaba Cloud', order: 7 },
+  { id: 'glm-5.2', label: 'GLM-5.2', provider: 'Zhipu AI', order: 8 },
+  { id: 'kimi-k2.6', label: 'Kimi-K2.6', provider: 'Moonshot AI', order: 9 },
 ];
 
 const games = [
