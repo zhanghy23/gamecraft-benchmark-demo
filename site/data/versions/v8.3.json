@@ -31575,7 +31575,114 @@
         }
       }
     },
-    "lepricons-rush": {},
+    "lepricons-rush": {
+      "gpt-5.5": {
+        "status": "completed",
+        "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
+        "score": {
+          "display": "87.50 (+6.25)",
+          "base": 87.5,
+          "passed": 28,
+          "denominator": 32,
+          "dynamic": 2,
+          "dynamicAddition": 6.25,
+          "potential": 93.75
+        },
+        "visualQuality": {
+          "score": 90.17,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.67,
+          "renderingStyleAverage": 42.5,
+          "videosScored": 6
+        },
+        "traceCount": 6,
+        "playPath": "games-v8.3/lepricons-rush/gpt-5.5/index.html",
+        "previewPath": "previews-v8.3/lepricons-rush/gpt-5.5.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-010",
+              "zh": "A score drop is processed while the six-position binary score display contains at least one one symbol → The rightmost one symbol in the six-position binary score display changes to a zero symbol."
+            },
+            {
+              "id": "target-012",
+              "zh": "The leprechaun reaches a flower while knock flash and movement cooldown are inactive → Within 0.5 seconds after reaching the flower, the leprechaun marker is shown in at least one dark-yellow frame and at least one distinct flash-color frame."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-019",
+              "zh": "A drag selection is released with an area of at least 10000 square game units → The drag-selection rectangle is replaced by a persistent patrol-region rectangle in the playfield.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-028",
+              "zh": "A unicorn is in the after-meet state during herd update while a patrol-region rectangle is visible → The patrol-region rectangle disappears from the playfield.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-09T00:22:30+08:00",
+          "finishedAt": "2026-09-09T00:48:45+08:00",
+          "totalDurationMs": 1575070,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-09T00:22:30+08:00",
+              "finishedAt": "2026-09-09T00:24:41+08:00",
+              "durationMs": 131247,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-09T00:24:41+08:00",
+              "finishedAt": "2026-09-09T00:37:59+08:00",
+              "durationMs": 797742,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-09T00:37:59+08:00",
+              "finishedAt": "2026-09-09T00:40:03+08:00",
+              "durationMs": 124107,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-09T00:40:03+08:00",
+              "finishedAt": "2026-09-09T00:40:03+08:00",
+              "durationMs": 150,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-09T00:40:03+08:00",
+              "finishedAt": "2026-09-09T00:43:38+08:00",
+              "durationMs": 215118,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-09T00:43:38+08:00",
+              "finishedAt": "2026-09-09T00:48:45+08:00",
+              "durationMs": 306628,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      }
+    },
     "shooooooot": {},
     "solar-defence": {},
     "prism-paddock": {},
