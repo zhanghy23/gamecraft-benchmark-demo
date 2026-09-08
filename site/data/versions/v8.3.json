@@ -7254,6 +7254,67 @@
             }
           ]
         }
+      },
+      "kimi-k2.6": {
+        "status": "failed",
+        "runId": "kimi-k2.6-v8.3-rubric2-imported18-20260908-163121",
+        "stage": "judge-video-and-image",
+        "score": null,
+        "traceCount": 0,
+        "playPath": null,
+        "previewPath": null,
+        "unmet": null,
+        "issue": "复用已生成源码执行正确v8.3评测；Trace、selection、optimize和Replay均成功并生成11条视频，但Judge处理第9/11条视频时服务返回HTTP 400（Request body must be valid JSON），未生成最终报告。该项记录为共享评审服务失败，无功能分、无画面分且不可试玩。",
+        "timing": {
+          "runId": "kimi-k2.6-v8.3-rubric2-imported18-20260908-163121",
+          "status": "failed",
+          "failedStage": "judge-video-and-image",
+          "startedAt": "2026-09-08T16:39:44+08:00",
+          "finishedAt": "2026-09-08T17:13:31+08:00",
+          "totalDurationMs": 2027380,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-08T16:39:44+08:00",
+              "finishedAt": "2026-09-08T16:56:32+08:00",
+              "durationMs": 1007954,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-08T16:56:32+08:00",
+              "finishedAt": "2026-09-08T17:06:09+08:00",
+              "durationMs": 577234,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-08T17:06:09+08:00",
+              "finishedAt": "2026-09-08T17:06:09+08:00",
+              "durationMs": 284,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-08T17:06:09+08:00",
+              "finishedAt": "2026-09-08T17:08:29+08:00",
+              "durationMs": 140168,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-08T17:08:29+08:00",
+              "finishedAt": "2026-09-08T17:13:31+08:00",
+              "durationMs": 301706,
+              "status": "failed",
+              "exitCode": 1
+            }
+          ]
+        }
       }
     },
     "kuro-neko-market": {
