@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "v8.3",
-  "updatedAt": "2026-09-07",
+  "updatedAt": "2026-09-08",
   "models": [
     {
       "id": "gpt-5.5",
@@ -44,6 +44,18 @@
       "label": "Qwen3.8-Max",
       "provider": "Alibaba Cloud",
       "order": 7
+    },
+    {
+      "id": "glm-5.2",
+      "label": "GLM-5.2",
+      "provider": "Zhipu AI",
+      "order": 8
+    },
+    {
+      "id": "kimi-k2.6",
+      "label": "Kimi-K2.6",
+      "provider": "Moonshot AI",
+      "order": 9
     }
   ],
   "games": [
@@ -7134,6 +7146,109 @@
               "startedAt": "2026-09-04T19:03:05+08:00",
               "finishedAt": "2026-09-04T19:17:46+08:00",
               "durationMs": 881497,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
+      "glm-5.2": {
+        "status": "completed",
+        "runId": "glm-5.2-v8.3-rubric2-imported-r5-corrected-20260908-133759",
+        "score": {
+          "display": "89.36 (+4.26)",
+          "base": 89.36,
+          "passed": 42,
+          "denominator": 47,
+          "dynamic": 2,
+          "dynamicAddition": 4.26,
+          "potential": 93.62
+        },
+        "visualQuality": {
+          "score": 91.56,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48,
+          "renderingStyleAverage": 43.56,
+          "videosScored": 9
+        },
+        "traceCount": 9,
+        "playPath": "games-v8.3/highway-404/glm-5.2/index.html",
+        "previewPath": "previews-v8.3/highway-404/glm-5.2.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-012",
+              "zh": "在主动游玩期间，且英雄向下有开放路径时，接受了一次向下的键盘转向输入 → 英雄从输入前的位置沿游玩区域向下移动。"
+            },
+            {
+              "id": "target-019",
+              "zh": "在有效玩法运行期间，主角尝试越过左侧高速公路路肩 → 主角仍保持在可驾驶的高速公路区域内，且其左边缘向左不超过左侧路肩的内边缘。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-022",
+              "zh": "在有效玩法运行期间，当视口不在地图左边缘时，主角越过左侧水平相机边界 → 道路背景和道路实体相对于画布向右移动，同时主角仍保持可见。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-015",
+              "zh": "在主动游玩期间，且英雄向左有开放路径时，接受了一次向左的滑动转向输入 → 英雄从输入前的位置沿游玩区域向左移动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-044",
+              "zh": "进行中的游戏达到胜利结束条件 → 显示内容切换为结束画面，在视口中部附近居中显示 \"you arrived!\"，并且顶部附近可见 \"score\" 和 \"highscore\" 标签。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "glm-5.2-v8.3-rubric2-imported-r5-corrected-20260908-133759",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-08T13:41:52+08:00",
+          "finishedAt": "2026-09-08T14:15:25+08:00",
+          "totalDurationMs": 2012243,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-08T13:41:53+08:00",
+              "finishedAt": "2026-09-08T13:56:40+08:00",
+              "durationMs": 887896,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-08T13:56:40+08:00",
+              "finishedAt": "2026-09-08T14:03:08+08:00",
+              "durationMs": 387677,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-08T14:03:08+08:00",
+              "finishedAt": "2026-09-08T14:03:08+08:00",
+              "durationMs": 181,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-08T14:03:08+08:00",
+              "finishedAt": "2026-09-08T14:05:16+08:00",
+              "durationMs": 127261,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-08T14:05:16+08:00",
+              "finishedAt": "2026-09-08T14:15:25+08:00",
+              "durationMs": 609196,
               "status": "completed",
               "exitCode": 0
             }
