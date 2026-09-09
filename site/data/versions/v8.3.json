@@ -32940,6 +32940,286 @@
             }
           ]
         }
+      },
+      "seed-2.0-pro": {
+        "status": "completed",
+        "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
+        "score": {
+          "display": "31.58 (+3.51)",
+          "base": 31.58,
+          "passed": 18,
+          "denominator": 57,
+          "dynamic": 2,
+          "dynamicAddition": 3.51,
+          "potential": 35.09
+        },
+        "visualQuality": {
+          "score": 92,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48,
+          "renderingStyleAverage": 44,
+          "videosScored": 2
+        },
+        "traceCount": 2,
+        "playPath": "games-v8.3/prism-paddock/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.3/prism-paddock/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-006",
+              "zh": "The scheduled feeding tutorial prompt fires after the red color has been unlocked → A tutorial speech bubble appears beside the unicorn prompting the player to drag a color onto the unicorn."
+            },
+            {
+              "id": "target-012",
+              "zh": "The player releases a dragged color fragment over the unicorn → The floating color fragment disappears, and the bottom help text changes to “Wait for the unicorn to finish!”."
+            },
+            {
+              "id": "target-026",
+              "zh": "The player taps an enabled color swatch when the shop is available → A shop panel with plant item cards is shown, along with the instruction “Drag an item onto the grass to place it.”"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-008",
+              "zh": "The gameplay background is rendered after two rainbow colors have been unlocked → The page background behind the paddock is a diagonal gradient with visible red and orange color bands.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-010",
+              "zh": "The bottom palette is rendered after at least two rainbow colors have been unlocked → The right-side palette help text reads “Tap a color to shop with it.”",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-014",
+              "zh": "The player presses an enabled color swatch while the bottom help text says “Wait for the unicorn to finish!” → No floating color fragment appears.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-019",
+              "zh": "A rainbow butterfly-poop is rendered on a grass tile → The butterfly-poop sprite is shown on the tile with rainbow coloring and no small butterfly icon over it.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-023",
+              "zh": "The player cleans a rainbow butterfly-poop → Butterfly icons fly from the cleaned tile toward every visible color counter in the top status bar.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-028",
+              "zh": "The shop panel is rendered after butterflies have been harvested but before any flower decoration has been placed → The shop panel shows a Flower item card, and no Mushroom or Crystal item card is visible.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-029",
+              "zh": "The shop panel is rendered after at least one flower decoration has been placed and before blue has been unlocked → The shop panel shows Flower and Mushroom item cards, and no Crystal item card is visible.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-030",
+              "zh": "The shop panel is rendered after blue has been unlocked and at least one flower decoration has been placed → The shop panel shows Flower, Mushroom, and Crystal item cards.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-031",
+              "zh": "The shop panel is rendered with an item card whose selected-color butterfly count is below that item’s cost → That unaffordable item card is shown in grayscale and translucent styling.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-032",
+              "zh": "The player begins pressing a shop item card whose selected-color butterfly count is below that item’s cost → No dragged plant sprite appears under the pointer and no plant placement preview appears on the grass.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-033",
+              "zh": "The player begins a real drag from an enabled shop item card → A floating plant sprite matching the selected shop item appears under the pointer.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-034",
+              "zh": "The player begins a real drag from an enabled shop item card onto a valid grass tile → A plant placement preview appears on the target grass tile.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-035",
+              "zh": "The player drags a shop item over the tile occupied by the unicorn → No plant placement preview is shown on the unicorn’s tile.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-036",
+              "zh": "The player drags a shop item over a tile containing butterfly-poop → No plant placement preview is shown on the butterfly-poop tile.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-037",
+              "zh": "The player drags a shop item over a grass tile that already contains a decoration → The plant placement preview appears on that tile and the existing decoration on that tile is hidden while the preview is visible.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-038",
+              "zh": "The player releases a dragged shop item while its placement preview is on a valid grass tile → The placement preview is replaced by a placed plant decoration on that grass tile.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-039",
+              "zh": "The player releases a dragged shop item on a grass tile that already contains a decoration → The old decoration disappears from that tile and is replaced by the newly placed decoration.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-040",
+              "zh": "The player releases a dragged shop item when no valid grass-tile placement preview is visible → No new plant decoration is added to the grass.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-041",
+              "zh": "A placed flower decoration is rendered after its placement pop-in animation has completed → A flower decoration is visible on its grass tile.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-042",
+              "zh": "A placed mushroom decoration is rendered after its placement pop-in animation has completed → A mushroom decoration is visible on its grass tile.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-043",
+              "zh": "A placed crystal decoration is rendered after its placement pop-in animation has completed → A crystal decoration is visible on its grass tile.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-044",
+              "zh": "The first green quest begins → A quest speech bubble appears beside the unicorn with the text “Huh, green didn't unlock... What can we do?”.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-045",
+              "zh": "The active green quest is started with its full required lineup on the board → The required plant decorations for the quest are highlighted on the grass.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-046",
+              "zh": "The violet quest begins → A quest speech bubble appears beside the unicorn, and the required plant decorations for the violet sequence are highlighted on the grass.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-047",
+              "zh": "The player clicks the currently highlighted correct decoration during an active quest before the last required step → The highlight moves to the next required decoration in the quest sequence.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-048",
+              "zh": "The player clicks a nonmatching decoration after making progress in an active quest → The quest highlight resets to the first required decoration in the sequence.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-049",
+              "zh": "The player clicks the final highlighted correct decoration in an active quest sequence → The quest speech bubble is not visible, and a glowing rainbow arc overlay with centered unlock text is visible over the game view.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-050",
+              "zh": "A rainbow color beyond the initial red becomes newly unlocked through progression → A glowing rainbow arc overlay spans the game view, with centered text naming that color followed by “unlocked!”.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-051",
+              "zh": "A rainbow color unlock celebration finishes landing on its palette swatch → The newly unlocked color swatch in the bottom palette is shown in full color instead of dimmed grayscale.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-052",
+              "zh": "The green unlock celebration finishes → A speech bubble sequence begins beside the unicorn with the text “I'd never have figured that out on my own!”.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-053",
+              "zh": "The blue unlock celebration finishes → A speech bubble appears with the text “They say there are magic crystals that draw their power from the sea... Can you believe that?”.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-054",
+              "zh": "The final violet rainbow color becomes newly unlocked → A color-unlock celebration is shown and confetti pieces burst across the game view.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-055",
+              "zh": "The final violet unlock speech begins → A speech bubble appears with the text “Wow, you've completely restored the rainbow, thank you so much!” followed by “If you feel like it, you can keep decorating my surroundings however you please.” on the next line.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-056",
+              "zh": "The unicorn selects a left-adjacent tile during an idle wander step → The unicorn moves one grass tile to the left and faces left.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-027",
+              "zh": "The player taps a different enabled color swatch in the bottom palette while the shop panel is open → The selected-swatch highlight moves to the tapped color swatch and the shop panel remains visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-001",
+              "zh": "The page has completed its initial load before the player enters the game section → A start screen is visible with the title text “Prism Paddock” and a link labeled “Click to start”.",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-09T02:54:13+08:00",
+          "finishedAt": "2026-09-09T03:15:47+08:00",
+          "totalDurationMs": 1294413,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-09T02:54:13+08:00",
+              "finishedAt": "2026-09-09T02:56:01+08:00",
+              "durationMs": 108416,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-09T02:56:01+08:00",
+              "finishedAt": "2026-09-09T03:09:35+08:00",
+              "durationMs": 813460,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-09T03:09:35+08:00",
+              "finishedAt": "2026-09-09T03:12:33+08:00",
+              "durationMs": 178459,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-09T03:12:33+08:00",
+              "finishedAt": "2026-09-09T03:12:33+08:00",
+              "durationMs": 146,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-09T03:12:33+08:00",
+              "finishedAt": "2026-09-09T03:12:51+08:00",
+              "durationMs": 17563,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-09T03:12:51+08:00",
+              "finishedAt": "2026-09-09T03:15:47+08:00",
+              "durationMs": 176289,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "dewdrop-farm": {
