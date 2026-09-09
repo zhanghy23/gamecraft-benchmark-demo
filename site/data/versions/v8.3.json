@@ -29609,6 +29609,119 @@
             }
           ]
         }
+      },
+      "kimi-k2.6": {
+        "status": "completed",
+        "runId": "kimi-k2.6-v8.3-rubric2-imported18-20260908-163121",
+        "score": {
+          "display": "87.69 (+0.00)",
+          "base": 87.69,
+          "passed": 57,
+          "denominator": 65,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 87.69
+        },
+        "visualQuality": {
+          "score": 90,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.78,
+          "renderingStyleAverage": 42.22,
+          "videosScored": 18
+        },
+        "traceCount": 18,
+        "playPath": "games-v8.3/witchcat/kimi-k2.6/index.html",
+        "previewPath": "previews-v8.3/witchcat/kimi-k2.6.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-019",
+              "zh": "角色的移动目的地与坑洞图块重叠，且处于游戏进行中 → 角色开始下落动画，角色朝坑洞移动，同时角色精灵缩小。"
+            },
+            {
+              "id": "target-020",
+              "zh": "角色的移动目的地与水面图块重叠，且处于游戏进行中 → 角色开始下落动画，角色朝水面移动，同时角色精灵缩小。"
+            },
+            {
+              "id": "target-034",
+              "zh": "移动中的火球到达灌木图块 → 火球精灵消失，并且灌木图块从场景中消失。"
+            },
+            {
+              "id": "target-043",
+              "zh": "一个移动中的 seeker 在移动动画期间被阻挡 → 该 seeker 停止移动，并显示为对齐到一个完整图块位置，而不是位于图块之间。"
+            },
+            {
+              "id": "target-056",
+              "zh": "完成一次与当前季节不同的季节变更时 → 游戏背景会以新选择季节的视觉风格重新绘制。"
+            },
+            {
+              "id": "target-057",
+              "zh": "玩家在接触冬季季节宝珠时执行操作输入 → 被接触的宝珠精灵从地图上消失，右上角心形显示相比输入前立即增加一个心形图标，并且黑色对话面板以两行文本显示“IN WINTER, SNOW COVERS”和“AND WATER TURNS ICE”。"
+            },
+            {
+              "id": "target-060",
+              "zh": "玩家在接触春季季节宝珠时执行操作输入 → 被接触的宝珠精灵从地图上消失，右上角心形显示相比输入前立即增加一个心形图标，并且黑色对话面板以两行文本显示“IN SPRING, STONE FLOWERS”和“BLOOM”。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-038",
+              "zh": "玩家执行动作输入，且一个未激活的 seeker 陷阱位于角色下方、与角色处于同一条无遮挡的列中 → 该 seeker 陷阱开始向上移动，朝向角色所在的行。",
+              "cause": "源码分析确认未实现"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "kimi-k2.6-v8.3-rubric2-imported18-20260908-163121",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-09T22:19:00+08:00",
+          "finishedAt": "2026-09-09T23:53:39+08:00",
+          "totalDurationMs": 5679797,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-09T22:19:00+08:00",
+              "finishedAt": "2026-09-09T22:40:47+08:00",
+              "durationMs": 1307086,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-09T22:40:47+08:00",
+              "finishedAt": "2026-09-09T23:29:49+08:00",
+              "durationMs": 2942078,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-09T23:29:49+08:00",
+              "finishedAt": "2026-09-09T23:29:49+08:00",
+              "durationMs": 587,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-09T23:29:49+08:00",
+              "finishedAt": "2026-09-09T23:35:41+08:00",
+              "durationMs": 351463,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-09T23:35:41+08:00",
+              "finishedAt": "2026-09-09T23:53:39+08:00",
+              "durationMs": 1078550,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "the-neatness": {
