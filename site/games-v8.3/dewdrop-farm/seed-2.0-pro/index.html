@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dewdrop Farm</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family: system-ui, sans-serif; }
+    body { background:#1a1a2e; color:#eee; min-height:100vh; display:flex; justify-content:center; align-items:center; }
+    #game { width:100%; max-width:1280px; min-height:720px; background:#16213e; border-radius:12px; overflow:hidden; }
+    .header { background:#0f3460; padding:12px 16px; display:flex; justify-content:space-between; align-items:center; }
+    .title { font-size:22px; font-weight:bold; color:#e94560; }
+    .cash { display:flex; gap:8px; align-items:center; font-size:18px; font-weight:bold; }
+    .coin { width:24px; height:24px; background:gold; border-radius:50%; }
+    .tabs { display:flex; gap:4px; padding:8px 16px; background:#0f3460; }
+    .tab { padding:8px 16px; border:none; border-radius:6px; background:#16213e; color:#eee; cursor:pointer; font-weight:500; }
+    .tab.active { background:#e94560; color:white; }
+    .content { padding:16px; display:flex; gap:16px; }
+    .toolbar { display:flex; gap:8px; flex-direction:column; }
+    .tool { width:56px; height:56px; border:2px solid #0f3460; border-radius:8px; background:#1a1a2e; cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:28px; position:relative; }
+    .tool.active { border-color:#e94560; background:#16213e; }
+    .tool .key { position:absolute; bottom:2px; right:4px; font-size:10px; opacity:0.7; }
+    .tool .amount { position:absolute; top:2px; right:4px; font-size:11px; background:#e94560; padding:1px 4px; border-radius:4px; }
+    #farm { display:grid; grid-template-columns: repeat(6, 64px); grid-template-rows: repeat(6, 64px); gap:2px; background:#0f3460; padding:4px; border-radius:8px; }
+    .plot { width:64px; height:64px; background:#795548; position:relative; cursor:pointer; overflow:hidden; }
+    .plot.grass { background:#689f38; }
+    .plot.tilled { background:#8d6e63; }
+    .plot.watered::after { content:''; position:absolute; inset:0; background:rgba(33,150,243,0.3); pointer-events:none; }
+    .plot .crop { position:absolute; inset:8px; font-size:36px; display:flex; align-items:center; justify-content:center; }
+    .plot .fertilizer { position:absolute; bottom:4px; left:4px; font-size:16px; }
+    .plot .animal { position:absolute; inset:0; font-size:40px; display:flex; align-items:center; justify-content:center; z-index:10; }
+    #store, #market, #geek { background:#1a1a2e; border-radius:8px; padding:16px; min-width:320px; }
+    .store-item, .market-item { padding:12px; background:#0f3460; border-radius:6px; margin-bottom:8px; cursor:pointer; display:flex; justify-content:space-between; align-items:center; }
+    .store-item.locked { opacity:0.6; cursor:not-allowed; }
+    .hidden { display:none !important; }
+    .newgame { padding:8px 16px; border:none; border-radius:6px; background:#e94560; color:white; font-weight:bold; cursor:pointer; }
+  </style>
+  <script type="module" crossorigin src="./assets/index-UDmnvfPy.js"></script>
+</head>
+<body>
+  <div id="game">
+    <div class="header">
+      <div class="title">Dewdrop Farm</div>
+      <div class="cash"><div class="coin"></div><span id="cash-value">0</span></div>
+      <button class="newgame" id="newgame">New Game</button>
+    </div>
+    <div class="tabs">
+      <button class="tab active" data-tab="tend">🌱 Tend</button>
+      <button class="tab" data-tab="buy">🛒 Buy</button>
+      <button class="tab" data-tab="sell">💰 Sell</button>
+      <button class="tab" data-tab="geek">📊 Info</button>
+    </div>
+    <div class="content">
+      <div class="toolbar">
+        <div class="tool active" data-tool="hoe">⛏<span class="key">1</span></div>
+        <div class="tool" data-tool="water">💧<span class="key">2</span></div>
+        <div class="tool" data-slot="0"></div>
+        <div class="tool" data-slot="1"></div>
+        <div class="tool" data-slot="2"></div>
+        <div class="tool" data-slot="3"></div>
+      </div>
+      <div id="farm"></div>
+      <div id="store" class="hidden"></div>
+      <div id="market" class="hidden"></div>
+      <div id="geek" class="hidden"></div>
+    </div>
+  </div>
+</body>
+</html>
