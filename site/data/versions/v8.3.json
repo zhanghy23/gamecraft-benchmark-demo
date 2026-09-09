@@ -32663,7 +32663,45 @@
       }
     },
     "dewdrop-farm": {},
-    "idle-necromancer": {},
+    "idle-necromancer": {
+      "gpt-5.5": {
+        "status": "failed",
+        "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
+        "stage": "trace",
+        "score": null,
+        "traceCount": 0,
+        "playPath": null,
+        "previewPath": null,
+        "unmet": null,
+        "issue": "生成源码并通过确定性构建与运行检查后进入Trace；第3/5批Trace请求连续三次在没有[DONE]或finish_reason的情况下中断，重试耗尽后终止。该项记录为Trace服务传输失败，无功能分、无画面分且不可试玩。",
+        "timing": {
+          "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
+          "status": "failed",
+          "failedStage": "trace",
+          "startedAt": "2026-09-09T08:22:21+08:00",
+          "finishedAt": "2026-09-09T08:44:13+08:00",
+          "totalDurationMs": 1312454,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-09T08:22:21+08:00",
+              "finishedAt": "2026-09-09T08:24:40+08:00",
+              "durationMs": 138785,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-09T08:24:40+08:00",
+              "finishedAt": "2026-09-09T08:44:13+08:00",
+              "durationMs": 1173606,
+              "status": "failed",
+              "exitCode": 1
+            }
+          ]
+        }
+      }
+    },
     "the-rainbow-is-right-there": {},
     "7-huenicorns": {},
     "match3": {},
