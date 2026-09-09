@@ -35295,6 +35295,128 @@
       }
     },
     "match3": {
+      "gpt-5.5": {
+        "status": "completed",
+        "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
+        "score": {
+          "display": "86.00 (+14.00)",
+          "base": 86,
+          "passed": 43,
+          "denominator": 50,
+          "dynamic": 7,
+          "dynamicAddition": 14,
+          "potential": 100
+        },
+        "visualQuality": {
+          "score": 82,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 42.44,
+          "renderingStyleAverage": 39.56,
+          "videosScored": 9
+        },
+        "traceCount": 9,
+        "playPath": "games-v8.3/match3/gpt-5.5/index.html",
+        "previewPath": "previews-v8.3/match3/gpt-5.5.png",
+        "unmet": {
+          "vlm": [],
+          "replayTrace": [
+            {
+              "id": "target-030",
+              "zh": "The player presses Enter during active play while another tile is selected and the keyboard cursor is on an adjacent grid tile that is accepted as a move → The selected tile and the keyboard cursor tile visibly exchange positions on the board.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-038",
+              "zh": "A completed valid move leaves the board with no valid moves available → The tile grid is replaced with a full tile grid whose emoji arrangement is not identical to the immediately preceding grid, while the current mode header remains visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-043",
+              "zh": "A Levels mode advancement reaches level 12 → The board is replaced with a full new tile grid and the header displays \"Level: 12\", \"Score: 0\", \"Moves: 10\", and \"Target: 6500\".",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-045",
+              "zh": "The player clicks while the Levels loss overlay is showing → The \"Out of Moves!\" overlay disappears and a fresh Levels game is rendered with \"Level: 1\" and \"Score: 0\" in the header.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-046",
+              "zh": "The player presses Enter while the Levels loss overlay is showing → The \"Out of Moves!\" overlay disappears and a fresh Levels game is rendered with \"Level: 1\" and \"Score: 0\" in the header.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-048",
+              "zh": "The Time Attack countdown update reaches zero while the game is not already over → A game-over overlay appears with the red title text \"Time's Up!\".",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-050",
+              "zh": "The player clicks while the Time Attack loss overlay is showing → The \"Time's Up!\" overlay disappears and a new Time Attack board is rendered.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-09T16:23:02+08:00",
+          "finishedAt": "2026-09-09T19:50:20+08:00",
+          "totalDurationMs": 12438234,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-09T16:23:02+08:00",
+              "finishedAt": "2026-09-09T16:25:49+08:00",
+              "durationMs": 167586,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-09T16:25:49+08:00",
+              "finishedAt": "2026-09-09T16:47:47+08:00",
+              "durationMs": 1317789,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-09T16:47:47+08:00",
+              "finishedAt": "2026-09-09T19:37:01+08:00",
+              "durationMs": 10153666,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-09T19:37:01+08:00",
+              "finishedAt": "2026-09-09T19:37:01+08:00",
+              "durationMs": 244,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-09T19:37:01+08:00",
+              "finishedAt": "2026-09-09T19:42:49+08:00",
+              "durationMs": 347993,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-09T19:42:49+08:00",
+              "finishedAt": "2026-09-09T19:50:20+08:00",
+              "durationMs": 450875,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
       "seed-2.0-pro": {
         "status": "completed",
         "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
