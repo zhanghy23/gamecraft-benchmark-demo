@@ -240,11 +240,11 @@ const games = [
     summaryZh: '以移动、射击和持续迎战敌人为核心的双摇杆射击游戏。',
   },
   {
-    id: 'solar-defence',
-    titleZh: 'Solar Defence',
+    id: 'fight-back',
+    titleZh: 'Fight Back',
     typeZh: '动作与战斗',
     targetCount: 0,
-    summaryZh: '以移动、瞄准和射击防御为核心的动作游戏。',
+    summaryZh: '以键盘移动、近身攻击、休息回血和闯关为核心的轻量 Roguelite。',
   },
   {
     id: 'prism-paddock',

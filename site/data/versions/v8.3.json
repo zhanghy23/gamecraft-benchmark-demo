@@ -4666,15 +4666,143 @@
       "requirementGroups": []
     },
     {
-      "id": "solar-defence",
-      "titleZh": "Solar Defence",
+      "id": "fight-back",
+      "titleZh": "Fight Back",
       "typeZh": "动作与战斗",
-      "targetCount": 1,
-      "summaryZh": "A minimal browser canvas game shell whose supported external behavior is the presentation of a single full-page 16:9 play surface. The reviewed evidence does not expose source-supported player controls, objective rules, themed entities, scoring, or progression beyond the initial gameplay canvas layout.",
+      "targetCount": 33,
+      "summaryZh": "A browser-based turn-based ASCII dungeon adventure where the player controls a hero exploring a castle, fighting rats, goblins, orcs, and a dragon. The objective is to survive monster encounters, gain experience through combat, rest when needed, and defeat the dragon to win. Play centers on keyboard-driven tile movement, adjacent attacks, visible console feedback, and simple progression shown in the side panel.",
       "requirements": [
         {
           "id": "target-001",
-          "zh": "The game page has completed initial canvas setup → A single 16:9 game canvas fills the rendered page area with no visible page margin around it."
+          "zh": "The game presentation canvas has completed creation during initial page setup → A single game canvas with an 800-by-600 presentation area is present on the page."
+        },
+        {
+          "id": "target-002",
+          "zh": "The main menu stage is rendered → The menu screen shows the story text \"Welcome back hero,\" and \"You must fight those monsters and win back our castle.\", along with the instructions \"Use arrow keys to move.\" and \"Use space bar to rest.\""
+        },
+        {
+          "id": "target-003",
+          "zh": "The main menu stage receives an Enter input → The menu screen is replaced by the adventure gameplay view."
+        },
+        {
+          "id": "target-004",
+          "zh": "The adventure stage receives an Arrow Up input while the hero can accept a new action and the destination tile is walkable and unoccupied → The hero sprite walks one map step toward the top of the gameplay view."
+        },
+        {
+          "id": "target-005",
+          "zh": "The adventure stage receives an Arrow Down input while the hero can accept a new action and the destination tile is walkable and unoccupied → The hero sprite walks one map step toward the bottom of the gameplay view."
+        },
+        {
+          "id": "target-006",
+          "zh": "The adventure stage receives an Arrow Left input while the hero can accept a new action and the destination tile is walkable and unoccupied → The hero sprite walks one map step toward the left side of the gameplay view."
+        },
+        {
+          "id": "target-007",
+          "zh": "The adventure stage receives an Arrow Right input while the hero can accept a new action and the destination tile is walkable and unoccupied → The hero sprite walks one map step toward the right side of the gameplay view."
+        },
+        {
+          "id": "target-008",
+          "zh": "The adventure stage receives a Space input while the hero can accept a new action → The hero sprite stays on its current map tile and the gameplay console displays a new message naming the hero and saying \"rest for\" followed by a numeric healing amount and \"hp\"."
+        },
+        {
+          "id": "target-009",
+          "zh": "The hero performs an attack against a living non-dragon enemy and the enemy survives the hit → The gameplay console displays a new hit message naming the hero and the target and saying \"for\" followed by a numeric damage amount."
+        },
+        {
+          "id": "target-010",
+          "zh": "The hero performs an attack against a living non-dragon enemy and the hit kills the enemy → The gameplay console displays a new hit message for the attack and a new message naming the target and saying \"is dead\"."
+        },
+        {
+          "id": "target-011",
+          "zh": "The hero performs an attack against the living dragon and the dragon survives the hit → The gameplay console displays a new hit message naming the hero and the dragon and saying \"for\" followed by a numeric damage amount."
+        },
+        {
+          "id": "target-012",
+          "zh": "The hero performs an attack against the dragon and the hit kills the dragon → The adventure gameplay view is replaced by the victory screen."
+        },
+        {
+          "id": "target-013",
+          "zh": "An actor attacks a living target with an attack result that deals 0 damage after defense → The gameplay console displays a new hit message naming the attacker and target and saying \"for 0 damage\"."
+        },
+        {
+          "id": "target-014",
+          "zh": "A non-hero actor adjacent to the hero receives an AI turn with no queued action → The gameplay console displays a new hit message naming that actor and the hero and saying \"for\" followed by a numeric damage amount."
+        },
+        {
+          "id": "target-015",
+          "zh": "A non-hero actor attacks the living hero with damage after defense greater than the hero's current HP → The adventure gameplay view is replaced by the game over screen."
+        },
+        {
+          "id": "target-016",
+          "zh": "The adventure stage begins an update while the hero is dead → The adventure gameplay view is replaced by the game over screen."
+        },
+        {
+          "id": "target-017",
+          "zh": "A non-hero actor performs a walk action to the north toward a walkable unoccupied destination → That actor's sprite moves one map step toward the top of the gameplay view."
+        },
+        {
+          "id": "target-018",
+          "zh": "The hero performs a walk action to the north toward a non-walkable destination with no attackable actor there → The hero sprite remains on its current map tile."
+        },
+        {
+          "id": "target-019",
+          "zh": "The hero performs a walk action to the north toward a tile occupied by a living actor → The hero sprite remains on its current map tile."
+        },
+        {
+          "id": "target-020",
+          "zh": "The hero performs an attack against a living target that survives the hit while the hero's pre-attack XP is at least 2 points below the current next-level XP requirement → In the right-side information panel, the XP line's numerator increases by 1 from its pre-attack displayed value and the XP line's denominator stays the same."
+        },
+        {
+          "id": "target-021",
+          "zh": "The hero performs an attack that kills a living non-dragon enemy while the hero's pre-attack XP is at least 4 points below the current next-level XP requirement → In the right-side information panel, the XP line's numerator increases by 3 from its pre-attack displayed value and the XP line's denominator stays the same."
+        },
+        {
+          "id": "target-022",
+          "zh": "The adventure gameplay view is rendered while the hero actor is inside the current map viewport → A white \"@\" glyph is drawn at the hero's map tile in the map area."
+        },
+        {
+          "id": "target-023",
+          "zh": "The adventure gameplay view is rendered while a rat actor is inside the current map viewport → A grey lowercase \"r\" glyph is drawn at that rat's map tile in the map area."
+        },
+        {
+          "id": "target-024",
+          "zh": "The adventure gameplay view is rendered while a goblin actor is inside the current map viewport → A brown lowercase \"g\" glyph is drawn at that goblin's map tile in the map area."
+        },
+        {
+          "id": "target-025",
+          "zh": "The adventure gameplay view is rendered while an orc actor is inside the current map viewport → A light-brown uppercase \"O\" glyph is drawn at that orc's map tile in the map area."
+        },
+        {
+          "id": "target-026",
+          "zh": "The adventure gameplay view is rendered while the dragon actor is inside the current map viewport → A red uppercase \"D\" glyph is drawn at the dragon's map tile in the map area."
+        },
+        {
+          "id": "target-027",
+          "zh": "A map cell with value 0 is rendered inside the adventure map viewport → That map tile is drawn as a dark-blue terrain glyph."
+        },
+        {
+          "id": "target-028",
+          "zh": "The adventure gameplay view renders the right-side information panel → A vertical column of \"|\" glyphs is drawn at the left edge of the right-side information panel."
+        },
+        {
+          "id": "target-029",
+          "zh": "The adventure gameplay view renders its console border → A horizontal row of \"-\" glyphs spans the top of the console area, with one \"+\" glyph at the divider between the map area and the right-side information panel."
+        },
+        {
+          "id": "target-030",
+          "zh": "The game over stage is rendered → A bordered message box is visible with a top border reading \"+-------------+\" and a line containing \"GAME OVER\"."
+        },
+        {
+          "id": "target-031",
+          "zh": "The game over stage receives an Enter input → The displayed game over screen is replaced by the opening menu screen."
+        },
+        {
+          "id": "target-032",
+          "zh": "The game won stage is rendered → A five-line bordered message box is visible, with the middle line containing the text \"You won !\"."
+        },
+        {
+          "id": "target-033",
+          "zh": "The game won stage receives an Enter input → The displayed victory screen is replaced by the opening menu screen."
         }
       ],
       "requirementGroups": []
@@ -33166,180 +33294,7 @@
         }
       }
     },
-    "solar-defence": {
-      "gpt-5.5": {
-        "status": "completed",
-        "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
-        "score": {
-          "display": "100.00 (+0.00)",
-          "base": 100,
-          "passed": 1,
-          "denominator": 1,
-          "dynamic": 0,
-          "dynamicAddition": 0,
-          "potential": 100
-        },
-        "visualQuality": {
-          "score": 91,
-          "maximumScore": 100,
-          "technicalPresentationAverage": 48,
-          "renderingStyleAverage": 43,
-          "videosScored": 1
-        },
-        "traceCount": 1,
-        "playPath": "games-v8.3/solar-defence/gpt-5.5/index.html",
-        "previewPath": "previews-v8.3/solar-defence/gpt-5.5.png",
-        "unmet": {
-          "vlm": [],
-          "replayTrace": []
-        },
-        "issue": null,
-        "timing": {
-          "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
-          "status": "completed",
-          "failedStage": null,
-          "startedAt": "2026-09-09T01:28:47+08:00",
-          "finishedAt": "2026-09-09T01:30:17+08:00",
-          "totalDurationMs": 89973,
-          "stages": [
-            {
-              "stage": "generate-game",
-              "startedAt": "2026-09-09T01:28:47+08:00",
-              "finishedAt": "2026-09-09T01:29:34+08:00",
-              "durationMs": 46202,
-              "status": "completed",
-              "exitCode": 0
-            },
-            {
-              "stage": "trace",
-              "startedAt": "2026-09-09T01:29:34+08:00",
-              "finishedAt": "2026-09-09T01:29:57+08:00",
-              "durationMs": 23681,
-              "status": "completed",
-              "exitCode": 0
-            },
-            {
-              "stage": "select-traces",
-              "startedAt": "2026-09-09T01:29:57+08:00",
-              "finishedAt": "2026-09-09T01:29:59+08:00",
-              "durationMs": 1598,
-              "status": "completed",
-              "exitCode": 0
-            },
-            {
-              "stage": "optimize-traces",
-              "startedAt": "2026-09-09T01:29:59+08:00",
-              "finishedAt": "2026-09-09T01:29:59+08:00",
-              "durationMs": 121,
-              "status": "completed",
-              "exitCode": 0
-            },
-            {
-              "stage": "replay",
-              "startedAt": "2026-09-09T01:29:59+08:00",
-              "finishedAt": "2026-09-09T01:30:03+08:00",
-              "durationMs": 3575,
-              "status": "completed",
-              "exitCode": 0
-            },
-            {
-              "stage": "judge-video-and-image",
-              "startedAt": "2026-09-09T01:30:03+08:00",
-              "finishedAt": "2026-09-09T01:30:17+08:00",
-              "durationMs": 14716,
-              "status": "completed",
-              "exitCode": 0
-            }
-          ]
-        }
-      },
-      "seed-2.0-pro": {
-        "status": "completed",
-        "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
-        "score": {
-          "display": "100.00 (+0.00)",
-          "base": 100,
-          "passed": 1,
-          "denominator": 1,
-          "dynamic": 0,
-          "dynamicAddition": 0,
-          "potential": 100
-        },
-        "visualQuality": {
-          "score": 82,
-          "maximumScore": 100,
-          "technicalPresentationAverage": 47,
-          "renderingStyleAverage": 35,
-          "videosScored": 1
-        },
-        "traceCount": 1,
-        "playPath": "games-v8.3/solar-defence/seed-2.0-pro/index.html",
-        "previewPath": "previews-v8.3/solar-defence/seed-2.0-pro.png",
-        "unmet": {
-          "vlm": [],
-          "replayTrace": []
-        },
-        "issue": null,
-        "timing": {
-          "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
-          "status": "completed",
-          "failedStage": null,
-          "startedAt": "2026-09-09T02:52:37+08:00",
-          "finishedAt": "2026-09-09T02:54:13+08:00",
-          "totalDurationMs": 95102,
-          "stages": [
-            {
-              "stage": "generate-game",
-              "startedAt": "2026-09-09T02:52:38+08:00",
-              "finishedAt": "2026-09-09T02:53:09+08:00",
-              "durationMs": 31885,
-              "status": "completed",
-              "exitCode": 0
-            },
-            {
-              "stage": "trace",
-              "startedAt": "2026-09-09T02:53:09+08:00",
-              "finishedAt": "2026-09-09T02:53:53+08:00",
-              "durationMs": 43918,
-              "status": "completed",
-              "exitCode": 0
-            },
-            {
-              "stage": "select-traces",
-              "startedAt": "2026-09-09T02:53:53+08:00",
-              "finishedAt": "2026-09-09T02:53:55+08:00",
-              "durationMs": 1212,
-              "status": "completed",
-              "exitCode": 0
-            },
-            {
-              "stage": "optimize-traces",
-              "startedAt": "2026-09-09T02:53:55+08:00",
-              "finishedAt": "2026-09-09T02:53:55+08:00",
-              "durationMs": 130,
-              "status": "completed",
-              "exitCode": 0
-            },
-            {
-              "stage": "replay",
-              "startedAt": "2026-09-09T02:53:55+08:00",
-              "finishedAt": "2026-09-09T02:53:58+08:00",
-              "durationMs": 2962,
-              "status": "completed",
-              "exitCode": 0
-            },
-            {
-              "stage": "judge-video-and-image",
-              "startedAt": "2026-09-09T02:53:58+08:00",
-              "finishedAt": "2026-09-09T02:54:13+08:00",
-              "durationMs": 14908,
-              "status": "completed",
-              "exitCode": 0
-            }
-          ]
-        }
-      }
-    },
+    "fight-back": {},
     "prism-paddock": {
       "gpt-5.5": {
         "status": "completed",
