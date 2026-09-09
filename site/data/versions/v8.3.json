@@ -37006,7 +37006,7 @@
     "rainbowhoof": {
       "seed-2.0-pro": {
         "status": "scored-failure",
-        "runId": null,
+        "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
         "stage": "trace",
         "score": {
           "display": "0.00 (+0.00)",
@@ -37252,7 +37252,32 @@
           ]
         },
         "issue": "Seed-2.0-Pro已生成源码，但进入Trace前的确定性构建校验失败：src/main.ts:71:20出现Invalid assignment target，Vite/esbuild无法编译。按源码构建失败计分规则，45条固定需求均计失败：基础分0、动态分0、无画面分且不可试玩。",
-        "timing": null
+        "timing": {
+          "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
+          "status": "failed",
+          "failedStage": "trace",
+          "startedAt": "2026-09-09T22:04:41+08:00",
+          "finishedAt": "2026-09-09T22:06:40+08:00",
+          "totalDurationMs": 119047,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-09T22:04:41+08:00",
+              "finishedAt": "2026-09-09T22:06:38+08:00",
+              "durationMs": 116130,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-09T22:06:38+08:00",
+              "finishedAt": "2026-09-09T22:06:40+08:00",
+              "durationMs": 2853,
+              "status": "failed",
+              "exitCode": 1
+            }
+          ]
+        }
       }
     },
     "rainbow-runner": {},
