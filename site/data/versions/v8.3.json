@@ -35689,6 +35689,108 @@
       }
     },
     "unicorn-storm": {
+      "gpt-5.5": {
+        "status": "completed",
+        "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
+        "score": {
+          "display": "96.81 (+2.13)",
+          "base": 96.81,
+          "passed": 91,
+          "denominator": 94,
+          "dynamic": 2,
+          "dynamicAddition": 2.13,
+          "potential": 98.94
+        },
+        "visualQuality": {
+          "score": 94.27,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.61,
+          "renderingStyleAverage": 45.67,
+          "videosScored": 33
+        },
+        "traceCount": 33,
+        "playPath": "games-v8.3/unicorn-storm/gpt-5.5/index.html",
+        "previewPath": "previews-v8.3/unicorn-storm/gpt-5.5.png",
+        "unmet": {
+          "vlm": [],
+          "replayTrace": [
+            {
+              "id": "target-086",
+              "zh": "A round result overlay is shown after a mid-pattern restart → The result choices include \"TRY AGAIN\" with \"same pattern, play now\", \"HEAR IT AGAIN\" with \"the unicorns play it first\", and a locked \"NEXT!\" choice with \"finish the pattern first\".",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-003",
+              "zh": "The player taps the screen while the paused overlay is visible and audio can resume → The \"paused\" and \"tap anywhere to resume\" overlay is no longer visible, revealing the gameplay screen underneath.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-052",
+              "zh": "The call phase reaches a high-note slot in a height-enabled pattern → The calling unicorn performs a high soar with visible wings.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-09T19:50:20+08:00",
+          "finishedAt": "2026-09-09T21:26:42+08:00",
+          "totalDurationMs": 5781731,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-09T19:50:20+08:00",
+              "finishedAt": "2026-09-09T19:55:13+08:00",
+              "durationMs": 292820,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-09T19:55:13+08:00",
+              "finishedAt": "2026-09-09T20:23:20+08:00",
+              "durationMs": 1686497,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-09T20:23:20+08:00",
+              "finishedAt": "2026-09-09T21:02:25+08:00",
+              "durationMs": 2345412,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-09T21:02:25+08:00",
+              "finishedAt": "2026-09-09T21:02:25+08:00",
+              "durationMs": 328,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-09T21:02:25+08:00",
+              "finishedAt": "2026-09-09T21:07:20+08:00",
+              "durationMs": 294568,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-09T21:07:20+08:00",
+              "finishedAt": "2026-09-09T21:26:42+08:00",
+              "durationMs": 1162019,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
       "seed-2.0-pro": {
         "status": "completed",
         "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
