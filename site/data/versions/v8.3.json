@@ -26277,6 +26277,166 @@
             }
           ]
         }
+      },
+      "kimi-k2.6": {
+        "status": "completed",
+        "runId": "kimi-k2.6-v8.3-rubric2-imported18-20260908-163121",
+        "score": {
+          "display": "77.63 (+9.21)",
+          "base": 77.63,
+          "passed": 59,
+          "denominator": 76,
+          "dynamic": 7,
+          "dynamicAddition": 9.21,
+          "potential": 86.84
+        },
+        "visualQuality": {
+          "score": 90,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.94,
+          "renderingStyleAverage": 42.06,
+          "videosScored": 16
+        },
+        "traceCount": 16,
+        "playPath": "games-v8.3/stolen-sword/kimi-k2.6/index.html",
+        "previewPath": "previews-v8.3/stolen-sword/kimi-k2.6.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-023",
+              "zh": "一个跟随型敌人在存活期间到达开始跟随其被跟踪对象的时间 → 该跟随型敌人移动到被跟踪对象的偏移位置，随后在被跟踪对象移动时保持对齐在该偏移位置。"
+            },
+            {
+              "id": "target-041",
+              "zh": "玩家与正在防御的敌人发生水平碰撞 → 玩家角色沿水平方向从敌人处弹开，并且敌人周围仍保留虚线防御壳。"
+            },
+            {
+              "id": "target-053",
+              "zh": "射弹在启用倒影的场景中被绘制在水面以下 → 射弹显示为带有水色叠加层，并且一个半透明的射弹镜像副本跨水面绘制。"
+            },
+            {
+              "id": "target-059",
+              "zh": "活跃游玩期间绘制水平水流区域 → 水平水流区域上方可见一个半透明白色矩形水流。"
+            },
+            {
+              "id": "target-066",
+              "zh": "绘制启用反射的山地背景 → 山地景色包含水面以下的反射版本。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-024",
+              "zh": "一个链式敌人跟随者在存活期间拥有足够的已记录头部路径历史 → 该跟随型敌人沿头部敌人先前经过的同一轨迹移动，并沿该轨迹保持在其后方的间距。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-026",
+              "zh": "第二个教程拖拽提示处于活动状态且玩家未按下 → 从玩家区域朝向剩余敌人绘制一条白色圆角拖拽轨迹，并且其端点沿该路径动画移动。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-038",
+              "zh": "壳类敌人的生命值降低到 1 且该壳类敌人仍然存活 → 敌人周围不再绘制虚线圆形防御壳。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-039",
+              "zh": "玩家在不处于受伤后无敌状态时与不可触碰的敌人发生碰撞 → 玩家角色被从碰撞处击退，并进入可见的受伤闪烁状态。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-072",
+              "zh": "死亡状态之后，玩家的死亡动画完成 → 游玩场景重新开始，玩家角色不再处于死亡姿势，并且玩家用于显示生命值颜色的身体部位再次变为灰色。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-076",
+              "zh": "条件：letterbox（宽银幕遮幅）叠加层完全显示 → 预期结果：纯黑色水平条覆盖游戏画面的顶部和底部区域，中间的游戏区域在两条黑条之间保持可见。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-018",
+              "zh": "第四关结尾过场到达去饱和追逐段落 → 在 1 秒段落期间，场景颜色过渡为灰度，同时玩家向 theft 移动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-019",
+              "zh": "第四关结束过场动画完成其去饱和序列 → 游戏玩法场景从灰度恢复为正常颜色。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-020",
+              "zh": "最终关卡结束并前进到循环后的第一关 → 游戏在主动游玩恢复前返回第一关标题叠加层。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-046",
+              "zh": "复合敌人的父敌人死亡时，其一个子敌人仍然存活 → 该子敌人开始死亡运动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-047",
+              "zh": "第三阶段复合核心敌人在其所有子敌人都已被击杀时仍然存活 → 核心敌人开始死亡运动。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-074",
+              "zh": "条件：在活跃游玩过程中绘制一个存活的不可触碰敌人 → 预期结果：该敌人的角色字形以红色渲染，并带有一只白色眼睛和一个小红色瞳孔。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "kimi-k2.6-v8.3-rubric2-imported18-20260908-163121",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-09T14:02:28+08:00",
+          "finishedAt": "2026-09-09T19:02:15+08:00",
+          "totalDurationMs": 17986221,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-09T14:02:28+08:00",
+              "finishedAt": "2026-09-09T14:35:57+08:00",
+              "durationMs": 2009009,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-09T14:35:57+08:00",
+              "finishedAt": "2026-09-09T18:41:58+08:00",
+              "durationMs": 14760133,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-09T18:41:58+08:00",
+              "finishedAt": "2026-09-09T18:41:58+08:00",
+              "durationMs": 548,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-09T18:41:58+08:00",
+              "finishedAt": "2026-09-09T18:47:28+08:00",
+              "durationMs": 329945,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-09T18:47:28+08:00",
+              "finishedAt": "2026-09-09T19:02:15+08:00",
+              "durationMs": 886553,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "catapoolt": {
