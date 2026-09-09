@@ -32207,6 +32207,126 @@
             }
           ]
         }
+      },
+      "seed-2.0-pro": {
+        "status": "completed",
+        "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
+        "score": {
+          "display": "82.50 (+2.50)",
+          "base": 82.5,
+          "passed": 33,
+          "denominator": 40,
+          "dynamic": 1,
+          "dynamicAddition": 2.5,
+          "potential": 85
+        },
+        "visualQuality": {
+          "score": 91.25,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48,
+          "renderingStyleAverage": 43.25,
+          "videosScored": 8
+        },
+        "traceCount": 8,
+        "playPath": "games-v8.3/shooooooot/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.3/shooooooot/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-004",
+              "zh": "The Left Arrow key is held during active gameplay while the player character is not at the left edge of the playfield → The player character moves left across the playfield during the key hold."
+            },
+            {
+              "id": "target-032",
+              "zh": "An unexploded ammo drop is absorbed by the player while the player is not exploded → The ammo drop sprite disappears, the score text increases by 50, and the ammo text increases by 50."
+            },
+            {
+              "id": "target-039",
+              "zh": "The player reaches a game-over state with a score not above the stored high score → A game-over overlay is visible with the text \"GAME\" and \"OVER\", a message beginning with \"Score to Beat: \", and the restart prompt \"Press Enter or Button 0 to Restart\"."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-011",
+              "zh": "The player fires while two-shot mode is active, the aim is outside the dead zone, and at least 2 ammo are available → Two bullet sprites appear at the player, move away from the player in separated directions around the aim direction, and the ammo text decreases by 2.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-012",
+              "zh": "The player fires while three-shot mode is active, the aim is outside the dead zone, and enough ammo is available for the three-shot volley → Three bullet sprites appear at the player, move away from the player in separated directions around the aim direction, and the ammo text decreases by 3.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-015",
+              "zh": "The player attempts to fire in two-shot mode with fewer than 2 ammo → No new bullet sprite appears during that fire attempt.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-009",
+              "zh": "The right gamepad thumbstick leaves the aim dead zone during active gameplay while the player can fire → One or more bullet sprites appear at the player and move in the right thumbstick aim direction.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-09T01:52:11+08:00",
+          "finishedAt": "2026-09-09T02:52:37+08:00",
+          "totalDurationMs": 3626444,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-09T01:52:11+08:00",
+              "finishedAt": "2026-09-09T01:53:46+08:00",
+              "durationMs": 95290,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-09T01:53:46+08:00",
+              "finishedAt": "2026-09-09T02:06:07+08:00",
+              "durationMs": 740787,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-09T02:06:07+08:00",
+              "finishedAt": "2026-09-09T02:43:29+08:00",
+              "durationMs": 2242090,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-09T02:43:29+08:00",
+              "finishedAt": "2026-09-09T02:43:29+08:00",
+              "durationMs": 195,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-09T02:43:29+08:00",
+              "finishedAt": "2026-09-09T02:45:45+08:00",
+              "durationMs": 135834,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-09T02:45:45+08:00",
+              "finishedAt": "2026-09-09T02:52:37+08:00",
+              "durationMs": 412169,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "solar-defence": {
