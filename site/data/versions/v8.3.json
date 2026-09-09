@@ -36742,6 +36742,215 @@
       }
     },
     "an-http-story": {
+      "gpt-5.5": {
+        "status": "completed",
+        "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
+        "score": {
+          "display": "50.00 (+32.69)",
+          "base": 50,
+          "passed": 26,
+          "denominator": 52,
+          "dynamic": 17,
+          "dynamicAddition": 32.69,
+          "potential": 82.69
+        },
+        "visualQuality": {
+          "score": 91.57,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.36,
+          "renderingStyleAverage": 43.21,
+          "videosScored": 14
+        },
+        "traceCount": 14,
+        "playPath": "games-v8.3/an-http-story/gpt-5.5/index.html",
+        "previewPath": "previews-v8.3/an-http-story/gpt-5.5.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-017",
+              "zh": "A dialogue sequence reaches the end when the final displayed line's wait completes → The dialogue text is erased and the dialogue background panel is no longer visible"
+            },
+            {
+              "id": "target-021",
+              "zh": "The main character is instructed to walk toward a reachable tile whose next step is along the z-axis during active gameplay → The main character leaves its current tile and moves one grid tile along the z-axis toward the selected destination"
+            },
+            {
+              "id": "target-022",
+              "zh": "The main character is instructed to walk toward a reachable destination that differs on both the x-axis and z-axis while the next x-axis and z-axis tiles are both walkable → The main character moves one grid tile along the x-axis and then one grid tile along the z-axis toward the selected destination without another instruction"
+            },
+            {
+              "id": "target-024",
+              "zh": "A hoverable 3D object is pointed at during active gameplay while no drag is starting → A white overlay highlight appears on the pointed object"
+            },
+            {
+              "id": "target-026",
+              "zh": "A draggable block has been held for the drag-start delay during active gameplay while the main character is not standing on it → An outline appears around the selected block"
+            },
+            {
+              "id": "target-028",
+              "zh": "A draggable object is dragged during active gameplay → The dragged 3D object moves from its starting tile position while the rest of the level remains in place"
+            },
+            {
+              "id": "target-030",
+              "zh": "A dragged block is released while its nearest snapped grid tile is safe → The block glides from its released position to the nearest grid-aligned tile and comes to rest there"
+            },
+            {
+              "id": "target-032",
+              "zh": "A dragged block is released while no safe snapped grid position is available → The block glides back to the grid tile where the drag began and comes to rest there"
+            },
+            {
+              "id": "target-042",
+              "zh": "A seeker enemy update occurs while the main character is offset from the seeker along both the x-axis and z-axis and neither adjacent target tile is already targeted by another seeker → The seeker enemy moves from its current tile to a diagonally adjacent tile, changing by one grid tile along the x-axis and one grid tile along the z-axis during the update"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-001",
+              "zh": "The game starts for a first-time visitor before the initial help has been dismissed → A modal help window is visible over the directory-style page, with a close button marked \"×\" and the heading \"Welcome to An HTTP Story\".",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-002",
+              "zh": "A visible modal window close control is clicked while a modal window is open → The open modal window and dark modal overlay disappear, leaving the directory-style main page visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-003",
+              "zh": "The help control is clicked while the main page is visible → The modal overlay opens with the help window visible",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-004",
+              "zh": "The monetization/custom-level control is clicked while the main page is visible → The modal overlay opens with the monetization/custom-level window visible",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-005",
+              "zh": "The start/download control is clicked while the main page is visible → The download bar is visible and its message reads \"Preparing download...\"",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-006",
+              "zh": "The initial start/download flow reaches the first 2-second wait after showing the download message \"Preparing download...\" → The download bar remains visible and its message changes to \"Unexpected error\"",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-007",
+              "zh": "The initial download preparation completes after the start/download flow → The landing page is hidden, the gameplay canvas is visible, and the bottom download bar is no longer open over the page",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-025",
+              "zh": "The pointer leaves a highlighted non-dragged 3D object during active gameplay → The white overlay highlight is removed from that object",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-029",
+              "zh": "A dragged block overlaps another solid object during active gameplay → The dragged block remains outlined while overlapping the other object",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-031",
+              "zh": "A dragged block is released while its nearest snapped grid tile is unsafe, its x-axis offset from that nearest tile is greater than its z-axis offset, and the x-axis fallback tile is safe → The block glides to the grid-aligned tile adjacent to the nearest snapped tile along the x-axis and comes to rest there",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-045",
+              "zh": "The losing ending download preparation completes → The download bar message reads \"Unexpected error\" and the unexpected-error notification is visible",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-047",
+              "zh": "The visible unexpected-error download notification is clicked after the losing ending is prepared → The unexpected-error notification is no longer visible, and a window is visible with the heading \"This server has been confiscated by the Ministry of Knowledge.\"",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-048",
+              "zh": "The clickable download item is clicked after the winning ending is prepared → A window is visible with a 👾 icon and the heading \"Thanks for playing An HTTP Story!\"",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-049",
+              "zh": "The custom-level import/create screen is shown for a Coil subscriber → A window is visible with the heading \"Thanks for being a Coil subscriber!\", instructions beginning \"Load a custom level from\", a text area containing JSON level data, and a \"Play\" button",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-050",
+              "zh": "Web monetization starts while the monetization/custom-level page elements are available → The non-subscriber monetization elements are hidden and the subscriber custom-level elements are visible",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-051",
+              "zh": "The custom-level form is submitted with valid custom level data in the text area → The custom level opens in the isometric 3D level view",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-052",
+              "zh": "The custom-level form is submitted with invalid custom level data in the text area → The custom-level window remains visible with its text area and Play button, and no isometric level scene opens",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-09T21:44:05+08:00",
+          "finishedAt": "2026-09-10T00:07:35+08:00",
+          "totalDurationMs": 8609791,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-09T21:44:05+08:00",
+              "finishedAt": "2026-09-09T21:46:49+08:00",
+              "durationMs": 164280,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-09T21:46:49+08:00",
+              "finishedAt": "2026-09-09T22:06:48+08:00",
+              "durationMs": 1198493,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-09T22:06:48+08:00",
+              "finishedAt": "2026-09-09T23:57:09+08:00",
+              "durationMs": 6620951,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-09T23:57:09+08:00",
+              "finishedAt": "2026-09-09T23:57:09+08:00",
+              "durationMs": 207,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-09T23:57:09+08:00",
+              "finishedAt": "2026-09-09T23:58:01+08:00",
+              "durationMs": 52180,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-09T23:58:01+08:00",
+              "finishedAt": "2026-09-10T00:07:35+08:00",
+              "durationMs": 573595,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
       "seed-2.0-pro": {
         "status": "scored-failure",
         "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",

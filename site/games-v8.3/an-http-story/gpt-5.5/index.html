@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>An HTTP Story</title>
+  <style>
+    html,body{margin:0;width:100%;height:100%;background:#101621;color:#dce8ff;font-family:Consolas,Monaco,monospace;overflow:hidden}button{font:inherit}#app{position:relative;width:100vw;height:100vh}#landing{position:absolute;inset:0;background:linear-gradient(180deg,#172031,#0e1420);padding:34px 48px;box-sizing:border-box}h1{margin:0 0 8px;color:#8bd3ff;font-size:32px}.addr{color:#83ffa8;margin-bottom:24px}.directory{width:min(820px,80vw);border:1px solid #40516b;background:#101827;box-shadow:0 12px 40px #0008}.row{display:grid;grid-template-columns:180px 1fr 130px;gap:18px;padding:13px 16px;border-bottom:1px solid #2a384e;align-items:center}.row.header{color:#9fb4cc;background:#17243a}.linkbtn{color:#9ee9ff;background:none;border:0;text-align:left;cursor:pointer;text-decoration:underline;padding:0}.linkbtn:hover{color:white}.mainActions{margin-top:20px;display:flex;gap:12px}.mainActions button,.window button{background:#263a5c;color:white;border:1px solid #6f8dbc;border-radius:3px;padding:8px 14px;cursor:pointer}.mainActions button:hover,.window button:hover{background:#365681}#gameCanvas{position:absolute;inset:0;width:100vw;height:100vh;background:#111827;display:none}.modalOverlay{position:absolute;inset:0;background:rgba(0,0,0,.58);display:none;align-items:center;justify-content:center;z-index:20}.window{position:relative;min-width:360px;max-width:min(760px,88vw);max-height:80vh;overflow:auto;background:#eef4ff;color:#152033;border:2px solid #31496d;box-shadow:0 18px 80px #000b;padding:26px;border-radius:4px}.window h2{margin-top:0;color:#172945}.close{position:absolute;right:8px;top:6px;background:#d9e5f5!important;color:#111!important;border:1px solid #7d90aa!important;padding:0 8px!important;font-size:24px;line-height:28px}.downloadBar{position:absolute;left:0;right:0;bottom:0;height:74px;background:#e8eef7;color:#182235;border-top:2px solid #7a8ea9;display:none;z-index:30;align-items:center;gap:18px;padding:10px 24px;box-sizing:border-box}.spinner{width:26px;height:26px;border-radius:50%;border:4px solid #a8b5c8;border-top-color:#2a74d6;animation:spin 1s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}.downloadMessage{font-size:18px;font-weight:bold}.notification{margin-left:auto;background:#ffe2e2;border:1px solid #c54a4a;color:#7a1111;padding:10px 14px;border-radius:3px;cursor:pointer;display:none}.downloadItem{margin-left:auto;background:#dff6e6;border:1px solid #45a15a;color:#123d1d;padding:10px 14px;border-radius:3px;cursor:pointer;display:none}.dialogue{position:absolute;left:50%;transform:translateX(-50%);bottom:94px;width:min(760px,80vw);background:rgba(238,244,255,.94);color:#101827;border:2px solid #203a60;border-radius:5px;padding:18px 22px;box-sizing:border-box;z-index:10;display:none;font-size:20px;box-shadow:0 10px 32px #0008}.subscriber{display:none}textarea{width:100%;height:190px;box-sizing:border-box;background:#172031;color:#d8f3ff;border:1px solid #6c85a8;margin:10px 0;padding:10px;font-family:Consolas,monospace}.status{color:#b51d1d;min-height:20px}.small{font-size:13px;color:#6b7890}.hidden{display:none!important}
+  </style>
+  <script type="module" crossorigin src="./assets/index-_H-10CIb.js"></script>
+</head>
+<body>
+  <div id="app">
+    <canvas id="gameCanvas" width="1280" height="720"></canvas>
+    <div id="landing">
+      <h1>Index of /an-http-story/</h1>
+      <div class="addr">http://story.local/downloads/</div>
+      <div class="directory">
+        <div class="row header"><span>Name</span><span>Description</span><span>Size</span></div>
+        <div class="row"><button id="startBtn" class="linkbtn">story.exe</button><span>A suspicious downloadable adventure</span><span>404 KB</span></div>
+        <div class="row"><button id="helpBtn" class="linkbtn">README.txt</button><span>Controls and help</span><span>2 KB</span></div>
+        <div class="row"><button id="customBtn" class="linkbtn">subscriber-levels/</button><span>Custom level import</span><span>--</span></div>
+      </div>
+      <div class="mainActions"><button id="startBtn2">Start download</button><button id="helpBtn2">Help</button><button id="customBtn2">Custom levels</button></div>
+    </div>
+    <div id="modalOverlay" class="modalOverlay"><div id="modalWindow" class="window"></div></div>
+    <div id="dialogue" class="dialogue"></div>
+    <div id="downloadBar" class="downloadBar"><div class="spinner"></div><div id="downloadMessage" class="downloadMessage">Preparing download...</div><div id="errorNote" class="notification">Unexpected error</div><div id="downloadItem" class="downloadItem">story-complete.html</div></div>
+  </div>
+</body>
+</html>
