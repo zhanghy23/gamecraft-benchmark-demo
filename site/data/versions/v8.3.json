@@ -36818,7 +36818,191 @@
         }
       }
     },
-    "rainbow-run": {},
+    "rainbow-run": {
+      "seed-2.0-pro": {
+        "status": "completed",
+        "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
+        "score": {
+          "display": "59.26 (+1.85)",
+          "base": 59.26,
+          "passed": 32,
+          "denominator": 54,
+          "dynamic": 1,
+          "dynamicAddition": 1.85,
+          "potential": 61.11
+        },
+        "visualQuality": {
+          "score": 74.65,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 38.24,
+          "renderingStyleAverage": 36.41,
+          "videosScored": 17
+        },
+        "traceCount": 17,
+        "playPath": "games-v8.3/rainbow-run/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.3/rainbow-run/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-006",
+              "zh": "Active running gameplay advances far enough for the displayed distance counter to reach its next meter value → The distance plate near the top center changes from its immediately previous number to a new number ending in \"m\"."
+            },
+            {
+              "id": "target-016",
+              "zh": "The ArrowDown slide command is processed during active running gameplay while sliding is available → The runner lowers into a sliding posture on the track while continuing forward."
+            },
+            {
+              "id": "target-017",
+              "zh": "A jump command is processed during active running gameplay while the runner is sliding and slide cancellation is available → The runner leaves the lowered sliding posture and returns to an upright running posture without rising above the running surface."
+            },
+            {
+              "id": "target-019",
+              "zh": "A slide command is processed during active running gameplay while the runner is airborne and jump cancellation is available → Within the next 0.5 seconds, the runner descends toward the running surface and does not remain on its immediately previous upward jump arc."
+            },
+            {
+              "id": "target-021",
+              "zh": "A screen-left lane-change command is processed during active running gameplay while the runner is already in the outer screen-left lane, charge is inactive, and invincibility is inactive → Within 1 second, the runner moves sideways off the screen-left road edge, the lives display contains exactly 1 fewer life marker than it contained immediately before the command, and the running gameplay remains visible if at least 1 life marker remains."
+            },
+            {
+              "id": "target-026",
+              "zh": "The runner collects a crystal at a visible pickup position during active running gameplay → The crystal is no longer visible at the pickup position, and the crystal-count plate near the top-right edge shows a number exactly 1 higher than it showed immediately before the pickup."
+            },
+            {
+              "id": "target-029",
+              "zh": "The runner collects a shield drop during active running gameplay → The collected drop disappears, and a translucent golden shield bubble appears around the unicorn."
+            },
+            {
+              "id": "target-031",
+              "zh": "The runner collects a wings drop during active running gameplay → The collected drop disappears, and a pair of wings becomes visible on the unicorn."
+            },
+            {
+              "id": "target-034",
+              "zh": "An active charge overlaps an obstacle in the runner's lane during active running gameplay → The obstacle breaks into visible fragments and is removed from the road, while the lives display contains the same number of life markers as immediately before the overlap."
+            },
+            {
+              "id": "target-035",
+              "zh": "The active charge meter depletes during active running gameplay → The horizontal charge meter below the lives display disappears."
+            },
+            {
+              "id": "target-037",
+              "zh": "The runner collects a heart drop during active running gameplay while the current lives count is below the maximum lives count → The collected drop disappears, and within the next rendered frame the lives display contains exactly 1 additional life marker compared with immediately before collection."
+            },
+            {
+              "id": "target-045",
+              "zh": "The title screen is shown after a completed run recorded a new best distance → The best-distance plate displays the completed run's distance in meters instead of the previous best value."
+            },
+            {
+              "id": "target-047",
+              "zh": "The upgrades menu is displaying a maxed upgrade row → That upgrade row label includes the upgrade name and its cap rank shown as cap-number, \"/\", cap-number, with no price number after the rank text."
+            },
+            {
+              "id": "target-053",
+              "zh": "A gate obstacle is present ahead in a lane during active running gameplay → A gate-shaped obstacle appears in that lane with side posts, a horizontal bar, and an additional upper block above the bar."
+            },
+            {
+              "id": "target-054",
+              "zh": "A tower obstacle is present ahead in a lane during active running gameplay → A tall solid obstacle rises from the road surface in that lane with no visible under-gap."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-018",
+              "zh": "A jump command is processed during active running gameplay while the runner is sliding and slide cancellation is unavailable → The runner remains in the lowered sliding posture and does not rise above the running surface within the next 0.5 seconds.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-020",
+              "zh": "A slide command is processed during active running gameplay while the runner is airborne and jump cancellation is unavailable → The runner remains airborne on its current arc and does not enter the lowered sliding posture within the next 0.5 seconds.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-027",
+              "zh": "A crystal is within magnet attraction range during active running gameplay while the runner is on the track and the crystal is outside the immediate pickup radius → Across the next 0.5 seconds, the crystal leaves its prior path position and moves toward the runner before it is collected or passes out of view.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-032",
+              "zh": "The runner takes a falling hit during active running gameplay while wings are visible and invincibility is inactive → Within 1 second, the unicorn performs a swooping recovery motion back toward the road, the wings remain visible during the recovery, and the lives display contains the same number of life markers as immediately before the hit.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-036",
+              "zh": "The runner reaches a crystal during active charge while the crystal is inside the charge pickup range → The crystal disappears from the track, and the crystal-count plate near the top-right edge increases by 1 compared with immediately before the pickup.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-049",
+              "zh": "A straight road segment is visible ahead during active running gameplay → The visible rainbow road continues forward without a lateral bend through that segment.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-042",
+              "zh": "An affordable, not-maxed upgrade option is activated from the upgrades menu → The selected upgrade option's displayed rank changes from N/C to (N+1)/C, and the crystals total shown on the upgrades menu changes from its previous number to that previous number minus the price number that was shown on the selected upgrade option immediately before activation.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-09T20:04:15+08:00",
+          "finishedAt": "2026-09-09T22:04:41+08:00",
+          "totalDurationMs": 7226210,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-09T20:04:15+08:00",
+              "finishedAt": "2026-09-09T20:05:55+08:00",
+              "durationMs": 100004,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-09T20:05:55+08:00",
+              "finishedAt": "2026-09-09T20:24:08+08:00",
+              "durationMs": 1092496,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-09T20:24:08+08:00",
+              "finishedAt": "2026-09-09T21:26:18+08:00",
+              "durationMs": 3730488,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-09T21:26:18+08:00",
+              "finishedAt": "2026-09-09T21:26:18+08:00",
+              "durationMs": 241,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-09T21:26:18+08:00",
+              "finishedAt": "2026-09-09T21:28:22+08:00",
+              "durationMs": 123732,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-09T21:28:22+08:00",
+              "finishedAt": "2026-09-09T22:04:41+08:00",
+              "durationMs": 2179165,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      }
+    },
     "rainbowhoof": {
       "seed-2.0-pro": {
         "status": "scored-failure",
