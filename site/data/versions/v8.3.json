@@ -34867,6 +34867,67 @@
       }
     },
     "7-huenicorns": {
+      "gpt-5.5": {
+        "status": "failed",
+        "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
+        "stage": "replay",
+        "score": null,
+        "traceCount": 0,
+        "playPath": null,
+        "previewPath": null,
+        "unmet": null,
+        "issue": "生成源码并完成Trace、三轮selection与零覆盖兜底optimize；69个探针最终0覆盖，optimize保留1条纯视觉Replay，但最终Replay等待可见#app超时（节点存在但隐藏），未生成有效视频或最终报告。该项记录为生成源码运行/Replay失败，无功能分、无画面分且不可试玩。",
+        "timing": {
+          "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
+          "status": "failed",
+          "failedStage": "replay",
+          "startedAt": "2026-09-09T12:39:32+08:00",
+          "finishedAt": "2026-09-09T16:23:02+08:00",
+          "totalDurationMs": 13409406,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-09T12:39:32+08:00",
+              "finishedAt": "2026-09-09T12:42:07+08:00",
+              "durationMs": 154852,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-09T12:42:07+08:00",
+              "finishedAt": "2026-09-09T13:05:23+08:00",
+              "durationMs": 1396148,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-09T13:05:23+08:00",
+              "finishedAt": "2026-09-09T16:22:41+08:00",
+              "durationMs": 11837266,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-09T16:22:41+08:00",
+              "finishedAt": "2026-09-09T16:22:41+08:00",
+              "durationMs": 192,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-09T16:22:41+08:00",
+              "finishedAt": "2026-09-09T16:23:02+08:00",
+              "durationMs": 20868,
+              "status": "failed",
+              "exitCode": 1
+            }
+          ]
+        }
+      },
       "seed-2.0-pro": {
         "status": "completed",
         "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
