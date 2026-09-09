@@ -32297,7 +32297,165 @@
         }
       }
     },
-    "prism-paddock": {},
+    "prism-paddock": {
+      "gpt-5.5": {
+        "status": "completed",
+        "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
+        "score": {
+          "display": "75.44 (+22.81)",
+          "base": 75.44,
+          "passed": 43,
+          "denominator": 57,
+          "dynamic": 13,
+          "dynamicAddition": 22.81,
+          "potential": 98.25
+        },
+        "visualQuality": {
+          "score": 92.5,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48,
+          "renderingStyleAverage": 44.5,
+          "videosScored": 6
+        },
+        "traceCount": 6,
+        "playPath": "games-v8.3/prism-paddock/gpt-5.5/index.html",
+        "previewPath": "previews-v8.3/prism-paddock/gpt-5.5.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-019",
+              "zh": "A rainbow butterfly-poop is rendered on a grass tile → The butterfly-poop sprite is shown on the tile with rainbow coloring and no small butterfly icon over it."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-023",
+              "zh": "The player cleans a rainbow butterfly-poop → Butterfly icons fly from the cleaned tile toward every visible color counter in the top status bar.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-039",
+              "zh": "The player releases a dragged shop item on a grass tile that already contains a decoration → The old decoration disappears from that tile and is replaced by the newly placed decoration.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-040",
+              "zh": "The player releases a dragged shop item when no valid grass-tile placement preview is visible → No new plant decoration is added to the grass.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-041",
+              "zh": "A placed flower decoration is rendered after its placement pop-in animation has completed → A flower decoration is visible on its grass tile.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-042",
+              "zh": "A placed mushroom decoration is rendered after its placement pop-in animation has completed → A mushroom decoration is visible on its grass tile.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-043",
+              "zh": "A placed crystal decoration is rendered after its placement pop-in animation has completed → A crystal decoration is visible on its grass tile.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-044",
+              "zh": "The first green quest begins → A quest speech bubble appears beside the unicorn with the text “Huh, green didn't unlock... What can we do?”.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-045",
+              "zh": "The active green quest is started with its full required lineup on the board → The required plant decorations for the quest are highlighted on the grass.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-046",
+              "zh": "The violet quest begins → A quest speech bubble appears beside the unicorn, and the required plant decorations for the violet sequence are highlighted on the grass.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-047",
+              "zh": "The player clicks the currently highlighted correct decoration during an active quest before the last required step → The highlight moves to the next required decoration in the quest sequence.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-048",
+              "zh": "The player clicks a nonmatching decoration after making progress in an active quest → The quest highlight resets to the first required decoration in the sequence.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-049",
+              "zh": "The player clicks the final highlighted correct decoration in an active quest sequence → The quest speech bubble is not visible, and a glowing rainbow arc overlay with centered unlock text is visible over the game view.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-050",
+              "zh": "A rainbow color beyond the initial red becomes newly unlocked through progression → A glowing rainbow arc overlay spans the game view, with centered text naming that color followed by “unlocked!”.",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-09T01:30:18+08:00",
+          "finishedAt": "2026-09-09T02:38:00+08:00",
+          "totalDurationMs": 4062537,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-09T01:30:18+08:00",
+              "finishedAt": "2026-09-09T01:33:08+08:00",
+              "durationMs": 170614,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-09T01:33:08+08:00",
+              "finishedAt": "2026-09-09T02:00:21+08:00",
+              "durationMs": 1633257,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-09T02:00:21+08:00",
+              "finishedAt": "2026-09-09T02:28:59+08:00",
+              "durationMs": 1717669,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-09T02:28:59+08:00",
+              "finishedAt": "2026-09-09T02:28:59+08:00",
+              "durationMs": 190,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-09T02:28:59+08:00",
+              "finishedAt": "2026-09-09T02:30:31+08:00",
+              "durationMs": 91862,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-09T02:30:31+08:00",
+              "finishedAt": "2026-09-09T02:38:00+08:00",
+              "durationMs": 448866,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      }
+    },
     "dewdrop-farm": {},
     "idle-necromancer": {},
     "the-rainbow-is-right-there": {},
