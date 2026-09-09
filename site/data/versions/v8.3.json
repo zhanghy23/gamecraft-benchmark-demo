@@ -37402,7 +37402,103 @@
         }
       }
     },
-    "rainbow-runner": {},
+    "rainbow-runner": {
+      "seed-2.0-pro": {
+        "status": "completed",
+        "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
+        "score": {
+          "display": "91.67 (+0.00)",
+          "base": 91.67,
+          "passed": 22,
+          "denominator": 24,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 91.67
+        },
+        "visualQuality": {
+          "score": 89.33,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48,
+          "renderingStyleAverage": 41.33,
+          "videosScored": 6
+        },
+        "traceCount": 6,
+        "playPath": "games-v8.3/rainbow-runner/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.3/rainbow-runner/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-015",
+              "zh": "A generated platform has the rainbow-spawning label during active gameplay progression → A rainbow object sprite appears above the course near that generated platform."
+            },
+            {
+              "id": "target-019",
+              "zh": "A falling raindrop reaches the top surface of a rain-reactive platform → The raindrop disappears at the platform surface and a splash effect appears at that contact point."
+            }
+          ],
+          "replayTrace": []
+        },
+        "issue": null,
+        "timing": {
+          "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-09T22:06:41+08:00",
+          "finishedAt": "2026-09-09T22:48:15+08:00",
+          "totalDurationMs": 2494058,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-09T22:06:41+08:00",
+              "finishedAt": "2026-09-09T22:08:01+08:00",
+              "durationMs": 80350,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-09T22:08:01+08:00",
+              "finishedAt": "2026-09-09T22:15:48+08:00",
+              "durationMs": 466927,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-09T22:15:48+08:00",
+              "finishedAt": "2026-09-09T22:43:33+08:00",
+              "durationMs": 1665292,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-09T22:43:33+08:00",
+              "finishedAt": "2026-09-09T22:43:33+08:00",
+              "durationMs": 172,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-09T22:43:33+08:00",
+              "finishedAt": "2026-09-09T22:44:00+08:00",
+              "durationMs": 26298,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-09T22:44:00+08:00",
+              "finishedAt": "2026-09-09T22:48:15+08:00",
+              "durationMs": 254941,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      }
+    },
     "tube-masters": {},
     "spacepi": {},
     "space-garden": {},
