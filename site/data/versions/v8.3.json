@@ -37499,7 +37499,94 @@
         }
       }
     },
-    "tube-masters": {},
+    "tube-masters": {
+      "seed-2.0-pro": {
+        "status": "completed",
+        "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
+        "score": {
+          "display": "100.00 (+0.00)",
+          "base": 100,
+          "passed": 24,
+          "denominator": 24,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 100
+        },
+        "visualQuality": {
+          "score": 91.25,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.25,
+          "renderingStyleAverage": 43,
+          "videosScored": 4
+        },
+        "traceCount": 4,
+        "playPath": "games-v8.3/tube-masters/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.3/tube-masters/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [],
+          "replayTrace": []
+        },
+        "issue": null,
+        "timing": {
+          "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-09T22:48:15+08:00",
+          "finishedAt": "2026-09-09T23:14:59+08:00",
+          "totalDurationMs": 1604120,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-09T22:48:15+08:00",
+              "finishedAt": "2026-09-09T22:49:12+08:00",
+              "durationMs": 57063,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-09T22:49:12+08:00",
+              "finishedAt": "2026-09-09T22:56:37+08:00",
+              "durationMs": 445197,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-09T22:56:37+08:00",
+              "finishedAt": "2026-09-09T23:11:39+08:00",
+              "durationMs": 901366,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-09T23:11:39+08:00",
+              "finishedAt": "2026-09-09T23:11:39+08:00",
+              "durationMs": 153,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-09T23:11:39+08:00",
+              "finishedAt": "2026-09-09T23:12:40+08:00",
+              "durationMs": 61258,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-09T23:12:40+08:00",
+              "finishedAt": "2026-09-09T23:14:59+08:00",
+              "durationMs": 138991,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      }
+    },
     "spacepi": {},
     "space-garden": {},
     "lost-robot": {},
