@@ -36066,7 +36066,134 @@
         }
       }
     },
-    "oh-no-my-rainbow": {},
+    "oh-no-my-rainbow": {
+      "seed-2.0-pro": {
+        "status": "completed",
+        "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
+        "score": {
+          "display": "66.67 (+12.50)",
+          "base": 66.67,
+          "passed": 16,
+          "denominator": 24,
+          "dynamic": 3,
+          "dynamicAddition": 12.5,
+          "potential": 79.17
+        },
+        "visualQuality": {
+          "score": 91,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48,
+          "renderingStyleAverage": 43,
+          "videosScored": 4
+        },
+        "traceCount": 4,
+        "playPath": "games-v8.3/oh-no-my-rainbow/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.3/oh-no-my-rainbow/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-005",
+              "zh": "The current visible card arrangement has three distinct colors in the required color order during the interactive sorting phase → The progression button is drawn at full opacity."
+            },
+            {
+              "id": "target-010",
+              "zh": "The hovered progression button is activated while the current visible card arrangement has three distinct colors in an order that is not the required color order → The progression button is drawn at alternating horizontal offsets while the cards remain in the same left-to-right slot order."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-006",
+              "zh": "The current visible card arrangement contains fewer than three distinct colors during the interactive sorting phase → The progression button is drawn at full opacity.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-009",
+              "zh": "The hovered progression button is activated while the visible cards contain fewer than three distinct colors → The progression sequence starts: the progression button is drawn translucent during its click flicker, and large progress sprites begin appearing in the play area.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-016",
+              "zh": "A collected fruit has finished its collection and flashing intervals during active play → That fruit is no longer drawn in the play area.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-008",
+              "zh": "The hovered progression button is activated while the current visible card arrangement has three distinct colors in the required color order → The progression sequence starts: the progression button is drawn translucent during its click flicker, and large progress sprites begin appearing in the play area.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-020",
+              "zh": "A broom stroke is attempted on a poop target while that poop target's cleanup cooldown has not expired → That poop target keeps the same dirty or cleaned appearance on the next rendered frame after the attempted stroke.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-024",
+              "zh": "The post-fade black screen timer finishes after the thank-you scene → The game resets to the initial sorting scene with cards, fruits, and the progression button visible again.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-09T19:31:44+08:00",
+          "finishedAt": "2026-09-09T20:02:18+08:00",
+          "totalDurationMs": 1833691,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-09T19:31:44+08:00",
+              "finishedAt": "2026-09-09T19:33:18+08:00",
+              "durationMs": 93735,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-09T19:33:18+08:00",
+              "finishedAt": "2026-09-09T19:42:43+08:00",
+              "durationMs": 565605,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-09T19:42:43+08:00",
+              "finishedAt": "2026-09-09T19:57:04+08:00",
+              "durationMs": 860080,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-09T19:57:04+08:00",
+              "finishedAt": "2026-09-09T19:57:04+08:00",
+              "durationMs": 157,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-09T19:57:04+08:00",
+              "finishedAt": "2026-09-09T19:58:46+08:00",
+              "durationMs": 102021,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-09T19:58:46+08:00",
+              "finishedAt": "2026-09-09T20:02:18+08:00",
+              "durationMs": 212011,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      }
+    },
     "an-http-story": {},
     "rainbow-run": {},
     "rainbowhoof": {},
