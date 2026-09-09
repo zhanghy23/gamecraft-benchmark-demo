@@ -27290,6 +27290,130 @@
             }
           ]
         }
+      },
+      "kimi-k2.6": {
+        "status": "completed",
+        "runId": "kimi-k2.6-v8.3-rubric2-imported18-20260908-163121",
+        "score": {
+          "display": "78.72 (+2.13)",
+          "base": 78.72,
+          "passed": 37,
+          "denominator": 47,
+          "dynamic": 1,
+          "dynamicAddition": 2.13,
+          "potential": 80.85
+        },
+        "visualQuality": {
+          "score": 88.82,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.09,
+          "renderingStyleAverage": 41.73,
+          "videosScored": 11
+        },
+        "traceCount": 11,
+        "playPath": "games-v8.3/catapoolt/kimi-k2.6/index.html",
+        "previewPath": "previews-v8.3/catapoolt/kimi-k2.6.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-014",
+              "zh": "猫被从其身体位置拖拽得足够远以显示弹弓预览 → 从猫朝拖拽方向绘制一个半透明蓝色弹弓锥形区域，并在游戏区域中绘制一条蓝色预测轨迹弧线。"
+            },
+            {
+              "id": "target-030",
+              "zh": "位于地面高度的猫接触一只老鼠，且其膨胀等级处于最大值 → 被接触的老鼠仍绘制在游戏场地中，并且下一次渲染的游戏玩法视图中 HUD 里 \"Mice \" 标签后面的数字不增加。"
+            },
+            {
+              "id": "target-036",
+              "zh": "游戏过程中猫已达到无法再吃更多的状态 → 画布顶部附近出现一条红色消息，内容为 \"Can't eat more. Need to purge: double-tap on the cat.\""
+            },
+            {
+              "id": "target-039",
+              "zh": "处于地面高度的猫接触一个处于活动状态且未被收集的三叶草 → 该三叶草从游玩场地中消失，并且耐力条填充到其轮廓条的完整宽度。"
+            },
+            {
+              "id": "target-042",
+              "zh": "处于地面高度的猫在未受到粪便伤害保护时接触一个粪便 → 被接触的粪便从游玩场地中消失，并且耐力条的已填充部分开始从碰撞前的右边缘向左移动。"
+            },
+            {
+              "id": "target-047",
+              "zh": "游戏结束弹窗中的 Restart 按钮被接受 → 重新进入游戏场景，并且屏幕在游玩区域上方显示标题文本 \"Game Screen\"。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-025",
+              "zh": "仍剩余的老鼠位于屏幕外右侧，并且当前游戏玩法视口中没有可见老鼠 → 在游戏玩法视图的右边缘绘制屏幕外老鼠指示器。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-027",
+              "zh": "为当前游戏玩法视口外的一只老鼠渲染屏幕外老鼠指示器 → 该指示器被绘制为游戏玩法视图边缘上的红色实心三角形。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-031",
+              "zh": "空中的猫在高于地面碰撞高度的位置穿过一只老鼠的位置 → 老鼠仍绘制在游戏场地中，并且下一次渲染的游戏玩法视图中 HUD 里 \"Mice \" 标签后面的数字不增加。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-012",
+              "zh": "当暂停弹窗可见且其后方至少有一个游戏玩法对象可见时，发生一次活跃游戏更新 → 在接下来 1 秒渲染视频中，叠层后方可见的游戏玩法对象保持相同的屏幕位置，同时 Pause 弹窗保持在最上层。",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "kimi-k2.6-v8.3-rubric2-imported18-20260908-163121",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-09T19:02:15+08:00",
+          "finishedAt": "2026-09-09T21:04:44+08:00",
+          "totalDurationMs": 7348899,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-09T19:02:15+08:00",
+              "finishedAt": "2026-09-09T19:25:49+08:00",
+              "durationMs": 1413615,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-09T19:25:49+08:00",
+              "finishedAt": "2026-09-09T20:52:14+08:00",
+              "durationMs": 5185431,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-09T20:52:14+08:00",
+              "finishedAt": "2026-09-09T20:52:15+08:00",
+              "durationMs": 357,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-09T20:52:15+08:00",
+              "finishedAt": "2026-09-09T20:53:53+08:00",
+              "durationMs": 98542,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-09T20:53:53+08:00",
+              "finishedAt": "2026-09-09T21:04:44+08:00",
+              "durationMs": 650919,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "super-castle-game": {
