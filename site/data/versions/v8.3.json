@@ -19381,6 +19381,101 @@
             }
           ]
         }
+      },
+      "kimi-k2.6": {
+        "status": "completed",
+        "runId": "kimi-k2.6-v8.3-rubric2-imported18-20260908-163121",
+        "score": {
+          "display": "89.47 (+0.00)",
+          "base": 89.47,
+          "passed": 34,
+          "denominator": 38,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 89.47
+        },
+        "visualQuality": {
+          "score": 90.69,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.85,
+          "renderingStyleAverage": 42.85,
+          "videosScored": 13
+        },
+        "traceCount": 13,
+        "playPath": "games-v8.3/necrotic-commander/kimi-k2.6/index.html",
+        "previewPath": "previews-v8.3/necrotic-commander/kimi-k2.6.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-026",
+              "zh": "Guided Mode 推进到敌人波次为 10 的倍数，且至少有一个坟墓为空 → 新波次开始时，空坟墓地块变回完整的墓碑地块。"
+            },
+            {
+              "id": "target-031",
+              "zh": "Guided Mode 游戏过程到达敌人第 3 波的教程暂停 → 一个黑色教程面板绘制在游戏视图上方，面板上显示文本 \"I can use Drain Soul to replenish my mana by targeting a peasant. Click to curse one of them.\"，并显示文本 \"Click to Continue\"。"
+            },
+            {
+              "id": "target-032",
+              "zh": "Guided Mode 游戏过程到达敌人第 5 波的教程暂停 → 一个黑色教程面板绘制在游戏视图上方，面板上显示文本 \"I can Raise the Dead by clicking on their grave stones. Use Corpse Bomb on them to blow them up!\"，并显示文本 \"Click to Continue\"。"
+            },
+            {
+              "id": "target-038",
+              "zh": "条件：死灵法师已死亡，且游戏结束延迟时间已过去后发生指针按下或触摸按下 → 预期结果：游戏结束面板消失，并显示一个全新的战场；死灵法师存在，且 HUD 生命值恢复为 \"Health (100)\"。"
+            }
+          ],
+          "replayTrace": []
+        },
+        "issue": null,
+        "timing": {
+          "runId": "kimi-k2.6-v8.3-rubric2-imported18-20260908-163121",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-09T08:09:12+08:00",
+          "finishedAt": "2026-09-09T09:07:15+08:00",
+          "totalDurationMs": 3483128,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-09T08:09:12+08:00",
+              "finishedAt": "2026-09-09T08:21:25+08:00",
+              "durationMs": 732498,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-09T08:21:25+08:00",
+              "finishedAt": "2026-09-09T08:51:21+08:00",
+              "durationMs": 1795968,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-09T08:51:21+08:00",
+              "finishedAt": "2026-09-09T08:51:21+08:00",
+              "durationMs": 274,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-09T08:51:21+08:00",
+              "finishedAt": "2026-09-09T08:55:15+08:00",
+              "durationMs": 234521,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-09T08:55:15+08:00",
+              "finishedAt": "2026-09-09T09:07:15+08:00",
+              "durationMs": 719834,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "space-huggers": {
