@@ -36194,9 +36194,571 @@
         }
       }
     },
-    "an-http-story": {},
+    "an-http-story": {
+      "seed-2.0-pro": {
+        "status": "scored-failure",
+        "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
+        "stage": "trace",
+        "score": {
+          "display": "0.00 (+0.00)",
+          "base": 0,
+          "passed": 0,
+          "denominator": 52,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 0
+        },
+        "visualQuality": null,
+        "traceCount": 0,
+        "playPath": null,
+        "previewPath": null,
+        "unmet": {
+          "vlm": [],
+          "replayTrace": [
+            {
+              "id": "target-001",
+              "zh": "The game starts for a first-time visitor before the initial help has been dismissed → A modal help window is visible over the directory-style page, with a close button marked \"×\" and the heading \"Welcome to An HTTP Story\".",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-002",
+              "zh": "A visible modal window close control is clicked while a modal window is open → The open modal window and dark modal overlay disappear, leaving the directory-style main page visible.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-003",
+              "zh": "The help control is clicked while the main page is visible → The modal overlay opens with the help window visible",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-004",
+              "zh": "The monetization/custom-level control is clicked while the main page is visible → The modal overlay opens with the monetization/custom-level window visible",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-005",
+              "zh": "The start/download control is clicked while the main page is visible → The download bar is visible and its message reads \"Preparing download...\"",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-006",
+              "zh": "The initial start/download flow reaches the first 2-second wait after showing the download message \"Preparing download...\" → The download bar remains visible and its message changes to \"Unexpected error\"",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-007",
+              "zh": "The initial download preparation completes after the start/download flow → The landing page is hidden, the gameplay canvas is visible, and the bottom download bar is no longer open over the page",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-008",
+              "zh": "Built-in level 1 is loaded into the gameplay scene → The isometric 3D level view is shown and a dialogue overlay displays the line \"Ouch... Where am I?\"",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-009",
+              "zh": "Built-in level 2 is loaded into the gameplay scene → The isometric 3D level view is shown and a dialogue overlay displays the line \"Damn. Still the wrong address.\"",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-010",
+              "zh": "Built-in level 3 is loaded into the gameplay scene → The isometric 3D level view is shown and a dialogue overlay displays the line \"Process 15127:\"",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-011",
+              "zh": "Built-in level 4 is loaded into the gameplay scene → The isometric 3D level view is shown and a dialogue overlay displays the line \"Process 15127:\"",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-012",
+              "zh": "Built-in level 5 is loaded into the gameplay scene → The isometric 3D level view is shown and a dialogue overlay displays the line \"You don't say much, do you?\"",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-013",
+              "zh": "Built-in level 6 is loaded into the gameplay scene → The isometric 3D level view is shown and a dialogue overlay displays the line \"We're getting close. I can feel it.\"",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-014",
+              "zh": "Built-in level 7 is loaded into the gameplay scene → The isometric 3D level view is shown and a dialogue overlay displays the line \"Anomaly detected. Beginning quarantine.\"",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-015",
+              "zh": "Built-in level 8 is loaded into the gameplay scene → The isometric 3D level view is shown and a dialogue overlay displays the line \"Whew... That was too close!\"",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-016",
+              "zh": "A dialogue sequence has another queued line when the currently displayed line's wait completes → The currently displayed dialogue text is replaced by the next dialogue line in the same dialogue overlay",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-017",
+              "zh": "A dialogue sequence reaches the end when the final displayed line's wait completes → The dialogue text is erased and the dialogue background panel is no longer visible",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-018",
+              "zh": "A level-completion event occurs on a level that has outro dialogue lines → The current level remains visible and a dialogue overlay displays an outro line before the level changes",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-019",
+              "zh": "The main character is instructed to walk to the grid tile it already occupies during active gameplay → The main character remains on its current grid tile and no walking path animation begins",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-020",
+              "zh": "The main character is instructed to walk toward a reachable tile whose next step is along the x-axis during active gameplay → The main character leaves its current tile and moves one grid tile along the x-axis toward the selected destination",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-021",
+              "zh": "The main character is instructed to walk toward a reachable tile whose next step is along the z-axis during active gameplay → The main character leaves its current tile and moves one grid tile along the z-axis toward the selected destination",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-022",
+              "zh": "The main character is instructed to walk toward a reachable destination that differs on both the x-axis and z-axis while the next x-axis and z-axis tiles are both walkable → The main character moves one grid tile along the x-axis and then one grid tile along the z-axis toward the selected destination without another instruction",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-023",
+              "zh": "The main character is instructed to walk toward a same-row destination while the adjacent x-axis tile in that direction is not walkable → The main character does not enter the blocked adjacent x-axis tile in response to the instruction",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-024",
+              "zh": "A hoverable 3D object is pointed at during active gameplay while no drag is starting → A white overlay highlight appears on the pointed object",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-025",
+              "zh": "The pointer leaves a highlighted non-dragged 3D object during active gameplay → The white overlay highlight is removed from that object",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-026",
+              "zh": "A draggable block has been held for the drag-start delay during active gameplay while the main character is not standing on it → An outline appears around the selected block",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-027",
+              "zh": "A draggable block is picked for dragging while the main character is standing on top of it → An outline appears on the block, and the block stays at its original grid position while the main character remains on top of it",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-028",
+              "zh": "A draggable object is dragged during active gameplay → The dragged 3D object moves from its starting tile position while the rest of the level remains in place",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-029",
+              "zh": "A dragged block overlaps another solid object during active gameplay → The dragged block remains outlined while overlapping the other object",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-030",
+              "zh": "A dragged block is released while its nearest snapped grid tile is safe → The block glides from its released position to the nearest grid-aligned tile and comes to rest there",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-031",
+              "zh": "A dragged block is released while its nearest snapped grid tile is unsafe, its x-axis offset from that nearest tile is greater than its z-axis offset, and the x-axis fallback tile is safe → The block glides to the grid-aligned tile adjacent to the nearest snapped tile along the x-axis and comes to rest there",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-032",
+              "zh": "A dragged block is released while no safe snapped grid position is available → The block glides back to the grid tile where the drag began and comes to rest there",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-033",
+              "zh": "The main character enters a paired non-exit teleporter during active gameplay → The main character disappears at the entered teleporter and reappears at the matching teleporter elsewhere in the level",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-034",
+              "zh": "The main character enters the special exit teleporter on a built-in level that has a following built-in level → The current level scene clears and the next built-in level appears with its dialogue overlay",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-035",
+              "zh": "The main character enters the special exit teleporter on the final built-in level → The current level scene clears and the page returns to the ending download flow, with the download bar opening over the page",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-036",
+              "zh": "A seeker eye enemy is present in a loaded level → The eye enemy is visible with red surfaces and one white face",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-037",
+              "zh": "A non-seeker eye enemy is present in a loaded level → The eye enemy is visible with a red face",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-038",
+              "zh": "A patrolling eye enemy has a defined patrol path when the level becomes ready → The eye enemy begins moving between patrol waypoints in the level",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-039",
+              "zh": "A seeker enemy update occurs while player control is active and the main character is at a different grid position from the seeker → The seeker eye rotates so its visible face points toward the main character during the update",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-040",
+              "zh": "A seeker enemy update occurs while the main character is offset only along the x-axis and the adjacent x-axis tile is not already targeted by another seeker → The seeker enemy moves one grid tile along the x-axis from its current tile toward the main character",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-041",
+              "zh": "A seeker enemy update occurs while the main character is offset only along the z-axis and the adjacent z-axis tile is not already targeted by another seeker → The seeker enemy moves one grid tile along the z-axis from its current tile toward the main character",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-042",
+              "zh": "A seeker enemy update occurs while the main character is offset from the seeker along both the x-axis and z-axis and neither adjacent target tile is already targeted by another seeker → The seeker enemy moves from its current tile to a diagonally adjacent tile, changing by one grid tile along the x-axis and one grid tile along the z-axis during the update",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-043",
+              "zh": "An enemy eye touches the main character while player control is active → The eye enemy surrounds the main character, and the main character disappears from the level view during the capture animation.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-044",
+              "zh": "The ending download sequence begins after gameplay reaches an ending state → A modal overlay is visible, the download bar opens, and the download bar message reads \"Preparing download...\"",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-045",
+              "zh": "The losing ending download preparation completes → The download bar message reads \"Unexpected error\" and the unexpected-error notification is visible",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-046",
+              "zh": "The winning ending download preparation completes → The download bar message reads \"Click to open\" and a download item row is visible",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-047",
+              "zh": "The visible unexpected-error download notification is clicked after the losing ending is prepared → The unexpected-error notification is no longer visible, and a window is visible with the heading \"This server has been confiscated by the Ministry of Knowledge.\"",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-048",
+              "zh": "The clickable download item is clicked after the winning ending is prepared → A window is visible with a 👾 icon and the heading \"Thanks for playing An HTTP Story!\"",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-049",
+              "zh": "The custom-level import/create screen is shown for a Coil subscriber → A window is visible with the heading \"Thanks for being a Coil subscriber!\", instructions beginning \"Load a custom level from\", a text area containing JSON level data, and a \"Play\" button",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-050",
+              "zh": "Web monetization starts while the monetization/custom-level page elements are available → The non-subscriber monetization elements are hidden and the subscriber custom-level elements are visible",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-051",
+              "zh": "The custom-level form is submitted with valid custom level data in the text area → The custom level opens in the isometric 3D level view",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-052",
+              "zh": "The custom-level form is submitted with invalid custom level data in the text area → The custom-level window remains visible with its text area and Play button, and no isometric level scene opens",
+              "cause": "源码错误导致 Trace 不可达"
+            }
+          ]
+        },
+        "issue": "Seed-2.0-Pro已生成源码，但进入Trace前的确定性构建校验失败：src/main.ts:48:67出现Unexpected ]，Vite/esbuild无法编译。按源码构建失败计分规则，52条固定需求均计失败：基础分0、动态分0、无画面分且不可试玩。",
+        "timing": {
+          "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
+          "status": "failed",
+          "failedStage": "trace",
+          "startedAt": "2026-09-09T20:02:18+08:00",
+          "finishedAt": "2026-09-09T20:04:15+08:00",
+          "totalDurationMs": 117006,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-09T20:02:18+08:00",
+              "finishedAt": "2026-09-09T20:04:12+08:00",
+              "durationMs": 114223,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-09T20:04:12+08:00",
+              "finishedAt": "2026-09-09T20:04:15+08:00",
+              "durationMs": 2715,
+              "status": "failed",
+              "exitCode": 1
+            }
+          ]
+        }
+      }
+    },
     "rainbow-run": {},
-    "rainbowhoof": {},
+    "rainbowhoof": {
+      "seed-2.0-pro": {
+        "status": "scored-failure",
+        "runId": null,
+        "stage": "trace",
+        "score": {
+          "display": "0.00 (+0.00)",
+          "base": 0,
+          "passed": 0,
+          "denominator": 45,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 0
+        },
+        "visualQuality": null,
+        "traceCount": 0,
+        "playPath": null,
+        "previewPath": null,
+        "unmet": {
+          "vlm": [],
+          "replayTrace": [
+            {
+              "id": "target-001",
+              "zh": "The game page has completed its initial setup on a non-touch presentation before any player input → The title screen is rendered with the start prompt text \"CLICK or SPACE\" and the instruction line \"chain rainbows mid-air to raise the multiplier - stardust refills your ink\" visible over the animated game scene.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-002",
+              "zh": "The title screen is rendered after its intro title animation has appeared → A rainbow-styled \"RAINBOWHOOF\" title is visible near the upper middle of the screen, with the subtitle \"drag to paint a rainbow - then gallop on it\" below it.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-003",
+              "zh": "A pointer press is accepted while the title screen is showing → The title screen is replaced by active gameplay: the title prompt is no longer visible, the gameplay HUD is visible, and the run begins with the score display reset to 0.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-004",
+              "zh": "An active gameplay frame is rendered → The play area is filled by a pastel vertical sky gradient, a pale circular sun glow appears in the upper-right sky, white star specks appear in the upper sky, and the screen edges are darkened by a purple vignette.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-005",
+              "zh": "Active play is running from the starting distance and the unicorn advances forward without dying → The HUD distance readout changes from \"0 m\" to a nonzero value ending in \"m\" within 3 seconds while the gameplay HUD remains visible.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-006",
+              "zh": "Active play is running from the starting score and the unicorn advances forward without dying → The HUD score readout changes from 0 to a value above 10 within 8 seconds while the side-scrolling terrain continues moving across the view.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-007",
+              "zh": "The gameplay HUD is rendered while no stardust refill feedback is active → The HUD shows a \"RAINBOW INK\" label next to the ink bar and a numeric percentage text at the right side of the ink bar.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-008",
+              "zh": "The HUD is rendered while the rainbow ink meter is full → The HUD ink bar is completely filled and has a translucent white sheen drawn across the full fill area.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-009",
+              "zh": "Active play advances through an update while the HUD ink meter is below full and no ink is being spent or refilled by stardust → Within 2 seconds, the right edge of the colored fill in the HUD ink bar is rendered to the right of its position at the start of the interval, and the \"+STARDUST\" text is not visible during the interval.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-010",
+              "zh": "The gameplay HUD is rendered while the saved best score is above 0 → The upper-right HUD shows a line beginning with \"BEST\" followed by a numeric score beneath the distance readout.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-011",
+              "zh": "The gameplay HUD is rendered while the current chain multiplier is above 1 → A multiplier badge is visible in the HUD with an \"x\" followed by the multiplier number and the word \"COMBO\" below it.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-012",
+              "zh": "A drag gesture is accepted during active play while rainbow ink is available → A rainbow-colored bridge stroke appears along the dragged path in the gameplay scene.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-013",
+              "zh": "A draw start is attempted during active play while the rainbow ink amount is below the drawing threshold → A red outline appears around the HUD ink bar, and no new in-progress rainbow stroke appears at the attempted start point.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-014",
+              "zh": "An active rainbow drawing receives a valid drag segment while enough rainbow ink remains for that segment → The in-progress rainbow stroke extends to the new segment endpoint, and on at least one frame within 1 second the HUD ink percentage is at least 1 percentage point below its pre-segment value.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-015",
+              "zh": "An active rainbow drawing receives a drag segment whose ink cost exceeds the remaining rainbow ink → The in-progress rainbow stroke stops before the drag endpoint, the HUD ink bar fill reaches empty, and a red outline appears around the HUD ink bar.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-016",
+              "zh": "A rainbow drawing is released during active play after the stroke meets the minimum valid length → A persistent glowing rainbow bridge remains along the released path after the pointer is no longer down.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-017",
+              "zh": "A rainbow drawing is released during active play after a stroke shorter than the minimum valid length → The transient in-progress rainbow stroke disappears, and no persistent rainbow bridge remains along the released path.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-018",
+              "zh": "A rainbow bridge reaches the end of its lifetime during active play → That rainbow bridge is no longer visible in the gameplay scene.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-019",
+              "zh": "The unicorn reaches the edge of a terrain gap while running on dirt during active play → The unicorn leaves the ground and moves through open air beyond the terrain edge.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-020",
+              "zh": "The dirt-running unicorn reaches an upward dirt crest whose launch condition is met → The unicorn leaves the dirt surface and becomes airborne above continuous dirt terrain, without a terrain gap at the takeoff point.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-021",
+              "zh": "The unicorn encounters a valid rainbow arc while running on dirt during active play → The unicorn transfers from the dirt terrain onto the rainbow arc and is shown riding along the rainbow bridge.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-022",
+              "zh": "The airborne unicorn lands on a newly reached rainbow arc while the current chain count is zero → A spark particle burst appears at the unicorn, and the unicorn is shown riding on the rainbow arc.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-023",
+              "zh": "The airborne unicorn lands on a newly reached rainbow arc while the current chain count is at least one → A spark particle burst appears at the unicorn, the unicorn is shown riding on the rainbow arc, and the HUD displays a chain multiplier label with an x followed by a number of 2 or above.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-024",
+              "zh": "The unicorn reaches the end of the rainbow arc it is riding during active play → The unicorn leaves the rainbow arc and continues through open air beyond the arc endpoint.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-025",
+              "zh": "The rainbow arc currently carrying the unicorn fades below its support threshold during active play → The unicorn leaves the rainbow arc and is shown moving through open air.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-026",
+              "zh": "The unicorn riding a rainbow arc reaches an upward curve whose launch condition is met before the arc endpoint → The unicorn leaves the rainbow bridge from the curved section and continues through open air while the rainbow bridge remains visible behind it.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-027",
+              "zh": "The airborne unicorn lands on dirt during active play while no chain multiplier label is visible → A dust particle burst appears at the unicorn's hooves, and the unicorn resumes running along the dirt terrain.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-028",
+              "zh": "The unicorn lands on dirt during active play while a chain multiplier label is visible → A dust particle burst appears at the unicorn's hooves, and the chain multiplier label is no longer visible in the HUD within 1 second.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-029",
+              "zh": "A new void terrain segment enters the gameplay view during active play → The dirt terrain is interrupted by a visible open gap with abyss showing between the terrain sections.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-030",
+              "zh": "A spike obstacle generated on solid terrain enters the gameplay view during active play → A cluster of purple triangular spikes is visible on the dirt terrain.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-031",
+              "zh": "A regular stardust pickup generated above the course enters the gameplay view → A glowing star-shaped stardust pickup is visible above the terrain or path.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-032",
+              "zh": "A stardust pickup generated for a void gap enters the gameplay view → A glowing star-shaped stardust pickup floats over the open gap.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-033",
+              "zh": "The unicorn intersects a stardust pickup during active play while no chain multiplier is active → The stardust pickup disappears, a star-shaped particle burst appears at the pickup position, and the HUD score readout increases by at least 50 from its pre-pickup value within 1 second.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-034",
+              "zh": "The unicorn intersects a stardust pickup during active play while a chain multiplier label is visible → The stardust pickup disappears, a star-shaped particle burst appears at the pickup position, and the HUD score readout increases by at least 100 from its pre-pickup value within 1 second.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-035",
+              "zh": "The unicorn intersects a stardust pickup during active play while the HUD ink bar is not full → The stardust pickup disappears, a star-shaped particle burst appears at the pickup position, and the ink HUD shows the text \"+STARDUST\" within 1 second.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-036",
+              "zh": "The unicorn contacts a spike obstacle during active play → A boom particle burst appears at the unicorn, and the game-over overlay appears over the gameplay view.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-037",
+              "zh": "The unicorn falls below the death boundary during active play → A boom particle burst appears at the unicorn, and the game-over overlay appears over the gameplay view.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-038",
+              "zh": "The game-over presentation is rendered → A \"GAME OVER\" title is visible above a central panel labeled \"SCORE\" with the run's numeric score displayed in the panel.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-039",
+              "zh": "The game-over screen has been displayed long enough for its retry prompt on a non-touch presentation → The game-over presentation shows the prompt text \"CLICK or SPACE to retry\" near the lower part of the screen.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-040",
+              "zh": "The game-over presentation is rendered after a spike death → The game-over overlay shows the reason text \"impaled on the spikes\" below the main game-over title.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-041",
+              "zh": "The game-over presentation is rendered after a void-fall death → The game-over overlay shows the reason text \"lost to the void\" below the main game-over title.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-042",
+              "zh": "A game-over summary is rendered for a positive-score run whose score is not below the saved best score → The game-over presentation shows the line \"** NEW BEST **\" below the displayed score.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-043",
+              "zh": "A game-over summary is rendered for a run whose score is below the saved best score → The game-over presentation shows a summary line containing \"BEST\", a distance value ending in \"m\", and \"TOP CHAIN x\" below the displayed score.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-044",
+              "zh": "A pointer press is accepted on the game-over screen after the restart delay has elapsed → The game-over overlay disappears, active gameplay returns, existing drawn rainbow arcs are gone, and the score display is reset to 0.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-045",
+              "zh": "The R key is pressed during active play → Active gameplay restarts from a clean starting stretch: existing drawn rainbow arcs are gone and the score display is reset to 0.",
+              "cause": "源码错误导致 Trace 不可达"
+            }
+          ]
+        },
+        "issue": "Seed-2.0-Pro已生成源码，但进入Trace前的确定性构建校验失败：src/main.ts:71:20出现Invalid assignment target，Vite/esbuild无法编译。按源码构建失败计分规则，45条固定需求均计失败：基础分0、动态分0、无画面分且不可试玩。",
+        "timing": null
+      }
+    },
     "rainbow-runner": {},
     "tube-masters": {},
     "spacepi": {},
