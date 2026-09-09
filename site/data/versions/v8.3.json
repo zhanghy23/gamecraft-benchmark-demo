@@ -34215,7 +34215,188 @@
         }
       }
     },
-    "the-rainbow-is-right-there": {},
+    "the-rainbow-is-right-there": {
+      "seed-2.0-pro": {
+        "status": "completed",
+        "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
+        "score": {
+          "display": "65.52 (+15.52)",
+          "base": 65.52,
+          "passed": 38,
+          "denominator": 58,
+          "dynamic": 9,
+          "dynamicAddition": 15.52,
+          "potential": 81.03
+        },
+        "visualQuality": {
+          "score": 88,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 46.44,
+          "renderingStyleAverage": 41.56,
+          "videosScored": 18
+        },
+        "traceCount": 18,
+        "playPath": "games-v8.3/the-rainbow-is-right-there/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.3/the-rainbow-is-right-there/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-029",
+              "zh": "The active gameplay view is rendered while chase approach progress is complete → The unicorn is drawn immediately to the left of the pot of gold with a visible gap between the unicorn sprite and the pot, and both sprites remain on the grass under the rainbow."
+            },
+            {
+              "id": "target-036",
+              "zh": "A collectible gold coin reaches the unicorn collection range during running play while the HUD is visible, with exactly one Sparkle upgrade level and no permanent pickup-value bonus active → The GOLD HUD number changes from its pre-collection value to that value plus 2 within 0.2 seconds, and a burst of colored sparkle particles appears at the unicorn."
+            },
+            {
+              "id": "target-037",
+              "zh": "A collectible gold coin reaches the unicorn collection range during running play while the HUD is visible, with no Sparkle upgrade and exactly one permanent pickup-value bonus active → The GOLD HUD number changes from its pre-collection value to that value plus 2 within 0.2 seconds, and a burst of colored sparkle particles appears at the unicorn."
+            },
+            {
+              "id": "target-038",
+              "zh": "A collectible gold coin reaches the unicorn collection range during running play while the upgrade panel is open → The upgrade panel stays open, and within 0.2 seconds the panel's displayed GOLD number is different from the value shown immediately before the collection."
+            },
+            {
+              "id": "target-046",
+              "zh": "The player activates an affordable ordinary upgrade row below level 9 while the upgrade panel is open during running play → The selected upgrade row refreshes in place: its visible level indicator increases by 1, its displayed next-effect text and Cost label show different text than immediately before activation, and its button remains labeled Upgrade."
+            },
+            {
+              "id": "target-047",
+              "zh": "The player activates an affordable ordinary upgrade row at level 9 while the upgrade panel is open during running play → The selected upgrade row changes to level 10 of 10 with ten lit pips, its Cost label is not visible, and its purchase button displays Maxed."
+            },
+            {
+              "id": "target-050",
+              "zh": "The Catch the Rainbow row is rendered in the upgrade panel → The row displays the title Catch the Rainbow and a visible cost of 1,000 gold."
+            },
+            {
+              "id": "target-054",
+              "zh": "The player activates the Catch the Rainbow control while the catch prerequisites are not satisfied and permanent saving is available → The upgrade panel remains open, the catch control remains in its locked state, and the catch requirement text remains visible."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-005",
+              "zh": "The player activates the scroll cue control while the upgrade panel is open and its upgrade list has additional content below the visible area → The visible upgrade list content scrolls downward, revealing lower upgrade rows within the same open panel.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-006",
+              "zh": "The upgrade panel is opened while its upgrade list has content below the visible area → A scroll cue is visible at the bottom of the upgrade panel, including a band over the lower list edge and small sparkle icons.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-010",
+              "zh": "The player activates the New Game control while the game is in the throw phase of the catch cinematic → The New Game control remains ↺ and the catch cinematic stays on screen without switching to a fresh run.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-016",
+              "zh": "The player presses Escape while the Stubbornness dialog is open with an unresolved point → The Stubbornness dialog remains visible and continues blocking the gameplay HUD controls.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-058",
+              "zh": "The browser viewport is resized during active gameplay → The pixel-art gameplay scene redraws to fill the visible canvas area with no blank gap around the scene, and the HUD controls remain overlaid on the play scene.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-009",
+              "zh": "The player activates the New Game control while the New Game confirmation is armed and saving succeeds → The run returns to a fresh visible state: the GOLD HUD reads 0 and the New Game control shows ↺.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-014",
+              "zh": "The player activates a legal Stubbornness choice while the Stubbornness dialog has exactly one available point and saving succeeds → The Stubbornness dialog closes and the active gameplay HUD with the Spend Gold control becomes visible again.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-015",
+              "zh": "The player activates a legal Stubbornness choice while the Stubbornness dialog has more than one available point and saving succeeds → The Stubbornness dialog remains visible for another choice.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-017",
+              "zh": "One second of update time elapses while the Stubbornness dialog is open with an unresolved point → The Stubbornness dialog remains visible with its choice rows, the gameplay HUD controls remain hidden, and no new gold coin launches from the pot during that one-second interval.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-040",
+              "zh": "Active running play advances for one second while the upgrade panel is open → The upgrade panel remains open in the foreground, and the darkened gameplay scene visible around it continues horizontal scrolling behind the panel.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-048",
+              "zh": "The player activates an ordinary upgrade row while the player has insufficient gold for that row → The upgrade panel remains open, and the selected upgrade row keeps the same visible level indicator, effect text, and purchase button state.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-049",
+              "zh": "The player activates a maxed ordinary upgrade row while the upgrade panel is open during running play → The upgrade panel remains open, and the selected upgrade row continues to show Maxed with the same visible level and effect text.",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-09T08:15:51+08:00",
+          "finishedAt": "2026-09-09T11:21:26+08:00",
+          "totalDurationMs": 11135044,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-09T08:15:51+08:00",
+              "finishedAt": "2026-09-09T08:19:52+08:00",
+              "durationMs": 241609,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-09T08:19:52+08:00",
+              "finishedAt": "2026-09-09T08:37:11+08:00",
+              "durationMs": 1038341,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-09T08:37:11+08:00",
+              "finishedAt": "2026-09-09T11:04:06+08:00",
+              "durationMs": 8814796,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-09T11:04:06+08:00",
+              "finishedAt": "2026-09-09T11:04:06+08:00",
+              "durationMs": 404,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-09T11:04:06+08:00",
+              "finishedAt": "2026-09-09T11:05:38+08:00",
+              "durationMs": 92143,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-09T11:05:38+08:00",
+              "finishedAt": "2026-09-09T11:21:26+08:00",
+              "durationMs": 947671,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      }
+    },
     "7-huenicorns": {},
     "match3": {},
     "unicorn-storm": {},
