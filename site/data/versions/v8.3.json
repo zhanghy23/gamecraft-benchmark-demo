@@ -38515,6 +38515,97 @@
       }
     },
     "rainbow-runner": {
+      "gpt-5.5": {
+        "status": "completed",
+        "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
+        "score": {
+          "display": "95.83 (+0.00)",
+          "base": 95.83,
+          "passed": 23,
+          "denominator": 24,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 95.83
+        },
+        "visualQuality": {
+          "score": 92.33,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48,
+          "renderingStyleAverage": 44.33,
+          "videosScored": 6
+        },
+        "traceCount": 6,
+        "playPath": "games-v8.3/rainbow-runner/gpt-5.5/index.html",
+        "previewPath": "previews-v8.3/rainbow-runner/gpt-5.5.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-009",
+              "zh": "A buffered jump input is still active when the player character reaches the grounded landing state → The player character immediately leaves the platform again in a new upward jump instead of remaining on the landing frame."
+            }
+          ],
+          "replayTrace": []
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-10T04:09:34+08:00",
+          "finishedAt": "2026-09-10T04:34:33+08:00",
+          "totalDurationMs": 1498675,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-10T04:09:34+08:00",
+              "finishedAt": "2026-09-10T04:11:35+08:00",
+              "durationMs": 121066,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-10T04:11:35+08:00",
+              "finishedAt": "2026-09-10T04:20:49+08:00",
+              "durationMs": 553831,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-10T04:20:49+08:00",
+              "finishedAt": "2026-09-10T04:28:30+08:00",
+              "durationMs": 460333,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-10T04:28:30+08:00",
+              "finishedAt": "2026-09-10T04:28:30+08:00",
+              "durationMs": 144,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-10T04:28:30+08:00",
+              "finishedAt": "2026-09-10T04:29:19+08:00",
+              "durationMs": 49240,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-10T04:29:19+08:00",
+              "finishedAt": "2026-09-10T04:34:33+08:00",
+              "durationMs": 313978,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
       "seed-2.0-pro": {
         "status": "completed",
         "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
