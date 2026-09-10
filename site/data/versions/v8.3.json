@@ -34253,6 +34253,92 @@
             }
           ]
         }
+      },
+      "gpt-5.4": {
+        "status": "completed",
+        "runId": "gpt-5.4-v8.3-rubric2-licensed22-20260910-140250",
+        "score": {
+          "display": "100.00 (+0.00)",
+          "base": 100,
+          "passed": 32,
+          "denominator": 32,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 100
+        },
+        "visualQuality": {
+          "score": 89.5,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.67,
+          "renderingStyleAverage": 41.83,
+          "videosScored": 6
+        },
+        "traceCount": 6,
+        "playPath": "games-v8.3/lepricons-rush/gpt-5.4/index.html",
+        "previewPath": "previews-v8.3/lepricons-rush/gpt-5.4.png",
+        "unmet": {
+          "vlm": [],
+          "replayTrace": []
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.4-v8.3-rubric2-licensed22-20260910-140250",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-10T15:08:54+08:00",
+          "finishedAt": "2026-09-10T15:30:47+08:00",
+          "totalDurationMs": 1312434,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-10T15:08:55+08:00",
+              "finishedAt": "2026-09-10T15:13:06+08:00",
+              "durationMs": 251174,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-10T15:13:06+08:00",
+              "finishedAt": "2026-09-10T15:25:34+08:00",
+              "durationMs": 748359,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-10T15:25:34+08:00",
+              "finishedAt": "2026-09-10T15:25:45+08:00",
+              "durationMs": 10968,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-10T15:25:45+08:00",
+              "finishedAt": "2026-09-10T15:25:45+08:00",
+              "durationMs": 240,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-10T15:25:45+08:00",
+              "finishedAt": "2026-09-10T15:26:44+08:00",
+              "durationMs": 58221,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-10T15:26:44+08:00",
+              "finishedAt": "2026-09-10T15:30:47+08:00",
+              "durationMs": 243306,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "shooooooot": {

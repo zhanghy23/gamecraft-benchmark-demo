@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leprechaun Binary Patrol</title>
+    <style>
+      html, body {
+        margin: 0;
+        height: 100%;
+        background: #172015;
+        color: #f7e6a2;
+        font-family: system-ui, sans-serif;
+        overflow: hidden;
+      }
+      #frame {
+        min-height: 100%;
+        display: grid;
+        place-items: center;
+      }
+      canvas {
+        width: min(100vw, calc(100vh * 16 / 9));
+        height: min(100vh, calc(100vw * 9 / 16));
+        max-width: 1280px;
+        max-height: 720px;
+        background: #22351c;
+        box-shadow: 0 0 0 2px #473819, 0 18px 50px rgba(0,0,0,.55);
+        touch-action: none;
+      }
+    </style>
+    <script type="module" crossorigin src="./assets/index-C6mbQrjG.js"></script>
+  </head>
+  <body>
+    <div id="frame"><canvas id="game" width="640" height="360" aria-label="Leprechaun Binary Patrol"></canvas></div>
+  </body>
+</html>
