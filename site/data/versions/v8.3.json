@@ -39694,7 +39694,118 @@
         }
       }
     },
-    "lost-island": {},
+    "lost-island": {
+      "seed-2.0-pro": {
+        "status": "completed",
+        "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
+        "score": {
+          "display": "87.18 (+2.56)",
+          "base": 87.18,
+          "passed": 34,
+          "denominator": 39,
+          "dynamic": 1,
+          "dynamicAddition": 2.56,
+          "potential": 89.74
+        },
+        "visualQuality": {
+          "score": 88.6,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48,
+          "renderingStyleAverage": 40.6,
+          "videosScored": 5
+        },
+        "traceCount": 5,
+        "playPath": "games-v8.3/lost-island/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.3/lost-island/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-028",
+              "zh": "During active play, a visible map tile with a berry bush is rendered in the gameplay viewport → A berry bush graphic is drawn on that terrain tile."
+            },
+            {
+              "id": "target-029",
+              "zh": "During active play, a visible map tile with a palm tree is rendered in the gameplay viewport → A palm tree graphic is drawn over that terrain tile."
+            },
+            {
+              "id": "target-030",
+              "zh": "During active play, a visible map tile with an apple tree is rendered in the gameplay viewport → An apple tree graphic is drawn over that terrain tile."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-038",
+              "zh": "During active play, the hunger timer reaches its one-second decrease point while the resulting rounded heart count is exactly one lower than the previous rounded heart count and the player remains alive → The health display at the top-left shows one fewer heart symbol than it showed before the decrease, and the gameplay view remains visible.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-039",
+              "zh": "During active play, the action check finds a food tile in the player's pickup tiles and the resulting rounded heart count is exactly one higher than the previous rounded heart count → The health display at the top-left shows one additional heart symbol compared with the display before the action check.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-10T04:35:14+08:00",
+          "finishedAt": "2026-09-10T05:26:01+08:00",
+          "totalDurationMs": 3047020,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-10T04:35:14+08:00",
+              "finishedAt": "2026-09-10T04:36:00+08:00",
+              "durationMs": 46555,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-10T04:36:00+08:00",
+              "finishedAt": "2026-09-10T04:47:50+08:00",
+              "durationMs": 709673,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-10T04:47:50+08:00",
+              "finishedAt": "2026-09-10T05:15:49+08:00",
+              "durationMs": 1679062,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-10T05:15:49+08:00",
+              "finishedAt": "2026-09-10T05:15:49+08:00",
+              "durationMs": 203,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-10T05:15:49+08:00",
+              "finishedAt": "2026-09-10T05:17:52+08:00",
+              "durationMs": 122917,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-10T05:17:52+08:00",
+              "finishedAt": "2026-09-10T05:26:01+08:00",
+              "durationMs": 488532,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      }
+    },
     "save-the-lost-friend": {}
   }
 }
