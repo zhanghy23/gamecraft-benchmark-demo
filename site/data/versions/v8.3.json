@@ -39806,6 +39806,298 @@
         }
       }
     },
-    "save-the-lost-friend": {}
+    "save-the-lost-friend": {
+      "seed-2.0-pro": {
+        "status": "completed",
+        "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
+        "score": {
+          "display": "61.47 (+2.75)",
+          "base": 61.47,
+          "passed": 67,
+          "denominator": 109,
+          "dynamic": 3,
+          "dynamicAddition": 2.75,
+          "potential": 64.22
+        },
+        "visualQuality": {
+          "score": 90.28,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.08,
+          "renderingStyleAverage": 42.2,
+          "videosScored": 25
+        },
+        "traceCount": 25,
+        "playPath": "games-v8.3/save-the-lost-friend/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.3/save-the-lost-friend/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-035",
+              "zh": "The player touches volcanic lava while their health is 100 and their hit timer is inactive → The HUD displays the message \"Beware of the Volcanic Lava.\", and within 1 second the green filled portion of the Health bar is between 45% and 55% of the bar's full visible width."
+            },
+            {
+              "id": "target-043",
+              "zh": "The player touches a shark in the water hub while their health is 10, their hit timer is inactive, and no dialog interaction is active → The level enters the lost-state animation: the player sprite begins moving downward and its visible body height begins shrinking."
+            },
+            {
+              "id": "target-054",
+              "zh": "A collected, unplaced earth gem is accepted into the portal while fewer than three gems are already placed → A brown diamond appears at the lower-left area of the portal and the HUD displays a gem-placed message containing \"earth\"."
+            },
+            {
+              "id": "target-078",
+              "zh": "The up selection control is pressed while a dialog question list is open and the first question is highlighted → The red highlight moves from the first question entry to the last question entry."
+            },
+            {
+              "id": "target-079",
+              "zh": "The down selection control is pressed while a dialog question list is open and the last question is highlighted → The red highlight moves from the last question entry to the first question entry."
+            },
+            {
+              "id": "target-090",
+              "zh": "The river player overlaps a moving log during the river level → The player is carried horizontally with the moving log on the following gameplay frames."
+            },
+            {
+              "id": "target-097",
+              "zh": "A fire bird updates at the right edge of its patrol range → The fire bird changes from rightward horizontal motion to leftward horizontal motion on the following gameplay frames."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-008",
+              "zh": "A horizontal platformer level begins after its display and HUD are created → The HUD shows a progress bar labeled \"Progress\" in addition to the health bar.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-009",
+              "zh": "A vertical platformer level begins after its display and HUD are created → The HUD shows a progress bar labeled \"Progress\" in addition to the health bar.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-025",
+              "zh": "During active earth level play before the far-right end section, the player's next automatic horizontal step has no obstacle → The player advances right through the level between consecutive gameplay frames.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-048",
+              "zh": "The player touches a berry in the fire level while their health is 90 → The berry sprite disappears, the HUD displays the message \"Gained health\", and the health bar's filled portion extends from nine tenths of the bar's full width to the full bar width within 1 second.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-060",
+              "zh": "The player touches the locked earth island entrance in the water hub → The HUD displays the message \"You need to collect the key from crab to enter the earth island\".",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-061",
+              "zh": "The player touches the locked water island entrance in the water hub → The HUD displays the message \"You need to collect the key from tortoise to enter the water island\".",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-062",
+              "zh": "The player touches the locked air island entrance in the water hub → The HUD displays the message \"You need to collect the key from owl to enter the air island\".",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-063",
+              "zh": "The player touches the locked fire island entrance in the water hub → The HUD displays the message \"You need to collect the key from eagle to enter the fire island\".",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-064",
+              "zh": "The player touches the earth island entrance in the water hub after the earth gem has already been collected → The HUD displays the message \"You have already collected the gem from earth island\".",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-065",
+              "zh": "The player touches the water island entrance in the water hub after the water gem has already been collected → The HUD displays the message \"You have already collected the gem from water island\".",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-066",
+              "zh": "The player touches the air island entrance in the water hub after the air gem has already been collected → The HUD displays the message \"You have already collected the gem from air island\".",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-067",
+              "zh": "The player touches the fire island entrance in the water hub after the fire gem has already been collected → The HUD displays the message \"You have already collected the gem from fire island\".",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-068",
+              "zh": "The player touches the unlocked earth island entrance in the water hub before the earth gem has been collected → The HUD displays the message \"Welcome to the earth island\" and, after the level transition delay, the earth level replaces the water hub on screen.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-069",
+              "zh": "The player touches the unlocked water island entrance in the water hub before the water gem has been collected → The HUD displays the message \"Welcome to the water island\" and, after the level transition delay, the river level replaces the water hub on screen.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-070",
+              "zh": "The player touches the unlocked air island entrance in the water hub before the air gem has been collected → The HUD displays the message \"Welcome to the air island\" and, after the level transition delay, the air level replaces the water hub on screen.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-071",
+              "zh": "The player touches the unlocked fire island entrance in the water hub before the fire gem has been collected → The HUD displays the message \"Welcome to the fire island\" and, after the level transition delay, the fire level replaces the water hub on screen.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-076",
+              "zh": "The player collides with an NPC whose current dialog batch has no questions → The HUD displays a dialog welcome message without showing a red-highlighted question list.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-077",
+              "zh": "The enter selection control is pressed while an NPC dialog is active before the question list is displayed → The HUD area changes from the dialog message to a question list with one entry highlighted in red.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-081",
+              "zh": "The down selection control is pressed while a dialog question list is open and a non-last question is highlighted → The red highlight moves from the currently highlighted question entry to the question entry directly below it.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-085",
+              "zh": "A dialog batch advances after every visible question in the current batch has been answered and another batch exists → A question list is displayed with the first question entry highlighted in red.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-086",
+              "zh": "An evil cloud updates while its next position has no obstacle → The evil cloud sprite occupies a different position between consecutive gameplay frames.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-087",
+              "zh": "An evil cloud updates while its next position intersects a solid obstacle → The evil cloud changes direction and moves back away from the obstacle on the following gameplay frames.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-091",
+              "zh": "A shark updates while its next position has no obstacle or island → The shark sprite occupies a different position between consecutive gameplay frames.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-092",
+              "zh": "A shark updates while its next position intersects a solid obstacle → The shark changes direction and moves back away from the obstacle on the following gameplay frames.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-093",
+              "zh": "A shark updates while its next position intersects an island → The shark changes direction and moves back away from the island on the following gameplay frames.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-098",
+              "zh": "A fire bird updates at a firing interval during its patrol → A new fire-bolt sprite appears directly below the fire bird.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-099",
+              "zh": "A volcanic lava actor updates while its next position has no obstacle → The volcanic lava sprite occupies a different position between consecutive gameplay frames.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-100",
+              "zh": "A volcanic lava actor updates while its next position intersects a solid obstacle → The volcanic lava sprite returns to its original volcano opening position.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-101",
+              "zh": "A fire tree updates before it has added fruit → Between 4 and 7 berry sprites appear around the fire tree branches.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-102",
+              "zh": "The air level begins after its generated layout is displayed → The player starts in the lower central area of the playfield and the air gem is visible in the upper central area of the playfield.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-103",
+              "zh": "The river level begins after its generated layout is displayed → The player starts on a low visible board or platform in the river playfield.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-107",
+              "zh": "A volcanic lava actor is drawn in the fire level → A volcanic lava sprite appears as a yellow rectangle with a red rectangular inset.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-047",
+              "zh": "The river player overlaps a stationary standing platform during the river level → The player remains on the platform and the HUD does not display \"Drowned in the fierce river.\".",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-080",
+              "zh": "The up selection control is pressed while a dialog question list is open and a non-first question is highlighted → The red highlight moves from the currently highlighted question entry to the question entry directly above it.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-073",
+              "zh": "The pause control is released after being pressed while the pause menu is displayed during a level → The menu disappears and the playable level view with the in-game HUD is visible again.",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-10T05:26:01+08:00",
+          "finishedAt": "2026-09-10T08:52:05+08:00",
+          "totalDurationMs": 12363689,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-10T05:26:01+08:00",
+              "finishedAt": "2026-09-10T05:30:07+08:00",
+              "durationMs": 246130,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-10T05:30:07+08:00",
+              "finishedAt": "2026-09-10T06:01:11+08:00",
+              "durationMs": 1863703,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-10T06:01:11+08:00",
+              "finishedAt": "2026-09-10T08:30:04+08:00",
+              "durationMs": 8932938,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-10T08:30:04+08:00",
+              "finishedAt": "2026-09-10T08:30:05+08:00",
+              "durationMs": 784,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-10T08:30:05+08:00",
+              "finishedAt": "2026-09-10T08:32:13+08:00",
+              "durationMs": 128284,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-10T08:32:13+08:00",
+              "finishedAt": "2026-09-10T08:52:05+08:00",
+              "durationMs": 1191772,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      }
+    }
   }
 }
