@@ -31963,6 +31963,185 @@
             }
           ]
         }
+      },
+      "kimi-k2.6": {
+        "status": "completed",
+        "runId": "kimi-k2.6-v8.3-rubric2-imported18-20260908-163121",
+        "score": {
+          "display": "34.29 (+11.43)",
+          "base": 34.29,
+          "passed": 12,
+          "denominator": 35,
+          "dynamic": 4,
+          "dynamicAddition": 11.43,
+          "potential": 45.71
+        },
+        "visualQuality": {
+          "score": 67.19,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 38.63,
+          "renderingStyleAverage": 28.56,
+          "videosScored": 16
+        },
+        "traceCount": 16,
+        "playPath": "games-v8.3/q1k3/kimi-k2.6/index.html",
+        "previewPath": "previews-v8.3/q1k3/kimi-k2.6.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-005",
+              "zh": "玩家在站在地面上且跳跃已重新启用时按下跳跃 → 第一人称视点从站立高度向上升起。"
+            },
+            {
+              "id": "target-008",
+              "zh": "鼠标滚轮延迟已结束后，玩家滚动到下一把武器 → 可见的手持武器模型切换为下一把可用武器。"
+            },
+            {
+              "id": "target-009",
+              "zh": "鼠标滚轮延迟已结束后，玩家滚动到上一把武器 → 可见的手持武器模型切换为上一把可用武器。"
+            },
+            {
+              "id": "target-010",
+              "zh": "当所选投射物武器已准备好射击且拥有所需弹药时，玩家尝试开火 → 在该次开火尝试期间，一个投射物从玩家的武器发出。"
+            },
+            {
+              "id": "target-011",
+              "zh": "当所选枪口闪光武器已准备好射击且拥有所需弹药时，玩家尝试开火 → 在该次开火尝试期间，玩家的武器处出现枪口闪光效果。"
+            },
+            {
+              "id": "target-018",
+              "zh": "玩家携带 nailgun 时收集 nail 弹药拾取物 → nail 弹药拾取物从场景中消失。"
+            },
+            {
+              "id": "target-019",
+              "zh": "玩家在携带 grenade launcher（榴弹发射器）时收集 grenade ammunition pickup（榴弹弹药拾取物） → grenade ammunition pickup（榴弹弹药拾取物）从场景中消失。"
+            },
+            {
+              "id": "target-020",
+              "zh": "玩家到达非最终关卡的出口触发器 → 游戏画面从当前关卡布局切换到下一关卡的地图布局。"
+            },
+            {
+              "id": "target-024",
+              "zh": "一个可见的可受伤实体的生命值因受到伤害而降至零 → 伤害应用后，该实体原本可见的模型不再被渲染。"
+            },
+            {
+              "id": "target-025",
+              "zh": "一个空闲敌人在其警觉范围内有玩家，且到玩家之间存在无遮挡的视线 → 敌人转向面朝玩家。"
+            },
+            {
+              "id": "target-026",
+              "zh": "一个巡逻敌人在其警觉范围内有玩家，且到玩家之间存在无遮挡的视线 → 敌人转向面朝玩家，而不是继续沿其巡逻路径前进。"
+            },
+            {
+              "id": "target-027",
+              "zh": "一个空闲敌人受到非致命伤害 → 敌人转向面朝玩家，并开始向玩家移动。"
+            },
+            {
+              "id": "target-028",
+              "zh": "一个巡逻敌人受到非致命伤害 → 敌人转向面朝玩家，并开始向玩家移动，而不是继续其巡逻路径。"
+            },
+            {
+              "id": "target-032",
+              "zh": "一个巡逻敌人与墙壁或平台边缘边界发生水平碰撞 → 敌人反转其巡逻方向，并沿其路径往回行走。"
+            },
+            {
+              "id": "target-033",
+              "zh": "一个 grunt 敌人在面朝玩家时到达其攻击执行状态 → 攻击期间，grunt 处出现枪口闪光灯光。"
+            },
+            {
+              "id": "target-034",
+              "zh": "一个 zombie 受到的伤害量未高于其碎尸阈值 → 命中后，zombie 模型仍以其站立敌人形态保持可见。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-015",
+              "zh": "玩家在门的激活范围内接近一扇未上锁的门 → 门板从关闭位置打开，露出其后的通道。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-016",
+              "zh": "一扇打开的门在其重置延迟期间没有玩家处于其激活范围内 → 门板向其关闭位置关回。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-035",
+              "zh": "一个可见的弹跳实体在其垂直速度高于其弹跳阈值时与表面发生垂直碰撞 → 接触后，该实体立即反转垂直方向，并从该表面反弹离开。",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-006",
+              "zh": "玩家向上看至垂直视角限制 → 视图保持限制在最大向上俯仰角，额外的向上视角输入不会使视图旋转超过该限制角度。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-007",
+              "zh": "玩家向下看至垂直视角限制 → 视图保持限制在最大向下俯仰角，额外的向下视角输入不会使视图旋转超过该限制角度。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-017",
+              "zh": "玩家收集钥匙拾取物 → 钥匙拾取物从场景中消失，并且玩法视图上显示消息“YOU GOT THE KEY!”。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-031",
+              "zh": "一个空闲敌人在其状态更新期间，玩家位于其警觉范围内，但到玩家之间不存在无遮挡的视线 → 敌人停留在原地，并且不会转向或向玩家移动。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "kimi-k2.6-v8.3-rubric2-imported18-20260908-163121",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-10T01:58:35+08:00",
+          "finishedAt": "2026-09-10T05:27:37+08:00",
+          "totalDurationMs": 12541818,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-10T01:58:35+08:00",
+              "finishedAt": "2026-09-10T02:09:03+08:00",
+              "durationMs": 627628,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-10T02:09:03+08:00",
+              "finishedAt": "2026-09-10T04:59:55+08:00",
+              "durationMs": 10251859,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-10T04:59:55+08:00",
+              "finishedAt": "2026-09-10T04:59:55+08:00",
+              "durationMs": 581,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-10T04:59:55+08:00",
+              "finishedAt": "2026-09-10T05:02:21+08:00",
+              "durationMs": 146085,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-10T05:02:21+08:00",
+              "finishedAt": "2026-09-10T05:27:37+08:00",
+              "durationMs": 1515633,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "island-not-found": {
