@@ -39024,6 +39024,162 @@
             }
           ]
         }
+      },
+      "seed-2.0-pro": {
+        "status": "completed",
+        "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
+        "score": {
+          "display": "76.19 (+9.52)",
+          "base": 76.19,
+          "passed": 48,
+          "denominator": 63,
+          "dynamic": 6,
+          "dynamicAddition": 9.52,
+          "potential": 85.71
+        },
+        "visualQuality": {
+          "score": 86.4,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 46.73,
+          "renderingStyleAverage": 39.67,
+          "videosScored": 15
+        },
+        "traceCount": 15,
+        "playPath": "games-v8.3/spacepi/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.3/spacepi/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-014",
+              "zh": "The level-selection menu is displayed for a level that has no saved best score → That level button's score area shows the empty-set symbol \"∅\"."
+            },
+            {
+              "id": "target-015",
+              "zh": "The level-selection menu is displayed for a level that has a saved best score → That level button's score area shows a numeric best score."
+            },
+            {
+              "id": "target-016",
+              "zh": "The level-selection menu is displayed for a level completed with zero base hits → That level button shows its \"P\" perfect marker."
+            },
+            {
+              "id": "target-017",
+              "zh": "The level-selection and upgrades menu is displayed with a non-maxed upgrade whose next cost is affordable → That upgrade row shows a cost followed by the word \"Available\"."
+            },
+            {
+              "id": "target-018",
+              "zh": "The level-selection and upgrades menu is displayed with a non-maxed upgrade whose next cost is not affordable → That upgrade row shows a cost followed by the word \"Unavailable\" and is shown in a disabled state."
+            },
+            {
+              "id": "target-020",
+              "zh": "The player activates an upgrade control from the upgrades menu while that upgrade is disabled because it is unaffordable → The upgrades menu remains visible, the activated upgrade row shows \"Unavailable\", and the funds display is shown in a red not-enough feedback state."
+            },
+            {
+              "id": "target-034",
+              "zh": "The player holds a drag during an active level while unlimited power is active → The temporary defensive line preview is drawn from the drag starting point to the pointer position."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-021",
+              "zh": "The player activates an upgrade control from the upgrades menu while that upgrade is already maxed → The upgrades menu remains visible and that upgrade row continues to show \"Maxed\".",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-054",
+              "zh": "An active coin-scatter powerup reaches its coin-spawn interval during gameplay while upgrades are not maxed → New coin icons appear in the playfield.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-022",
+              "zh": "The player activates an available upgrade control whose purchase raises that upgrade to its final level → The upgrades menu remains visible and the activated upgrade row shows \"Maxed\".",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-023",
+              "zh": "The player activates an available upgrade control whose purchase leaves that upgrade below its final level and the next upgrade cost is affordable with the remaining funds → The upgrades menu remains visible and the activated upgrade row shows the next cost followed by the word \"Available\".",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-024",
+              "zh": "The player activates an available upgrade control whose purchase leaves that upgrade below its final level and the next upgrade cost is not affordable with the remaining funds → The upgrades menu remains visible and the activated upgrade row shows the next cost followed by the word \"Unavailable\" in a disabled state.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-037",
+              "zh": "The player releases the mouse button after dragging a nonzero distance during an active level while unlimited power is active → A defensive line remains visible in the playfield from the drag starting point to the release point.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-062",
+              "zh": "The player activates the Return to Upgrades/Levels control from the Level Stats menu after the first successful completion of Level 1 → The Level Stats menu is replaced by the level-selection and upgrades menu, the level status line shows \"1/13 Completed\", and the Level 2 button is enabled.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-063",
+              "zh": "The player activates the Return to Upgrades/Levels control from the Level Stats menu after the first successful zero-base-hit completion of Level 1 → The Level Stats menu is replaced by the level-selection and upgrades menu, the level status line shows \"1/13 Perfect\", and the Level 1 button shows its \"P\" perfect marker.",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-09T23:14:59+08:00",
+          "finishedAt": "2026-09-10T02:28:51+08:00",
+          "totalDurationMs": 11632008,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-09T23:14:59+08:00",
+              "finishedAt": "2026-09-09T23:17:02+08:00",
+              "durationMs": 122505,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-09T23:17:02+08:00",
+              "finishedAt": "2026-09-09T23:42:12+08:00",
+              "durationMs": 1510503,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-09T23:42:12+08:00",
+              "finishedAt": "2026-09-10T02:02:39+08:00",
+              "durationMs": 8426987,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-10T02:02:39+08:00",
+              "finishedAt": "2026-09-10T02:02:40+08:00",
+              "durationMs": 407,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-10T02:02:40+08:00",
+              "finishedAt": "2026-09-10T02:05:16+08:00",
+              "durationMs": 156355,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-10T02:05:16+08:00",
+              "finishedAt": "2026-09-10T02:28:51+08:00",
+              "durationMs": 1415177,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "space-garden": {
