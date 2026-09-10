@@ -39026,7 +39026,120 @@
         }
       }
     },
-    "space-garden": {},
+    "space-garden": {
+      "gpt-5.5": {
+        "status": "completed",
+        "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
+        "score": {
+          "display": "91.38 (+5.17)",
+          "base": 91.38,
+          "passed": 53,
+          "denominator": 58,
+          "dynamic": 3,
+          "dynamicAddition": 5.17,
+          "potential": 96.55
+        },
+        "visualQuality": {
+          "score": 90.71,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.36,
+          "renderingStyleAverage": 43.36,
+          "videosScored": 14
+        },
+        "traceCount": 14,
+        "playPath": "games-v8.3/space-garden/gpt-5.5/index.html",
+        "previewPath": "previews-v8.3/space-garden/gpt-5.5.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-057",
+              "zh": "The player's world position crosses beyond the right boundary of the world → The gameplay view jumps to the left side of the world, with the player still visible after the wrap."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-052",
+              "zh": "The player contacts a red harvester at low speed → A particle burst appears at the harvester and the player is knocked away from the contact point.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-031",
+              "zh": "The player overlaps a collectible artifact during active gameplay → The artifact disappears and a burst of particles appears at its position.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-032",
+              "zh": "At least one artifact has been collected when the collected-artifacts display is drawn → A colored square with a thin outline appears near the bottom-left of the screen for each collected artifact.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-035",
+              "zh": "An energy mass reaches zero visible radius after being absorbed → The energy mass disappears and a particle burst appears at its position.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-10T07:07:01+08:00",
+          "finishedAt": "2026-09-10T08:47:27+08:00",
+          "totalDurationMs": 6025756,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-10T07:07:01+08:00",
+              "finishedAt": "2026-09-10T07:09:24+08:00",
+              "durationMs": 142959,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-10T07:09:24+08:00",
+              "finishedAt": "2026-09-10T07:30:28+08:00",
+              "durationMs": 1263862,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-10T07:30:28+08:00",
+              "finishedAt": "2026-09-10T08:27:40+08:00",
+              "durationMs": 3432016,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-10T08:27:40+08:00",
+              "finishedAt": "2026-09-10T08:27:40+08:00",
+              "durationMs": 316,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-10T08:27:40+08:00",
+              "finishedAt": "2026-09-10T08:31:34+08:00",
+              "durationMs": 233193,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-10T08:31:34+08:00",
+              "finishedAt": "2026-09-10T08:47:27+08:00",
+              "durationMs": 953324,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      }
+    },
     "lost-robot": {},
     "lost-island": {},
     "save-the-lost-friend": {}
