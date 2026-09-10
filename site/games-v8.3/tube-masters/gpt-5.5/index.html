@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tube Masters</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #11131a;
+        color: #f4f4f4;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        background: radial-gradient(circle at top, #232838 0%, #11131a 58%, #090a0e 100%);
+      }
+
+      h1 {
+        margin: 18px 0 10px;
+        font-size: 38px;
+        line-height: 1;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #f7fbff;
+        text-shadow: 0 3px 0 #111, 0 0 18px rgba(75, 218, 255, 0.4);
+      }
+
+      #gameShell {
+        width: 800px;
+        max-width: calc(100vw - 24px);
+      }
+
+      #hud {
+        width: 800px;
+        max-width: 100%;
+        min-height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 6px 10px;
+        border: 1px solid #2b3344;
+        border-bottom: 0;
+        border-radius: 10px 10px 0 0;
+        background: rgba(8, 10, 16, 0.84);
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      #gameFrame {
+        position: relative;
+        width: 800px;
+        height: 600px;
+        max-width: 100%;
+        aspect-ratio: 4 / 3;
+        border: 1px solid #2b3344;
+        border-radius: 0 0 10px 10px;
+        overflow: hidden;
+        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+        background: #333;
+      }
+
+      #gameCanvas {
+        display: block;
+        width: 800px;
+        height: 600px;
+        max-width: 100%;
+        image-rendering: auto;
+        background: #353535;
+      }
+
+      #popupOverlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.46);
+        color: white;
+        text-align: center;
+      }
+
+      #popupCard {
+        min-width: 280px;
+        padding: 28px 30px 30px;
+        border: 1px solid rgba(255, 255, 255, 0.26);
+        border-radius: 18px;
+        background: rgba(20, 23, 32, 0.9);
+        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
+      }
+
+      #popupTitle {
+        margin: 0 0 10px;
+        font-size: 32px;
+      }
+
+      #popupMessage {
+        margin: 0 0 22px;
+        color: #cbd8e6;
+        font-size: 15px;
+      }
+
+      #playButton {
+        appearance: none;
+        border: 0;
+        border-radius: 999px;
+        padding: 12px 34px;
+        color: #071014;
+        background: linear-gradient(180deg, #80f7ff, #25bbf7);
+        font-size: 23px;
+        font-weight: 800;
+        cursor: pointer;
+        box-shadow: 0 5px 0 #087da4, 0 0 22px rgba(37, 187, 247, 0.4);
+      }
+
+      #playButton:active {
+        transform: translateY(3px);
+        box-shadow: 0 2px 0 #087da4, 0 0 22px rgba(37, 187, 247, 0.4);
+      }
+
+      #helpText {
+        margin: 10px 0 0;
+        color: #9eabbc;
+        font-size: 14px;
+        text-align: center;
+      }
+    </style>
+    <script type="module" crossorigin src="./assets/index-Dl2EBOc3.js"></script>
+  </head>
+  <body>
+    <h1>Tube Masters</h1>
+    <main id="gameShell" aria-label="Tube Masters game">
+      <section id="hud" aria-live="polite">
+        <div id="scoreHud">Score: 0</div>
+        <div id="topHud">Top: 0</div>
+        <div id="timeHud">Time: 0:00</div>
+      </section>
+      <section id="gameFrame">
+        <canvas id="gameCanvas" width="800" height="600" aria-label="Tube Masters play canvas"></canvas>
+        <div id="popupOverlay">
+          <div id="popupCard">
+            <h2 id="popupTitle">Tube Masters</h2>
+            <p id="popupMessage">Dodge blocks, collect orbs, and grab boosts.</p>
+            <button id="playButton" type="button">Play!</button>
+          </div>
+        </div>
+      </section>
+      <p id="helpText">Use Left/Right arrows or A/D to steer.</p>
+    </main>
+  </body>
+</html>

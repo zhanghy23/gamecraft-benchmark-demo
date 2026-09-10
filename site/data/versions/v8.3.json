@@ -38703,6 +38703,123 @@
       }
     },
     "tube-masters": {
+      "gpt-5.5": {
+        "status": "completed",
+        "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
+        "score": {
+          "display": "75.00 (+20.83)",
+          "base": 75,
+          "passed": 18,
+          "denominator": 24,
+          "dynamic": 5,
+          "dynamicAddition": 20.83,
+          "potential": 95.83
+        },
+        "visualQuality": {
+          "score": 92.25,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.5,
+          "renderingStyleAverage": 43.75,
+          "videosScored": 4
+        },
+        "traceCount": 4,
+        "playPath": "games-v8.3/tube-masters/gpt-5.5/index.html",
+        "previewPath": "previews-v8.3/tube-masters/gpt-5.5.png",
+        "unmet": {
+          "vlm": [],
+          "replayTrace": [
+            {
+              "id": "target-004",
+              "zh": "A render update occurs while active play is stopped and the popup overlay is hidden → the popup overlay appears on the rendered page",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-020",
+              "zh": "The game data is reset while the current score is nonzero → the score HUD shows \"Score: 0\" on the next rendered gameplay frame",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-021",
+              "zh": "The game data is reset while the player avatar is displaced from its starting lateral position → the player avatar appears back at its centered starting lateral position on the next rendered gameplay frame",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-022",
+              "zh": "The game data is reset while at least one obstacle item is present in the play area → the obstacle item that was present before the reset is absent from the next rendered gameplay frame",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-023",
+              "zh": "The game data is reset while at least one pickup collectible is present in the play area → the pickup collectible that was present before the reset is absent from the next rendered gameplay frame",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-024",
+              "zh": "The game data is reset while at least one boost collectible is present in the play area → the boost collectible that was present before the reset is absent from the next rendered gameplay frame",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-10T04:34:33+08:00",
+          "finishedAt": "2026-09-10T04:53:34+08:00",
+          "totalDurationMs": 1140606,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-10T04:34:33+08:00",
+              "finishedAt": "2026-09-10T04:37:02+08:00",
+              "durationMs": 149083,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-10T04:37:02+08:00",
+              "finishedAt": "2026-09-10T04:46:11+08:00",
+              "durationMs": 549100,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-10T04:46:11+08:00",
+              "finishedAt": "2026-09-10T04:50:11+08:00",
+              "durationMs": 239120,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-10T04:50:11+08:00",
+              "finishedAt": "2026-09-10T04:50:11+08:00",
+              "durationMs": 150,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-10T04:50:11+08:00",
+              "finishedAt": "2026-09-10T04:51:34+08:00",
+              "durationMs": 82857,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-10T04:51:34+08:00",
+              "finishedAt": "2026-09-10T04:53:34+08:00",
+              "durationMs": 120217,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
       "seed-2.0-pro": {
         "status": "completed",
         "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
