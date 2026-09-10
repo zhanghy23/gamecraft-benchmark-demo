@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lost Island Survival</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family: Georgia, "Times New Roman", serif;
+        background: #061927;
+        color: #f5f1d0;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background:
+          radial-gradient(circle at 50% 45%, rgba(26, 89, 101, 0.55), transparent 36rem),
+          linear-gradient(#051321, #08233a 56%, #051321);
+      }
+      #app {
+        width: min(100vw, 1280px);
+        height: min(100vh, 720px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .screen {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 32px;
+      }
+      .panel {
+        width: min(820px, calc(100vw - 48px));
+        min-height: 380px;
+        padding: 42px 52px;
+        border: 4px solid #d8c36d;
+        border-radius: 18px;
+        background: rgba(6, 25, 39, 0.92);
+        box-shadow: 0 26px 80px rgba(0, 0, 0, 0.55), inset 0 0 38px rgba(216, 195, 109, 0.08);
+        text-align: center;
+      }
+      h1 {
+        margin: 0 0 20px;
+        font-size: 96px;
+        line-height: 0.9;
+        letter-spacing: 8px;
+        color: #ffe17b;
+        text-shadow: 0 5px 0 #6f4f20, 0 0 28px rgba(255, 225, 123, 0.45);
+      }
+      h2 {
+        margin: 0 0 24px;
+        font-size: 64px;
+        color: #ffe17b;
+        text-shadow: 0 4px 0 #6f4f20;
+      }
+      p {
+        margin: 14px auto;
+        max-width: 650px;
+        font-size: 24px;
+        line-height: 1.35;
+      }
+      .controls {
+        color: #bdeaff;
+      }
+      .prompt {
+        margin-top: 32px;
+        font-weight: bold;
+        color: #ffffff;
+        animation: blink 1.05s steps(2, jump-none) infinite;
+      }
+      @keyframes blink {
+        50% { opacity: 0.3; }
+      }
+      #gameplay {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+      }
+      canvas {
+        width: 960px;
+        height: 640px;
+        max-width: calc(100vw - 28px);
+        max-height: calc(100vh - 28px);
+        image-rendering: pixelated;
+        border: 5px solid #173142;
+        border-radius: 12px;
+        background: #07315a;
+        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.5);
+      }
+      #messageScreen {
+        display: none;
+      }
+      @media (max-height: 620px) {
+        h1 { font-size: 72px; }
+        h2 { font-size: 48px; }
+        p { font-size: 20px; }
+        .panel { padding: 28px 36px; }
+      }
+    </style>
+    <script type="module" crossorigin src="./assets/index-C9MiTVw4.js"></script>
+  </head>
+  <body>
+    <main id="app">
+      <section id="startScreen" class="screen" aria-label="start screen">
+        <div class="panel">
+          <h1>Lost</h1>
+          <p>You wake on a strange island with only fading memories of a storm and a broken rescue radio.</p>
+          <p>Search the island for food and find the transmitter, antenna, and battery before hunger takes you.</p>
+          <p class="controls">Move with W A S D or the arrow keys. Press Space or E to gather nearby food and equipment.</p>
+          <p class="prompt">Press space to start</p>
+        </div>
+      </section>
+      <section id="gameplay" aria-label="gameplay view">
+        <canvas id="gameCanvas" width="960" height="640"></canvas>
+      </section>
+      <section id="messageScreen" class="screen" aria-label="ending screen">
+        <div class="panel">
+          <h2 id="messageHeading"></h2>
+          <p id="messageText"></p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

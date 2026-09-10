@@ -39695,6 +39695,151 @@
       }
     },
     "lost-island": {
+      "gpt-5.5": {
+        "status": "completed",
+        "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
+        "score": {
+          "display": "69.23 (+23.08)",
+          "base": 69.23,
+          "passed": 27,
+          "denominator": 39,
+          "dynamic": 9,
+          "dynamicAddition": 23.08,
+          "potential": 92.31
+        },
+        "visualQuality": {
+          "score": 91.92,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.25,
+          "renderingStyleAverage": 43.67,
+          "videosScored": 12
+        },
+        "traceCount": 12,
+        "playPath": "games-v8.3/lost-island/gpt-5.5/index.html",
+        "previewPath": "previews-v8.3/lost-island/gpt-5.5.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-022",
+              "zh": "During active play, the player is at least 3000 world units from the current objective item when the player indicator is rendered → The small objective indicator on the player is dark blue."
+            },
+            {
+              "id": "target-032",
+              "zh": "During active play, a visible map tile with the antenna is rendered in the gameplay viewport → An antenna graphic is drawn on that terrain tile."
+            },
+            {
+              "id": "target-033",
+              "zh": "During active play, a visible map tile with the battery is rendered in the gameplay viewport → A battery graphic is drawn on that terrain tile."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-001",
+              "zh": "The page has completed its initial startup display before the game has started → The start screen is visible with the title \"Lost\", story and control instructions, and the prompt \"Press space to start\"; the gameplay canvas and ending messages are not visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-002",
+              "zh": "A keypress is received while the start screen is active → The start screen disappears and the gameplay view appears.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-012",
+              "zh": "During active play, the action check finds an apple tree in the player's pickup tiles → The apple tree graphic is removed from its terrain tile on the following gameplay frames.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-013",
+              "zh": "During active play, the action check finds a berry bush in the player's pickup tiles → The berry bush graphic is removed from its terrain tile on the following gameplay frames.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-014",
+              "zh": "During active play, the action check finds the transmitter in the player's pickup tiles and this pickup does not complete all required rescue parts → The transmitter graphic is removed from its terrain tile, the transmitter row in the equipment HUD reads \"1 x\" next to the transmitter icon, and the gameplay view remains visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-015",
+              "zh": "During active play, the action check finds the antenna in the player's pickup tiles and this pickup does not complete all required rescue parts → The antenna graphic is removed from its terrain tile, the antenna row in the equipment HUD reads \"1 x\", and the gameplay view remains visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-016",
+              "zh": "During active play, the action check finds the battery in the player's pickup tiles and this pickup does not complete all required rescue parts → The battery graphic is removed from its terrain tile, the battery row in the equipment HUD reads \"1 x\", and the gameplay view remains visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-017",
+              "zh": "During active play, the action check finds no food, transmitter, antenna, or battery in the player's pickup tiles → The gameplay view remains visible and no nearby collectible graphic is removed after the action check.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-039",
+              "zh": "During active play, the action check finds a food tile in the player's pickup tiles and the resulting rounded heart count is exactly one higher than the previous rounded heart count → The health display at the top-left shows one additional heart symbol compared with the display before the action check.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-10T09:43:33+08:00",
+          "finishedAt": "2026-09-10T11:28:19+08:00",
+          "totalDurationMs": 6285935,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-10T09:43:33+08:00",
+              "finishedAt": "2026-09-10T09:45:35+08:00",
+              "durationMs": 121717,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-10T09:45:35+08:00",
+              "finishedAt": "2026-09-10T10:01:31+08:00",
+              "durationMs": 955355,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-10T10:01:31+08:00",
+              "finishedAt": "2026-09-10T11:19:52+08:00",
+              "durationMs": 4701208,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-10T11:19:52+08:00",
+              "finishedAt": "2026-09-10T11:19:52+08:00",
+              "durationMs": 202,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-10T11:19:52+08:00",
+              "finishedAt": "2026-09-10T11:20:40+08:00",
+              "durationMs": 47814,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-10T11:20:40+08:00",
+              "finishedAt": "2026-09-10T11:28:19+08:00",
+              "durationMs": 459556,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
       "seed-2.0-pro": {
         "status": "completed",
         "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
@@ -39807,6 +39952,18 @@
       }
     },
     "save-the-lost-friend": {
+      "gpt-5.5": {
+        "status": "failed",
+        "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
+        "stage": "trace",
+        "score": null,
+        "traceCount": 0,
+        "playPath": null,
+        "previewPath": null,
+        "unmet": null,
+        "issue": "GPT-5.5已生成源码并通过确定性构建与运行检查；Trace阶段完成109条初始Trace后，在第3/11批Probe Plan中连续三次因锚点不唯一或表达式格式不符合契约而被拒绝，重试耗尽后终止。该项记录为Trace规划失败，无功能分、无画面分且不可试玩。",
+        "timing": null
+      },
       "seed-2.0-pro": {
         "status": "completed",
         "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
