@@ -39294,6 +39294,172 @@
             }
           ]
         }
+      },
+      "seed-2.0-pro": {
+        "status": "completed",
+        "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
+        "score": {
+          "display": "72.41 (+1.72)",
+          "base": 72.41,
+          "passed": 42,
+          "denominator": 58,
+          "dynamic": 1,
+          "dynamicAddition": 1.72,
+          "potential": 74.14
+        },
+        "visualQuality": {
+          "score": 88.78,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 46.56,
+          "renderingStyleAverage": 42.22,
+          "videosScored": 9
+        },
+        "traceCount": 9,
+        "playPath": "games-v8.3/space-garden/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.3/space-garden/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-008",
+              "zh": "The player releases the M key during active gameplay while the minimap is hidden → A minimap overlay appears, showing a scaled star field with markers for world objects."
+            },
+            {
+              "id": "target-010",
+              "zh": "The player releases the H key during active gameplay while the help overlay is hidden → A help text overlay appears over the gameplay view."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-009",
+              "zh": "The player releases the M key during active gameplay while the minimap is displayed → The minimap overlay is removed from the gameplay view.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-011",
+              "zh": "The player releases the H key during active gameplay while the help overlay is displayed → The help text overlay disappears from the gameplay view.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-012",
+              "zh": "The help overlay is displayed during active gameplay → The help overlay includes the two-line text \"HUD INDICATES\" and \"NEARBY PLANETS\" next to a circular HUD diagram.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-013",
+              "zh": "The help overlay is displayed while the player is not near a planet, is not being drained, has fuel below 5, and the low-fuel blink interval is active → The help overlay displays the three-line message \"FIND ENERGY MASS TO ABSORB\", \"OR TRAVEL NEAR COMPLETE PLANETS\", and \"TO RECHARGE\".",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-014",
+              "zh": "The help overlay is displayed while the player is within an incomplete planet's gravity field, that planet has at least one harvester, and the player is not being drained → The help overlay displays the two-line message \"THE RED CAN ONLY\" and \"BE KILLED BY PLANET SPRITES\".",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-015",
+              "zh": "The help overlay is displayed while the player is within an incomplete planet's gravity field, that planet has no harvesters, the charge-up help interval is active, and the player is not being drained → The help overlay displays the two-line message \"CHARGE UP PLANET NODES\" and \"TO COMPLETE PLANETS\".",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-016",
+              "zh": "The help overlay is displayed while the player is within an incomplete planet's gravity field, that planet has no harvesters, the planet-sprite reward help interval is active, and the player is not being drained → The help overlay displays the two-line message \"COMPLETING A PLANET GIVES\" and \"YOU A PLANET SPRITE\".",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-017",
+              "zh": "The help overlay is displayed while the player is within a completed planet's gravity field, the recharge help interval is active, and the player is not being drained → The help overlay displays the two-line message \"COMPLETED PLANETS RECHARGE\" and \"YOUR ENERGY WHEN CLOSE\".",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-018",
+              "zh": "The help overlay is displayed while the player is being drained by a red enemy → The help overlay displays the two-line message \"THE RED DRAIN YOUR ENERGIES\" and \"KEEP YOUR DISTANCE\".",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-043",
+              "zh": "The minimap is displayed while an incomplete planet is present → The incomplete planet appears on the minimap as a small marker without an outline ring.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-045",
+              "zh": "The minimap is displayed during a frame when the player marker is enabled → The player's position is marked on the minimap by a cluster of bright pixels.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-048",
+              "zh": "The player contacts a red drone at low speed while the player's fuel is above 100 → A burst of concentric explosion rings appears at the red drone's position.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-052",
+              "zh": "The player contacts a red harvester at low speed → A particle burst appears at the harvester and the player is knocked away from the contact point.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-044",
+              "zh": "The minimap is displayed while a completed planet is present → The completed planet appears on the minimap as a colored marker with an outline ring.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-10T02:28:51+08:00",
+          "finishedAt": "2026-09-10T04:04:50+08:00",
+          "totalDurationMs": 5758741,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-10T02:28:51+08:00",
+              "finishedAt": "2026-09-10T02:37:13+08:00",
+              "durationMs": 501793,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-10T02:37:13+08:00",
+              "finishedAt": "2026-09-10T02:56:00+08:00",
+              "durationMs": 1126471,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-10T02:56:00+08:00",
+              "finishedAt": "2026-09-10T03:46:16+08:00",
+              "durationMs": 3016414,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-10T03:46:16+08:00",
+              "finishedAt": "2026-09-10T03:46:16+08:00",
+              "durationMs": 271,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-10T03:46:16+08:00",
+              "finishedAt": "2026-09-10T03:49:52+08:00",
+              "durationMs": 215434,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-10T03:49:52+08:00",
+              "finishedAt": "2026-09-10T04:04:50+08:00",
+              "durationMs": 898272,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "lost-robot": {
