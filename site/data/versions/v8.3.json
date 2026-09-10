@@ -39564,6 +39564,134 @@
             }
           ]
         }
+      },
+      "seed-2.0-pro": {
+        "status": "completed",
+        "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
+        "score": {
+          "display": "73.53 (+8.82)",
+          "base": 73.53,
+          "passed": 25,
+          "denominator": 34,
+          "dynamic": 3,
+          "dynamicAddition": 8.82,
+          "potential": 82.35
+        },
+        "visualQuality": {
+          "score": 92,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.13,
+          "renderingStyleAverage": 43.88,
+          "videosScored": 8
+        },
+        "traceCount": 8,
+        "playPath": "games-v8.3/lost-robot/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.3/lost-robot/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-013",
+              "zh": "The Escape key is accepted during active gameplay while the robot is enabled → The gameplay view is hidden and the level selection screen is shown."
+            },
+            {
+              "id": "target-020",
+              "zh": "During active gameplay, the robot receives forward acceleration on only the left drive → While the condition is maintained, the robot turns right while translating forward."
+            },
+            {
+              "id": "target-021",
+              "zh": "During active gameplay, the robot receives forward acceleration on only the right drive → While the condition is maintained, the robot turns left while translating forward."
+            },
+            {
+              "id": "target-028",
+              "zh": "The robot collides with an obstacle while the point-loss cooldown is expired → The visible points readout decreases by 10 from its pre-collision value."
+            },
+            {
+              "id": "target-033",
+              "zh": "The robot moves while turbo mode is active → Colored trail segments appear behind the robot as it moves."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-012",
+              "zh": "The scheduled post-goal return delay elapses after the robot has reached the goal → The gameplay view is hidden and the level selection screen is shown.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-011",
+              "zh": "The robot enters the goal radius while it is enabled during active play → A white overlay is visible over the gameplay canvas, and the time and points readouts are drawn inside the central half of the canvas.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-032",
+              "zh": "An open door's closed state is applied during gameplay → The open gap changes back into a visible blocking door segment.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-034",
+              "zh": "Movement input is received while the robot is disabled after reaching the goal → The robot remains stationary while the white fade overlay remains on the gameplay view.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-10T04:04:50+08:00",
+          "finishedAt": "2026-09-10T04:35:14+08:00",
+          "totalDurationMs": 1823450,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-10T04:04:50+08:00",
+              "finishedAt": "2026-09-10T04:05:58+08:00",
+              "durationMs": 68184,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-10T04:05:58+08:00",
+              "finishedAt": "2026-09-10T04:17:05+08:00",
+              "durationMs": 666387,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-10T04:17:05+08:00",
+              "finishedAt": "2026-09-10T04:24:46+08:00",
+              "durationMs": 461335,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-10T04:24:46+08:00",
+              "finishedAt": "2026-09-10T04:24:46+08:00",
+              "durationMs": 175,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-10T04:24:46+08:00",
+              "finishedAt": "2026-09-10T04:26:37+08:00",
+              "durationMs": 110744,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-10T04:26:37+08:00",
+              "finishedAt": "2026-09-10T04:35:14+08:00",
+              "durationMs": 516543,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "lost-island": {},
