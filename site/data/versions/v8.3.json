@@ -30723,6 +30723,160 @@
             }
           ]
         }
+      },
+      "kimi-k2.6": {
+        "status": "completed",
+        "runId": "kimi-k2.6-v8.3-rubric2-imported18-20260908-163121",
+        "score": {
+          "display": "55.26 (+7.89)",
+          "base": 55.26,
+          "passed": 21,
+          "denominator": 38,
+          "dynamic": 3,
+          "dynamicAddition": 7.89,
+          "potential": 63.16
+        },
+        "visualQuality": {
+          "score": 65.3,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 34,
+          "renderingStyleAverage": 31.3,
+          "videosScored": 10
+        },
+        "traceCount": 10,
+        "playPath": "games-v8.3/the-neatness/kimi-k2.6/index.html",
+        "previewPath": "previews-v8.3/the-neatness/kimi-k2.6.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-005",
+              "zh": "结尾关卡被显示 → 屏幕上部附近显示文本 \"Thank you for playing!\"，并且屏幕下部附近显示文本 \"But our princess is in another castle!\"。"
+            },
+            {
+              "id": "target-013",
+              "zh": "显示一个恰好启用三个工具栏按钮的关卡 → 右侧工具栏显示三个纵向堆叠的按钮：一个音乐按钮、一个重置按钮和一个关卡选择按钮。"
+            },
+            {
+              "id": "target-014",
+              "zh": "关卡选择画面上显示当前关卡条目 → 该关卡编号使用关卡选择高亮所用的浅色图块颜色绘制。"
+            },
+            {
+              "id": "target-015",
+              "zh": "关卡选择画面上显示已完成的非当前关卡条目 → 该关卡编号以灰色绘制。"
+            },
+            {
+              "id": "target-016",
+              "zh": "关卡选择画面上显示未完成的非当前关卡条目 → 该关卡编号以红色绘制。"
+            },
+            {
+              "id": "target-017",
+              "zh": "关卡选择画面上显示 Coil 条目 → 该条目标签以文本 \"Coil-\" 开头，后接其 Coil 关卡编号。"
+            },
+            {
+              "id": "target-019",
+              "zh": "在运行游玩期间，骷髅转向计时器选择一个入口点骷髅进行转向 → 游戏视图中有一个入口点骷髅改变其朝向。"
+            },
+            {
+              "id": "target-028",
+              "zh": "在包含真菌的关卡中，绘制动作添加了新的空单元格颜料 → 添加颜料后，真菌区域内至少有一个真菌颜色的单元格出现或发生变化。"
+            },
+            {
+              "id": "target-030",
+              "zh": "在运行游玩期间，一笔绘制线条经过一个真菌单元格 → 该真菌单元格保持其真菌颜色，并且该单元格上不会出现颜料标记。"
+            },
+            {
+              "id": "target-033",
+              "zh": "显示关卡选择屏幕 → 可选择的关卡标签沿一条弯曲弧线排列，正好三个 Coil 标签放置在该弧线下方，并且标题文字 \"The Neatness\" 显示在关卡选择视图的较下方区域附近。"
+            },
+            {
+              "id": "target-038",
+              "zh": "结局美术以完全不透明度渲染 → 棋盘中心附近显示一个灰色矩形面板，且公主精灵图在其中可见。"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-004",
+              "zh": "在关卡中重置控制处于启用状态时释放该控制 → 当前关卡恢复到其重置后的谜题布局，并从棋盘上移除玩家绘制的连接。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-010",
+              "zh": "在关卡选择画面上满足关卡选择入口点之后，连接一个可选择的已解锁关卡出口 → 对角线幕布转场开始，并且转场之后关卡选择视图被所选关卡的谜题棋盘替换。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-011",
+              "zh": "在关卡中关卡选择工具栏按钮处于启用状态时释放该按钮 → 对角线幕布转场在当前关卡上闭合，然后显示关卡选择画面。",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-007",
+              "zh": "最终常规关卡在运行游玩期间达到已解开状态 → 转场之后显示关卡选择样式的画面，而不是另一个带编号的常规谜题关卡。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-009",
+              "zh": "在未启用 Coil 访问权限的情况下，从关卡选择画面选择一个锁定的 Coil 关卡 → 关卡选择视图上出现重新开始消息遮罩，并且关卡选择画面仍在其后可见，且没有幕布转场。",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-020",
+              "zh": "在镜像谜题关卡的运行游玩期间绘制一笔线条 → 该笔线条绘制在棋盘左侧，并且棋盘右侧绘制出一笔与其镜像匹配的线条。",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "kimi-k2.6-v8.3-rubric2-imported18-20260908-163121",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-09T23:53:40+08:00",
+          "finishedAt": "2026-09-10T01:58:35+08:00",
+          "totalDurationMs": 7494642,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-09T23:53:40+08:00",
+              "finishedAt": "2026-09-10T00:07:58+08:00",
+              "durationMs": 857870,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-10T00:07:58+08:00",
+              "finishedAt": "2026-09-10T01:49:40+08:00",
+              "durationMs": 6102268,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-10T01:49:40+08:00",
+              "finishedAt": "2026-09-10T01:49:40+08:00",
+              "durationMs": 376,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-10T01:49:40+08:00",
+              "finishedAt": "2026-09-10T01:50:47+08:00",
+              "durationMs": 66096,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-10T01:50:47+08:00",
+              "finishedAt": "2026-09-10T01:58:35+08:00",
+              "durationMs": 468000,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "q1k3": {
