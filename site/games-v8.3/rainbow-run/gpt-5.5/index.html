@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rainbow Run</title>
+  <style>
+    :root { color-scheme: dark; font-family: Arial, Helvetica, sans-serif; }
+    html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #110723; }
+    #app { position: relative; width: 100vw; height: 100vh; display: grid; place-items: center; }
+    canvas { width: min(100vw, 177.777vh); height: min(56.25vw, 100vh); background: #120924; box-shadow: 0 0 38px rgba(0,0,0,.55); }
+    #ui { position: absolute; left: 50%; top: 50%; width: min(100vw, 177.777vh); height: min(56.25vw, 100vh); transform: translate(-50%, -50%); pointer-events: none; color: white; overflow: hidden; }
+    #ui button { pointer-events: auto; border: 0; color: white; cursor: pointer; font-weight: 900; letter-spacing: 1px; font-size: clamp(15px, 2.1vh, 22px); border-radius: 16px; padding: .72em 1.35em; background: linear-gradient(180deg,#ff68d8,#8c49ff); box-shadow: 0 8px 0 rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.35); text-shadow: 0 2px 0 rgba(0,0,0,.25); }
+    #ui button:hover { filter: brightness(1.08); transform: translateY(-1px); }
+    .screen { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; pointer-events: none; }
+    .title { font-size: clamp(48px, 9vh, 92px); margin: 0; line-height: .95; font-weight: 1000; letter-spacing: 5px; background: linear-gradient(90deg,#ff4757,#ffa502,#f9ff57,#2ed573,#1e90ff,#a55eea,#ff6bcb); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-stroke: 2px rgba(255,255,255,.82); filter: drop-shadow(0 9px 0 rgba(0,0,0,.28)); }
+    .plates { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+    .plate { border-radius: 16px; background: rgba(9,5,30,.72); border: 2px solid rgba(255,255,255,.28); padding: 10px 18px; font-weight: 900; box-shadow: inset 0 0 22px rgba(255,255,255,.08); }
+    .menu { display: flex; flex-direction: column; gap: 12px; min-width: 250px; pointer-events: none; }
+    .hud { position: absolute; inset: 0; pointer-events: none; font-weight: 900; text-shadow: 0 3px 0 rgba(0,0,0,.45); }
+    .hud .distance { position: absolute; left: 50%; top: 24px; transform: translateX(-50%); }
+    .hud .crystals { position: absolute; right: 26px; top: 24px; }
+    .hud .lives { position: absolute; left: 26px; top: 86px; font-size: 27px; letter-spacing: 5px; }
+    .hud .meter { position: absolute; left: 26px; top: 125px; width: 178px; height: 16px; border: 2px solid rgba(255,255,255,.75); border-radius: 999px; background: rgba(0,0,0,.45); overflow: hidden; }
+    .hud .meter > i { display: block; height: 100%; background: linear-gradient(90deg,#fff95a,#ff9f1a,#ff3860); }
+    .pauseBtn { pointer-events: auto; position: absolute; left: 24px; top: 22px; width: 54px; height: 54px; border-radius: 15px; background: rgba(8,8,18,.82); border: 2px solid rgba(255,255,255,.18); box-shadow: 0 8px 0 rgba(0,0,0,.25); }
+    .pauseBtn span { position: absolute; top: 13px; width: 8px; height: 28px; border-radius: 5px; background: white; }
+    .pauseBtn span:first-child { left: 17px; } .pauseBtn span:last-child { right: 17px; }
+    .overlay { position: absolute; inset: 0; background: rgba(5,3,14,.68); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; pointer-events: auto; }
+    .overlay h2 { margin: 0; font-size: clamp(42px, 8vh, 80px); letter-spacing: 4px; }
+    .rainbowText { background: linear-gradient(90deg,#ff4757,#ffa502,#f9ff57,#2ed573,#1e90ff,#a55eea); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-stroke: 1.5px rgba(255,255,255,.75); }
+    .prompt { position: absolute; bottom: 54px; font-weight: 1000; letter-spacing: 2px; opacity: .95; }
+    .upgradeBox { width: min(780px, 88%); display: grid; grid-template-columns: 1.15fr .85fr; gap: 16px; pointer-events: none; }
+    .upgradeRows { display: flex; flex-direction: column; gap: 10px; }
+    .upgradeRow { text-align: left; width: 100%; display: flex; justify-content: space-between; align-items: center; background: rgba(30,20,65,.9) !important; }
+    .upgradeRow.selected { outline: 4px solid #fff56b; background: linear-gradient(180deg,#35d6ff,#7357ff) !important; }
+    .desc { min-height: 160px; border-radius: 20px; background: rgba(8,6,28,.76); border: 2px solid rgba(255,255,255,.25); padding: 20px; font-weight: 800; line-height: 1.45; }
+    .topBack { position: absolute; left: 28px; bottom: 28px; pointer-events: auto; }
+    @media (max-width: 720px) { .upgradeBox { grid-template-columns: 1fr; } }
+  </style>
+  <script type="module" crossorigin src="./assets/index-B0QnEWGZ.js"></script>
+</head>
+<body>
+  <div id="app">
+    <canvas id="game" width="1280" height="720"></canvas>
+    <div id="ui"></div>
+  </div>
+</body>
+</html>

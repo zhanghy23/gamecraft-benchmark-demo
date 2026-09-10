@@ -37826,6 +37826,138 @@
       }
     },
     "rainbow-run": {
+      "gpt-5.5": {
+        "status": "completed",
+        "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
+        "score": {
+          "display": "81.48 (+3.70)",
+          "base": 81.48,
+          "passed": 44,
+          "denominator": 54,
+          "dynamic": 2,
+          "dynamicAddition": 3.7,
+          "potential": 85.19
+        },
+        "visualQuality": {
+          "score": 92.53,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.06,
+          "renderingStyleAverage": 44.47,
+          "videosScored": 17
+        },
+        "traceCount": 17,
+        "playPath": "games-v8.3/rainbow-run/gpt-5.5/index.html",
+        "previewPath": "previews-v8.3/rainbow-run/gpt-5.5.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-019",
+              "zh": "A slide command is processed during active running gameplay while the runner is airborne and jump cancellation is available → Within the next 0.5 seconds, the runner descends toward the running surface and does not remain on its immediately previous upward jump arc."
+            },
+            {
+              "id": "target-021",
+              "zh": "A screen-left lane-change command is processed during active running gameplay while the runner is already in the outer screen-left lane, charge is inactive, and invincibility is inactive → Within 1 second, the runner moves sideways off the screen-left road edge, the lives display contains exactly 1 fewer life marker than it contained immediately before the command, and the running gameplay remains visible if at least 1 life marker remains."
+            },
+            {
+              "id": "target-028",
+              "zh": "A shield drop is present ahead during active running gameplay → A golden spinning octahedron-shaped pickup is visible above the road."
+            },
+            {
+              "id": "target-032",
+              "zh": "The runner takes a falling hit during active running gameplay while wings are visible and invincibility is inactive → Within 1 second, the unicorn performs a swooping recovery motion back toward the road, the wings remain visible during the recovery, and the lives display contains the same number of life markers as immediately before the hit."
+            },
+            {
+              "id": "target-034",
+              "zh": "An active charge overlaps an obstacle in the runner's lane during active running gameplay → The obstacle breaks into visible fragments and is removed from the road, while the lives display contains the same number of life markers as immediately before the overlap."
+            },
+            {
+              "id": "target-042",
+              "zh": "An affordable, not-maxed upgrade option is activated from the upgrades menu → The selected upgrade option's displayed rank changes from N/C to (N+1)/C, and the crystals total shown on the upgrades menu changes from its previous number to that previous number minus the price number that was shown on the selected upgrade option immediately before activation."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-018",
+              "zh": "A jump command is processed during active running gameplay while the runner is sliding and slide cancellation is unavailable → The runner remains in the lowered sliding posture and does not rise above the running surface within the next 0.5 seconds.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-020",
+              "zh": "A slide command is processed during active running gameplay while the runner is airborne and jump cancellation is unavailable → The runner remains airborne on its current arc and does not enter the lowered sliding posture within the next 0.5 seconds.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-012",
+              "zh": "The death screen is displayed and the player taps or clicks → The death overlay disappears and the title screen returns with the \"RAINBOW RUN\" title and the \"START\", \"UPGRADES\", and sound menu buttons visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-045",
+              "zh": "The title screen is shown after a completed run recorded a new best distance → The best-distance plate displays the completed run's distance in meters instead of the previous best value.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-10T00:07:35+08:00",
+          "finishedAt": "2026-09-10T02:51:22+08:00",
+          "totalDurationMs": 9827080,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-10T00:07:35+08:00",
+              "finishedAt": "2026-09-10T00:10:14+08:00",
+              "durationMs": 159226,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-10T00:10:14+08:00",
+              "finishedAt": "2026-09-10T00:28:36+08:00",
+              "durationMs": 1101455,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-10T00:28:36+08:00",
+              "finishedAt": "2026-09-10T02:28:57+08:00",
+              "durationMs": 7220756,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-10T02:28:57+08:00",
+              "finishedAt": "2026-09-10T02:28:57+08:00",
+              "durationMs": 286,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-10T02:28:57+08:00",
+              "finishedAt": "2026-09-10T02:30:50+08:00",
+              "durationMs": 112961,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-10T02:30:50+08:00",
+              "finishedAt": "2026-09-10T02:51:22+08:00",
+              "durationMs": 1232305,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
       "seed-2.0-pro": {
         "status": "completed",
         "runId": "seed-2.0-pro-v8.3-rubric2-licensed22-20260908-232150",
