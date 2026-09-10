@@ -34668,6 +34668,108 @@
             }
           ]
         }
+      },
+      "gpt-5.4": {
+        "status": "completed",
+        "runId": "gpt-5.4-v8.3-rubric2-licensed22-20260910-140250",
+        "score": {
+          "display": "92.50 (+5.00)",
+          "base": 92.5,
+          "passed": 37,
+          "denominator": 40,
+          "dynamic": 2,
+          "dynamicAddition": 5,
+          "potential": 97.5
+        },
+        "visualQuality": {
+          "score": 92.75,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.38,
+          "renderingStyleAverage": 44.38,
+          "videosScored": 8
+        },
+        "traceCount": 8,
+        "playPath": "games-v8.3/shooooooot/gpt-5.4/index.html",
+        "previewPath": "previews-v8.3/shooooooot/gpt-5.4.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-032",
+              "zh": "An unexploded ammo drop is absorbed by the player while the player is not exploded → The ammo drop sprite disappears, the score text increases by 50, and the ammo text increases by 50."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-009",
+              "zh": "The right gamepad thumbstick leaves the aim dead zone during active gameplay while the player can fire → One or more bullet sprites appear at the player and move in the right thumbstick aim direction.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-015",
+              "zh": "The player attempts to fire in two-shot mode with fewer than 2 ammo → No new bullet sprite appears during that fire attempt.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.4-v8.3-rubric2-licensed22-20260910-140250",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-10T15:30:47+08:00",
+          "finishedAt": "2026-09-10T16:24:23+08:00",
+          "totalDurationMs": 3215857,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-10T15:30:47+08:00",
+              "finishedAt": "2026-09-10T15:33:30+08:00",
+              "durationMs": 162182,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-10T15:33:30+08:00",
+              "finishedAt": "2026-09-10T15:47:47+08:00",
+              "durationMs": 857631,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-10T15:47:47+08:00",
+              "finishedAt": "2026-09-10T16:17:57+08:00",
+              "durationMs": 1810028,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-10T16:17:57+08:00",
+              "finishedAt": "2026-09-10T16:17:57+08:00",
+              "durationMs": 306,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-10T16:17:57+08:00",
+              "finishedAt": "2026-09-10T16:19:07+08:00",
+              "durationMs": 69438,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-10T16:19:07+08:00",
+              "finishedAt": "2026-09-10T16:24:23+08:00",
+              "durationMs": 316111,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "fight-back": {},
