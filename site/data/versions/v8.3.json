@@ -37399,6 +37399,280 @@
           ]
         }
       },
+      "minimax-m2.7": {
+        "status": "completed",
+        "runId": "minimax-m2.7-v8.3-rubric2-imported-licensed20-20260910-140250",
+        "score": {
+          "display": "20.00 (+20.00)",
+          "base": 20,
+          "passed": 10,
+          "denominator": 50,
+          "dynamic": 10,
+          "dynamicAddition": 20,
+          "potential": 40
+        },
+        "visualQuality": {
+          "score": 88.6,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47,
+          "renderingStyleAverage": 41.6,
+          "videosScored": 5
+        },
+        "traceCount": 5,
+        "playPath": "games-v8.3/idle-necromancer/minimax-m2.7/index.html",
+        "previewPath": "previews-v8.3/idle-necromancer/minimax-m2.7.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-001",
+              "zh": "The game is in the suspended no-update screen state → The current gameplay view is drawn with the centered prompt text \"Click on the Screen to Continue the Game\" visible near the lower part of the play area."
+            },
+            {
+              "id": "target-006",
+              "zh": "The game starts while no saved game record is available → The board begins with a single starting card visible in the play area, and the resource counters are shown in their new-game starting state."
+            },
+            {
+              "id": "target-009",
+              "zh": "The player begins dragging a movable card while card movement is allowed → The selected card is drawn away from its grid slot and follows the pointer position over the board."
+            },
+            {
+              "id": "target-024",
+              "zh": "A card with a current rank and level that maps to a star pattern is rendered → Plus-sign markers are drawn around the card frame in that card's current star pattern."
+            },
+            {
+              "id": "target-041",
+              "zh": "The player completes the fourth accepted activation of the restart/sacrifice card → The board resets to a single starting card, the previous board cards are removed, and the SOUL POWER display changes from its pre-activation value."
+            },
+            {
+              "id": "target-042",
+              "zh": "A manual activation enables autoplay → Within one second after the manual activation, at least two red use overlays appear on cards without further pointer input."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-002",
+              "zh": "The player clicks or taps the suspended no-update screen while the continue prompt is being shown → The prompt text \"Click on the Screen to Continue the Game\" is no longer visible, and the gameplay view is shown without the suspended-screen overlay.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-003",
+              "zh": "The player right-clicks a card when the Harvest interaction is available for that card → The death energy value shown in the game UI changes to a higher number than its pre-interaction number, and cards shown in a dead or inactive visual state are drawn again in their active card state.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-004",
+              "zh": "A new card is created for a rank whose current rank level is above that card's existing level → The created card is drawn with the current rank level value, and its displayed skill-number text reflects that rank level.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-012",
+              "zh": "A dragged eligible special card is held over a Necromancer card that can shatter it → The Necromancer target cell is outlined with a red rectangular border.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-013",
+              "zh": "The player releases a dragged card over an unlocked empty destination cell → The card is drawn settled in the destination cell, and its previous board cell no longer contains that card.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-015",
+              "zh": "The player drops an eligible special card onto a Necromancer card while shattering is allowed → The dropped card is no longer drawn in its board cell, and the BUILT UP ENERGY display changes from its pre-drop number.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-016",
+              "zh": "The player activates the RANK I CARD purchase button while the displayed death energy is at least the displayed cost and an unlocked board cell is available → A new card appears in a board cell that was empty immediately before activation, the DEATH ENERGY display shows a numeric value below its immediately pre-activation value, and the RANK I CARD numeric cost text is different from its immediately pre-activation text.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-017",
+              "zh": "The player activates the RANK II CARD purchase button while the displayed death energy is at least the displayed cost and an unlocked board cell is available → A new card appears in a board cell that was empty immediately before activation, the DEATH ENERGY display shows a numeric value below its immediately pre-activation value, and the RANK II CARD numeric cost text is different from its immediately pre-activation text.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-018",
+              "zh": "The player activates the RANK III CARD purchase button while the displayed death energy is at least the displayed cost and an unlocked board cell is available → A new special-rank card appears in a board cell that was empty immediately before activation, the DEATH ENERGY display shows a numeric value below its immediately pre-activation value, and the RANK III CARD button display is different from its immediately pre-activation display.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-019",
+              "zh": "The player activates a rank purchase button while the displayed death energy is below that button's displayed cost → No new card appears on the board, and the DEATH ENERGY number remains the same through the next rendered frame.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-020",
+              "zh": "The player activates a rank purchase button when the board is at its card capacity for that purchase state → No new card appears on the board, and the DEATH ENERGY number remains the same through the next rendered frame.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-022",
+              "zh": "A purchase unlocks the board-expanding special rank card → Previously locked empty card slots change into empty card slots with visible \"+\" symbols.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-027",
+              "zh": "The player activates a Blood-type card while no eligible neighboring card is in its blood-transfer range → The activated Blood-type card no longer shows its blood-stain pixel markings, and no neighboring card gains blood-stain markings during the next rendered second.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-028",
+              "zh": "The player activates a death-energy multiplier card with an eligible non-Necromancer neighboring card in a marked direction → The neighboring card's skill-number text is different from its immediately pre-activation text, and that skill-number text is drawn in red.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-029",
+              "zh": "The player activates a death-energy transfer card with an eligible non-Necromancer neighboring card in a marked direction → The neighboring card's skill-number text is different from its immediately pre-activation text, and that skill-number text is drawn in red.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-030",
+              "zh": "The player activates a death-energy multiplier card with an eligible Necromancer neighboring card in a marked direction → The BUILT UP ENERGY number changes from its pre-activation value.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-031",
+              "zh": "The player activates a death-energy transfer card with an eligible Necromancer neighboring card in a marked direction → The BUILT UP ENERGY number changes from its pre-activation value.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-033",
+              "zh": "A no-move blockade state is rendered → A red rectangular outline is drawn around the main board area.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-034",
+              "zh": "The player tries to drag a card while the no-move blockade state is active → No card is displaced from its board cell during the attempted drag.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-035",
+              "zh": "The pointer remains over the same card until the card-description delay has elapsed → The card description text appears in the information area of the UI.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-040",
+              "zh": "The player completes the fourth reset-button activation before the reset counter expires → The board resets to a new-game layout with a single starting card visible and the previous board cards removed.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-044",
+              "zh": "A Demon-eye card is rendered while the pointer is to the right of that card → The eye pixels inside the card portrait are offset toward the right side of the portrait.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-047",
+              "zh": "A rank-III card is rendered in its normal active card state → The card frame contains three nested white rectangular outlines around the portrait area.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-049",
+              "zh": "The Necromancer card is activated while a Blood-type card is awaiting blood restoration → Blood-stain pixel markings reappear on the Blood-type card.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-005",
+              "zh": "Two compatible selected cards are merged → The surviving card is drawn with its level increased by 1, and its displayed skill-number text changes to the merged value.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-010",
+              "zh": "A dragged card is held over an unlocked empty destination cell → The destination cell is outlined with a white rectangular border.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-014",
+              "zh": "The player releases a dragged card without a valid empty destination cell or valid target card → The card is drawn back in its original board cell on the next frame.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-021",
+              "zh": "A rank purchase slot has no further purchasable card available → That rank purchase button displays the text \"MAX\" instead of a numeric cost.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-023",
+              "zh": "A rank receives its third qualifying level-up credit from merging → The roman numeral shown above that rank's purchase button advances by one numeral from its pre-credit display.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-025",
+              "zh": "A Blood-type card is created → The created Blood-type card is drawn with blood-stain pixel markings on it.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-026",
+              "zh": "The player activates a Blood-type card while at least one eligible neighboring card is in its blood-transfer range → Blood-stain pixel markings appear on at least one neighboring card in range, and the activated Blood-type card no longer shows its transferred stain set.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-032",
+              "zh": "An accepted card activation begins its use animation → The activated card is covered by a red rectangular overlay for the use animation frames.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-046",
+              "zh": "A rank-II card is rendered in its normal active card state → The card frame contains two nested white rectangular outlines around the portrait area.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-048",
+              "zh": "A special-rank card is rendered in its normal active card state → The card frame contains four nested white rectangular outlines around the portrait area.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "minimax-m2.7-v8.3-rubric2-imported-licensed20-20260910-140250",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-11T01:13:43+08:00",
+          "finishedAt": "2026-09-11T02:38:25+08:00",
+          "totalDurationMs": 5082339,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-11T01:13:43+08:00",
+              "finishedAt": "2026-09-11T01:31:07+08:00",
+              "durationMs": 1043781,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-11T01:31:07+08:00",
+              "finishedAt": "2026-09-11T02:32:10+08:00",
+              "durationMs": 3663595,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-11T02:32:10+08:00",
+              "finishedAt": "2026-09-11T02:32:11+08:00",
+              "durationMs": 356,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-11T02:32:11+08:00",
+              "finishedAt": "2026-09-11T02:32:30+08:00",
+              "durationMs": 19100,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-11T02:32:30+08:00",
+              "finishedAt": "2026-09-11T02:38:25+08:00",
+              "durationMs": 355475,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
       "gpt-5.4": {
         "status": "completed",
         "runId": "gpt-5.4-v8.3-rubric2-licensed22-20260910-140250",
