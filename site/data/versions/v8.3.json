@@ -34871,7 +34871,105 @@
         }
       }
     },
-    "fight-back": {},
+    "fight-back": {
+      "gpt-5.4": {
+        "status": "completed",
+        "runId": "gpt-5.4-v8.3-rubric2-licensed22-20260910-140250",
+        "score": {
+          "display": "93.94 (+3.03)",
+          "base": 93.94,
+          "passed": 31,
+          "denominator": 33,
+          "dynamic": 1,
+          "dynamicAddition": 3.03,
+          "potential": 96.97
+        },
+        "visualQuality": {
+          "score": 92.43,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.43,
+          "renderingStyleAverage": 44,
+          "videosScored": 7
+        },
+        "traceCount": 7,
+        "playPath": "games-v8.3/fight-back/gpt-5.4/index.html",
+        "previewPath": "previews-v8.3/fight-back/gpt-5.4.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-006",
+              "zh": "The adventure stage receives an Arrow Left input while the hero can accept a new action and the destination tile is walkable and unoccupied → The hero sprite walks one map step toward the left side of the gameplay view."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-033",
+              "zh": "The game won stage receives an Enter input → The displayed victory screen is replaced by the opening menu screen.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.4-v8.3-rubric2-licensed22-20260910-140250",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-10T16:24:23+08:00",
+          "finishedAt": "2026-09-10T17:21:41+08:00",
+          "totalDurationMs": 3437465,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-10T16:24:24+08:00",
+              "finishedAt": "2026-09-10T16:26:58+08:00",
+              "durationMs": 154120,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-10T16:26:58+08:00",
+              "finishedAt": "2026-09-10T16:44:14+08:00",
+              "durationMs": 1035819,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-10T16:44:14+08:00",
+              "finishedAt": "2026-09-10T17:15:33+08:00",
+              "durationMs": 1879320,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-10T17:15:33+08:00",
+              "finishedAt": "2026-09-10T17:15:33+08:00",
+              "durationMs": 298,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-10T17:15:33+08:00",
+              "finishedAt": "2026-09-10T17:16:06+08:00",
+              "durationMs": 32515,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-10T17:16:06+08:00",
+              "finishedAt": "2026-09-10T17:21:41+08:00",
+              "durationMs": 335204,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      }
+    },
     "prism-paddock": {
       "gpt-5.5": {
         "status": "completed",
