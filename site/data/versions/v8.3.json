@@ -35698,6 +35698,100 @@
             }
           ]
         }
+      },
+      "deepseek-v4-flash": {
+        "status": "completed",
+        "runId": "deepseek-v4-flash-v8.3-rubric2-imported-licensed17-recovery16-20260911-180228",
+        "score": {
+          "display": "90.91 (+6.06)",
+          "base": 90.91,
+          "passed": 30,
+          "denominator": 33,
+          "dynamic": 2,
+          "dynamicAddition": 6.06,
+          "potential": 96.97
+        },
+        "visualQuality": {
+          "score": 89,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.8,
+          "renderingStyleAverage": 41.2,
+          "videosScored": 5
+        },
+        "traceCount": 5,
+        "playPath": "games-v8.3/fight-back/deepseek-v4-flash/index.html",
+        "previewPath": "previews-v8.3/fight-back/deepseek-v4-flash.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-004",
+              "zh": "The adventure stage receives an Arrow Up input while the hero can accept a new action and the destination tile is walkable and unoccupied → The hero sprite walks one map step toward the top of the gameplay view."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-015",
+              "zh": "A non-hero actor attacks the living hero with damage after defense greater than the hero's current HP → The adventure gameplay view is replaced by the game over screen.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-017",
+              "zh": "A non-hero actor performs a walk action to the north toward a walkable unoccupied destination → That actor's sprite moves one map step toward the top of the gameplay view.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-flash-v8.3-rubric2-imported-licensed17-recovery16-20260911-180228",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-11T19:47:02+08:00",
+          "finishedAt": "2026-09-11T20:25:39+08:00",
+          "totalDurationMs": 2317181,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-11T19:47:02+08:00",
+              "finishedAt": "2026-09-11T19:58:10+08:00",
+              "durationMs": 667801,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-11T19:58:10+08:00",
+              "finishedAt": "2026-09-11T20:18:47+08:00",
+              "durationMs": 1236741,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-11T20:18:47+08:00",
+              "finishedAt": "2026-09-11T20:18:47+08:00",
+              "durationMs": 326,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-11T20:18:47+08:00",
+              "finishedAt": "2026-09-11T20:19:54+08:00",
+              "durationMs": 66934,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-11T20:19:54+08:00",
+              "finishedAt": "2026-09-11T20:25:39+08:00",
+              "durationMs": 345345,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "prism-paddock": {
