@@ -36081,6 +36081,343 @@
             }
           ]
         }
+      },
+      "gpt-5.4": {
+        "status": "completed",
+        "runId": "gpt-5.4-v8.3-rubric2-licensed22-20260910-140250",
+        "score": {
+          "display": "25.00 (+45.83)",
+          "base": 25,
+          "passed": 18,
+          "denominator": 72,
+          "dynamic": 33,
+          "dynamicAddition": 45.83,
+          "potential": 70.83
+        },
+        "visualQuality": {
+          "score": 90.44,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.94,
+          "renderingStyleAverage": 42.5,
+          "videosScored": 16
+        },
+        "traceCount": 16,
+        "playPath": "games-v8.3/dewdrop-farm/gpt-5.4/index.html",
+        "previewPath": "previews-v8.3/dewdrop-farm/gpt-5.4.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-020",
+              "zh": "A seed inventory item with an amount above zero is rendered in a tool slot → The item picture contains a seed packet icon, a small crop sprite for the seed type, and an amount sticker."
+            },
+            {
+              "id": "target-032",
+              "zh": "The player uses a seed-slot tool containing exactly one cow item while an animal is visible on the farm → The visible animal sprite is rendered as a cow instead of a bunny, and the used inventory slot becomes empty after the next render."
+            },
+            {
+              "id": "target-033",
+              "zh": "The player harvests a mature non-sprinkler crop while there is inventory space and no matching crop item is already visible in the sellable inventory → The mature crop sprite disappears from the plot, and a corresponding crop item appears in the sellable inventory after the next render."
+            },
+            {
+              "id": "target-034",
+              "zh": "The player harvests an immature crop → The crop sprite remains on the plot with the same visible growth stage after the next render."
+            },
+            {
+              "id": "target-046",
+              "zh": "A farm plot containing the animal entity is rendered while the farm is not in cow mode → The plot shows a bunny animal sprite."
+            },
+            {
+              "id": "target-047",
+              "zh": "A farm plot containing the animal entity is rendered while the farm is in cow mode → The plot shows a cow animal sprite."
+            },
+            {
+              "id": "target-048",
+              "zh": "The game update creates a bunny when no bunny is on the farm and the bunny timer has expired → A bunny animal sprite appears on an interior farm plot after the update render."
+            },
+            {
+              "id": "target-050",
+              "zh": "The player pokes a visible cow on an interior farm plot with the hand interaction → The cow sprite disappears from its original plot and appears on a plot sharing an edge or corner with the original plot, and the farm information panel's Experience value increases by 15 after the next render, up to the visible maximum shown for that level."
+            },
+            {
+              "id": "target-052",
+              "zh": "The player pokes a visible cow on an interior farm plot with the hoe interaction when the fertilizer reward check does not succeed → The cow sprite disappears from its original plot and appears on a plot sharing an edge or corner with the original plot, and the farm information panel's Experience value decreases by 20 after the next render, down to 0 if fewer than 20 experience points were shown before the poke."
+            },
+            {
+              "id": "target-053",
+              "zh": "The player pokes a visible bunny on an interior farm plot with the hoe interaction when the fertilizer reward check succeeds → The bunny sprite disappears from its original plot, no animal sprite appears on a plot sharing an edge or corner with the original plot after the next render, and the farm information panel's Experience value decreases by 20 after the next render, down to 0 if fewer than 20 experience points were shown before the poke."
+            },
+            {
+              "id": "target-054",
+              "zh": "The player pokes a visible cow on an interior farm plot with the hoe interaction when the fertilizer reward check succeeds → The cow sprite disappears from its original plot, no animal sprite appears on a plot sharing an edge or corner with the original plot after the next render, and the farm information panel's Experience value decreases by 20 after the next render, down to 0 if fewer than 20 experience points were shown before the poke."
+            },
+            {
+              "id": "target-055",
+              "zh": "The player pokes a visible bunny or cow on an edge farm plot with the hand interaction → The animal sprite disappears from that edge plot after the next render."
+            },
+            {
+              "id": "target-057",
+              "zh": "The automatic animal hop update processes a visible bunny whose hop timer has elapsed and whose last feeding was not today or yesterday → The bunny sprite disappears from its original plot and appears on a plot sharing an edge with the original plot after the update render."
+            },
+            {
+              "id": "target-058",
+              "zh": "The automatic animal hop update processes a visible cow whose hop timer has elapsed and whose last feeding was not today or yesterday → The cow sprite disappears from its original plot and appears on a plot sharing an edge with the original plot after the update render."
+            },
+            {
+              "id": "target-060",
+              "zh": "A cow-mode animal moves onto a plot containing a sprinkler plant → A cow sprite appears on that plot, and the sprinkler sprite remains visible on the same plot after the move render."
+            },
+            {
+              "id": "target-061",
+              "zh": "The automatic growth update processes a planted crop that is ready to grow during one of its growing seasons → The crop sprite changes from its previous growth stage to the next growth-stage sprite after the update render."
+            },
+            {
+              "id": "target-062",
+              "zh": "The automatic growth update processes a planted crop that is ready to grow outside its growing seasons → The crop sprite changes to a dead or withered crop sprite after the update render."
+            },
+            {
+              "id": "target-068",
+              "zh": "The automatic time update advances the farm into the next in-game day within the same season → The time display changes from the previous day number to the next day number while keeping the same season name after the update render."
+            },
+            {
+              "id": "target-069",
+              "zh": "The automatic time update advances the farm from the final day of a season into the first day of the next season → The time display changes to the next season name with day number 1 after the update render."
+            },
+            {
+              "id": "target-070",
+              "zh": "The player harvests a mature tomato while there is inventory space for the tomato item and the farm information panel's Experience current value is below the displayed needed value → A tomato item is visible in the sellable inventory, a tomato crop sprite remains on the plot in a non-mature growth stage, and the farm information panel's Experience current value increases by 12 after the next render, capped at the displayed needed value."
+            },
+            {
+              "id": "target-072",
+              "zh": "An experience-rewarding action raises the farm across exactly one level threshold → The farm information panel's Level value increases by 1 after the next render, the Experience line shows the new current experience against the new needed value, and the Luck line changes to a percent value 2 percentage points higher than before."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-003",
+              "zh": "The player switches to the tend screen while another screen is selected → The tend screen control is highlighted as active, the farm area is visible, the farm information panel is hidden, and the store and market areas are hidden.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-005",
+              "zh": "The player switches to the sell screen while another screen is selected → The sell screen control is highlighted as active, the market area is visible, the farm information panel is hidden, and the farm and store areas are hidden.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-007",
+              "zh": "The player activates the New Game control after the game is running → The tend screen control is highlighted as active, the hoe tool control is highlighted as active, the farm area is visible, and the store and market areas are hidden.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-008",
+              "zh": "The player activates the New Game control after the farm information panel shows nonzero experience or a level above zero → The farm information panel shows \"Level: 0\" and an Experience line whose current value is 0 after the reset render.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-018",
+              "zh": "The buy screen renders during winter → The store area includes a wildflower seed entry displayed by name.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-019",
+              "zh": "The sell screen renders when the player has no crops or seeds available to sell → The market area shows the message \"It looks like you don't have any crops to sell. You can use seeds to grow crops.\"",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-022",
+              "zh": "A farm plot containing ground, fertilizer, water, and a planted crop is rendered → The fertilizer tile, blue water overlay, and crop sprite are all visible within the same plot square.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-023",
+              "zh": "The player uses the hoe tool on an empty farm plot that is not tilled → That plot changes from plain ground to a tilled soil tile after the next render.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-024",
+              "zh": "The player uses the water tool on a tilled farm plot that is not already watered → A blue water overlay appears on that tilled plot after the next render.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-025",
+              "zh": "The player uses the water tool on a farm plot that is not tilled → That plot does not gain a blue water overlay and its visible contents match the pre-use appearance after the next render.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-026",
+              "zh": "The player uses a seed-slot tool containing exactly one seed item on a tilled plot with no planted crop → A crop sprite for that seed's crop appears on the target plot, and the used seed-slot becomes empty after the next render.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-027",
+              "zh": "The player uses a seed-slot tool containing a seed item on an untilled plot → No crop sprite appears on the target plot, and the used seed-slot keeps the same visible seed icon and amount as before the use.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-028",
+              "zh": "The player uses a seed-slot tool containing a seed item on a plot that already has a planted crop → The existing crop sprite remains on the target plot, and the used seed-slot keeps the same visible seed icon and amount as before the use.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-029",
+              "zh": "The player uses a seed-slot tool containing exactly one fertilizer on a tilled plot that is not fertilized → A fertilizer tile appears on the target plot, and the used inventory slot becomes empty after the next render.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-030",
+              "zh": "The player uses a seed-slot tool containing fertilizer on an untilled plot → No fertilizer tile appears on the target plot, and the used inventory slot keeps the same visible fertilizer icon and amount as before the use.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-031",
+              "zh": "The player uses a seed-slot tool containing fertilizer on a plot that is already fertilized → The target plot keeps one visible fertilizer tile, and the used inventory slot keeps the same visible fertilizer icon and amount as before the use.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-035",
+              "zh": "The player harvests a sprinkler plant → The sprinkler sprite remains on the plot after the next render.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-036",
+              "zh": "The player harvests a mature crop when the inventory cannot accept the harvested crop item → The mature crop sprite remains on the plot after the next render.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-037",
+              "zh": "The player uses the hoe tool on an immature planted crop → The crop sprite disappears from the target plot after the next render.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-038",
+              "zh": "The player uses the hoe tool on a newly planted minimum-stage crop while there is inventory space and no matching seed item is already visible in a seed-slot inventory control → The crop sprite disappears from the target plot, and a seed item for that crop appears in a seed-slot inventory control after the next render.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-039",
+              "zh": "The player buys an available seed item while there is enough cash, inventory space, and no matching seed item is already visible in the seed-slot inventory controls → A seed item for that crop appears in a seed-slot inventory control, and the cash display decreases by the store entry's visible price after the next render.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-040",
+              "zh": "The player buys an available seed item while there is enough cash, inventory space, and a matching seed item is already visible in the seed-slot inventory controls → The matching seed item's visible amount increases by 1, and the cash display decreases by the store entry's visible price after the next render.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-041",
+              "zh": "The player tries to buy a crop whose required level is above the player's current level and whose crop type is not wildflower → The visible seed-slot inventory controls keep the same icons and amount stickers as before the buy attempt.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-042",
+              "zh": "The player tries to buy an available seed item without enough cash → The visible seed-slot inventory controls keep the same icons and amount stickers as before the buy attempt, and the cash display keeps the same number as before the buy attempt.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-043",
+              "zh": "The player tries to buy an available seed item when the inventory cannot accept the seed item → The visible seed-slot inventory controls keep the same icons and amount stickers as before the buy attempt, and the cash display keeps the same number as before the buy attempt.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-044",
+              "zh": "The player sells an inventory item that is listed in the market with visible amount 1 → That market entry disappears, and the cash display increases by the market entry's visible price after the next render.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-045",
+              "zh": "The player sells an inventory item that is listed in the market with visible amount at least 2 → That market item's visible amount decreases by 1, and the cash display increases by the market entry's visible price after the next render.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-049",
+              "zh": "The player pokes a visible bunny on an interior farm plot with the hand interaction → The bunny sprite disappears from its original plot and appears on a plot sharing an edge or corner with the original plot, and the farm information panel's Experience value increases by 15 after the next render, up to the visible maximum shown for that level.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-051",
+              "zh": "The player pokes a visible bunny on an interior farm plot with the hoe interaction when the fertilizer reward check does not succeed → The bunny sprite disappears from its original plot and appears on a plot sharing an edge or corner with the original plot, and the farm information panel's Experience value decreases by 20 after the next render, down to 0 if fewer than 20 experience points were shown before the poke.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-056",
+              "zh": "The player feeds a visible cow with exactly one crop item after at least one in-game day since the previous feeding → The fed crop item's inventory entry disappears after the next render.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-059",
+              "zh": "A cow-mode animal moves onto a plot containing a non-sprinkler crop → A cow sprite appears on that plot, and the crop sprite that was on the plot is no longer visible after the move render.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-064",
+              "zh": "The automatic update drains a plot that was watered on an earlier in-game day → The plot's blue water overlay disappears after the update render.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-071",
+              "zh": "The player harvests a mature potato while there is inventory space for the potato item and the farm information panel's Experience current value is below the displayed needed value → The mature potato sprite disappears from the plot, a potato item is visible in the sellable inventory, and the farm information panel's Experience current value increases by 14 after the next render, capped at the displayed needed value.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.4-v8.3-rubric2-licensed22-20260910-140250",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-10T18:22:21+08:00",
+          "finishedAt": "2026-09-11T01:30:18+08:00",
+          "totalDurationMs": 25676851,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-10T18:22:21+08:00",
+              "finishedAt": "2026-09-10T18:25:22+08:00",
+              "durationMs": 180855,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-10T18:25:22+08:00",
+              "finishedAt": "2026-09-10T19:02:24+08:00",
+              "durationMs": 2222672,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-10T19:02:24+08:00",
+              "finishedAt": "2026-09-11T00:55:01+08:00",
+              "durationMs": 21156126,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-11T00:55:01+08:00",
+              "finishedAt": "2026-09-11T00:55:01+08:00",
+              "durationMs": 884,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-11T00:55:01+08:00",
+              "finishedAt": "2026-09-11T01:01:44+08:00",
+              "durationMs": 402288,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-11T01:01:44+08:00",
+              "finishedAt": "2026-09-11T01:30:18+08:00",
+              "durationMs": 1713860,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "idle-necromancer": {
