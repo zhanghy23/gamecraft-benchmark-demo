@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rainbow Unicorn Idle Suite</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #1a1a2e;
+      font-family: 'Courier New', monospace;
+    }
+    #game-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    #game-canvas {
+      display: block;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+    }
+    #hud {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      padding: 12px 20px;
+      background: rgba(0,0,0,0.7);
+      border-top: 3px solid #ffd700;
+      z-index: 10;
+      transition: opacity 0.2s;
+    }
+    #hud.hidden { display: none; }
+    .hud-label {
+      color: #ffd700;
+      font-size: 14px;
+      font-weight: bold;
+      text-shadow: 1px 1px 0 #000;
+    }
+    .hud-value {
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      min-width: 60px;
+      text-align: right;
+    }
+    #spend-gold-btn {
+      background: linear-gradient(180deg, #4a4a6a 0%, #2a2a4a 100%);
+      color: #ffd700;
+      border: 2px solid #ffd700;
+      padding: 8px 16px;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      text-shadow: 1px 1px 0 #000;
+      box-shadow: 0 2px 0 #000;
+    }
+    #spend-gold-btn:hover {
+      background: linear-gradient(180deg, #5a5a7a 0%, #3a3a5a 100%);
+    }
+    #spend-gold-btn:active {
+      transform: translateY(2px);
+      box-shadow: none;
+    }
+    #new-game-btn {
+      position: fixed;
+      top: 12px;
+      right: 12px;
+      background: linear-gradient(180deg, #4a4a6a 0%, #2a2a4a 100%);
+      color: #ffd700;
+      border: 2px solid #ffd700;
+      width: 40px;
+      height: 40px;
+      font-family: inherit;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 15;
+      box-shadow: 0 2px 0 #000;
+    }
+    #new-game-btn:hover {
+      background: linear-gradient(180deg, #5a5a7a 0%, #3a3a5a 100%);
+    }
+    #new-game-btn.armed {
+      background: linear-gradient(180deg, #8a4a4a 0%, #5a2a2a 100%);
+      animation: pulse 0.5s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    #upgrade-panel {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      max-width: 500px;
+      max-height: 80vh;
+      background: linear-gradient(180deg, #2a2a4a 0%, #1a1a2e 100%);
+      border: 3px solid #ffd700;
+      border-radius: 8px;
+      z-index: 100;
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 0 40px rgba(255, 215, 0, 0.3);
+    }
+    #upgrade-panel.open { display: flex; }
+    #upgrade-backdrop {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 99;
+      display: none;
+    }
+    #upgrade-backdrop.open { display: block; }
+    #upgrade-header {
+      padding: 16px;
+      border-bottom: 2px solid #ffd700;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(0,0,0,0.3);
+    }
+    #unicorn-portrait {
+      width: 48px;
+      height: 48px;
+      background: #fff;
+      border: 2px solid #ffd700;
+      border-radius: 50%;
+      image-rendering: pixelated;
+    }
+    #header-info {
+      flex: 1;
+    }
+    #unicorn-name {
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+    #unicorn-bio {
+      color: #aaa;
+      font-size: 11px;
+      line-height: 1.3;
+    }
+    #header-stats {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .header-stat {
+      text-align: center;
+      min-width: 70px;
+    }
+    .header-stat-label {
+      color: #888;
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+    .header-stat-value {
+      color: #ffd700;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    #upgrade-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 12px;
+      scrollbar-width: thin;
+      scrollbar-color: #ffd700 #2a2a4a;
+    }
+    #upgrade-list::-webkit-scrollbar {
+      width: 8px;
+    }
+    #upgrade-list::-webkit-scrollbar-track {
+      background: #2a2a4a;
+    }
+    #upgrade-list::-webkit-scrollbar-thumb {
+      background: #ffd700;
+      border-radius: 4px;
+    }
+    .upgrade-row {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid #444;
+      border-radius: 4px;
+      padding: 10px 12px;
+      margin-bottom: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+    .upgrade-row.maxed {
+      border-color: #ffd700;
+      background: rgba(255,215,0,0.1);
+    }
+    .upgrade-info {
+      flex: 1;
+      min-width: 150px;
+    }
+    .upgrade-title {
+      color: #fff;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+    .upgrade-effect {
+      color: #aaa;
+      font-size: 11px;
+      margin-bottom: 4px;
+    }
+    .upgrade-level-pips {
+      display: flex;
+      gap: 2px;
+      margin-bottom: 4px;
+    }
+    .pip {
+      width: 8px;
+      height: 8px;
+      background: #333;
+      border-radius: 2px;
+    }
+    .pip.lit {
+      background: #ffd700;
+      box-shadow: 0 0 4px #ffd700;
+    }
+    .upgrade-cost {
+      color: #ffd700;
+      font-size: 12px;
+      margin-right: 8px;
+      white-space: nowrap;
+    }
+    .upgrade-btn {
+      background: linear-gradient(180deg, #4a4a6a 0%, #2a2a4a 100%);
+      color: #fff;
+      border: 1px solid #666;
+      padding: 6px 12px;
+      font-family: inherit;
+      font-size: 11px;
+      cursor: pointer;
+    }
+    .upgrade-btn:hover:not(:disabled) {
+      background: linear-gradient(180deg, #5a5a7a 0%, #3a3a5a 100%);
+    }
+    .upgrade-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    .upgrade-btn.maxed-btn {
+      color: #ffd700;
+      border-color: #ffd700;
+    }
+    .catch-row {
+      border: 2px solid #ff69b4;
+      background: linear-gradient(180deg, rgba(255,105,180,0.2) 0%, rgba(255,105,180,0.05) 100%);
+    }
+    .catch-row .upgrade-title {
+      color: #ff69b4;
+    }
+    .catch-requirement {
+      color: #ff69b4;
+      font-size: 10px;
+      font-style: italic;
+      width: 100%;
+      margin-top: 4px;
+    }
+    #close-upgrade-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: transparent;
+      color: #ffd700;
+      border: 1px solid #ffd700;
+      width: 28px;
+      height: 28px;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #close-upgrade-btn:hover {
+      background: rgba(255,215,0,0.2);
+    }
+    #scroll-cue {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 40px;
+      background: linear-gradient(transparent, rgba(0,0,0,0.8));
+      pointer-events: none;
+      display: none;
+    }
+    #scroll-cue.visible { display: block; }
+    .scroll-sparkle {
+      position: absolute;
+      bottom: 8px;
+      width: 6px;
+      height: 6px;
+      background: #ffd700;
+      border-radius: 50%;
+      animation: sparkle 1s infinite;
+    }
+    .scroll-sparkle:nth-child(1) { left: 30%; animation-delay: 0s; }
+    .scroll-sparkle:nth-child(2) { left: 50%; animation-delay: 0.3s; }
+    .scroll-sparkle:nth-child(3) { left: 70%; animation-delay: 0.6s; }
+    @keyframes sparkle {
+      0%, 100% { opacity: 0.3; transform: translateY(0); }
+      50% { opacity: 1; transform: translateY(-5px); }
+    }
+    #stubborn-dialog {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      max-width: 450px;
+      background: linear-gradient(180deg, #3a2a5a 0%, #2a1a4a 100%);
+      border: 3px solid #9370db;
+      border-radius: 12px;
+      z-index: 200;
+      display: none;
+      flex-direction: column;
+      padding: 20px;
+      box-shadow: 0 0 60px rgba(147, 112, 219, 0.5);
+    }
+    #stubborn-dialog.open { display: flex; }
+    #stubborn-title {
+      color: #dda0dd;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 12px;
+      text-shadow: 0 0 10px #9370db;
+    }
+    #stubborn-attempts {
+      color: #aaa;
+      font-size: 12px;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    #stubborn-choices {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .stubborn-choice {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid #666;
+      border-radius: 6px;
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .stubborn-flag {
+      width: 24px;
+      height: 24px;
+      background: linear-gradient(180deg, #ff69b4 0%, #dda0dd 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+      flex-shrink: 0;
+    }
+    .stubborn-info {
+      flex: 1;
+    }
+    .stubborn-name {
+      color: #fff;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 2px;
+    }
+    .stubborn-desc {
+      color: #aaa;
+      font-size: 11px;
+    }
+    .stubborn-values {
+      color: #ffd700;
+      font-size: 11px;
+      margin-right: 8px;
+      white-space: nowrap;
+    }
+    .stubborn-choose-btn {
+      background: linear-gradient(180deg, #6a4a8a 0%, #4a2a6a 100%);
+      color: #dda0dd;
+      border: 1px solid #9370db;
+      padding: 6px 12px;
+      font-family: inherit;
+      font-size: 11px;
+      cursor: pointer;
+    }
+    .stubborn-choose-btn:hover:not(:disabled) {
+      background: linear-gradient(180deg, #7a5a9a 0%, #5a3a7a 100%);
+    }
+    .stubborn-choose-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+    #mobile-breakpoint-indicator { display: none; }
+    @media (max-width: 600px) {
+      #hud {
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .upgrade-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .upgrade-info {
+        min-width: unset;
+      }
+      .upgrade-row .upgrade-btn,
+      .upgrade-row .upgrade-cost {
+        width: 100%;
+        text-align: center;
+        margin: 4px 0 0 0;
+      }
+      #header-stats {
+        width: 100%;
+        justify-content: center;
+        margin-top: 8px;
+      }
+    }
+  </style>
+  <script type="module" crossorigin src="./assets/index-B_DtbZ3e.js"></script>
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="game-canvas"></canvas>
+  </div>
+  <div id="hud" class="hidden">
+    <span class="hud-label">GOLD</span>
+    <span id="gold-value" class="hud-value">0</span>
+    <button id="spend-gold-btn">Spend Gold</button>
+  </div>
+  <button id="new-game-btn">↺</button>
+  <div id="upgrade-backdrop"></div>
+  <div id="upgrade-panel">
+    <button id="close-upgrade-btn">×</button>
+    <div id="upgrade-header">
+      <canvas id="unicorn-portrait" width="48" height="48"></canvas>
+      <div id="header-info">
+        <div id="unicorn-name">Sparkle Mane</div>
+        <div id="unicorn-bio">A determined unicorn on a golden quest</div>
+        <div id="header-stats">
+          <div class="header-stat">
+            <div class="header-stat-label">Gold</div>
+            <div id="stat-gold" class="header-stat-value">0</div>
+          </div>
+          <div class="header-stat">
+            <div class="header-stat-label">Chase</div>
+            <div id="stat-chase" class="header-stat-value">0%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="upgrade-list"></div>
+    <div id="scroll-cue">
+      <div class="scroll-sparkle"></div>
+      <div class="scroll-sparkle"></div>
+      <div class="scroll-sparkle"></div>
+    </div>
+  </div>
+  <div id="stubborn-dialog">
+    <div id="stubborn-title">Radiant Resolve</div>
+    <div id="stubborn-attempts">ATTEMPTS: <span id="attempts-value">0</span></div>
+    <div id="stubborn-choices"></div>
+  </div>
+</body>
+</html>
