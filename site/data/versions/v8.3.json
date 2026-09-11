@@ -39851,6 +39851,35 @@
             }
           ]
         }
+      },
+      "gpt-5.4": {
+        "status": "failed",
+        "runId": "gpt-5.4-v8.3-rubric2-licensed22-recovery15-20260911-180228",
+        "stage": "generate-game",
+        "score": null,
+        "traceCount": 0,
+        "playPath": null,
+        "previewPath": null,
+        "unmet": null,
+        "issue": "GPT-5.4生成请求连续20次在未收到[DONE]或finish_reason时结束，其中一次还包含非法流式数据块；重试耗尽后，累计响应仍不包含一个有效JSON对象，未写出可用游戏源码。该项记录为生成失败，无功能分、无画面分且不可试玩。",
+        "timing": {
+          "runId": "gpt-5.4-v8.3-rubric2-licensed22-recovery15-20260911-180228",
+          "status": "failed",
+          "failedStage": "generate-game",
+          "startedAt": "2026-09-11T18:37:28+08:00",
+          "finishedAt": "2026-09-11T20:32:07+08:00",
+          "totalDurationMs": 6878716,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-11T18:37:29+08:00",
+              "finishedAt": "2026-09-11T20:32:07+08:00",
+              "durationMs": 6878547,
+              "status": "failed",
+              "exitCode": 1
+            }
+          ]
+        }
       }
     },
     "match3": {
