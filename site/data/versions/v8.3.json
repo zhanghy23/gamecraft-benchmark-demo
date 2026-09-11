@@ -35883,6 +35883,105 @@
             }
           ]
         }
+      },
+      "deepseek-v4-pro": {
+        "status": "completed",
+        "runId": "deepseek-v4-pro-v8.3-rubric2-imported-licensed4-recovery3-20260911-180228",
+        "score": {
+          "display": "87.88 (+6.06)",
+          "base": 87.88,
+          "passed": 29,
+          "denominator": 33,
+          "dynamic": 2,
+          "dynamicAddition": 6.06,
+          "potential": 93.94
+        },
+        "visualQuality": {
+          "score": 90.2,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.8,
+          "renderingStyleAverage": 42.4,
+          "videosScored": 5
+        },
+        "traceCount": 5,
+        "playPath": "games-v8.3/fight-back/deepseek-v4-pro/index.html",
+        "previewPath": "previews-v8.3/fight-back/deepseek-v4-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-020",
+              "zh": "The hero performs an attack against a living target that survives the hit while the hero's pre-attack XP is at least 2 points below the current next-level XP requirement → In the right-side information panel, the XP line's numerator increases by 1 from its pre-attack displayed value and the XP line's denominator stays the same."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-012",
+              "zh": "The hero performs an attack against the dragon and the hit kills the dragon → The adventure gameplay view is replaced by the victory screen.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-031",
+              "zh": "The game over stage receives an Enter input → The displayed game over screen is replaced by the opening menu screen.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-033",
+              "zh": "The game won stage receives an Enter input → The displayed victory screen is replaced by the opening menu screen.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-pro-v8.3-rubric2-imported-licensed4-recovery3-20260911-180228",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-11T19:33:37+08:00",
+          "finishedAt": "2026-09-11T20:29:08+08:00",
+          "totalDurationMs": 3331131,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-11T19:33:37+08:00",
+              "finishedAt": "2026-09-11T19:45:05+08:00",
+              "durationMs": 688131,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-11T19:45:05+08:00",
+              "finishedAt": "2026-09-11T20:23:35+08:00",
+              "durationMs": 2310089,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-11T20:23:35+08:00",
+              "finishedAt": "2026-09-11T20:23:36+08:00",
+              "durationMs": 316,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-11T20:23:36+08:00",
+              "finishedAt": "2026-09-11T20:24:21+08:00",
+              "durationMs": 45346,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-11T20:24:21+08:00",
+              "finishedAt": "2026-09-11T20:29:08+08:00",
+              "durationMs": 287217,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "prism-paddock": {
