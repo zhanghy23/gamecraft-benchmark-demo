@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1280, height=720">
+  <title>Dewdrop Farm</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #2d5a27;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #game-container {
+      width: 1280px;
+      height: 720px;
+      margin: 0 auto;
+      position: relative;
+      background: #4a7c43;
+      border: 4px solid #3d6636;
+      border-radius: 8px;
+    }
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    #ui-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    #ui-overlay > * {
+      pointer-events: auto;
+    }
+    #top-bar {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .screen-btn {
+      padding: 8px 16px;
+      background: #3d6636;
+      color: #c4d4a4;
+      border: 2px solid #2d4a26;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .screen-btn:hover {
+      background: #4d7a46;
+    }
+    .screen-btn.active {
+      background: #6b9e5a;
+      color: #fff;
+      border-color: #5a8a4a;
+      box-shadow: 0 0 8px rgba(107, 158, 90, 0.6);
+    }
+    #cash-display {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #2d4a26;
+      padding: 8px 16px;
+      border-radius: 6px;
+      color: #ffd700;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    #time-display {
+      background: #2d4a26;
+      padding: 8px 16px;
+      border-radius: 6px;
+      color: #fff;
+      font-size: 16px;
+    }
+    #farm-area {
+      position: absolute;
+      top: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    #tool-bar {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+      background: #2d4a26;
+      padding: 10px;
+      border-radius: 8px;
+    }
+    .tool-slot {
+      width: 60px;
+      height: 60px;
+      background: #3d5a36;
+      border: 2px solid #2d4a26;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.15s;
+    }
+    .tool-slot:hover {
+      background: #4d6a46;
+    }
+    .tool-slot.active {
+      background: #5a8a4a;
+      border-color: #6b9e5a;
+      box-shadow: 0 0 8px rgba(107, 158, 90, 0.6);
+    }
+    .tool-slot .key-hint {
+      position: absolute;
+      top: 2px;
+      left: 4px;
+      font-size: 10px;
+      color: #8a9a7a;
+      font-weight: bold;
+    }
+    .tool-slot .tool-icon {
+      font-size: 24px;
+    }
+    .tool-slot .seed-preview {
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+    }
+    .tool-slot .amount-badge {
+      position: absolute;
+      bottom: 2px;
+      right: 4px;
+      background: #ffd700;
+      color: #333;
+      font-size: 10px;
+      font-weight: bold;
+      padding: 1px 4px;
+      border-radius: 3px;
+    }
+    #store-area, #market-area, #info-panel {
+      position: absolute;
+      top: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 900px;
+      height: 520px;
+      background: #3d5a36;
+      border: 3px solid #2d4a26;
+      border-radius: 10px;
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    #store-area.visible, #market-area.visible, #info-panel.visible {
+      display: flex;
+    }
+    .panel-header {
+      background: #2d4a26;
+      padding: 12px 20px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #c4d4a4;
+      border-bottom: 2px solid #1d3a16;
+    }
+    .panel-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 10px;
+    }
+    .store-item, .market-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      background: #4d6a46;
+      padding: 10px 15px;
+      margin-bottom: 8px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .store-item:hover, .market-item:hover {
+      background: #5d7a56;
+    }
+    .store-item.locked {
+      background: #5a4a4a;
+      cursor: not-allowed;
+    }
+    .store-item .item-icon {
+      width: 40px;
+      height: 40px;
+      background: #3d5a36;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+    .store-item .item-info {
+      flex: 1;
+    }
+    .store-item .item-name {
+      font-weight: bold;
+      color: #fff;
+    }
+    .store-item .item-unlock {
+      font-size: 12px;
+      color: #aaa;
+    }
+    .store-item .item-price, .market-item .item-price {
+      font-weight: bold;
+      color: #ffd700;
+      font-size: 16px;
+    }
+    .market-item .item-amount {
+      color: #aaa;
+      font-size: 14px;
+    }
+    .empty-message {
+      text-align: center;
+      padding: 60px 20px;
+      color: #aaa;
+      font-size: 16px;
+    }
+    #info-panel .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      padding: 15px;
+    }
+    .info-card {
+      background: #4d6a46;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    .info-card h3 {
+      color: #c4d4a4;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+    .info-card .info-row {
+      display: flex;
+      justify-content: space-between;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+    .info-card .info-row .label {
+      color: #aaa;
+    }
+    #new-game-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 15px 40px;
+      font-size: 20px;
+      background: #4d7a46;
+      color: #fff;
+      border: 3px solid #3d6636;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      display: none;
+    }
+    #new-game-btn.visible {
+      display: block;
+    }
+    #new-game-btn:hover {
+      background: #5d8a56;
+    }
+    .seed-packet-bg {
+      background: linear-gradient(135deg, #8B4513 0%, #A0522D 50%, #8B4513 100%);
+      border: 2px solid #654321;
+    }
+  </style>
+  <script type="module" crossorigin src="./assets/index-oGvMp9mm.js"></script>
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="game-canvas" width="1280" height="720"></canvas>
+    <div id="ui-overlay">
+      <div id="top-bar">
+        <button class="screen-btn active" data-screen="tend">Tend</button>
+        <button class="screen-btn" data-screen="buy">Buy</button>
+        <button class="screen-btn" data-screen="sell">Sell</button>
+        <button class="screen-btn" data-screen="info">Info</button>
+        <div id="time-display">Spring Year 1 Day 1</div>
+        <div id="cash-display">
+          <span id="coin-icon">🪙</span>
+          <span id="cash-value">100</span>
+        </div>
+      </div>
+      <div id="farm-area"></div>
+      <div id="store-area">
+        <div class="panel-header">🌱 General Store</div>
+        <div class="panel-content" id="store-content"></div>
+      </div>
+      <div id="market-area">
+        <div class="panel-header">🏪 Harvest Market</div>
+        <div class="panel-content" id="market-content"></div>
+      </div>
+      <div id="info-panel">
+        <div class="panel-header">📊 Farm Statistics</div>
+        <div class="panel-content" id="info-content"></div>
+      </div>
+      <div id="tool-bar"></div>
+      <button id="new-game-btn">🌾 New Game 🌾</button>
+    </div>
+  </div>
+</body>
+</html>
