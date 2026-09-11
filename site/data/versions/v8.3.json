@@ -34995,6 +34995,125 @@
       }
     },
     "fight-back": {
+      "minimax-m2.7": {
+        "status": "completed",
+        "runId": "minimax-m2.7-v8.3-rubric2-imported-licensed20-20260910-140250",
+        "score": {
+          "display": "75.76 (+3.03)",
+          "base": 75.76,
+          "passed": 25,
+          "denominator": 33,
+          "dynamic": 1,
+          "dynamicAddition": 3.03,
+          "potential": 78.79
+        },
+        "visualQuality": {
+          "score": 91,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.83,
+          "renderingStyleAverage": 43.17,
+          "videosScored": 6
+        },
+        "traceCount": 6,
+        "playPath": "games-v8.3/fight-back/minimax-m2.7/index.html",
+        "previewPath": "previews-v8.3/fight-back/minimax-m2.7.png",
+        "unmet": {
+          "vlm": [],
+          "replayTrace": [
+            {
+              "id": "target-009",
+              "zh": "The hero performs an attack against a living non-dragon enemy and the enemy survives the hit → The gameplay console displays a new hit message naming the hero and the target and saying \"for\" followed by a numeric damage amount.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-010",
+              "zh": "The hero performs an attack against a living non-dragon enemy and the hit kills the enemy → The gameplay console displays a new hit message for the attack and a new message naming the target and saying \"is dead\".",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-011",
+              "zh": "The hero performs an attack against the living dragon and the dragon survives the hit → The gameplay console displays a new hit message naming the hero and the dragon and saying \"for\" followed by a numeric damage amount.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-012",
+              "zh": "The hero performs an attack against the dragon and the hit kills the dragon → The adventure gameplay view is replaced by the victory screen.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-016",
+              "zh": "The adventure stage begins an update while the hero is dead → The adventure gameplay view is replaced by the game over screen.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-020",
+              "zh": "The hero performs an attack against a living target that survives the hit while the hero's pre-attack XP is at least 2 points below the current next-level XP requirement → In the right-side information panel, the XP line's numerator increases by 1 from its pre-attack displayed value and the XP line's denominator stays the same.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-021",
+              "zh": "The hero performs an attack that kills a living non-dragon enemy while the hero's pre-attack XP is at least 4 points below the current next-level XP requirement → In the right-side information panel, the XP line's numerator increases by 3 from its pre-attack displayed value and the XP line's denominator stays the same.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-033",
+              "zh": "The game won stage receives an Enter input → The displayed victory screen is replaced by the opening menu screen.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "minimax-m2.7-v8.3-rubric2-imported-licensed20-20260910-140250",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-10T18:03:36+08:00",
+          "finishedAt": "2026-09-10T19:22:08+08:00",
+          "totalDurationMs": 4712158,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-10T18:03:36+08:00",
+              "finishedAt": "2026-09-10T18:17:41+08:00",
+              "durationMs": 845457,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-10T18:17:41+08:00",
+              "finishedAt": "2026-09-10T19:17:31+08:00",
+              "durationMs": 3590130,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-10T19:17:31+08:00",
+              "finishedAt": "2026-09-10T19:17:32+08:00",
+              "durationMs": 381,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-10T19:17:32+08:00",
+              "finishedAt": "2026-09-10T19:18:13+08:00",
+              "durationMs": 41449,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-10T19:18:13+08:00",
+              "finishedAt": "2026-09-10T19:22:08+08:00",
+              "durationMs": 234706,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
       "gpt-5.4": {
         "status": "completed",
         "runId": "gpt-5.4-v8.3-rubric2-licensed22-20260910-140250",
