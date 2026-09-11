@@ -38626,6 +38626,430 @@
             }
           ]
         }
+      },
+      "minimax-m2.7": {
+        "status": "completed",
+        "runId": "minimax-m2.7-v8.3-rubric2-imported-licensed20-20260910-140250",
+        "score": {
+          "display": "0.00 (+86.96)",
+          "base": 0,
+          "passed": 0,
+          "denominator": 69,
+          "dynamic": 60,
+          "dynamicAddition": 86.96,
+          "potential": 86.96
+        },
+        "visualQuality": {
+          "score": 56,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 44,
+          "renderingStyleAverage": 12,
+          "videosScored": 1
+        },
+        "traceCount": 1,
+        "playPath": "games-v8.3/7-huenicorns/minimax-m2.7/index.html",
+        "previewPath": "previews-v8.3/7-huenicorns/minimax-m2.7.png",
+        "unmet": {
+          "vlm": [],
+          "replayTrace": [
+            {
+              "id": "target-002",
+              "zh": "The main page background is rendered → The full page background shows a blue sky gradient above green hill shapes with a repeated paper-texture overlay.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-022",
+              "zh": "During the transform phase with no selected unicorn and at least one Make 7 pair available to the local human side → The action area shows the hint “Click a unicorn, then its Make 7 partner, or skip.” and a “Skip” button, and local unicorn cards that can be used in a Make 7 pair are shown with a yellow highlight ring.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-030",
+              "zh": "During the transform phase with one unicorn selected, a partner unicorn is clicked when the two unicorns make 7, have different colors, both colors are already present in the local human side’s fragments, and the shared deck has at least one card → Both selected Make 7 unicorn cards disappear from the local hand, the existing fragments of those colors remain in the local fragment row, and one newly drawn unicorn card appears in the local hand.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-032",
+              "zh": "During the transform phase with one unicorn selected, a partner unicorn is clicked when the two unicorns make 7, have the same color, and that color is missing from the local human side’s fragments → The action area shows a prompt beginning with “You will receive” and ending with “fragment.”, plus an “OK” button and a “Cancel” button.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-038",
+              "zh": "During the transform phase when the local human side is the first transformer of the round, the “Skip” button is activated → The local transform prompt is replaced by the opponent transform state, with the status area reading “The opponent is transforming…”.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-048",
+              "zh": "An offline game is displaying an opponent-controlled choose phase with no winner → Within 1 second, the revealed pairs are removed from the center table and the status area reads “The opponent is transforming…” without a player input.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-050",
+              "zh": "An offline game is displaying an opponent-controlled discard phase with no winner → Within 1 second, one opponent hand card is removed from the opponent hand without a player input.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-061",
+              "zh": "The game reaches a terminal rainbow-completion state with the human side as winner → The board-game table is no longer shown, and the status text reads “You win!”.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-069",
+              "zh": "An online opponent leaves during a match → An overlay appears with the heading “Opponent left” and a “Back to title” button.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-001",
+              "zh": "The title screen is displayed → The screen shows the “7 Huenicorns” logo, a “Play” link, a “How to Play?” link, and a Sounds checkbox.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-003",
+              "zh": "The How to Play screen is displayed → The screen shows the heading “How to Play?”, the text “Build the rainbow before your opponent!”, and five step headings: “1 Split”, “2 Pick”, “3 Make 7”, “4 Make a Fragment”, and “5 Complete the Rainbow”.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-004",
+              "zh": "The How to Play screen is displayed at the Make 7 step → The Make 7 example shows the combinations “1 + 6”, “2 + 5”, and “3 + 4”, followed by the text “Pair your unicorns whose values add up to 7.”.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-005",
+              "zh": "The relay online play screen is displayed → The screen shows a “Play” heading, a “Create a game” link, a text input with placeholder “CODE”, and a “Join” link.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-006",
+              "zh": "A newly created game is first rendered before any player has split cards into pairs → The gameplay area shows the board-game table with a deck area, a pool area, and two pair areas.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-007",
+              "zh": "The gameplay board is rendered during an active match → A “7 Huenicorns” logo heading is displayed above the board-game table, and the discard-pile button is displayed near the top-right corner of the board.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-008",
+              "zh": "A round begins with the local human side assigned as the dealer → The status area reads “You are the Dealer: make two pairs”.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-009",
+              "zh": "During the split phase when the four unicorns have not yet been placed as two cards in Pair A and two cards in Pair B → The action area shows the hint “Drag the four unicorns into two pairs.” and the “Confirm split” button is disabled.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-010",
+              "zh": "During the split phase when Pair A contains two unicorns and Pair B contains two unicorns → The action area shows the hint “Drag the four unicorns into two pairs.” and the “Confirm split” button is enabled.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-011",
+              "zh": "During the split phase, a draggable unicorn card is dropped on the Pair A drop area → That unicorn card is displayed inside Pair A, and Pair A’s count reads one higher than before out of 2.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-012",
+              "zh": "During the split phase, a draggable unicorn card is dropped on the Pair B drop area → That unicorn card is displayed inside Pair B, and Pair B’s count reads one higher than before out of 2.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-013",
+              "zh": "During the split phase, a draggable unicorn card is dropped on the revealed-cards pool drop area → That unicorn card is displayed in the “✦ Revealed cards ✦” pool, and the pair area it came from shows one fewer card out of 2.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-014",
+              "zh": "During the split phase, a unicorn from the revealed-cards pool is dropped on Pair A while Pair A already contains two unicorns → The dropped unicorn remains in the “✦ Revealed cards ✦” pool, and Pair A still shows 2 out of 2 cards.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-015",
+              "zh": "A valid split is confirmed while the local human side is the receiver → The status area reads “You are the Receiver: take one of the two pairs”.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-016",
+              "zh": "A valid split is confirmed while the opponent side is the receiver → The status area reads “The opponent is choosing…”.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-017",
+              "zh": "During the choose phase before any pair is selected by the local human side → The action area shows the hint “Pick one pair to keep both its unicorns.” and the “Confirm” button is disabled.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-018",
+              "zh": "During the choose phase before any pair is selected by the local human side, Pair A is clicked → The action area still shows the hint “Pick one pair to keep both its unicorns.” and the “Confirm” button is enabled.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-019",
+              "zh": "During the choose phase before any pair is selected by the local human side, Pair B is clicked → The action area still shows the hint “Pick one pair to keep both its unicorns.” and the “Confirm” button is enabled.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-020",
+              "zh": "The transform phase begins while the local human side is active → The status area reads “Make 7: pair two unicorns that add up to 7, or skip”.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-021",
+              "zh": "The transform phase begins while the opponent side is active → The status area reads “The opponent is transforming…”.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-023",
+              "zh": "During the transform phase with no selected unicorn, a unicorn is clicked → The action hint changes from “Click a unicorn, then its Make 7 partner, or skip.” to “Now click a highlighted partner, or skip.”, and the “Skip” button remains visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-024",
+              "zh": "During the transform phase with one unicorn selected → The selected unicorn card is shown with a yellow outline, valid partner unicorn cards are highlighted, and non-partner local unicorn cards are dimmed.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-025",
+              "zh": "During the transform phase with no selected unicorn, a local unicorn that is not part of any Make 7 pair is clicked → The action area continues to show “Click a unicorn, then its Make 7 partner, or skip.” with the “Skip” button, and no fragment-choice buttons are shown.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-026",
+              "zh": "During the transform phase with one unicorn selected, a different local unicorn that does not make 7 with the selected unicorn is clicked → The action area continues to show “Now click a highlighted partner, or skip.” with the “Skip” button, and no fragment-choice buttons are shown.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-027",
+              "zh": "During the transform phase with one unicorn selected, a partner unicorn is clicked when the two unicorns make 7, have different colors, and both colors are missing from the local human side’s fragments → The action area shows the prompt “Which unicorn becomes a fragment?”, shows two color-choice buttons corresponding to the two selected unicorn colors, and shows a “Cancel” button.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-028",
+              "zh": "During the transform phase with one unicorn selected, a partner unicorn is clicked when the two unicorns make 7, have different colors, the selected unicorn’s color is missing from the local human side’s fragments, and the clicked partner unicorn’s color is already present in the local human side’s fragments → The selected unicorn card disappears from the local hand and appears in the local fragment row, while the clicked partner unicorn card disappears from the local hand.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-029",
+              "zh": "During the transform phase with one unicorn selected, a partner unicorn is clicked when the two unicorns make 7, have different colors, the selected unicorn’s color is already present in the local human side’s fragments, and the clicked partner unicorn’s color is missing from the local human side’s fragments → The clicked partner unicorn card disappears from the local hand and appears in the local fragment row, while the selected unicorn card disappears from the local hand.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-031",
+              "zh": "During the transform phase with one unicorn selected, a partner unicorn is clicked when the two unicorns make 7, have different colors, both colors are already present in the local human side’s fragments, and the shared deck is empty → Both selected Make 7 unicorn cards disappear from the local hand, the existing fragments of those colors remain in the local fragment row, and no newly drawn unicorn card appears in the local hand.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-033",
+              "zh": "During the transform phase with one unicorn selected, a partner unicorn is clicked when the two unicorns make 7, have the same color, that color is already present in the local human side’s fragments, and the shared deck has at least one card → Both same-color Make 7 unicorn cards disappear from the local hand, the existing fragment of that color remains in the local fragment row, and one newly drawn unicorn card appears in the local hand.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-035",
+              "zh": "During a transform fragment-choice prompt, the “Cancel” button is activated → The action area returns to the hint “Click a unicorn, then its Make 7 partner, or skip.” with a “Skip” button, and the fragment-choice buttons are no longer shown.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-036",
+              "zh": "A Make 7 transform is confirmed for a color that the acting side does not already have as a fragment → The kept unicorn card disappears from the acting side’s hand and appears in that side’s fragment row, while the discarded partner card disappears from that side’s hand.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-037",
+              "zh": "A Make 7 transform is confirmed for a color that the acting side already has as a fragment while the shared deck has at least one card → Both Make 7 unicorn cards disappear from the acting side’s hand, the existing fragment of that color remains in the fragment row, and one newly drawn unicorn card appears in the acting side’s hand.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-039",
+              "zh": "During the transform phase when the local human side is the first transformer of the round and has no available Make 7 pair → Within 1 second, the local transform action controls are replaced by the opponent transform state, with the status area reading “The opponent is transforming…”.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-040",
+              "zh": "After an action, the local human side has too many unicorns and must discard → The status area reads “Too many unicorns — discard down to 5”.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-041",
+              "zh": "After an action, the opponent side has too many unicorns and must discard → The status area reads “The opponent is discarding…”.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-042",
+              "zh": "During the discard phase when the local human side has exactly six unicorns → The action area shows the hint “Click 1 unicorn to discard.”.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-043",
+              "zh": "During the discard phase when the local human side has exactly seven unicorns → The action area shows the hint “Click 2 unicorns to discard.”.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-044",
+              "zh": "During the discard phase when the local human side has exactly seven unicorns, one of the local unicorn cards is clicked → The clicked unicorn card disappears from the local hand, and the action hint changes to “Click 1 unicorn to discard.”.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-045",
+              "zh": "During the discard phase when the local human side has exactly six unicorns, one of the local unicorn cards is clicked → The clicked unicorn card disappears from the local hand, and the “Click 1 unicorn to discard.” prompt is no longer shown.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-046",
+              "zh": "The local player views the game while the opponent is the active side and there is no winner → The action area shows the text “The opponent is playing…”.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-047",
+              "zh": "An offline game is displaying an opponent-controlled split phase with no winner → Within 1 second, two pair areas contain the four revealed unicorn cards and the status area reads “You are the Receiver: take one of the two pairs” without a player input.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-049",
+              "zh": "An offline game is displaying an opponent-controlled transform phase with no winner → Within 1 second, the opponent transform state is replaced by a later visible board state without a player input.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-051",
+              "zh": "The gameplay board is rendered when both sides have no collected fragments → Each side’s fragment tracker shows seven empty gem icons.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-052",
+              "zh": "The gameplay board is rendered when the local human side has exactly one collected fragment and the opponent side has no collected fragments → The local human side’s fragment tracker shows one filled gem icon and six empty gem icons, while the opponent side’s fragment tracker shows seven empty gem icons.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-053",
+              "zh": "The gameplay board is rendered while the discard pile is empty → The discard-pile button reads “Discard: 0”.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-054",
+              "zh": "The gameplay board is rendered while the discard pile contains exactly one card → The discard-pile button reads “Discard: 1”.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-055",
+              "zh": "The discard-pile button is activated while the discard pile is empty → An overlay appears with the heading “Discard pile (0)”, the text “The discard pile is empty.”, and a “Close” button.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-056",
+              "zh": "The discard-pile button is activated while the discard pile contains exactly one card → An overlay appears with the heading “Discard pile (1)”, displays one unicorn card in the discard pile, and shows a “Close” button.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-057",
+              "zh": "The discard-pile overlay is displayed and its “Close” button is activated → The discard-pile overlay disappears, returning to the gameplay board.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-058",
+              "zh": "A completed round advances without a winner and the local human side becomes the next dealer → The next round is displayed with the board-game table and the status area reads “You are the Dealer: make two pairs”.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-059",
+              "zh": "The game reaches a terminal draw state because both sides have at least seven fragments → The board-game table is no longer shown, and the status text reads “It’s a draw!”.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-060",
+              "zh": "The game ends with both sides having equal fragment counts after final scoring → The board-game table is no longer shown, and the status text reads “It’s a draw!”.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-062",
+              "zh": "The game reaches a terminal rainbow-completion state with the opponent side as winner → The board-game table is no longer shown, and the status text reads “The opponent wins!”.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-063",
+              "zh": "A final scoring check ends the game with the human side having a higher fragment count than the opponent side → The board-game table is no longer shown, and the status text reads “You win!”.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-064",
+              "zh": "A final scoring check ends the game with the opponent side having a higher fragment count than the human side → The board-game table is no longer shown, and the status text reads “The opponent wins!”.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-065",
+              "zh": "A terminal game-over overlay is rendered in an offline game → The overlay shows the final result heading, a “Play again” button, and a “Back to title” button.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-066",
+              "zh": "A terminal game-over overlay is rendered for an online non-host player → The overlay shows the final result heading, the text “Waiting for the host…”, and a “Back to title” button.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-068",
+              "zh": "The “Back to title” button on a terminal game-over overlay is activated → The title screen is displayed with the “7 Huenicorns” logo, a “Play” link, and a “How to Play?” link.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-034",
+              "zh": "During the transform phase with one unicorn selected, a partner unicorn is clicked when the two unicorns make 7, have the same color, that color is already present in the local human side’s fragments, and the shared deck is empty → Both same-color Make 7 unicorn cards disappear from the local hand, the existing fragment of that color remains in the local fragment row, and no newly drawn unicorn card appears in the local hand.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-067",
+              "zh": "The “Play again” button on a terminal game-over overlay is activated in an offline game → The game-over overlay disappears and a new board-game table is shown with a deck area, a pool area, and two pair areas.",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "minimax-m2.7-v8.3-rubric2-imported-licensed20-20260910-140250",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-11T04:23:39+08:00",
+          "finishedAt": "2026-09-11T08:50:36+08:00",
+          "totalDurationMs": 16017136,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-11T04:23:39+08:00",
+              "finishedAt": "2026-09-11T04:53:25+08:00",
+              "durationMs": 1785920,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-11T04:53:25+08:00",
+              "finishedAt": "2026-09-11T08:50:16+08:00",
+              "durationMs": 14211327,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-11T08:50:16+08:00",
+              "finishedAt": "2026-09-11T08:50:17+08:00",
+              "durationMs": 340,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-11T08:50:17+08:00",
+              "finishedAt": "2026-09-11T08:50:21+08:00",
+              "durationMs": 4589,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-11T08:50:21+08:00",
+              "finishedAt": "2026-09-11T08:50:36+08:00",
+              "durationMs": 14928,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "match3": {
