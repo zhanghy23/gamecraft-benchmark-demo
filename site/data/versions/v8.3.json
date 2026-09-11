@@ -40152,62 +40152,166 @@
         }
       },
       "minimax-m2.7": {
-        "status": "failed",
-        "runId": "minimax-m2.7-v8.3-rubric2-imported-licensed20-20260910-140250",
-        "stage": "judge-video-and-image",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "复用本机真实生成源码完成Trace、三轮selection、optimize和Replay，并成功生成11条视频；Judge处理第1/11条视频时Router返回HTTP 401 Invalid router API key，未生成最终报告，随后队列按共享基础设施故障停止。该项无功能分、无画面分且不可试玩。",
+        "status": "completed",
+        "runId": "minimax-m2.7-v8.3-rubric2-imported-licensed20-recovery11-20260911-180228",
+        "score": {
+          "display": "62.00 (+16.00)",
+          "base": 62,
+          "passed": 31,
+          "denominator": 50,
+          "dynamic": 8,
+          "dynamicAddition": 16,
+          "potential": 78
+        },
+        "visualQuality": {
+          "score": 75.21,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 41,
+          "renderingStyleAverage": 34.21,
+          "videosScored": 14
+        },
+        "traceCount": 14,
+        "playPath": "games-v8.3/match3/minimax-m2.7/index.html",
+        "previewPath": "previews-v8.3/match3/minimax-m2.7.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-005",
+              "zh": "A fresh playable tile board has been generated for active play → The full grid is visible with no three matching tiles adjacent in an unbroken horizontal row, no three matching tiles adjacent in an unbroken vertical column, and at least one adjacent tile pair whose exchange would create three matching tiles in an unbroken horizontal row or vertical column."
+            },
+            {
+              "id": "target-007",
+              "zh": "A playable tile board is rendered during active play → Each occupied grid cell is drawn as a rounded light tile containing a centered emoji symbol."
+            },
+            {
+              "id": "target-016",
+              "zh": "The player presses ArrowUp during active play while no keyboard cursor is visible → A blue hover outline appears around the tile one row above the board's center tile."
+            },
+            {
+              "id": "target-022",
+              "zh": "The player presses ArrowUp while a board tile is selected during active play and the tile directly above is accepted as a move target → The selected tile and the tile directly above it visibly exchange positions on the board."
+            },
+            {
+              "id": "target-025",
+              "zh": "The player presses ArrowRight while a board tile is selected during active play and the tile directly to the right is accepted as a move target → The selected tile and the tile directly to the right visibly exchange positions on the board."
+            },
+            {
+              "id": "target-030",
+              "zh": "The player presses Enter during active play while another tile is selected and the keyboard cursor is on an adjacent grid tile that is accepted as a move → The selected tile and the keyboard cursor tile visibly exchange positions on the board."
+            },
+            {
+              "id": "target-031",
+              "zh": "The player presses Enter during active play while another tile is selected and the keyboard cursor is on an adjacent grid tile that is rejected as an invalid swap → The two tiles exchange positions, then return to their original grid cells; after the return, no selection outline is visible."
+            },
+            {
+              "id": "target-032",
+              "zh": "A match-processing step begins with at least one matched group on the board → The matched tiles shrink out of their grid cells, particle effects appear around the matched area, the header's \"Score:\" number changes to a new displayed integer, tiles fall vertically into cleared cells, and the board returns to a full grid with no blank cells."
+            },
+            {
+              "id": "target-041",
+              "zh": "A Levels mode advancement reaches level 2 → The board is replaced with a full new tile grid and the header displays \"Level: 2\", \"Score: 0\", \"Moves: 19\", and \"Target: 1500\"."
+            },
+            {
+              "id": "target-042",
+              "zh": "A Levels mode advancement reaches level 11 → The board is replaced with a full new tile grid and the header displays \"Level: 11\", \"Score: 0\", \"Moves: 10\", and \"Target: 6000\"."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-036",
+              "zh": "An apply-gravity animation begins after matched tiles have cleared and at least one replacement tile is spawned above the board → At least one new tile enters from above the top row and moves downward into an empty grid cell; the board ends as a full grid with no blank cells.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-009",
+              "zh": "The player taps an unselected grid tile during active play → A visible selection outline appears around the tapped tile.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-038",
+              "zh": "A completed valid move leaves the board with no valid moves available → The tile grid is replaced with a full tile grid whose emoji arrangement is not identical to the immediately preceding grid, while the current mode header remains visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-044",
+              "zh": "A resolved move in Levels mode leaves zero moves remaining while the score is below the current target score → A game-over overlay appears with the red title text \"Out of Moves!\".",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-045",
+              "zh": "The player clicks while the Levels loss overlay is showing → The \"Out of Moves!\" overlay disappears and a fresh Levels game is rendered with \"Level: 1\" and \"Score: 0\" in the header.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-046",
+              "zh": "The player presses Enter while the Levels loss overlay is showing → The \"Out of Moves!\" overlay disappears and a fresh Levels game is rendered with \"Level: 1\" and \"Score: 0\" in the header.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-048",
+              "zh": "The Time Attack countdown update reaches zero while the game is not already over → A game-over overlay appears with the red title text \"Time's Up!\".",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-049",
+              "zh": "A game-over overlay is rendered after a terminal state → A translucent white panel covers the gameplay view, with a centered title line above a centered \"Score:\" line and the instruction text \"Press Enter or click to play again\" below it.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-050",
+              "zh": "The player clicks while the Time Attack loss overlay is showing → The \"Time's Up!\" overlay disappears and a new Time Attack board is rendered.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
         "timing": {
-          "runId": "minimax-m2.7-v8.3-rubric2-imported-licensed20-20260910-140250",
-          "status": "failed",
-          "failedStage": "judge-video-and-image",
-          "startedAt": "2026-09-11T08:50:37+08:00",
-          "finishedAt": "2026-09-11T11:44:20+08:00",
-          "totalDurationMs": 10423622,
+          "runId": "minimax-m2.7-v8.3-rubric2-imported-licensed20-recovery11-20260911-180228",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-11T18:14:20+08:00",
+          "finishedAt": "2026-09-11T21:59:53+08:00",
+          "totalDurationMs": 13532396,
           "stages": [
             {
               "stage": "trace",
-              "startedAt": "2026-09-11T08:50:37+08:00",
-              "finishedAt": "2026-09-11T09:11:35+08:00",
-              "durationMs": 1258316,
+              "startedAt": "2026-09-11T18:14:20+08:00",
+              "finishedAt": "2026-09-11T18:39:32+08:00",
+              "durationMs": 1511944,
               "status": "completed",
               "exitCode": 0
             },
             {
               "stage": "select-traces",
-              "startedAt": "2026-09-11T09:11:35+08:00",
-              "finishedAt": "2026-09-11T11:38:25+08:00",
-              "durationMs": 8809972,
+              "startedAt": "2026-09-11T18:39:32+08:00",
+              "finishedAt": "2026-09-11T21:32:17+08:00",
+              "durationMs": 10364335,
               "status": "completed",
               "exitCode": 0
             },
             {
               "stage": "optimize-traces",
-              "startedAt": "2026-09-11T11:38:25+08:00",
-              "finishedAt": "2026-09-11T11:38:25+08:00",
-              "durationMs": 386,
+              "startedAt": "2026-09-11T21:32:17+08:00",
+              "finishedAt": "2026-09-11T21:32:17+08:00",
+              "durationMs": 446,
               "status": "completed",
               "exitCode": 0
             },
             {
               "stage": "replay",
-              "startedAt": "2026-09-11T11:38:25+08:00",
-              "finishedAt": "2026-09-11T11:44:18+08:00",
-              "durationMs": 352449,
+              "startedAt": "2026-09-11T21:32:17+08:00",
+              "finishedAt": "2026-09-11T21:36:02+08:00",
+              "durationMs": 225142,
               "status": "completed",
               "exitCode": 0
             },
             {
               "stage": "judge-video-and-image",
-              "startedAt": "2026-09-11T11:44:18+08:00",
-              "finishedAt": "2026-09-11T11:44:20+08:00",
-              "durationMs": 2461,
-              "status": "failed",
-              "exitCode": 1
+              "startedAt": "2026-09-11T21:36:02+08:00",
+              "finishedAt": "2026-09-11T21:59:53+08:00",
+              "durationMs": 1430496,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }
