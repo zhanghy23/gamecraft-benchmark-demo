@@ -34736,6 +34736,100 @@
           ]
         }
       },
+      "deepseek-v4-flash": {
+        "status": "completed",
+        "runId": "deepseek-v4-flash-v8.3-rubric2-imported-licensed17-recovery16-20260911-180228",
+        "score": {
+          "display": "90.63 (+6.25)",
+          "base": 90.63,
+          "passed": 29,
+          "denominator": 32,
+          "dynamic": 2,
+          "dynamicAddition": 6.25,
+          "potential": 96.88
+        },
+        "visualQuality": {
+          "score": 89.86,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48,
+          "renderingStyleAverage": 41.86,
+          "videosScored": 7
+        },
+        "traceCount": 7,
+        "playPath": "games-v8.3/lepricons-rush/deepseek-v4-flash/index.html",
+        "previewPath": "previews-v8.3/lepricons-rush/deepseek-v4-flash.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-013",
+              "zh": "The leprechaun reaches a unicorn while knock flash and movement cooldown are inactive → Within 0.5 seconds after reaching the unicorn, the leprechaun marker is shown in at least one dark-yellow frame and at least one distinct flash-color frame."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-019",
+              "zh": "A drag selection is released with an area of at least 10000 square game units → The drag-selection rectangle is replaced by a persistent patrol-region rectangle in the playfield.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-028",
+              "zh": "A unicorn is in the after-meet state during herd update while a patrol-region rectangle is visible → The patrol-region rectangle disappears from the playfield.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-flash-v8.3-rubric2-imported-licensed17-recovery16-20260911-180228",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-11T18:14:21+08:00",
+          "finishedAt": "2026-09-11T18:46:06+08:00",
+          "totalDurationMs": 1904930,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-11T18:14:21+08:00",
+              "finishedAt": "2026-09-11T18:25:49+08:00",
+              "durationMs": 687827,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-11T18:25:49+08:00",
+              "finishedAt": "2026-09-11T18:37:30+08:00",
+              "durationMs": 701250,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-11T18:37:30+08:00",
+              "finishedAt": "2026-09-11T18:37:30+08:00",
+              "durationMs": 277,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-11T18:37:30+08:00",
+              "finishedAt": "2026-09-11T18:41:07+08:00",
+              "durationMs": 216749,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-11T18:41:07+08:00",
+              "finishedAt": "2026-09-11T18:46:06+08:00",
+              "durationMs": 298795,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
       "deepseek-v4-pro": {
         "status": "completed",
         "runId": "deepseek-v4-pro-v8.3-rubric2-imported-licensed4-20260911-103726",
