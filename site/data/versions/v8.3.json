@@ -34735,6 +34735,99 @@
             }
           ]
         }
+      },
+      "deepseek-v4-pro": {
+        "status": "completed",
+        "runId": "deepseek-v4-pro-v8.3-rubric2-imported-licensed4-20260911-103726",
+        "score": {
+          "display": "90.63 (+3.13)",
+          "base": 90.63,
+          "passed": 29,
+          "denominator": 32,
+          "dynamic": 1,
+          "dynamicAddition": 3.13,
+          "potential": 93.75
+        },
+        "visualQuality": {
+          "score": 89.75,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48,
+          "renderingStyleAverage": 41.75,
+          "videosScored": 8
+        },
+        "traceCount": 8,
+        "playPath": "games-v8.3/lepricons-rush/deepseek-v4-pro/index.html",
+        "previewPath": "previews-v8.3/lepricons-rush/deepseek-v4-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-008",
+              "zh": "A down movement request is processed during active play while movement input cooldown is inactive → Within 0.5 seconds, the leprechaun marker's center shifts downward from its position at the moment the request is accepted."
+            },
+            {
+              "id": "target-031",
+              "zh": "A leprechaun knock is processed while at least three flowers are visible → The visible flower count decreases by three flower markers."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-024",
+              "zh": "A homing bomb has less than 1700 milliseconds of life remaining and its speed is below 300 game units per second → The homing bomb projectile disappears from the playfield, and a light-cyan circular explosion flash appears at the projectile's last position.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-pro-v8.3-rubric2-imported-licensed4-20260911-103726",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-11T11:23:27+08:00",
+          "finishedAt": "2026-09-11T12:11:16+08:00",
+          "totalDurationMs": 2869324,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-11T11:23:27+08:00",
+              "finishedAt": "2026-09-11T11:36:50+08:00",
+              "durationMs": 802739,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-11T11:36:50+08:00",
+              "finishedAt": "2026-09-11T12:04:33+08:00",
+              "durationMs": 1663230,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-11T12:04:33+08:00",
+              "finishedAt": "2026-09-11T12:04:33+08:00",
+              "durationMs": 263,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-11T12:04:33+08:00",
+              "finishedAt": "2026-09-11T12:05:45+08:00",
+              "durationMs": 71844,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-11T12:05:45+08:00",
+              "finishedAt": "2026-09-11T12:11:16+08:00",
+              "durationMs": 331215,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "shooooooot": {
