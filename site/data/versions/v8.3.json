@@ -35407,6 +35407,132 @@
             }
           ]
         }
+      },
+      "gpt-5.4": {
+        "status": "completed",
+        "runId": "gpt-5.4-v8.3-rubric2-licensed22-20260910-140250",
+        "score": {
+          "display": "85.96 (+3.51)",
+          "base": 85.96,
+          "passed": 49,
+          "denominator": 57,
+          "dynamic": 2,
+          "dynamicAddition": 3.51,
+          "potential": 89.47
+        },
+        "visualQuality": {
+          "score": 93.63,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.38,
+          "renderingStyleAverage": 45.25,
+          "videosScored": 8
+        },
+        "traceCount": 8,
+        "playPath": "games-v8.3/prism-paddock/gpt-5.4/index.html",
+        "previewPath": "previews-v8.3/prism-paddock/gpt-5.4.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-048",
+              "zh": "The player clicks a nonmatching decoration after making progress in an active quest → The quest highlight resets to the first required decoration in the sequence."
+            },
+            {
+              "id": "target-056",
+              "zh": "The unicorn selects a left-adjacent tile during an idle wander step → The unicorn moves one grass tile to the left and faces left."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-041",
+              "zh": "A placed flower decoration is rendered after its placement pop-in animation has completed → A flower decoration is visible on its grass tile.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-042",
+              "zh": "A placed mushroom decoration is rendered after its placement pop-in animation has completed → A mushroom decoration is visible on its grass tile.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-043",
+              "zh": "A placed crystal decoration is rendered after its placement pop-in animation has completed → A crystal decoration is visible on its grass tile.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-051",
+              "zh": "A rainbow color unlock celebration finishes landing on its palette swatch → The newly unlocked color swatch in the bottom palette is shown in full color instead of dimmed grayscale.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-039",
+              "zh": "The player releases a dragged shop item on a grass tile that already contains a decoration → The old decoration disappears from that tile and is replaced by the newly placed decoration.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-040",
+              "zh": "The player releases a dragged shop item when no valid grass-tile placement preview is visible → No new plant decoration is added to the grass.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.4-v8.3-rubric2-licensed22-20260910-140250",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-10T17:21:41+08:00",
+          "finishedAt": "2026-09-10T18:22:20+08:00",
+          "totalDurationMs": 3639059,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-10T17:21:41+08:00",
+              "finishedAt": "2026-09-10T17:29:05+08:00",
+              "durationMs": 443143,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-10T17:29:05+08:00",
+              "finishedAt": "2026-09-10T17:57:14+08:00",
+              "durationMs": 1688965,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-10T17:57:14+08:00",
+              "finishedAt": "2026-09-10T18:11:48+08:00",
+              "durationMs": 874799,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-10T18:11:48+08:00",
+              "finishedAt": "2026-09-10T18:11:49+08:00",
+              "durationMs": 298,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-10T18:11:49+08:00",
+              "finishedAt": "2026-09-10T18:13:40+08:00",
+              "durationMs": 111687,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-10T18:13:40+08:00",
+              "finishedAt": "2026-09-10T18:22:20+08:00",
+              "durationMs": 520003,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "dewdrop-farm": {
