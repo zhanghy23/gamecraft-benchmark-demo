@@ -36795,6 +36795,220 @@
             }
           ]
         }
+      },
+      "deepseek-v4-flash": {
+        "status": "completed",
+        "runId": "deepseek-v4-flash-v8.3-rubric2-imported-licensed17-recovery16-20260911-180228",
+        "score": {
+          "display": "47.37 (+10.53)",
+          "base": 47.37,
+          "passed": 27,
+          "denominator": 57,
+          "dynamic": 6,
+          "dynamicAddition": 10.53,
+          "potential": 57.89
+        },
+        "visualQuality": {
+          "score": 90.09,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.55,
+          "renderingStyleAverage": 42.55,
+          "videosScored": 11
+        },
+        "traceCount": 11,
+        "playPath": "games-v8.3/prism-paddock/deepseek-v4-flash/index.html",
+        "previewPath": "previews-v8.3/prism-paddock/deepseek-v4-flash.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-013",
+              "zh": "The player releases a dragged color fragment away from the unicorn → The floating color fragment disappears, and the bottom help text remains “Drag a color onto the unicorn to feed her.”"
+            },
+            {
+              "id": "target-016",
+              "zh": "The unicorn finishes the chewing interval after an accepted color fragment and a free destination tile exists → The unicorn begins walking away from its current tile toward another grass tile."
+            },
+            {
+              "id": "target-017",
+              "zh": "The unicorn reaches its poop destination after being fed → A butterfly-poop appears on the tile the unicorn was occupying, and the unicorn steps onto an adjacent tile."
+            },
+            {
+              "id": "target-020",
+              "zh": "The first butterfly-poop has appeared and the unicorn finishes stepping away from it → The unicorn shows a shocked pose and a speech bubble appears with the text “Oops... I made a butterfly-poop... Can you clean it up, please?”."
+            },
+            {
+              "id": "target-021",
+              "zh": "The player clicks a grass tile containing butterfly-poop → The butterfly-poop disappears from that tile and butterfly icons fly from that tile toward the top status bar."
+            },
+            {
+              "id": "target-022",
+              "zh": "The player cleans a non-rainbow butterfly-poop → Three butterfly icons fly from the cleaned tile toward the matching color counter in the top status bar."
+            },
+            {
+              "id": "target-025",
+              "zh": "A color-counter butterfly flight finishes after a cleanup reward → Within 1 second after the flight icon reaches the destination counter, the number beside that counter equals the number shown immediately before the cleanup plus 3."
+            },
+            {
+              "id": "target-033",
+              "zh": "The player begins a real drag from an enabled shop item card → A floating plant sprite matching the selected shop item appears under the pointer."
+            },
+            {
+              "id": "target-034",
+              "zh": "The player begins a real drag from an enabled shop item card onto a valid grass tile → A plant placement preview appears on the target grass tile."
+            },
+            {
+              "id": "target-037",
+              "zh": "The player drags a shop item over a grass tile that already contains a decoration → The plant placement preview appears on that tile and the existing decoration on that tile is hidden while the preview is visible."
+            },
+            {
+              "id": "target-038",
+              "zh": "The player releases a dragged shop item while its placement preview is on a valid grass tile → The placement preview is replaced by a placed plant decoration on that grass tile."
+            },
+            {
+              "id": "target-039",
+              "zh": "The player releases a dragged shop item on a grass tile that already contains a decoration → The old decoration disappears from that tile and is replaced by the newly placed decoration."
+            },
+            {
+              "id": "target-045",
+              "zh": "The active green quest is started with its full required lineup on the board → The required plant decorations for the quest are highlighted on the grass."
+            },
+            {
+              "id": "target-049",
+              "zh": "The player clicks the final highlighted correct decoration in an active quest sequence → The quest speech bubble is not visible, and a glowing rainbow arc overlay with centered unlock text is visible over the game view."
+            },
+            {
+              "id": "target-050",
+              "zh": "A rainbow color beyond the initial red becomes newly unlocked through progression → A glowing rainbow arc overlay spans the game view, with centered text naming that color followed by “unlocked!”."
+            },
+            {
+              "id": "target-052",
+              "zh": "The green unlock celebration finishes → A speech bubble sequence begins beside the unicorn with the text “I'd never have figured that out on my own!”."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-023",
+              "zh": "The player cleans a rainbow butterfly-poop → Butterfly icons fly from the cleaned tile toward every visible color counter in the top status bar.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-027",
+              "zh": "The player taps a different enabled color swatch in the bottom palette while the shop panel is open → The selected-swatch highlight moves to the tapped color swatch and the shop panel remains visible.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-030",
+              "zh": "The shop panel is rendered after blue has been unlocked and at least one flower decoration has been placed → The shop panel shows Flower, Mushroom, and Crystal item cards.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-041",
+              "zh": "A placed flower decoration is rendered after its placement pop-in animation has completed → A flower decoration is visible on its grass tile.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-042",
+              "zh": "A placed mushroom decoration is rendered after its placement pop-in animation has completed → A mushroom decoration is visible on its grass tile.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-043",
+              "zh": "A placed crystal decoration is rendered after its placement pop-in animation has completed → A crystal decoration is visible on its grass tile.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-046",
+              "zh": "The violet quest begins → A quest speech bubble appears beside the unicorn, and the required plant decorations for the violet sequence are highlighted on the grass.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-056",
+              "zh": "The unicorn selects a left-adjacent tile during an idle wander step → The unicorn moves one grass tile to the left and faces left.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-035",
+              "zh": "The player drags a shop item over the tile occupied by the unicorn → No plant placement preview is shown on the unicorn’s tile.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-036",
+              "zh": "The player drags a shop item over a tile containing butterfly-poop → No plant placement preview is shown on the butterfly-poop tile.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-040",
+              "zh": "The player releases a dragged shop item when no valid grass-tile placement preview is visible → No new plant decoration is added to the grass.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-047",
+              "zh": "The player clicks the currently highlighted correct decoration during an active quest before the last required step → The highlight moves to the next required decoration in the quest sequence.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-048",
+              "zh": "The player clicks a nonmatching decoration after making progress in an active quest → The quest highlight resets to the first required decoration in the sequence.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-053",
+              "zh": "The blue unlock celebration finishes → A speech bubble appears with the text “They say there are magic crystals that draw their power from the sea... Can you believe that?”.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-flash-v8.3-rubric2-imported-licensed17-recovery16-20260911-180228",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-11T20:25:40+08:00",
+          "finishedAt": "2026-09-11T22:42:17+08:00",
+          "totalDurationMs": 8197535,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-11T20:25:40+08:00",
+              "finishedAt": "2026-09-11T20:45:06+08:00",
+              "durationMs": 1166128,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-11T20:45:06+08:00",
+              "finishedAt": "2026-09-11T22:30:29+08:00",
+              "durationMs": 6323104,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-11T22:30:29+08:00",
+              "finishedAt": "2026-09-11T22:30:30+08:00",
+              "durationMs": 462,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-11T22:30:30+08:00",
+              "finishedAt": "2026-09-11T22:31:45+08:00",
+              "durationMs": 75919,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-11T22:31:45+08:00",
+              "finishedAt": "2026-09-11T22:42:17+08:00",
+              "durationMs": 631889,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "dewdrop-farm": {
