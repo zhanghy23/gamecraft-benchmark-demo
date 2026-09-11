@@ -34160,6 +34160,197 @@
             }
           ]
         }
+      },
+      "deepseek-v4-flash": {
+        "status": "completed",
+        "runId": "deepseek-v4-flash-v8.3-rubric2-imported-licensed17-20260911-103726",
+        "score": {
+          "display": "43.90 (+39.02)",
+          "base": 43.9,
+          "passed": 18,
+          "denominator": 41,
+          "dynamic": 16,
+          "dynamicAddition": 39.02,
+          "potential": 82.93
+        },
+        "visualQuality": {
+          "score": 91,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.14,
+          "renderingStyleAverage": 42.86,
+          "videosScored": 7
+        },
+        "traceCount": 7,
+        "playPath": "games-v8.3/rainbow-assault/deepseek-v4-flash/index.html",
+        "previewPath": "previews-v8.3/rainbow-assault/deepseek-v4-flash.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-008",
+              "zh": "The jump control is pressed while the player character is standing during active gameplay → The player character leaves the ground and follows an upward jump arc."
+            },
+            {
+              "id": "target-015",
+              "zh": "The fire control is pressed while the player has the normal weapon ready, is facing left, and is not aiming upward → One projectile appears at the player character and travels to the left across the gameplay area."
+            },
+            {
+              "id": "target-024",
+              "zh": "A non-boss enemy's firing interval is reached while the player character is within its firing range → One enemy projectile appears at the enemy and travels toward the player character."
+            },
+            {
+              "id": "target-027",
+              "zh": "A player-fired projectile defeats a non-boss enemy → The enemy is no longer visible at its collision position, explosion particles are visible at that position, and within 1 second the score readout changes to a value 100 points higher than the score readout visible immediately before the projectile hit."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-016",
+              "zh": "The fire control is pressed while the player has the normal weapon ready and is aiming upward → One projectile appears above the player character and travels upward through the gameplay area.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-037",
+              "zh": "An enemy projectile collides with the player character while the player has more than 10% health → The enemy projectile disappears, red hit particles appear at the player character, and the health bar fill endpoint shifts left by 10% of the full health-bar frame width within 1 second, with a tolerance of ±5% of the full frame width.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-038",
+              "zh": "An enemy projectile collides with the player character when the hit reduces player health to zero → The enemy projectile disappears and a menu overlay is shown with the title text \"MISSION FAILED!\", a subtitle beginning with \"Final Score:\", and a button labeled \"RETRY\".",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-012",
+              "zh": "The on-screen joystick is dragged to the right from its neutral position → The joystick knob is displayed to the right of the center of the joystick base.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-013",
+              "zh": "The on-screen joystick is released after being dragged away from its neutral position → The joystick knob returns to the center of the joystick base.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-022",
+              "zh": "A boss enemy spawn is selected while the score is above 1200 and no other boss is present → A boss enemy appears on the right side of the gameplay area with a visible health bar above it.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-023",
+              "zh": "A boss enemy is farther than its stopping distance to the right of the player character during active gameplay → The boss moves left toward the player character while both remain visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-025",
+              "zh": "A boss enemy's firing interval is reached while the player character is within its firing range → Three enemy projectiles appear at the boss: one central projectile and two angled projectiles on either side, all traveling toward the player character.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-028",
+              "zh": "A player-fired projectile defeats a boss enemy → The boss is no longer visible at its collision position, explosion particles are visible at that position, and within 1 second the score readout changes to a value 500 points higher than the score readout visible immediately before the projectile hit.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-029",
+              "zh": "An enemy defeat produces a power-up drop → A power-up icon appears at the defeated enemy's position.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-030",
+              "zh": "A rapid power-up is visible during active gameplay → The power-up is shown as an icon with the letter \"R\" centered inside it.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-031",
+              "zh": "A fan-weapon power-up is visible during active gameplay → The power-up is shown as an icon with the letter \"S\" centered inside it.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-032",
+              "zh": "A healing power-up is visible during active gameplay → The power-up is shown as an icon with a heart symbol centered inside it.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-033",
+              "zh": "A power-up is above its resting ground height during active gameplay → The power-up descends toward the ground.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-034",
+              "zh": "The player character contacts a non-healing power-up during active gameplay → The power-up icon disappears from the gameplay area.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-035",
+              "zh": "The player character with 70% health or less contacts a healing power-up during active gameplay → The healing power-up icon disappears, and the health bar fill endpoint shifts right by 30% of the full health-bar frame width within 1 second, with a tolerance of ±10% of the full frame width.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-036",
+              "zh": "The player character with above 70% health contacts a healing power-up during active gameplay → The healing power-up icon disappears, and the health bar fill reaches the full width of the health-bar frame within 1 second.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-040",
+              "zh": "The player character remains in contact with an enemy when the contact damage reduces player health to zero → A menu overlay is shown with the title text \"MISSION FAILED!\", a subtitle beginning with \"Final Score:\", and a button labeled \"RETRY\".",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-041",
+              "zh": "The retry button is activated while the mission-failed menu overlay is visible → The mission-failed menu overlay disappears and a new gameplay run is shown with the HUD visible.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-flash-v8.3-rubric2-imported-licensed17-20260911-103726",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-11T10:44:55+08:00",
+          "finishedAt": "2026-09-11T12:11:52+08:00",
+          "totalDurationMs": 5217355,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-11T10:44:55+08:00",
+              "finishedAt": "2026-09-11T10:58:17+08:00",
+              "durationMs": 801997,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-11T10:58:17+08:00",
+              "finishedAt": "2026-09-11T12:04:30+08:00",
+              "durationMs": 3973398,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-11T12:04:30+08:00",
+              "finishedAt": "2026-09-11T12:04:30+08:00",
+              "durationMs": 272,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-11T12:04:30+08:00",
+              "finishedAt": "2026-09-11T12:05:24+08:00",
+              "durationMs": 53837,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-11T12:05:24+08:00",
+              "finishedAt": "2026-09-11T12:11:52+08:00",
+              "durationMs": 387820,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "lepricons-rush": {
