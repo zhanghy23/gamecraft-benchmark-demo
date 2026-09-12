@@ -41331,6 +41331,126 @@
             }
           ]
         }
+      },
+      "gpt-5.4": {
+        "status": "completed",
+        "runId": "gpt-5.4-v8.3-rubric2-licensed22-recovery15-20260911-180228",
+        "score": {
+          "display": "92.55 (+4.26)",
+          "base": 92.55,
+          "passed": 87,
+          "denominator": 94,
+          "dynamic": 4,
+          "dynamicAddition": 4.26,
+          "potential": 96.81
+        },
+        "visualQuality": {
+          "score": 94.06,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.53,
+          "renderingStyleAverage": 45.53,
+          "videosScored": 34
+        },
+        "traceCount": 34,
+        "playPath": "games-v8.3/unicorn-storm/gpt-5.4/index.html",
+        "previewPath": "previews-v8.3/unicorn-storm/gpt-5.4.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-042",
+              "zh": "The player activates \"CLEAR\" in pattern-composition mode after at least one note has been added → The pattern timeline note markers disappear and the screen remains on the \"make a pattern\" composer."
+            },
+            {
+              "id": "target-072",
+              "zh": "A flying unicorn copy reaches the top playfield boundary → The copy remains inside the playfield and reverses from upward motion to downward motion."
+            },
+            {
+              "id": "target-075",
+              "zh": "Two bonus-eligible unicorn leap effects intersect in midair while the current score multiplier is x5 → A burst effect appears at the intersection point and a yellow floating \"+1250\" score popup appears there."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-003",
+              "zh": "The player taps the screen while the paused overlay is visible and audio can resume → The \"paused\" and \"tap anywhere to resume\" overlay is no longer visible, revealing the gameplay screen underneath.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-032",
+              "zh": "A shared jam replay frame is rendered for a shared jam with a name → The screen shows the shared jam name and the normal score HUD line is not displayed.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-080",
+              "zh": "A round celebration is triggered with accuracy at least 0.5 and below 0.8 → One center-unicorn leap effect occurs during the celebration, and no rainbow arc appears from this celebration.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-085",
+              "zh": "A round result overlay is shown after at least one midair bonus collision occurred during the round → A line ending in \"midair bonus\" appears below the match percentage on the result overlay.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.4-v8.3-rubric2-licensed22-recovery15-20260911-180228",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-12T00:11:26+08:00",
+          "finishedAt": "2026-09-12T02:09:54+08:00",
+          "totalDurationMs": 7108225,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-12T00:11:26+08:00",
+              "finishedAt": "2026-09-12T00:21:30+08:00",
+              "durationMs": 603795,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-12T00:21:30+08:00",
+              "finishedAt": "2026-09-12T00:49:50+08:00",
+              "durationMs": 1699750,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-12T00:49:50+08:00",
+              "finishedAt": "2026-09-12T01:39:44+08:00",
+              "durationMs": 2993966,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-12T01:39:44+08:00",
+              "finishedAt": "2026-09-12T01:39:44+08:00",
+              "durationMs": 472,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-12T01:39:44+08:00",
+              "finishedAt": "2026-09-12T01:44:37+08:00",
+              "durationMs": 292517,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-12T01:44:37+08:00",
+              "finishedAt": "2026-09-12T02:09:54+08:00",
+              "durationMs": 1517565,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "oh-no-my-rainbow": {
