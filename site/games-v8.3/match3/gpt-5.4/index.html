@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emoji Match-3 Suite</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+    html, body { margin: 0; min-height: 100%; background: #f6edff; overflow: hidden; }
+    #app { width: 100vw; height: 100vh; display: flex; flex-direction: column; align-items: center; }
+    #controls { height: 58px; display: flex; align-items: center; justify-content: center; gap: 14px; flex: 0 0 auto; }
+    #controls button { border: 0; border-radius: 999px; padding: 11px 22px; background: #ffffff; color: #7b3ff2; font-weight: 800; font-size: 16px; box-shadow: 0 5px 16px rgba(75, 35, 160, 0.20); cursor: pointer; }
+    #controls button:hover, #controls button.active { background: #7b3ff2; color: white; }
+    #header { height: 38px; display: flex; align-items: center; justify-content: center; gap: 22px; color: #4b2c7f; font-weight: 900; font-size: 20px; flex: 0 0 auto; text-shadow: 0 1px 0 white; }
+    canvas { flex: 1 1 auto; width: 100vw; min-height: 0; outline: none; touch-action: none; display: block; }
+  </style>
+  <script type="module" crossorigin src="./assets/index-CU9bE1-Q.js"></script>
+</head>
+<body>
+  <div id="app">
+    <div id="controls" aria-label="Game modes"></div>
+    <div id="header"></div>
+    <canvas id="game" width="1280" height="624" tabindex="0" aria-label="Emoji match three board"></canvas>
+  </div>
+</body>
+</html>

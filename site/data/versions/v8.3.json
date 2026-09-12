@@ -40582,6 +40582,151 @@
             }
           ]
         }
+      },
+      "gpt-5.4": {
+        "status": "completed",
+        "runId": "gpt-5.4-v8.3-rubric2-licensed22-recovery15-20260911-180228",
+        "score": {
+          "display": "76.00 (+18.00)",
+          "base": 76,
+          "passed": 38,
+          "denominator": 50,
+          "dynamic": 9,
+          "dynamicAddition": 18,
+          "potential": 94
+        },
+        "visualQuality": {
+          "score": 79.5,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 44.21,
+          "renderingStyleAverage": 35.29,
+          "videosScored": 14
+        },
+        "traceCount": 14,
+        "playPath": "games-v8.3/match3/gpt-5.4/index.html",
+        "previewPath": "previews-v8.3/match3/gpt-5.4.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-005",
+              "zh": "A fresh playable tile board has been generated for active play → The full grid is visible with no three matching tiles adjacent in an unbroken horizontal row, no three matching tiles adjacent in an unbroken vertical column, and at least one adjacent tile pair whose exchange would create three matching tiles in an unbroken horizontal row or vertical column."
+            },
+            {
+              "id": "target-038",
+              "zh": "A completed valid move leaves the board with no valid moves available → The tile grid is replaced with a full tile grid whose emoji arrangement is not identical to the immediately preceding grid, while the current mode header remains visible."
+            },
+            {
+              "id": "target-043",
+              "zh": "A Levels mode advancement reaches level 12 → The board is replaced with a full new tile grid and the header displays \"Level: 12\", \"Score: 0\", \"Moves: 10\", and \"Target: 6500\"."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-024",
+              "zh": "The player presses ArrowLeft while a board tile is selected during active play and the tile directly to the left is accepted as a move target → The selected tile and the tile directly to the left visibly exchange positions on the board.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-025",
+              "zh": "The player presses ArrowRight while a board tile is selected during active play and the tile directly to the right is accepted as a move target → The selected tile and the tile directly to the right visibly exchange positions on the board.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-030",
+              "zh": "The player presses Enter during active play while another tile is selected and the keyboard cursor is on an adjacent grid tile that is accepted as a move → The selected tile and the keyboard cursor tile visibly exchange positions on the board.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-045",
+              "zh": "The player clicks while the Levels loss overlay is showing → The \"Out of Moves!\" overlay disappears and a fresh Levels game is rendered with \"Level: 1\" and \"Score: 0\" in the header.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-048",
+              "zh": "The Time Attack countdown update reaches zero while the game is not already over → A game-over overlay appears with the red title text \"Time's Up!\".",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-050",
+              "zh": "The player clicks while the Time Attack loss overlay is showing → The \"Time's Up!\" overlay disappears and a new Time Attack board is rendered.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-012",
+              "zh": "The player clicks a non-adjacent grid tile while another tile is selected during active play → The selection outline moves from the previously selected tile to the clicked tile, and the two tiles do not exchange positions.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-031",
+              "zh": "The player presses Enter during active play while another tile is selected and the keyboard cursor is on an adjacent grid tile that is rejected as an invalid swap → The two tiles exchange positions, then return to their original grid cells; after the return, no selection outline is visible.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-046",
+              "zh": "The player presses Enter while the Levels loss overlay is showing → The \"Out of Moves!\" overlay disappears and a fresh Levels game is rendered with \"Level: 1\" and \"Score: 0\" in the header.",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.4-v8.3-rubric2-licensed22-recovery15-20260911-180228",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-11T20:32:07+08:00",
+          "finishedAt": "2026-09-12T00:11:26+08:00",
+          "totalDurationMs": 13158066,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-11T20:32:08+08:00",
+              "finishedAt": "2026-09-11T20:51:44+08:00",
+              "durationMs": 1176352,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-11T20:51:44+08:00",
+              "finishedAt": "2026-09-11T21:15:55+08:00",
+              "durationMs": 1451508,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-11T21:15:55+08:00",
+              "finishedAt": "2026-09-11T23:49:39+08:00",
+              "durationMs": 9223842,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-11T23:49:39+08:00",
+              "finishedAt": "2026-09-11T23:49:40+08:00",
+              "durationMs": 360,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-11T23:49:40+08:00",
+              "finishedAt": "2026-09-11T23:54:59+08:00",
+              "durationMs": 319236,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-11T23:54:59+08:00",
+              "finishedAt": "2026-09-12T00:11:26+08:00",
+              "durationMs": 986604,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "unicorn-storm": {
