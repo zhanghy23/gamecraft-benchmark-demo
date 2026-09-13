@@ -42912,6 +42912,43 @@
             }
           ]
         }
+      },
+      "gpt-5.4": {
+        "status": "failed",
+        "runId": "gpt-5.4-v8.3-rubric2-licensed22-recovery15-20260911-180228",
+        "stage": "trace",
+        "score": null,
+        "traceCount": 0,
+        "playPath": null,
+        "previewPath": null,
+        "unmet": null,
+        "issue": "GPT-5.4已生成源码并通过确定性构建与运行检查；Trace阶段完成52条初始Trace并成功处理首批Probe Plan后，第2/6批Probe Plan请求被Compliance Gateway以HTTP 403拒绝，后端错误为解析bigc.byteintl.net发生I/O超时。该项记录为共享网络基础设施失败，无功能分、无画面分且不可试玩。",
+        "timing": {
+          "runId": "gpt-5.4-v8.3-rubric2-licensed22-recovery15-20260911-180228",
+          "status": "failed",
+          "failedStage": "trace",
+          "startedAt": "2026-09-12T02:38:48+08:00",
+          "finishedAt": "2026-09-12T02:57:24+08:00",
+          "totalDurationMs": 1116080,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-12T02:38:48+08:00",
+              "finishedAt": "2026-09-12T02:41:28+08:00",
+              "durationMs": 159827,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-12T02:41:28+08:00",
+              "finishedAt": "2026-09-12T02:57:24+08:00",
+              "durationMs": 956110,
+              "status": "failed",
+              "exitCode": 1
+            }
+          ]
+        }
       }
     },
     "rainbow-run": {
