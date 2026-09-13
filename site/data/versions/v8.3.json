@@ -40457,6 +40457,35 @@
             }
           ]
         }
+      },
+      "deepseek-v4-flash": {
+        "status": "failed",
+        "runId": "deepseek-v4-flash-v8.3-rubric2-imported-licensed17-recovery16-20260911-180228",
+        "stage": "trace",
+        "score": null,
+        "traceCount": 0,
+        "playPath": null,
+        "previewPath": null,
+        "unmet": null,
+        "issue": "复用本机真实生成源码进入Trace并完成69条初始Trace；第3/7批Probe Plan三次尝试仍因single_probe锚点在src/game.ts中不唯一而被拒绝（最后仍出现2次），重试耗尽后终止。该项记录为Trace规划失败，无功能分、无画面分且不可试玩。",
+        "timing": {
+          "runId": "deepseek-v4-flash-v8.3-rubric2-imported-licensed17-recovery16-20260911-180228",
+          "status": "failed",
+          "failedStage": "trace",
+          "startedAt": "2026-09-12T07:37:35+08:00",
+          "finishedAt": "2026-09-12T07:57:39+08:00",
+          "totalDurationMs": 1203282,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-12T07:37:35+08:00",
+              "finishedAt": "2026-09-12T07:57:39+08:00",
+              "durationMs": 1203265,
+              "status": "failed",
+              "exitCode": 1
+            }
+          ]
+        }
       }
     },
     "match3": {
