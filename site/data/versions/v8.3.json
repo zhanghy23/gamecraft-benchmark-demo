@@ -42913,6 +42913,59 @@
           ]
         }
       },
+      "minimax-m2.7": {
+        "status": "failed",
+        "runId": "minimax-m2.7-v8.3-rubric2-imported-licensed20-recovery11-20260911-180228",
+        "stage": "replay",
+        "score": null,
+        "traceCount": 0,
+        "playPath": null,
+        "previewPath": null,
+        "unmet": null,
+        "issue": "复用本机真实生成源码完成Trace和三轮selection，但49个可验证探针最终零覆盖；零覆盖兜底在optimize阶段保留1条1360ms纯视觉Trace，最终Replay仍因Canvas节点存在但始终隐藏而等待超时，未生成有效视频或最终报告。该项记录为生成源码运行/Replay失败，无功能分、无画面分且不可试玩。",
+        "timing": {
+          "runId": "minimax-m2.7-v8.3-rubric2-imported-licensed20-recovery11-20260911-180228",
+          "status": "failed",
+          "failedStage": "replay",
+          "startedAt": "2026-09-12T00:40:08+08:00",
+          "finishedAt": "2026-09-12T03:31:54+08:00",
+          "totalDurationMs": 10306326,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-12T00:40:08+08:00",
+              "finishedAt": "2026-09-12T01:02:45+08:00",
+              "durationMs": 1357605,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-12T01:02:45+08:00",
+              "finishedAt": "2026-09-12T03:31:33+08:00",
+              "durationMs": 8927529,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-12T03:31:33+08:00",
+              "finishedAt": "2026-09-12T03:31:33+08:00",
+              "durationMs": 264,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-12T03:31:33+08:00",
+              "finishedAt": "2026-09-12T03:31:54+08:00",
+              "durationMs": 20900,
+              "status": "failed",
+              "exitCode": 1
+            }
+          ]
+        }
+      },
       "gpt-5.4": {
         "status": "failed",
         "runId": "gpt-5.4-v8.3-rubric2-licensed22-recovery15-20260911-180228",
