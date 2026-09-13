@@ -41332,6 +41332,211 @@
           ]
         }
       },
+      "minimax-m2.7": {
+        "status": "completed",
+        "runId": "minimax-m2.7-v8.3-rubric2-imported-licensed20-recovery11-20260911-180228",
+        "score": {
+          "display": "72.34 (+9.57)",
+          "base": 72.34,
+          "passed": 68,
+          "denominator": 94,
+          "dynamic": 9,
+          "dynamicAddition": 9.57,
+          "potential": 81.91
+        },
+        "visualQuality": {
+          "score": 94.12,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.39,
+          "renderingStyleAverage": 45.73,
+          "videosScored": 33
+        },
+        "traceCount": 33,
+        "playPath": "games-v8.3/unicorn-storm/minimax-m2.7/index.html",
+        "previewPath": "previews-v8.3/unicorn-storm/minimax-m2.7.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-006",
+              "zh": "The player activates the beat toggle while its visible label reads \"BEAT ON\" → The beat toggle's visible label changes to \"BEAT OFF\"."
+            },
+            {
+              "id": "target-065",
+              "zh": "The player enters an extra note during response when no unjudged pattern slot is inside the timing window while the score HUD is visible → A floating \"extra\" label appears at the activated unicorn, and the bottom score HUD current-score number remains unchanged during the following half second."
+            },
+            {
+              "id": "target-071",
+              "zh": "A flying unicorn copy reaches the left playfield wall → The copy remains inside the playfield and reverses from leftward motion to rightward motion."
+            },
+            {
+              "id": "target-087",
+              "zh": "A round result overlay is shown after a completed round with accuracy at least 0.5 and no mid-pattern restart → The result choices include \"NEXT!\" with the subtitle \"one note longer\"."
+            },
+            {
+              "id": "target-094",
+              "zh": "A weather lightning timer elapses during a rendered frame → A forked lightning bolt appears in the sky and a pale flash overlays the scene."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-032",
+              "zh": "A shared jam replay frame is rendered for a shared jam with a name → The screen shows the shared jam name and the normal score HUD line is not displayed.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-033",
+              "zh": "A shared jam replay reaches its end → The display returns to the title screen with \"UNICORN STORM\" near the upper center.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-038",
+              "zh": "The player enters the first note in an empty pattern-composition sequence → A visible pattern timeline appears with one colored note marker.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-040",
+              "zh": "The player enters a note while the pattern-composition timeline contains exactly one note → The visible pattern timeline contains two colored note markers and the \"DONE\" control is shown as the gold action button.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-048",
+              "zh": "The player types into the name input while the share panel is open and the share-link input is visible → The typed name appears in the name input, and the visible URL text in the share-link input updates.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-066",
+              "zh": "The response window ends while one or more pattern notes have not been played → A red \"missed\" label appears above each unicorn whose expected note was not played, and the round advances to the result overlay.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-070",
+              "zh": "A scheduled unicorn leap effect reaches its scheduled display time → A flying unicorn copy appears from the herd row at the scheduled unicorn position and begins moving through the playfield.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-075",
+              "zh": "Two bonus-eligible unicorn leap effects intersect in midair while the current score multiplier is x5 → A burst effect appears at the intersection point and a yellow floating \"+1250\" score popup appears there.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-078",
+              "zh": "A round celebration is triggered with accuracy at least 0.9 and below 0.95 → Two rainbow arcs appear behind the playfield and at least four unicorn leap effects occur during the celebration.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-079",
+              "zh": "A round celebration is triggered with accuracy at least 0.8 and below 0.9 → Three unicorn leap effects occur in sequence during the celebration, and no rainbow arc appears from this celebration.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-080",
+              "zh": "A round celebration is triggered with accuracy at least 0.5 and below 0.8 → One center-unicorn leap effect occurs during the celebration, and no rainbow arc appears from this celebration.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-092",
+              "zh": "A round is evaluated with a current score greater than the previously displayed best score → The bottom score HUD shows the best score number updated to match the current score number.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-002",
+              "zh": "A gameplay frame is rendered while the game is paused because the audio context is not running → A dark translucent overlay covers the playfield with the centered text \"paused\" and the instruction \"tap anywhere to resume\" below it.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-031",
+              "zh": "The player activates the jam stop control after recording at least two notes → A share panel opens with a visible share-link input containing a URL.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-041",
+              "zh": "The player activates \"DONE\" in pattern-composition mode while the pattern contains at least two notes → A share panel opens with a visible share-link input containing a URL.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-042",
+              "zh": "The player activates \"CLEAR\" in pattern-composition mode after at least one note has been added → The pattern timeline note markers disappear and the screen remains on the \"make a pattern\" composer.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-044",
+              "zh": "The player activates \"HEAR\" in pattern-composition mode after at least one note has been added → The composed notes play back visibly as unicorn note-response animations in the pattern order.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-089",
+              "zh": "The player activates \"NEXT!\" on an eligible non-restart passing result overlay → A new round begins and the gameplay screen shows a countdown message beginning with \"the unicorns play in\".",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-091",
+              "zh": "The player activates an enabled \"TRY AGAIN\" choice on a result overlay after the input guard interval has passed → The result overlay disappears, the gameplay response screen appears, and a large \"GO\" text is visible near the upper part of the playfield without a \"the unicorns play in\" countdown.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-093",
+              "zh": "A new passing round begins after a completed round whose visible progress display used 15 or fewer individual note dots → The new round's progress display uses individual note dots and contains exactly one additional note dot compared with the previous completed round's progress display.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-003",
+              "zh": "The player taps the screen while the paused overlay is visible and audio can resume → The \"paused\" and \"tap anywhere to resume\" overlay is no longer visible, revealing the gameplay screen underneath.",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "minimax-m2.7-v8.3-rubric2-imported-licensed20-recovery11-20260911-180228",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-11T21:59:53+08:00",
+          "finishedAt": "2026-09-12T00:21:22+08:00",
+          "totalDurationMs": 8488950,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-11T21:59:53+08:00",
+              "finishedAt": "2026-09-11T22:36:28+08:00",
+              "durationMs": 2194935,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-11T22:36:28+08:00",
+              "finishedAt": "2026-09-11T23:53:55+08:00",
+              "durationMs": 4646935,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-11T23:53:55+08:00",
+              "finishedAt": "2026-09-11T23:53:56+08:00",
+              "durationMs": 476,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-11T23:53:56+08:00",
+              "finishedAt": "2026-09-11T23:58:20+08:00",
+              "durationMs": 264615,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-11T23:58:20+08:00",
+              "finishedAt": "2026-09-12T00:21:22+08:00",
+              "durationMs": 1381957,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
       "gpt-5.4": {
         "status": "completed",
         "runId": "gpt-5.4-v8.3-rubric2-licensed22-recovery15-20260911-180228",
