@@ -41871,6 +41871,115 @@
           ]
         }
       },
+      "minimax-m2.7": {
+        "status": "completed",
+        "runId": "minimax-m2.7-v8.3-rubric2-imported-licensed20-recovery11-20260911-180228",
+        "score": {
+          "display": "75.00 (+0.00)",
+          "base": 75,
+          "passed": 18,
+          "denominator": 24,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 75
+        },
+        "visualQuality": {
+          "score": 93,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.33,
+          "renderingStyleAverage": 44.67,
+          "videosScored": 3
+        },
+        "traceCount": 3,
+        "playPath": "games-v8.3/oh-no-my-rainbow/minimax-m2.7/index.html",
+        "previewPath": "previews-v8.3/oh-no-my-rainbow/minimax-m2.7.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-024",
+              "zh": "The post-fade black screen timer finishes after the thank-you scene → The game resets to the initial sorting scene with cards, fruits, and the progression button visible again."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-005",
+              "zh": "The current visible card arrangement has three distinct colors in the required color order during the interactive sorting phase → The progression button is drawn at full opacity.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-006",
+              "zh": "The current visible card arrangement contains fewer than three distinct colors during the interactive sorting phase → The progression button is drawn at full opacity.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-008",
+              "zh": "The hovered progression button is activated while the current visible card arrangement has three distinct colors in the required color order → The progression sequence starts: the progression button is drawn translucent during its click flicker, and large progress sprites begin appearing in the play area.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-009",
+              "zh": "The hovered progression button is activated while the visible cards contain fewer than three distinct colors → The progression sequence starts: the progression button is drawn translucent during its click flicker, and large progress sprites begin appearing in the play area.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-010",
+              "zh": "The hovered progression button is activated while the current visible card arrangement has three distinct colors in an order that is not the required color order → The progression button is drawn at alternating horizontal offsets while the cards remain in the same left-to-right slot order.",
+              "cause": "源码分析确认未实现"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "minimax-m2.7-v8.3-rubric2-imported-licensed20-recovery11-20260911-180228",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-12T00:21:23+08:00",
+          "finishedAt": "2026-09-12T00:40:07+08:00",
+          "totalDurationMs": 1124323,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-12T00:21:23+08:00",
+              "finishedAt": "2026-09-12T00:32:30+08:00",
+              "durationMs": 667580,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-12T00:32:30+08:00",
+              "finishedAt": "2026-09-12T00:37:22+08:00",
+              "durationMs": 291618,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-12T00:37:22+08:00",
+              "finishedAt": "2026-09-12T00:37:22+08:00",
+              "durationMs": 220,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-12T00:37:22+08:00",
+              "finishedAt": "2026-09-12T00:37:51+08:00",
+              "durationMs": 28970,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-12T00:37:51+08:00",
+              "finishedAt": "2026-09-12T00:40:07+08:00",
+              "durationMs": 135905,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
       "gpt-5.4": {
         "status": "completed",
         "runId": "gpt-5.4-v8.3-rubric2-licensed22-recovery15-20260911-180228",
