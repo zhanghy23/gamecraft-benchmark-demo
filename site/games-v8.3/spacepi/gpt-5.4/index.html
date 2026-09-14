@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SpacePi</title>
+  <style>
+    html,body{margin:0;height:100%;background:#050814;color:#eaf6ff;font-family:Arial,Helvetica,sans-serif;overflow:hidden}
+    #app{height:100%;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 45%,#17233d 0%,#07101f 52%,#03050c 100%)}
+    #gameWrap{position:relative;width:min(96vw,1152px);aspect-ratio:16/10;max-height:96vh;box-shadow:0 0 35px #000;border:2px solid #334a72;background:#020611}
+    canvas{position:absolute;inset:0;width:100%;height:100%;display:block;background:#020611;cursor:crosshair}
+    #overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
+    .panel{pointer-events:auto;max-width:86%;max-height:90%;overflow:auto;background:rgba(4,10,24,.94);border:2px solid #79d5ff;border-radius:14px;padding:18px 24px;box-shadow:0 0 28px rgba(69,190,255,.35);text-align:center}
+    h1{font-size:54px;margin:4px 0 12px;color:#8be7ff;text-shadow:0 0 12px #08a7ff} h2{margin:6px 0 12px;color:#fff} h3{margin:12px 0 6px;color:#ffe28a}
+    p{line-height:1.35}.row{display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap}.grid{display:grid;grid-template-columns:repeat(13,minmax(54px,1fr));gap:7px;margin:10px 0 16px}.upgrades{display:grid;grid-template-columns:1fr;gap:7px;margin-top:8px}.levelBtn,.upgradeBtn,button{background:#142849;color:#eaf6ff;border:1px solid #79d5ff;border-radius:8px;padding:8px 12px;font-weight:bold;cursor:pointer}button:hover,.levelBtn:hover,.upgradeBtn:hover{background:#1f3d70}.disabled{opacity:.42;filter:grayscale(.7);cursor:not-allowed}.levelBtn{min-height:62px}.scoreArea{font-size:12px;color:#d8ecff;margin-top:3px}.perfect{display:inline-block;margin-left:3px;color:#8cff9d;text-shadow:0 0 8px #36ff50}.funds{font-size:22px;font-weight:bold;color:#aaffca}.funds.notEnough{color:#ff5b5b;text-shadow:0 0 10px #ff2020}.guide{display:flex;gap:22px;justify-content:center;align-items:center;margin:10px 0}.sample{width:170px;height:72px;border:1px solid #35547e;border-radius:8px;background:#07142a;position:relative}.lineSample{position:absolute;height:5px;border-radius:5px;transform-origin:left center;left:32px;top:34px}.defensive{width:105px;background:#64ff8b;transform:rotate(-17deg);box-shadow:0 0 9px #64ff8b}.enemy{width:110px;background:#ff5366;transform:rotate(19deg);box-shadow:0 0 9px #ff5366}.statTable{display:grid;grid-template-columns:auto auto auto;gap:8px 18px;text-align:left;margin:12px auto;max-width:620px}.note{color:#ffe28a}.good{color:#8cff9d}.bad{color:#ff7777}
+  </style>
+  <script type="module" crossorigin src="./assets/index-rlgVON9M.js"></script>
+</head>
+<body><div id="app"><div id="gameWrap"><canvas id="game" width="960" height="600"></canvas><div id="overlay"></div></div></div></body>
+</html>
