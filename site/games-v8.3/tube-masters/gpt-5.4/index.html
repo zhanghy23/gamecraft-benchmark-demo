@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tube Masters</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #15171c;
+        color: #f4f4f4;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        background:
+          radial-gradient(circle at 50% 8%, rgba(66, 89, 128, 0.35), transparent 33rem),
+          linear-gradient(180deg, #20242c 0%, #121318 100%);
+      }
+
+      h1 {
+        margin: 18px 0 10px;
+        font-size: 42px;
+        letter-spacing: 1px;
+        line-height: 1;
+        text-shadow: 0 3px 0 #000, 0 0 18px rgba(67, 214, 255, 0.25);
+      }
+
+      #gameShell {
+        position: relative;
+        width: 800px;
+        height: 600px;
+        max-width: calc(100vw - 24px);
+      }
+
+      canvas {
+        width: 800px;
+        height: 600px;
+        max-width: 100%;
+        display: block;
+        background: #222;
+        border: 3px solid #06070a;
+        border-radius: 8px;
+        box-shadow: 0 18px 46px rgba(0, 0, 0, 0.55);
+      }
+
+      #hud {
+        position: absolute;
+        left: 18px;
+        top: 14px;
+        right: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        pointer-events: none;
+        font-weight: 700;
+        font-size: 21px;
+        color: #fff;
+        text-shadow: 0 2px 3px #000, 0 0 8px rgba(0,0,0,0.8);
+      }
+
+      #debug {
+        position: absolute;
+        left: 18px;
+        bottom: 12px;
+        color: #d9faff;
+        font: 12px/1.35 Consolas, Monaco, monospace;
+        white-space: pre;
+        background: rgba(0, 0, 0, 0.42);
+        padding: 6px 8px;
+        border-radius: 5px;
+        display: none;
+        pointer-events: none;
+      }
+
+      #popup {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 18px;
+        background: rgba(0, 0, 0, 0.48);
+        border-radius: 8px;
+      }
+
+      #popupPanel {
+        min-width: 310px;
+        padding: 28px 32px;
+        border-radius: 16px;
+        background: linear-gradient(180deg, rgba(35, 40, 52, 0.96), rgba(11, 13, 18, 0.96));
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        text-align: center;
+        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.55);
+      }
+
+      #popupTitle {
+        font-size: 28px;
+        font-weight: 800;
+        margin-bottom: 10px;
+      }
+
+      #popupText {
+        color: #d8e3ef;
+        margin-bottom: 18px;
+        font-size: 15px;
+      }
+
+      #playButton {
+        appearance: none;
+        border: 0;
+        cursor: pointer;
+        padding: 13px 40px;
+        border-radius: 999px;
+        color: #051014;
+        background: linear-gradient(180deg, #7ff4ff, #25b9ff);
+        font-size: 23px;
+        font-weight: 900;
+        box-shadow: 0 7px 0 #086c9e, 0 14px 24px rgba(0, 0, 0, 0.35);
+      }
+
+      #playButton:active {
+        transform: translateY(4px);
+        box-shadow: 0 3px 0 #086c9e, 0 8px 16px rgba(0, 0, 0, 0.35);
+      }
+
+      #help {
+        width: 800px;
+        max-width: calc(100vw - 24px);
+        color: #b8c2cf;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 10px;
+      }
+    </style>
+    <script type="module" crossorigin src="./assets/index-RuGls_p7.js"></script>
+  </head>
+  <body>
+    <h1>Tube Masters</h1>
+    <main id="gameShell" aria-label="Tube Masters game">
+      <canvas id="gameCanvas" width="800" height="600"></canvas>
+      <div id="hud" aria-live="polite">
+        <div id="scoreHud">Score: 0</div>
+        <div id="timeHud">Time: 0:00</div>
+        <div id="topHud">Top: 0</div>
+      </div>
+      <div id="debug"></div>
+      <div id="popup">
+        <div id="popupPanel">
+          <div id="popupTitle">Tube Masters</div>
+          <div id="popupText">Dodge rigid blocks, collect glowing pickups, and grab boosts for extra speed.</div>
+          <button id="playButton" type="button">Play!</button>
+        </div>
+      </div>
+    </main>
+    <div id="help">Move with Left/Right arrow keys, A/D, or drag across the canvas. Press F3 to toggle the debug readout.</div>
+  </body>
+</html>
