@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rainbow Run</title>
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; background: #101632; font-family: Trebuchet MS, Verdana, sans-serif; user-select: none; }
+    #gameWrap { position: relative; width: 100vw; height: 100vh; min-width: 320px; min-height: 480px; }
+    #gameCanvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; background: linear-gradient(#83e7ff 0%, #b98cff 42%, #26104a 100%); }
+    #ui { position: absolute; inset: 0; pointer-events: none; color: white; }
+    button { pointer-events: auto; border: 0; color: white; font-weight: 900; letter-spacing: 1px; cursor: pointer; box-shadow: 0 7px 0 rgba(0,0,0,.23), inset 0 2px 0 rgba(255,255,255,.35); }
+    .screen { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; }
+    .titleText, .rainbowHeading { font-size: clamp(46px, 8vw, 112px); line-height: .9; font-weight: 1000; color: transparent; background: linear-gradient(90deg,#ff355e,#ffb300,#fff352,#32e875,#21d4fd,#a455ff,#ff62cf); -webkit-background-clip: text; background-clip: text; filter: drop-shadow(0 6px 0 rgba(0,0,0,.28)); }
+    .plates { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; justify-content: center; }
+    .plate { min-width: 128px; padding: 8px 14px; border-radius: 18px; background: rgba(20,20,45,.72); border: 2px solid rgba(255,255,255,.38); text-align: center; box-shadow: inset 0 0 18px rgba(255,255,255,.09); }
+    .plate span { display: block; font-size: 12px; opacity: .9; }
+    .plate b { font-size: 24px; }
+    .menuButton { min-width: 240px; padding: 15px 24px; border-radius: 24px; font-size: 24px; background: linear-gradient(#ff63ca,#743fff); }
+    .menuButton:nth-of-type(2) { background: linear-gradient(#37e7ff,#206dff); }
+    .menuButton.small { font-size: 19px; background: linear-gradient(#ffd35a,#ff7638); }
+    .hud { position: absolute; inset: 0; pointer-events: none; }
+    .hud .distance { position: absolute; top: 18px; left: 50%; transform: translateX(-50%); }
+    .hud .crystals { position: absolute; top: 18px; right: 22px; }
+    .lives { position: absolute; top: 86px; right: 28px; font-size: 30px; letter-spacing: 4px; color: #ff5d91; text-shadow: 0 3px 0 rgba(0,0,0,.35); }
+    .chargeBox { position: absolute; top: 128px; right: 28px; width: 168px; height: 18px; border-radius: 12px; border: 2px solid white; background: rgba(0,0,0,.35); overflow: hidden; }
+    .chargeFill { height: 100%; width: 100%; background: linear-gradient(90deg,#fff352,#ff8c1a,#ff3a54); }
+    .pauseButton { position: absolute; top: 18px; left: 22px; width: 58px; height: 50px; border-radius: 16px; background: rgba(10,13,28,.83); display: flex; gap: 8px; align-items: center; justify-content: center; }
+    .pauseButton i { display: block; width: 8px; height: 28px; border-radius: 5px; background: white; }
+    .overlay { position: absolute; inset: 0; background: rgba(0,0,0,.58); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; pointer-events: auto; }
+    .overlay h2 { margin: 0; font-size: clamp(42px,7vw,92px); text-shadow: 0 5px 0 rgba(0,0,0,.35); }
+    .overlay p { margin: 2px; font-size: 25px; font-weight: 900; }
+    .tapPrompt { position: absolute; bottom: 42px; font-size: 22px; font-weight: 1000; animation: pulse 1s infinite alternate; }
+    @keyframes pulse { from { opacity: .45; transform: scale(.98); } to { opacity: 1; transform: scale(1.04); } }
+    .upgradeScreen { justify-content: flex-start; padding-top: 42px; box-sizing: border-box; background: radial-gradient(circle at 50% 10%, rgba(255,255,255,.14), rgba(0,0,0,.36)); }
+    .upgradeList { width: min(760px, 92vw); display: grid; gap: 10px; }
+    .upgradeRow { width: 100%; padding: 14px 18px; border-radius: 18px; text-align: left; font-size: clamp(17px,2.5vw,24px); background: rgba(30,33,76,.86); border: 2px solid rgba(255,255,255,.18); }
+    .upgradeRow.selected { outline: 4px solid #fff352; background: linear-gradient(90deg, rgba(255,211,90,.95), rgba(164,85,255,.9)); }
+    .upgradeRow.maxed { background: rgba(54,99,109,.82); }
+    .upgradeRow em { float: right; font-style: normal; color: #fff352; }
+    .descPanel { width: min(760px, 92vw); min-height: 54px; box-sizing: border-box; padding: 14px 18px; border-radius: 18px; background: rgba(0,0,0,.38); border: 2px solid rgba(255,255,255,.25); font-size: 18px; }
+    .backButton { margin-top: 5px; min-width: 180px; padding: 12px 20px; border-radius: 18px; font-size: 20px; background: linear-gradient(#ff628f,#ff304d); }
+  </style>
+  <script type="module" crossorigin src="./assets/index-e4E_OsJL.js"></script>
+</head>
+<body>
+  <div id="gameWrap">
+    <canvas id="gameCanvas"></canvas>
+    <div id="ui"></div>
+  </div>
+</body>
+</html>
