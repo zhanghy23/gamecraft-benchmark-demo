@@ -46300,6 +46300,135 @@
             }
           ]
         }
+      },
+      "gpt-5.4": {
+        "status": "completed",
+        "runId": "gpt-5.4-v8.3-rubric2-licensed22-recovery10-20260914-111545",
+        "score": {
+          "display": "70.59 (+2.94)",
+          "base": 70.59,
+          "passed": 24,
+          "denominator": 34,
+          "dynamic": 1,
+          "dynamicAddition": 2.94,
+          "potential": 73.53
+        },
+        "visualQuality": {
+          "score": 80.67,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 40.89,
+          "renderingStyleAverage": 39.78,
+          "videosScored": 9
+        },
+        "traceCount": 9,
+        "playPath": "games-v8.3/lost-robot/gpt-5.4/index.html",
+        "previewPath": "previews-v8.3/lost-robot/gpt-5.4.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-001",
+              "zh": "The game page is first presented before startup initialization has enabled play → A full-screen title screen is visible with the heading \"LOST ROBOT\" and a disabled start button labeled \"Loading … Please wait.\""
+            },
+            {
+              "id": "target-002",
+              "zh": "Startup initialization completes while the title screen is shown → The title screen remains visible and the start button label changes to \"Start\"."
+            },
+            {
+              "id": "target-003",
+              "zh": "The enabled Start button is activated on the title screen → The title screen is hidden and the \"CHOOSE A MAP\" level selection screen is shown."
+            },
+            {
+              "id": "target-004",
+              "zh": "The level selection menu is populated while the level selection screen is being shown → Under the \"CHOOSE A MAP\" heading, the screen displays map selection buttons whose visible labels include a map number line, a \"Points:\" line, and a \"Time:\" line."
+            },
+            {
+              "id": "target-005",
+              "zh": "The level selection menu is populated for a map that has a saved completion state → That map's selection button shows a \"Time:\" line in MM:SS:mmm format with at least one digit from 1 through 9."
+            },
+            {
+              "id": "target-012",
+              "zh": "The scheduled post-goal return delay elapses after the robot has reached the goal → The gameplay view is hidden and the level selection screen is shown."
+            },
+            {
+              "id": "target-013",
+              "zh": "The Escape key is accepted during active gameplay while the robot is enabled → The gameplay view is hidden and the level selection screen is shown."
+            },
+            {
+              "id": "target-017",
+              "zh": "During active gameplay, the robot receives equal backward acceleration on its left and right drives → While the condition is maintained, the robot body translates opposite the direction its nose faces and its orientation stays unchanged."
+            },
+            {
+              "id": "target-031",
+              "zh": "The robot enters the pickup radius of an uncollected collectible that has an active door-opening trigger listener → The collectible changes from a filled circle to a hollow shell, the visible points readout increases by 100, and the linked door changes from a blocking door segment to an open gap."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-032",
+              "zh": "An open door's closed state is applied during gameplay → The open gap changes back into a visible blocking door segment.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.4-v8.3-rubric2-licensed22-recovery10-20260914-111545",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-14T21:29:18+08:00",
+          "finishedAt": "2026-09-14T22:53:48+08:00",
+          "totalDurationMs": 5069930,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-14T21:29:18+08:00",
+              "finishedAt": "2026-09-14T21:31:17+08:00",
+              "durationMs": 118762,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-14T21:31:17+08:00",
+              "finishedAt": "2026-09-14T21:42:50+08:00",
+              "durationMs": 693711,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-14T21:42:50+08:00",
+              "finishedAt": "2026-09-14T22:26:07+08:00",
+              "durationMs": 2596900,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-14T22:26:07+08:00",
+              "finishedAt": "2026-09-14T22:26:08+08:00",
+              "durationMs": 393,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-14T22:26:08+08:00",
+              "finishedAt": "2026-09-14T22:27:33+08:00",
+              "durationMs": 84855,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-14T22:27:33+08:00",
+              "finishedAt": "2026-09-14T22:53:48+08:00",
+              "durationMs": 1575144,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "lost-island": {
