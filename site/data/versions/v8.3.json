@@ -45996,6 +45996,95 @@
           ]
         }
       },
+      "minimax-m2.7": {
+        "status": "completed",
+        "runId": "minimax-m2.7-v8.3-rubric2-imported-licensed20-remaining7-r4-20260915-110334",
+        "score": {
+          "display": "91.67 (+0.00)",
+          "base": 91.67,
+          "passed": 22,
+          "denominator": 24,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 91.67
+        },
+        "visualQuality": {
+          "score": 90.5,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.75,
+          "renderingStyleAverage": 42.75,
+          "videosScored": 4
+        },
+        "traceCount": 4,
+        "playPath": "games-v8.3/tube-masters/minimax-m2.7/index.html",
+        "previewPath": "previews-v8.3/tube-masters/minimax-m2.7.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-016",
+              "zh": "The player intersects a rigid obstacle during active play → the Play! popup overlay is visible over the gameplay canvas"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-004",
+              "zh": "A render update occurs while active play is stopped and the popup overlay is hidden → the popup overlay appears on the rendered page",
+              "cause": "源码分析确认未实现"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "minimax-m2.7-v8.3-rubric2-imported-licensed20-remaining7-r4-20260915-110334",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-15T13:53:32+08:00",
+          "finishedAt": "2026-09-15T14:21:09+08:00",
+          "totalDurationMs": 1656754,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-15T13:53:32+08:00",
+              "finishedAt": "2026-09-15T14:02:06+08:00",
+              "durationMs": 513214,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-15T14:02:06+08:00",
+              "finishedAt": "2026-09-15T14:17:11+08:00",
+              "durationMs": 904930,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-15T14:17:11+08:00",
+              "finishedAt": "2026-09-15T14:17:11+08:00",
+              "durationMs": 245,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-15T14:17:11+08:00",
+              "finishedAt": "2026-09-15T14:18:05+08:00",
+              "durationMs": 54152,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-15T14:18:05+08:00",
+              "finishedAt": "2026-09-15T14:21:09+08:00",
+              "durationMs": 184183,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
       "gpt-5.4": {
         "status": "completed",
         "runId": "gpt-5.4-v8.3-rubric2-licensed22-recovery10-20260914-111545",
