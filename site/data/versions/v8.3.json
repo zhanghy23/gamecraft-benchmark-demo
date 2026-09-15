@@ -47128,6 +47128,174 @@
             }
           ]
         }
+      },
+      "gpt-5.4": {
+        "status": "completed",
+        "runId": "gpt-5.4-v8.3-rubric2-licensed22-recovery10-20260914-111545",
+        "score": {
+          "display": "84.40 (+9.17)",
+          "base": 84.4,
+          "passed": 92,
+          "denominator": 109,
+          "dynamic": 10,
+          "dynamicAddition": 9.17,
+          "potential": 93.58
+        },
+        "visualQuality": {
+          "score": 88.26,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.24,
+          "renderingStyleAverage": 41.02,
+          "videosScored": 42
+        },
+        "traceCount": 42,
+        "playPath": "games-v8.3/save-the-lost-friend/gpt-5.4/index.html",
+        "previewPath": "previews-v8.3/save-the-lost-friend/gpt-5.4.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-011",
+              "zh": "A horizontal platformer HUD draws while the player's horizontal progress is at least half of the level width → The progress bar labeled \"Progress\" is filled to at least one half of its full visible width."
+            },
+            {
+              "id": "target-012",
+              "zh": "A vertical platformer HUD draws while the player's upward progress is at least half of the level height → The progress bar labeled \"Progress\" is filled to at least one half of its full visible width."
+            },
+            {
+              "id": "target-048",
+              "zh": "The player touches a berry in the fire level while their health is 90 → The berry sprite disappears, the HUD displays the message \"Gained health\", and the health bar's filled portion extends from nine tenths of the bar's full width to the full bar width within 1 second."
+            },
+            {
+              "id": "target-053",
+              "zh": "A collected, unplaced water gem is accepted into the portal while fewer than three gems are already placed → A blue diamond appears at the lower-right area of the portal and the HUD displays a gem-placed message containing \"water\"."
+            },
+            {
+              "id": "target-102",
+              "zh": "The air level begins after its generated layout is displayed → The player starts in the lower central area of the playfield and the air gem is visible in the upper central area of the playfield."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-055",
+              "zh": "A collected, unplaced air gem is accepted into the portal while fewer than three gems are already placed → A light gray diamond appears at the upper-left area of the portal and the HUD displays a gem-placed message containing \"air\".",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-056",
+              "zh": "A collected, unplaced fire gem is accepted into the portal while fewer than three gems are already placed → A red diamond appears at the upper-right area of the portal and the HUD displays a gem-placed message containing \"fire\".",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-077",
+              "zh": "The enter selection control is pressed while an NPC dialog is active before the question list is displayed → The HUD area changes from the dialog message to a question list with one entry highlighted in red.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-078",
+              "zh": "The up selection control is pressed while a dialog question list is open and the first question is highlighted → The red highlight moves from the first question entry to the last question entry.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-079",
+              "zh": "The down selection control is pressed while a dialog question list is open and the last question is highlighted → The red highlight moves from the last question entry to the first question entry.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-080",
+              "zh": "The up selection control is pressed while a dialog question list is open and a non-first question is highlighted → The red highlight moves from the currently highlighted question entry to the question entry directly above it.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-081",
+              "zh": "The down selection control is pressed while a dialog question list is open and a non-last question is highlighted → The red highlight moves from the currently highlighted question entry to the question entry directly below it.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-082",
+              "zh": "The enter selection control is pressed while a dialog question list is open → The question list is replaced by the selected question's answer text in the HUD area.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-083",
+              "zh": "The skip dialog control is pressed while an NPC dialog message is displayed → The dialog message text disappears from the HUD area and the normal gameplay HUD remains visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-084",
+              "zh": "The skip dialog control is pressed while an NPC answer text is displayed → The answer text disappears from the HUD area and the normal gameplay HUD remains visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-085",
+              "zh": "A dialog batch advances after every visible question in the current batch has been answered and another batch exists → A question list is displayed with the first question entry highlighted in red.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-100",
+              "zh": "A volcanic lava actor updates while its next position intersects a solid obstacle → The volcanic lava sprite returns to its original volcano opening position.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.4-v8.3-rubric2-licensed22-recovery10-20260914-111545",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-15T00:43:09+08:00",
+          "finishedAt": "2026-09-15T09:24:47+08:00",
+          "totalDurationMs": 31298379,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": "2026-09-15T00:43:09+08:00",
+              "finishedAt": "2026-09-15T00:45:58+08:00",
+              "durationMs": 168949,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-15T00:45:58+08:00",
+              "finishedAt": "2026-09-15T01:25:14+08:00",
+              "durationMs": 2356431,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-15T01:25:14+08:00",
+              "finishedAt": "2026-09-15T08:35:12+08:00",
+              "durationMs": 25798171,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-15T08:35:12+08:00",
+              "finishedAt": "2026-09-15T08:35:14+08:00",
+              "durationMs": 1397,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-15T08:35:14+08:00",
+              "finishedAt": "2026-09-15T08:39:11+08:00",
+              "durationMs": 237791,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-15T08:39:11+08:00",
+              "finishedAt": "2026-09-15T09:24:47+08:00",
+              "durationMs": 2735475,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     }
   }
