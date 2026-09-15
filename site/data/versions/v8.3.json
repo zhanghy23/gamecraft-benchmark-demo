@@ -46842,6 +46842,285 @@
             }
           ]
         }
+      },
+      "deepseek-v4-flash": {
+        "status": "completed",
+        "runId": "deepseek-v4-flash-v8.3-rubric2-imported-licensed17-recovery11-20260914-111545",
+        "score": {
+          "display": "27.59 (+27.59)",
+          "base": 27.59,
+          "passed": 16,
+          "denominator": 58,
+          "dynamic": 16,
+          "dynamicAddition": 27.59,
+          "potential": 55.17
+        },
+        "visualQuality": {
+          "score": 89.86,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.86,
+          "renderingStyleAverage": 42,
+          "videosScored": 7
+        },
+        "traceCount": 7,
+        "playPath": "games-v8.3/space-garden/deepseek-v4-flash/index.html",
+        "previewPath": "previews-v8.3/space-garden/deepseek-v4-flash.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-021",
+              "zh": "The gameplay HUD is drawn while the player's fuel is zero → A horizontal dark backing bar is visible near the top center of the gameplay screen with no colored filled segment visible inside it."
+            },
+            {
+              "id": "target-035",
+              "zh": "An energy mass reaches zero visible radius after being absorbed → The energy mass disappears and a particle burst appears at its position."
+            },
+            {
+              "id": "target-039",
+              "zh": "An incomplete planet node exceeds its full charge size → The node stops appearing as an uncompleted energy mass and a particle burst appears at its position."
+            },
+            {
+              "id": "target-046",
+              "zh": "A red drone is within its approach range during active gameplay → Over a 1-second observation interval with the player visible, the red drone's screen-space position shifts toward the player's screen-space position by at least 1 in-game pixel."
+            },
+            {
+              "id": "target-047",
+              "zh": "The player is within a red drone's drain range during active gameplay → The red drone displays reaching tendrils toward the player and drain particles appear around the player."
+            },
+            {
+              "id": "target-048",
+              "zh": "The player contacts a red drone at low speed while the player's fuel is above 100 → A burst of concentric explosion rings appears at the red drone's position."
+            },
+            {
+              "id": "target-049",
+              "zh": "A red drone's health reaches zero → The red drone disappears from the gameplay view, a burst of explosion rings appears at the red drone's position, and five energy masses appear around the former drone position."
+            },
+            {
+              "id": "target-051",
+              "zh": "A red harvester is within its drain range during active gameplay → The red harvester displays reaching tendrils toward the player and drain particles appear around the player."
+            },
+            {
+              "id": "target-052",
+              "zh": "The player contacts a red harvester at low speed → A particle burst appears at the harvester and the player is knocked away from the contact point."
+            },
+            {
+              "id": "target-053",
+              "zh": "A red harvester's health reaches zero → The red harvester disappears from the gameplay view, a burst of explosion rings appears at the red harvester's position, and two energy masses appear around the former harvester position."
+            },
+            {
+              "id": "target-054",
+              "zh": "A planet sprite has no red enemy in view and the player is outside planet gravity → The planet sprite is visible near the player as a colored circular body with trail particles."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-009",
+              "zh": "The player releases the M key during active gameplay while the minimap is displayed → The minimap overlay is removed from the gameplay view.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-011",
+              "zh": "The player releases the H key during active gameplay while the help overlay is displayed → The help text overlay disappears from the gameplay view.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-012",
+              "zh": "The help overlay is displayed during active gameplay → The help overlay includes the two-line text \"HUD INDICATES\" and \"NEARBY PLANETS\" next to a circular HUD diagram.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-013",
+              "zh": "The help overlay is displayed while the player is not near a planet, is not being drained, has fuel below 5, and the low-fuel blink interval is active → The help overlay displays the three-line message \"FIND ENERGY MASS TO ABSORB\", \"OR TRAVEL NEAR COMPLETE PLANETS\", and \"TO RECHARGE\".",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-014",
+              "zh": "The help overlay is displayed while the player is within an incomplete planet's gravity field, that planet has at least one harvester, and the player is not being drained → The help overlay displays the two-line message \"THE RED CAN ONLY\" and \"BE KILLED BY PLANET SPRITES\".",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-015",
+              "zh": "The help overlay is displayed while the player is within an incomplete planet's gravity field, that planet has no harvesters, the charge-up help interval is active, and the player is not being drained → The help overlay displays the two-line message \"CHARGE UP PLANET NODES\" and \"TO COMPLETE PLANETS\".",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-016",
+              "zh": "The help overlay is displayed while the player is within an incomplete planet's gravity field, that planet has no harvesters, the planet-sprite reward help interval is active, and the player is not being drained → The help overlay displays the two-line message \"COMPLETING A PLANET GIVES\" and \"YOU A PLANET SPRITE\".",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-017",
+              "zh": "The help overlay is displayed while the player is within a completed planet's gravity field, the recharge help interval is active, and the player is not being drained → The help overlay displays the two-line message \"COMPLETED PLANETS RECHARGE\" and \"YOUR ENERGY WHEN CLOSE\".",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-018",
+              "zh": "The help overlay is displayed while the player is being drained by a red enemy → The help overlay displays the two-line message \"THE RED DRAIN YOUR ENERGIES\" and \"KEEP YOUR DISTANCE\".",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-040",
+              "zh": "A planet's final incomplete node has just been completed → The planet changes to its completed appearance with a colored atmospheric halo around it.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-042",
+              "zh": "A planet is outside the normal gameplay view but within the radar indicator range → An off-screen planet indicator appears near the edge of the gameplay view in the direction of that planet.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-043",
+              "zh": "The minimap is displayed while an incomplete planet is present → The incomplete planet appears on the minimap as a small marker without an outline ring.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-044",
+              "zh": "The minimap is displayed while a completed planet is present → The completed planet appears on the minimap as a colored marker with an outline ring.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-045",
+              "zh": "The minimap is displayed during a frame when the player marker is enabled → The player's position is marked on the minimap by a cluster of bright pixels.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-057",
+              "zh": "The player's world position crosses beyond the right boundary of the world → The gameplay view jumps to the left side of the world, with the player still visible after the wrap.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-004",
+              "zh": "The title screen is rendered → A dark horizontal strip spans the bottom tenth of the screen, separated from the rest of the title screen by a horizontal line.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-005",
+              "zh": "The title screen is initialized → Five planet-sprite companions are visible near the player character on the title screen.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-008",
+              "zh": "The player releases the M key during active gameplay while the minimap is hidden → A minimap overlay appears, showing a scaled star field with markers for world objects.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-010",
+              "zh": "The player releases the H key during active gameplay while the help overlay is hidden → A help text overlay appears over the gameplay view.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-024",
+              "zh": "The Up arrow key is held during active gameplay while the player is in open space outside planet gravity → Across consecutive gameplay frames, the player moves in the direction they are facing and paired particle bursts appear at the feet.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-025",
+              "zh": "The Down arrow key is held during active gameplay while the player is in open space outside planet gravity → Across consecutive gameplay frames, the player moves backward relative to the direction they are facing and particle bursts appear at both arms.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-026",
+              "zh": "The Left arrow key is held while the player is standing on a planet surface → Across consecutive gameplay frames, the player changes position along the planet surface in one tangential direction, and no jet particle burst appears from the player.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-027",
+              "zh": "The Right arrow key is held while the player is standing on a planet surface → Across consecutive gameplay frames, the player changes position along the planet surface in the opposite tangential direction from Left-arrow surface movement, and no jet particle burst appears from the player.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-028",
+              "zh": "The Up arrow key is held while the player is standing on a planet surface → The player jumps outward from the planet surface.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-029",
+              "zh": "The Down arrow key is held while the player is standing on a planet surface → The player remains on the planet surface and no jet particle burst appears from the player during the input.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-031",
+              "zh": "The player overlaps a collectible artifact during active gameplay → The artifact disappears and a burst of particles appears at its position.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-032",
+              "zh": "At least one artifact has been collected when the collected-artifacts display is drawn → A colored square with a thin outline appears near the bottom-left of the screen for each collected artifact.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-034",
+              "zh": "The player is within absorption range of an energy mass while the player's fuel is at maximum → The energy mass keeps its pre-contact visible radius for the next 1 second and no reaching effect is drawn from the energy mass toward the player.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-041",
+              "zh": "The player is close enough to a completed planet for its recharge reach effect → The completed planet displays a reaching visual effect around its halo toward the player.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-056",
+              "zh": "A planet sprite has a red enemy in view while it is not already attacking → The planet sprite moves away from its following or orbiting position to circle the red enemy, and it is drawn with a red-orange outline and trail.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-058",
+              "zh": "The player's world position crosses beyond the bottom boundary of the world → The gameplay view jumps to the top side of the world, with the player still visible after the wrap.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-flash-v8.3-rubric2-imported-licensed17-recovery11-20260914-111545",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-15T07:26:50+08:00",
+          "finishedAt": "2026-09-15T09:00:59+08:00",
+          "totalDurationMs": 5649208,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-15T07:26:50+08:00",
+              "finishedAt": "2026-09-15T07:47:08+08:00",
+              "durationMs": 1218633,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-15T07:47:08+08:00",
+              "finishedAt": "2026-09-15T08:47:42+08:00",
+              "durationMs": 3634208,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-15T08:47:42+08:00",
+              "finishedAt": "2026-09-15T08:47:43+08:00",
+              "durationMs": 302,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-15T08:47:43+08:00",
+              "finishedAt": "2026-09-15T08:48:10+08:00",
+              "durationMs": 27177,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-15T08:48:10+08:00",
+              "finishedAt": "2026-09-15T09:00:59+08:00",
+              "durationMs": 768858,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "lost-robot": {
