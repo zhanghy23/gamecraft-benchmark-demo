@@ -45135,6 +45135,104 @@
           ]
         }
       },
+      "minimax-m2.7": {
+        "status": "completed",
+        "runId": "minimax-m2.7-v8.3-rubric2-imported-licensed20-remaining7-r4-20260915-110334",
+        "score": {
+          "display": "91.11 (+2.22)",
+          "base": 91.11,
+          "passed": 41,
+          "denominator": 45,
+          "dynamic": 1,
+          "dynamicAddition": 2.22,
+          "potential": 93.33
+        },
+        "visualQuality": {
+          "score": 92.25,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48,
+          "renderingStyleAverage": 44.25,
+          "videosScored": 8
+        },
+        "traceCount": 8,
+        "playPath": "games-v8.3/rainbowhoof/minimax-m2.7/index.html",
+        "previewPath": "previews-v8.3/rainbowhoof/minimax-m2.7.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-015",
+              "zh": "An active rainbow drawing receives a drag segment whose ink cost exceeds the remaining rainbow ink → The in-progress rainbow stroke stops before the drag endpoint, the HUD ink bar fill reaches empty, and a red outline appears around the HUD ink bar."
+            },
+            {
+              "id": "target-025",
+              "zh": "The rainbow arc currently carrying the unicorn fades below its support threshold during active play → The unicorn leaves the rainbow arc and is shown moving through open air."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-021",
+              "zh": "The unicorn encounters a valid rainbow arc while running on dirt during active play → The unicorn transfers from the dirt terrain onto the rainbow arc and is shown riding along the rainbow bridge.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-009",
+              "zh": "Active play advances through an update while the HUD ink meter is below full and no ink is being spent or refilled by stardust → Within 2 seconds, the right edge of the colored fill in the HUD ink bar is rendered to the right of its position at the start of the interval, and the \"+STARDUST\" text is not visible during the interval.",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "minimax-m2.7-v8.3-rubric2-imported-licensed20-remaining7-r4-20260915-110334",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-15T12:28:40+08:00",
+          "finishedAt": "2026-09-15T13:32:36+08:00",
+          "totalDurationMs": 3835887,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-15T12:28:40+08:00",
+              "finishedAt": "2026-09-15T12:45:50+08:00",
+              "durationMs": 1029705,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-15T12:45:50+08:00",
+              "finishedAt": "2026-09-15T13:18:02+08:00",
+              "durationMs": 1931619,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-15T13:18:02+08:00",
+              "finishedAt": "2026-09-15T13:18:02+08:00",
+              "durationMs": 295,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-15T13:18:02+08:00",
+              "finishedAt": "2026-09-15T13:21:17+08:00",
+              "durationMs": 195369,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-15T13:21:17+08:00",
+              "finishedAt": "2026-09-15T13:32:36+08:00",
+              "durationMs": 678868,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
       "gpt-5.4": {
         "status": "completed",
         "runId": "gpt-5.4-v8.3-rubric2-licensed22-recovery10-20260914-111545",
