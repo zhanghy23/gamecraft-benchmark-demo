@@ -47959,6 +47959,105 @@
             }
           ]
         }
+      },
+      "deepseek-v4-flash": {
+        "status": "completed",
+        "runId": "deepseek-v4-flash-v8.3-rubric2-imported-licensed17-recovery11-20260914-111545",
+        "score": {
+          "display": "89.74 (+5.13)",
+          "base": 89.74,
+          "passed": 35,
+          "denominator": 39,
+          "dynamic": 2,
+          "dynamicAddition": 5.13,
+          "potential": 94.87
+        },
+        "visualQuality": {
+          "score": 88.6,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47,
+          "renderingStyleAverage": 41.6,
+          "videosScored": 5
+        },
+        "traceCount": 5,
+        "playPath": "games-v8.3/lost-island/deepseek-v4-flash/index.html",
+        "previewPath": "previews-v8.3/lost-island/deepseek-v4-flash.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-016",
+              "zh": "During active play, the action check finds the battery in the player's pickup tiles and this pickup does not complete all required rescue parts → The battery graphic is removed from its terrain tile, the battery row in the equipment HUD reads \"1 x\", and the gameplay view remains visible."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-022",
+              "zh": "During active play, the player is at least 3000 world units from the current objective item when the player indicator is rendered → The small objective indicator on the player is dark blue.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-004",
+              "zh": "During active play, the objective check runs with the transmitter, antenna, and battery all collected → The gameplay view disappears and a message screen appears with the heading \"Rescued\" and the text \"A fishing boat get your call and is on its way to get you. Seems you are not lost after all :).\"",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-021",
+              "zh": "During active play, the player is at least 2000 and less than 3000 world units from the current objective item when the player indicator is rendered → The small objective indicator on the player is blue.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-flash-v8.3-rubric2-imported-licensed17-recovery11-20260914-111545",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-15T09:29:40+08:00",
+          "finishedAt": "2026-09-15T10:21:03+08:00",
+          "totalDurationMs": 3083078,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-15T09:29:40+08:00",
+              "finishedAt": "2026-09-15T09:41:38+08:00",
+              "durationMs": 718424,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-15T09:41:38+08:00",
+              "finishedAt": "2026-09-15T10:13:51+08:00",
+              "durationMs": 1932803,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-15T10:13:51+08:00",
+              "finishedAt": "2026-09-15T10:13:52+08:00",
+              "durationMs": 345,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-15T10:13:52+08:00",
+              "finishedAt": "2026-09-15T10:14:22+08:00",
+              "durationMs": 30934,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-15T10:14:22+08:00",
+              "finishedAt": "2026-09-15T10:21:03+08:00",
+              "durationMs": 400541,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "save-the-lost-friend": {

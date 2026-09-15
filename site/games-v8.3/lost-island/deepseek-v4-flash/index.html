@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lost Island Survival</title>
+<style>
+  body { margin: 0; background: #000; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: monospace; color: #fff; overflow: hidden; }
+  #gameContainer { position: relative; width: 1280px; height: 720px; flex-shrink: 0; }
+  #gameCanvas { display: block; background: #1a1a2e; }
+  #startScreen, #gameOverScreen, #rescuedScreen {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    background: rgba(0,0,0,0.85); text-align: center; z-index: 10;
+  }
+  #startScreen h1 { font-size: 3em; margin: 0; }
+  #startScreen p { max-width: 600px; line-height: 1.6; font-size: 1.1em; }
+  #startScreen .prompt { margin-top: 30px; font-size: 1.2em; animation: blink 1s step-end infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  #gameOverScreen h1 { color: #ff4444; }
+  #rescuedScreen h1 { color: #44ff44; }
+  .hidden { display: none !important; }
+</style>
+  <script type="module" crossorigin src="./assets/index-Cl6XBLHj.js"></script>
+</head>
+<body>
+<div id="gameContainer">
+  <canvas id="gameCanvas" width="1280" height="720"></canvas>
+  <div id="startScreen">
+    <h1>Lost</h1>
+    <p>You wake up on a deserted island with no memory of how you got here. The only thing you know is that you need to find food to survive and locate three radio parts to call for rescue.</p>
+    <p>Use the arrow keys to move around. Press SPACE to interact with nearby objects.</p>
+    <div class="prompt">Press space to start</div>
+  </div>
+  <div id="gameOverScreen" class="hidden">
+    <h1>Game Over</h1>
+    <p>You died from starvation. No one ever found you. You are lost forever.</p>
+  </div>
+  <div id="rescuedScreen" class="hidden">
+    <h1>Rescued</h1>
+    <p>A fishing boat got your call and is on its way to get you. Seems you are not lost after all :).</p>
+  </div>
+</div>
+</body>
+</html>
