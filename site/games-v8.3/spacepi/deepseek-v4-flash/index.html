@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpacePi</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #111; display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    #game-container { position: relative; width: 960px; height: 600px; }
+    canvas { display: block; width: 960px; height: 600px; background: #000; }
+    #menu-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
+    #menu-overlay > * { pointer-events: auto; }
+    .menu { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff; background: rgba(0,0,0,0.85); }
+    .menu h1 { font-size: 48px; margin-bottom: 20px; color: #0ff; text-shadow: 0 0 20px #0ff; }
+    .menu button { font-size: 20px; padding: 10px 30px; margin: 8px; background: #1a3a5c; color: #fff; border: 2px solid #0ff; border-radius: 8px; cursor: pointer; transition: 0.2s; }
+    .menu button:hover { background: #0ff; color: #000; }
+    .menu button:disabled { background: #333; border-color: #666; color: #888; cursor: not-allowed; }
+    .menu .level-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; margin: 20px 0; }
+    .menu .level-btn { width: 80px; height: 80px; font-size: 24px; position: relative; }
+    .menu .level-btn .score { font-size: 12px; position: absolute; bottom: 2px; left: 0; right: 0; text-align: center; }
+    .menu .level-btn .perfect { font-size: 18px; color: gold; position: absolute; top: 2px; right: 4px; }
+    .menu .upgrade-row { display: flex; align-items: center; justify-content: space-between; width: 80%; margin: 5px 0; padding: 8px; background: #222; border-radius: 5px; }
+    .menu .upgrade-row span { font-size: 16px; }
+    .menu .upgrade-row .cost { font-weight: bold; }
+    .menu .upgrade-row .status { margin-left: 10px; }
+    .menu .upgrade-row .status.available { color: #0f0; }
+    .menu .upgrade-row .status.unavailable { color: #f00; }
+    .menu .upgrade-row .status.maxed { color: #ff0; }
+    .menu .funds { font-size: 22px; margin: 10px; color: #0f0; }
+    .menu .funds.red { color: #f00; }
+    .menu .overview { max-width: 600px; text-align: left; font-size: 14px; line-height: 1.5; margin-bottom: 20px; }
+    .menu .guide-map { background: #111; border: 1px solid #555; padding: 10px; margin: 10px; border-radius: 5px; }
+    .menu .guide-map .line-sample { display: inline-block; width: 60px; height: 4px; margin: 0 5px; vertical-align: middle; }
+    .menu .pause-menu { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,0.8); color: #fff; }
+    .menu .pause-menu h2 { font-size: 36px; margin-bottom: 20px; }
+    .menu .stats-table { width: 80%; max-width: 500px; border-collapse: collapse; margin: 20px; }
+    .menu .stats-table td { padding: 6px 10px; border-bottom: 1px solid #444; font-size: 16px; }
+    .menu .stats-table td:last-child { text-align: right; }
+    .menu .stats-table .perfect-label { color: gold; font-weight: bold; }
+    .menu .stats-table .new-best { color: #0ff; font-weight: bold; }
+  </style>
+  <script type="module" crossorigin src="./assets/index-CDp-pqfa.js"></script>
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="game-canvas" width="960" height="600"></canvas>
+    <div id="menu-overlay"></div>
+  </div>
+</body>
+</html>
