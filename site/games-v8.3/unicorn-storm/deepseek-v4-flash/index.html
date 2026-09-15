@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unicorn Storm</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; overflow: hidden; background: #000; font-family: 'Arial', sans-serif; color: #fff; }
+#game-container { position: relative; width: 1280px; height: 720px; margin: 0 auto; }
+canvas { display: block; }
+#ui-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
+#ui-overlay > * { pointer-events: auto; }
+.ui-screen { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.ui-screen.hidden { display: none; }
+.ui-button { padding: 10px 20px; margin: 5px; border: 2px solid #fff; border-radius: 5px; cursor: pointer; font-size: 1.2em; text-align: center; background: rgba(0,0,0,0.5); }
+.ui-button.gold { border-color: gold; color: gold; }
+.ui-button.locked { opacity: 0.3; cursor: default; }
+.ui-button.active { background: rgba(255,255,255,0.2); }
+.overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.overlay.hidden { display: none; }
+.keycap { display: inline-block; width: 30px; height: 30px; border: 2px solid #fff; border-radius: 4px; text-align: center; line-height: 30px; margin: 0 2px; font-size: 0.8em; }
+.progress-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin: 2px; }
+.progress-bar { display: inline-block; height: 10px; margin: 2px; background: #555; }
+</style>
+  <script type="module" crossorigin src="./assets/index-Bg4XG9rC.js"></script>
+</head>
+<body>
+<div id="game-container">
+  <canvas id="canvas" width="1280" height="720"></canvas>
+  <div id="ui-overlay">
+    <!-- Title Screen -->
+    <div id="title-screen" class="ui-screen">
+      <h1 style="font-size:3em; margin:0;">UNICORN STORM</h1>
+      <p style="font-size:1.2em;">Simon says repeat after the unicorns</p>
+      <p style="margin-top:auto; margin-bottom:20px; font-size:0.9em;">turn on yer sound</p>
+      <div style="display:flex; gap:10px;">
+        <div id="btn-songs" class="ui-button">SONGS</div>
+        <div id="btn-jam" class="ui-button">JAM</div>
+        <div id="btn-pattern" class="ui-button">PATTERN</div>
+        <div id="btn-hardcore" class="ui-button">HARDCORE</div>
+      </div>
+      <div id="shared-info" style="margin-top:10px; display:none;"></div>
+    </div>
+    <!-- Song Menu -->
+    <div id="song-menu" class="ui-screen hidden">
+      <h2>songs</h2>
+      <p style="font-size:0.9em;">real tunes, revealed a note at a time</p>
+      <div id="song-list" style="display:flex; flex-direction:column; gap:5px;"></div>
+      <div id="btn-song-back" class="ui-button" style="margin-top:10px;">BACK</div>
+    </div>
+    <!-- Hardcore Briefing -->
+    <div id="hardcore-briefing" class="ui-screen hidden">
+      <h2>HARDCORE</h2>
+      <p>TAP for a low hop</p>
+      <p>HOLD for a high leap</p>
+      <p>match the jump height</p>
+      <div style="display:flex; gap:10px;">
+        <div id="btn-bring-it-on" class="ui-button gold">BRING IT ON</div>
+        <div id="btn-hardcore-back" class="ui-button">BACK</div>
+      </div>
+    </div>
+    <!-- Jam Mode -->
+    <div id="jam-screen" class="ui-screen hidden">
+      <h2>jam</h2>
+      <div style="display:flex; gap:10px;">
+        <div id="btn-jam-back" class="ui-button">BACK</div>
+        <div id="btn-jam-beat" class="ui-button">BEAT ON</div>
+        <div id="btn-jam-record" class="ui-button">REC</div>
+      </div>
+      <p id="jam-status" style="margin-top:10px;"></p>
+    </div>
+    <!-- Pattern Composition -->
+    <div id="pattern-screen" class="ui-screen hidden">
+      <h2>make a pattern</h2>
+      <div id="pattern-controls" style="display:flex; gap:10px;">
+        <div id="btn-pattern-normal" class="ui-button">NORMAL</div>
+        <div id="btn-pattern-hear" class="ui-button locked">HEAR</div>
+        <div id="btn-pattern-clear" class="ui-button locked">CLEAR</div>
+        <div id="btn-pattern-done" class="ui-button locked">DONE</div>
+        <div id="btn-pattern-back" class="ui-button">BACK</div>
+      </div>
+      <div id="pattern-timeline" style="display:flex; flex-wrap:wrap; gap:2px; margin-top:10px; max-width:800px;"></div>
+    </div>
+    <!-- Share Panel -->
+    <div id="share-panel" class="ui-screen hidden">
+      <h2 id="share-heading">share your jam!!</h2>
+      <p>tap the link, then long-press to copy</p>
+      <input id="share-link-input" type="text" readonly style="width:400px; text-align:center;">
+      <input id="share-name-input" type="text" placeholder="name it (optional)" style="width:400px; margin-top:5px;">
+      <div id="btn-share-ok" class="ui-button">OK</div>
+    </div>
+    <!-- Paused Overlay -->
+    <div id="paused-overlay" class="overlay hidden">
+      <h2>paused</h2>
+      <p>tap anywhere to resume</p>
+    </div>
+    <!-- Restart Overlay -->
+    <div id="restart-overlay" class="overlay hidden">
+      <h2>start this pattern over</h2>
+      <p>your score and streak carry on</p>
+    </div>
+    <!-- Gameplay overlays (countdown, call text, go, your turn, result) -->
+    <div id="gameplay-text" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); text-align:center; pointer-events:none;"></div>
+    <!-- Result Overlay -->
+    <div id="result-overlay" class="ui-screen hidden">
+      <h2 id="result-message"></h2>
+      <p id="result-accuracy"></p>
+      <p id="result-midair" style="display:none;">midair bonus</p>
+      <div id="result-choices" style="display:flex; gap:10px;"></div>
+    </div>
+    <!-- HUD -->
+    <div id="hud" style="position:absolute; bottom:10px; left:50%; transform:translateX(-50%); font-size:1.2em; text-align:center; pointer-events:none;"></div>
+    <!-- Controls (gameplay) -->
+    <div id="game-controls" style="position:absolute; bottom:50px; left:50%; transform:translateX(-50%); display:flex; gap:10px;">
+      <div id="btn-restart" class="ui-button">RESTART</div>
+      <div id="btn-beat" class="ui-button">BEAT ON</div>
+      <div id="btn-home" class="ui-button">HOME</div>
+    </div>
+    <!-- Keycaps hint -->
+    <div id="keycaps" style="position:absolute; bottom:20px; left:50%; transform:translateX(-50%); display:none; gap:5px;">
+      <span class="keycap">1</span>
+      <span class="keycap">2</span>
+      <span class="keycap">3</span>
+      <span class="keycap">4</span>
+      <span class="keycap">5</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

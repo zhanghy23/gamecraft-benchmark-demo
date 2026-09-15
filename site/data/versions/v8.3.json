@@ -42593,6 +42593,156 @@
             }
           ]
         }
+      },
+      "deepseek-v4-flash": {
+        "status": "completed",
+        "runId": "deepseek-v4-flash-v8.3-rubric2-imported-licensed17-recovery11-20260914-111545",
+        "score": {
+          "display": "84.04 (+3.19)",
+          "base": 84.04,
+          "passed": 79,
+          "denominator": 94,
+          "dynamic": 3,
+          "dynamicAddition": 3.19,
+          "potential": 87.23
+        },
+        "visualQuality": {
+          "score": 92.15,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.15,
+          "renderingStyleAverage": 44,
+          "videosScored": 26
+        },
+        "traceCount": 26,
+        "playPath": "games-v8.3/unicorn-storm/deepseek-v4-flash/index.html",
+        "previewPath": "previews-v8.3/unicorn-storm/deepseek-v4-flash.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-048",
+              "zh": "The player types into the name input while the share panel is open and the share-link input is visible → The typed name appears in the name input, and the visible URL text in the share-link input updates."
+            },
+            {
+              "id": "target-052",
+              "zh": "The call phase reaches a high-note slot in a height-enabled pattern → The calling unicorn performs a high soar with visible wings."
+            },
+            {
+              "id": "target-057",
+              "zh": "A gameplay pattern with more than 16 notes is displayed → The progress display uses a compact bar instead of individual note dots across the top of the playfield."
+            },
+            {
+              "id": "target-069",
+              "zh": "A live metronome beat begins while beat visualization is enabled during a phase where the beat pulse is active → The ground band below the herd changes from its pre-beat dark blue state to a blue flash, and the thin cyan line along the top of the ground band changes to a vivid cyan line; both return to the pre-beat state within one third of a beat."
+            },
+            {
+              "id": "target-078",
+              "zh": "A round celebration is triggered with accuracy at least 0.9 and below 0.95 → Two rainbow arcs appear behind the playfield and at least four unicorn leap effects occur during the celebration."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-002",
+              "zh": "A gameplay frame is rendered while the game is paused because the audio context is not running → A dark translucent overlay covers the playfield with the centered text \"paused\" and the instruction \"tap anywhere to resume\" below it.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-003",
+              "zh": "The player taps the screen while the paused overlay is visible and audio can resume → The \"paused\" and \"tap anywhere to resume\" overlay is no longer visible, revealing the gameplay screen underneath.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-026",
+              "zh": "The player starts a normal run from the title screen → A run begins and the gameplay screen shows a countdown message beginning with \"the unicorns play in\".",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-032",
+              "zh": "A shared jam replay frame is rendered for a shared jam with a name → The screen shows the shared jam name and the normal score HUD line is not displayed.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-033",
+              "zh": "A shared jam replay reaches its end → The display returns to the title screen with \"UNICORN STORM\" near the upper center.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-067",
+              "zh": "The player keeps holding a launched note until the high-jump threshold in a height-enabled response → The flying unicorn switches into a high soar with visible wings and a white glow around it.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-075",
+              "zh": "Two bonus-eligible unicorn leap effects intersect in midair while the current score multiplier is x5 → A burst effect appears at the intersection point and a yellow floating \"+1250\" score popup appears there.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-018",
+              "zh": "The title screen is rendered after loading a valid shared pattern link with a shared name → The title screen shows a line beginning with \"someone sent you\" and containing the shared name, and the normal decorative \"HARDCORE\" button is replaced by a button labeled \"NEW GAME\".",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-065",
+              "zh": "The player enters an extra note during response when no unjudged pattern slot is inside the timing window while the score HUD is visible → A floating \"extra\" label appears at the activated unicorn, and the bottom score HUD current-score number remains unchanged during the following half second.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-085",
+              "zh": "A round result overlay is shown after at least one midair bonus collision occurred during the round → A line ending in \"midair bonus\" appears below the match percentage on the result overlay.",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-flash-v8.3-rubric2-imported-licensed17-recovery11-20260914-111545",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-14T22:19:12+08:00",
+          "finishedAt": "2026-09-15T00:53:04+08:00",
+          "totalDurationMs": 9232202,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-14T22:19:12+08:00",
+              "finishedAt": "2026-09-14T22:57:07+08:00",
+              "durationMs": 2275057,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-14T22:57:07+08:00",
+              "finishedAt": "2026-09-15T00:21:03+08:00",
+              "durationMs": 5036273,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-15T00:21:03+08:00",
+              "finishedAt": "2026-09-15T00:21:04+08:00",
+              "durationMs": 437,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-15T00:21:04+08:00",
+              "finishedAt": "2026-09-15T00:26:13+08:00",
+              "durationMs": 309730,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-15T00:26:13+08:00",
+              "finishedAt": "2026-09-15T00:53:04+08:00",
+              "durationMs": 1610676,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "oh-no-my-rainbow": {
