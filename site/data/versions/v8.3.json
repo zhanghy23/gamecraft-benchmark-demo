@@ -47482,6 +47482,89 @@
             }
           ]
         }
+      },
+      "deepseek-v4-flash": {
+        "status": "completed",
+        "runId": "deepseek-v4-flash-v8.3-rubric2-imported-licensed17-recovery11-20260914-111545",
+        "score": {
+          "display": "97.06 (+0.00)",
+          "base": 97.06,
+          "passed": 33,
+          "denominator": 34,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 97.06
+        },
+        "visualQuality": {
+          "score": 91.77,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.23,
+          "renderingStyleAverage": 43.54,
+          "videosScored": 13
+        },
+        "traceCount": 13,
+        "playPath": "games-v8.3/lost-robot/deepseek-v4-flash/index.html",
+        "previewPath": "previews-v8.3/lost-robot/deepseek-v4-flash.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-017",
+              "zh": "During active gameplay, the robot receives equal backward acceleration on its left and right drives → While the condition is maintained, the robot body translates opposite the direction its nose faces and its orientation stays unchanged."
+            }
+          ],
+          "replayTrace": []
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-flash-v8.3-rubric2-imported-licensed17-recovery11-20260914-111545",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-15T09:00:59+08:00",
+          "finishedAt": "2026-09-15T09:29:39+08:00",
+          "totalDurationMs": 1720125,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-15T09:00:59+08:00",
+              "finishedAt": "2026-09-15T09:12:40+08:00",
+              "durationMs": 700990,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-15T09:12:40+08:00",
+              "finishedAt": "2026-09-15T09:12:52+08:00",
+              "durationMs": 11467,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-15T09:12:52+08:00",
+              "finishedAt": "2026-09-15T09:12:52+08:00",
+              "durationMs": 260,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-15T09:12:52+08:00",
+              "finishedAt": "2026-09-15T09:14:10+08:00",
+              "durationMs": 77962,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-15T09:14:10+08:00",
+              "finishedAt": "2026-09-15T09:29:39+08:00",
+              "durationMs": 929414,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "lost-island": {
