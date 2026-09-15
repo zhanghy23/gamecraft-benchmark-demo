@@ -44365,6 +44365,113 @@
           ]
         }
       },
+      "minimax-m2.7": {
+        "status": "completed",
+        "runId": "minimax-m2.7-v8.3-rubric2-imported-licensed20-remaining7-r4-20260915-110334",
+        "score": {
+          "display": "88.89 (+3.70)",
+          "base": 88.89,
+          "passed": 48,
+          "denominator": 54,
+          "dynamic": 2,
+          "dynamicAddition": 3.7,
+          "potential": 92.59
+        },
+        "visualQuality": {
+          "score": 90.47,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.2,
+          "renderingStyleAverage": 43.27,
+          "videosScored": 15
+        },
+        "traceCount": 15,
+        "playPath": "games-v8.3/rainbow-run/minimax-m2.7/index.html",
+        "previewPath": "previews-v8.3/rainbow-run/minimax-m2.7.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-017",
+              "zh": "A jump command is processed during active running gameplay while the runner is sliding and slide cancellation is available → The runner leaves the lowered sliding posture and returns to an upright running posture without rising above the running surface."
+            },
+            {
+              "id": "target-036",
+              "zh": "The runner reaches a crystal during active charge while the crystal is inside the charge pickup range → The crystal disappears from the track, and the crystal-count plate near the top-right edge increases by 1 compared with immediately before the pickup."
+            },
+            {
+              "id": "target-042",
+              "zh": "An affordable, not-maxed upgrade option is activated from the upgrades menu → The selected upgrade option's displayed rank changes from N/C to (N+1)/C, and the crystals total shown on the upgrades menu changes from its previous number to that previous number minus the price number that was shown on the selected upgrade option immediately before activation."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-032",
+              "zh": "The runner takes a falling hit during active running gameplay while wings are visible and invincibility is inactive → Within 1 second, the unicorn performs a swooping recovery motion back toward the road, the wings remain visible during the recovery, and the lives display contains the same number of life markers as immediately before the hit.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-018",
+              "zh": "A jump command is processed during active running gameplay while the runner is sliding and slide cancellation is unavailable → The runner remains in the lowered sliding posture and does not rise above the running surface within the next 0.5 seconds.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-020",
+              "zh": "A slide command is processed during active running gameplay while the runner is airborne and jump cancellation is unavailable → The runner remains airborne on its current arc and does not enter the lowered sliding posture within the next 0.5 seconds.",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "minimax-m2.7-v8.3-rubric2-imported-licensed20-remaining7-r4-20260915-110334",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-15T11:15:19+08:00",
+          "finishedAt": "2026-09-15T12:28:40+08:00",
+          "totalDurationMs": 4400557,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-15T11:15:19+08:00",
+              "finishedAt": "2026-09-15T11:36:44+08:00",
+              "durationMs": 1284938,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-15T11:36:44+08:00",
+              "finishedAt": "2026-09-15T12:10:39+08:00",
+              "durationMs": 2034639,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-15T12:10:39+08:00",
+              "finishedAt": "2026-09-15T12:10:39+08:00",
+              "durationMs": 313,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-15T12:10:39+08:00",
+              "finishedAt": "2026-09-15T12:12:35+08:00",
+              "durationMs": 116209,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-15T12:12:35+08:00",
+              "finishedAt": "2026-09-15T12:28:40+08:00",
+              "durationMs": 964428,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
       "gpt-5.4": {
         "status": "completed",
         "runId": "gpt-5.4-v8.3-rubric2-licensed22-recovery10-20260914-111545",
