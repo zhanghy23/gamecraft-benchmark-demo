@@ -50681,6 +50681,35 @@
           ]
         }
       },
+      "minimax-m2.7": {
+        "status": "failed",
+        "runId": "minimax-m2.7-v8.3-rubric2-imported-untested2-20260916-112351",
+        "stage": "trace",
+        "score": null,
+        "traceCount": 0,
+        "playPath": null,
+        "previewPath": null,
+        "unmet": null,
+        "issue": "复用本机真实生成源码通过确定性构建后进入Trace，完成109条初始Trace；第2/11批Probe Plan的单探针锚点三次校验仍不唯一，重试耗尽后终止，未生成最终评审报告。该项为Trace规划失败，无功能分、无画面分且不可试玩。",
+        "timing": {
+          "runId": "minimax-m2.7-v8.3-rubric2-imported-untested2-20260916-112351",
+          "status": "failed",
+          "failedStage": "trace",
+          "startedAt": "2026-09-16T12:33:54+08:00",
+          "finishedAt": "2026-09-16T12:53:51+08:00",
+          "totalDurationMs": 1197108,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-16T12:33:54+08:00",
+              "finishedAt": "2026-09-16T12:53:51+08:00",
+              "durationMs": 1197091,
+              "status": "failed",
+              "exitCode": 1
+            }
+          ]
+        }
+      },
       "gpt-5.4": {
         "status": "completed",
         "runId": "gpt-5.4-v8.3-rubric2-licensed22-recovery10-20260914-111545",
