@@ -46437,6 +46437,167 @@
             }
           ]
         }
+      },
+      "deepseek-v4-flash": {
+        "status": "completed",
+        "runId": "deepseek-v4-flash-v8.3-rubric2-imported-untested1-20260916-112351",
+        "score": {
+          "display": "55.56 (+6.67)",
+          "base": 55.56,
+          "passed": 25,
+          "denominator": 45,
+          "dynamic": 3,
+          "dynamicAddition": 6.67,
+          "potential": 62.22
+        },
+        "visualQuality": {
+          "score": 65,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 33,
+          "renderingStyleAverage": 32,
+          "videosScored": 9
+        },
+        "traceCount": 9,
+        "playPath": "games-v8.3/rainbowhoof/deepseek-v4-flash/index.html",
+        "previewPath": "previews-v8.3/rainbowhoof/deepseek-v4-flash.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-002",
+              "zh": "The title screen is rendered after its intro title animation has appeared → A rainbow-styled \"RAINBOWHOOF\" title is visible near the upper middle of the screen, with the subtitle \"drag to paint a rainbow - then gallop on it\" below it."
+            },
+            {
+              "id": "target-016",
+              "zh": "A rainbow drawing is released during active play after the stroke meets the minimum valid length → A persistent glowing rainbow bridge remains along the released path after the pointer is no longer down."
+            },
+            {
+              "id": "target-020",
+              "zh": "The dirt-running unicorn reaches an upward dirt crest whose launch condition is met → The unicorn leaves the dirt surface and becomes airborne above continuous dirt terrain, without a terrain gap at the takeoff point."
+            },
+            {
+              "id": "target-021",
+              "zh": "The unicorn encounters a valid rainbow arc while running on dirt during active play → The unicorn transfers from the dirt terrain onto the rainbow arc and is shown riding along the rainbow bridge."
+            },
+            {
+              "id": "target-022",
+              "zh": "The airborne unicorn lands on a newly reached rainbow arc while the current chain count is zero → A spark particle burst appears at the unicorn, and the unicorn is shown riding on the rainbow arc."
+            },
+            {
+              "id": "target-023",
+              "zh": "The airborne unicorn lands on a newly reached rainbow arc while the current chain count is at least one → A spark particle burst appears at the unicorn, the unicorn is shown riding on the rainbow arc, and the HUD displays a chain multiplier label with an x followed by a number of 2 or above."
+            },
+            {
+              "id": "target-024",
+              "zh": "The unicorn reaches the end of the rainbow arc it is riding during active play → The unicorn leaves the rainbow arc and continues through open air beyond the arc endpoint."
+            },
+            {
+              "id": "target-025",
+              "zh": "The rainbow arc currently carrying the unicorn fades below its support threshold during active play → The unicorn leaves the rainbow arc and is shown moving through open air."
+            },
+            {
+              "id": "target-026",
+              "zh": "The unicorn riding a rainbow arc reaches an upward curve whose launch condition is met before the arc endpoint → The unicorn leaves the rainbow bridge from the curved section and continues through open air while the rainbow bridge remains visible behind it."
+            },
+            {
+              "id": "target-027",
+              "zh": "The airborne unicorn lands on dirt during active play while no chain multiplier label is visible → A dust particle burst appears at the unicorn's hooves, and the unicorn resumes running along the dirt terrain."
+            },
+            {
+              "id": "target-028",
+              "zh": "The unicorn lands on dirt during active play while a chain multiplier label is visible → A dust particle burst appears at the unicorn's hooves, and the chain multiplier label is no longer visible in the HUD within 1 second."
+            },
+            {
+              "id": "target-030",
+              "zh": "A spike obstacle generated on solid terrain enters the gameplay view during active play → A cluster of purple triangular spikes is visible on the dirt terrain."
+            },
+            {
+              "id": "target-031",
+              "zh": "A regular stardust pickup generated above the course enters the gameplay view → A glowing star-shaped stardust pickup is visible above the terrain or path."
+            },
+            {
+              "id": "target-032",
+              "zh": "A stardust pickup generated for a void gap enters the gameplay view → A glowing star-shaped stardust pickup floats over the open gap."
+            },
+            {
+              "id": "target-033",
+              "zh": "The unicorn intersects a stardust pickup during active play while no chain multiplier is active → The stardust pickup disappears, a star-shaped particle burst appears at the pickup position, and the HUD score readout increases by at least 50 from its pre-pickup value within 1 second."
+            },
+            {
+              "id": "target-036",
+              "zh": "The unicorn contacts a spike obstacle during active play → A boom particle burst appears at the unicorn, and the game-over overlay appears over the gameplay view."
+            },
+            {
+              "id": "target-037",
+              "zh": "The unicorn falls below the death boundary during active play → A boom particle burst appears at the unicorn, and the game-over overlay appears over the gameplay view."
+            },
+            {
+              "id": "target-038",
+              "zh": "The game-over presentation is rendered → A \"GAME OVER\" title is visible above a central panel labeled \"SCORE\" with the run's numeric score displayed in the panel."
+            },
+            {
+              "id": "target-039",
+              "zh": "The game-over screen has been displayed long enough for its retry prompt on a non-touch presentation → The game-over presentation shows the prompt text \"CLICK or SPACE to retry\" near the lower part of the screen."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-019",
+              "zh": "The unicorn reaches the edge of a terrain gap while running on dirt during active play → The unicorn leaves the ground and moves through open air beyond the terrain edge.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-flash-v8.3-rubric2-imported-untested1-20260916-112351",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-16T11:40:13+08:00",
+          "finishedAt": "2026-09-16T12:50:07+08:00",
+          "totalDurationMs": 4194178,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-16T11:40:13+08:00",
+              "finishedAt": "2026-09-16T11:59:26+08:00",
+              "durationMs": 1152597,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-16T11:59:26+08:00",
+              "finishedAt": "2026-09-16T12:23:04+08:00",
+              "durationMs": 1418722,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-16T12:23:04+08:00",
+              "finishedAt": "2026-09-16T12:23:05+08:00",
+              "durationMs": 309,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-16T12:23:05+08:00",
+              "finishedAt": "2026-09-16T12:24:06+08:00",
+              "durationMs": 61433,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-16T12:24:06+08:00",
+              "finishedAt": "2026-09-16T12:50:07+08:00",
+              "durationMs": 1561086,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "rainbow-runner": {
