@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lost Island Survival</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #0a0a0f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: 'Courier New', monospace;
+    }
+    #game-container {
+      position: relative;
+      width: 1280px;
+      height: 720px;
+      border: 4px solid #2a3a4a;
+      box-shadow: 0 0 40px rgba(0, 100, 150, 0.3);
+    }
+    #game-canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: rgba(10, 15, 25, 0.95);
+      color: #c8d8e8;
+      text-align: center;
+      padding: 40px;
+    }
+    .overlay.active {
+      display: flex;
+    }
+    .overlay h1 {
+      font-size: 48px;
+      margin-bottom: 30px;
+      letter-spacing: 4px;
+    }
+    .overlay p {
+      font-size: 18px;
+      line-height: 1.8;
+      max-width: 700px;
+      margin-bottom: 20px;
+    }
+    .overlay .prompt {
+      margin-top: 40px;
+      font-size: 22px;
+      color: #f0a050;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 1; }
+    }
+    #start-screen h1 {
+      color: #6ab0d0;
+    }
+    #gameover-screen h1 {
+      color: #d05050;
+    }
+    #rescued-screen h1 {
+      color: #50d080;
+    }
+  </style>
+  <script type="module" crossorigin src="./assets/index-DFdnnFci.js"></script>
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="game-canvas" width="1280" height="720"></canvas>
+    
+    <div id="start-screen" class="overlay active">
+      <h1>LOST</h1>
+      <p>You wake up on a mysterious island after a shipwreck. 
+         The radio transmitter was scattered into three parts across the island: 
+         the transmitter, antenna, and battery.</p>
+      <p>Search the terrain for food to survive and collect all three parts 
+         to send a distress signal. Find shelter before starvation takes you.</p>
+      <p><strong>Controls:</strong><br>
+         Arrow Keys - Move<br>
+         Space - Pick up items</p>
+      <div class="prompt">Press SPACE to start</div>
+    </div>
+    
+    <div id="gameover-screen" class="overlay">
+      <h1>Game Over</h1>
+      <p>You died from starvation. No one ever found you. You are lost forever.</p>
+      <div class="prompt">Press SPACE to try again</div>
+    </div>
+    
+    <div id="rescued-screen" class="overlay">
+      <h1>Rescued</h1>
+      <p>A fishing boat got your call and is on its way to get you. 
+         Seems you are not lost after all :).</p>
+      <div class="prompt">Press SPACE to play again</div>
+    </div>
+  </div>
+  
+</body>
+</html>
