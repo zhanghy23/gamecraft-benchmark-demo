@@ -50588,6 +50588,299 @@
             }
           ]
         }
+      },
+      "deepseek-v4-flash": {
+        "status": "completed",
+        "runId": "deepseek-v4-flash-v8.3-rubric2-imported-missing4-20260915-184920",
+        "score": {
+          "display": "55.96 (+6.42)",
+          "base": 55.96,
+          "passed": 61,
+          "denominator": 109,
+          "dynamic": 7,
+          "dynamicAddition": 6.42,
+          "potential": 62.39
+        },
+        "visualQuality": {
+          "score": 88.22,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.57,
+          "renderingStyleAverage": 40.65,
+          "videosScored": 37
+        },
+        "traceCount": 37,
+        "playPath": "games-v8.3/save-the-lost-friend/deepseek-v4-flash/index.html",
+        "previewPath": "previews-v8.3/save-the-lost-friend/deepseek-v4-flash.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-015",
+              "zh": "During active platformer play, the jump control is held as the player lands on a solid obstacle while falling → The player reverses from downward motion to upward motion and begins a jump on the following gameplay frames."
+            },
+            {
+              "id": "target-016",
+              "zh": "During active platformer play, the jump control is held while the player is airborne with double jump enabled and not already moving upward faster than the double-jump threshold → The player changes from falling or shallow upward motion into a new upward jump on the following gameplay frames."
+            },
+            {
+              "id": "target-023",
+              "zh": "During active non-platformer play, the down movement control is held while the player's next step has no obstacle → The player advances downward through the level between consecutive gameplay frames."
+            },
+            {
+              "id": "target-026",
+              "zh": "The player crosses the left camera margin in a scrollable level → The level scenery shifts right between consecutive frames while the player remains visible in the gameplay canvas."
+            },
+            {
+              "id": "target-028",
+              "zh": "The player crosses the upper camera margin in a scrollable level → The level scenery shifts downward between consecutive frames while the player remains visible in the gameplay canvas."
+            },
+            {
+              "id": "target-034",
+              "zh": "The player touches an evil cloud while their health is 100 and their hit timer is inactive → The HUD displays the message \"Beware of the Evil Cloud.\", and within 1 second the green filled portion of the Health bar is between 45% and 55% of the bar's full visible width."
+            },
+            {
+              "id": "target-035",
+              "zh": "The player touches volcanic lava while their health is 100 and their hit timer is inactive → The HUD displays the message \"Beware of the Volcanic Lava.\", and within 1 second the green filled portion of the Health bar is between 45% and 55% of the bar's full visible width."
+            },
+            {
+              "id": "target-036",
+              "zh": "The player touches a fire bolt while their health is 100, their hit timer is inactive, and the fire level is still active → The HUD displays the message \"Beware of the Fire Bolt.\", and within 1 second the green filled portion of the Health bar is between 45% and 55% of the bar's full visible width."
+            },
+            {
+              "id": "target-039",
+              "zh": "The player touches a cactus in the earth level while their health is 20 and their hit timer is inactive → The level enters the lost-state animation: the player sprite begins moving downward and its visible body height begins shrinking."
+            },
+            {
+              "id": "target-041",
+              "zh": "The player touches volcanic lava in the fire level while their health is 50 and their hit timer is inactive → The level enters the lost-state animation: the player sprite begins moving downward and its visible body height begins shrinking."
+            },
+            {
+              "id": "target-042",
+              "zh": "The player touches a fire bolt in the fire level while their health is 50 and their hit timer is inactive → The level enters the lost-state animation: the player sprite begins moving downward and its visible body height begins shrinking."
+            },
+            {
+              "id": "target-043",
+              "zh": "The player touches a shark in the water hub while their health is 10, their hit timer is inactive, and no dialog interaction is active → The level enters the lost-state animation: the player sprite begins moving downward and its visible body height begins shrinking."
+            },
+            {
+              "id": "target-049",
+              "zh": "The player touches the air gem while the air level is still active → The air gem sprite disappears, and after the level win delay the water hub level replaces the air level on screen."
+            },
+            {
+              "id": "target-050",
+              "zh": "The player touches the earth stone gem while the earth level is still active → The earth stone gem sprite disappears and after the level win delay the water hub level replaces the earth level on screen."
+            },
+            {
+              "id": "target-051",
+              "zh": "The player touches the fire stone gem while the fire level is still active → The fire stone gem sprite disappears and after the level win delay the water hub level replaces the fire level on screen."
+            },
+            {
+              "id": "target-052",
+              "zh": "The player touches the river gem while the river level is still active → The river gem sprite disappears and after the level win delay the water hub level replaces the river level on screen."
+            },
+            {
+              "id": "target-053",
+              "zh": "A collected, unplaced water gem is accepted into the portal while fewer than three gems are already placed → A blue diamond appears at the lower-right area of the portal and the HUD displays a gem-placed message containing \"water\"."
+            },
+            {
+              "id": "target-055",
+              "zh": "A collected, unplaced air gem is accepted into the portal while fewer than three gems are already placed → A light gray diamond appears at the upper-left area of the portal and the HUD displays a gem-placed message containing \"air\"."
+            },
+            {
+              "id": "target-056",
+              "zh": "A collected, unplaced fire gem is accepted into the portal while fewer than three gems are already placed → A red diamond appears at the upper-right area of the portal and the HUD displays a gem-placed message containing \"fire\"."
+            },
+            {
+              "id": "target-060",
+              "zh": "The player touches the locked earth island entrance in the water hub → The HUD displays the message \"You need to collect the key from crab to enter the earth island\"."
+            },
+            {
+              "id": "target-061",
+              "zh": "The player touches the locked water island entrance in the water hub → The HUD displays the message \"You need to collect the key from tortoise to enter the water island\"."
+            },
+            {
+              "id": "target-063",
+              "zh": "The player touches the locked fire island entrance in the water hub → The HUD displays the message \"You need to collect the key from eagle to enter the fire island\"."
+            },
+            {
+              "id": "target-067",
+              "zh": "The player touches the fire island entrance in the water hub after the fire gem has already been collected → The HUD displays the message \"You have already collected the gem from fire island\"."
+            },
+            {
+              "id": "target-071",
+              "zh": "The player touches the unlocked fire island entrance in the water hub before the fire gem has been collected → The HUD displays the message \"Welcome to the fire island\" and, after the level transition delay, the fire level replaces the water hub on screen."
+            },
+            {
+              "id": "target-075",
+              "zh": "The player collides with an NPC that has a question dialog while no question list is open → A dialog UI appears in the HUD area with question text entries, and one question entry is highlighted in red while the other visible entries are black."
+            },
+            {
+              "id": "target-089",
+              "zh": "A moving log updates while its next position intersects a solid obstacle → The log changes horizontal direction and moves back away from the obstacle on the following gameplay frames."
+            },
+            {
+              "id": "target-093",
+              "zh": "A shark updates while its next position intersects an island → The shark changes direction and moves back away from the island on the following gameplay frames."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-004",
+              "zh": "A playable level begins after its display and HUD are created → A centered gameplay canvas is visible with an in-game HUD showing a health bar.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-010",
+              "zh": "A non-platformer level begins after its display and HUD are created → The HUD shows the health bar and does not show a progress bar labeled \"Progress\".",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-025",
+              "zh": "During active earth level play before the far-right end section, the player's next automatic horizontal step has no obstacle → The player advances right through the level between consecutive gameplay frames.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-048",
+              "zh": "The player touches a berry in the fire level while their health is 90 → The berry sprite disappears, the HUD displays the message \"Gained health\", and the health bar's filled portion extends from nine tenths of the bar's full width to the full bar width within 1 second.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-076",
+              "zh": "The player collides with an NPC whose current dialog batch has no questions → The HUD displays a dialog welcome message without showing a red-highlighted question list.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-077",
+              "zh": "The enter selection control is pressed while an NPC dialog is active before the question list is displayed → The HUD area changes from the dialog message to a question list with one entry highlighted in red.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-078",
+              "zh": "The up selection control is pressed while a dialog question list is open and the first question is highlighted → The red highlight moves from the first question entry to the last question entry.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-079",
+              "zh": "The down selection control is pressed while a dialog question list is open and the last question is highlighted → The red highlight moves from the last question entry to the first question entry.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-080",
+              "zh": "The up selection control is pressed while a dialog question list is open and a non-first question is highlighted → The red highlight moves from the currently highlighted question entry to the question entry directly above it.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-081",
+              "zh": "The down selection control is pressed while a dialog question list is open and a non-last question is highlighted → The red highlight moves from the currently highlighted question entry to the question entry directly below it.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-082",
+              "zh": "The enter selection control is pressed while a dialog question list is open → The question list is replaced by the selected question's answer text in the HUD area.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-083",
+              "zh": "The skip dialog control is pressed while an NPC dialog message is displayed → The dialog message text disappears from the HUD area and the normal gameplay HUD remains visible.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-084",
+              "zh": "The skip dialog control is pressed while an NPC answer text is displayed → The answer text disappears from the HUD area and the normal gameplay HUD remains visible.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-085",
+              "zh": "A dialog batch advances after every visible question in the current batch has been answered and another batch exists → A question list is displayed with the first question entry highlighted in red.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-054",
+              "zh": "A collected, unplaced earth gem is accepted into the portal while fewer than three gems are already placed → A brown diamond appears at the lower-left area of the portal and the HUD displays a gem-placed message containing \"earth\".",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-066",
+              "zh": "The player touches the air island entrance in the water hub after the air gem has already been collected → The HUD displays the message \"You have already collected the gem from air island\".",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-090",
+              "zh": "The river player overlaps a moving log during the river level → The player is carried horizontally with the moving log on the following gameplay frames.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-072",
+              "zh": "The pause control is released after being pressed during active gameplay → The gameplay view is replaced by a centered menu screen with the title text \"Save the Lost Friend\".",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-073",
+              "zh": "The pause control is released after being pressed while the pause menu is displayed during a level → The menu disappears and the playable level view with the in-game HUD is visible again.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-086",
+              "zh": "An evil cloud updates while its next position has no obstacle → The evil cloud sprite occupies a different position between consecutive gameplay frames.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-088",
+              "zh": "A moving log updates while its next position has no obstacle → The log sprite occupies a different horizontal position between consecutive gameplay frames.",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-flash-v8.3-rubric2-imported-missing4-20260915-184920",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-16T07:35:15+08:00",
+          "finishedAt": "2026-09-16T11:54:17+08:00",
+          "totalDurationMs": 15541215,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-16T07:35:15+08:00",
+              "finishedAt": "2026-09-16T08:10:38+08:00",
+              "durationMs": 2122455,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-16T08:10:38+08:00",
+              "finishedAt": "2026-09-16T11:06:19+08:00",
+              "durationMs": 10541262,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-16T11:06:19+08:00",
+              "finishedAt": "2026-09-16T11:06:20+08:00",
+              "durationMs": 715,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-16T11:06:20+08:00",
+              "finishedAt": "2026-09-16T11:09:10+08:00",
+              "durationMs": 170488,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-16T11:09:10+08:00",
+              "finishedAt": "2026-09-16T11:54:17+08:00",
+              "durationMs": 2706265,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     }
   }
