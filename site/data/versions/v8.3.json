@@ -35946,6 +35946,99 @@
             }
           ]
         }
+      },
+      "qwen3.8-max": {
+        "status": "completed",
+        "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-qwen19-20260916-141355",
+        "score": {
+          "display": "92.50 (+2.50)",
+          "base": 92.5,
+          "passed": 37,
+          "denominator": 40,
+          "dynamic": 1,
+          "dynamicAddition": 2.5,
+          "potential": 95
+        },
+        "visualQuality": {
+          "score": 92.22,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.22,
+          "renderingStyleAverage": 44,
+          "videosScored": 9
+        },
+        "traceCount": 9,
+        "playPath": "games-v8.3/shooooooot/qwen3.8-max/index.html",
+        "previewPath": "previews-v8.3/shooooooot/qwen3.8-max.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-032",
+              "zh": "An unexploded ammo drop is absorbed by the player while the player is not exploded → The ammo drop sprite disappears, the score text increases by 50, and the ammo text increases by 50."
+            },
+            {
+              "id": "target-037",
+              "zh": "An enemy overlaps the playfield boundary during active gameplay → The enemy sprite disappears and a particle blast appears at the enemy's position."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-009",
+              "zh": "The right gamepad thumbstick leaves the aim dead zone during active gameplay while the player can fire → One or more bullet sprites appear at the player and move in the right thumbstick aim direction.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-qwen19-20260916-141355",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-16T15:27:43+08:00",
+          "finishedAt": "2026-09-16T16:32:42+08:00",
+          "totalDurationMs": 3899552,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-16T15:27:43+08:00",
+              "finishedAt": "2026-09-16T15:41:48+08:00",
+              "durationMs": 844997,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-16T15:41:48+08:00",
+              "finishedAt": "2026-09-16T16:13:46+08:00",
+              "durationMs": 1918199,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-16T16:13:46+08:00",
+              "finishedAt": "2026-09-16T16:13:46+08:00",
+              "durationMs": 291,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-16T16:13:46+08:00",
+              "finishedAt": "2026-09-16T16:15:03+08:00",
+              "durationMs": 77366,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-16T16:15:03+08:00",
+              "finishedAt": "2026-09-16T16:32:42+08:00",
+              "durationMs": 1058668,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "fight-back": {
