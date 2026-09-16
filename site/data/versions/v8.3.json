@@ -44891,6 +44891,265 @@
             }
           ]
         }
+      },
+      "deepseek-v4-flash": {
+        "status": "completed",
+        "runId": "deepseek-v4-flash-v8.3-rubric2-imported-missing4-20260915-184920",
+        "score": {
+          "display": "19.23 (+19.23)",
+          "base": 19.23,
+          "passed": 10,
+          "denominator": 52,
+          "dynamic": 10,
+          "dynamicAddition": 19.23,
+          "potential": 38.46
+        },
+        "visualQuality": {
+          "score": 90.39,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.39,
+          "renderingStyleAverage": 42,
+          "videosScored": 18
+        },
+        "traceCount": 18,
+        "playPath": "games-v8.3/an-http-story/deepseek-v4-flash/index.html",
+        "previewPath": "previews-v8.3/an-http-story/deepseek-v4-flash.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-003",
+              "zh": "The help control is clicked while the main page is visible → The modal overlay opens with the help window visible"
+            },
+            {
+              "id": "target-004",
+              "zh": "The monetization/custom-level control is clicked while the main page is visible → The modal overlay opens with the monetization/custom-level window visible"
+            },
+            {
+              "id": "target-005",
+              "zh": "The start/download control is clicked while the main page is visible → The download bar is visible and its message reads \"Preparing download...\""
+            },
+            {
+              "id": "target-006",
+              "zh": "The initial start/download flow reaches the first 2-second wait after showing the download message \"Preparing download...\" → The download bar remains visible and its message changes to \"Unexpected error\""
+            },
+            {
+              "id": "target-008",
+              "zh": "Built-in level 1 is loaded into the gameplay scene → The isometric 3D level view is shown and a dialogue overlay displays the line \"Ouch... Where am I?\""
+            },
+            {
+              "id": "target-009",
+              "zh": "Built-in level 2 is loaded into the gameplay scene → The isometric 3D level view is shown and a dialogue overlay displays the line \"Damn. Still the wrong address.\""
+            },
+            {
+              "id": "target-011",
+              "zh": "Built-in level 4 is loaded into the gameplay scene → The isometric 3D level view is shown and a dialogue overlay displays the line \"Process 15127:\""
+            },
+            {
+              "id": "target-012",
+              "zh": "Built-in level 5 is loaded into the gameplay scene → The isometric 3D level view is shown and a dialogue overlay displays the line \"You don't say much, do you?\""
+            },
+            {
+              "id": "target-013",
+              "zh": "Built-in level 6 is loaded into the gameplay scene → The isometric 3D level view is shown and a dialogue overlay displays the line \"We're getting close. I can feel it.\""
+            },
+            {
+              "id": "target-014",
+              "zh": "Built-in level 7 is loaded into the gameplay scene → The isometric 3D level view is shown and a dialogue overlay displays the line \"Anomaly detected. Beginning quarantine.\""
+            },
+            {
+              "id": "target-015",
+              "zh": "Built-in level 8 is loaded into the gameplay scene → The isometric 3D level view is shown and a dialogue overlay displays the line \"Whew... That was too close!\""
+            },
+            {
+              "id": "target-016",
+              "zh": "A dialogue sequence has another queued line when the currently displayed line's wait completes → The currently displayed dialogue text is replaced by the next dialogue line in the same dialogue overlay"
+            },
+            {
+              "id": "target-018",
+              "zh": "A level-completion event occurs on a level that has outro dialogue lines → The current level remains visible and a dialogue overlay displays an outro line before the level changes"
+            },
+            {
+              "id": "target-027",
+              "zh": "A draggable block is picked for dragging while the main character is standing on top of it → An outline appears on the block, and the block stays at its original grid position while the main character remains on top of it"
+            },
+            {
+              "id": "target-032",
+              "zh": "A dragged block is released while no safe snapped grid position is available → The block glides back to the grid tile where the drag began and comes to rest there"
+            },
+            {
+              "id": "target-034",
+              "zh": "The main character enters the special exit teleporter on a built-in level that has a following built-in level → The current level scene clears and the next built-in level appears with its dialogue overlay"
+            },
+            {
+              "id": "target-035",
+              "zh": "The main character enters the special exit teleporter on the final built-in level → The current level scene clears and the page returns to the ending download flow, with the download bar opening over the page"
+            },
+            {
+              "id": "target-036",
+              "zh": "A seeker eye enemy is present in a loaded level → The eye enemy is visible with red surfaces and one white face"
+            },
+            {
+              "id": "target-037",
+              "zh": "A non-seeker eye enemy is present in a loaded level → The eye enemy is visible with a red face"
+            },
+            {
+              "id": "target-038",
+              "zh": "A patrolling eye enemy has a defined patrol path when the level becomes ready → The eye enemy begins moving between patrol waypoints in the level"
+            },
+            {
+              "id": "target-039",
+              "zh": "A seeker enemy update occurs while player control is active and the main character is at a different grid position from the seeker → The seeker eye rotates so its visible face points toward the main character during the update"
+            },
+            {
+              "id": "target-040",
+              "zh": "A seeker enemy update occurs while the main character is offset only along the x-axis and the adjacent x-axis tile is not already targeted by another seeker → The seeker enemy moves one grid tile along the x-axis from its current tile toward the main character"
+            },
+            {
+              "id": "target-042",
+              "zh": "A seeker enemy update occurs while the main character is offset from the seeker along both the x-axis and z-axis and neither adjacent target tile is already targeted by another seeker → The seeker enemy moves from its current tile to a diagonally adjacent tile, changing by one grid tile along the x-axis and one grid tile along the z-axis during the update"
+            },
+            {
+              "id": "target-043",
+              "zh": "An enemy eye touches the main character while player control is active → The eye enemy surrounds the main character, and the main character disappears from the level view during the capture animation."
+            },
+            {
+              "id": "target-044",
+              "zh": "The ending download sequence begins after gameplay reaches an ending state → A modal overlay is visible, the download bar opens, and the download bar message reads \"Preparing download...\""
+            },
+            {
+              "id": "target-045",
+              "zh": "The losing ending download preparation completes → The download bar message reads \"Unexpected error\" and the unexpected-error notification is visible"
+            },
+            {
+              "id": "target-046",
+              "zh": "The winning ending download preparation completes → The download bar message reads \"Click to open\" and a download item row is visible"
+            },
+            {
+              "id": "target-049",
+              "zh": "The custom-level import/create screen is shown for a Coil subscriber → A window is visible with the heading \"Thanks for being a Coil subscriber!\", instructions beginning \"Load a custom level from\", a text area containing JSON level data, and a \"Play\" button"
+            },
+            {
+              "id": "target-050",
+              "zh": "Web monetization starts while the monetization/custom-level page elements are available → The non-subscriber monetization elements are hidden and the subscriber custom-level elements are visible"
+            },
+            {
+              "id": "target-051",
+              "zh": "The custom-level form is submitted with valid custom level data in the text area → The custom level opens in the isometric 3D level view"
+            },
+            {
+              "id": "target-052",
+              "zh": "The custom-level form is submitted with invalid custom level data in the text area → The custom-level window remains visible with its text area and Play button, and no isometric level scene opens"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-023",
+              "zh": "The main character is instructed to walk toward a same-row destination while the adjacent x-axis tile in that direction is not walkable → The main character does not enter the blocked adjacent x-axis tile in response to the instruction",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-010",
+              "zh": "Built-in level 3 is loaded into the gameplay scene → The isometric 3D level view is shown and a dialogue overlay displays the line \"Process 15127:\"",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-026",
+              "zh": "A draggable block has been held for the drag-start delay during active gameplay while the main character is not standing on it → An outline appears around the selected block",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-028",
+              "zh": "A draggable object is dragged during active gameplay → The dragged 3D object moves from its starting tile position while the rest of the level remains in place",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-029",
+              "zh": "A dragged block overlaps another solid object during active gameplay → The dragged block remains outlined while overlapping the other object",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-030",
+              "zh": "A dragged block is released while its nearest snapped grid tile is safe → The block glides from its released position to the nearest grid-aligned tile and comes to rest there",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-031",
+              "zh": "A dragged block is released while its nearest snapped grid tile is unsafe, its x-axis offset from that nearest tile is greater than its z-axis offset, and the x-axis fallback tile is safe → The block glides to the grid-aligned tile adjacent to the nearest snapped tile along the x-axis and comes to rest there",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-033",
+              "zh": "The main character enters a paired non-exit teleporter during active gameplay → The main character disappears at the entered teleporter and reappears at the matching teleporter elsewhere in the level",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-041",
+              "zh": "A seeker enemy update occurs while the main character is offset only along the z-axis and the adjacent z-axis tile is not already targeted by another seeker → The seeker enemy moves one grid tile along the z-axis from its current tile toward the main character",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-047",
+              "zh": "The visible unexpected-error download notification is clicked after the losing ending is prepared → The unexpected-error notification is no longer visible, and a window is visible with the heading \"This server has been confiscated by the Ministry of Knowledge.\"",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-048",
+              "zh": "The clickable download item is clicked after the winning ending is prepared → A window is visible with a 👾 icon and the heading \"Thanks for playing An HTTP Story!\"",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-flash-v8.3-rubric2-imported-missing4-20260915-184920",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-16T04:32:03+08:00",
+          "finishedAt": "2026-09-16T07:35:15+08:00",
+          "totalDurationMs": 10991783,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-16T04:32:03+08:00",
+              "finishedAt": "2026-09-16T04:49:38+08:00",
+              "durationMs": 1054705,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-16T04:49:38+08:00",
+              "finishedAt": "2026-09-16T07:04:50+08:00",
+              "durationMs": 8112076,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-16T07:04:50+08:00",
+              "finishedAt": "2026-09-16T07:04:50+08:00",
+              "durationMs": 368,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-16T07:04:50+08:00",
+              "finishedAt": "2026-09-16T07:07:30+08:00",
+              "durationMs": 160147,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-16T07:07:30+08:00",
+              "finishedAt": "2026-09-16T07:35:15+08:00",
+              "durationMs": 1664456,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "rainbow-run": {
