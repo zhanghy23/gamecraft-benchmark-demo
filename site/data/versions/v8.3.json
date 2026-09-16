@@ -35304,6 +35304,90 @@
             }
           ]
         }
+      },
+      "qwen3.8-max": {
+        "status": "completed",
+        "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-qwen19-20260916-141355",
+        "score": {
+          "display": "96.88 (+0.00)",
+          "base": 96.88,
+          "passed": 31,
+          "denominator": 32,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 96.88
+        },
+        "visualQuality": {
+          "score": 87.86,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 46.86,
+          "renderingStyleAverage": 41,
+          "videosScored": 7
+        },
+        "traceCount": 7,
+        "playPath": "games-v8.3/lepricons-rush/qwen3.8-max/index.html",
+        "previewPath": "previews-v8.3/lepricons-rush/qwen3.8-max.png",
+        "unmet": {
+          "vlm": [],
+          "replayTrace": [
+            {
+              "id": "target-029",
+              "zh": "The game-over display timer is decremented to zero from a positive value during gameplay update → The dense dark-brown game-over line overlay is no longer drawn over the playfield.",
+              "cause": "源码分析确认未实现"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-qwen19-20260916-141355",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-16T14:58:22+08:00",
+          "finishedAt": "2026-09-16T15:27:42+08:00",
+          "totalDurationMs": 1759049,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-16T14:58:23+08:00",
+              "finishedAt": "2026-09-16T15:10:50+08:00",
+              "durationMs": 747336,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-16T15:10:50+08:00",
+              "finishedAt": "2026-09-16T15:21:43+08:00",
+              "durationMs": 652921,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-16T15:21:43+08:00",
+              "finishedAt": "2026-09-16T15:21:43+08:00",
+              "durationMs": 253,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-16T15:21:43+08:00",
+              "finishedAt": "2026-09-16T15:22:38+08:00",
+              "durationMs": 54836,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-16T15:22:38+08:00",
+              "finishedAt": "2026-09-16T15:27:42+08:00",
+              "durationMs": 303670,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "shooooooot": {
