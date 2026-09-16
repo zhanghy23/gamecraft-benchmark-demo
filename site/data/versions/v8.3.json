@@ -34542,6 +34542,95 @@
           ]
         }
       },
+      "qwen3.8-max": {
+        "status": "completed",
+        "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-qwen19-20260916-141355",
+        "score": {
+          "display": "95.12 (+0.00)",
+          "base": 95.12,
+          "passed": 39,
+          "denominator": 41,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 95.12
+        },
+        "visualQuality": {
+          "score": 90.25,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.75,
+          "renderingStyleAverage": 42.5,
+          "videosScored": 8
+        },
+        "traceCount": 8,
+        "playPath": "games-v8.3/rainbow-assault/qwen3.8-max/index.html",
+        "previewPath": "previews-v8.3/rainbow-assault/qwen3.8-max.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-035",
+              "zh": "The player character with 70% health or less contacts a healing power-up during active gameplay → The healing power-up icon disappears, and the health bar fill endpoint shifts right by 30% of the full health-bar frame width within 1 second, with a tolerance of ±10% of the full frame width."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-013",
+              "zh": "The on-screen joystick is released after being dragged away from its neutral position → The joystick knob returns to the center of the joystick base.",
+              "cause": "源码错误导致 Trace 不可达"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-qwen19-20260916-141355",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-16T14:21:05+08:00",
+          "finishedAt": "2026-09-16T14:58:22+08:00",
+          "totalDurationMs": 2236438,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-16T14:21:05+08:00",
+              "finishedAt": "2026-09-16T14:35:24+08:00",
+              "durationMs": 858904,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-16T14:35:24+08:00",
+              "finishedAt": "2026-09-16T14:48:29+08:00",
+              "durationMs": 784339,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-16T14:48:29+08:00",
+              "finishedAt": "2026-09-16T14:48:29+08:00",
+              "durationMs": 267,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-16T14:48:29+08:00",
+              "finishedAt": "2026-09-16T14:51:00+08:00",
+              "durationMs": 151530,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-16T14:51:00+08:00",
+              "finishedAt": "2026-09-16T14:58:22+08:00",
+              "durationMs": 441363,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
       "kimi-k2.6": {
         "status": "completed",
         "runId": "kimi-k2.6-v8.3-rubric2-imported-untested22-20260916-112351",
