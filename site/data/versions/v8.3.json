@@ -50144,6 +50144,35 @@
             }
           ]
         }
+      },
+      "deepseek-v4-pro": {
+        "status": "failed",
+        "runId": "deepseek-v4-pro-v8.3-rubric2-imported-e2-continuation15-20260916-133950",
+        "stage": "trace",
+        "score": null,
+        "traceCount": 0,
+        "playPath": null,
+        "previewPath": null,
+        "unmet": null,
+        "issue": "导入源码通过构建，但 Trace 阶段调用评测服务时返回 HTTP 404（服务端点不存在）；本次属于共享评测基础设施故障，未生成最终报告。无功能分、无画面分且不可试玩。",
+        "timing": {
+          "runId": "deepseek-v4-pro-v8.3-rubric2-imported-e2-continuation15-20260916-133950",
+          "status": "failed",
+          "failedStage": "trace",
+          "startedAt": "2026-09-17T04:32:26+08:00",
+          "finishedAt": "2026-09-17T04:34:07+08:00",
+          "totalDurationMs": 100912,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-17T04:32:26+08:00",
+              "finishedAt": "2026-09-17T04:34:07+08:00",
+              "durationMs": 100896,
+              "status": "failed",
+              "exitCode": 1
+            }
+          ]
+        }
       }
     },
     "tube-masters": {
