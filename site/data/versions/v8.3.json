@@ -47124,6 +47124,35 @@
           ]
         }
       },
+      "qwen3.8-max": {
+        "status": "failed",
+        "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-qwen19-20260916-141355",
+        "stage": "trace",
+        "score": null,
+        "traceCount": 0,
+        "playPath": null,
+        "previewPath": null,
+        "unmet": null,
+        "issue": "导入源码通过构建，但 Trace 阶段调用评测服务时返回 HTTP 404（服务端点不存在）；本次属于共享评测基础设施故障，未生成最终报告。无功能分、无画面分且不可试玩。",
+        "timing": {
+          "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-qwen19-20260916-141355",
+          "status": "failed",
+          "failedStage": "trace",
+          "startedAt": "2026-09-17T04:38:06+08:00",
+          "finishedAt": "2026-09-17T04:38:11+08:00",
+          "totalDurationMs": 5504,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-17T04:38:06+08:00",
+              "finishedAt": "2026-09-17T04:38:11+08:00",
+              "durationMs": 5488,
+              "status": "failed",
+              "exitCode": 1
+            }
+          ]
+        }
+      },
       "kimi-k2.6": {
         "status": "failed",
         "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-continuation20-20260916-133950",
