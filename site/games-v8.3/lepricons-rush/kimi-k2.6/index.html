@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leprechaun Binary Patrol</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: #1a1a1a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    #game-container {
+      position: relative;
+      width: 640px;
+      height: 360px;
+      max-width: 100vw;
+      max-height: 100vh;
+    }
+    canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+      image-rendering: pixelated;
+    }
+    #start-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      font-family: monospace;
+      font-size: 18px;
+      cursor: pointer;
+      z-index: 10;
+    }
+  </style>
+  <script type="module" crossorigin src="./assets/index-BqLa8zA3.js"></script>
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="game-canvas" width="640" height="360"></canvas>
+    <div id="start-overlay">Click to Start</div>
+  </div>
+</body>
+</html>

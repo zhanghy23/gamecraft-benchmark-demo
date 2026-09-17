@@ -35388,6 +35388,125 @@
             }
           ]
         }
+      },
+      "kimi-k2.6": {
+        "status": "completed",
+        "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-continuation20-20260916-133950",
+        "score": {
+          "display": "75.00 (+3.13)",
+          "base": 75,
+          "passed": 24,
+          "denominator": 32,
+          "dynamic": 1,
+          "dynamicAddition": 3.13,
+          "potential": 78.13
+        },
+        "visualQuality": {
+          "score": 89.6,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.8,
+          "renderingStyleAverage": 41.8,
+          "videosScored": 5
+        },
+        "traceCount": 5,
+        "playPath": "games-v8.3/lepricons-rush/kimi-k2.6/index.html",
+        "previewPath": "previews-v8.3/lepricons-rush/kimi-k2.6.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-028",
+              "zh": "A unicorn is in the after-meet state during herd update while a patrol-region rectangle is visible → The patrol-region rectangle disappears from the playfield."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-002",
+              "zh": "A score increment reaches a binary score digit that is currently displayed as zero before the maximum score is reached → That score digit changes from the zero symbol to the one symbol in the six-position binary score display.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-003",
+              "zh": "A score increment reaches a binary score digit that is currently displayed as one before the maximum score is reached → That score digit changes from the one symbol to the zero symbol in the six-position binary score display.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-004",
+              "zh": "A score increment is accepted while the six-position binary score display reads 111111 → The six-position binary score display changes to 000000, and at least one wide light-red horizontal line stroke is drawn across the playfield.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-010",
+              "zh": "A score drop is processed while the six-position binary score display contains at least one one symbol → The rightmost one symbol in the six-position binary score display changes to a zero symbol.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-011",
+              "zh": "A score drop is processed while the six-position binary score display contains no one symbols → The six-position binary score display remains 000000 after the score-drop opportunity.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-029",
+              "zh": "The game-over display timer is decremented to zero from a positive value during gameplay update → The dense dark-brown game-over line overlay is no longer drawn over the playfield.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-019",
+              "zh": "A drag selection is released with an area of at least 10000 square game units → The drag-selection rectangle is replaced by a persistent patrol-region rectangle in the playfield.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-continuation20-20260916-133950",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-16T17:11:32+08:00",
+          "finishedAt": "2026-09-16T18:00:28+08:00",
+          "totalDurationMs": 2936253,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-16T17:11:32+08:00",
+              "finishedAt": "2026-09-16T17:27:41+08:00",
+              "durationMs": 969660,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-16T17:27:42+08:00",
+              "finishedAt": "2026-09-16T17:55:44+08:00",
+              "durationMs": 1682957,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-16T17:55:44+08:00",
+              "finishedAt": "2026-09-16T17:55:45+08:00",
+              "durationMs": 306,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-16T17:55:45+08:00",
+              "finishedAt": "2026-09-16T17:57:08+08:00",
+              "durationMs": 83062,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-16T17:57:08+08:00",
+              "finishedAt": "2026-09-16T18:00:28+08:00",
+              "durationMs": 200238,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "shooooooot": {
