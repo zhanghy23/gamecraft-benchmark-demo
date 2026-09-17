@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dewdrop Farm</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #2d5016;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden;
+      width: 100vw;
+      height: 100vh;
+    }
+    #game-container {
+      width: 1280px;
+      height: 720px;
+      margin: 0 auto;
+      position: relative;
+      background: #3a6b1f;
+    }
+    canvas {
+      display: block;
+    }
+    #ui-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    #ui-overlay > * {
+      pointer-events: auto;
+    }
+    #title-screen {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.7);
+      z-index: 100;
+    }
+    #title-screen h1 {
+      font-size: 64px;
+      margin-bottom: 40px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    .btn {
+      padding: 12px 32px;
+      font-size: 20px;
+      border: 2px solid #fff;
+      background: #4a8c2a;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 8px;
+      margin: 8px;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: #5aad35; }
+    .btn.active {
+      background: #ffd700;
+      color: #333;
+      border-color: #ffd700;
+    }
+    #top-bar {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 60px;
+      background: rgba(0,0,0,0.5);
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      justify-content: space-between;
+    }
+    #cash-display {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .coin-icon {
+      width: 28px; height: 28px;
+      background: #ffd700;
+      border-radius: 50%;
+      margin-right: 8px;
+      border: 2px solid #daa520;
+    }
+    #screen-tabs {
+      display: flex;
+      gap: 4px;
+    }
+    #time-display {
+      font-size: 18px;
+      min-width: 120px;
+      text-align: right;
+    }
+    #main-area {
+      position: absolute;
+      top: 60px; left: 0; right: 0; bottom: 100px;
+    }
+    #farm-area, #store-area, #market-area, #info-panel {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      display: none;
+    }
+    #farm-area.active, #store-area.active, #market-area.active, #info-panel.active {
+      display: block;
+    }
+    #farm-canvas-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #store-area, #market-area {
+      padding: 20px;
+      overflow-y: auto;
+    }
+    .store-grid, .market-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .store-item, .market-item {
+      background: rgba(0,0,0,0.4);
+      border: 2px solid #666;
+      border-radius: 8px;
+      padding: 12px;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    .store-item:hover, .market-item:hover {
+      border-color: #ffd700;
+    }
+    .store-item.locked {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+    .store-item .item-name {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+    .store-item .item-price {
+      color: #ffd700;
+      margin-bottom: 4px;
+    }
+    .store-item .item-unlock {
+      font-size: 12px;
+      color: #aaa;
+    }
+    .market-item .item-name {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .market-item .item-amount {
+      color: #aaa;
+    }
+    .market-item .item-price {
+      color: #ffd700;
+    }
+    #info-panel {
+      padding: 40px;
+      font-size: 20px;
+      line-height: 2;
+    }
+    #info-panel .info-line {
+      margin-bottom: 12px;
+    }
+    #bottom-bar {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 100px;
+      background: rgba(0,0,0,0.6);
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      gap: 12px;
+    }
+    .tool-slot {
+      width: 72px;
+      height: 72px;
+      border: 2px solid #666;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      background: rgba(0,0,0,0.3);
+      position: relative;
+      transition: border-color 0.2s;
+    }
+    .tool-slot:hover { border-color: #aaa; }
+    .tool-slot.active {
+      border-color: #ffd700;
+      background: rgba(255,215,0,0.2);
+    }
+    .tool-slot .tool-icon {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+    .tool-slot .tool-key {
+      font-size: 10px;
+      color: #aaa;
+      margin-top: 2px;
+    }
+    .tool-slot .amount-sticker {
+      position: absolute;
+      bottom: 2px;
+      right: 2px;
+      background: #ff4444;
+      color: #fff;
+      font-size: 11px;
+      font-weight: bold;
+      padding: 1px 5px;
+      border-radius: 4px;
+      min-width: 18px;
+      text-align: center;
+    }
+    .seed-packet {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 16px;
+      height: 20px;
+      background: #8B4513;
+      border: 1px solid #654321;
+      border-radius: 2px;
+    }
+    .seed-packet::after {
+      content: '';
+      position: absolute;
+      top: 4px;
+      left: 3px;
+      width: 8px;
+      height: 8px;
+      background: #4a8c2a;
+      border-radius: 50%;
+    }
+    .empty-message {
+      text-align: center;
+      font-size: 18px;
+      color: #aaa;
+      margin-top: 40px;
+    }
+    @media (max-width: 1280px) {
+      #game-container { transform: scale(calc(100vw / 1280)); transform-origin: top left; }
+    }
+  </style>
+  <script type="module" crossorigin src="./assets/index-Cn-hBKKy.js"></script>
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="game-canvas" width="1280" height="620"></canvas>
+    <div id="ui-overlay">
+      <div id="title-screen">
+        <h1>Dewdrop Farm</h1>
+        <button class="btn" id="new-game-btn">New Game</button>
+      </div>
+      <div id="top-bar">
+        <div id="cash-display">
+          <div class="coin-icon"></div>
+          <span id="cash-value">0</span>
+        </div>
+        <div id="screen-tabs">
+          <button class="btn" id="tab-tend">Tend</button>
+          <button class="btn" id="tab-buy">Buy</button>
+          <button class="btn" id="tab-sell">Sell</button>
+          <button class="btn" id="tab-geek">Info</button>
+        </div>
+        <div id="time-display">Spring Day 1</div>
+      </div>
+      <div id="main-area">
+        <div id="farm-area" class="active">
+          <div id="farm-canvas-container"></div>
+        </div>
+        <div id="store-area">
+          <div class="store-grid" id="store-grid"></div>
+        </div>
+        <div id="market-area">
+          <div class="market-grid" id="market-grid"></div>
+        </div>
+        <div id="info-panel">
+          <div class="info-line" id="info-year">Year 1st</div>
+          <div class="info-line" id="info-level">Level: 0</div>
+          <div class="info-line" id="info-exp">Experience: 0/100</div>
+          <div class="info-line" id="info-luck">Luck: 0%</div>
+        </div>
+      </div>
+      <div id="bottom-bar">
+        <div class="tool-slot active" id="tool-hoe" data-tool="hoe">
+          <div class="tool-icon">⛏</div>
+          <div class="tool-key">1</div>
+        </div>
+        <div class="tool-slot" id="tool-water" data-tool="water">
+          <div class="tool-icon">🚿</div>
+          <div class="tool-key">2</div>
+        </div>
+        <div class="tool-slot" id="seed-0" data-seed="0"></div>
+        <div class="tool-slot" id="seed-1" data-seed="1"></div>
+        <div class="tool-slot" id="seed-2" data-seed="2"></div>
+        <div class="tool-slot" id="seed-3" data-seed="3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
