@@ -36158,6 +36158,114 @@
             }
           ]
         }
+      },
+      "kimi-k2.6": {
+        "status": "completed",
+        "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-continuation20-20260916-133950",
+        "score": {
+          "display": "85.00 (+7.50)",
+          "base": 85,
+          "passed": 34,
+          "denominator": 40,
+          "dynamic": 3,
+          "dynamicAddition": 7.5,
+          "potential": 92.5
+        },
+        "visualQuality": {
+          "score": 91,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.86,
+          "renderingStyleAverage": 43.14,
+          "videosScored": 7
+        },
+        "traceCount": 7,
+        "playPath": "games-v8.3/shooooooot/kimi-k2.6/index.html",
+        "previewPath": "previews-v8.3/shooooooot/kimi-k2.6.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-032",
+              "zh": "An unexploded ammo drop is absorbed by the player while the player is not exploded → The ammo drop sprite disappears, the score text increases by 50, and the ammo text increases by 50."
+            },
+            {
+              "id": "target-033",
+              "zh": "An unexploded ammo drop is absorbed by the player while the player is not exploded and the ammo gain would exceed the ammo maximum → The ammo drop sprite disappears, the score text increases by 50, and the ammo text reads \"ammo: 404\"."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-035",
+              "zh": "The player overlaps the playfield boundary during active gameplay → A particle blast appears at the player's position and the player ring disappears.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-009",
+              "zh": "The right gamepad thumbstick leaves the aim dead zone during active gameplay while the player can fire → One or more bullet sprites appear at the player and move in the right thumbstick aim direction.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-014",
+              "zh": "The player attempts to fire in single-shot mode with zero ammo → No new bullet sprite appears during that fire attempt.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-037",
+              "zh": "An enemy overlaps the playfield boundary during active gameplay → The enemy sprite disappears and a particle blast appears at the enemy's position.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-continuation20-20260916-133950",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-16T18:00:29+08:00",
+          "finishedAt": "2026-09-16T19:04:53+08:00",
+          "totalDurationMs": 3864243,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-16T18:00:29+08:00",
+              "finishedAt": "2026-09-16T18:14:41+08:00",
+              "durationMs": 851735,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-16T18:14:41+08:00",
+              "finishedAt": "2026-09-16T18:54:52+08:00",
+              "durationMs": 2411646,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-16T18:54:52+08:00",
+              "finishedAt": "2026-09-16T18:54:53+08:00",
+              "durationMs": 284,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-16T18:54:53+08:00",
+              "finishedAt": "2026-09-16T18:57:17+08:00",
+              "durationMs": 144453,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-16T18:57:17+08:00",
+              "finishedAt": "2026-09-16T19:04:53+08:00",
+              "durationMs": 456092,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "fight-back": {
