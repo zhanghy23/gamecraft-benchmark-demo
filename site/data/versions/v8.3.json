@@ -36775,6 +36775,163 @@
             }
           ]
         }
+      },
+      "kimi-k2.6": {
+        "status": "completed",
+        "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-continuation20-20260916-133950",
+        "score": {
+          "display": "45.45 (+15.15)",
+          "base": 45.45,
+          "passed": 15,
+          "denominator": 33,
+          "dynamic": 5,
+          "dynamicAddition": 15.15,
+          "potential": 60.61
+        },
+        "visualQuality": {
+          "score": 80.44,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 42.56,
+          "renderingStyleAverage": 37.89,
+          "videosScored": 9
+        },
+        "traceCount": 9,
+        "playPath": "games-v8.3/fight-back/kimi-k2.6/index.html",
+        "previewPath": "previews-v8.3/fight-back/kimi-k2.6.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-004",
+              "zh": "The adventure stage receives an Arrow Up input while the hero can accept a new action and the destination tile is walkable and unoccupied → The hero sprite walks one map step toward the top of the gameplay view."
+            },
+            {
+              "id": "target-005",
+              "zh": "The adventure stage receives an Arrow Down input while the hero can accept a new action and the destination tile is walkable and unoccupied → The hero sprite walks one map step toward the bottom of the gameplay view."
+            },
+            {
+              "id": "target-006",
+              "zh": "The adventure stage receives an Arrow Left input while the hero can accept a new action and the destination tile is walkable and unoccupied → The hero sprite walks one map step toward the left side of the gameplay view."
+            },
+            {
+              "id": "target-007",
+              "zh": "The adventure stage receives an Arrow Right input while the hero can accept a new action and the destination tile is walkable and unoccupied → The hero sprite walks one map step toward the right side of the gameplay view."
+            },
+            {
+              "id": "target-008",
+              "zh": "The adventure stage receives a Space input while the hero can accept a new action → The hero sprite stays on its current map tile and the gameplay console displays a new message naming the hero and saying \"rest for\" followed by a numeric healing amount and \"hp\"."
+            },
+            {
+              "id": "target-009",
+              "zh": "The hero performs an attack against a living non-dragon enemy and the enemy survives the hit → The gameplay console displays a new hit message naming the hero and the target and saying \"for\" followed by a numeric damage amount."
+            },
+            {
+              "id": "target-010",
+              "zh": "The hero performs an attack against a living non-dragon enemy and the hit kills the enemy → The gameplay console displays a new hit message for the attack and a new message naming the target and saying \"is dead\"."
+            },
+            {
+              "id": "target-011",
+              "zh": "The hero performs an attack against the living dragon and the dragon survives the hit → The gameplay console displays a new hit message naming the hero and the dragon and saying \"for\" followed by a numeric damage amount."
+            },
+            {
+              "id": "target-014",
+              "zh": "A non-hero actor adjacent to the hero receives an AI turn with no queued action → The gameplay console displays a new hit message naming that actor and the hero and saying \"for\" followed by a numeric damage amount."
+            },
+            {
+              "id": "target-020",
+              "zh": "The hero performs an attack against a living target that survives the hit while the hero's pre-attack XP is at least 2 points below the current next-level XP requirement → In the right-side information panel, the XP line's numerator increases by 1 from its pre-attack displayed value and the XP line's denominator stays the same."
+            },
+            {
+              "id": "target-021",
+              "zh": "The hero performs an attack that kills a living non-dragon enemy while the hero's pre-attack XP is at least 4 points below the current next-level XP requirement → In the right-side information panel, the XP line's numerator increases by 3 from its pre-attack displayed value and the XP line's denominator stays the same."
+            },
+            {
+              "id": "target-028",
+              "zh": "The adventure gameplay view renders the right-side information panel → A vertical column of \"|\" glyphs is drawn at the left edge of the right-side information panel."
+            },
+            {
+              "id": "target-029",
+              "zh": "The adventure gameplay view renders its console border → A horizontal row of \"-\" glyphs spans the top of the console area, with one \"+\" glyph at the divider between the map area and the right-side information panel."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-013",
+              "zh": "An actor attacks a living target with an attack result that deals 0 damage after defense → The gameplay console displays a new hit message naming the attacker and target and saying \"for 0 damage\".",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-018",
+              "zh": "The hero performs a walk action to the north toward a non-walkable destination with no attackable actor there → The hero sprite remains on its current map tile.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-019",
+              "zh": "The hero performs a walk action to the north toward a tile occupied by a living actor → The hero sprite remains on its current map tile.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-031",
+              "zh": "The game over stage receives an Enter input → The displayed game over screen is replaced by the opening menu screen.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-033",
+              "zh": "The game won stage receives an Enter input → The displayed victory screen is replaced by the opening menu screen.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-continuation20-20260916-133950",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-16T19:04:54+08:00",
+          "finishedAt": "2026-09-16T21:45:57+08:00",
+          "totalDurationMs": 9663379,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-16T19:04:54+08:00",
+              "finishedAt": "2026-09-16T19:16:58+08:00",
+              "durationMs": 724028,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-16T19:16:58+08:00",
+              "finishedAt": "2026-09-16T21:25:51+08:00",
+              "durationMs": 7733585,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-16T21:25:51+08:00",
+              "finishedAt": "2026-09-16T21:25:52+08:00",
+              "durationMs": 369,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-16T21:25:52+08:00",
+              "finishedAt": "2026-09-16T21:27:25+08:00",
+              "durationMs": 93021,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-16T21:27:25+08:00",
+              "finishedAt": "2026-09-16T21:45:57+08:00",
+              "durationMs": 1112343,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "prism-paddock": {
