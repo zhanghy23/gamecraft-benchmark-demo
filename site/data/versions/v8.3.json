@@ -38013,6 +38013,135 @@
           ]
         }
       },
+      "qwen3.8-max": {
+        "status": "completed",
+        "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-qwen19-20260916-141355",
+        "score": {
+          "display": "82.46 (+8.77)",
+          "base": 82.46,
+          "passed": 47,
+          "denominator": 57,
+          "dynamic": 5,
+          "dynamicAddition": 8.77,
+          "potential": 91.23
+        },
+        "visualQuality": {
+          "score": 90.75,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.5,
+          "renderingStyleAverage": 43.25,
+          "videosScored": 8
+        },
+        "traceCount": 8,
+        "playPath": "games-v8.3/prism-paddock/qwen3.8-max/index.html",
+        "previewPath": "previews-v8.3/prism-paddock/qwen3.8-max.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-049",
+              "zh": "The player clicks the final highlighted correct decoration in an active quest sequence → The quest speech bubble is not visible, and a glowing rainbow arc overlay with centered unlock text is visible over the game view."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-017",
+              "zh": "The unicorn reaches its poop destination after being fed → A butterfly-poop appears on the tile the unicorn was occupying, and the unicorn steps onto an adjacent tile.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-041",
+              "zh": "A placed flower decoration is rendered after its placement pop-in animation has completed → A flower decoration is visible on its grass tile.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-042",
+              "zh": "A placed mushroom decoration is rendered after its placement pop-in animation has completed → A mushroom decoration is visible on its grass tile.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-043",
+              "zh": "A placed crystal decoration is rendered after its placement pop-in animation has completed → A crystal decoration is visible on its grass tile.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-027",
+              "zh": "The player taps a different enabled color swatch in the bottom palette while the shop panel is open → The selected-swatch highlight moves to the tapped color swatch and the shop panel remains visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-030",
+              "zh": "The shop panel is rendered after blue has been unlocked and at least one flower decoration has been placed → The shop panel shows Flower, Mushroom, and Crystal item cards.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-040",
+              "zh": "The player releases a dragged shop item when no valid grass-tile placement preview is visible → No new plant decoration is added to the grass.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-048",
+              "zh": "The player clicks a nonmatching decoration after making progress in an active quest → The quest highlight resets to the first required decoration in the sequence.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-015",
+              "zh": "The player presses a locked color swatch in the bottom palette while the unicorn is not digesting → No floating color fragment appears under the pointer.",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-qwen19-20260916-141355",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-16T17:24:06+08:00",
+          "finishedAt": "2026-09-17T00:15:10+08:00",
+          "totalDurationMs": 24664725,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-16T17:24:06+08:00",
+              "finishedAt": "2026-09-16T17:54:25+08:00",
+              "durationMs": 1819460,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-16T17:54:25+08:00",
+              "finishedAt": "2026-09-16T23:48:10+08:00",
+              "durationMs": 21224713,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-16T23:48:10+08:00",
+              "finishedAt": "2026-09-16T23:48:10+08:00",
+              "durationMs": 549,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-16T23:48:10+08:00",
+              "finishedAt": "2026-09-17T00:00:16+08:00",
+              "durationMs": 725345,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-17T00:00:16+08:00",
+              "finishedAt": "2026-09-17T00:15:10+08:00",
+              "durationMs": 894627,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
       "kimi-k2.6": {
         "status": "completed",
         "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-continuation20-20260916-133950",
