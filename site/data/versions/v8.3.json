@@ -45948,6 +45948,292 @@
             }
           ]
         }
+      },
+      "deepseek-v4-pro": {
+        "status": "completed",
+        "runId": "deepseek-v4-pro-v8.3-rubric2-imported-e2-continuation15-20260916-133950",
+        "score": {
+          "display": "19.23 (+71.15)",
+          "base": 19.23,
+          "passed": 10,
+          "denominator": 52,
+          "dynamic": 37,
+          "dynamicAddition": 71.15,
+          "potential": 90.38
+        },
+        "visualQuality": {
+          "score": 89.75,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.88,
+          "renderingStyleAverage": 41.88,
+          "videosScored": 8
+        },
+        "traceCount": 8,
+        "playPath": "games-v8.3/an-http-story/deepseek-v4-pro/index.html",
+        "previewPath": "previews-v8.3/an-http-story/deepseek-v4-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-020",
+              "zh": "The main character is instructed to walk toward a reachable tile whose next step is along the x-axis during active gameplay → The main character leaves its current tile and moves one grid tile along the x-axis toward the selected destination"
+            },
+            {
+              "id": "target-024",
+              "zh": "A hoverable 3D object is pointed at during active gameplay while no drag is starting → A white overlay highlight appears on the pointed object"
+            },
+            {
+              "id": "target-028",
+              "zh": "A draggable object is dragged during active gameplay → The dragged 3D object moves from its starting tile position while the rest of the level remains in place"
+            },
+            {
+              "id": "target-031",
+              "zh": "A dragged block is released while its nearest snapped grid tile is unsafe, its x-axis offset from that nearest tile is greater than its z-axis offset, and the x-axis fallback tile is safe → The block glides to the grid-aligned tile adjacent to the nearest snapped tile along the x-axis and comes to rest there"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-027",
+              "zh": "A draggable block is picked for dragging while the main character is standing on top of it → An outline appears on the block, and the block stays at its original grid position while the main character remains on top of it",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-001",
+              "zh": "The game starts for a first-time visitor before the initial help has been dismissed → A modal help window is visible over the directory-style page, with a close button marked \"×\" and the heading \"Welcome to An HTTP Story\".",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-002",
+              "zh": "A visible modal window close control is clicked while a modal window is open → The open modal window and dark modal overlay disappear, leaving the directory-style main page visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-003",
+              "zh": "The help control is clicked while the main page is visible → The modal overlay opens with the help window visible",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-004",
+              "zh": "The monetization/custom-level control is clicked while the main page is visible → The modal overlay opens with the monetization/custom-level window visible",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-005",
+              "zh": "The start/download control is clicked while the main page is visible → The download bar is visible and its message reads \"Preparing download...\"",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-006",
+              "zh": "The initial start/download flow reaches the first 2-second wait after showing the download message \"Preparing download...\" → The download bar remains visible and its message changes to \"Unexpected error\"",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-007",
+              "zh": "The initial download preparation completes after the start/download flow → The landing page is hidden, the gameplay canvas is visible, and the bottom download bar is no longer open over the page",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-008",
+              "zh": "Built-in level 1 is loaded into the gameplay scene → The isometric 3D level view is shown and a dialogue overlay displays the line \"Ouch... Where am I?\"",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-009",
+              "zh": "Built-in level 2 is loaded into the gameplay scene → The isometric 3D level view is shown and a dialogue overlay displays the line \"Damn. Still the wrong address.\"",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-010",
+              "zh": "Built-in level 3 is loaded into the gameplay scene → The isometric 3D level view is shown and a dialogue overlay displays the line \"Process 15127:\"",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-011",
+              "zh": "Built-in level 4 is loaded into the gameplay scene → The isometric 3D level view is shown and a dialogue overlay displays the line \"Process 15127:\"",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-012",
+              "zh": "Built-in level 5 is loaded into the gameplay scene → The isometric 3D level view is shown and a dialogue overlay displays the line \"You don't say much, do you?\"",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-013",
+              "zh": "Built-in level 6 is loaded into the gameplay scene → The isometric 3D level view is shown and a dialogue overlay displays the line \"We're getting close. I can feel it.\"",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-014",
+              "zh": "Built-in level 7 is loaded into the gameplay scene → The isometric 3D level view is shown and a dialogue overlay displays the line \"Anomaly detected. Beginning quarantine.\"",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-015",
+              "zh": "Built-in level 8 is loaded into the gameplay scene → The isometric 3D level view is shown and a dialogue overlay displays the line \"Whew... That was too close!\"",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-017",
+              "zh": "A dialogue sequence reaches the end when the final displayed line's wait completes → The dialogue text is erased and the dialogue background panel is no longer visible",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-018",
+              "zh": "A level-completion event occurs on a level that has outro dialogue lines → The current level remains visible and a dialogue overlay displays an outro line before the level changes",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-019",
+              "zh": "The main character is instructed to walk to the grid tile it already occupies during active gameplay → The main character remains on its current grid tile and no walking path animation begins",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-021",
+              "zh": "The main character is instructed to walk toward a reachable tile whose next step is along the z-axis during active gameplay → The main character leaves its current tile and moves one grid tile along the z-axis toward the selected destination",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-022",
+              "zh": "The main character is instructed to walk toward a reachable destination that differs on both the x-axis and z-axis while the next x-axis and z-axis tiles are both walkable → The main character moves one grid tile along the x-axis and then one grid tile along the z-axis toward the selected destination without another instruction",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-023",
+              "zh": "The main character is instructed to walk toward a same-row destination while the adjacent x-axis tile in that direction is not walkable → The main character does not enter the blocked adjacent x-axis tile in response to the instruction",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-025",
+              "zh": "The pointer leaves a highlighted non-dragged 3D object during active gameplay → The white overlay highlight is removed from that object",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-026",
+              "zh": "A draggable block has been held for the drag-start delay during active gameplay while the main character is not standing on it → An outline appears around the selected block",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-029",
+              "zh": "A dragged block overlaps another solid object during active gameplay → The dragged block remains outlined while overlapping the other object",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-030",
+              "zh": "A dragged block is released while its nearest snapped grid tile is safe → The block glides from its released position to the nearest grid-aligned tile and comes to rest there",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-032",
+              "zh": "A dragged block is released while no safe snapped grid position is available → The block glides back to the grid tile where the drag began and comes to rest there",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-033",
+              "zh": "The main character enters a paired non-exit teleporter during active gameplay → The main character disappears at the entered teleporter and reappears at the matching teleporter elsewhere in the level",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-034",
+              "zh": "The main character enters the special exit teleporter on a built-in level that has a following built-in level → The current level scene clears and the next built-in level appears with its dialogue overlay",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-037",
+              "zh": "A non-seeker eye enemy is present in a loaded level → The eye enemy is visible with a red face",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-038",
+              "zh": "A patrolling eye enemy has a defined patrol path when the level becomes ready → The eye enemy begins moving between patrol waypoints in the level",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-042",
+              "zh": "A seeker enemy update occurs while the main character is offset from the seeker along both the x-axis and z-axis and neither adjacent target tile is already targeted by another seeker → The seeker enemy moves from its current tile to a diagonally adjacent tile, changing by one grid tile along the x-axis and one grid tile along the z-axis during the update",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-045",
+              "zh": "The losing ending download preparation completes → The download bar message reads \"Unexpected error\" and the unexpected-error notification is visible",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-047",
+              "zh": "The visible unexpected-error download notification is clicked after the losing ending is prepared → The unexpected-error notification is no longer visible, and a window is visible with the heading \"This server has been confiscated by the Ministry of Knowledge.\"",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-048",
+              "zh": "The clickable download item is clicked after the winning ending is prepared → A window is visible with a 👾 icon and the heading \"Thanks for playing An HTTP Story!\"",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-049",
+              "zh": "The custom-level import/create screen is shown for a Coil subscriber → A window is visible with the heading \"Thanks for being a Coil subscriber!\", instructions beginning \"Load a custom level from\", a text area containing JSON level data, and a \"Play\" button",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-050",
+              "zh": "Web monetization starts while the monetization/custom-level page elements are available → The non-subscriber monetization elements are hidden and the subscriber custom-level elements are visible",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-052",
+              "zh": "The custom-level form is submitted with invalid custom level data in the text area → The custom-level window remains visible with its text area and Play button, and no isometric level scene opens",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "deepseek-v4-pro-v8.3-rubric2-imported-e2-continuation15-20260916-133950",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-16T17:11:31+08:00",
+          "finishedAt": "2026-09-16T19:53:08+08:00",
+          "totalDurationMs": 9696523,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-09-16T17:11:31+08:00",
+              "finishedAt": "2026-09-16T17:32:34+08:00",
+              "durationMs": 1262774,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-16T17:32:34+08:00",
+              "finishedAt": "2026-09-16T19:46:16+08:00",
+              "durationMs": 8022134,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-16T19:46:16+08:00",
+              "finishedAt": "2026-09-16T19:46:16+08:00",
+              "durationMs": 268,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-16T19:46:16+08:00",
+              "finishedAt": "2026-09-16T19:46:55+08:00",
+              "durationMs": 38545,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-16T19:46:55+08:00",
+              "finishedAt": "2026-09-16T19:53:08+08:00",
+              "durationMs": 372765,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       }
     },
     "rainbow-run": {

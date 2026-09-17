@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>An HTTP Story</title>
+  <script type="module" crossorigin src="./assets/index-CoZztKOK.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DxCgwJG-.css">
+</head>
+<body>
+  <div id="app">
+    <div id="landing-page" class="page">
+      <h1>An HTTP Story</h1>
+      <div class="directory">
+        <ul>
+          <li>index.html</li>
+          <li>story.js</li>
+          <li>server.log</li>
+        </ul>
+      </div>
+      <div class="controls">
+        <button id="help-btn">Help</button>
+        <button id="monetization-btn">Custom Level</button>
+        <button id="start-btn">Start / Download</button>
+      </div>
+    </div>
+
+    <div id="modal-overlay" class="hidden">
+      <div id="help-modal" class="modal hidden">
+        <div class="modal-header">
+          <h2>Welcome to An HTTP Story</h2>
+          <button id="help-close" class="close-btn">×</button>
+        </div>
+        <div class="modal-body">
+          <p>Help content here...</p>
+        </div>
+      </div>
+      <div id="monetization-modal" class="modal hidden">
+        <div id="non-subscriber-section">
+          <h2>Custom Levels</h2>
+          <p>Please subscribe to Coil to access custom levels.</p>
+        </div>
+        <div id="subscriber-section" class="hidden">
+          <h2>Thanks for being a Coil subscriber!</h2>
+          <p>Load a custom level from a JSON file or paste below:</p>
+          <textarea id="custom-level-input" rows="10" cols="50"></textarea>
+          <button id="play-custom-btn">Play</button>
+          <p id="custom-error" class="error hidden">Invalid level data.</p>
+        </div>
+        <button id="monetization-close" class="close-btn">×</button>
+      </div>
+      <div id="ending-modal" class="modal hidden">
+        <div id="confiscation-window" class="hidden">
+          <h2>This server has been confiscated by the Ministry of Knowledge.</h2>
+        </div>
+        <div id="thanks-window" class="hidden">
+          <h2>👾 Thanks for playing An HTTP Story!</h2>
+        </div>
+      </div>
+    </div>
+
+    <div id="download-bar" class="hidden">
+      <div id="download-message">Preparing download...</div>
+      <div id="download-item" class="hidden">
+        <span>an-http-story.zip</span>
+      </div>
+      <div id="download-notification" class="hidden">
+        <span>Unexpected error</span>
+      </div>
+    </div>
+
+    <canvas id="game-canvas" class="hidden" width="1280" height="720"></canvas>
+
+    <div id="dialogue-overlay" class="hidden">
+      <div id="dialogue-text"></div>
+    </div>
+  </div>
+
+</body>
+</html>
