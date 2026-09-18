@@ -45972,30 +45972,308 @@
         }
       },
       "kimi-k2.6": {
-        "status": "failed",
-        "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-continuation20-20260916-133950",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "导入源码通过构建，但 Trace 阶段调用评测服务时返回 HTTP 404（服务端点不存在）；本次属于共享评测基础设施故障，未生成最终报告。无功能分、无画面分且不可试玩。",
+        "status": "completed",
+        "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-http404-retry15-r1-20260917-163733",
+        "score": {
+          "display": "6.00 (+68.00)",
+          "base": 6,
+          "passed": 3,
+          "denominator": 50,
+          "dynamic": 34,
+          "dynamicAddition": 68,
+          "potential": 74
+        },
+        "visualQuality": {
+          "score": 81,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 46,
+          "renderingStyleAverage": 35,
+          "videosScored": 2
+        },
+        "traceCount": 2,
+        "playPath": "games-v8.3/match3/kimi-k2.6/index.html",
+        "previewPath": "previews-v8.3/match3/kimi-k2.6.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-007",
+              "zh": "A playable tile board is rendered during active play → Each occupied grid cell is drawn as a rounded light tile containing a centered emoji symbol."
+            },
+            {
+              "id": "target-012",
+              "zh": "The player clicks a non-adjacent grid tile while another tile is selected during active play → The selection outline moves from the previously selected tile to the clicked tile, and the two tiles do not exchange positions."
+            },
+            {
+              "id": "target-013",
+              "zh": "The player clicks an adjacent grid tile that is accepted as a move while another tile is selected during active play → The selected tile and the clicked adjacent tile visibly exchange positions on the board."
+            },
+            {
+              "id": "target-032",
+              "zh": "A match-processing step begins with at least one matched group on the board → The matched tiles shrink out of their grid cells, particle effects appear around the matched area, the header's \"Score:\" number changes to a new displayed integer, tiles fall vertically into cleared cells, and the board returns to a full grid with no blank cells."
+            },
+            {
+              "id": "target-033",
+              "zh": "A match-processing step begins with a horizontal matched group on the board → At least three adjacent tiles in one row shrink out of their grid cells, particle effects appear along that row segment, tiles fall vertically into cleared cells, and the board returns to a full grid with no blank cells."
+            },
+            {
+              "id": "target-036",
+              "zh": "An apply-gravity animation begins after matched tiles have cleared and at least one replacement tile is spawned above the board → At least one new tile enters from above the top row and moves downward into an empty grid cell; the board ends as a full grid with no blank cells."
+            },
+            {
+              "id": "target-039",
+              "zh": "A valid move in Levels mode is committed while moves remain → The header's \"Moves:\" number changes from its pre-move value to the next integer down before another player move is accepted."
+            },
+            {
+              "id": "target-044",
+              "zh": "A resolved move in Levels mode leaves zero moves remaining while the score is below the current target score → A game-over overlay appears with the red title text \"Out of Moves!\"."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-005",
+              "zh": "A fresh playable tile board has been generated for active play → The full grid is visible with no three matching tiles adjacent in an unbroken horizontal row, no three matching tiles adjacent in an unbroken vertical column, and at least one adjacent tile pair whose exchange would create three matching tiles in an unbroken horizontal row or vertical column.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-041",
+              "zh": "A Levels mode advancement reaches level 2 → The board is replaced with a full new tile grid and the header displays \"Level: 2\", \"Score: 0\", \"Moves: 19\", and \"Target: 1500\".",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-042",
+              "zh": "A Levels mode advancement reaches level 11 → The board is replaced with a full new tile grid and the header displays \"Level: 11\", \"Score: 0\", \"Moves: 10\", and \"Target: 6000\".",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-043",
+              "zh": "A Levels mode advancement reaches level 12 → The board is replaced with a full new tile grid and the header displays \"Level: 12\", \"Score: 0\", \"Moves: 10\", and \"Target: 6500\".",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-047",
+              "zh": "The Time Attack game is active with the header showing a positive \"Time:\" value greater than 1 and one full second of countdown elapses → The header's \"Time:\" number changes from its pre-countdown value to the next integer down, and no game-over overlay is displayed.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-002",
+              "zh": "The player activates the Levels mode button → A fresh Levels game is rendered with a full tile grid and a header displaying \"Level: 1\", \"Score: 0\", \"Moves: 20\", and \"Target: 1000\"; no game-over overlay text is visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-003",
+              "zh": "The player activates the Time Attack mode button → A fresh Time Attack game is rendered with a full tile grid and a header displaying \"Score: 0\" and \"Time: 60\"; the header does not display \"Level:\", \"Moves:\", or \"Target:\", and no game-over overlay text is visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-004",
+              "zh": "The player activates the Endless mode button → A fresh Endless game is rendered with a full tile grid and a header displaying \"Score: 0\"; the header does not display \"Level:\", \"Moves:\", \"Time:\", or \"Target:\", and no game-over overlay text is visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-009",
+              "zh": "The player taps an unselected grid tile during active play → A visible selection outline appears around the tapped tile.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-010",
+              "zh": "The player clicks the currently selected grid tile during active play → The selection outline disappears from that tile and no tiles exchange positions.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-011",
+              "zh": "The player presses Escape while a grid tile is selected during active play → The visible selection outline disappears from the board.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-014",
+              "zh": "The player clicks an adjacent grid tile that is rejected as an invalid swap while another tile is selected during active play → The two tiles exchange positions, then return to their original grid cells; after the return, no selection outline is visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-015",
+              "zh": "The player clicks a grid tile while match animations are in progress → The clicked tile does not gain a selection outline and no tile exchange starts from that click.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-016",
+              "zh": "The player presses ArrowUp during active play while no keyboard cursor is visible → A blue hover outline appears around the tile one row above the board's center tile.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-017",
+              "zh": "The player presses ArrowUp during active play while the keyboard cursor is visible on a tile that is not in the top row → The blue hover outline moves from its current tile to the tile directly above it.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-018",
+              "zh": "The player presses ArrowDown during active play while the keyboard cursor is visible on a tile that is not in the bottom row → The blue hover outline moves from its current tile to the tile directly below it.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-019",
+              "zh": "The player presses ArrowLeft during active play while the keyboard cursor is visible on a tile that is not in the leftmost column → The blue hover outline moves from its current tile to the tile directly to its left.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-020",
+              "zh": "The player presses ArrowRight during active play while the keyboard cursor is visible on a tile that is not in the rightmost column → The blue hover outline moves from its current tile to the tile directly to its right.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-021",
+              "zh": "The player clicks outside the tile grid during active play while the keyboard cursor is visible → The blue hover outline disappears from the board.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-022",
+              "zh": "The player presses ArrowUp while a board tile is selected during active play and the tile directly above is accepted as a move target → The selected tile and the tile directly above it visibly exchange positions on the board.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-023",
+              "zh": "The player presses ArrowDown while a board tile is selected during active play and the tile directly below is accepted as a move target → The selected tile and the tile directly below it visibly exchange positions on the board.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-024",
+              "zh": "The player presses ArrowLeft while a board tile is selected during active play and the tile directly to the left is accepted as a move target → The selected tile and the tile directly to the left visibly exchange positions on the board.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-025",
+              "zh": "The player presses ArrowRight while a board tile is selected during active play and the tile directly to the right is accepted as a move target → The selected tile and the tile directly to the right visibly exchange positions on the board.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-026",
+              "zh": "The player presses Enter during active play while no grid tile is selected and no keyboard cursor is visible → A visible selection outline appears around the board's center tile.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-027",
+              "zh": "The player presses Enter during active play while no grid tile is selected and the keyboard cursor is visible on a tile → A visible selection outline appears around the tile that has the blue hover outline.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-028",
+              "zh": "The player presses Enter during active play while the keyboard cursor is on the currently selected grid tile → The selection outline disappears from that tile and no tiles exchange positions.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-029",
+              "zh": "The player presses Enter during active play while another tile is selected and the keyboard cursor is on a non-adjacent grid tile → The selection outline moves from the previously selected tile to the keyboard cursor tile, and the two tiles do not exchange positions.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-030",
+              "zh": "The player presses Enter during active play while another tile is selected and the keyboard cursor is on an adjacent grid tile that is accepted as a move → The selected tile and the keyboard cursor tile visibly exchange positions on the board.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-031",
+              "zh": "The player presses Enter during active play while another tile is selected and the keyboard cursor is on an adjacent grid tile that is rejected as an invalid swap → The two tiles exchange positions, then return to their original grid cells; after the return, no selection outline is visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-034",
+              "zh": "A match-processing step begins with a vertical matched group on the board → At least three adjacent tiles in one column shrink out of their grid cells, particle effects appear along that column segment, tiles fall vertically into cleared cells, and the board returns to a full grid with no blank cells.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-035",
+              "zh": "A match-processing step begins with a horizontal matched group of at least four adjacent tiles on the board → At least four adjacent tiles in one row shrink out of their grid cells, particle effects appear along that row segment, tiles fall vertically into cleared cells, and the board returns to a full grid with no blank cells.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-037",
+              "zh": "A cascade match-processing step begins after falling tiles create another matched group from the same player move → A second set of matched tiles shrinks out and clears without another player selection, and the header's \"Score:\" number changes again.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-038",
+              "zh": "A completed valid move leaves the board with no valid moves available → The tile grid is replaced with a full tile grid whose emoji arrangement is not identical to the immediately preceding grid, while the current mode header remains visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-040",
+              "zh": "A resolved move in Levels mode leaves the score at or above the current target score → The level indicator advances to the next level number, the board is redrawn for the new level, and no game-over overlay is visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-045",
+              "zh": "The player clicks while the Levels loss overlay is showing → The \"Out of Moves!\" overlay disappears and a fresh Levels game is rendered with \"Level: 1\" and \"Score: 0\" in the header.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-046",
+              "zh": "The player presses Enter while the Levels loss overlay is showing → The \"Out of Moves!\" overlay disappears and a fresh Levels game is rendered with \"Level: 1\" and \"Score: 0\" in the header.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-048",
+              "zh": "The Time Attack countdown update reaches zero while the game is not already over → A game-over overlay appears with the red title text \"Time's Up!\".",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-049",
+              "zh": "A game-over overlay is rendered after a terminal state → A translucent white panel covers the gameplay view, with a centered title line above a centered \"Score:\" line and the instruction text \"Press Enter or click to play again\" below it.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-050",
+              "zh": "The player clicks while the Time Attack loss overlay is showing → The \"Time's Up!\" overlay disappears and a new Time Attack board is rendered.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
         "timing": {
-          "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-continuation20-20260916-133950",
-          "status": "failed",
-          "failedStage": "trace",
-          "startedAt": "2026-09-17T05:00:15+08:00",
-          "finishedAt": "2026-09-17T05:07:17+08:00",
-          "totalDurationMs": 421835,
+          "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-http404-retry15-r1-20260917-163733",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-17T21:05:48+08:00",
+          "finishedAt": "2026-09-17T23:14:43+08:00",
+          "totalDurationMs": 7734894,
           "stages": [
             {
               "stage": "trace",
-              "startedAt": "2026-09-17T05:00:15+08:00",
-              "finishedAt": "2026-09-17T05:07:17+08:00",
-              "durationMs": 421821,
-              "status": "failed",
-              "exitCode": 1
+              "startedAt": "2026-09-17T21:05:48+08:00",
+              "finishedAt": "2026-09-17T21:26:11+08:00",
+              "durationMs": 1222717,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-17T21:26:11+08:00",
+              "finishedAt": "2026-09-17T23:10:13+08:00",
+              "durationMs": 6241749,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-17T23:10:13+08:00",
+              "finishedAt": "2026-09-17T23:10:13+08:00",
+              "durationMs": 278,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-17T23:10:13+08:00",
+              "finishedAt": "2026-09-17T23:10:22+08:00",
+              "durationMs": 9214,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-17T23:10:22+08:00",
+              "finishedAt": "2026-09-17T23:14:43+08:00",
+              "durationMs": 260904,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }

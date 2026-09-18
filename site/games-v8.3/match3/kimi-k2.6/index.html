@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emoji Match-3 Suite</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #1a1a2e;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden;
+    }
+    #gameCanvas {
+      display: block;
+      margin-top: 8px;
+    }
+    #controls {
+      display: flex;
+      gap: 12px;
+      margin-top: 12px;
+      margin-bottom: 8px;
+    }
+    .mode-btn {
+      padding: 10px 24px;
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.1s, box-shadow 0.1s;
+      color: #fff;
+    }
+    .mode-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .mode-btn:active {
+      transform: translateY(0);
+    }
+    #btn-levels { background: #e94560; }
+    #btn-time { background: #0f3460; }
+    #btn-endless { background: #533483; }
+  </style>
+  <script type="module" crossorigin src="./assets/index-C_o6vLFU.js"></script>
+</head>
+<body>
+  <div id="controls">
+    <button class="mode-btn" id="btn-levels">Levels</button>
+    <button class="mode-btn" id="btn-time">Time Attack</button>
+    <button class="mode-btn" id="btn-endless">Endless</button>
+  </div>
+  <canvas id="gameCanvas"></canvas>
+</body>
+</html>
