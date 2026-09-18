@@ -56726,30 +56726,125 @@
         }
       },
       "kimi-k2.6": {
-        "status": "failed",
-        "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-continuation20-20260916-133950",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "导入源码通过构建，但 Trace 阶段调用评测服务时返回 HTTP 404（服务端点不存在）；本次属于共享评测基础设施故障，未生成最终报告。无功能分、无画面分且不可试玩。",
+        "status": "completed",
+        "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-http404-retry15-r1-20260917-163733",
+        "score": {
+          "display": "84.48 (+6.90)",
+          "base": 84.48,
+          "passed": 49,
+          "denominator": 58,
+          "dynamic": 4,
+          "dynamicAddition": 6.9,
+          "potential": 91.38
+        },
+        "visualQuality": {
+          "score": 90.67,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.78,
+          "renderingStyleAverage": 42.89,
+          "videosScored": 9
+        },
+        "traceCount": 9,
+        "playPath": "games-v8.3/space-garden/kimi-k2.6/index.html",
+        "previewPath": "previews-v8.3/space-garden/kimi-k2.6.png",
+        "unmet": {
+          "vlm": [],
+          "replayTrace": [
+            {
+              "id": "target-008",
+              "zh": "The player releases the M key during active gameplay while the minimap is hidden → A minimap overlay appears, showing a scaled star field with markers for world objects.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-009",
+              "zh": "The player releases the M key during active gameplay while the minimap is displayed → The minimap overlay is removed from the gameplay view.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-010",
+              "zh": "The player releases the H key during active gameplay while the help overlay is hidden → A help text overlay appears over the gameplay view.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-016",
+              "zh": "The help overlay is displayed while the player is within an incomplete planet's gravity field, that planet has no harvesters, the planet-sprite reward help interval is active, and the player is not being drained → The help overlay displays the two-line message \"COMPLETING A PLANET GIVES\" and \"YOU A PLANET SPRITE\".",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-053",
+              "zh": "A red harvester's health reaches zero → The red harvester disappears from the gameplay view, a burst of explosion rings appears at the red harvester's position, and two energy masses appear around the former harvester position.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-048",
+              "zh": "The player contacts a red drone at low speed while the player's fuel is above 100 → A burst of concentric explosion rings appears at the red drone's position.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-049",
+              "zh": "A red drone's health reaches zero → The red drone disappears from the gameplay view, a burst of explosion rings appears at the red drone's position, and five energy masses appear around the former drone position.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-054",
+              "zh": "A planet sprite has no red enemy in view and the player is outside planet gravity → The planet sprite is visible near the player as a colored circular body with trail particles.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-011",
+              "zh": "The player releases the H key during active gameplay while the help overlay is displayed → The help text overlay disappears from the gameplay view.",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
         "timing": {
-          "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-continuation20-20260916-133950",
-          "status": "failed",
-          "failedStage": "trace",
-          "startedAt": "2026-09-17T05:15:44+08:00",
-          "finishedAt": "2026-09-17T05:16:14+08:00",
-          "totalDurationMs": 30142,
+          "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-http404-retry15-r1-20260917-163733",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-18T14:50:01+08:00",
+          "finishedAt": "2026-09-18T16:05:54+08:00",
+          "totalDurationMs": 4553030,
           "stages": [
             {
               "stage": "trace",
-              "startedAt": "2026-09-17T05:15:44+08:00",
-              "finishedAt": "2026-09-17T05:16:14+08:00",
-              "durationMs": 30127,
-              "status": "failed",
-              "exitCode": 1
+              "startedAt": "2026-09-18T14:50:01+08:00",
+              "finishedAt": "2026-09-18T15:11:28+08:00",
+              "durationMs": 1286930,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-18T15:11:28+08:00",
+              "finishedAt": "2026-09-18T15:52:53+08:00",
+              "durationMs": 2484639,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-18T15:52:53+08:00",
+              "finishedAt": "2026-09-18T15:52:53+08:00",
+              "durationMs": 347,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-18T15:52:53+08:00",
+              "finishedAt": "2026-09-18T15:55:20+08:00",
+              "durationMs": 146356,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-18T15:55:20+08:00",
+              "finishedAt": "2026-09-18T16:05:54+08:00",
+              "durationMs": 634725,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }
