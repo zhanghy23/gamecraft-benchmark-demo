@@ -54366,30 +54366,109 @@
         }
       },
       "deepseek-v4-pro": {
-        "status": "failed",
-        "runId": "deepseek-v4-pro-v8.3-rubric2-imported-e2-continuation15-20260916-133950",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "导入源码通过构建，但 Trace 阶段调用评测服务时返回 HTTP 404（服务端点不存在）；本次属于共享评测基础设施故障，未生成最终报告。无功能分、无画面分且不可试玩。",
+        "status": "completed",
+        "runId": "deepseek-v4-pro-v8.3-rubric2-imported-e2-http404-retry12-r1-20260917-163733",
+        "score": {
+          "display": "84.62 (+10.26)",
+          "base": 84.62,
+          "passed": 33,
+          "denominator": 39,
+          "dynamic": 4,
+          "dynamicAddition": 10.26,
+          "potential": 94.87
+        },
+        "visualQuality": {
+          "score": 76,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 43.86,
+          "renderingStyleAverage": 32.14,
+          "videosScored": 7
+        },
+        "traceCount": 7,
+        "playPath": "games-v8.3/lost-island/deepseek-v4-pro/index.html",
+        "previewPath": "previews-v8.3/lost-island/deepseek-v4-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-023",
+              "zh": "During active play, a visible map tile with height 0 is rendered in the gameplay viewport → That tile is drawn with the deep ocean terrain graphic."
+            },
+            {
+              "id": "target-032",
+              "zh": "During active play, a visible map tile with the antenna is rendered in the gameplay viewport → An antenna graphic is drawn on that terrain tile."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-004",
+              "zh": "During active play, the objective check runs with the transmitter, antenna, and battery all collected → The gameplay view disappears and a message screen appears with the heading \"Rescued\" and the text \"A fishing boat get your call and is on its way to get you. Seems you are not lost after all :).\"",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-010",
+              "zh": "During active play, the player's computed movement destination is beyond the left edge of the world map → The player character does not advance beyond the visible world edge; consecutive gameplay frames show no displacement into off-map space.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-011",
+              "zh": "During active play, the player's computed movement destination is on a water-height tile → The player character does not enter the water tile; consecutive gameplay frames show the player remaining on the adjacent land tile.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-015",
+              "zh": "During active play, the action check finds the antenna in the player's pickup tiles and this pickup does not complete all required rescue parts → The antenna graphic is removed from its terrain tile, the antenna row in the equipment HUD reads \"1 x\", and the gameplay view remains visible.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
         "timing": {
-          "runId": "deepseek-v4-pro-v8.3-rubric2-imported-e2-continuation15-20260916-133950",
-          "status": "failed",
-          "failedStage": "trace",
-          "startedAt": "2026-09-17T04:21:13+08:00",
-          "finishedAt": "2026-09-17T04:21:18+08:00",
-          "totalDurationMs": 5551,
+          "runId": "deepseek-v4-pro-v8.3-rubric2-imported-e2-http404-retry12-r1-20260917-163733",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-17T16:37:35+08:00",
+          "finishedAt": "2026-09-17T18:18:32+08:00",
+          "totalDurationMs": 6057409,
           "stages": [
             {
               "stage": "trace",
-              "startedAt": "2026-09-17T04:21:13+08:00",
-              "finishedAt": "2026-09-17T04:21:18+08:00",
-              "durationMs": 5534,
-              "status": "failed",
-              "exitCode": 1
+              "startedAt": "2026-09-17T16:37:35+08:00",
+              "finishedAt": "2026-09-17T16:51:33+08:00",
+              "durationMs": 838741,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-17T16:51:33+08:00",
+              "finishedAt": "2026-09-17T18:08:53+08:00",
+              "durationMs": 4639411,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-17T18:08:53+08:00",
+              "finishedAt": "2026-09-17T18:08:53+08:00",
+              "durationMs": 494,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-17T18:08:53+08:00",
+              "finishedAt": "2026-09-17T18:11:02+08:00",
+              "durationMs": 128348,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-17T18:11:02+08:00",
+              "finishedAt": "2026-09-17T18:18:32+08:00",
+              "durationMs": 450381,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }
