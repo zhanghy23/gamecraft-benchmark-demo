@@ -54596,30 +54596,143 @@
         }
       },
       "qwen3.8-max": {
-        "status": "failed",
-        "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-qwen19-20260916-141355",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "导入源码通过构建，但 Trace 阶段调用评测服务时返回 HTTP 404（服务端点不存在）；本次属于共享评测基础设施故障，未生成最终报告。无功能分、无画面分且不可试玩。",
+        "status": "completed",
+        "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-http404-retry12-r1-20260917-163733",
+        "score": {
+          "display": "79.37 (+11.11)",
+          "base": 79.37,
+          "passed": 50,
+          "denominator": 63,
+          "dynamic": 7,
+          "dynamicAddition": 11.11,
+          "potential": 90.48
+        },
+        "visualQuality": {
+          "score": 92.45,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.09,
+          "renderingStyleAverage": 44.36,
+          "videosScored": 11
+        },
+        "traceCount": 11,
+        "playPath": "games-v8.3/spacepi/qwen3.8-max/index.html",
+        "previewPath": "previews-v8.3/spacepi/qwen3.8-max.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-023",
+              "zh": "The player activates an available upgrade control whose purchase leaves that upgrade below its final level and the next upgrade cost is affordable with the remaining funds → The upgrades menu remains visible and the activated upgrade row shows the next cost followed by the word \"Available\"."
+            },
+            {
+              "id": "target-050",
+              "zh": "An active powerup's timer reaches zero during gameplay → The powerup text label and horizontal timer bar disappear from the HUD."
+            },
+            {
+              "id": "target-053",
+              "zh": "An active slow-enemies powerup is in effect while harmful enemy lines are visible during gameplay → The harmful enemy lines are rendered in a blue powerup color."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-013",
+              "zh": "The player activates a disabled level button from the level-selection menu → The level-selection and upgrades menu remains visible and the gameplay playfield does not replace it.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-020",
+              "zh": "The player activates an upgrade control from the upgrades menu while that upgrade is disabled because it is unaffordable → The upgrades menu remains visible, the activated upgrade row shows \"Unavailable\", and the funds display is shown in a red not-enough feedback state.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-021",
+              "zh": "The player activates an upgrade control from the upgrades menu while that upgrade is already maxed → The upgrades menu remains visible and that upgrade row continues to show \"Maxed\".",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-008",
+              "zh": "The level-selection and upgrades menu is displayed while every upgrade has reached its final level → The funds display shows the text \"$ Maxed\".",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-019",
+              "zh": "The level-selection and upgrades menu is displayed with an upgrade that has reached its final level → That upgrade row shows the text \"Maxed\".",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-022",
+              "zh": "The player activates an available upgrade control whose purchase raises that upgrade to its final level → The upgrades menu remains visible and the activated upgrade row shows \"Maxed\".",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-037",
+              "zh": "The player releases the mouse button after dragging a nonzero distance during an active level while unlimited power is active → A defensive line remains visible in the playfield from the drag starting point to the release point.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-060",
+              "zh": "The player activates the Retry Level control from the Level Stats menu after a failed level → The Level Stats menu is replaced by a restarted gameplay playfield for the same level.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-062",
+              "zh": "The player activates the Return to Upgrades/Levels control from the Level Stats menu after the first successful completion of Level 1 → The Level Stats menu is replaced by the level-selection and upgrades menu, the level status line shows \"1/13 Completed\", and the Level 2 button is enabled.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-063",
+              "zh": "The player activates the Return to Upgrades/Levels control from the Level Stats menu after the first successful zero-base-hit completion of Level 1 → The Level Stats menu is replaced by the level-selection and upgrades menu, the level status line shows \"1/13 Perfect\", and the Level 1 button shows its \"P\" perfect marker.",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
         "timing": {
-          "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-qwen19-20260916-141355",
-          "status": "failed",
-          "failedStage": "trace",
-          "startedAt": "2026-09-17T04:46:22+08:00",
-          "finishedAt": "2026-09-17T04:46:29+08:00",
-          "totalDurationMs": 6132,
+          "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-http404-retry12-r1-20260917-163733",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-18T02:24:11+08:00",
+          "finishedAt": "2026-09-18T04:53:32+08:00",
+          "totalDurationMs": 8961435,
           "stages": [
             {
               "stage": "trace",
-              "startedAt": "2026-09-17T04:46:22+08:00",
-              "finishedAt": "2026-09-17T04:46:29+08:00",
-              "durationMs": 6115,
-              "status": "failed",
-              "exitCode": 1
+              "startedAt": "2026-09-18T02:24:11+08:00",
+              "finishedAt": "2026-09-18T02:48:22+08:00",
+              "durationMs": 1451748,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-18T02:48:22+08:00",
+              "finishedAt": "2026-09-18T04:38:53+08:00",
+              "durationMs": 6630233,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-18T04:38:53+08:00",
+              "finishedAt": "2026-09-18T04:38:53+08:00",
+              "durationMs": 402,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-18T04:38:53+08:00",
+              "finishedAt": "2026-09-18T04:41:29+08:00",
+              "durationMs": 156423,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-18T04:41:29+08:00",
+              "finishedAt": "2026-09-18T04:53:32+08:00",
+              "durationMs": 722598,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }
