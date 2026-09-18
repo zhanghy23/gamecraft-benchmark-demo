@@ -59263,30 +59263,137 @@
         }
       },
       "qwen3.8-max": {
-        "status": "failed",
-        "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-qwen19-20260916-141355",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "导入源码通过构建，但 Trace 阶段调用评测服务时返回 HTTP 404（服务端点不存在）；本次属于共享评测基础设施故障，未生成最终报告。无功能分、无画面分且不可试玩。",
+        "status": "completed",
+        "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-http404-retry12-r1-20260917-163733",
+        "score": {
+          "display": "88.99 (+1.83)",
+          "base": 88.99,
+          "passed": 97,
+          "denominator": 109,
+          "dynamic": 2,
+          "dynamicAddition": 1.83,
+          "potential": 90.83
+        },
+        "visualQuality": {
+          "score": 89.29,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.86,
+          "renderingStyleAverage": 41.43,
+          "videosScored": 35
+        },
+        "traceCount": 35,
+        "playPath": "games-v8.3/save-the-lost-friend/qwen3.8-max/index.html",
+        "previewPath": "previews-v8.3/save-the-lost-friend/qwen3.8-max.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-013",
+              "zh": "During active platformer play, the left movement control is held while the player's next horizontal step has no obstacle → The player advances left through the level between consecutive gameplay frames."
+            },
+            {
+              "id": "target-048",
+              "zh": "The player touches a berry in the fire level while their health is 90 → The berry sprite disappears, the HUD displays the message \"Gained health\", and the health bar's filled portion extends from nine tenths of the bar's full width to the full bar width within 1 second."
+            },
+            {
+              "id": "target-084",
+              "zh": "The skip dialog control is pressed while an NPC answer text is displayed → The answer text disappears from the HUD area and the normal gameplay HUD remains visible."
+            },
+            {
+              "id": "target-090",
+              "zh": "The river player overlaps a moving log during the river level → The player is carried horizontally with the moving log on the following gameplay frames."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-045",
+              "zh": "The player touches surface lava in the fire level while the level is still active → The HUD displays the message \"Lava killed you.\".",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-076",
+              "zh": "The player collides with an NPC whose current dialog batch has no questions → The HUD displays a dialog welcome message without showing a red-highlighted question list.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-085",
+              "zh": "A dialog batch advances after every visible question in the current batch has been answered and another batch exists → A question list is displayed with the first question entry highlighted in red.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-101",
+              "zh": "A fire tree updates before it has added fruit → Between 4 and 7 berry sprites appear around the fire tree branches.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-102",
+              "zh": "The air level begins after its generated layout is displayed → The player starts in the lower central area of the playfield and the air gem is visible in the upper central area of the playfield.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-103",
+              "zh": "The river level begins after its generated layout is displayed → The player starts on a low visible board or platform in the river playfield.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-092",
+              "zh": "A shark updates while its next position intersects a solid obstacle → The shark changes direction and moves back away from the obstacle on the following gameplay frames.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-073",
+              "zh": "The pause control is released after being pressed while the pause menu is displayed during a level → The menu disappears and the playable level view with the in-game HUD is visible again.",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
         "timing": {
-          "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-qwen19-20260916-141355",
-          "status": "failed",
-          "failedStage": "trace",
-          "startedAt": "2026-09-17T04:50:19+08:00",
-          "finishedAt": "2026-09-17T04:50:24+08:00",
-          "totalDurationMs": 5883,
+          "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-http404-retry12-r1-20260917-163733",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-18T07:30:03+08:00",
+          "finishedAt": "2026-09-18T14:06:43+08:00",
+          "totalDurationMs": 23799607,
           "stages": [
             {
               "stage": "trace",
-              "startedAt": "2026-09-17T04:50:19+08:00",
-              "finishedAt": "2026-09-17T04:50:24+08:00",
-              "durationMs": 5867,
-              "status": "failed",
-              "exitCode": 1
+              "startedAt": "2026-09-18T07:30:03+08:00",
+              "finishedAt": "2026-09-18T08:07:43+08:00",
+              "durationMs": 2260321,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-18T08:07:43+08:00",
+              "finishedAt": "2026-09-18T13:16:07+08:00",
+              "durationMs": 18503827,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-18T13:16:07+08:00",
+              "finishedAt": "2026-09-18T13:16:09+08:00",
+              "durationMs": 1352,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-18T13:16:09+08:00",
+              "finishedAt": "2026-09-18T13:21:20+08:00",
+              "durationMs": 311772,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-18T13:21:20+08:00",
+              "finishedAt": "2026-09-18T14:06:43+08:00",
+              "durationMs": 2722303,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }
