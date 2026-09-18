@@ -53780,30 +53780,110 @@
         }
       },
       "qwen3.8-max": {
-        "status": "failed",
-        "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-qwen19-20260916-141355",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "导入源码通过构建，但 Trace 阶段调用评测服务时返回 HTTP 404（服务端点不存在）；本次属于共享评测基础设施故障，未生成最终报告。无功能分、无画面分且不可试玩。",
+        "status": "completed",
+        "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-http404-retry12-r1-20260917-163733",
+        "score": {
+          "display": "75.00 (+20.83)",
+          "base": 75,
+          "passed": 18,
+          "denominator": 24,
+          "dynamic": 5,
+          "dynamicAddition": 20.83,
+          "potential": 95.83
+        },
+        "visualQuality": {
+          "score": 90,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48,
+          "renderingStyleAverage": 42,
+          "videosScored": 4
+        },
+        "traceCount": 4,
+        "playPath": "games-v8.3/tube-masters/qwen3.8-max/index.html",
+        "previewPath": "previews-v8.3/tube-masters/qwen3.8-max.png",
+        "unmet": {
+          "vlm": [],
+          "replayTrace": [
+            {
+              "id": "target-017",
+              "zh": "A gameplay render update occurs while the current score is greater than the stored top score → the score HUD shows a \"Score:\" label with the current score number, and the top-score HUD shows a \"Top:\" label with the same number",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-020",
+              "zh": "The game data is reset while the current score is nonzero → the score HUD shows \"Score: 0\" on the next rendered gameplay frame",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-021",
+              "zh": "The game data is reset while the player avatar is displaced from its starting lateral position → the player avatar appears back at its centered starting lateral position on the next rendered gameplay frame",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-022",
+              "zh": "The game data is reset while at least one obstacle item is present in the play area → the obstacle item that was present before the reset is absent from the next rendered gameplay frame",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-023",
+              "zh": "The game data is reset while at least one pickup collectible is present in the play area → the pickup collectible that was present before the reset is absent from the next rendered gameplay frame",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-024",
+              "zh": "The game data is reset while at least one boost collectible is present in the play area → the boost collectible that was present before the reset is absent from the next rendered gameplay frame",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
         "timing": {
-          "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-qwen19-20260916-141355",
-          "status": "failed",
-          "failedStage": "trace",
-          "startedAt": "2026-09-17T04:44:38+08:00",
-          "finishedAt": "2026-09-17T04:46:22+08:00",
-          "totalDurationMs": 103329,
+          "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-http404-retry12-r1-20260917-163733",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-18T02:06:36+08:00",
+          "finishedAt": "2026-09-18T02:24:10+08:00",
+          "totalDurationMs": 1053835,
           "stages": [
             {
               "stage": "trace",
-              "startedAt": "2026-09-17T04:44:38+08:00",
-              "finishedAt": "2026-09-17T04:46:22+08:00",
-              "durationMs": 103312,
-              "status": "failed",
-              "exitCode": 1
+              "startedAt": "2026-09-18T02:06:36+08:00",
+              "finishedAt": "2026-09-18T02:16:00+08:00",
+              "durationMs": 563901,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-18T02:16:00+08:00",
+              "finishedAt": "2026-09-18T02:19:27+08:00",
+              "durationMs": 206623,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-18T02:19:27+08:00",
+              "finishedAt": "2026-09-18T02:19:27+08:00",
+              "durationMs": 235,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-18T02:19:27+08:00",
+              "finishedAt": "2026-09-18T02:21:34+08:00",
+              "durationMs": 127226,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-18T02:21:34+08:00",
+              "finishedAt": "2026-09-18T02:24:10+08:00",
+              "durationMs": 155819,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }
