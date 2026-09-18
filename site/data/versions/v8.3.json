@@ -55132,30 +55132,181 @@
         }
       },
       "kimi-k2.6": {
-        "status": "failed",
-        "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-continuation20-20260916-133950",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "导入源码通过构建，但 Trace 阶段调用评测服务时返回 HTTP 404（服务端点不存在）；本次属于共享评测基础设施故障，未生成最终报告。无功能分、无画面分且不可试玩。",
+        "status": "completed",
+        "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-http404-retry15-r1-20260917-163733",
+        "score": {
+          "display": "65.08 (+15.87)",
+          "base": 65.08,
+          "passed": 41,
+          "denominator": 63,
+          "dynamic": 10,
+          "dynamicAddition": 15.87,
+          "potential": 80.95
+        },
+        "visualQuality": {
+          "score": 92.29,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.24,
+          "renderingStyleAverage": 44.06,
+          "videosScored": 17
+        },
+        "traceCount": 17,
+        "playPath": "games-v8.3/spacepi/kimi-k2.6/index.html",
+        "previewPath": "previews-v8.3/spacepi/kimi-k2.6.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-039",
+              "zh": "A new harmful enemy line is generated from the top edge of the playfield → A harmful line segment appears with one endpoint on the top border of the playfield and extends inward toward the base."
+            },
+            {
+              "id": "target-040",
+              "zh": "A visible harmful enemy line is present in active gameplay → Across consecutive gameplay frames, the harmful line alternates between two visible pulse states while moving toward the base."
+            },
+            {
+              "id": "target-041",
+              "zh": "A harmful enemy line endpoint reaches the base during an active level before the level has ended → The base is covered by a white flash overlay, and the enemy line that reached the base is no longer visible at the contact point."
+            },
+            {
+              "id": "target-043",
+              "zh": "A defeated harmful enemy line produces coins → At least one coin icon appears at the defeat location and moves away from that point."
+            },
+            {
+              "id": "target-045",
+              "zh": "An uncollected coin is within the magnet range of the pointer during active gameplay → Using the first observed frame as the baseline, within the following 1 second the distance between the coin center and the pointer is reduced by at least 5 pixels at the fixed 960x600 presentation, with a tolerance of 2 pixels."
+            },
+            {
+              "id": "target-046",
+              "zh": "An uncollected coin reaches the collection distance from the pointer during active gameplay → The coin disappears from the playfield."
+            },
+            {
+              "id": "target-047",
+              "zh": "An uncollected powerup is within the magnet range of the pointer during active gameplay → Using the first observed frame as the baseline, within the following 1 second the distance between the powerup icon center and the pointer is reduced by at least 3 pixels at the fixed 960x600 presentation, with a tolerance of 2 pixels."
+            },
+            {
+              "id": "target-048",
+              "zh": "An uncollected powerup reaches the collection distance from the pointer during active gameplay → The powerup icon disappears and the HUD displays a powerup text label with a horizontal timer bar."
+            },
+            {
+              "id": "target-050",
+              "zh": "An active powerup's timer reaches zero during gameplay → The powerup text label and horizontal timer bar disappear from the HUD."
+            },
+            {
+              "id": "target-053",
+              "zh": "An active slow-enemies powerup is in effect while harmful enemy lines are visible during gameplay → The harmful enemy lines are rendered in a blue powerup color."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-013",
+              "zh": "The player activates a disabled level button from the level-selection menu → The level-selection and upgrades menu remains visible and the gameplay playfield does not replace it.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-021",
+              "zh": "The player activates an upgrade control from the upgrades menu while that upgrade is already maxed → The upgrades menu remains visible and that upgrade row continues to show \"Maxed\".",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-022",
+              "zh": "The player activates an available upgrade control whose purchase raises that upgrade to its final level → The upgrades menu remains visible and the activated upgrade row shows \"Maxed\".",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-023",
+              "zh": "The player activates an available upgrade control whose purchase leaves that upgrade below its final level and the next upgrade cost is affordable with the remaining funds → The upgrades menu remains visible and the activated upgrade row shows the next cost followed by the word \"Available\".",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-024",
+              "zh": "The player activates an available upgrade control whose purchase leaves that upgrade below its final level and the next upgrade cost is not affordable with the remaining funds → The upgrades menu remains visible and the activated upgrade row shows the next cost followed by the word \"Unavailable\" in a disabled state.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-034",
+              "zh": "The player holds a drag during an active level while unlimited power is active → The temporary defensive line preview is drawn from the drag starting point to the pointer position.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-037",
+              "zh": "The player releases the mouse button after dragging a nonzero distance during an active level while unlimited power is active → A defensive line remains visible in the playfield from the drag starting point to the release point.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-044",
+              "zh": "A defeated harmful enemy line produces a powerup → A powerup icon appears at the defeat location.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-052",
+              "zh": "An active base-generation-boost powerup is in effect during gameplay → The base circle cycles through changing hues and an additional ring is drawn over the base.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-060",
+              "zh": "The player activates the Retry Level control from the Level Stats menu after a failed level → The Level Stats menu is replaced by a restarted gameplay playfield for the same level.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-062",
+              "zh": "The player activates the Return to Upgrades/Levels control from the Level Stats menu after the first successful completion of Level 1 → The Level Stats menu is replaced by the level-selection and upgrades menu, the level status line shows \"1/13 Completed\", and the Level 2 button is enabled.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-063",
+              "zh": "The player activates the Return to Upgrades/Levels control from the Level Stats menu after the first successful zero-base-hit completion of Level 1 → The Level Stats menu is replaced by the level-selection and upgrades menu, the level status line shows \"1/13 Perfect\", and the Level 1 button shows its \"P\" perfect marker.",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
         "timing": {
-          "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-continuation20-20260916-133950",
-          "status": "failed",
-          "failedStage": "trace",
-          "startedAt": "2026-09-17T05:14:17+08:00",
-          "finishedAt": "2026-09-17T05:15:43+08:00",
-          "totalDurationMs": 86241,
+          "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-http404-retry15-r1-20260917-163733",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-18T11:55:25+08:00",
+          "finishedAt": "2026-09-18T14:50:00+08:00",
+          "totalDurationMs": 10475536,
           "stages": [
             {
               "stage": "trace",
-              "startedAt": "2026-09-17T05:14:17+08:00",
-              "finishedAt": "2026-09-17T05:15:43+08:00",
-              "durationMs": 86225,
-              "status": "failed",
-              "exitCode": 1
+              "startedAt": "2026-09-18T11:55:25+08:00",
+              "finishedAt": "2026-09-18T12:17:38+08:00",
+              "durationMs": 1333012,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-18T12:17:38+08:00",
+              "finishedAt": "2026-09-18T14:26:59+08:00",
+              "durationMs": 7761210,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-18T14:26:59+08:00",
+              "finishedAt": "2026-09-18T14:27:00+08:00",
+              "durationMs": 654,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-18T14:27:00+08:00",
+              "finishedAt": "2026-09-18T14:28:13+08:00",
+              "durationMs": 73398,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-18T14:28:13+08:00",
+              "finishedAt": "2026-09-18T14:50:00+08:00",
+              "durationMs": 1307228,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }
