@@ -36067,30 +36067,180 @@
         }
       },
       "deepseek-v4-pro": {
-        "status": "failed",
-        "runId": "deepseek-v4-pro-v8.3-rubric2-imported-e2-continuation15-20260916-133950",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "导入源码通过构建，但 Trace 阶段调用评测服务时返回 HTTP 404（服务端点不存在）；本次属于共享评测基础设施故障，未生成最终报告。无功能分、无画面分且不可试玩。",
+        "status": "completed",
+        "runId": "deepseek-v4-pro-v8.3-rubric2-imported-e2-http404-retry12-r1-20260917-163733",
+        "score": {
+          "display": "45.00 (+17.50)",
+          "base": 45,
+          "passed": 18,
+          "denominator": 40,
+          "dynamic": 7,
+          "dynamicAddition": 17.5,
+          "potential": 62.5
+        },
+        "visualQuality": {
+          "score": 89.29,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.43,
+          "renderingStyleAverage": 41.86,
+          "videosScored": 7
+        },
+        "traceCount": 7,
+        "playPath": "games-v8.3/shooooooot/deepseek-v4-pro/index.html",
+        "previewPath": "previews-v8.3/shooooooot/deepseek-v4-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-004",
+              "zh": "The Left Arrow key is held during active gameplay while the player character is not at the left edge of the playfield → The player character moves left across the playfield during the key hold."
+            },
+            {
+              "id": "target-007",
+              "zh": "The Down Arrow key is held during active gameplay while the player character is not at the bottom edge of the playfield → The player character moves downward across the playfield during the key hold."
+            },
+            {
+              "id": "target-009",
+              "zh": "The right gamepad thumbstick leaves the aim dead zone during active gameplay while the player can fire → One or more bullet sprites appear at the player and move in the right thumbstick aim direction."
+            },
+            {
+              "id": "target-024",
+              "zh": "A hunter enemy updates while the player is present and the hunter is outside one movement step from the player → The hunter enemy moves along a path aimed toward the player's position."
+            },
+            {
+              "id": "target-025",
+              "zh": "A hunter enemy updates while the player is inside the hunter's repel arc → The hunter enemy changes to a path moving away from the player's position."
+            },
+            {
+              "id": "target-026",
+              "zh": "A seeker enemy updates while the player is present and the seeker is outside one movement step from the player → The seeker enemy moves along a path aimed toward the player's position."
+            },
+            {
+              "id": "target-029",
+              "zh": "An asteroid is hit while its accumulated hit count is below the asteroid destruction threshold → The asteroid remains visible and the edge of its circular body contracts inward after the hit."
+            },
+            {
+              "id": "target-031",
+              "zh": "A non-asteroid enemy with point value 10 begins its first explosion while the player is not exploded → The enemy sprite disappears, a particle blast appears at the enemy's position, and the score text increases by 10."
+            },
+            {
+              "id": "target-032",
+              "zh": "An unexploded ammo drop is absorbed by the player while the player is not exploded → The ammo drop sprite disappears, the score text increases by 50, and the ammo text increases by 50."
+            },
+            {
+              "id": "target-033",
+              "zh": "An unexploded ammo drop is absorbed by the player while the player is not exploded and the ammo gain would exceed the ammo maximum → The ammo drop sprite disappears, the score text increases by 50, and the ammo text reads \"ammo: 404\"."
+            },
+            {
+              "id": "target-038",
+              "zh": "The player reaches a game-over state with a score above the stored high score → A game-over overlay is visible with the text \"GAME\" and \"OVER\", a message beginning with \"New High Score: \" and ending with \"!!\", and the restart prompt \"Press Enter or Button 0 to Restart\"."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-002",
+              "zh": "Enter is pressed while the intro screen is active → The intro screen disappears and the game transitions to the gameplay view.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-028",
+              "zh": "An asteroid reaches the left boundary of its allowed area while moving left → The asteroid remains inside the playfield border and its motion changes from leftward to rightward on the next rendered frame.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-035",
+              "zh": "The player overlaps the playfield boundary during active gameplay → A particle blast appears at the player's position and the player ring disappears.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-040",
+              "zh": "Enter is pressed while the game-over screen is active → The game-over overlay and restart prompt disappear, and the game transitions back to the gameplay view.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-005",
+              "zh": "The Right Arrow key is held during active gameplay while the player character is not at the right edge of the playfield → The player character moves right across the playfield during the key hold.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-011",
+              "zh": "The player fires while two-shot mode is active, the aim is outside the dead zone, and at least 2 ammo are available → Two bullet sprites appear at the player, move away from the player in separated directions around the aim direction, and the ammo text decreases by 2.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-012",
+              "zh": "The player fires while three-shot mode is active, the aim is outside the dead zone, and enough ammo is available for the three-shot volley → Three bullet sprites appear at the player, move away from the player in separated directions around the aim direction, and the ammo text decreases by 3.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-013",
+              "zh": "The player attempts to fire while the aim is inside the dead zone → No new bullet sprite appears during that fire attempt.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-014",
+              "zh": "The player attempts to fire in single-shot mode with zero ammo → No new bullet sprite appears during that fire attempt.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-015",
+              "zh": "The player attempts to fire in two-shot mode with fewer than 2 ammo → No new bullet sprite appears during that fire attempt.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-030",
+              "zh": "An asteroid is hit when its accumulated hit count reaches the asteroid destruction threshold → The asteroid sprite disappears and a particle blast appears at the asteroid's position.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
         "timing": {
-          "runId": "deepseek-v4-pro-v8.3-rubric2-imported-e2-continuation15-20260916-133950",
-          "status": "failed",
-          "failedStage": "trace",
-          "startedAt": "2026-09-17T04:34:24+08:00",
-          "finishedAt": "2026-09-17T04:34:30+08:00",
-          "totalDurationMs": 6039,
+          "runId": "deepseek-v4-pro-v8.3-rubric2-imported-e2-http404-retry12-r1-20260917-163733",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-18T09:33:06+08:00",
+          "finishedAt": "2026-09-18T11:55:15+08:00",
+          "totalDurationMs": 8529049,
           "stages": [
             {
               "stage": "trace",
-              "startedAt": "2026-09-17T04:34:24+08:00",
-              "finishedAt": "2026-09-17T04:34:30+08:00",
-              "durationMs": 6024,
-              "status": "failed",
-              "exitCode": 1
+              "startedAt": "2026-09-18T09:33:06+08:00",
+              "finishedAt": "2026-09-18T09:45:17+08:00",
+              "durationMs": 730680,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-18T09:45:17+08:00",
+              "finishedAt": "2026-09-18T11:35:04+08:00",
+              "durationMs": 6587873,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-18T11:35:04+08:00",
+              "finishedAt": "2026-09-18T11:35:05+08:00",
+              "durationMs": 329,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-18T11:35:05+08:00",
+              "finishedAt": "2026-09-18T11:35:29+08:00",
+              "durationMs": 24293,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-18T11:35:29+08:00",
+              "finishedAt": "2026-09-18T11:55:15+08:00",
+              "durationMs": 1185843,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }
