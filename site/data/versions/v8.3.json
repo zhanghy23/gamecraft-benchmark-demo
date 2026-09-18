@@ -47569,30 +47569,141 @@
         }
       },
       "qwen3.8-max": {
-        "status": "failed",
-        "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-qwen19-20260916-141355",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "导入源码通过构建，但 Trace 阶段调用评测服务时返回 HTTP 404（服务端点不存在）；本次属于共享评测基础设施故障，未生成最终报告。无功能分、无画面分且不可试玩。",
+        "status": "completed",
+        "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-http404-retry12-r1-20260917-163733",
+        "score": {
+          "display": "86.17 (+2.13)",
+          "base": 86.17,
+          "passed": 81,
+          "denominator": 94,
+          "dynamic": 2,
+          "dynamicAddition": 2.13,
+          "potential": 88.3
+        },
+        "visualQuality": {
+          "score": 94.47,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.57,
+          "renderingStyleAverage": 45.9,
+          "videosScored": 30
+        },
+        "traceCount": 30,
+        "playPath": "games-v8.3/unicorn-storm/qwen3.8-max/index.html",
+        "previewPath": "previews-v8.3/unicorn-storm/qwen3.8-max.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-030",
+              "zh": "The player activates the jam stop control after recording fewer than two notes → The jam record control changes back to \"REC\" and no share-link input is visible."
+            },
+            {
+              "id": "target-042",
+              "zh": "The player activates \"CLEAR\" in pattern-composition mode after at least one note has been added → The pattern timeline note markers disappear and the screen remains on the \"make a pattern\" composer."
+            },
+            {
+              "id": "target-057",
+              "zh": "A gameplay pattern with more than 16 notes is displayed → The progress display uses a compact bar instead of individual note dots across the top of the playfield."
+            },
+            {
+              "id": "target-071",
+              "zh": "A flying unicorn copy reaches the left playfield wall → The copy remains inside the playfield and reverses from leftward motion to rightward motion."
+            },
+            {
+              "id": "target-078",
+              "zh": "A round celebration is triggered with accuracy at least 0.9 and below 0.95 → Two rainbow arcs appear behind the playfield and at least four unicorn leap effects occur during the celebration."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-002",
+              "zh": "A gameplay frame is rendered while the game is paused because the audio context is not running → A dark translucent overlay covers the playfield with the centered text \"paused\" and the instruction \"tap anywhere to resume\" below it.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-003",
+              "zh": "The player taps the screen while the paused overlay is visible and audio can resume → The \"paused\" and \"tap anywhere to resume\" overlay is no longer visible, revealing the gameplay screen underneath.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-048",
+              "zh": "The player types into the name input while the share panel is open and the share-link input is visible → The typed name appears in the name input, and the visible URL text in the share-link input updates.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-075",
+              "zh": "Two bonus-eligible unicorn leap effects intersect in midair while the current score multiplier is x5 → A burst effect appears at the intersection point and a yellow floating \"+1250\" score popup appears there.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-082",
+              "zh": "A round is evaluated with accuracy at least 0.5 and at most 0.98 when the round message selector chooses the first pass message → The round result message \"nice\" is displayed.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-083",
+              "zh": "A round is evaluated with accuracy below 0.5 when the round message selector chooses the first fail message → The round result message \"not quite\" is displayed.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-018",
+              "zh": "The title screen is rendered after loading a valid shared pattern link with a shared name → The title screen shows a line beginning with \"someone sent you\" and containing the shared name, and the normal decorative \"HARDCORE\" button is replaced by a button labeled \"NEW GAME\".",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-052",
+              "zh": "The call phase reaches a high-note slot in a height-enabled pattern → The calling unicorn performs a high soar with visible wings.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
         "timing": {
-          "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-qwen19-20260916-141355",
-          "status": "failed",
-          "failedStage": "trace",
-          "startedAt": "2026-09-17T04:37:58+08:00",
-          "finishedAt": "2026-09-17T04:38:05+08:00",
-          "totalDurationMs": 6735,
+          "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-http404-retry12-r1-20260917-163733",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-17T19:22:41+08:00",
+          "finishedAt": "2026-09-17T21:01:06+08:00",
+          "totalDurationMs": 5905048,
           "stages": [
             {
               "stage": "trace",
-              "startedAt": "2026-09-17T04:37:58+08:00",
-              "finishedAt": "2026-09-17T04:38:05+08:00",
-              "durationMs": 6719,
-              "status": "failed",
-              "exitCode": 1
+              "startedAt": "2026-09-17T19:22:41+08:00",
+              "finishedAt": "2026-09-17T19:56:03+08:00",
+              "durationMs": 2001755,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-17T19:56:03+08:00",
+              "finishedAt": "2026-09-17T20:29:42+08:00",
+              "durationMs": 2019494,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-17T20:29:42+08:00",
+              "finishedAt": "2026-09-17T20:29:43+08:00",
+              "durationMs": 387,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-17T20:29:43+08:00",
+              "finishedAt": "2026-09-17T20:35:15+08:00",
+              "durationMs": 332417,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-17T20:35:15+08:00",
+              "finishedAt": "2026-09-17T21:01:06+08:00",
+              "durationMs": 1550952,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }
