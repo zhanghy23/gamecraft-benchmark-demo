@@ -53149,30 +53149,79 @@
         }
       },
       "qwen3.8-max": {
-        "status": "failed",
-        "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-qwen19-20260916-141355",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "导入源码通过构建，但 Trace 阶段调用评测服务时返回 HTTP 404（服务端点不存在）；本次属于共享评测基础设施故障，未生成最终报告。无功能分、无画面分且不可试玩。",
+        "status": "completed",
+        "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-http404-retry12-r1-20260917-163733",
+        "score": {
+          "display": "100.00 (+0.00)",
+          "base": 100,
+          "passed": 24,
+          "denominator": 24,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 100
+        },
+        "visualQuality": {
+          "score": 90.67,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48,
+          "renderingStyleAverage": 42.67,
+          "videosScored": 3
+        },
+        "traceCount": 3,
+        "playPath": "games-v8.3/rainbow-runner/qwen3.8-max/index.html",
+        "previewPath": "previews-v8.3/rainbow-runner/qwen3.8-max.png",
+        "unmet": {
+          "vlm": [],
+          "replayTrace": []
+        },
+        "issue": null,
         "timing": {
-          "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-qwen19-20260916-141355",
-          "status": "failed",
-          "failedStage": "trace",
-          "startedAt": "2026-09-17T04:38:41+08:00",
-          "finishedAt": "2026-09-17T04:44:38+08:00",
-          "totalDurationMs": 356141,
+          "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-http404-retry12-r1-20260917-163733",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-18T01:43:28+08:00",
+          "finishedAt": "2026-09-18T02:06:35+08:00",
+          "totalDurationMs": 1386819,
           "stages": [
             {
               "stage": "trace",
-              "startedAt": "2026-09-17T04:38:41+08:00",
-              "finishedAt": "2026-09-17T04:44:38+08:00",
-              "durationMs": 356124,
-              "status": "failed",
-              "exitCode": 1
+              "startedAt": "2026-09-18T01:43:28+08:00",
+              "finishedAt": "2026-09-18T01:54:17+08:00",
+              "durationMs": 648356,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-18T01:54:17+08:00",
+              "finishedAt": "2026-09-18T02:03:46+08:00",
+              "durationMs": 568738,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-18T02:03:46+08:00",
+              "finishedAt": "2026-09-18T02:03:46+08:00",
+              "durationMs": 229,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-18T02:03:46+08:00",
+              "finishedAt": "2026-09-18T02:04:14+08:00",
+              "durationMs": 28178,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-18T02:04:14+08:00",
+              "finishedAt": "2026-09-18T02:06:35+08:00",
+              "durationMs": 141288,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }
