@@ -50715,30 +50715,275 @@
         }
       },
       "kimi-k2.6": {
-        "status": "failed",
-        "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-continuation20-20260916-133950",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "导入源码通过构建，但 Trace 阶段调用评测服务时返回 HTTP 404（服务端点不存在）；本次属于共享评测基础设施故障，未生成最终报告。无功能分、无画面分且不可试玩。",
+        "status": "completed",
+        "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-http404-retry15-r1-20260917-163733",
+        "score": {
+          "display": "27.78 (+50.00)",
+          "base": 27.78,
+          "passed": 15,
+          "denominator": 54,
+          "dynamic": 27,
+          "dynamicAddition": 50,
+          "potential": 77.78
+        },
+        "visualQuality": {
+          "score": 93.17,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.83,
+          "renderingStyleAverage": 44.33,
+          "videosScored": 6
+        },
+        "traceCount": 6,
+        "playPath": "games-v8.3/rainbow-run/kimi-k2.6/index.html",
+        "previewPath": "previews-v8.3/rainbow-run/kimi-k2.6.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-042",
+              "zh": "An affordable, not-maxed upgrade option is activated from the upgrades menu → The selected upgrade option's displayed rank changes from N/C to (N+1)/C, and the crystals total shown on the upgrades menu changes from its previous number to that previous number minus the price number that was shown on the selected upgrade option immediately before activation."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-027",
+              "zh": "A crystal is within magnet attraction range during active running gameplay while the runner is on the track and the crystal is outside the immediate pickup radius → Across the next 0.5 seconds, the crystal leaves its prior path position and moves toward the runner before it is collected or passes out of view.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-029",
+              "zh": "The runner collects a shield drop during active running gameplay → The collected drop disappears, and a translucent golden shield bubble appears around the unicorn.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-030",
+              "zh": "The runner takes a non-falling hit during active running gameplay while the shield bubble is visible and invincibility is inactive → Within the next rendered frame, the shield bubble is no longer visible and the lives display contains the same number of life markers as immediately before the hit.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-031",
+              "zh": "The runner collects a wings drop during active running gameplay → The collected drop disappears, and a pair of wings becomes visible on the unicorn.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-033",
+              "zh": "The runner collects a charge drop during active running gameplay → The collected drop disappears, and a horizontal charge meter appears below the lives display.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-034",
+              "zh": "An active charge overlaps an obstacle in the runner's lane during active running gameplay → The obstacle breaks into visible fragments and is removed from the road, while the lives display contains the same number of life markers as immediately before the overlap.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-036",
+              "zh": "The runner reaches a crystal during active charge while the crystal is inside the charge pickup range → The crystal disappears from the track, and the crystal-count plate near the top-right edge increases by 1 compared with immediately before the pickup.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-037",
+              "zh": "The runner collects a heart drop during active running gameplay while the current lives count is below the maximum lives count → The collected drop disappears, and within the next rendered frame the lives display contains exactly 1 additional life marker compared with immediately before collection.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-038",
+              "zh": "The runner overlaps a blocking obstacle during active running gameplay while charge is inactive, invincibility is inactive, the runner is on the track, and no pass-through state is active → The obstacle breaks into visible fragments, and within the next rendered frame the lives display contains exactly 1 fewer life marker than it contained immediately before the overlap.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-039",
+              "zh": "The runner reaches a high obstacle in the same lane during active running gameplay while sliding low enough to pass under it → The runner passes under the high obstacle with no obstacle fragments appearing, and the lives display contains the same number of life markers as immediately before reaching the obstacle.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-040",
+              "zh": "The runner reaches a low obstacle in the same lane during active running gameplay while airborne high enough to pass over it → The runner passes over the low obstacle with no obstacle fragments appearing, and the lives display contains the same number of life markers as immediately before reaching the obstacle.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-002",
+              "zh": "The START button is activated on the title screen → The title menu is replaced by the running gameplay view; the title text and title menu buttons are absent, and a pause control is visible over the gameplay.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-007",
+              "zh": "The pause control is activated during active running gameplay → A translucent dark overlay covers the gameplay, the text \"PAUSED\" appears, and menu buttons labeled \"RESUME\" and \"QUIT\" are visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-008",
+              "zh": "The game is paused and the RESUME button is activated → The pause overlay, \"PAUSED\" text, and pause menu buttons disappear, returning to the running gameplay view with the pause control visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-009",
+              "zh": "The game is paused and the QUIT button is activated → The game leaves the paused run and returns to the title screen with the \"RAINBOW RUN\" title and the \"START\", \"UPGRADES\", and sound menu buttons visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-012",
+              "zh": "The death screen is displayed and the player taps or clicks → The death overlay disappears and the title screen returns with the \"RAINBOW RUN\" title and the \"START\", \"UPGRADES\", and sound menu buttons visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-013",
+              "zh": "The ArrowLeft lane command is processed during active running gameplay while the adjacent screen-left lane is available → The runner leaves the current lane and moves toward the adjacent lane on the screen-left side of the track.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-014",
+              "zh": "The ArrowRight lane command is processed during active running gameplay while the adjacent screen-right lane is available → The runner leaves the current lane and moves toward the adjacent lane on the screen-right side of the track.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-015",
+              "zh": "The ArrowUp jump command is processed during active running gameplay while jumping is available → The runner rises above the running surface while continuing forward along the track.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-016",
+              "zh": "The ArrowDown slide command is processed during active running gameplay while sliding is available → The runner lowers into a sliding posture on the track while continuing forward.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-017",
+              "zh": "A jump command is processed during active running gameplay while the runner is sliding and slide cancellation is available → The runner leaves the lowered sliding posture and returns to an upright running posture without rising above the running surface.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-018",
+              "zh": "A jump command is processed during active running gameplay while the runner is sliding and slide cancellation is unavailable → The runner remains in the lowered sliding posture and does not rise above the running surface within the next 0.5 seconds.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-019",
+              "zh": "A slide command is processed during active running gameplay while the runner is airborne and jump cancellation is available → Within the next 0.5 seconds, the runner descends toward the running surface and does not remain on its immediately previous upward jump arc.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-020",
+              "zh": "A slide command is processed during active running gameplay while the runner is airborne and jump cancellation is unavailable → The runner remains airborne on its current arc and does not enter the lowered sliding posture within the next 0.5 seconds.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-021",
+              "zh": "A screen-left lane-change command is processed during active running gameplay while the runner is already in the outer screen-left lane, charge is inactive, and invincibility is inactive → Within 1 second, the runner moves sideways off the screen-left road edge, the lives display contains exactly 1 fewer life marker than it contained immediately before the command, and the running gameplay remains visible if at least 1 life marker remains.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-022",
+              "zh": "A screen-left lane-change command is processed during active running gameplay while the runner is already in the outer screen-left lane and charge is active → The runner remains on the road in the screen-left outer lane, the charge meter remains visible, and the lives display contains the same number of life markers as immediately before the command.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-023",
+              "zh": "A screen-left lane-change command is processed during active running gameplay while the runner is already in the outer screen-left lane, charge is inactive, and invincibility is active → The runner remains on the road in the screen-left outer lane, and the lives display contains the same number of life markers as immediately before the command.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-024",
+              "zh": "The player takes a hit during active running gameplay while exactly 1 life marker is shown and invincibility is not active → The lives display reaches 0 life markers and the run transitions into the death-screen overlay with the \"TAP TO CONTINUE\" prompt.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-026",
+              "zh": "The runner collects a crystal at a visible pickup position during active running gameplay → The crystal is no longer visible at the pickup position, and the crystal-count plate near the top-right edge shows a number exactly 1 higher than it showed immediately before the pickup.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-028",
+              "zh": "A shield drop is present ahead during active running gameplay → A golden spinning octahedron-shaped pickup is visible above the road.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-032",
+              "zh": "The runner takes a falling hit during active running gameplay while wings are visible and invincibility is inactive → Within 1 second, the unicorn performs a swooping recovery motion back toward the road, the wings remain visible during the recovery, and the lives display contains the same number of life markers as immediately before the hit.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-035",
+              "zh": "The active charge meter depletes during active running gameplay → The horizontal charge meter below the lives display disappears.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-041",
+              "zh": "The runner overlaps an obstacle during active running gameplay while invincibility is active → The lives display contains the same number of life markers as immediately before the overlap.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-045",
+              "zh": "The title screen is shown after a completed run recorded a new best distance → The best-distance plate displays the completed run's distance in meters instead of the previous best value.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-051",
+              "zh": "A low obstacle is present ahead in a lane during active running gameplay → A short block-like obstacle appears close to the road surface in that lane, with open space above it.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-052",
+              "zh": "A high obstacle is present ahead in a lane during active running gameplay → An overhead obstacle appears in that lane with a visible gap between the road surface and the obstacle body.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-053",
+              "zh": "A gate obstacle is present ahead in a lane during active running gameplay → A gate-shaped obstacle appears in that lane with side posts, a horizontal bar, and an additional upper block above the bar.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-054",
+              "zh": "A tower obstacle is present ahead in a lane during active running gameplay → A tall solid obstacle rises from the road surface in that lane with no visible under-gap.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
         "timing": {
-          "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-continuation20-20260916-133950",
-          "status": "failed",
-          "failedStage": "trace",
-          "startedAt": "2026-09-17T05:10:21+08:00",
-          "finishedAt": "2026-09-17T05:12:30+08:00",
-          "totalDurationMs": 128991,
+          "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-http404-retry15-r1-20260917-163733",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-18T07:02:14+08:00",
+          "finishedAt": "2026-09-18T08:20:00+08:00",
+          "totalDurationMs": 4666026,
           "stages": [
             {
               "stage": "trace",
-              "startedAt": "2026-09-17T05:10:21+08:00",
-              "finishedAt": "2026-09-17T05:12:30+08:00",
-              "durationMs": 128975,
-              "status": "failed",
-              "exitCode": 1
+              "startedAt": "2026-09-18T07:02:14+08:00",
+              "finishedAt": "2026-09-18T07:17:53+08:00",
+              "durationMs": 938474,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-18T07:17:53+08:00",
+              "finishedAt": "2026-09-18T08:16:57+08:00",
+              "durationMs": 3544751,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-18T08:16:57+08:00",
+              "finishedAt": "2026-09-18T08:16:58+08:00",
+              "durationMs": 276,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-18T08:16:58+08:00",
+              "finishedAt": "2026-09-18T08:17:22+08:00",
+              "durationMs": 23969,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-18T08:17:22+08:00",
+              "finishedAt": "2026-09-18T08:20:00+08:00",
+              "durationMs": 158525,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }
