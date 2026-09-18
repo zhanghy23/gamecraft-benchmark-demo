@@ -45285,30 +45285,145 @@
         }
       },
       "deepseek-v4-pro": {
-        "status": "failed",
-        "runId": "deepseek-v4-pro-v8.3-rubric2-imported-e2-continuation15-20260916-133950",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "导入源码通过构建，但 Trace 阶段调用评测服务时返回 HTTP 404（服务端点不存在）；本次属于共享评测基础设施故障，未生成最终报告。无功能分、无画面分且不可试玩。",
+        "status": "completed",
+        "runId": "deepseek-v4-pro-v8.3-rubric2-imported-e2-http404-retry12-r1-20260917-163733",
+        "score": {
+          "display": "72.00 (+16.00)",
+          "base": 72,
+          "passed": 36,
+          "denominator": 50,
+          "dynamic": 8,
+          "dynamicAddition": 16,
+          "potential": 88
+        },
+        "visualQuality": {
+          "score": 77.18,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 44.36,
+          "renderingStyleAverage": 32.82,
+          "videosScored": 11
+        },
+        "traceCount": 11,
+        "playPath": "games-v8.3/match3/deepseek-v4-pro/index.html",
+        "previewPath": "previews-v8.3/match3/deepseek-v4-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-025",
+              "zh": "The player presses ArrowRight while a board tile is selected during active play and the tile directly to the right is accepted as a move target → The selected tile and the tile directly to the right visibly exchange positions on the board."
+            },
+            {
+              "id": "target-027",
+              "zh": "The player presses Enter during active play while no grid tile is selected and the keyboard cursor is visible on a tile → A visible selection outline appears around the tile that has the blue hover outline."
+            },
+            {
+              "id": "target-029",
+              "zh": "The player presses Enter during active play while another tile is selected and the keyboard cursor is on a non-adjacent grid tile → The selection outline moves from the previously selected tile to the keyboard cursor tile, and the two tiles do not exchange positions."
+            },
+            {
+              "id": "target-031",
+              "zh": "The player presses Enter during active play while another tile is selected and the keyboard cursor is on an adjacent grid tile that is rejected as an invalid swap → The two tiles exchange positions, then return to their original grid cells; after the return, no selection outline is visible."
+            },
+            {
+              "id": "target-035",
+              "zh": "A match-processing step begins with a horizontal matched group of at least four adjacent tiles on the board → At least four adjacent tiles in one row shrink out of their grid cells, particle effects appear along that row segment, tiles fall vertically into cleared cells, and the board returns to a full grid with no blank cells."
+            },
+            {
+              "id": "target-038",
+              "zh": "A completed valid move leaves the board with no valid moves available → The tile grid is replaced with a full tile grid whose emoji arrangement is not identical to the immediately preceding grid, while the current mode header remains visible."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-009",
+              "zh": "The player taps an unselected grid tile during active play → A visible selection outline appears around the tapped tile.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-022",
+              "zh": "The player presses ArrowUp while a board tile is selected during active play and the tile directly above is accepted as a move target → The selected tile and the tile directly above it visibly exchange positions on the board.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-024",
+              "zh": "The player presses ArrowLeft while a board tile is selected during active play and the tile directly to the left is accepted as a move target → The selected tile and the tile directly to the left visibly exchange positions on the board.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-028",
+              "zh": "The player presses Enter during active play while the keyboard cursor is on the currently selected grid tile → The selection outline disappears from that tile and no tiles exchange positions.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-045",
+              "zh": "The player clicks while the Levels loss overlay is showing → The \"Out of Moves!\" overlay disappears and a fresh Levels game is rendered with \"Level: 1\" and \"Score: 0\" in the header.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-046",
+              "zh": "The player presses Enter while the Levels loss overlay is showing → The \"Out of Moves!\" overlay disappears and a fresh Levels game is rendered with \"Level: 1\" and \"Score: 0\" in the header.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-048",
+              "zh": "The Time Attack countdown update reaches zero while the game is not already over → A game-over overlay appears with the red title text \"Time's Up!\".",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-050",
+              "zh": "The player clicks while the Time Attack loss overlay is showing → The \"Time's Up!\" overlay disappears and a new Time Attack board is rendered.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
         "timing": {
-          "runId": "deepseek-v4-pro-v8.3-rubric2-imported-e2-continuation15-20260916-133950",
-          "status": "failed",
-          "failedStage": "trace",
-          "startedAt": "2026-09-17T04:21:26+08:00",
-          "finishedAt": "2026-09-17T04:32:19+08:00",
-          "totalDurationMs": 653176,
+          "runId": "deepseek-v4-pro-v8.3-rubric2-imported-e2-http404-retry12-r1-20260917-163733",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-17T19:38:24+08:00",
+          "finishedAt": "2026-09-17T22:17:53+08:00",
+          "totalDurationMs": 9568865,
           "stages": [
             {
               "stage": "trace",
-              "startedAt": "2026-09-17T04:21:26+08:00",
-              "finishedAt": "2026-09-17T04:32:19+08:00",
-              "durationMs": 653160,
-              "status": "failed",
-              "exitCode": 1
+              "startedAt": "2026-09-17T19:38:24+08:00",
+              "finishedAt": "2026-09-17T20:04:49+08:00",
+              "durationMs": 1584894,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-17T20:04:49+08:00",
+              "finishedAt": "2026-09-17T22:03:38+08:00",
+              "durationMs": 7129332,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-17T22:03:38+08:00",
+              "finishedAt": "2026-09-17T22:03:39+08:00",
+              "durationMs": 341,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-17T22:03:39+08:00",
+              "finishedAt": "2026-09-17T22:07:46+08:00",
+              "durationMs": 247644,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-17T22:07:46+08:00",
+              "finishedAt": "2026-09-17T22:17:53+08:00",
+              "durationMs": 606622,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emoji Match-3 Suite</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { overflow: hidden; background: #000; font-family: sans-serif; }
+    #game-container { position: relative; width: 100vw; height: 100vh; }
+    canvas { display: block; width: 100%; height: 100%; }
+    #menu-overlay {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, #f6d5f7, #fbe9d7);
+      z-index: 10;
+    }
+    #menu-overlay h1 {
+      font-size: 3em; color: #333; margin-bottom: 1em;
+      text-shadow: 2px 2px 0 rgba(255,255,255,0.8);
+    }
+    #menu-overlay button {
+      font-size: 1.5em; padding: 0.5em 1.5em; margin: 0.5em;
+      border: none; border-radius: 12px; background: #fff; color: #333;
+      cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      transition: transform 0.1s;
+    }
+    #menu-overlay button:active { transform: scale(0.95); }
+    #gameover-overlay {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      display: none; background: rgba(255,255,255,0.85);
+      align-items: center; justify-content: center; flex-direction: column;
+      z-index: 20;
+    }
+    #gameover-overlay h2 {
+      color: red; font-size: 3em; margin-bottom: 0.5em;
+    }
+    #gameover-overlay p {
+      font-size: 1.8em; color: #333;
+      margin-bottom: 1em;
+    }
+  </style>
+  <script type="module" crossorigin src="./assets/index-BDw94I6D.js"></script>
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="game-canvas" tabindex="0" style="display:none;"></canvas>
+    <div id="menu-overlay">
+      <h1>Emoji Match-3 Suite</h1>
+      <button id="btn-levels">Levels</button>
+      <button id="btn-timeattack">Time Attack</button>
+      <button id="btn-endless">Endless</button>
+    </div>
+    <div id="gameover-overlay">
+      <h2 id="gameover-title"></h2>
+      <p id="gameover-score"></p>
+      <p>Press Enter or click to play again</p>
+    </div>
+  </div>
+</body>
+</html>
