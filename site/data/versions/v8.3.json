@@ -48278,30 +48278,100 @@
         }
       },
       "kimi-k2.6": {
-        "status": "failed",
-        "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-continuation20-20260916-133950",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "导入源码通过构建，但 Trace 阶段调用评测服务时返回 HTTP 404（服务端点不存在）；本次属于共享评测基础设施故障，未生成最终报告。无功能分、无画面分且不可试玩。",
+        "status": "completed",
+        "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-http404-retry15-r1-20260917-163733",
+        "score": {
+          "display": "83.33 (+4.17)",
+          "base": 83.33,
+          "passed": 20,
+          "denominator": 24,
+          "dynamic": 1,
+          "dynamicAddition": 4.17,
+          "potential": 87.5
+        },
+        "visualQuality": {
+          "score": 91.14,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.43,
+          "renderingStyleAverage": 42.71,
+          "videosScored": 7
+        },
+        "traceCount": 7,
+        "playPath": "games-v8.3/oh-no-my-rainbow/kimi-k2.6/index.html",
+        "previewPath": "previews-v8.3/oh-no-my-rainbow/kimi-k2.6.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-019",
+              "zh": "A broom stroke is applied to a poop target showing its second cleaned appearance while the cleanup cooldown is ready → That poop target is no longer drawn as a cleanup target, and the broom sprite flips to the opposite sweep pose."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-006",
+              "zh": "The current visible card arrangement contains fewer than three distinct colors during the interactive sorting phase → The progression button is drawn at full opacity.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-009",
+              "zh": "The hovered progression button is activated while the visible cards contain fewer than three distinct colors → The progression sequence starts: the progression button is drawn translucent during its click flicker, and large progress sprites begin appearing in the play area.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-018",
+              "zh": "A broom stroke is applied to a poop target showing its initial dirty appearance while the cleanup cooldown is ready → That poop target changes to its next cleaned appearance, and the broom sprite flips to the opposite sweep pose.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
         "timing": {
-          "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-continuation20-20260916-133950",
-          "status": "failed",
-          "failedStage": "trace",
-          "startedAt": "2026-09-17T05:10:08+08:00",
-          "finishedAt": "2026-09-17T05:10:14+08:00",
-          "totalDurationMs": 5797,
+          "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-http404-retry15-r1-20260917-163733",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-18T03:59:32+08:00",
+          "finishedAt": "2026-09-18T04:47:19+08:00",
+          "totalDurationMs": 2866592,
           "stages": [
             {
               "stage": "trace",
-              "startedAt": "2026-09-17T05:10:08+08:00",
-              "finishedAt": "2026-09-17T05:10:14+08:00",
-              "durationMs": 5782,
-              "status": "failed",
-              "exitCode": 1
+              "startedAt": "2026-09-18T03:59:32+08:00",
+              "finishedAt": "2026-09-18T04:10:38+08:00",
+              "durationMs": 666072,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-18T04:10:38+08:00",
+              "finishedAt": "2026-09-18T04:44:16+08:00",
+              "durationMs": 2017850,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-18T04:44:16+08:00",
+              "finishedAt": "2026-09-18T04:44:16+08:00",
+              "durationMs": 252,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-18T04:44:16+08:00",
+              "finishedAt": "2026-09-18T04:44:50+08:00",
+              "durationMs": 34364,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-18T04:44:50+08:00",
+              "finishedAt": "2026-09-18T04:47:19+08:00",
+              "durationMs": 148023,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }
