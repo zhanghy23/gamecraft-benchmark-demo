@@ -57763,30 +57763,162 @@
         }
       },
       "kimi-k2.6": {
-        "status": "failed",
-        "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-continuation20-20260916-133950",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "导入源码通过构建，但 Trace 阶段调用评测服务时返回 HTTP 404（服务端点不存在）；本次属于共享评测基础设施故障，未生成最终报告。无功能分、无画面分且不可试玩。",
+        "status": "completed",
+        "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-http404-retry15-r1-20260917-163733",
+        "score": {
+          "display": "47.06 (+20.59)",
+          "base": 47.06,
+          "passed": 16,
+          "denominator": 34,
+          "dynamic": 7,
+          "dynamicAddition": 20.59,
+          "potential": 67.65
+        },
+        "visualQuality": {
+          "score": 89.8,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.67,
+          "renderingStyleAverage": 42.13,
+          "videosScored": 15
+        },
+        "traceCount": 15,
+        "playPath": "games-v8.3/lost-robot/kimi-k2.6/index.html",
+        "previewPath": "previews-v8.3/lost-robot/kimi-k2.6.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-010",
+              "zh": "A gameplay map containing the goal is rendered before the robot reaches the goal radius → A cyan circular goal marker is visible at the goal location in the playfield."
+            },
+            {
+              "id": "target-014",
+              "zh": "The camera mode toggle is newly accepted during active gameplay while fixed camera mode is active → The gameplay camera switches to robot-relative view, with the map rotated so the robot's current heading is oriented upward in the view."
+            },
+            {
+              "id": "target-016",
+              "zh": "During active gameplay, the robot receives equal forward acceleration on its left and right drives → While the condition is maintained, the robot body translates in the direction its nose faces and its orientation stays unchanged."
+            },
+            {
+              "id": "target-020",
+              "zh": "During active gameplay, the robot receives forward acceleration on only the left drive → While the condition is maintained, the robot turns right while translating forward."
+            },
+            {
+              "id": "target-021",
+              "zh": "During active gameplay, the robot receives forward acceleration on only the right drive → While the condition is maintained, the robot turns left while translating forward."
+            },
+            {
+              "id": "target-023",
+              "zh": "During active gameplay, the robot receives backward acceleration on only the right drive → While the condition is maintained, the robot turns right while translating backward."
+            },
+            {
+              "id": "target-030",
+              "zh": "The robot enters the pickup radius of an uncollected collectible that has no active door-opening trigger listener → The collectible changes from a filled circle to a hollow shell, and the visible points readout increases by 100."
+            },
+            {
+              "id": "target-031",
+              "zh": "The robot enters the pickup radius of an uncollected collectible that has an active door-opening trigger listener → The collectible changes from a filled circle to a hollow shell, the visible points readout increases by 100, and the linked door changes from a blocking door segment to an open gap."
+            },
+            {
+              "id": "target-033",
+              "zh": "The robot moves while turbo mode is active → Colored trail segments appear behind the robot as it moves."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-004",
+              "zh": "The level selection menu is populated while the level selection screen is being shown → Under the \"CHOOSE A MAP\" heading, the screen displays map selection buttons whose visible labels include a map number line, a \"Points:\" line, and a \"Time:\" line.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-005",
+              "zh": "The level selection menu is populated for a map that has a saved completion state → That map's selection button shows a \"Time:\" line in MM:SS:mmm format with at least one digit from 1 through 9.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-003",
+              "zh": "The enabled Start button is activated on the title screen → The title screen is hidden and the \"CHOOSE A MAP\" level selection screen is shown.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-011",
+              "zh": "The robot enters the goal radius while it is enabled during active play → A white overlay is visible over the gameplay canvas, and the time and points readouts are drawn inside the central half of the canvas.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-012",
+              "zh": "The scheduled post-goal return delay elapses after the robot has reached the goal → The gameplay view is hidden and the level selection screen is shown.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-013",
+              "zh": "The Escape key is accepted during active gameplay while the robot is enabled → The gameplay view is hidden and the level selection screen is shown.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-022",
+              "zh": "During active gameplay, the robot receives backward acceleration on only the left drive → While the condition is maintained, the robot turns left while translating backward.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-032",
+              "zh": "An open door's closed state is applied during gameplay → The open gap changes back into a visible blocking door segment.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-029",
+              "zh": "The robot collides with an obstacle while the point-loss cooldown is active → The visible points readout remains unchanged during that collision.",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
         "timing": {
-          "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-continuation20-20260916-133950",
-          "status": "failed",
-          "failedStage": "trace",
-          "startedAt": "2026-09-17T05:16:15+08:00",
-          "finishedAt": "2026-09-17T05:16:21+08:00",
-          "totalDurationMs": 5573,
+          "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-http404-retry15-r1-20260917-163733",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-18T16:05:55+08:00",
+          "finishedAt": "2026-09-18T17:22:58+08:00",
+          "totalDurationMs": 4623466,
           "stages": [
             {
               "stage": "trace",
-              "startedAt": "2026-09-17T05:16:15+08:00",
-              "finishedAt": "2026-09-17T05:16:21+08:00",
-              "durationMs": 5558,
-              "status": "failed",
-              "exitCode": 1
+              "startedAt": "2026-09-18T16:05:55+08:00",
+              "finishedAt": "2026-09-18T16:18:18+08:00",
+              "durationMs": 743133,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-18T16:18:18+08:00",
+              "finishedAt": "2026-09-18T17:05:51+08:00",
+              "durationMs": 2853344,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-18T17:05:51+08:00",
+              "finishedAt": "2026-09-18T17:05:52+08:00",
+              "durationMs": 303,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-18T17:05:52+08:00",
+              "finishedAt": "2026-09-18T17:06:54+08:00",
+              "durationMs": 61800,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-18T17:06:54+08:00",
+              "finishedAt": "2026-09-18T17:22:58+08:00",
+              "durationMs": 964850,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }
