@@ -52575,30 +52575,141 @@
         }
       },
       "kimi-k2.6": {
-        "status": "failed",
-        "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-continuation20-20260916-133950",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "导入源码通过构建，但 Trace 阶段调用评测服务时返回 HTTP 404（服务端点不存在）；本次属于共享评测基础设施故障，未生成最终报告。无功能分、无画面分且不可试玩。",
+        "status": "completed",
+        "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-http404-retry15-r1-20260917-163733",
+        "score": {
+          "display": "71.11 (+15.56)",
+          "base": 71.11,
+          "passed": 32,
+          "denominator": 45,
+          "dynamic": 7,
+          "dynamicAddition": 15.56,
+          "potential": 86.67
+        },
+        "visualQuality": {
+          "score": 92.75,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.17,
+          "renderingStyleAverage": 44.58,
+          "videosScored": 12
+        },
+        "traceCount": 12,
+        "playPath": "games-v8.3/rainbowhoof/kimi-k2.6/index.html",
+        "previewPath": "previews-v8.3/rainbowhoof/kimi-k2.6.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-006",
+              "zh": "Active play is running from the starting score and the unicorn advances forward without dying → The HUD score readout changes from 0 to a value above 10 within 8 seconds while the side-scrolling terrain continues moving across the view."
+            },
+            {
+              "id": "target-019",
+              "zh": "The unicorn reaches the edge of a terrain gap while running on dirt during active play → The unicorn leaves the ground and moves through open air beyond the terrain edge."
+            },
+            {
+              "id": "target-028",
+              "zh": "The unicorn lands on dirt during active play while a chain multiplier label is visible → A dust particle burst appears at the unicorn's hooves, and the chain multiplier label is no longer visible in the HUD within 1 second."
+            },
+            {
+              "id": "target-033",
+              "zh": "The unicorn intersects a stardust pickup during active play while no chain multiplier is active → The stardust pickup disappears, a star-shaped particle burst appears at the pickup position, and the HUD score readout increases by at least 50 from its pre-pickup value within 1 second."
+            },
+            {
+              "id": "target-045",
+              "zh": "The R key is pressed during active play → Active gameplay restarts from a clean starting stretch: existing drawn rainbow arcs are gone and the score display is reset to 0."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-021",
+              "zh": "The unicorn encounters a valid rainbow arc while running on dirt during active play → The unicorn transfers from the dirt terrain onto the rainbow arc and is shown riding along the rainbow bridge.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-020",
+              "zh": "The dirt-running unicorn reaches an upward dirt crest whose launch condition is met → The unicorn leaves the dirt surface and becomes airborne above continuous dirt terrain, without a terrain gap at the takeoff point.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-022",
+              "zh": "The airborne unicorn lands on a newly reached rainbow arc while the current chain count is zero → A spark particle burst appears at the unicorn, and the unicorn is shown riding on the rainbow arc.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-023",
+              "zh": "The airborne unicorn lands on a newly reached rainbow arc while the current chain count is at least one → A spark particle burst appears at the unicorn, the unicorn is shown riding on the rainbow arc, and the HUD displays a chain multiplier label with an x followed by a number of 2 or above.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-024",
+              "zh": "The unicorn reaches the end of the rainbow arc it is riding during active play → The unicorn leaves the rainbow arc and continues through open air beyond the arc endpoint.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-025",
+              "zh": "The rainbow arc currently carrying the unicorn fades below its support threshold during active play → The unicorn leaves the rainbow arc and is shown moving through open air.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-026",
+              "zh": "The unicorn riding a rainbow arc reaches an upward curve whose launch condition is met before the arc endpoint → The unicorn leaves the rainbow bridge from the curved section and continues through open air while the rainbow bridge remains visible behind it.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-034",
+              "zh": "The unicorn intersects a stardust pickup during active play while a chain multiplier label is visible → The stardust pickup disappears, a star-shaped particle burst appears at the pickup position, and the HUD score readout increases by at least 100 from its pre-pickup value within 1 second.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
         "timing": {
-          "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-continuation20-20260916-133950",
-          "status": "failed",
-          "failedStage": "trace",
-          "startedAt": "2026-09-17T05:12:31+08:00",
-          "finishedAt": "2026-09-17T05:14:04+08:00",
-          "totalDurationMs": 93540,
+          "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-http404-retry15-r1-20260917-163733",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-18T08:20:01+08:00",
+          "finishedAt": "2026-09-18T10:48:45+08:00",
+          "totalDurationMs": 8923662,
           "stages": [
             {
               "stage": "trace",
-              "startedAt": "2026-09-17T05:12:31+08:00",
-              "finishedAt": "2026-09-17T05:14:04+08:00",
-              "durationMs": 93523,
-              "status": "failed",
-              "exitCode": 1
+              "startedAt": "2026-09-18T08:20:01+08:00",
+              "finishedAt": "2026-09-18T08:33:54+08:00",
+              "durationMs": 833248,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-18T08:33:54+08:00",
+              "finishedAt": "2026-09-18T10:30:34+08:00",
+              "durationMs": 6999661,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-18T10:30:34+08:00",
+              "finishedAt": "2026-09-18T10:30:34+08:00",
+              "durationMs": 462,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-18T10:30:34+08:00",
+              "finishedAt": "2026-09-18T10:32:19+08:00",
+              "durationMs": 104588,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-18T10:32:19+08:00",
+              "finishedAt": "2026-09-18T10:48:45+08:00",
+              "durationMs": 985671,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }
