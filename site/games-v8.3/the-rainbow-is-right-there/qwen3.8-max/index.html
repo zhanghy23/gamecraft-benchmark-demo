@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rainbow Unicorn Idle Suite</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{width:100%;height:100%;overflow:hidden;background:#1a1a2e;font-family:'Courier New',monospace;}
+#game-canvas{display:block;width:100%;height:100%;image-rendering:pixelated;}
+#hud{position:absolute;bottom:0;left:0;right:0;display:flex;justify-content:center;padding:12px;z-index:10;pointer-events:none;}
+#hud.hidden{display:none;}
+.hud-ribbon{display:flex;align-items:center;gap:12px;background:rgba(0,0,0,0.7);border:2px solid #ffd700;border-radius:8px;padding:8px 20px;pointer-events:auto;}
+.gold-label{color:#ffd700;font-size:18px;font-weight:bold;text-shadow:1px 1px 2px #000;}
+.gold-value{color:#fff;font-size:20px;font-weight:bold;min-width:60px;text-align:right;}
+.btn{background:#2d2d5e;color:#ffd700;border:2px solid #ffd700;border-radius:6px;padding:6px 14px;font-family:inherit;font-size:14px;cursor:pointer;font-weight:bold;transition:background 0.15s;}
+.btn:hover{background:#4a4a8a;}
+.btn:disabled{opacity:0.4;cursor:not-allowed;}
+#controls{position:absolute;top:10px;right:10px;z-index:10;display:flex;gap:6px;}
+#controls.hidden{display:none;}
+.ctrl-btn{width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.7);border:2px solid #ffd700;border-radius:4px;color:#ffd700;font-size:18px;cursor:pointer;font-family:inherit;font-weight:bold;}
+.ctrl-btn:hover{background:rgba(74,74,138,0.9);}
+#upgrade-backdrop{position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.75);z-index:20;display:none;justify-content:center;align-items:center;}
+#upgrade-backdrop.visible{display:flex;}
+#upgrade-panel{background:#1e1e3f;border:3px solid #ffd700;border-radius:12px;width:90%;max-width:600px;max-height:85vh;display:flex;flex-direction:column;position:relative;overflow:hidden;}
+.upgrade-header{padding:16px;border-bottom:2px solid #333;display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap;}
+.portrait{width:56px;height:56px;border-radius:50%;border:2px solid #ffd700;background:#2d2d5e;display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0;}
+.header-info{flex:1;min-width:150px;}
+.uni-name{color:#ffd700;font-size:16px;font-weight:bold;}
+.uni-bio{color:#aaa;font-size:11px;margin-top:2px;}
+.header-stats{display:flex;gap:16px;flex-shrink:0;}
+.stat-block{background:#2d2d5e;border:1px solid #555;border-radius:6px;padding:6px 12px;text-align:center;}
+.stat-label{color:#aaa;font-size:10px;text-transform:uppercase;}
+.stat-val{color:#ffd700;font-size:16px;font-weight:bold;}
+.upgrade-list{flex:1;overflow-y:auto;padding:10px;scrollbar-width:thin;scrollbar-color:#ffd700 #1e1e3f;}
+.upgrade-row{display:flex;align-items:center;gap:10px;padding:10px;border:1px solid #333;border-radius:8px;margin-bottom:8px;background:#252550;flex-wrap:wrap;}
+.upgrade-row.catch-row{border-color:#ff69b4;background:#2a1a3a;}
+.upg-info{flex:1;min-width:120px;}
+.upg-name{color:#fff;font-size:14px;font-weight:bold;}
+.upg-effect{color:#ccc;font-size:12px;margin-top:3px;}
+.upg-level{color:#aaa;font-size:11px;margin-top:2px;}
+.pips{display:flex;gap:3px;margin-top:4px;}
+.pip{width:8px;height:8px;border-radius:50%;background:#333;border:1px solid #555;}
+.pip.lit{background:#ffd700;border-color:#ffd700;}
+.upg-buy{display:flex;align-items:center;gap:8px;flex-shrink:0;}
+.upg-cost{color:#ffd700;font-size:13px;}
+.scroll-cue{position:absolute;bottom:0;left:0;right:0;height:30px;background:linear-gradient(transparent,rgba(30,30,63,0.95));display:flex;justify-content:center;align-items:center;cursor:pointer;z-index:5;}
+.scroll-cue.hidden{display:none;}
+.sparkle-icon{color:#ffd700;font-size:12px;animation:sparkle 0.8s infinite alternate;margin:0 4px;}
+@keyframes sparkle{0%{opacity:0.3;transform:scale(0.8);}100%{opacity:1;transform:scale(1.2);}}
+.close-btn{position:absolute;top:8px;right:12px;background:none;border:none;color:#ffd700;font-size:22px;cursor:pointer;z-index:6;}
+#stubbornness-dialog{position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.85);z-index:30;display:none;justify-content:center;align-items:center;}
+#stubbornness-dialog.visible{display:flex;}
+.stub-panel{background:#1e1e3f;border:3px solid #ff69b4;border-radius:12px;width:90%;max-width:500px;padding:24px;}
+.stub-title{color:#ff69b4;font-size:22px;font-weight:bold;text-align:center;margin-bottom:6px;}
+.stub-attempts{color:#aaa;font-size:13px;text-align:center;margin-bottom:16px;}
+.stub-row{display:flex;align-items:center;gap:10px;padding:10px;border:1px solid #444;border-radius:8px;margin-bottom:8px;background:#252550;}
+.stub-flag{font-size:20px;flex-shrink:0;}
+.stub-desc{flex:1;color:#ccc;font-size:12px;}
+.stub-desc .perm-level{color:#ff69b4;font-weight:bold;}
+.stub-desc .vals{color:#ffd700;}
+@media(max-width:600px){
+  .upgrade-header{flex-direction:column;align-items:center;text-align:center;}
+  .header-stats{width:100%;justify-content:center;}
+  .upgrade-row{flex-direction:column;align-items:stretch;}
+  .upg-buy{justify-content:flex-end;margin-top:6px;}
+}
+</style>
+  <script type="module" crossorigin src="./assets/index-B5nmPPNz.js"></script>
+</head>
+<body>
+<canvas id="game-canvas"></canvas>
+<div id="hud" class="hidden">
+  <div class="hud-ribbon">
+    <span class="gold-label">GOLD</span>
+    <span class="gold-value" id="gold-display">0</span>
+    <button class="btn" id="spend-gold-btn">Spend Gold</button>
+  </div>
+</div>
+<div id="controls" class="hidden">
+  <button class="ctrl-btn" id="new-game-btn" title="New Game">↺</button>
+</div>
+<div id="upgrade-backdrop">
+  <div id="upgrade-panel">
+    <button class="close-btn" id="upgrade-close">✕</button>
+    <div class="upgrade-header" id="upgrade-header"></div>
+    <div class="upgrade-list" id="upgrade-list"></div>
+    <div class="scroll-cue hidden" id="scroll-cue">
+      <span class="sparkle-icon">✦</span><span style="color:#aaa;font-size:11px;">scroll</span><span class="sparkle-icon">✦</span>
+    </div>
+  </div>
+</div>
+<div id="stubbornness-dialog">
+  <div class="stub-panel" id="stub-panel"></div>
+</div>
+</body>
+</html>
