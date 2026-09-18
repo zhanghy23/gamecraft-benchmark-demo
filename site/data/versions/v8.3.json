@@ -51294,30 +51294,108 @@
         }
       },
       "qwen3.8-max": {
-        "status": "failed",
-        "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-qwen19-20260916-141355",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "导入源码通过构建，但 Trace 阶段调用评测服务时返回 HTTP 404（服务端点不存在）；本次属于共享评测基础设施故障，未生成最终报告。无功能分、无画面分且不可试玩。",
+        "status": "completed",
+        "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-http404-retry12-r1-20260917-163733",
+        "score": {
+          "display": "88.89 (+1.85)",
+          "base": 88.89,
+          "passed": 48,
+          "denominator": 54,
+          "dynamic": 1,
+          "dynamicAddition": 1.85,
+          "potential": 90.74
+        },
+        "visualQuality": {
+          "score": 91,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.86,
+          "renderingStyleAverage": 43.14,
+          "videosScored": 14
+        },
+        "traceCount": 14,
+        "playPath": "games-v8.3/rainbow-run/qwen3.8-max/index.html",
+        "previewPath": "previews-v8.3/rainbow-run/qwen3.8-max.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-019",
+              "zh": "A slide command is processed during active running gameplay while the runner is airborne and jump cancellation is available → Within the next 0.5 seconds, the runner descends toward the running surface and does not remain on its immediately previous upward jump arc."
+            },
+            {
+              "id": "target-028",
+              "zh": "A shield drop is present ahead during active running gameplay → A golden spinning octahedron-shaped pickup is visible above the road."
+            },
+            {
+              "id": "target-037",
+              "zh": "The runner collects a heart drop during active running gameplay while the current lives count is below the maximum lives count → The collected drop disappears, and within the next rendered frame the lives display contains exactly 1 additional life marker compared with immediately before collection."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-018",
+              "zh": "A jump command is processed during active running gameplay while the runner is sliding and slide cancellation is unavailable → The runner remains in the lowered sliding posture and does not rise above the running surface within the next 0.5 seconds.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-020",
+              "zh": "A slide command is processed during active running gameplay while the runner is airborne and jump cancellation is unavailable → The runner remains airborne on its current arc and does not enter the lowered sliding posture within the next 0.5 seconds.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-026",
+              "zh": "The runner collects a crystal at a visible pickup position during active running gameplay → The crystal is no longer visible at the pickup position, and the crystal-count plate near the top-right edge shows a number exactly 1 higher than it showed immediately before the pickup.",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
         "timing": {
-          "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-qwen19-20260916-141355",
-          "status": "failed",
-          "failedStage": "trace",
-          "startedAt": "2026-09-17T04:38:18+08:00",
-          "finishedAt": "2026-09-17T04:38:41+08:00",
-          "totalDurationMs": 22319,
+          "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-http404-retry12-r1-20260917-163733",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-18T00:22:16+08:00",
+          "finishedAt": "2026-09-18T01:43:28+08:00",
+          "totalDurationMs": 4871698,
           "stages": [
             {
               "stage": "trace",
-              "startedAt": "2026-09-17T04:38:18+08:00",
-              "finishedAt": "2026-09-17T04:38:41+08:00",
-              "durationMs": 22303,
-              "status": "failed",
-              "exitCode": 1
+              "startedAt": "2026-09-18T00:22:16+08:00",
+              "finishedAt": "2026-09-18T00:38:25+08:00",
+              "durationMs": 968813,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-18T00:38:25+08:00",
+              "finishedAt": "2026-09-18T01:25:23+08:00",
+              "durationMs": 2817692,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-18T01:25:23+08:00",
+              "finishedAt": "2026-09-18T01:25:23+08:00",
+              "durationMs": 316,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-18T01:25:23+08:00",
+              "finishedAt": "2026-09-18T01:29:07+08:00",
+              "durationMs": 224351,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-18T01:29:07+08:00",
+              "finishedAt": "2026-09-18T01:43:28+08:00",
+              "durationMs": 860495,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }
