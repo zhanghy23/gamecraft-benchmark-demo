@@ -43414,30 +43414,273 @@
         }
       },
       "kimi-k2.6": {
-        "status": "failed",
-        "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-continuation20-20260916-133950",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "导入源码通过构建，但 Trace 阶段调用评测服务时返回 HTTP 404（服务端点不存在）；本次属于共享评测基础设施故障，未生成最终报告。无功能分、无画面分且不可试玩。",
+        "status": "completed",
+        "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-http404-retry15-r1-20260917-163733",
+        "score": {
+          "display": "32.76 (+53.45)",
+          "base": 32.76,
+          "passed": 19,
+          "denominator": 58,
+          "dynamic": 31,
+          "dynamicAddition": 53.45,
+          "potential": 86.21
+        },
+        "visualQuality": {
+          "score": 91.88,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.13,
+          "renderingStyleAverage": 43.75,
+          "videosScored": 8
+        },
+        "traceCount": 8,
+        "playPath": "games-v8.3/the-rainbow-is-right-there/kimi-k2.6/index.html",
+        "previewPath": "previews-v8.3/the-rainbow-is-right-there/kimi-k2.6.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-012",
+              "zh": "The catch sequence changes from the throw phase into the tumble phase → The boot is no longer visible, and the unicorn sprite is shown rotating in quarter-turn orientations during the tumble animation."
+            },
+            {
+              "id": "target-037",
+              "zh": "A collectible gold coin reaches the unicorn collection range during running play while the HUD is visible, with no Sparkle upgrade and exactly one permanent pickup-value bonus active → The GOLD HUD number changes from its pre-collection value to that value plus 2 within 0.2 seconds, and a burst of colored sparkle particles appears at the unicorn."
+            },
+            {
+              "id": "target-048",
+              "zh": "The player activates an ordinary upgrade row while the player has insufficient gold for that row → The upgrade panel remains open, and the selected upgrade row keeps the same visible level indicator, effect text, and purchase button state."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-017",
+              "zh": "One second of update time elapses while the Stubbornness dialog is open with an unresolved point → The Stubbornness dialog remains visible with its choice rows, the gameplay HUD controls remain hidden, and no new gold coin launches from the pot during that one-second interval.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-045",
+              "zh": "The upgrade panel is rendered during a fresh run with exactly one permanent cost-discount trait active and Shimmering Mane at level 0 → The Shimmering Mane row shows a visible cost of 11 gold and an Upgrade button.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-047",
+              "zh": "The player activates an affordable ordinary upgrade row at level 9 while the upgrade panel is open during running play → The selected upgrade row changes to level 10 of 10 with ten lit pips, its Cost label is not visible, and its purchase button displays Maxed.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-049",
+              "zh": "The player activates a maxed ordinary upgrade row while the upgrade panel is open during running play → The upgrade panel remains open, and the selected upgrade row continues to show Maxed with the same visible level and effect text.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-054",
+              "zh": "The player activates the Catch the Rainbow control while the catch prerequisites are not satisfied and permanent saving is available → The upgrade panel remains open, the catch control remains in its locked state, and the catch requirement text remains visible.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-002",
+              "zh": "The game completes startup with an unresolved Stubbornness point in saved progress → A centered Stubbornness dialog is visible with the title Radiant Resolve, an ATTEMPTS counter area, and the gameplay HUD controls are not visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-003",
+              "zh": "The player activates the Spend Gold control during active running play → A centered upgrade panel appears over a darkened backdrop, the upgrade content is visible, and the gameplay HUD and Spend Gold control are not visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-004",
+              "zh": "The player activates the close control in the open upgrade panel → Within 0.2 seconds, the upgrade panel and its dark backdrop are not visible, and the gameplay HUD and Spend Gold control are visible again.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-005",
+              "zh": "The player activates the scroll cue control while the upgrade panel is open and its upgrade list has additional content below the visible area → The visible upgrade list content scrolls downward, revealing lower upgrade rows within the same open panel.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-006",
+              "zh": "The upgrade panel is opened while its upgrade list has content below the visible area → A scroll cue is visible at the bottom of the upgrade panel, including a band over the lower list edge and small sparkle icons.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-010",
+              "zh": "The player activates the New Game control while the game is in the throw phase of the catch cinematic → The New Game control remains ↺ and the catch cinematic stays on screen without switching to a fresh run.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-013",
+              "zh": "The catch cinematic completes its tumble phase → The Stubbornness dialog opens over the gameplay scene and the Spend Gold control is not visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-016",
+              "zh": "The player presses Escape while the Stubbornness dialog is open with an unresolved point → The Stubbornness dialog remains visible and continues blocking the gameplay HUD controls.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-018",
+              "zh": "The Stubbornness dialog is rendered with at least one available choice → Each visible choice row is arranged with a small flag icon on the left, descriptive copy in the middle, and a Choose button on the right.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-019",
+              "zh": "The Stubbornness dialog is rendered with one permanent trait already at its cap while at least one unresolved point remains → The capped trait's Choose button is visibly disabled with reduced opacity, while the dialog remains open for the unresolved point.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-020",
+              "zh": "The Stubbornness dialog is rendered with the Weaponised Optimism permanent trait below its cap → The dialog shows a Weaponised Optimism choice row with Permanent level text, a current value, an arrow to a next value, and an enabled Choose button.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-021",
+              "zh": "The Stubbornness dialog is rendered with the pickup-value permanent trait at level 0 and below its cap → The pickup-value choice row shows Permanent level 0, a current value of 1, an arrow, a next value of 2 gold per pickup, and an enabled Choose button.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-022",
+              "zh": "The Stubbornness dialog is rendered with the cost-discount permanent trait at level 1 and below its cap → The cost-discount choice row shows a current value of 5%, an arrow, a next value of 10%, and an enabled Choose button.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-023",
+              "zh": "The Stubbornness dialog is rendered from saved progress with one unresolved point and three recorded catches → The centered Stubbornness dialog is visible and its ATTEMPTS counter displays 3.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-038",
+              "zh": "A collectible gold coin reaches the unicorn collection range during running play while the upgrade panel is open → The upgrade panel stays open, and within 0.2 seconds the panel's displayed GOLD number is different from the value shown immediately before the collection.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-041",
+              "zh": "The upgrade panel header is rendered while the panel is open → The panel header shows a round unicorn portrait, a unicorn name with a short bio, and two stacked stat blocks labeled GOLD and CHASE.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-042",
+              "zh": "An ordinary upgrade row is rendered in the upgrade panel while that upgrade is below its maximum level → The row shows a current-effect value, an arrow pointing to a next-effect value, a visible Cost label with a gold price, and a purchase button labeled Upgrade.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-043",
+              "zh": "An ordinary upgrade row is rendered in the upgrade panel while that upgrade is at its maximum level → The row shows ten lit level pips, its Cost label is not visible, and its purchase button displays Maxed.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-044",
+              "zh": "The upgrade panel is rendered during a fresh run with no permanent discount and Shimmering Mane at level 0 → The Shimmering Mane row is visible with effect text showing Gold drops every, level text indicating 0 of 10, no lit level pips, a cost of 12 gold, and an Upgrade button.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-046",
+              "zh": "The player activates an affordable ordinary upgrade row below level 9 while the upgrade panel is open during running play → The selected upgrade row refreshes in place: its visible level indicator increases by 1, its displayed next-effect text and Cost label show different text than immediately before activation, and its button remains labeled Upgrade.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-050",
+              "zh": "The Catch the Rainbow row is rendered in the upgrade panel → The row displays the title Catch the Rainbow and a visible cost of 1,000 gold.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-051",
+              "zh": "The upgrade panel is rendered during running play while at least one ordinary upgrade is not maxed and permanent saving is available → The Catch the Rainbow row shows the button text Locked and the requirement text Max every upgrade to unlock.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-052",
+              "zh": "The upgrade panel is rendered during running play while every ordinary upgrade is maxed, the catch toll is payable, permanent saving is available, and permanent reward caps have not been reached → The Catch the Rainbow row shows the button text Catch it and the requirement text The rainbow is finally within reach.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-053",
+              "zh": "The upgrade panel is rendered during running play while every ordinary upgrade is maxed, permanent saving is available, permanent reward caps have not been reached, and the player does not have enough gold for the catch toll → The Catch the Rainbow row shows the requirement text One last treasure toll stands in the way.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-055",
+              "zh": "The player activates the Catch the Rainbow control while the catch is ready, the toll is payable, and saving succeeds → The upgrade list is no longer visible, and the gameplay catch cinematic is visible before the Stubbornness dialog appears.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-056",
+              "zh": "The upgrade panel is rendered in a narrow viewport at or below the mobile layout breakpoint → The upgrade panel header wraps its stats onto a second row, and each visible upgrade row places its buy controls beneath the upgrade description rather than in a separate right column.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-058",
+              "zh": "The browser viewport is resized during active gameplay → The pixel-art gameplay scene redraws to fill the visible canvas area with no blank gap around the scene, and the HUD controls remain overlaid on the play scene.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-009",
+              "zh": "The player activates the New Game control while the New Game confirmation is armed and saving succeeds → The run returns to a fresh visible state: the GOLD HUD reads 0 and the New Game control shows ↺.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-014",
+              "zh": "The player activates a legal Stubbornness choice while the Stubbornness dialog has exactly one available point and saving succeeds → The Stubbornness dialog closes and the active gameplay HUD with the Spend Gold control becomes visible again.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-015",
+              "zh": "The player activates a legal Stubbornness choice while the Stubbornness dialog has more than one available point and saving succeeds → The Stubbornness dialog remains visible for another choice.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-040",
+              "zh": "Active running play advances for one second while the upgrade panel is open → The upgrade panel remains open in the foreground, and the darkened gameplay scene visible around it continues horizontal scrolling behind the panel.",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
         "timing": {
-          "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-continuation20-20260916-133950",
-          "status": "failed",
-          "failedStage": "trace",
-          "startedAt": "2026-09-17T05:00:07+08:00",
-          "finishedAt": "2026-09-17T05:00:14+08:00",
-          "totalDurationMs": 6525,
+          "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-http404-retry15-r1-20260917-163733",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-17T19:10:40+08:00",
+          "finishedAt": "2026-09-17T21:05:48+08:00",
+          "totalDurationMs": 6908031,
           "stages": [
             {
               "stage": "trace",
-              "startedAt": "2026-09-17T05:00:07+08:00",
-              "finishedAt": "2026-09-17T05:00:14+08:00",
-              "durationMs": 6510,
-              "status": "failed",
-              "exitCode": 1
+              "startedAt": "2026-09-17T19:10:40+08:00",
+              "finishedAt": "2026-09-17T19:31:12+08:00",
+              "durationMs": 1232408,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-17T19:31:12+08:00",
+              "finishedAt": "2026-09-17T20:55:13+08:00",
+              "durationMs": 5041244,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-17T20:55:13+08:00",
+              "finishedAt": "2026-09-17T20:55:14+08:00",
+              "durationMs": 344,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-17T20:55:14+08:00",
+              "finishedAt": "2026-09-17T20:59:04+08:00",
+              "durationMs": 230244,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-17T20:59:04+08:00",
+              "finishedAt": "2026-09-17T21:05:48+08:00",
+              "durationMs": 403761,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }
