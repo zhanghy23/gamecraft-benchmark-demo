@@ -49391,30 +49391,109 @@
         }
       },
       "deepseek-v4-pro": {
-        "status": "failed",
-        "runId": "deepseek-v4-pro-v8.3-rubric2-imported-e2-continuation15-20260916-133950",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "导入源码通过构建，但 Trace 阶段调用评测服务时返回 HTTP 404（服务端点不存在）；本次属于共享评测基础设施故障，未生成最终报告。无功能分、无画面分且不可试玩。",
+        "status": "completed",
+        "runId": "deepseek-v4-pro-v8.3-rubric2-imported-e2-http404-retry12-r1-20260917-163733",
+        "score": {
+          "display": "88.89 (+5.56)",
+          "base": 88.89,
+          "passed": 48,
+          "denominator": 54,
+          "dynamic": 3,
+          "dynamicAddition": 5.56,
+          "potential": 94.44
+        },
+        "visualQuality": {
+          "score": 91.29,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.93,
+          "renderingStyleAverage": 43.36,
+          "videosScored": 14
+        },
+        "traceCount": 14,
+        "playPath": "games-v8.3/rainbow-run/deepseek-v4-pro/index.html",
+        "previewPath": "previews-v8.3/rainbow-run/deepseek-v4-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-021",
+              "zh": "A screen-left lane-change command is processed during active running gameplay while the runner is already in the outer screen-left lane, charge is inactive, and invincibility is inactive → Within 1 second, the runner moves sideways off the screen-left road edge, the lives display contains exactly 1 fewer life marker than it contained immediately before the command, and the running gameplay remains visible if at least 1 life marker remains."
+            },
+            {
+              "id": "target-040",
+              "zh": "The runner reaches a low obstacle in the same lane during active running gameplay while airborne high enough to pass over it → The runner passes over the low obstacle with no obstacle fragments appearing, and the lives display contains the same number of life markers as immediately before reaching the obstacle."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-027",
+              "zh": "A crystal is within magnet attraction range during active running gameplay while the runner is on the track and the crystal is outside the immediate pickup radius → Across the next 0.5 seconds, the crystal leaves its prior path position and moves toward the runner before it is collected or passes out of view.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-043",
+              "zh": "An unaffordable, not-maxed upgrade option is activated from the upgrades menu → The upgrades menu remains visible, the selected upgrade option's displayed rank is unchanged from immediately before activation, and the crystals total is unchanged from immediately before activation.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-042",
+              "zh": "An affordable, not-maxed upgrade option is activated from the upgrades menu → The selected upgrade option's displayed rank changes from N/C to (N+1)/C, and the crystals total shown on the upgrades menu changes from its previous number to that previous number minus the price number that was shown on the selected upgrade option immediately before activation.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-030",
+              "zh": "The runner takes a non-falling hit during active running gameplay while the shield bubble is visible and invincibility is inactive → Within the next rendered frame, the shield bubble is no longer visible and the lives display contains the same number of life markers as immediately before the hit.",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
         "timing": {
-          "runId": "deepseek-v4-pro-v8.3-rubric2-imported-e2-continuation15-20260916-133950",
-          "status": "failed",
-          "failedStage": "trace",
-          "startedAt": "2026-09-17T04:32:20+08:00",
-          "finishedAt": "2026-09-17T04:32:25+08:00",
-          "totalDurationMs": 5864,
+          "runId": "deepseek-v4-pro-v8.3-rubric2-imported-e2-http404-retry12-r1-20260917-163733",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-17T22:17:54+08:00",
+          "finishedAt": "2026-09-17T23:33:19+08:00",
+          "totalDurationMs": 4524860,
           "stages": [
             {
               "stage": "trace",
-              "startedAt": "2026-09-17T04:32:20+08:00",
-              "finishedAt": "2026-09-17T04:32:25+08:00",
-              "durationMs": 5848,
-              "status": "failed",
-              "exitCode": 1
+              "startedAt": "2026-09-17T22:17:54+08:00",
+              "finishedAt": "2026-09-17T22:40:29+08:00",
+              "durationMs": 1355711,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-17T22:40:29+08:00",
+              "finishedAt": "2026-09-17T23:21:26+08:00",
+              "durationMs": 2456503,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-17T23:21:26+08:00",
+              "finishedAt": "2026-09-17T23:21:26+08:00",
+              "durationMs": 312,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-17T23:21:26+08:00",
+              "finishedAt": "2026-09-17T23:23:50+08:00",
+              "durationMs": 143858,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-17T23:23:50+08:00",
+              "finishedAt": "2026-09-17T23:33:19+08:00",
+              "durationMs": 568444,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }
