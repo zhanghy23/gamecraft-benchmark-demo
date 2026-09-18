@@ -47690,30 +47690,273 @@
         }
       },
       "deepseek-v4-pro": {
-        "status": "failed",
-        "runId": "deepseek-v4-pro-v8.3-rubric2-imported-e2-continuation15-20260916-133950",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "导入源码通过构建，但 Trace 阶段调用评测服务时返回 HTTP 404（服务端点不存在）；本次属于共享评测基础设施故障，未生成最终报告。无功能分、无画面分且不可试玩。",
+        "status": "completed",
+        "runId": "deepseek-v4-pro-v8.3-rubric2-imported-e2-http404-retry12-r1-20260917-163733",
+        "score": {
+          "display": "56.38 (+4.26)",
+          "base": 56.38,
+          "passed": 53,
+          "denominator": 94,
+          "dynamic": 4,
+          "dynamicAddition": 4.26,
+          "potential": 60.64
+        },
+        "visualQuality": {
+          "score": 91.88,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.08,
+          "renderingStyleAverage": 43.79,
+          "videosScored": 24
+        },
+        "traceCount": 24,
+        "playPath": "games-v8.3/unicorn-storm/deepseek-v4-pro/index.html",
+        "previewPath": "previews-v8.3/unicorn-storm/deepseek-v4-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-005",
+              "zh": "A gameplay frame is rendered with persistent controls while beat visualization is enabled → Three labeled controls are visible: \"RESTART\", \"BEAT ON\", and \"HOME\"."
+            },
+            {
+              "id": "target-006",
+              "zh": "The player activates the beat toggle while its visible label reads \"BEAT ON\" → The beat toggle's visible label changes to \"BEAT OFF\"."
+            },
+            {
+              "id": "target-007",
+              "zh": "The player activates the beat toggle while its visible label reads \"BEAT OFF\" → The beat toggle's visible label changes to \"BEAT ON\"."
+            },
+            {
+              "id": "target-033",
+              "zh": "A shared jam replay reaches its end → The display returns to the title screen with \"UNICORN STORM\" near the upper center."
+            },
+            {
+              "id": "target-036",
+              "zh": "The player activates the \"NORMAL\" control in pattern-composition mode → The same control changes from \"NORMAL\" to rainbow \"HARDCORE\" lettering."
+            },
+            {
+              "id": "target-058",
+              "zh": "The player enters the correct first note of a pattern during the first accepted input slot while the bottom score HUD reads \"0 pts\" and the current score multiplier is x1 → A floating green \"go!\" label appears at the activated unicorn, and the bottom score HUD updates to begin with \"100 pts\"."
+            },
+            {
+              "id": "target-060",
+              "zh": "The player enters a correct later pattern note with the PERFECT timing tier while the current score multiplier is x1 → A floating \"PERFECT\" label appears at the activated unicorn, and the bottom score HUD current-score number increases by 100 points from its pre-input displayed value."
+            },
+            {
+              "id": "target-075",
+              "zh": "Two bonus-eligible unicorn leap effects intersect in midair while the current score multiplier is x5 → A burst effect appears at the intersection point and a yellow floating \"+1250\" score popup appears there."
+            },
+            {
+              "id": "target-078",
+              "zh": "A round celebration is triggered with accuracy at least 0.9 and below 0.95 → Two rainbow arcs appear behind the playfield and at least four unicorn leap effects occur during the celebration."
+            },
+            {
+              "id": "target-079",
+              "zh": "A round celebration is triggered with accuracy at least 0.8 and below 0.9 → Three unicorn leap effects occur in sequence during the celebration, and no rainbow arc appears from this celebration."
+            },
+            {
+              "id": "target-086",
+              "zh": "A round result overlay is shown after a mid-pattern restart → The result choices include \"TRY AGAIN\" with \"same pattern, play now\", \"HEAR IT AGAIN\" with \"the unicorns play it first\", and a locked \"NEXT!\" choice with \"finish the pattern first\"."
+            },
+            {
+              "id": "target-087",
+              "zh": "A round result overlay is shown after a completed round with accuracy at least 0.5 and no mid-pattern restart → The result choices include \"NEXT!\" with the subtitle \"one note longer\"."
+            },
+            {
+              "id": "target-093",
+              "zh": "A new passing round begins after a completed round whose visible progress display used 15 or fewer individual note dots → The new round's progress display uses individual note dots and contains exactly one additional note dot compared with the previous completed round's progress display."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-002",
+              "zh": "A gameplay frame is rendered while the game is paused because the audio context is not running → A dark translucent overlay covers the playfield with the centered text \"paused\" and the instruction \"tap anywhere to resume\" below it.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-003",
+              "zh": "The player taps the screen while the paused overlay is visible and audio can resume → The \"paused\" and \"tap anywhere to resume\" overlay is no longer visible, revealing the gameplay screen underneath.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-004",
+              "zh": "A gameplay frame is rendered while a mid-pattern restart prompt is active → A dark overlay shows the text \"start this pattern over\" near the upper center with \"your score and streak carry on\" directly below it.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-008",
+              "zh": "The player activates the home control during a non-title gameplay screen → The display returns to the title screen with \"UNICORN STORM\" near the upper center.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-009",
+              "zh": "The player activates the restart control during an in-progress pattern → A dark overlay appears with the text \"start this pattern over\" and the line \"your score and streak carry on\" below it.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-010",
+              "zh": "The player presses keyboard key 1 during a phase that accepts herd note input → The leftmost unicorn performs a visible note-response animation from the herd row.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-011",
+              "zh": "The player gives a quick pointer tap on the leftmost unicorn's herd column during a phase that accepts herd note input → The leftmost unicorn performs a visible note-response animation from the herd row.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-012",
+              "zh": "The player gives a quick pointer tap on the second unicorn's herd column during a phase that accepts herd note input → The second unicorn from the left performs a visible note-response animation from the herd row.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-013",
+              "zh": "The player gives a quick pointer tap on the center unicorn's herd column during a phase that accepts herd note input → The center unicorn performs a visible note-response animation from the herd row.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-014",
+              "zh": "The player gives a quick pointer tap on the fourth unicorn's herd column during a phase that accepts herd note input → The second unicorn from the right performs a visible note-response animation from the herd row.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-015",
+              "zh": "The player gives a quick pointer tap on the rightmost unicorn's herd column during a phase that accepts herd note input → The rightmost unicorn performs a visible note-response animation from the herd row.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-016",
+              "zh": "The player drags from one herd column into a different herd column during a phase that accepts slide input → The newly entered unicorn column performs its own visible note-response animation after the previous column's animation.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-047",
+              "zh": "A share panel frame is rendered with the share-link input visible → A second text input is visible for naming the share, showing the placeholder text \"name it (optional)\" when it is empty.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-048",
+              "zh": "The player types into the name input while the share panel is open and the share-link input is visible → The typed name appears in the name input, and the visible URL text in the share-link input updates.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-059",
+              "zh": "The player enters a note that is not the correct first note of a pattern during the first accepted input slot → A floating red \"wrong one\" label appears at the activated unicorn.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-061",
+              "zh": "The player enters a correct later pattern note with the GOOD timing tier while the current score multiplier is x1 → A floating \"GOOD\" label appears at the activated unicorn, and the bottom score HUD current-score number increases by 60 points from its pre-input displayed value.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-062",
+              "zh": "The player enters a correct later pattern note inside the timing window with an unnamed early timing tier while the current score multiplier is x1 → A floating label appears at the activated unicorn beginning with \"early \" and ending with \"ms\", and the bottom score HUD current-score number increases by 30 points from its pre-input displayed value.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-063",
+              "zh": "The player enters a correct later pattern note inside the timing window with an unnamed late timing tier while the current score multiplier is x1 → A floating label appears at the activated unicorn beginning with \"late \" and ending with \"ms\", and the bottom score HUD current-score number increases by 30 points from its pre-input displayed value.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-064",
+              "zh": "The player enters the wrong unicorn for a later pattern note inside its timing window while the score HUD is visible → A floating red \"wrong one\" label appears at the activated unicorn, and the bottom score HUD current-score number remains unchanged during the following half second.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-065",
+              "zh": "The player enters an extra note during response when no unjudged pattern slot is inside the timing window while the score HUD is visible → A floating \"extra\" label appears at the activated unicorn, and the bottom score HUD current-score number remains unchanged during the following half second.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-068",
+              "zh": "The player releases a held note before the high-jump threshold in a height-enabled response → The launched unicorn continues as a low hop without wings appearing.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-082",
+              "zh": "A round is evaluated with accuracy at least 0.5 and at most 0.98 when the round message selector chooses the first pass message → The round result message \"nice\" is displayed.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-083",
+              "zh": "A round is evaluated with accuracy below 0.5 when the round message selector chooses the first fail message → The round result message \"not quite\" is displayed.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-091",
+              "zh": "The player activates an enabled \"TRY AGAIN\" choice on a result overlay after the input guard interval has passed → The result overlay disappears, the gameplay response screen appears, and a large \"GO\" text is visible near the upper part of the playfield without a \"the unicorns play in\" countdown.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-037",
+              "zh": "The player activates the decorative hardcore control in pattern-composition mode → The same control changes back to the label \"NORMAL\".",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-067",
+              "zh": "The player keeps holding a launched note until the high-jump threshold in a height-enabled response → The flying unicorn switches into a high soar with visible wings and a white glow around it.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-080",
+              "zh": "A round celebration is triggered with accuracy at least 0.5 and below 0.8 → One center-unicorn leap effect occurs during the celebration, and no rainbow arc appears from this celebration.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-090",
+              "zh": "The player activates \"HEAR IT AGAIN\" on a result overlay after the input guard interval has passed → The same pattern begins again with the unicorn call countdown beginning with \"the unicorns play in\".",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
         "timing": {
-          "runId": "deepseek-v4-pro-v8.3-rubric2-imported-e2-continuation15-20260916-133950",
-          "status": "failed",
-          "failedStage": "trace",
-          "startedAt": "2026-09-17T04:44:05+08:00",
-          "finishedAt": "2026-09-17T04:44:13+08:00",
-          "totalDurationMs": 7648,
+          "runId": "deepseek-v4-pro-v8.3-rubric2-imported-e2-http404-retry12-r1-20260917-163733",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-18T16:29:45+08:00",
+          "finishedAt": "2026-09-18T19:49:36+08:00",
+          "totalDurationMs": 11990728,
           "stages": [
             {
               "stage": "trace",
-              "startedAt": "2026-09-17T04:44:05+08:00",
-              "finishedAt": "2026-09-17T04:44:13+08:00",
-              "durationMs": 7633,
-              "status": "failed",
-              "exitCode": 1
+              "startedAt": "2026-09-18T16:29:45+08:00",
+              "finishedAt": "2026-09-18T17:01:30+08:00",
+              "durationMs": 1905141,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-18T17:01:30+08:00",
+              "finishedAt": "2026-09-18T19:25:09+08:00",
+              "durationMs": 8619062,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-18T19:25:09+08:00",
+              "finishedAt": "2026-09-18T19:25:10+08:00",
+              "durationMs": 632,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-18T19:25:10+08:00",
+              "finishedAt": "2026-09-18T19:27:25+08:00",
+              "durationMs": 135117,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-18T19:27:25+08:00",
+              "finishedAt": "2026-09-18T19:49:36+08:00",
+              "durationMs": 1330744,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }
