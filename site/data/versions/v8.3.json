@@ -50804,30 +50804,90 @@
         }
       },
       "deepseek-v4-pro": {
-        "status": "failed",
-        "runId": "deepseek-v4-pro-v8.3-rubric2-imported-e2-continuation15-20260916-133950",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "导入源码通过构建，但 Trace 阶段调用评测服务时返回 HTTP 404（服务端点不存在）；本次属于共享评测基础设施故障，未生成最终报告。无功能分、无画面分且不可试玩。",
+        "status": "completed",
+        "runId": "deepseek-v4-pro-v8.3-rubric2-imported-e2-http404-retry12-r1-20260917-163733",
+        "score": {
+          "display": "91.67 (+4.17)",
+          "base": 91.67,
+          "passed": 22,
+          "denominator": 24,
+          "dynamic": 1,
+          "dynamicAddition": 4.17,
+          "potential": 95.83
+        },
+        "visualQuality": {
+          "score": 89.75,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48,
+          "renderingStyleAverage": 41.75,
+          "videosScored": 4
+        },
+        "traceCount": 4,
+        "playPath": "games-v8.3/rainbow-runner/deepseek-v4-pro/index.html",
+        "previewPath": "previews-v8.3/rainbow-runner/deepseek-v4-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-011",
+              "zh": "A rising player character collides with the underside of a platform during active gameplay → The unicorn is blocked beneath the platform and does not pass upward through the platform block."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-020",
+              "zh": "A falling raindrop reaches the top-surface height of a non-rain-reactive platform during active gameplay → The raindrop continues descending past the platform surface and no splash effect appears at that contact height.",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
         "timing": {
-          "runId": "deepseek-v4-pro-v8.3-rubric2-imported-e2-continuation15-20260916-133950",
-          "status": "failed",
-          "failedStage": "trace",
-          "startedAt": "2026-09-17T04:32:26+08:00",
-          "finishedAt": "2026-09-17T04:34:07+08:00",
-          "totalDurationMs": 100912,
+          "runId": "deepseek-v4-pro-v8.3-rubric2-imported-e2-http404-retry12-r1-20260917-163733",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-17T23:33:19+08:00",
+          "finishedAt": "2026-09-17T23:54:12+08:00",
+          "totalDurationMs": 1253152,
           "stages": [
             {
               "stage": "trace",
-              "startedAt": "2026-09-17T04:32:26+08:00",
-              "finishedAt": "2026-09-17T04:34:07+08:00",
-              "durationMs": 100896,
-              "status": "failed",
-              "exitCode": 1
+              "startedAt": "2026-09-17T23:33:19+08:00",
+              "finishedAt": "2026-09-17T23:43:12+08:00",
+              "durationMs": 592965,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-17T23:43:12+08:00",
+              "finishedAt": "2026-09-17T23:50:46+08:00",
+              "durationMs": 453935,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-17T23:50:46+08:00",
+              "finishedAt": "2026-09-17T23:50:46+08:00",
+              "durationMs": 239,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-17T23:50:46+08:00",
+              "finishedAt": "2026-09-17T23:51:17+08:00",
+              "durationMs": 30304,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-17T23:51:17+08:00",
+              "finishedAt": "2026-09-17T23:54:12+08:00",
+              "durationMs": 175678,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }
