@@ -57496,30 +57496,95 @@
         }
       },
       "qwen3.8-max": {
-        "status": "failed",
-        "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-qwen19-20260916-141355",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "导入源码通过构建，但 Trace 阶段调用评测服务时返回 HTTP 404（服务端点不存在）；本次属于共享评测基础设施故障，未生成最终报告。无功能分、无画面分且不可试玩。",
+        "status": "completed",
+        "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-http404-retry12-r1-20260917-163733",
+        "score": {
+          "display": "92.31 (+2.56)",
+          "base": 92.31,
+          "passed": 36,
+          "denominator": 39,
+          "dynamic": 1,
+          "dynamicAddition": 2.56,
+          "potential": 94.87
+        },
+        "visualQuality": {
+          "score": 89.43,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.57,
+          "renderingStyleAverage": 41.86,
+          "videosScored": 7
+        },
+        "traceCount": 7,
+        "playPath": "games-v8.3/lost-island/qwen3.8-max/index.html",
+        "previewPath": "previews-v8.3/lost-island/qwen3.8-max.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-015",
+              "zh": "During active play, the action check finds the antenna in the player's pickup tiles and this pickup does not complete all required rescue parts → The antenna graphic is removed from its terrain tile, the antenna row in the equipment HUD reads \"1 x\", and the gameplay view remains visible."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-022",
+              "zh": "During active play, the player is at least 3000 world units from the current objective item when the player indicator is rendered → The small objective indicator on the player is dark blue.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-014",
+              "zh": "During active play, the action check finds the transmitter in the player's pickup tiles and this pickup does not complete all required rescue parts → The transmitter graphic is removed from its terrain tile, the transmitter row in the equipment HUD reads \"1 x\" next to the transmitter icon, and the gameplay view remains visible.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
         "timing": {
-          "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-qwen19-20260916-141355",
-          "status": "failed",
-          "failedStage": "trace",
-          "startedAt": "2026-09-17T04:48:37+08:00",
-          "finishedAt": "2026-09-17T04:50:18+08:00",
-          "totalDurationMs": 101182,
+          "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-http404-retry12-r1-20260917-163733",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-18T06:25:50+08:00",
+          "finishedAt": "2026-09-18T07:30:02+08:00",
+          "totalDurationMs": 3852577,
           "stages": [
             {
               "stage": "trace",
-              "startedAt": "2026-09-17T04:48:37+08:00",
-              "finishedAt": "2026-09-17T04:50:18+08:00",
-              "durationMs": 101165,
-              "status": "failed",
-              "exitCode": 1
+              "startedAt": "2026-09-18T06:25:50+08:00",
+              "finishedAt": "2026-09-18T06:38:09+08:00",
+              "durationMs": 739533,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-18T06:38:09+08:00",
+              "finishedAt": "2026-09-18T07:23:18+08:00",
+              "durationMs": 2708553,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-18T07:23:18+08:00",
+              "finishedAt": "2026-09-18T07:23:18+08:00",
+              "durationMs": 390,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-18T07:23:18+08:00",
+              "finishedAt": "2026-09-18T07:24:13+08:00",
+              "durationMs": 55230,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-18T07:24:13+08:00",
+              "finishedAt": "2026-09-18T07:30:02+08:00",
+              "durationMs": 348839,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }
