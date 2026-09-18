@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tube Masters</title>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    h1 {
+      color: white;
+      font-family: sans-serif;
+      margin: 0 0 10px 0;
+    }
+    #game-container {
+      position: relative;
+      width: 800px;
+      height: 600px;
+    }
+    canvas {
+      display: block;
+    }
+    #overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #playButton {
+      font-size: 28px;
+      padding: 12px 30px;
+      cursor: pointer;
+    }
+  </style>
+  <script type="module" crossorigin src="./assets/index-DTr8umuO.js"></script>
+</head>
+<body>
+  <h1>Tube Masters</h1>
+  <div id="game-container">
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <div id="overlay">
+      <button id="playButton">Play!</button>
+    </div>
+  </div>
+</body>
+</html>
