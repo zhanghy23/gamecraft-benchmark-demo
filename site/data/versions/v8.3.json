@@ -50290,30 +50290,168 @@
         }
       },
       "deepseek-v4-pro": {
-        "status": "failed",
-        "runId": "deepseek-v4-pro-v8.3-rubric2-imported-e2-continuation15-20260916-133950",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "导入源码通过构建，但 Trace 阶段调用评测服务时返回 HTTP 404（服务端点不存在）；本次属于共享评测基础设施故障，未生成最终报告。无功能分、无画面分且不可试玩。",
+        "status": "completed",
+        "runId": "deepseek-v4-pro-v8.3-rubric2-imported-e2-http404-retry12-r1-20260917-163733",
+        "score": {
+          "display": "57.78 (+4.44)",
+          "base": 57.78,
+          "passed": 26,
+          "denominator": 45,
+          "dynamic": 2,
+          "dynamicAddition": 4.44,
+          "potential": 62.22
+        },
+        "visualQuality": {
+          "score": 89.46,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.38,
+          "renderingStyleAverage": 42.08,
+          "videosScored": 13
+        },
+        "traceCount": 13,
+        "playPath": "games-v8.3/rainbowhoof/deepseek-v4-pro/index.html",
+        "previewPath": "previews-v8.3/rainbowhoof/deepseek-v4-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-015",
+              "zh": "An active rainbow drawing receives a drag segment whose ink cost exceeds the remaining rainbow ink → The in-progress rainbow stroke stops before the drag endpoint, the HUD ink bar fill reaches empty, and a red outline appears around the HUD ink bar."
+            },
+            {
+              "id": "target-020",
+              "zh": "The dirt-running unicorn reaches an upward dirt crest whose launch condition is met → The unicorn leaves the dirt surface and becomes airborne above continuous dirt terrain, without a terrain gap at the takeoff point."
+            },
+            {
+              "id": "target-021",
+              "zh": "The unicorn encounters a valid rainbow arc while running on dirt during active play → The unicorn transfers from the dirt terrain onto the rainbow arc and is shown riding along the rainbow bridge."
+            },
+            {
+              "id": "target-028",
+              "zh": "The unicorn lands on dirt during active play while a chain multiplier label is visible → A dust particle burst appears at the unicorn's hooves, and the chain multiplier label is no longer visible in the HUD within 1 second."
+            },
+            {
+              "id": "target-030",
+              "zh": "A spike obstacle generated on solid terrain enters the gameplay view during active play → A cluster of purple triangular spikes is visible on the dirt terrain."
+            },
+            {
+              "id": "target-033",
+              "zh": "The unicorn intersects a stardust pickup during active play while no chain multiplier is active → The stardust pickup disappears, a star-shaped particle burst appears at the pickup position, and the HUD score readout increases by at least 50 from its pre-pickup value within 1 second."
+            },
+            {
+              "id": "target-037",
+              "zh": "The unicorn falls below the death boundary during active play → A boom particle burst appears at the unicorn, and the game-over overlay appears over the gameplay view."
+            },
+            {
+              "id": "target-045",
+              "zh": "The R key is pressed during active play → Active gameplay restarts from a clean starting stretch: existing drawn rainbow arcs are gone and the score display is reset to 0."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-003",
+              "zh": "A pointer press is accepted while the title screen is showing → The title screen is replaced by active gameplay: the title prompt is no longer visible, the gameplay HUD is visible, and the run begins with the score display reset to 0.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-005",
+              "zh": "Active play is running from the starting distance and the unicorn advances forward without dying → The HUD distance readout changes from \"0 m\" to a nonzero value ending in \"m\" within 3 seconds while the gameplay HUD remains visible.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-006",
+              "zh": "Active play is running from the starting score and the unicorn advances forward without dying → The HUD score readout changes from 0 to a value above 10 within 8 seconds while the side-scrolling terrain continues moving across the view.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-012",
+              "zh": "A drag gesture is accepted during active play while rainbow ink is available → A rainbow-colored bridge stroke appears along the dragged path in the gameplay scene.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-013",
+              "zh": "A draw start is attempted during active play while the rainbow ink amount is below the drawing threshold → A red outline appears around the HUD ink bar, and no new in-progress rainbow stroke appears at the attempted start point.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-014",
+              "zh": "An active rainbow drawing receives a valid drag segment while enough rainbow ink remains for that segment → The in-progress rainbow stroke extends to the new segment endpoint, and on at least one frame within 1 second the HUD ink percentage is at least 1 percentage point below its pre-segment value.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-017",
+              "zh": "A rainbow drawing is released during active play after a stroke shorter than the minimum valid length → The transient in-progress rainbow stroke disappears, and no persistent rainbow bridge remains along the released path.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-025",
+              "zh": "The rainbow arc currently carrying the unicorn fades below its support threshold during active play → The unicorn leaves the rainbow arc and is shown moving through open air.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-044",
+              "zh": "A pointer press is accepted on the game-over screen after the restart delay has elapsed → The game-over overlay disappears, active gameplay returns, existing drawn rainbow arcs are gone, and the score display is reset to 0.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-026",
+              "zh": "The unicorn riding a rainbow arc reaches an upward curve whose launch condition is met before the arc endpoint → The unicorn leaves the rainbow bridge from the curved section and continues through open air while the rainbow bridge remains visible behind it.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-034",
+              "zh": "The unicorn intersects a stardust pickup during active play while a chain multiplier label is visible → The stardust pickup disappears, a star-shaped particle burst appears at the pickup position, and the HUD score readout increases by at least 100 from its pre-pickup value within 1 second.",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
         "timing": {
-          "runId": "deepseek-v4-pro-v8.3-rubric2-imported-e2-continuation15-20260916-133950",
-          "status": "failed",
-          "failedStage": "trace",
-          "startedAt": "2026-09-17T04:34:08+08:00",
-          "finishedAt": "2026-09-17T04:34:16+08:00",
-          "totalDurationMs": 8350,
+          "runId": "deepseek-v4-pro-v8.3-rubric2-imported-e2-http404-retry12-r1-20260917-163733",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-17T23:54:13+08:00",
+          "finishedAt": "2026-09-18T02:34:00+08:00",
+          "totalDurationMs": 9587222,
           "stages": [
             {
               "stage": "trace",
-              "startedAt": "2026-09-17T04:34:08+08:00",
-              "finishedAt": "2026-09-17T04:34:16+08:00",
-              "durationMs": 8334,
-              "status": "failed",
-              "exitCode": 1
+              "startedAt": "2026-09-17T23:54:13+08:00",
+              "finishedAt": "2026-09-18T00:13:31+08:00",
+              "durationMs": 1157546,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-18T00:13:31+08:00",
+              "finishedAt": "2026-09-18T02:20:34+08:00",
+              "durationMs": 7623488,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-18T02:20:34+08:00",
+              "finishedAt": "2026-09-18T02:20:35+08:00",
+              "durationMs": 467,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-18T02:20:35+08:00",
+              "finishedAt": "2026-09-18T02:22:13+08:00",
+              "durationMs": 98088,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-18T02:22:13+08:00",
+              "finishedAt": "2026-09-18T02:34:00+08:00",
+              "durationMs": 707602,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }
