@@ -49726,30 +49726,138 @@
         }
       },
       "kimi-k2.6": {
-        "status": "failed",
-        "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-continuation20-20260916-133950",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "导入源码通过构建，但 Trace 阶段调用评测服务时返回 HTTP 404（服务端点不存在）；本次属于共享评测基础设施故障，未生成最终报告。无功能分、无画面分且不可试玩。",
+        "status": "completed",
+        "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-http404-retry15-r1-20260917-163733",
+        "score": {
+          "display": "76.92 (+15.38)",
+          "base": 76.92,
+          "passed": 40,
+          "denominator": 52,
+          "dynamic": 8,
+          "dynamicAddition": 15.38,
+          "potential": 92.31
+        },
+        "visualQuality": {
+          "score": 90.82,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.91,
+          "renderingStyleAverage": 42.91,
+          "videosScored": 11
+        },
+        "traceCount": 11,
+        "playPath": "games-v8.3/an-http-story/kimi-k2.6/index.html",
+        "previewPath": "previews-v8.3/an-http-story/kimi-k2.6.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-013",
+              "zh": "Built-in level 6 is loaded into the gameplay scene → The isometric 3D level view is shown and a dialogue overlay displays the line \"We're getting close. I can feel it.\""
+            },
+            {
+              "id": "target-016",
+              "zh": "A dialogue sequence has another queued line when the currently displayed line's wait completes → The currently displayed dialogue text is replaced by the next dialogue line in the same dialogue overlay"
+            },
+            {
+              "id": "target-033",
+              "zh": "The main character enters a paired non-exit teleporter during active gameplay → The main character disappears at the entered teleporter and reappears at the matching teleporter elsewhere in the level"
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-023",
+              "zh": "The main character is instructed to walk toward a same-row destination while the adjacent x-axis tile in that direction is not walkable → The main character does not enter the blocked adjacent x-axis tile in response to the instruction",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-027",
+              "zh": "A draggable block is picked for dragging while the main character is standing on top of it → An outline appears on the block, and the block stays at its original grid position while the main character remains on top of it",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-031",
+              "zh": "A dragged block is released while its nearest snapped grid tile is unsafe, its x-axis offset from that nearest tile is greater than its z-axis offset, and the x-axis fallback tile is safe → The block glides to the grid-aligned tile adjacent to the nearest snapped tile along the x-axis and comes to rest there",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-047",
+              "zh": "The visible unexpected-error download notification is clicked after the losing ending is prepared → The unexpected-error notification is no longer visible, and a window is visible with the heading \"This server has been confiscated by the Ministry of Knowledge.\"",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-048",
+              "zh": "The clickable download item is clicked after the winning ending is prepared → A window is visible with a 👾 icon and the heading \"Thanks for playing An HTTP Story!\"",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-049",
+              "zh": "The custom-level import/create screen is shown for a Coil subscriber → A window is visible with the heading \"Thanks for being a Coil subscriber!\", instructions beginning \"Load a custom level from\", a text area containing JSON level data, and a \"Play\" button",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-050",
+              "zh": "Web monetization starts while the monetization/custom-level page elements are available → The non-subscriber monetization elements are hidden and the subscriber custom-level elements are visible",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-051",
+              "zh": "The custom-level form is submitted with valid custom level data in the text area → The custom level opens in the isometric 3D level view",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-052",
+              "zh": "The custom-level form is submitted with invalid custom level data in the text area → The custom-level window remains visible with its text area and Play button, and no isometric level scene opens",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
         "timing": {
-          "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-continuation20-20260916-133950",
-          "status": "failed",
-          "failedStage": "trace",
-          "startedAt": "2026-09-17T05:10:14+08:00",
-          "finishedAt": "2026-09-17T05:10:20+08:00",
-          "totalDurationMs": 5896,
+          "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-http404-retry15-r1-20260917-163733",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-18T04:47:19+08:00",
+          "finishedAt": "2026-09-18T07:02:13+08:00",
+          "totalDurationMs": 8094299,
           "stages": [
             {
               "stage": "trace",
-              "startedAt": "2026-09-17T05:10:14+08:00",
-              "finishedAt": "2026-09-17T05:10:20+08:00",
-              "durationMs": 5881,
-              "status": "failed",
-              "exitCode": 1
+              "startedAt": "2026-09-18T04:47:19+08:00",
+              "finishedAt": "2026-09-18T05:07:52+08:00",
+              "durationMs": 1233157,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-18T05:07:52+08:00",
+              "finishedAt": "2026-09-18T06:52:26+08:00",
+              "durationMs": 6273437,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-18T06:52:26+08:00",
+              "finishedAt": "2026-09-18T06:52:26+08:00",
+              "durationMs": 376,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-18T06:52:26+08:00",
+              "finishedAt": "2026-09-18T06:55:08+08:00",
+              "durationMs": 161485,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-18T06:55:08+08:00",
+              "finishedAt": "2026-09-18T07:02:13+08:00",
+              "durationMs": 425812,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }
