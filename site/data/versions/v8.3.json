@@ -56683,30 +56683,85 @@
         }
       },
       "qwen3.8-max": {
-        "status": "failed",
-        "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-qwen19-20260916-141355",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "导入源码通过构建，但 Trace 阶段调用评测服务时返回 HTTP 404（服务端点不存在）；本次属于共享评测基础设施故障，未生成最终报告。无功能分、无画面分且不可试玩。",
+        "status": "completed",
+        "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-http404-retry12-r1-20260917-163733",
+        "score": {
+          "display": "97.06 (+0.00)",
+          "base": 97.06,
+          "passed": 33,
+          "denominator": 34,
+          "dynamic": 0,
+          "dynamicAddition": 0,
+          "potential": 97.06
+        },
+        "visualQuality": {
+          "score": 92.83,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.17,
+          "renderingStyleAverage": 44.67,
+          "videosScored": 6
+        },
+        "traceCount": 6,
+        "playPath": "games-v8.3/lost-robot/qwen3.8-max/index.html",
+        "previewPath": "previews-v8.3/lost-robot/qwen3.8-max.png",
+        "unmet": {
+          "vlm": [],
+          "replayTrace": [
+            {
+              "id": "target-020",
+              "zh": "During active gameplay, the robot receives forward acceleration on only the left drive → While the condition is maintained, the robot turns right while translating forward.",
+              "cause": "源码分析确认未实现"
+            }
+          ]
+        },
+        "issue": null,
         "timing": {
-          "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-qwen19-20260916-141355",
-          "status": "failed",
-          "failedStage": "trace",
-          "startedAt": "2026-09-17T04:47:36+08:00",
-          "finishedAt": "2026-09-17T04:48:36+08:00",
-          "totalDurationMs": 60077,
+          "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-http404-retry12-r1-20260917-163733",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-18T06:09:43+08:00",
+          "finishedAt": "2026-09-18T06:25:49+08:00",
+          "totalDurationMs": 966121,
           "stages": [
             {
               "stage": "trace",
-              "startedAt": "2026-09-17T04:47:36+08:00",
-              "finishedAt": "2026-09-17T04:48:36+08:00",
-              "durationMs": 60061,
-              "status": "failed",
-              "exitCode": 1
+              "startedAt": "2026-09-18T06:09:43+08:00",
+              "finishedAt": "2026-09-18T06:20:12+08:00",
+              "durationMs": 628819,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-18T06:20:12+08:00",
+              "finishedAt": "2026-09-18T06:20:20+08:00",
+              "durationMs": 8470,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-18T06:20:20+08:00",
+              "finishedAt": "2026-09-18T06:20:20+08:00",
+              "durationMs": 231,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-18T06:20:20+08:00",
+              "finishedAt": "2026-09-18T06:21:11+08:00",
+              "durationMs": 50855,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-18T06:21:11+08:00",
+              "finishedAt": "2026-09-18T06:25:49+08:00",
+              "durationMs": 277715,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }
