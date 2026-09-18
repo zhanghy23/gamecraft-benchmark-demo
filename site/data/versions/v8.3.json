@@ -55811,30 +55811,95 @@
         }
       },
       "qwen3.8-max": {
-        "status": "failed",
-        "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-qwen19-20260916-141355",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "导入源码通过构建，但 Trace 阶段调用评测服务时返回 HTTP 404（服务端点不存在）；本次属于共享评测基础设施故障，未生成最终报告。无功能分、无画面分且不可试玩。",
+        "status": "completed",
+        "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-http404-retry12-r1-20260917-163733",
+        "score": {
+          "display": "94.83 (+5.17)",
+          "base": 94.83,
+          "passed": 55,
+          "denominator": 58,
+          "dynamic": 3,
+          "dynamicAddition": 5.17,
+          "potential": 100
+        },
+        "visualQuality": {
+          "score": 91.5,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.71,
+          "renderingStyleAverage": 43.79,
+          "videosScored": 14
+        },
+        "traceCount": 14,
+        "playPath": "games-v8.3/space-garden/qwen3.8-max/index.html",
+        "previewPath": "previews-v8.3/space-garden/qwen3.8-max.png",
+        "unmet": {
+          "vlm": [],
+          "replayTrace": [
+            {
+              "id": "target-013",
+              "zh": "The help overlay is displayed while the player is not near a planet, is not being drained, has fuel below 5, and the low-fuel blink interval is active → The help overlay displays the three-line message \"FIND ENERGY MASS TO ABSORB\", \"OR TRAVEL NEAR COMPLETE PLANETS\", and \"TO RECHARGE\".",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-018",
+              "zh": "The help overlay is displayed while the player is being drained by a red enemy → The help overlay displays the two-line message \"THE RED DRAIN YOUR ENERGIES\" and \"KEEP YOUR DISTANCE\".",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-053",
+              "zh": "A red harvester's health reaches zero → The red harvester disappears from the gameplay view, a burst of explosion rings appears at the red harvester's position, and two energy masses appear around the former harvester position.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
         "timing": {
-          "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-qwen19-20260916-141355",
-          "status": "failed",
-          "failedStage": "trace",
-          "startedAt": "2026-09-17T04:46:29+08:00",
-          "finishedAt": "2026-09-17T04:47:35+08:00",
-          "totalDurationMs": 65589,
+          "runId": "qwen3.8-max-v8.3-rubric2-imported-e2-http404-retry12-r1-20260917-163733",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-09-18T04:53:33+08:00",
+          "finishedAt": "2026-09-18T06:09:42+08:00",
+          "totalDurationMs": 4569436,
           "stages": [
             {
               "stage": "trace",
-              "startedAt": "2026-09-17T04:46:29+08:00",
-              "finishedAt": "2026-09-17T04:47:35+08:00",
-              "durationMs": 65572,
-              "status": "failed",
-              "exitCode": 1
+              "startedAt": "2026-09-18T04:53:33+08:00",
+              "finishedAt": "2026-09-18T05:11:44+08:00",
+              "durationMs": 1091663,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-09-18T05:11:44+08:00",
+              "finishedAt": "2026-09-18T05:52:14+08:00",
+              "durationMs": 2429602,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-09-18T05:52:14+08:00",
+              "finishedAt": "2026-09-18T05:52:14+08:00",
+              "durationMs": 355,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-09-18T05:52:14+08:00",
+              "finishedAt": "2026-09-18T05:56:30+08:00",
+              "durationMs": 255559,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-09-18T05:56:30+08:00",
+              "finishedAt": "2026-09-18T06:09:42+08:00",
+              "durationMs": 792225,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }
