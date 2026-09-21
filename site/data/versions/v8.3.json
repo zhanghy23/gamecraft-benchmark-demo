@@ -59272,16 +59272,221 @@
     },
     "save-the-lost-friend": {
       "gpt-5.5": {
-        "status": "failed",
-        "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "GPT-5.5已生成源码并通过确定性构建与运行检查；Trace阶段完成109条初始Trace后，在第3/11批Probe Plan中连续三次因锚点不唯一或表达式格式不符合契约而被拒绝，重试耗尽后终止。该项记录为Trace规划失败，无功能分、无画面分且不可试玩。",
-        "timing": null
+        "status": "completed",
+        "runId": "gpt-5.5-v8.3-rubric2-four-regenerate-e2-20260920-163245",
+        "score": {
+          "display": "76.15 (+11.93)",
+          "base": 76.15,
+          "passed": 83,
+          "denominator": 109,
+          "dynamic": 13,
+          "dynamicAddition": 11.93,
+          "potential": 88.07
+        },
+        "visualQuality": {
+          "score": 88.65,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 47.51,
+          "renderingStyleAverage": 41.14,
+          "videosScored": 37
+        },
+        "traceCount": 37,
+        "playPath": "games-v8.3/save-the-lost-friend/gpt-5.5/index.html",
+        "previewPath": "previews-v8.3/save-the-lost-friend/gpt-5.5.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-013",
+              "zh": "During active platformer play, the left movement control is held while the player's next horizontal step has no obstacle → The player advances left through the level between consecutive gameplay frames."
+            },
+            {
+              "id": "target-028",
+              "zh": "The player crosses the upper camera margin in a scrollable level → The level scenery shifts downward between consecutive frames while the player remains visible in the gameplay canvas."
+            },
+            {
+              "id": "target-052",
+              "zh": "The player touches the river gem while the river level is still active → The river gem sprite disappears and after the level win delay the water hub level replaces the river level on screen."
+            },
+            {
+              "id": "target-062",
+              "zh": "The player touches the locked air island entrance in the water hub → The HUD displays the message \"You need to collect the key from owl to enter the air island\"."
+            },
+            {
+              "id": "target-063",
+              "zh": "The player touches the locked fire island entrance in the water hub → The HUD displays the message \"You need to collect the key from eagle to enter the fire island\"."
+            },
+            {
+              "id": "target-078",
+              "zh": "The up selection control is pressed while a dialog question list is open and the first question is highlighted → The red highlight moves from the first question entry to the last question entry."
+            },
+            {
+              "id": "target-079",
+              "zh": "The down selection control is pressed while a dialog question list is open and the last question is highlighted → The red highlight moves from the last question entry to the first question entry."
+            },
+            {
+              "id": "target-080",
+              "zh": "The up selection control is pressed while a dialog question list is open and a non-first question is highlighted → The red highlight moves from the currently highlighted question entry to the question entry directly above it."
+            },
+            {
+              "id": "target-098",
+              "zh": "A fire bird updates at a firing interval during its patrol → A new fire-bolt sprite appears directly below the fire bird."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-092",
+              "zh": "A shark updates while its next position intersects a solid obstacle → The shark changes direction and moves back away from the obstacle on the following gameplay frames.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-102",
+              "zh": "The air level begins after its generated layout is displayed → The player starts in the lower central area of the playfield and the air gem is visible in the upper central area of the playfield.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-103",
+              "zh": "The river level begins after its generated layout is displayed → The player starts on a low visible board or platform in the river playfield.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-109",
+              "zh": "A water hub log background tile is drawn → A white horizontal base with a brown triangular log shape above it is visible in the water hub playfield.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-024",
+              "zh": "During active non-platformer play, the player's next step intersects a solid obstacle → The player remains outside the solid obstacle and does not pass through its visible boundary.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-034",
+              "zh": "The player touches an evil cloud while their health is 100 and their hit timer is inactive → The HUD displays the message \"Beware of the Evil Cloud.\", and within 1 second the green filled portion of the Health bar is between 45% and 55% of the bar's full visible width.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-035",
+              "zh": "The player touches volcanic lava while their health is 100 and their hit timer is inactive → The HUD displays the message \"Beware of the Volcanic Lava.\", and within 1 second the green filled portion of the Health bar is between 45% and 55% of the bar's full visible width.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-040",
+              "zh": "The player touches an evil cloud in the air level while their health is 50 and their hit timer is inactive → The level enters the lost-state animation: the player sprite begins moving downward and its visible body height begins shrinking.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-048",
+              "zh": "The player touches a berry in the fire level while their health is 90 → The berry sprite disappears, the HUD displays the message \"Gained health\", and the health bar's filled portion extends from nine tenths of the bar's full width to the full bar width within 1 second.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-056",
+              "zh": "A collected, unplaced fire gem is accepted into the portal while fewer than three gems are already placed → A red diamond appears at the upper-right area of the portal and the HUD displays a gem-placed message containing \"fire\".",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-058",
+              "zh": "The fourth gem is accepted into the portal → A centered menu screen is visible with the title text \"Save the Lost Friend\" and the message \"You have Won.\".",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-070",
+              "zh": "The player touches the unlocked air island entrance in the water hub before the air gem has been collected → The HUD displays the message \"Welcome to the air island\" and, after the level transition delay, the air level replaces the water hub on screen.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-074",
+              "zh": "A gameplay frame updates while a dialog interaction is active and a movement control is held → The player stays at the same visible playfield position while the dialog or question UI remains displayed.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-077",
+              "zh": "The enter selection control is pressed while an NPC dialog is active before the question list is displayed → The HUD area changes from the dialog message to a question list with one entry highlighted in red.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-081",
+              "zh": "The down selection control is pressed while a dialog question list is open and a non-last question is highlighted → The red highlight moves from the currently highlighted question entry to the question entry directly below it.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-083",
+              "zh": "The skip dialog control is pressed while an NPC dialog message is displayed → The dialog message text disappears from the HUD area and the normal gameplay HUD remains visible.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-084",
+              "zh": "The skip dialog control is pressed while an NPC answer text is displayed → The answer text disappears from the HUD area and the normal gameplay HUD remains visible.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.5-v8.3-rubric2-four-regenerate-e2-20260920-163245",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": null,
+          "finishedAt": null,
+          "totalDurationMs": 29599845,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": null,
+              "finishedAt": null,
+              "durationMs": 125412,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "build-game",
+              "startedAt": null,
+              "finishedAt": null,
+              "durationMs": 3079,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": null,
+              "finishedAt": null,
+              "durationMs": 2160059,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": null,
+              "finishedAt": null,
+              "durationMs": 24344825,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": null,
+              "finishedAt": null,
+              "durationMs": 2067,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": null,
+              "finishedAt": null,
+              "durationMs": 170342,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": null,
+              "finishedAt": null,
+              "durationMs": 2793830,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
       },
       "seed-2.0-pro": {
         "status": "completed",
