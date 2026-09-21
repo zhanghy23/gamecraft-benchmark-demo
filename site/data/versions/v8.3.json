@@ -36448,6 +36448,111 @@
       }
     },
     "fight-back": {
+      "gpt-5.5": {
+        "status": "completed",
+        "runId": "gpt-5.5-v8.3-rubric2-four-regenerate-e2-20260920-163245",
+        "score": {
+          "display": "93.94 (+3.03)",
+          "base": 93.94,
+          "passed": 31,
+          "denominator": 33,
+          "dynamic": 1,
+          "dynamicAddition": 3.03,
+          "potential": 96.97
+        },
+        "visualQuality": {
+          "score": 92.13,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.38,
+          "renderingStyleAverage": 43.75,
+          "videosScored": 8
+        },
+        "traceCount": 8,
+        "playPath": "games-v8.3/fight-back/gpt-5.5/index.html",
+        "previewPath": "previews-v8.3/fight-back/gpt-5.5.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-006",
+              "zh": "The adventure stage receives an Arrow Left input while the hero can accept a new action and the destination tile is walkable and unoccupied → The hero sprite walks one map step toward the left side of the gameplay view."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-033",
+              "zh": "The game won stage receives an Enter input → The displayed victory screen is replaced by the opening menu screen.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "gpt-5.5-v8.3-rubric2-four-regenerate-e2-20260920-163245",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": null,
+          "finishedAt": null,
+          "totalDurationMs": 3504511,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": null,
+              "finishedAt": null,
+              "durationMs": 138330,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "build-game",
+              "startedAt": null,
+              "finishedAt": null,
+              "durationMs": 33223,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": null,
+              "finishedAt": null,
+              "durationMs": 831607,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": null,
+              "finishedAt": null,
+              "durationMs": 2063518,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": null,
+              "finishedAt": null,
+              "durationMs": 293,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": null,
+              "finishedAt": null,
+              "durationMs": 42566,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": null,
+              "finishedAt": null,
+              "durationMs": 394755,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
       "minimax-m2.7": {
         "status": "completed",
         "runId": "minimax-m2.7-v8.3-rubric2-imported-licensed20-20260910-140250",
