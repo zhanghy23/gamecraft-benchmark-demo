@@ -36553,6 +36553,125 @@
           ]
         }
       },
+      "seed-2.0-pro": {
+        "status": "completed",
+        "runId": "seed-2.0-pro-v8.3-rubric2-fight-back-e2-20260921-113000",
+        "score": {
+          "display": "84.85 (+6.06)",
+          "base": 84.85,
+          "passed": 28,
+          "denominator": 33,
+          "dynamic": 2,
+          "dynamicAddition": 6.06,
+          "potential": 90.91
+        },
+        "visualQuality": {
+          "score": 91.33,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.17,
+          "renderingStyleAverage": 43.17,
+          "videosScored": 6
+        },
+        "traceCount": 6,
+        "playPath": "games-v8.3/fight-back/seed-2.0-pro/index.html",
+        "previewPath": "previews-v8.3/fight-back/seed-2.0-pro.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-020",
+              "zh": "The hero performs an attack against a living target that survives the hit while the hero's pre-attack XP is at least 2 points below the current next-level XP requirement → In the right-side information panel, the XP line's numerator increases by 1 from its pre-attack displayed value and the XP line's denominator stays the same."
+            },
+            {
+              "id": "target-021",
+              "zh": "The hero performs an attack that kills a living non-dragon enemy while the hero's pre-attack XP is at least 4 points below the current next-level XP requirement → In the right-side information panel, the XP line's numerator increases by 3 from its pre-attack displayed value and the XP line's denominator stays the same."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-016",
+              "zh": "The adventure stage begins an update while the hero is dead → The adventure gameplay view is replaced by the game over screen.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-011",
+              "zh": "The hero performs an attack against the living dragon and the dragon survives the hit → The gameplay console displays a new hit message naming the hero and the dragon and saying \"for\" followed by a numeric damage amount.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-012",
+              "zh": "The hero performs an attack against the dragon and the hit kills the dragon → The adventure gameplay view is replaced by the victory screen.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
+        "timing": {
+          "runId": "seed-2.0-pro-v8.3-rubric2-fight-back-e2-20260921-113000",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": null,
+          "finishedAt": null,
+          "totalDurationMs": 3792226,
+          "stages": [
+            {
+              "stage": "generate-game",
+              "startedAt": null,
+              "finishedAt": null,
+              "durationMs": 57552,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "build-game",
+              "startedAt": null,
+              "finishedAt": null,
+              "durationMs": 3164,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": null,
+              "finishedAt": null,
+              "durationMs": 784113,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": null,
+              "finishedAt": null,
+              "durationMs": 2499287,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": null,
+              "finishedAt": null,
+              "durationMs": 304,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": null,
+              "finishedAt": null,
+              "durationMs": 67237,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": null,
+              "finishedAt": null,
+              "durationMs": 380345,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
       "minimax-m2.7": {
         "status": "completed",
         "runId": "minimax-m2.7-v8.3-rubric2-imported-licensed20-20260910-140250",
