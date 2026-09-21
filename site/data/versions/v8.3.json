@@ -40927,38 +40927,130 @@
     },
     "idle-necromancer": {
       "gpt-5.5": {
-        "status": "failed",
-        "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "生成源码并通过确定性构建与运行检查后进入Trace；第3/5批Trace请求连续三次在没有[DONE]或finish_reason的情况下中断，重试耗尽后终止。该项记录为Trace服务传输失败，无功能分、无画面分且不可试玩。",
+        "status": "completed",
+        "runId": "gpt-5.5-v8.3-rubric2-four-regenerate-e2-20260920-163245",
+        "score": {
+          "display": "86.00 (+4.00)",
+          "base": 86,
+          "passed": 43,
+          "denominator": 50,
+          "dynamic": 2,
+          "dynamicAddition": 4,
+          "potential": 90
+        },
+        "visualQuality": {
+          "score": 91.56,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.11,
+          "renderingStyleAverage": 43.44,
+          "videosScored": 18
+        },
+        "traceCount": 18,
+        "playPath": "games-v8.3/idle-necromancer/gpt-5.5/index.html",
+        "previewPath": "previews-v8.3/idle-necromancer/gpt-5.5.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-042",
+              "zh": "A manual activation enables autoplay → Within one second after the manual activation, at least two red use overlays appear on cards without further pointer input."
+            },
+            {
+              "id": "target-046",
+              "zh": "A rank-II card is rendered in its normal active card state → The card frame contains two nested white rectangular outlines around the portrait area."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-004",
+              "zh": "A new card is created for a rank whose current rank level is above that card's existing level → The created card is drawn with the current rank level value, and its displayed skill-number text reflects that rank level.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-006",
+              "zh": "The game starts while no saved game record is available → The board begins with a single starting card visible in the play area, and the resource counters are shown in their new-game starting state.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-047",
+              "zh": "A rank-III card is rendered in its normal active card state → The card frame contains three nested white rectangular outlines around the portrait area.",
+              "cause": "源码分析确认未实现"
+            },
+            {
+              "id": "target-015",
+              "zh": "The player drops an eligible special card onto a Necromancer card while shattering is allowed → The dropped card is no longer drawn in its board cell, and the BUILT UP ENERGY display changes from its pre-drop number.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-021",
+              "zh": "A rank purchase slot has no further purchasable card available → That rank purchase button displays the text \"MAX\" instead of a numeric cost.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": null,
         "timing": {
-          "runId": "gpt-5.5-v8.3-rubric2-licensed22-20260908-232150",
-          "status": "failed",
-          "failedStage": "trace",
-          "startedAt": "2026-09-09T08:22:21+08:00",
-          "finishedAt": "2026-09-09T08:44:13+08:00",
-          "totalDurationMs": 1312454,
+          "runId": "gpt-5.5-v8.3-rubric2-four-regenerate-e2-20260920-163245",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": null,
+          "finishedAt": null,
+          "totalDurationMs": 2838369,
           "stages": [
             {
               "stage": "generate-game",
-              "startedAt": "2026-09-09T08:22:21+08:00",
-              "finishedAt": "2026-09-09T08:24:40+08:00",
-              "durationMs": 138785,
+              "startedAt": null,
+              "finishedAt": null,
+              "durationMs": 167947,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "build-game",
+              "startedAt": null,
+              "finishedAt": null,
+              "durationMs": 3114,
               "status": "completed",
               "exitCode": 0
             },
             {
               "stage": "trace",
-              "startedAt": "2026-09-09T08:24:40+08:00",
-              "finishedAt": "2026-09-09T08:44:13+08:00",
-              "durationMs": 1173606,
-              "status": "failed",
-              "exitCode": 1
+              "startedAt": null,
+              "finishedAt": null,
+              "durationMs": 1380704,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": null,
+              "finishedAt": null,
+              "durationMs": 339186,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": null,
+              "finishedAt": null,
+              "durationMs": 285,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": null,
+              "finishedAt": null,
+              "durationMs": 134846,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": null,
+              "finishedAt": null,
+              "durationMs": 812067,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }
