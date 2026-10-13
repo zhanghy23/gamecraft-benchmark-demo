@@ -43674,30 +43674,153 @@
         }
       },
       "gpt-5.4": {
-        "status": "failed",
-        "runId": "gpt-5.4-v8.3-rubric2-licensed22-recovery15-20260911-180228",
-        "stage": "generate-game",
-        "score": null,
-        "traceCount": 0,
-        "playPath": null,
-        "previewPath": null,
-        "unmet": null,
-        "issue": "GPT-5.4生成请求多次在未收到[DONE]或finish_reason时结束；四轮重试耗尽后，累计响应仍不包含一个有效JSON对象，未写出可用游戏源码。该项记录为生成失败，无功能分、无画面分且不可试玩。",
+        "status": "completed",
+        "runId": "gpt-5.4-v8.3-rubric2-licensed2-e2-retry-20261012-135650",
+        "score": {
+          "display": "75.86 (+13.79)",
+          "base": 75.86,
+          "passed": 44,
+          "denominator": 58,
+          "dynamic": 8,
+          "dynamicAddition": 13.79,
+          "potential": 89.66
+        },
+        "visualQuality": {
+          "score": 93.21,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48.21,
+          "renderingStyleAverage": 45,
+          "videosScored": 19
+        },
+        "traceCount": 19,
+        "playPath": "games-v8.3/the-rainbow-is-right-there/gpt-5.4/index.html",
+        "previewPath": "previews-v8.3/the-rainbow-is-right-there/gpt-5.4.png",
+        "unmet": {
+          "vlm": [
+            {
+              "id": "target-009",
+              "zh": "The player activates the New Game control while the New Game confirmation is armed and saving succeeds → The run returns to a fresh visible state: the GOLD HUD reads 0 and the New Game control shows ↺."
+            },
+            {
+              "id": "target-036",
+              "zh": "A collectible gold coin reaches the unicorn collection range during running play while the HUD is visible, with exactly one Sparkle upgrade level and no permanent pickup-value bonus active → The GOLD HUD number changes from its pre-collection value to that value plus 2 within 0.2 seconds, and a burst of colored sparkle particles appears at the unicorn."
+            },
+            {
+              "id": "target-037",
+              "zh": "A collectible gold coin reaches the unicorn collection range during running play while the HUD is visible, with no Sparkle upgrade and exactly one permanent pickup-value bonus active → The GOLD HUD number changes from its pre-collection value to that value plus 2 within 0.2 seconds, and a burst of colored sparkle particles appears at the unicorn."
+            },
+            {
+              "id": "target-047",
+              "zh": "The player activates an affordable ordinary upgrade row at level 9 while the upgrade panel is open during running play → The selected upgrade row changes to level 10 of 10 with ten lit pips, its Cost label is not visible, and its purchase button displays Maxed."
+            },
+            {
+              "id": "target-052",
+              "zh": "The upgrade panel is rendered during running play while every ordinary upgrade is maxed, the catch toll is payable, permanent saving is available, and permanent reward caps have not been reached → The Catch the Rainbow row shows the button text Catch it and the requirement text The rainbow is finally within reach."
+            },
+            {
+              "id": "target-053",
+              "zh": "The upgrade panel is rendered during running play while every ordinary upgrade is maxed, permanent saving is available, permanent reward caps have not been reached, and the player does not have enough gold for the catch toll → The Catch the Rainbow row shows the requirement text One last treasure toll stands in the way."
+            }
+          ],
+          "replayTrace": [
+            {
+              "id": "target-016",
+              "zh": "The player presses Escape while the Stubbornness dialog is open with an unresolved point → The Stubbornness dialog remains visible and continues blocking the gameplay HUD controls.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-023",
+              "zh": "The Stubbornness dialog is rendered from saved progress with one unresolved point and three recorded catches → The centered Stubbornness dialog is visible and its ATTEMPTS counter displays 3.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-024",
+              "zh": "The game completes startup from saved running progress that contains a positive whole-number gold amount and no unresolved Stubbornness choice → The gameplay scene is visible and the GOLD HUD displays the saved whole-number gold amount instead of 0.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-049",
+              "zh": "The player activates a maxed ordinary upgrade row while the upgrade panel is open during running play → The upgrade panel remains open, and the selected upgrade row continues to show Maxed with the same visible level and effect text.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-055",
+              "zh": "The player activates the Catch the Rainbow control while the catch is ready, the toll is payable, and saving succeeds → The upgrade list is no longer visible, and the gameplay catch cinematic is visible before the Stubbornness dialog appears.",
+              "cause": "Replay / Trace 证据不足"
+            },
+            {
+              "id": "target-017",
+              "zh": "One second of update time elapses while the Stubbornness dialog is open with an unresolved point → The Stubbornness dialog remains visible with its choice rows, the gameplay HUD controls remain hidden, and no new gold coin launches from the pot during that one-second interval.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-040",
+              "zh": "Active running play advances for one second while the upgrade panel is open → The upgrade panel remains open in the foreground, and the darkened gameplay scene visible around it continues horizontal scrolling behind the panel.",
+              "cause": "评测条件暂不支持"
+            },
+            {
+              "id": "target-058",
+              "zh": "The browser viewport is resized during active gameplay → The pixel-art gameplay scene redraws to fill the visible canvas area with no blank gap around the scene, and the HUD controls remain overlaid on the play scene.",
+              "cause": "评测条件暂不支持"
+            }
+          ]
+        },
+        "issue": null,
         "timing": {
-          "runId": "gpt-5.4-v8.3-rubric2-licensed22-recovery15-20260911-180228",
-          "status": "failed",
-          "failedStage": "generate-game",
-          "startedAt": "2026-09-11T18:14:19+08:00",
-          "finishedAt": "2026-09-11T18:37:28+08:00",
-          "totalDurationMs": 1389088,
+          "runId": "gpt-5.4-v8.3-rubric2-licensed2-e2-retry-20261012-135650",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-10-13T10:50:41+08:00",
+          "finishedAt": "2026-10-13T12:46:56+08:00",
+          "totalDurationMs": 6975417,
           "stages": [
             {
               "stage": "generate-game",
-              "startedAt": "2026-09-11T18:14:19+08:00",
-              "finishedAt": "2026-09-11T18:37:28+08:00",
-              "durationMs": 1388940,
-              "status": "failed",
-              "exitCode": 1
+              "startedAt": "2026-10-13T10:50:41+08:00",
+              "finishedAt": "2026-10-13T10:53:15+08:00",
+              "durationMs": 154319,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "trace",
+              "startedAt": "2026-10-13T10:53:15+08:00",
+              "finishedAt": "2026-10-13T11:16:18+08:00",
+              "durationMs": 1382461,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-10-13T11:16:18+08:00",
+              "finishedAt": "2026-10-13T12:32:12+08:00",
+              "durationMs": 4554721,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-10-13T12:32:12+08:00",
+              "finishedAt": "2026-10-13T12:32:13+08:00",
+              "durationMs": 375,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-10-13T12:32:13+08:00",
+              "finishedAt": "2026-10-13T12:34:33+08:00",
+              "durationMs": 140416,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-10-13T12:34:33+08:00",
+              "finishedAt": "2026-10-13T12:46:56+08:00",
+              "durationMs": 742969,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }
