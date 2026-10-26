@@ -1157,6 +1157,38 @@ for (const game of games) {
     const reportPath = path.join(reportsRoot, game.id, `${model.id}.json`);
     if (!fs.existsSync(reportPath) && allowPartialResults) continue;
     const report = readJson(reportPath);
+    if (report.status === 'scored-failure' && report.aggregateOnly === true) {
+      const score = report.score;
+      if (!scoredFailure || report.runId !== timing?.runId || timing?.status !== 'failed'
+        || failedRun.runId !== report.runId || failedRun.stage !== timing.failedStage
+        || score.denominator !== targetList.length
+        || !Number.isInteger(score.passed) || score.passed < 0
+        || !Number.isInteger(score.dynamic) || score.dynamic < 0
+        || !Number.isInteger(report.summary.failedTargets) || report.summary.failedTargets < 0
+        || report.summary.failedTargets + score.passed + score.dynamic !== score.denominator
+        || score.base !== Number((100 * score.passed / score.denominator).toFixed(2))
+        || score.dynamicAddition !== Number((100 * score.dynamic / score.denominator).toFixed(2))
+        || score.potential !== Number((100 * (score.passed + score.dynamic) / score.denominator).toFixed(2))
+        || report.visualQuality !== null || report.summary.judgedVideos !== 0
+        || report.targets !== null || report.videos.length !== 0) {
+        throw new Error(`${game.id}/${model.id}: invalid aggregate-only failed-run score`);
+      }
+      results[game.id][model.id] = {
+        status: 'scored-failure',
+        aggregateOnly: true,
+        runId: report.runId,
+        stage: failedRun.stage,
+        score,
+        visualQuality: null,
+        traceCount: 0,
+        playPath: null,
+        previewPath: null,
+        unmet: null,
+        issue: failedRun.issue,
+        timing,
+      };
+      continue;
+    }
     if (report.status === 'score-only') {
       const score = report.score;
       if (report.runId !== timing?.runId || timing?.status !== 'completed'

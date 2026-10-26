@@ -260,6 +260,15 @@ function unmetCard(result) {
         </div>
       </article>`;
   }
+  if (result.status === 'scored-failure' && result.aggregateOnly === true) {
+    return `
+      <article class="unmet-card pending-card">
+        <div>
+          <strong>仅有汇总计分</strong>
+          <p>已依据日志分类计入 ${result.score.dynamic} 项动态项；${result.score.denominator - result.score.passed - result.score.dynamic} 项判定不满足。逐需求报告未保留，具体条目暂不可用。</p>
+        </div>
+      </article>`;
+  }
   const vlmUnmet = result.unmet.vlm;
   const replayTraceUnmet = result.unmet.replayTrace;
   const totalUnmet = vlmUnmet.length + replayTraceUnmet.length;
