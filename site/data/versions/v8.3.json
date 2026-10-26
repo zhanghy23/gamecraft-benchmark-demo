@@ -61368,30 +61368,76 @@
         }
       },
       "minimax-m2.7": {
-        "status": "failed",
-        "runId": "minimax-m2.7-v8.3-rubric2-imported-untested2-20260916-112351",
-        "stage": "trace",
-        "score": null,
-        "traceCount": 0,
+        "status": "score-only",
+        "runId": "minimax-m2.7-v8.3-rubric2-imported-e2-retry-20261012-135650",
+        "score": {
+          "display": "60.55 (+10.09)",
+          "base": 60.55,
+          "passed": 66,
+          "denominator": 109,
+          "dynamic": 11,
+          "dynamicAddition": 10.09,
+          "potential": 70.64
+        },
+        "visualQuality": {
+          "score": 87.97,
+          "maximumScore": 100,
+          "technicalPresentationAverage": null,
+          "renderingStyleAverage": null,
+          "videosScored": 31
+        },
+        "traceCount": 31,
         "playPath": null,
         "previewPath": null,
         "unmet": null,
-        "issue": "复用本机真实生成源码通过确定性构建后进入Trace，完成109条初始Trace；第2/11批Probe Plan的单探针锚点三次校验仍不唯一，重试耗尽后终止，未生成最终评审报告。该项为Trace规划失败，无功能分、无画面分且不可试玩。",
+        "issue": "评测已完整完成；依据持久化完成日志恢复功能分、动态项和画面总分。原始逐需求报告及Replay视频所在的临时目录已不存在，按用户要求仅发布分数，暂无试玩和逐需求详情。",
         "timing": {
-          "runId": "minimax-m2.7-v8.3-rubric2-imported-untested2-20260916-112351",
-          "status": "failed",
-          "failedStage": "trace",
-          "startedAt": "2026-09-16T12:33:54+08:00",
-          "finishedAt": "2026-09-16T12:53:51+08:00",
-          "totalDurationMs": 1197108,
+          "runId": "minimax-m2.7-v8.3-rubric2-imported-e2-retry-20261012-135650",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-10-13T15:44:17+08:00",
+          "finishedAt": "2026-10-13T19:44:03+08:00",
+          "totalDurationMs": 14385435,
           "stages": [
             {
               "stage": "trace",
-              "startedAt": "2026-09-16T12:33:54+08:00",
-              "finishedAt": "2026-09-16T12:53:51+08:00",
-              "durationMs": 1197091,
-              "status": "failed",
-              "exitCode": 1
+              "startedAt": null,
+              "finishedAt": "2026-10-13T16:24:49+08:00",
+              "durationMs": 2431973,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": null,
+              "finishedAt": "2026-10-13T19:09:16+08:00",
+              "durationMs": 9867150,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": null,
+              "finishedAt": "2026-10-13T19:09:17+08:00",
+              "durationMs": 547,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": null,
+              "finishedAt": "2026-10-13T19:11:22+08:00",
+              "durationMs": 124991,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": null,
+              "finishedAt": "2026-10-13T19:44:03+08:00",
+              "durationMs": 1960736,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }
