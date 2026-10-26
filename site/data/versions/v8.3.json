@@ -11868,62 +11868,76 @@
         }
       },
       "kimi-k2.6": {
-        "status": "failed",
-        "runId": "kimi-k2.6-v8.3-rubric2-imported18-20260908-163121",
-        "stage": "judge-video-and-image",
-        "score": null,
-        "traceCount": 0,
+        "status": "score-only",
+        "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-retry-20261012-135650",
+        "score": {
+          "display": "91.49 (+2.13)",
+          "base": 91.49,
+          "passed": 43,
+          "denominator": 47,
+          "dynamic": 1,
+          "dynamicAddition": 2.13,
+          "potential": 93.62
+        },
+        "visualQuality": {
+          "score": 90.8,
+          "maximumScore": 100,
+          "technicalPresentationAverage": null,
+          "renderingStyleAverage": null,
+          "videosScored": 10
+        },
+        "traceCount": 10,
         "playPath": null,
         "previewPath": null,
         "unmet": null,
-        "issue": "复用已生成源码执行正确v8.3评测；Trace、selection、optimize和Replay均成功并生成11条视频，但Judge处理第9/11条视频时服务返回HTTP 400（Request body must be valid JSON），未生成最终报告。该项记录为共享评审服务失败，无功能分、无画面分且不可试玩。",
+        "issue": "评测已完整完成；依据持久化完成日志恢复功能分、动态项和画面总分。原始逐需求报告及Replay视频所在的临时目录已不存在，按用户要求仅发布分数，暂无试玩和逐需求详情。",
         "timing": {
-          "runId": "kimi-k2.6-v8.3-rubric2-imported18-20260908-163121",
-          "status": "failed",
-          "failedStage": "judge-video-and-image",
-          "startedAt": "2026-09-08T16:39:44+08:00",
-          "finishedAt": "2026-09-08T17:13:31+08:00",
-          "totalDurationMs": 2027380,
+          "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-retry-20261012-135650",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-10-13T15:44:17+08:00",
+          "finishedAt": "2026-10-13T16:29:18+08:00",
+          "totalDurationMs": 2700619,
           "stages": [
             {
               "stage": "trace",
-              "startedAt": "2026-09-08T16:39:44+08:00",
-              "finishedAt": "2026-09-08T16:56:32+08:00",
-              "durationMs": 1007954,
+              "startedAt": null,
+              "finishedAt": "2026-10-13T16:01:30+08:00",
+              "durationMs": 1032792,
               "status": "completed",
               "exitCode": 0
             },
             {
               "stage": "select-traces",
-              "startedAt": "2026-09-08T16:56:32+08:00",
-              "finishedAt": "2026-09-08T17:06:09+08:00",
-              "durationMs": 577234,
+              "startedAt": null,
+              "finishedAt": "2026-10-13T16:11:48+08:00",
+              "durationMs": 618428,
               "status": "completed",
               "exitCode": 0
             },
             {
               "stage": "optimize-traces",
-              "startedAt": "2026-09-08T17:06:09+08:00",
-              "finishedAt": "2026-09-08T17:06:09+08:00",
-              "durationMs": 284,
+              "startedAt": null,
+              "finishedAt": "2026-10-13T16:11:49+08:00",
+              "durationMs": 260,
               "status": "completed",
               "exitCode": 0
             },
             {
               "stage": "replay",
-              "startedAt": "2026-09-08T17:06:09+08:00",
-              "finishedAt": "2026-09-08T17:08:29+08:00",
-              "durationMs": 140168,
+              "startedAt": null,
+              "finishedAt": "2026-10-13T16:14:08+08:00",
+              "durationMs": 139230,
               "status": "completed",
               "exitCode": 0
             },
             {
               "stage": "judge-video-and-image",
-              "startedAt": "2026-09-08T17:08:29+08:00",
-              "finishedAt": "2026-09-08T17:13:31+08:00",
-              "durationMs": 301706,
-              "status": "failed",
-              "exitCode": 1
+              "startedAt": null,
+              "finishedAt": "2026-10-13T16:29:18+08:00",
+              "durationMs": 909872,
+              "status": "completed",
+              "exitCode": 0
             }
           ]
         }

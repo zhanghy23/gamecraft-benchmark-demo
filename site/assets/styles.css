@@ -159,6 +159,9 @@ h1 span { color: #93c5fd; }
 .failure-preview span { font-size: 12px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
 .failure-preview strong { font-size: 28px; }
 .failure-preview small { padding: 4px 8px; border-radius: 999px; color: #991b1b; background: rgba(255,255,255,.8); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.score-only-preview { color: #1e3a8a; border-color: #93c5fd; background: #eff6ff; }
+.score-only-preview small { color: #1d4ed8; }
+.score-only-card .issue-note { color: #475467; background: #f1f5f9; }
 .failure-meta { display: flex; flex-direction: column; gap: 5px; margin-top: 18px; }
 .failure-meta span { overflow-wrap: anywhere; color: #64748b; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; }
 

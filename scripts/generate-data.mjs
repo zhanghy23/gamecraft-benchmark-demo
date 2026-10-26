@@ -1157,6 +1157,38 @@ for (const game of games) {
     const reportPath = path.join(reportsRoot, game.id, `${model.id}.json`);
     if (!fs.existsSync(reportPath) && allowPartialResults) continue;
     const report = readJson(reportPath);
+    if (report.status === 'score-only') {
+      const score = report.score;
+      if (report.runId !== timing?.runId || timing?.status !== 'completed'
+        || score.denominator !== targetList.length
+        || !Number.isInteger(score.passed) || score.passed < 0
+        || !Number.isInteger(score.dynamic) || score.dynamic < 0
+        || score.passed + score.dynamic > score.denominator
+        || !Number.isInteger(report.summary.failedTargets)
+        || report.summary.failedTargets + score.passed + score.dynamic !== score.denominator
+        || score.base !== Number((100 * score.passed / score.denominator).toFixed(2))
+        || score.dynamicAddition !== Number((100 * score.dynamic / score.denominator).toFixed(2))
+        || score.potential !== Number((100 * (score.passed + score.dynamic) / score.denominator).toFixed(2))
+        || !Number.isFinite(report.visualQuality?.score)
+        || report.visualQuality.score < 0 || report.visualQuality.score > 100
+        || !Number.isInteger(report.summary.judgedVideos) || report.summary.judgedVideos < 1
+        || typeof report.review?.reason !== 'string' || !report.review.reason.trim()) {
+        throw new Error(`${game.id}/${model.id}: invalid completed score-only record`);
+      }
+      results[game.id][model.id] = {
+        status: 'score-only',
+        runId: report.runId,
+        score,
+        visualQuality: report.visualQuality,
+        traceCount: report.summary.judgedVideos,
+        playPath: null,
+        previewPath: null,
+        unmet: null,
+        issue: report.review.reason,
+        timing,
+      };
+      continue;
+    }
     const notVlmById = new Map(
       (report.targets.notVlmEvaluated ?? []).map((item) => [item.targetId, item]),
     );
@@ -1294,7 +1326,9 @@ const versionEntry = {
   judgeModel,
   dataRevision,
   resultCount: resultList.length,
-  completedCount: resultList.filter((result) => result.status === 'completed').length,
+  completedCount: resultList.filter(
+    (result) => result.status === 'completed' || result.status === 'score-only',
+  ).length,
   failedCount: resultList.filter(
     (result) => result.status === 'failed' || result.status === 'scored-failure',
   ).length,

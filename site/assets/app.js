@@ -109,6 +109,34 @@ function resultCard(result, game, model) {
         <p class="issue-note"><strong>失败原因：</strong>${escapeHtml(result.issue)}</p>
       </article>`;
   }
+  if (result.status === 'score-only') {
+    return `
+      <article class="result-card score-only-card">
+        <div class="failure-preview score-only-preview" role="img" aria-label="${escapeHtml(game.titleZh)} · ${escapeHtml(model.label)} 评测完成，仅发布分数">
+          <span>评测完成</span>
+          <strong>仅发布分数</strong>
+          <small>试玩与视频暂不可用</small>
+        </div>
+        <div class="score-row">
+          <div>
+            <span class="score-label">基础分</span>
+            <strong class="score-value ${scoreTone(result.score.base)}">${number.format(result.score.base)}</strong>
+          </div>
+          <div class="score-side">
+            <span class="visual-score-chip">画面 <strong>${number.format(result.visualQuality.score)}</strong>/100</span>
+            <span>${result.score.passed}/${result.score.denominator} 通过</span>
+            <span>${result.traceCount} 条评审视频（未归档）</span>
+          </div>
+        </div>
+        <div class="score-breakdown">
+          <span>Dynamic <strong>${result.score.dynamic}</strong></span>
+          <span>动态加分 <strong>+${number.format(result.score.dynamicAddition)}</strong></span>
+          <span>潜在总分 <strong>${number.format(result.score.potential)}</strong></span>
+        </div>
+        ${timingBlock(result.timing)}
+        <p class="issue-note"><strong>发布说明：</strong>${escapeHtml(result.issue)}</p>
+      </article>`;
+  }
   if (result.status === 'scored-failure') {
     return `
       <article class="result-card failed-card scored-failure-card">
@@ -220,6 +248,15 @@ function unmetCard(result) {
         <div>
           <strong>没有可用的最终评审报告</strong>
           <p>流水线在 ${escapeHtml(result.stage)} 阶段失败，因此不伪造 VLM 或 Replay / Trace 未满足项。</p>
+        </div>
+      </article>`;
+  }
+  if (result.status === 'score-only') {
+    return `
+      <article class="unmet-card pending-card">
+        <div>
+          <strong>逐需求详情暂不可用</strong>
+          <p>评测已完成，功能分与画面总分已从完成日志恢复。逐需求报告和视频未保留，当前仅展示分数。</p>
         </div>
       </article>`;
   }
@@ -354,7 +391,7 @@ function renderStats(data) {
     .flatMap((game) => Object.values(game))
     .filter(Boolean);
   const best = resultList
-    .filter((result) => result.status === 'completed' && result.score)
+    .filter((result) => ['completed', 'score-only'].includes(result.status) && result.score)
     .sort((a, b) => b.score.base - a.score.base)[0];
   const values = [
     [data.models.length, '生成模型'],
