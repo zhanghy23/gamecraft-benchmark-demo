@@ -55119,6 +55119,95 @@
           ]
         }
       },
+      "qwen3.8-max": {
+        "status": "completed",
+        "runId": "qwen3.8-max-0902-v8.3-rubric2-imported3-e2-20261028-105854",
+        "score": {
+          "display": "95.56 (+2.22)",
+          "base": 95.56,
+          "passed": 43,
+          "denominator": 45,
+          "dynamic": 1,
+          "dynamicAddition": 2.22,
+          "potential": 97.78
+        },
+        "visualQuality": {
+          "score": 92.5,
+          "maximumScore": 100,
+          "technicalPresentationAverage": 48,
+          "renderingStyleAverage": 44.5,
+          "videosScored": 4
+        },
+        "traceCount": 4,
+        "playPath": "games-v8.3/rainbowhoof/qwen3.8-max/index.html",
+        "previewPath": "previews-v8.3/rainbowhoof/qwen3.8-max.png",
+        "unmet": {
+          "vlm": [],
+          "replayTrace": [
+            {
+              "id": "target-025",
+              "zh": "The rainbow arc currently carrying the unicorn fades below its support threshold during active play → The unicorn leaves the rainbow arc and is shown moving through open air.",
+              "cause": "源码错误导致 Trace 不可达"
+            },
+            {
+              "id": "target-003",
+              "zh": "A pointer press is accepted while the title screen is showing → The title screen is replaced by active gameplay: the title prompt is no longer visible, the gameplay HUD is visible, and the run begins with the score display reset to 0.",
+              "cause": "Replay / Trace 证据不足"
+            }
+          ]
+        },
+        "issue": "本项由 qwen3.8-max-0902 生成，使用含 Probe Plan 及零覆盖兜底的 v8.3 e2bac5b 进行评测。",
+        "timing": {
+          "runId": "qwen3.8-max-0902-v8.3-rubric2-imported3-e2-20261028-105854",
+          "status": "completed",
+          "failedStage": null,
+          "startedAt": "2026-10-28T19:01:47+08:00",
+          "finishedAt": "2026-10-28T19:44:01+08:00",
+          "totalDurationMs": 2534105,
+          "stages": [
+            {
+              "stage": "trace",
+              "startedAt": "2026-10-28T19:01:47+08:00",
+              "finishedAt": "2026-10-28T19:15:26+08:00",
+              "durationMs": 819191,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "select-traces",
+              "startedAt": "2026-10-28T19:15:26+08:00",
+              "finishedAt": "2026-10-28T19:34:19+08:00",
+              "durationMs": 1133115,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "optimize-traces",
+              "startedAt": "2026-10-28T19:34:19+08:00",
+              "finishedAt": "2026-10-28T19:34:19+08:00",
+              "durationMs": 242,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "replay",
+              "startedAt": "2026-10-28T19:34:19+08:00",
+              "finishedAt": "2026-10-28T19:36:28+08:00",
+              "durationMs": 129062,
+              "status": "completed",
+              "exitCode": 0
+            },
+            {
+              "stage": "judge-video-and-image",
+              "startedAt": "2026-10-28T19:36:28+08:00",
+              "finishedAt": "2026-10-28T19:44:01+08:00",
+              "durationMs": 452466,
+              "status": "completed",
+              "exitCode": 0
+            }
+          ]
+        }
+      },
       "kimi-k2.6": {
         "status": "completed",
         "runId": "kimi-k2.6-v8.3-rubric2-imported-e2-http404-retry15-r1-20260917-163733",
