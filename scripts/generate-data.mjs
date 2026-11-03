@@ -985,6 +985,9 @@ const translations = {
 };
 
 const issueNotes = {
+  '7-huenicorns|qwen3.8-max': '本项由 qwen3.8-max-0902 生成，使用含 Probe Plan 及零覆盖兜底的 v8.3 e2bac5b 进行评测。',
+  'match3|qwen3.8-max': '本项由 qwen3.8-max-0902 生成，使用含 Probe Plan 及零覆盖兜底的 v8.3 e2bac5b 进行评测。',
+  'rainbowhoof|qwen3.8-max': '本项由 qwen3.8-max-0902 生成，使用含 Probe Plan 及零覆盖兜底的 v8.3 e2bac5b 进行评测。',
   'highway-404|minimax-m2.7': '生成源码存在 shoulderWidth 未定义错误，游戏会在运行时中断；0 分来自源码问题而非评审转码。',
   'tiny-yurts|minimax-m2.7': '生成游戏可加载菜单，但开始控件在本地验收中未能进入正式游戏；保留模型原始构建，不修补游戏源码。',
 };
